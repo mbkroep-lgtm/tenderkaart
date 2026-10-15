@@ -169,7 +169,7 @@ async function buildMap(){
     tip.style.left = (e.clientX - r.left) + "px"; tip.style.top = (e.clientY - r.top) + "px"; tip.hidden = false;
   });
   svg.addEventListener("mouseleave", () => tip.hidden = true);
-  const pick = c => { if(!c || c[0] === "x") return; state.country = state.country === c ? "" : c; render(); };
+  const pick = c => { if(!c || c[0] === "x") return; state.country = state.country === c ? "" : c; render(); if(state.country) focusCountry(state.country); };
   svg.addEventListener("click", e => { if(suppressClick){ suppressClick = false; return; } pick(e.target.dataset && e.target.dataset.c); });
   svg.addEventListener("keydown", e => { if(e.key === "Enter" || e.key === " "){ e.preventDefault(); pick(e.target.dataset && e.target.dataset.c); } });
   render();
@@ -181,7 +181,8 @@ function redraw(){
   const low = quality === "low";
   proj.precision(low ? 1.5 : 0.4);
   const halo = $("map").querySelector(".halo");
-  if(halo){ halo.setAttribute("cx", W/2); halo.setAttribute("cy", H/2); halo.setAttribute("r", s * 1.08); }
+  const [tx, ty] = proj.translate();
+  if(halo){ halo.setAttribute("cx", tx); halo.setAttribute("cy", ty); halo.setAttribute("r", s * 1.08); }
   sphereEl.setAttribute("d", gpath({type:"Sphere"}));
   gratEl.setAttribute("d", gpath(gratGeo) || "");
   for(const x of features){
@@ -218,7 +219,7 @@ function setupGlobe(svg, tip){
   const toView = (x, y) => { const r = svg.getBoundingClientRect(); return [(x - r.left)/r.width*W, (y - r.top)/r.height*H]; };
   svg.addEventListener("pointerdown", e => {
     pts.set(e.pointerId, {x:e.clientX, y:e.clientY});
-    if(pts.size === 1) start = {x:e.clientX, y:e.clientY, rot:proj.rotate().slice(), moved:false};
+    if(pts.size === 1){ suppressClick = false; start = {x:e.clientX, y:e.clientY, rot:proj.rotate().slice(), moved:false}; }
     if(pts.size === 2){ const [a,b] = [...pts.values()]; pinch = {d:Math.hypot(a.x-b.x, a.y-b.y), z:zoom}; start = null; }
   });
   svg.addEventListener("pointermove", e => {
@@ -248,6 +249,20 @@ function setupGlobe(svg, tip){
   $("zHome").onclick = () => flyTo([-14, -50, 0], 2.4);
   $("zWorld").onclick = () => flyTo([proj.rotate()[0], -20, 0], 0.95);
 }
+// staat het landvenster open (breed scherm)? Dan de bol naar links schuiven zodat het land zichtbaar blijft.
+let shiftTarget = W/2, shiftRaf = 0;
+function setShift(open){
+  const wide = window.matchMedia ? matchMedia("(min-width: 601px)").matches : true;
+  shiftTarget = open && wide ? W*0.30 : W/2;
+  if(!proj || shiftRaf) return;
+  const stepFn = () => {
+    const [x, y] = proj.translate(); const nx = x + (shiftTarget - x)*0.25;
+    proj.translate([Math.abs(nx - shiftTarget) < 0.5 ? shiftTarget : nx, y]); quality = "low"; redraw();
+    if(proj.translate()[0] !== shiftTarget) shiftRaf = requestAnimationFrame(stepFn);
+    else { shiftRaf = 0; quality = "high"; redraw(); }
+  };
+  shiftRaf = requestAnimationFrame(stepFn);
+}
 // bij klik op een land in de lijst: daarheen draaien
 function focusCountry(c){
   const x = features.find(f => f.key === c);
@@ -272,7 +287,7 @@ function paintMap(){
 function drawLabels(){
   if(!labels || !proj) return;
   labels.innerHTML = "";
-  const centre = proj.invert([W/2, H/2]);
+  const centre = proj.invert(proj.translate());
   const s = proj.scale();
   Object.entries(counts).forEach(([c, n]) => {
     const x = features.find(f => f.key === c); if(!x || !x.centroid) return;
@@ -339,6 +354,7 @@ function render(){
 }
 function renderPanel(list){
   const p = $("cpanel");
+  setShift(!!state.country);
   if(!state.country){ p.hidden = true; return; }
   const n = list.length;
   $("cpTitle").textContent = cname(state.country);
