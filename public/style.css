@@ -231,3 +231,8 @@ footer{flex-direction:row;align-items:flex-start}
 .foot-src{max-width:60ch;text-align:right}
 @media (max-width:700px){footer{flex-direction:column}.foot-src{text-align:left}.tagline{border-left:0;padding-left:0}}
 .cta img{align-self:flex-start}
+
+.internal{display:flex;align-items:center;gap:10px;margin:4px 0 0;font:500 11px var(--f-mono);letter-spacing:.1em;text-transform:uppercase;color:var(--faint)}
+.internal img{height:14px;width:auto;opacity:.7}
+.watermark{position:absolute;top:14px;left:14px;height:20px;width:auto;opacity:.45;pointer-events:none;z-index:1}
+@media (max-width:600px){.watermark{height:15px}}

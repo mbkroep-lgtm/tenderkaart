@@ -368,7 +368,7 @@ function renderPanel(list){
   $("cpTitle").textContent = cname(state.country);
   $("cpSub").textContent = `${n} tender${n === 1 ? "" : "s"} · ${({open:"nog open", soon:"sluit binnen 14 dagen", new:"alleen nieuw", prior:"vooraankondigingen", awarded:"gegunde opdrachten", all:"alles"})[state.status]}`;
   $("cpList").innerHTML = (n ? list.map(panelCard).join("") : `<div class="empty">Geen tenders met deze filters. Kies bij Status "Alles" om ook gesloten tenders te zien.</div>`)
-    + `<div class="cp-cta">Starlink nodig voor een tender in ${esc(cname(state.country))}? <a href="https://broadbandeu.com/nl/contact/" target="_blank" rel="noopener">BroadbandEU helpt</a></div>`;
+;
   p.hidden = false;
 }
 
