@@ -21,7 +21,7 @@ const PHRASES = ['LEO satellite', 'LEO satellites', 'LEO satellite internet', 'L
 const esc = s => s.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
 const LEO_RE = new RegExp('(^|[^\\p{L}])(' + [...BRANDS, ...PHRASES].map(t => esc(t).replace(/[ -]/g, '[ -]?')).join('|') + ')([^\\p{L}]|$)', 'iu');
 // Ruimtevaarthardware en andere zaken die niets met verbindingen voor klanten te maken hebben.
-const EXCLUDE_RE = /(inter-?satellite|intersatellit|launch service|trägerrakete|lanceerdienst|telescope|teleskop|flight[- ]model|raumfahrzeug|spacecraft)/i;
+const EXCLUDE_RE = /(inter-?satellite|intersatellit|launch service|trägerrakete|lanceerdienst|telescope|teleskop|flight[- ]model|raumfahrzeug|spacecraft|missile|space station|destination contract|ruimtestation)/i;
 // Telecom: hoofdcategorie (eerste CPV-code) apparatuur (32…) of diensten (64…). Zonder CPV: laten staan.
 const isTelecom = t => !t.cpv?.length || /^(32|64)/.test(t.cpv[0]);
 const keep = t => isTelecom(t) && !EXCLUDE_RE.test(t.title || '');
@@ -266,7 +266,7 @@ const SAM_API = 'https://api.sam.gov/opportunities/v2/search';
 const SAM_TYPES = { 'Award Notice': 'award', 'Presolicitation': 'prior', 'Sources Sought': 'prior', 'Special Notice': 'prior' };
 const usDate = d => { const x = new Date(d); return `${String(x.getUTCMonth() + 1).padStart(2, '0')}/${String(x.getUTCDate()).padStart(2, '0')}/${x.getUTCFullYear()}`; };
 async function fetchSam(key) {
-  const terms = ['starlink', 'oneweb', 'low earth orbit', 'LEO satellite'];
+  const terms = ['starlink', 'oneweb', 'LEO satellite', 'Kuiper'];
   const byId = new Map();
   for (const term of terms) {
     const url = `${SAM_API}?api_key=${encodeURIComponent(key)}&limit=1000&offset=0&postedFrom=${usDate(NOW - 364 * DAY)}&postedTo=${usDate(NOW)}&title=${encodeURIComponent(term)}`;
@@ -275,7 +275,7 @@ async function fetchSam(key) {
   }
   const out = [];
   for (const o of byId.values()) {
-    if (!LEO_RE.test(`${o.title || ''} ${o.description || ''}`) && !/low earth orbit/i.test(o.title || '')) continue;
+    if (!LEO_RE.test(`${o.title || ''} ${o.description || ''}`)) continue;
     const kind = SAM_TYPES[o.type] || 'notice';
     const c3 = String(o.placeOfPerformance?.country?.code || 'USA').toUpperCase();
     out.push({
@@ -351,7 +351,7 @@ for (const [name, fn] of SOURCES) {
 }
 
 for (const name of Object.keys(oldBySource)) if (!SOURCES.some(([n]) => n === name)) {
-  result.push(...oldBySource[name]);
+  result.push(...oldBySource[name].filter(keep));
   if (old.sources[name]) sourceInfo[name] = old.sources[name];
 }
 
