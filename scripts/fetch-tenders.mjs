@@ -185,6 +185,8 @@ async function fetchWorldBank() {
   for (const n of byId.values()) {
     const body = `${n.bid_description || ''} ${n.project_name || ''} ${stripHtml(n.notice_text)}`;
     if (!LEO_RE.test(body)) continue; // zoekmachine van de Wereldbank is ruim; zelf nog eens controleren
+    // Adviesopdrachten (CS = Consulting Services, bv. een strategie-adviseur) zijn niets voor een leverancier van verbindingen.
+    if (String(n.procurement_group || '').toUpperCase() === 'CS') continue;
     const type = n.notice_type || '';
     const isAward = /award/i.test(type);
     const isPrior = /general procurement|expression of interest|eoi/i.test(type);
@@ -262,7 +264,7 @@ old.sources = old.sources || {};
 const nowIso = NOW.toISOString();
 
 // verhogen als zoektermen of filters wezenlijk veranderen: dan worden oude berichten opnieuw opgeschoond
-const FILTER_VERSION = 'world-v1';
+const FILTER_VERSION = 'world-v2-geen-advies';
 const version = createHash('sha1').update(TED_TERMS + LEO_RE.source + EXCLUDE_RE.source + FILTER_VERSION).digest('hex').slice(0, 10);
 const reset = old.queryVersion !== version;
 if (reset) console.log('Zoekopdracht of filter gewijzigd: alles wordt opnieuw opgeschoond.');
