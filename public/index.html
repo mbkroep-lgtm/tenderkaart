@@ -3,10 +3,16 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-<title>Starlink Tenderkaart</title>
+<title>Starlink Tenderkaart · BroadbandEU</title>
+<meta property="og:title" content="Starlink Tenderkaart · BroadbandEU">
+<meta property="og:description" content="Alle aanbestedingen voor Starlink en LEO-satellietinternet in Europa en wereldwijd, elke werkdag bijgewerkt.">
+<meta property="og:image" content="https://tenderkaart.vercel.app/og-image.png">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#070d1a">
 <meta name="description" content="Europese aanbestedingen voor Starlink en satellietinternet uit TED, per land op de kaart.">
 <meta name="robots" content="noindex">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%23070d1a'/%3E%3Ccircle cx='16' cy='16' r='7' fill='none' stroke='%237cc4ff' stroke-width='2'/%3E%3Ccircle cx='16' cy='16' r='2.5' fill='%23d6efff'/%3E%3C/svg%3E">
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@500;600&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
 <link rel="stylesheet" href="style.css">
@@ -46,7 +52,7 @@
 <div class="wrap" id="appView" hidden>
   <header>
     <div>
-      <a class="brand" href="https://www.broadbandeu.com" target="_blank" rel="noopener" aria-label="BroadbandEU"><img src="/broadbandeu-logo.svg" alt="BroadbandEU" width="236" height="32"></a>
+      <div class="brandbar"><a class="brand" href="https://www.broadbandeu.com" target="_blank" rel="noopener" aria-label="BroadbandEU"><img src="/broadbandeu-logo.svg" alt="BroadbandEU" width="236" height="32"></a><span class="tagline">Leading Europe in Starlink Solutions</span></div>
       <p class="eyebrow">LEO-tenders · Europa en wereldwijd</p>
       <h1>Starlink <span>Tenderkaart</span> <small class="byline">made by Merijn</small></h1>
       <p class="sub">Aanbestedingen voor LEO-satellietinternet (Starlink, OneWeb, Amazon Leo) in Europa en wereldwijd. Klik op een land om de opdrachten te zien.</p>
@@ -129,10 +135,19 @@
     <div class="side">
       <div class="listhead"><span id="listCount">Laden…</span><span id="selChip"></span></div>
       <div class="list" id="list"><div class="loading">Tenders laden…</div></div>
+      <aside class="cta">
+        <img src="/broadbandeu-logo.svg" alt="BroadbandEU" width="236" height="32">
+        <p><b>Inschrijven op een Starlink-tender?</b> BroadbandEU levert Starlink-hardware met abonnement, installatie door gecertificeerde monteurs en 24/7 support, in heel Europa.</p>
+        <div class="cta-row"><a class="btn primary" href="https://broadbandeu.com/nl/contact/" target="_blank" rel="noopener">Neem contact op</a><a class="cta-tel" href="tel:+31850666152">+31 850 666 152</a></div>
+      </aside>
     </div>
   </div>
 
-  <footer><span>Bronnen: TED, TenderNed, Find a Tender, Contracts Finder, BOAMP, SIMAP, Prozorro, SAM.gov, CanadaBuys, AusTender, SECOP, PNCP, Wereldbank en UNDP · elke werkdag automatisch bijgewerkt</span><a class="brand small" href="https://www.broadbandeu.com" target="_blank" rel="noopener"><img src="/broadbandeu-logo.svg" alt="BroadbandEU" width="236" height="32"></a></footer>
+  <footer>
+    <div class="foot-brand"><a class="brand small" href="https://www.broadbandeu.com" target="_blank" rel="noopener"><img src="/broadbandeu-logo.svg" alt="BroadbandEU" width="236" height="32"></a>
+      <span>Handelsweg 16B, 9482 WE Tynaarlo · +31 850 666 152</span>
+      <span><a href="https://broadbandeu.com/nl/starlink/" target="_blank" rel="noopener">Starlink</a> · <a href="https://broadbandeu.com/nl/contact/" target="_blank" rel="noopener">Contact</a> · made by Merijn</span></div>
+    <span class="foot-src">Bronnen: TED, TenderNed, Find a Tender, Contracts Finder, BOAMP, SIMAP, Prozorro, SAM.gov, CanadaBuys, AusTender, SECOP, PNCP, Wereldbank en UNDP · elke werkdag automatisch bijgewerkt</span></footer>
 </div>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/7.8.5/d3.min.js"></script>

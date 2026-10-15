@@ -208,3 +208,26 @@ header{position:relative}
 .auth-card .brand{margin-bottom:18px}.auth-card .brand img{height:24px}
 footer{align-items:center}
 @media (max-width:600px){.brand img{height:18px}}
+
+/* ---- huisstijl BroadbandEU ---- */
+.brandbar{display:flex;align-items:center;gap:14px;flex-wrap:wrap;margin:0 0 16px}
+.brandbar .brand{margin:0}
+.brandbar .brand img{height:28px}
+.tagline{font:500 11px var(--f-mono);letter-spacing:.14em;text-transform:uppercase;color:var(--muted);padding-left:14px;border-left:1px solid var(--line)}
+.cta{display:flex;flex-direction:column;gap:10px;padding:16px;border-radius:12px;border:1px solid rgba(242,252,247,.18);
+  background:linear-gradient(135deg,rgba(124,196,255,.12),rgba(242,252,247,.04));font-size:13px;color:var(--muted)}
+.cta img{height:18px;width:auto;opacity:.9}
+.cta p{margin:0;max-width:60ch}.cta b{color:var(--ink)}
+.cta-row{display:flex;gap:12px;align-items:center;flex-wrap:wrap}
+.btn.primary,a.btn.primary{display:inline-block;background:var(--beam);color:#04101f;border:1px solid var(--beam);border-radius:6px;padding:8px 14px;font:600 13px var(--f-body);text-decoration:none}
+a.btn.primary:hover{background:var(--beam-strong)}
+.cta-tel{color:var(--ink);font-family:var(--f-mono);text-decoration:none}
+.cp-cta{font-size:12px;color:var(--muted);padding:10px 4px 2px;border-top:1px solid var(--line)}
+.cp-cta a{color:var(--beam)}
+footer{flex-direction:row;align-items:flex-start}
+.foot-brand{display:flex;flex-direction:column;gap:6px}
+.foot-brand .brand img{height:18px;opacity:.85}
+.foot-brand a{color:var(--muted)}
+.foot-src{max-width:60ch;text-align:right}
+@media (max-width:700px){footer{flex-direction:column}.foot-src{text-align:left}.tagline{border-left:0;padding-left:0}}
+.cta img{align-self:flex-start}
