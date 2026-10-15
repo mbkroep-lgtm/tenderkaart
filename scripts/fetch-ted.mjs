@@ -1,6 +1,7 @@
 // Haalt Starlink- en satellietinternet-tenders op bij TED (Tenders Electronic Daily)
 // en werkt data/tenders.json bij. Draait automatisch via GitHub Actions.
 import { readFile, writeFile, mkdir } from 'node:fs/promises';
+import { createHash } from 'node:crypto';
 
 const API = 'https://api.ted.europa.eu/v3/notices/search';
 const FILE = new URL('../data/tenders.json', import.meta.url);
@@ -114,6 +115,13 @@ let old = { updated: null, tenders: [] };
 try { old = JSON.parse(await readFile(FILE, 'utf8')); } catch { /* eerste keer */ }
 
 const now = new Date().toISOString();
+// Is de zoekopdracht veranderd? Dan oude berichten die niet meer gevonden worden weggooien.
+const queryVersion = createHash('sha1').update(QUERY).digest('hex').slice(0, 10);
+const freshPubs = new Set(fresh.map(t => t.pub));
+if (old.queryVersion !== queryVersion) {
+  old.tenders = (old.tenders || []).filter(t => freshPubs.has(t.pub));
+  console.log('Zoekopdracht gewijzigd: oude berichten buiten de nieuwe zoekopdracht verwijderd.');
+}
 const byPub = new Map((old.tenders || []).map(t => [t.pub, t]));
 let added = 0;
 for (const t of fresh) {
@@ -133,5 +141,5 @@ const tenders = [...byPub.values()]
   .sort((a, b) => (a.deadline || '9999').localeCompare(b.deadline || '9999'));
 
 await mkdir(new URL('../data/', import.meta.url), { recursive: true });
-await writeFile(FILE, JSON.stringify({ updated: now, source: 'TED – Tenders Electronic Daily', count: tenders.length, tenders }, null, 1) + '\n');
+await writeFile(FILE, JSON.stringify({ updated: now, queryVersion, source: 'TED – Tenders Electronic Daily', count: tenders.length, tenders }, null, 1) + '\n');
 console.log(`Opgeslagen: ${tenders.length} tenders (${added} nieuw).`);
