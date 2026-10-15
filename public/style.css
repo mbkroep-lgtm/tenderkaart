@@ -170,3 +170,16 @@ header{position:relative}
 @media (max-width:600px){.filters{grid-template-columns:1fr 1fr}}
 .src{font:500 10px var(--f-mono);letter-spacing:.06em;text-transform:uppercase;color:var(--beam);border:1px solid var(--line);border-radius:4px;padding:0 5px}
 .autoall{margin:0;font-size:12px;color:var(--muted);background:rgba(124,196,255,.07);border:1px solid var(--line);border-radius:8px;padding:8px 10px}
+
+/* ---- wereldbol ---- */
+.mapbox{background:radial-gradient(ellipse at 50% 45%,#0b1830 0%,#060c18 70%,#04080f 100%)}
+#map path.sphere{fill:url(#ocean);stroke:rgba(124,196,255,.35);stroke-width:1px;cursor:grab}
+#map .halo{fill:url(#halo);pointer-events:none}
+#map path.grat{stroke:rgba(124,196,255,.10)}
+#map.dragging path.sphere{cursor:grabbing}
+
+/* soepel draaien: geen dure effecten op de bol */
+#map path{transition:none}
+#map path.eu:hover{filter:none;stroke:var(--beam-strong);stroke-width:1.4px}
+#map path.sel{filter:none;stroke:#fff;stroke-width:2px}
+#map{will-change:contents}

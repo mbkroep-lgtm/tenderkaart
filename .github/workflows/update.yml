@@ -25,9 +25,11 @@ jobs:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
         with:
-          node-version: 20
+          node-version: 22
       - name: Tenders ophalen
         run: node scripts/fetch-tenders.mjs
+        env:
+          SAM_API_KEY: ${{ secrets.SAM_API_KEY }}
       - name: Opslaan
         run: |
           git config user.name "tenderkaart-bot"
@@ -35,7 +37,13 @@ jobs:
           git add data/tenders.json
           if git diff --cached --quiet; then
             echo "Geen wijzigingen."
-          else
-            git commit -m "Tenders bijgewerkt $(date -u +%F)"
-            git push
+            exit 0
           fi
+          git commit -m "Tenders bijgewerkt $(date -u +%F)"
+          # is er intussen iets anders naar GitHub gezet? Dan eerst bijwerken en opnieuw proberen.
+          for i in 1 2 3 4 5; do
+            git pull --rebase origin main && git push && exit 0
+            echo "Opslaan lukte niet (poging $i), even wachten…"
+            sleep $((i * 10))
+          done
+          exit 1
