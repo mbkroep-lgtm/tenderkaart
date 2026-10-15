@@ -49,7 +49,10 @@ Object.assign(NAME2ISO, {
   'moldova': 'MD', 'bolivia': 'BO', 'tanzania': 'TZ', 'czech republic': 'CZ', 'sao tome and principe': 'ST', 'somalia': 'SO'
 });
 const ISO3 = { ALB: 'AL', AND: 'AD', AUT: 'AT', BLR: 'BY', BEL: 'BE', BIH: 'BA', BGR: 'BG', HRV: 'HR', CYP: 'CY', CZE: 'CZ', DNK: 'DK', EST: 'EE', FIN: 'FI', FRA: 'FR', DEU: 'DE', GRC: 'GR', HUN: 'HU', ISL: 'IS', IRL: 'IE', ITA: 'IT', XKX: 'XK', LVA: 'LV', LIE: 'LI', LTU: 'LT', LUX: 'LU', MLT: 'MT', MDA: 'MD', MCO: 'MC', MNE: 'ME', NLD: 'NL', MKD: 'MK', NOR: 'NO', POL: 'PL', PRT: 'PT', ROU: 'RO', SMR: 'SM', SRB: 'RS', SVK: 'SK', SVN: 'SI', ESP: 'ES', SWE: 'SE', CHE: 'CH', UKR: 'UA', GBR: 'GB', VAT: 'VA', TUR: 'TR', GEO: 'GE', ARM: 'AM' };
-const countryFromName = n => NAME2ISO[String(n || '').trim().toLowerCase()] || '';
+function countryFromName(n) {
+  const s = String(n || '').trim().toLowerCase();
+  return NAME2ISO[s] || (s.includes(',') ? NAME2ISO[s.split(',')[0].trim()] : '') || '';
+}
 
 // ---------- Hulpjes ----------
 const first = v => Array.isArray(v) ? v[0] : v;

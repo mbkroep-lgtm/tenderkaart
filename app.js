@@ -2,10 +2,27 @@
 "use strict";
 
 // ---------- Landen ----------
-const NL_NAMES = {AL:"Albanië",AD:"Andorra",AT:"Oostenrijk",BY:"Belarus",BE:"België",BA:"Bosnië en Herzegovina",BG:"Bulgarije",HR:"Kroatië",CY:"Cyprus",CZ:"Tsjechië",DK:"Denemarken",EE:"Estland",FI:"Finland",FR:"Frankrijk",DE:"Duitsland",GR:"Griekenland",HU:"Hongarije",IS:"IJsland",IE:"Ierland",IT:"Italië",XK:"Kosovo",LV:"Letland",LI:"Liechtenstein",LT:"Litouwen",LU:"Luxemburg",MT:"Malta",MD:"Moldavië",MC:"Monaco",ME:"Montenegro",NL:"Nederland",MK:"Noord-Macedonië",NO:"Noorwegen",PL:"Polen",PT:"Portugal",RO:"Roemenië",SM:"San Marino",RS:"Servië",SK:"Slowakije",SI:"Slovenië",ES:"Spanje",SE:"Zweden",CH:"Zwitserland",UA:"Oekraïne",GB:"Verenigd Koninkrijk",VA:"Vaticaanstad",TR:"Turkije",GE:"Georgië",AM:"Armenië",RU:"Rusland"};
-const EN = {albania:"AL",andorra:"AD",austria:"AT",belarus:"BY",belgium:"BE","bosnia and herz.":"BA","bosnia and herzegovina":"BA",bulgaria:"BG",croatia:"HR",cyprus:"CY",czechia:"CZ","czech rep.":"CZ","czech republic":"CZ",denmark:"DK",estonia:"EE",finland:"FI",france:"FR",germany:"DE",greece:"GR",hungary:"HU",iceland:"IS",ireland:"IE",italy:"IT",kosovo:"XK",latvia:"LV",liechtenstein:"LI",lithuania:"LT",luxembourg:"LU",malta:"MT",moldova:"MD",monaco:"MC",montenegro:"ME",netherlands:"NL",macedonia:"MK","north macedonia":"MK",norway:"NO",poland:"PL",portugal:"PT",romania:"RO","san marino":"SM",serbia:"RS",slovakia:"SK",slovenia:"SI",spain:"ES",sweden:"SE",switzerland:"CH",ukraine:"UA","united kingdom":"GB",vatican:"VA",turkey:"TR",georgia:"GE",armenia:"AM",russia:"RU"};
-const EUROPE = Object.keys(NL_NAMES);
-const cname = c => NL_NAMES[c] || c || "Onbekend";
+// Landnamen in het Nederlands voor elk land (ingebouwd in de browser)
+const NL_REGION = (() => { try { return new Intl.DisplayNames(["nl"], {type:"region"}); } catch(e) { return null; } })();
+const EN_REGION = (() => { try { return new Intl.DisplayNames(["en"], {type:"region"}); } catch(e) { return null; } })();
+const NAME_FIX = {XK:"Kosovo"};
+const cname = c => { if(!c) return "Onbekend"; if(NAME_FIX[c]) return NAME_FIX[c]; try { const n = NL_REGION && NL_REGION.of(c); return n && n !== c ? n : c; } catch(e) { return c; } };
+// Engelse kaartnamen → landcode
+const EN = {};
+if(EN_REGION) for(let a = 65; a <= 90; a++) for(let b = 65; b <= 90; b++){
+  const code = String.fromCharCode(a, b); let n; try { n = EN_REGION.of(code); } catch(e) {}
+  if(n && n !== code) EN[n.toLowerCase()] = code;
+}
+Object.assign(EN, {"bosnia and herz.":"BA","czech rep.":"CZ",czechia:"CZ",macedonia:"MK","north macedonia":"MK",kosovo:"XK",russia:"RU",
+  "united states of america":"US","dem. rep. congo":"CD","congo":"CG","central african rep.":"CF","s. sudan":"SS","eq. guinea":"GQ",
+  "w. sahara":"EH","solomon is.":"SB","côte d'ivoire":"CI","eswatini":"SZ","dominican rep.":"DO","n. cyprus":"CY","somaliland":"SO",
+  "falkland is.":"FK","fr. s. antarctic lands":"TF","timor-leste":"TL","myanmar":"MM","laos":"LA","lao pdr":"LA","north korea":"KP",
+  "dem. rep. korea":"KP","south korea":"KR","korea":"KR","taiwan":"TW","palestine":"PS","vietnam":"VN","syria":"SY","iran":"IR",
+  "tanzania":"TZ","bolivia":"BO","venezuela":"VE","brunei":"BN","moldova":"MD","turkey":"TR","türkiye":"TR","cabo verde":"CV",
+  "faeroe is.":"FO","cayman is.":"KY","marshall is.":"MH","n. mariana is.":"MP","st. vin. and gren.":"VC","st. kitts and nevis":"KN",
+  "antigua and barb.":"AG","br. indian ocean ter.":"IO","heard i. and mcdonald is.":"HM","s. geo. and the is.":"GS","wallis and futuna is.":"WF",
+  "fr. polynesia":"PF","u.s. virgin is.":"VI","british virgin is.":"VG","turks and caicos is.":"TC","st-martin":"MF","st-barthélemy":"BL",
+  "sint maarten":"SX","curaçao":"CW","åland":"AX","vatican":"VA","macao":"MO","hong kong":"HK","greenland":"GL","puerto rico":"PR"});
 
 // ---------- Hulpjes ----------
 const $ = id => document.getElementById(id);
@@ -25,7 +42,7 @@ function fmtMoney(n, cur){
 // ---------- Status ----------
 let tenders = [];
 let updated = null;
-const state = { q:"", status:"open", country:"", sort:"deadline", minValue:0 };
+const state = { q:"", status:"open", country:"", sort:"deadline", minValue:0, source:"" };
 try { Object.assign(state, JSON.parse(localStorage.getItem("tk-filters") || "{}")); state.country = ""; state.q = ""; } catch(e) {}
 function saveFilters(){ try { localStorage.setItem("tk-filters", JSON.stringify({status:state.status, sort:state.sort, minValue:state.minValue})); } catch(e) {} }
 
@@ -54,11 +71,15 @@ function statusOf(t){
   if(dl === null) return "open"; if(dl < 0) return "closed"; if(dl <= 14) return "soon"; return "open";
 }
 const isOpen = t => { const s = statusOf(t); return s === "open" || s === "soon"; };
+// Geen enkele open tender? Dan tonen we bij "Nog open" automatisch alles.
+const anyOpen = () => tenders.some(isOpen);
+const effStatus = () => (state.status === "open" && loaded && !anyOpen()) ? "all" : state.status;
 function filtered(ignoreCountry){
   const q = state.q.trim().toLowerCase();
   return tenders.filter(t => {
     const st = statusOf(t);
-    if(state.status === "open" && !isOpen(t)) return false;
+    if(state.source && (t.source || "TED") !== state.source) return false;
+    if(effStatus() === "open" && !isOpen(t)) return false;
     if(state.status === "soon" && st !== "soon") return false;
     if(state.status === "new" && (!isNew(t) || !isOpen(t))) return false;
     if(state.status === "prior" && st !== "prior") return false;
@@ -72,7 +93,7 @@ function filtered(ignoreCountry){
 
 // ---------- Kaart ----------
 const ns = "http://www.w3.org/2000/svg";
-const W = 1000, H = 880;
+const W = 1000; let H = 700;
 let paths = {}, shapeInfo = {}, centres = {}, labels = null, counts = {};
 let home = null, vb = null, limits = null, dragging = false, suppressClick = false;
 
@@ -86,8 +107,11 @@ async function buildMap(){
   } catch(e) { $("mapnote").textContent = "De kaart kon niet laden. De lijst werkt gewoon."; return; }
   const geo = topojson.feature(world, world.objects.countries);
 
-  const proj = d3.geoConicConformal().parallels([40,64]).rotate([-14,0]).center([0,52]);
-  proj.fitExtent([[0,0],[W,H]], {type:"MultiPoint", coordinates:[[-11,35],[-11,70],[40,70],[40,35],[14,72],[14,34]]});
+  // wereldkaart (Mercator, zoals de Starlink-kaart), zonder Antarctica
+  const proj = d3.geoMercator();
+  proj.fitWidth(W, {type:"MultiPoint", coordinates:[[-180,-57],[180,82]]});
+  const top = proj([0,82])[1], bottom = proj([0,-57])[1];
+  proj.translate([proj.translate()[0], proj.translate()[1] - top]); H = bottom - top;
   const path = d3.geoPath(proj);
 
   const grat = document.createElementNS(ns,"path");
@@ -99,10 +123,9 @@ async function buildMap(){
   geo.features.forEach((f, i) => {
     if(!f.geometry) return;
     const name = ((f.properties || {}).name || "").toLowerCase();
+    if(name === "antarctica") return;
     const code = EN[name] || "";
-    const c = d3.geoCentroid(f);
-    const eu = code && EUROPE.includes(code);
-    if(!eu && !(c[0] > -35 && c[0] < 75 && c[1] > 18 && c[1] < 83)) return;
+    const eu = !!code && !paths[code];
     const d = path(f); if(!d) return;
     const key = eu ? code : "x" + i;
     const el = document.createElementNS(ns,"path");
@@ -123,10 +146,10 @@ async function buildMap(){
       x0=Math.min(x0,a); y0=Math.min(y0,b); x1=Math.max(x1,cc); y1=Math.max(y1,dd); });
     return x0 < 1e9 ? {x:x0, y:y0, w:x1-x0, h:y1-y0} : null; };
   const core = bboxOf(["IE","PT","FI","NO","UA","GR","CY"]) || {x:0,y:0,w:W,h:H};
-  const grow = 1.1;
+  const grow = 1.25;
   home = {x:core.x - core.w*(grow-1)/2, y:core.y - core.h*(grow-1)/2, w:core.w*grow, h:core.h*grow};
   svg.style.aspectRatio = `${home.w}/${home.h}`;
-  limits = {x0:-150, y0:-150, x1:W+150, y1:H+150};
+  limits = {x0:-40, y0:-40, x1:W+40, y1:H+40};
   vb = {...home}; setVB();
 
   labels = document.createElementNS(ns,"g"); svg.appendChild(labels);
@@ -136,13 +159,13 @@ async function buildMap(){
   setupPanZoom(svg, tip);
   svg.addEventListener("mousemove", e => {
     const c = e.target.dataset && e.target.dataset.c;
-    if(dragging || !c || !EUROPE.includes(c)){ tip.hidden = true; return; }
+    if(dragging || !c || c[0] === "x"){ tip.hidden = true; return; }
     const n = counts[c] || 0; const r = $("mapbox").getBoundingClientRect();
     tip.innerHTML = `<b>${esc(cname(c))}</b> · ${n} tender${n === 1 ? "" : "s"}`;
     tip.style.left = (e.clientX - r.left) + "px"; tip.style.top = (e.clientY - r.top) + "px"; tip.hidden = false;
   });
   svg.addEventListener("mouseleave", () => tip.hidden = true);
-  const pick = c => { if(!c || !EUROPE.includes(c)) return; state.country = state.country === c ? "" : c; render(); };
+  const pick = c => { if(!c || c[0] === "x") return; state.country = state.country === c ? "" : c; render(); };
   svg.addEventListener("click", e => { if(suppressClick){ suppressClick = false; return; } pick(e.target.dataset && e.target.dataset.c); });
   svg.addEventListener("keydown", e => { if(e.key === "Enter" || e.key === " "){ e.preventDefault(); pick(e.target.dataset && e.target.dataset.c); } });
   render();
@@ -150,7 +173,7 @@ async function buildMap(){
 
 function setVB(){
   if(!vb) return;
-  const minW = home.w/14, maxW = home.w*1.8, ratio = home.h/home.w;
+  const minW = home.w/14, maxW = Math.max(home.w*1.8, W*1.05), ratio = home.h/home.w;
   vb.w = Math.max(minW, Math.min(maxW, vb.w)); vb.h = vb.w*ratio;
   const L = limits;
   if(vb.w >= L.x1-L.x0) vb.x = (L.x0+L.x1-vb.w)/2; else vb.x = Math.max(L.x0, Math.min(L.x1-vb.w, vb.x));
@@ -160,7 +183,7 @@ function setVB(){
 }
 function zoomAt(factor, cx, cy){
   if(!vb) return;
-  const nw = Math.max(home.w/14, Math.min(home.w*1.8, vb.w*factor)); const f = nw/vb.w;
+  const nw = Math.max(home.w/14, Math.min(Math.max(home.w*1.8, W*1.05), vb.w*factor)); const f = nw/vb.w;
   vb.x = cx - (cx - vb.x)*f; vb.y = cy - (cy - vb.y)*f; vb.w = nw; setVB();
 }
 function toMap(svg, x, y){ const r = svg.getBoundingClientRect(); return {x: vb.x + (x - r.left)/r.width*vb.w, y: vb.y + (y - r.top)/r.height*vb.h}; }
@@ -198,6 +221,7 @@ function setupPanZoom(svg, tip){
   $("zIn").onclick = () => { const c = centre(); zoomAt(1/1.5, c.x, c.y); };
   $("zOut").onclick = () => { const c = centre(); zoomAt(1.5, c.x, c.y); };
   $("zHome").onclick = () => { vb = {...home}; setVB(); };
+  $("zWorld").onclick = () => { const w = W*1.05, h = w*home.h/home.w; vb = {x:(W-w)/2, y:(H-h)/2, w, h}; setVB(); };
 }
 
 // weinig tenders = licht blauw, veel tenders = donkerder blauw
@@ -251,7 +275,7 @@ function leftText(t){ const st = statusOf(t);
 function titleHtml(t){ return t.link ? `<a href="${esc(t.link)}" target="_blank" rel="noopener">${esc(t.title)}</a>` : esc(t.title); }
 function card(t){
   return `<article class="t ${statusOf(t)}"><h3>${newHtml(t)}${titleHtml(t)}</h3>
-    <div class="meta"><span>${esc(cname(t.country))}</span>${t.buyer ? `<span>${esc(t.buyer)}</span>` : ""}</div>
+    <div class="meta"><span class="src">${esc(t.source || "TED")}</span><span>${esc(t.country ? cname(t.country) : (t.countryName || "Onbekend land"))}</span>${t.buyer ? `<span>${esc(t.buyer)}</span>` : ""}</div>
     <div class="meta"><span class="dl">${dlText(t)}</span>${valHtml(t)}<span class="mono">Gepubl. ${fmt(t.published)}</span><span class="mono">${esc(t.pub)}</span>${t.type ? `<span>${esc(t.type)}</span>` : ""}</div></article>`;
 }
 function panelCard(t){
@@ -274,13 +298,14 @@ function render(){
     $("sUpdated").textContent = updated ? new Date(updated).toLocaleString("nl-NL", {day:"numeric", month:"short", hour:"2-digit", minute:"2-digit"}) : "nog niet";
   }
   $("listCount").textContent = loaded ? `${list.length} tender${list.length === 1 ? "" : "s"}` : "Laden…";
+  const note = $("autoAll"); if(note) note.hidden = !(loaded && state.status === "open" && effStatus() === "all");
   $("selChip").innerHTML = state.country ? `<span class="chip">${esc(cname(state.country))}<button type="button" id="clrC" aria-label="Landfilter wissen">×</button></span>` : "";
   if(state.country) $("clrC").onclick = () => { state.country = ""; render(); };
   const sel = $("fCountry");
   const cs = [...new Set(tenders.map(t => t.country).filter(Boolean))].sort((a,b) => cname(a).localeCompare(cname(b), "nl"));
-  sel.innerHTML = `<option value="">Heel Europa</option>` + cs.map(c => `<option value="${c}">${esc(cname(c))}</option>`).join("");
+  sel.innerHTML = `<option value="">Alle landen</option>` + cs.map(c => `<option value="${c}">${esc(cname(c))}</option>`).join("");
   sel.value = state.country;
-  $("fStatus").value = state.status; $("fSort").value = state.sort; $("fValue").value = String(state.minValue);
+  $("fSource").value = state.source; $("fStatus").value = state.status; $("fSort").value = state.sort; $("fValue").value = String(state.minValue);
   const box = $("list");
   if(!loaded) {}
   else if(loadError) box.innerHTML = `<div class="empty">De tenders konden niet worden geladen. Ververs de pagina over een paar minuten.</div>`;
@@ -295,7 +320,7 @@ function renderPanel(list){
   if(!state.country){ p.hidden = true; return; }
   const n = list.length;
   $("cpTitle").textContent = cname(state.country);
-  $("cpSub").textContent = `${n} tender${n === 1 ? "" : "s"} · ${({open:"nog open", soon:"sluit binnen 14 dagen", new:"alleen nieuw", prior:"vooraankondigingen", awarded:"gegunde opdrachten", all:"alles"})[state.status]}`;
+  $("cpSub").textContent = `${n} tender${n === 1 ? "" : "s"} · ${({open: effStatus() === "all" ? "alles (niets open)" : "nog open", soon:"sluit binnen 14 dagen", new:"alleen nieuw", prior:"vooraankondigingen", awarded:"gegunde opdrachten", all:"alles"})[state.status]}`;
   $("cpList").innerHTML = n ? list.map(panelCard).join("") : `<div class="empty">Geen tenders met deze filters. Kies bij Status "Alles" om ook gesloten tenders te zien.</div>`;
   p.hidden = false;
 }
@@ -303,6 +328,7 @@ function renderPanel(list){
 // ---------- Bediening ----------
 $("q").addEventListener("input", e => { state.q = e.target.value; render(); });
 $("fStatus").addEventListener("change", e => { state.status = e.target.value; saveFilters(); render(); });
+$("fSource").addEventListener("change", e => { state.source = e.target.value; render(); });
 $("fSort").addEventListener("change", e => { state.sort = e.target.value; saveFilters(); render(); });
 $("fValue").addEventListener("change", e => { state.minValue = Number(e.target.value) || 0; saveFilters(); render(); });
 $("fCountry").addEventListener("change", e => { state.country = e.target.value; render(); });
