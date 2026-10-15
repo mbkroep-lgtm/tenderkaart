@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="nl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Starlink Tenderkaart</title>
+<meta name="description" content="Europese aanbestedingen voor Starlink en satellietinternet uit TED, per land op de kaart.">
+<meta name="robots" content="noindex">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%23070d1a'/%3E%3Ccircle cx='16' cy='16' r='7' fill='none' stroke='%237cc4ff' stroke-width='2'/%3E%3Ccircle cx='16' cy='16' r='2.5' fill='%23d6efff'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@500;600&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <div>
+      <p class="eyebrow">Aanbestedingen Europa · bron TED</p>
+      <h1>Starlink <span>Tenderkaart</span> <small class="byline">made by Merijn</small></h1>
+      <p class="sub">Europese aanbestedingen voor satellietinternet uit TED. Klik op een land om de opdrachten te zien.</p>
+    </div>
+  </header>
+
+  <div class="stats">
+    <div class="stat"><b id="sOpen">–</b><small>Open tenders</small></div>
+    <div class="stat new"><b id="sNew">–</b><small>Nieuw sinds je vorige bezoek</small></div>
+    <div class="stat soon"><b id="sSoon">–</b><small>Sluiten binnen 14 dagen</small></div>
+    <div class="stat"><b id="sCountries">–</b><small>Landen</small></div>
+    <div class="stat updated"><b id="sUpdated">–</b><small>Laatst bijgewerkt</small></div>
+  </div>
+
+  <div class="filters">
+    <label class="grow" for="q">Zoeken
+      <input id="q" type="search" placeholder="Titel, opdrachtgever of nummer">
+    </label>
+    <label for="fStatus">Status
+      <select id="fStatus">
+        <option value="open">Nog open</option>
+        <option value="soon">Sluit binnen 14 dagen</option>
+        <option value="new">Alleen nieuw</option>
+        <option value="all">Alles (ook gesloten)</option>
+      </select>
+    </label>
+    <label for="fValue">Waarde
+      <select id="fValue">
+        <option value="0">Elke waarde</option>
+        <option value="100000">Vanaf € 100.000</option>
+        <option value="500000">Vanaf € 500.000</option>
+        <option value="1000000">Vanaf € 1 mln</option>
+        <option value="5000000">Vanaf € 5 mln</option>
+      </select>
+    </label>
+    <label for="fCountry">Land
+      <select id="fCountry"><option value="">Heel Europa</option></select>
+    </label>
+    <label for="fSort">Sorteren
+      <select id="fSort">
+        <option value="deadline">Sluitingsdatum (eerst sluitend)</option>
+        <option value="pub">Publicatiedatum (nieuwste eerst)</option>
+        <option value="value">Waarde (hoogste eerst)</option>
+        <option value="country">Land</option>
+      </select>
+    </label>
+  </div>
+
+  <div class="main">
+    <div class="mapbox" id="mapbox">
+      <svg id="map" role="img" aria-label="Kaart van Europa met aantal tenders per land"></svg>
+      <div class="legend"><span>1</span><i></i><span id="legMax">meer</span></div>
+      <div class="zoom">
+        <button type="button" id="zIn" aria-label="Inzoomen">+</button>
+        <button type="button" id="zOut" aria-label="Uitzoomen">−</button>
+        <button type="button" id="zHome" class="txt" aria-label="Terug naar heel Europa">Europa</button>
+      </div>
+      <div class="hint">Slepen om te verschuiven · scrollen of knijpen om te zoomen</div>
+      <div class="mapnote" id="mapnote">Kaart laden…</div>
+      <aside class="cpanel" id="cpanel" hidden aria-live="polite">
+        <div class="cp-head"><div><h2 id="cpTitle"></h2><p id="cpSub"></p></div><button type="button" id="cpClose" aria-label="Sluiten">×</button></div>
+        <div class="cp-list" id="cpList"></div>
+      </aside>
+    </div>
+
+    <div class="side">
+      <div class="listhead"><span id="listCount">Laden…</span><span id="selChip"></span></div>
+      <div class="list" id="list"><div class="loading">Tenders laden…</div></div>
+    </div>
+  </div>
+
+  <footer><span>Bron: TED, Tenders Electronic Daily (ted.europa.eu) · elke werkdag automatisch bijgewerkt</span><span>BroadbandEU</span></footer>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/7.8.5/d3.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/topojson-client@3.1.0/dist/topojson-client.min.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
