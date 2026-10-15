@@ -1,8 +1,8 @@
 {
- "updated": "2026-10-15T11:44:24.557Z",
- "queryVersion": "0b74a5daf7",
+ "updated": "2026-10-15T11:45:00.452Z",
+ "queryVersion": "665900146f",
  "source": "TED – Tenders Electronic Daily",
- "count": 15,
+ "count": 13,
  "tenders": [
   {
    "pub": "191062-2026",
@@ -40,20 +40,6 @@
     "32522000",
     "32530000"
    ]
-  },
-  {
-   "pub": "638067-2026",
-   "title": "Portugal – Mobiele containers voor bijzondere doeleinden – 3026007659 / Fornecimento de Equipamentos Missões Militares Trator Mar",
-   "buyer": "Ministério da Defesa Nacional - Marinha",
-   "country": "PT",
-   "published": "2026-09-16",
-   "deadline": "2026-10-14",
-   "type": "Aankondiging opdracht",
-   "kind": "notice",
-   "link": "https://ted.europa.eu/nl/notice/-/detail/638067-2026",
-   "value": 325903.97,
-   "currency": "EUR",
-   "firstSeen": "2026-10-15T10:34:30.264Z"
   },
   {
    "pub": "432792-2026",
@@ -234,20 +220,6 @@
    "cpv": [
     "64214100"
    ]
-  },
-  {
-   "pub": "545525-2026",
-   "title": "Roemenië – Bermpaaltjes – Achizitie de balize in cadrul Proiectului „Îmbunătățirea nivelului de semnalizare, protecție și monitorizare a stării de conservare a habitatelor și speciilor din zonele de maxim interes (zone strict protejate și colonii) din RBDD” SMIS 320666 finanțat prin Programul Dezvoltare.",
-   "buyer": "ADMINISTRATIA REZERVATIEI BIOSFEREI DELTA DUNARII",
-   "country": "RO",
-   "published": "2026-08-06",
-   "deadline": "",
-   "type": "Gegunde opdracht",
-   "kind": "award",
-   "link": "https://ted.europa.eu/nl/notice/-/detail/545525-2026",
-   "value": 26320972.32,
-   "currency": "RON",
-   "firstSeen": "2026-10-15T10:34:30.264Z"
   },
   {
    "pub": "673322-2026",
