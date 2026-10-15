@@ -1,4 +1,4 @@
-name: Tenders ophalen bij TED
+name: Tenders ophalen (TED, Wereldbank, Find a Tender)
 
 on:
   schedule:
@@ -20,13 +20,14 @@ concurrency:
 jobs:
   update:
     runs-on: ubuntu-latest
+    timeout-minutes: 90
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
         with:
           node-version: 20
       - name: Tenders ophalen
-        run: node scripts/fetch-ted.mjs
+        run: node scripts/fetch-tenders.mjs
       - name: Opslaan
         run: |
           git config user.name "tenderkaart-bot"
