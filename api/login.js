@@ -1,6 +1,6 @@
 // Stap 1: e-mailadres invullen. Heeft iemand toegang, dan krijgt hij een code.
 // Zo niet, dan maken we een Stripe-betaalpagina aan.
-import { json, normEmail, validEmail, hasAccess, sendCode, stripe, siteUrl, env, readJson, fail } from '../lib/core.js';
+import { json, normEmail, validEmail, hasAccess, sendCode, stripe, siteUrl, env, readJson, requireLogin, fail } from '../lib/core.js';
 
 export async function POST(request) {
   try {
@@ -11,6 +11,9 @@ export async function POST(request) {
       const r = await sendCode(email);
       return json({ status: 'code_sent', email, recent: r === 'wait' });
     }
+
+    // Openbare kaart: inloggen is alleen voor beheer, er wordt niet betaald.
+    if (!requireLogin()) return json({ error: 'Inloggen is alleen nodig voor beheer. Dit e-mailadres heeft geen beheerrechten.' }, 403);
 
     const base = siteUrl(request);
     const session = await stripe('checkout/sessions', {

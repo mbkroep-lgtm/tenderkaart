@@ -2,14 +2,16 @@
 // Door de beheerder verborgen tenders en uitsluitwoorden worden hier al weggefilterd.
 import { readFile } from 'node:fs/promises';
 import path from 'node:path';
-import { json, readSession, hasAccess, isAdmin, getHidden, getWords, applyAdminFilters, fail } from '../lib/core.js';
+import { json, readSession, hasAccess, isAdmin, getHidden, getWords, applyAdminFilters, requireLogin, fail } from '../lib/core.js';
 
 export async function GET(request) {
   try {
     const email = readSession(request);
-    if (!email || !(await hasAccess(email))) return json({ error: 'Log in om de tenders te bekijken.' }, 401);
+    if (requireLogin() && (!email || !(await hasAccess(email)))) return json({ error: 'Log in om de tenders te bekijken.' }, 401);
     const data = JSON.parse(await readFile(path.join(process.cwd(), 'data', 'tenders.json'), 'utf8'));
-    const [hidden, words] = await Promise.all([getHidden(), getWords()]);
+    // verborgen tenders en uitsluitwoorden; lukt de database even niet, dan toch de kaart tonen
+    let hidden = [], words = [];
+    try { [hidden, words] = await Promise.all([getHidden(), getWords()]); } catch (e) { console.error(e); }
     const all = data.tenders || [];
     data.tenders = applyAdminFilters(all, hidden, words);
     data.hiddenCount = all.length - data.tenders.length;

@@ -29,13 +29,23 @@ function showEmail(){
   $("stepCode").hidden = true; $("stepEmail").hidden = false; msg("");
   $("authEmail").focus();
 }
+// Openbare kaart: meteen tonen; inloggen alleen voor beheer via een klein linkje.
+function openMode(){
+  showApp("", false);
+  $("btnLogout").hidden = true;
+  $("btnLogin").hidden = false;
+  $("authNote").textContent = "Inloggen is alleen nodig voor beheer. Je krijgt een code per e-mail.";
+  $("authBack").hidden = false;
+}
 function showApp(who, admin){
+  $("btnLogin").hidden = true; $("btnLogout").hidden = false;
   window.isAdmin = !!admin;
   document.body.classList.toggle("admin", !!admin);
   $("btnAdmin").hidden = !admin;
   $("authView").hidden = true;
   $("appView").hidden = false;
   $("whoami").textContent = who || "";
+  window.rerenderTenders && window.rerenderTenders();
   window.startTenderApp();
 }
 
@@ -79,6 +89,8 @@ $("btnResend").addEventListener("click", async () => {
 });
 $("btnOther").addEventListener("click", showEmail);
 
+$("btnLogin").addEventListener("click", () => { $("appView").hidden = true; $("authView").hidden = false; showEmail(); });
+$("authBack").addEventListener("click", () => { $("authView").hidden = true; $("appView").hidden = false; });
 $("btnLogout").addEventListener("click", async () => {
   try { await api("/api/logout", {method:"POST"}); } catch(e) {}
   location.href = "/";
@@ -102,10 +114,13 @@ $("btnLogout").addEventListener("click", async () => {
     return;
   }
 
+  let me = {requireLogin:false};
   try {
     const r = await fetch("/api/me", {credentials:"same-origin", cache:"no-store"});
-    if(r.ok){ const d = await r.json(); showApp(d.email, d.admin); return; }
+    me = await r.json().catch(() => me);
+    if(me.loggedIn){ showApp(me.email, me.admin); return; }
   } catch(e) {}
+  if(!me.requireLogin){ openMode(); return; }
   $("authView").hidden = false;
   if(cancelled) msg("De betaling is geannuleerd. Je kunt het opnieuw proberen wanneer je wilt.", true);
   $("authEmail").focus();

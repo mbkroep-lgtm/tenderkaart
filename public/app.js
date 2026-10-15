@@ -399,6 +399,7 @@ function showToast(text, undo){
 
 // ---------- Starten (na inloggen) ----------
 let started = false;
+window.rerenderTenders = () => { if(started) render(); };
 window.startTenderApp = function(){
   if(started) return; started = true;
   render();

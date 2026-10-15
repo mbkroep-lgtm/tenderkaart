@@ -22,7 +22,8 @@
       <label for="authEmail">E-mailadres</label>
       <input id="authEmail" type="email" autocomplete="email" inputmode="email" placeholder="naam@bedrijf.nl" required>
       <button type="submit" class="primary" id="btnEmail">Doorgaan</button>
-      <p class="auth-note">Nieuw? Toegang kost <b>€ 10</b>, eenmalig. Je betaalt veilig via Stripe en krijgt daarna een inlogcode per e-mail. Heb je al toegang, dan sturen we direct een code.</p>
+      <p class="auth-note" id="authNote">Nieuw? Toegang kost <b>€ 10</b>, eenmalig. Je betaalt veilig via Stripe en krijgt daarna een inlogcode per e-mail. Heb je al toegang, dan sturen we direct een code.</p>
+      <button type="button" class="link" id="authBack" hidden>← Terug naar de kaart</button>
     </form>
 
     <form id="stepCode" class="auth-step" novalidate hidden>
@@ -48,7 +49,7 @@
       <h1>Starlink <span>Tenderkaart</span> <small class="byline">made by Merijn</small></h1>
       <p class="sub">Aanbestedingen voor LEO-satellietinternet (Starlink, OneWeb, Amazon Leo) in Europa en wereldwijd. Klik op een land om de opdrachten te zien.</p>
     </div>
-    <div class="account"><span id="whoami"></span><a class="btn" id="btnAdmin" href="/admin.html" hidden>Beheer</a><button type="button" id="btnLogout">Uitloggen</button></div>
+    <div class="account"><span id="whoami"></span><a class="btn" id="btnAdmin" href="/admin.html" hidden>Beheer</a><button type="button" id="btnLogout">Uitloggen</button><button type="button" id="btnLogin" class="link" hidden>Inloggen</button></div>
   </header>
 
   <div class="stats">
