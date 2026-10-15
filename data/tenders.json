@@ -1,7 +1,8 @@
 {
- "updated": "2026-10-15T10:35:05.758Z",
+ "updated": "2026-10-15T10:35:30.515Z",
+ "queryVersion": "ed8193bcd5",
  "source": "TED – Tenders Electronic Daily",
- "count": 107,
+ "count": 87,
  "tenders": [
   {
    "pub": "191062-2026",
@@ -32,20 +33,6 @@
    "firstSeen": "2026-10-15T10:34:30.264Z"
   },
   {
-   "pub": "241444-2026",
-   "title": "Duitsland – Haalbaarheidsstudie, adviesverlening, analyse – Bodenstationsnetzwerk-Service für die Kleinsatellitenmission ROMEO",
-   "buyer": "Universität Stuttgart",
-   "country": "DE",
-   "published": "2026-04-09",
-   "deadline": "2026-05-11",
-   "type": "Aankondiging opdracht",
-   "kind": "notice",
-   "link": "https://ted.europa.eu/nl/notice/-/detail/241444-2026",
-   "value": null,
-   "currency": "EUR",
-   "firstSeen": "2026-10-15T10:34:30.264Z"
-  },
-  {
    "pub": "232108-2026",
    "title": "Tsjechië – Verhuur van satellietverbindingen – Telekomunikační služby - satelitní služby",
    "buyer": "Ministerstvo obrany",
@@ -57,20 +44,6 @@
    "link": "https://ted.europa.eu/nl/notice/-/detail/232108-2026",
    "value": 480165289.26,
    "currency": "CZK",
-   "firstSeen": "2026-10-15T10:34:30.264Z"
-  },
-  {
-   "pub": "288283-2026",
-   "title": "Duitsland – Haalbaarheidsstudie, adviesverlening, analyse – Bodenstationsnetzwerk-Service für die Kleinsatellitenmission ROMEO",
-   "buyer": "Universität Stuttgart",
-   "country": "DE",
-   "published": "2026-04-28",
-   "deadline": "2026-05-18",
-   "type": "Aankondiging opdracht",
-   "kind": "notice",
-   "link": "https://ted.europa.eu/nl/notice/-/detail/288283-2026",
-   "value": null,
-   "currency": "EUR",
    "firstSeen": "2026-10-15T10:34:30.264Z"
   },
   {
@@ -100,20 +73,6 @@
    "currency": "EUR",
    "firstSeen": "2000-01-01T00:00:00.000Z",
    "kind": "notice"
-  },
-  {
-   "pub": "301891-2026",
-   "title": "Duitsland – Haalbaarheidsstudie, adviesverlening, analyse – Bodenstationsnetzwerk-Service für die Kleinsatellitenmission ROMEO",
-   "buyer": "Universität Stuttgart",
-   "country": "DE",
-   "published": "2026-05-04",
-   "deadline": "2026-05-26",
-   "type": "Aankondiging opdracht",
-   "kind": "notice",
-   "link": "https://ted.europa.eu/nl/notice/-/detail/301891-2026",
-   "value": null,
-   "currency": "EUR",
-   "firstSeen": "2026-10-15T10:34:30.264Z"
   },
   {
    "pub": "290752-2026",
@@ -298,48 +257,6 @@
    "firstSeen": "2026-10-15T10:34:30.264Z"
   },
   {
-   "pub": "438024-2026",
-   "title": "Duitsland – Satellieten – Beschaffung von zwei Flight-Model-Laserkommunikationsterminals für 16U-Kleinsatelliten im Low-Earth-Orbit (LEO)/ Procurement of two flight model laser commu-nication terminals for 16U small satellites in Low Earth Orbit (LEO)",
-   "buyer": "Technische Universität Berlin",
-   "country": "DE",
-   "published": "2026-06-25",
-   "deadline": "2026-07-27",
-   "type": "Aankondiging opdracht",
-   "kind": "notice",
-   "link": "https://ted.europa.eu/nl/notice/-/detail/438024-2026",
-   "value": null,
-   "currency": "EUR",
-   "firstSeen": "2026-10-15T10:34:30.264Z"
-  },
-  {
-   "pub": "519163-2026",
-   "title": "Duitsland – Onderdelen voor vliegtuigen, ruimtevaartuigen en helikopters – Beschaffung von Sternenkameras für Hochpräzise Satellitenlageregelung",
-   "buyer": "Technische Universität Berlin",
-   "country": "DE",
-   "published": "2026-07-27",
-   "deadline": "2026-08-25",
-   "type": "Aankondiging opdracht",
-   "kind": "notice",
-   "link": "https://ted.europa.eu/nl/notice/-/detail/519163-2026",
-   "value": null,
-   "currency": "EUR",
-   "firstSeen": "2026-10-15T10:34:30.264Z"
-  },
-  {
-   "pub": "534538-2026",
-   "title": "Duitsland – Telecommunicatie-uitrusting – Ka-Band Transceiver für einen Intersatellite Link mit Heinrich Hertz / H2Sat_Ka-Band Transceiver for an Intersatellite Link with Heinrich Hertz / H2Sat",
-   "buyer": "Technische Universität Berlin",
-   "country": "DE",
-   "published": "2026-08-03",
-   "deadline": "2026-09-01",
-   "type": "Aankondiging opdracht",
-   "kind": "notice",
-   "link": "https://ted.europa.eu/nl/notice/-/detail/534538-2026",
-   "value": null,
-   "currency": "EUR",
-   "firstSeen": "2026-10-15T10:34:30.264Z"
-  },
-  {
    "pub": "546320-2026",
    "title": "Duitsland – Advies inzake telecommunicatie – Satellitenprojekt: Entwicklung, Herstellung und Lieferung von Kommunikationskomponenten sowie Antennen- und HF-Beratungsleistungen",
    "buyer": "Technische Universität Berlin",
@@ -352,34 +269,6 @@
    "currency": "EUR",
    "firstSeen": "2000-01-01T00:00:00.000Z",
    "kind": "notice"
-  },
-  {
-   "pub": "594538-2026",
-   "title": "Duitsland – Onderdelen voor vliegtuigen, ruimtevaartuigen en helikopters – Beschaffung von Sternenkameras für Hochpräzise Satellitenlageregelung",
-   "buyer": "Technische Universität Berlin",
-   "country": "DE",
-   "published": "2026-08-28",
-   "deadline": "2026-09-08",
-   "type": "Aankondiging opdracht",
-   "kind": "notice",
-   "link": "https://ted.europa.eu/nl/notice/-/detail/594538-2026",
-   "value": null,
-   "currency": "EUR",
-   "firstSeen": "2026-10-15T10:34:30.264Z"
-  },
-  {
-   "pub": "591634-2026",
-   "title": "Duitsland – Onderdelen voor vliegtuigen, ruimtevaartuigen en helikopters – Beschaffung von Sternenkameras für Hochpräzise Satellitenlageregelung",
-   "buyer": "Technische Universität Berlin",
-   "country": "DE",
-   "published": "2026-08-27",
-   "deadline": "2026-09-08",
-   "type": "Aankondiging opdracht",
-   "kind": "notice",
-   "link": "https://ted.europa.eu/nl/notice/-/detail/591634-2026",
-   "value": null,
-   "currency": "EUR",
-   "firstSeen": "2026-10-15T10:34:30.264Z"
   },
   {
    "pub": "562523-2026",
@@ -436,20 +325,6 @@
    "value": null,
    "currency": "EUR",
    "firstSeen": "2026-10-15T10:34:30.264Z"
-  },
-  {
-   "pub": "629816-2026",
-   "title": "Tsjechië – Satellietplatforms – Zaitra s.r.o. – Satellite hosted software",
-   "buyer": "Zaitra s.r.o.",
-   "country": "CZ",
-   "published": "2026-09-14",
-   "deadline": "2026-10-12",
-   "type": "Aankondiging opdracht",
-   "link": "https://ted.europa.eu/nl/notice/-/detail/629816-2026",
-   "value": null,
-   "currency": "EUR",
-   "firstSeen": "2000-01-01T00:00:00.000Z",
-   "kind": "notice"
   },
   {
    "pub": "638067-2026",
@@ -629,20 +504,6 @@
    "type": "Gegunde opdracht",
    "link": "https://ted.europa.eu/nl/notice/-/detail/664845-2026",
    "value": 82560,
-   "currency": "EUR",
-   "firstSeen": "2000-01-01T00:00:00.000Z",
-   "kind": "award"
-  },
-  {
-   "pub": "664593-2026",
-   "title": "Duitsland – Satellietplatforms – COMPASSO Iodine Reference Proto-Flight Models (PFMs) Assembly, Integration, Verification and Test Activity",
-   "buyer": "Deutsches Zentrum für Luft- und Raumfahrt e.V. (DLR)",
-   "country": "DE",
-   "published": "2026-09-28",
-   "deadline": "",
-   "type": "Gegunde opdracht",
-   "link": "https://ted.europa.eu/nl/notice/-/detail/664593-2026",
-   "value": null,
    "currency": "EUR",
    "firstSeen": "2000-01-01T00:00:00.000Z",
    "kind": "award"
@@ -1040,20 +901,6 @@
    "firstSeen": "2026-10-15T10:34:30.264Z"
   },
   {
-   "pub": "707356-2026",
-   "title": "Duitsland – Onderdelen voor vliegtuigen, ruimtevaartuigen en helikopters – Beschaffung von Sternenkameras für Hochpräzise Satellitenlageregelung",
-   "buyer": "Technische Universität Berlin",
-   "country": "DE",
-   "published": "2026-10-13",
-   "deadline": "",
-   "type": "Gegunde opdracht",
-   "kind": "award",
-   "link": "https://ted.europa.eu/nl/notice/-/detail/707356-2026",
-   "value": null,
-   "currency": "EUR",
-   "firstSeen": "2026-10-15T10:34:30.264Z"
-  },
-  {
    "pub": "704090-2026",
    "title": "Roemenië – Verhuur van satellietverbindingen – Servicii satelitare STARLINK sau echivalent",
    "buyer": "Ministerul Apararii Nationale - Unitatea Militara 02638",
@@ -1110,20 +957,6 @@
    "firstSeen": "2026-10-15T10:34:30.264Z"
   },
   {
-   "pub": "673322-2026",
-   "title": "Duitsland – Telecommunicatie-uitrusting – Ka-Band Transceiver für einen Intersatellite Link mit Heinrich Hertz / H2Sat_Ka-Band Transceiver for an Intersatellite Link with Heinrich Hertz / H2Sat",
-   "buyer": "Technische Universität Berlin",
-   "country": "DE",
-   "published": "2026-09-30",
-   "deadline": "",
-   "type": "Gegunde opdracht",
-   "kind": "award",
-   "link": "https://ted.europa.eu/nl/notice/-/detail/673322-2026",
-   "value": null,
-   "currency": "EUR",
-   "firstSeen": "2026-10-15T10:34:30.264Z"
-  },
-  {
    "pub": "658438-2026",
    "title": "Duitsland – Telefoon- en datatransmissiediensten – 1088-DE-Internationale Carrierverbindungen und Anschlüsse, Los 2: Weltweite Carrier Satellitenverbindungen",
    "buyer": "BWI GmbH",
@@ -1161,20 +994,6 @@
    "type": "Gegunde opdracht",
    "kind": "award",
    "link": "https://ted.europa.eu/nl/notice/-/detail/639388-2026",
-   "value": null,
-   "currency": "EUR",
-   "firstSeen": "2026-10-15T10:34:30.264Z"
-  },
-  {
-   "pub": "603743-2026",
-   "title": "Duitsland – Satellieten – Beschaffung von zwei Flight-Model-Laserkommunikationsterminals für 16U-Kleinsatelliten im Low-Earth-Orbit (LEO)/ Procurement of two flight model laser commu-nication terminals for 16U small satellites in Low Earth Orbit (LEO)",
-   "buyer": "Technische Universität Berlin",
-   "country": "DE",
-   "published": "2026-09-02",
-   "deadline": "",
-   "type": "Gegunde opdracht",
-   "kind": "award",
-   "link": "https://ted.europa.eu/nl/notice/-/detail/603743-2026",
    "value": null,
    "currency": "EUR",
    "firstSeen": "2026-10-15T10:34:30.264Z"
@@ -1362,20 +1181,6 @@
    "firstSeen": "2026-10-15T10:34:30.264Z"
   },
   {
-   "pub": "518675-2026",
-   "title": "Duitsland – Lucht- en ruimtevaartuigen – Durchführung orbitaler Startdienstleistungen von mobilen und maritimen Startplattformen",
-   "buyer": "Offizielle Bezeichnung: Deutsche Raumfahrtagentur im Deutschen Zentrum für Luft- und Raumfahrt e.V.",
-   "country": "DE",
-   "published": "2026-07-27",
-   "deadline": "",
-   "type": "Vooraankondiging",
-   "kind": "prior",
-   "link": "https://ted.europa.eu/nl/notice/-/detail/518675-2026",
-   "value": null,
-   "currency": "EUR",
-   "firstSeen": "2026-10-15T10:34:30.264Z"
-  },
-  {
    "pub": "506731-2026",
    "title": "Frankrijk – Lucht-grondtelecommunicatiediensten – Acquisition d'un service de communications ATN/SATCOM pour la Navigation Aérienne",
    "buyer": "Direction de la Technique et de l'Innovation",
@@ -1414,90 +1219,6 @@
    "kind": "award",
    "link": "https://ted.europa.eu/nl/notice/-/detail/469679-2026",
    "value": 2563555.13,
-   "currency": "EUR",
-   "firstSeen": "2026-10-15T10:34:30.264Z"
-  },
-  {
-   "pub": "401907-2026",
-   "title": "België – Observatiesatellieten – Informatieaanvraag voor het project Global, All Weather, Low-Earth Orbit , Observation System (GALO)",
-   "buyer": "Ministerie van Defensie",
-   "country": "BE",
-   "published": "2026-06-11",
-   "deadline": "",
-   "type": "Vooraankondiging",
-   "kind": "prior",
-   "link": "https://ted.europa.eu/nl/notice/-/detail/401907-2026",
-   "value": null,
-   "currency": "EUR",
-   "firstSeen": "2026-10-15T10:34:30.264Z"
-  },
-  {
-   "pub": "371089-2026",
-   "title": "Duitsland – Satellietlanceringsdiensten – Launch Service Provider for Tapir Mission",
-   "buyer": "Deutsches Zentrum für Luft- und Raumfahrt e.V. (DLR)",
-   "country": "DE",
-   "published": "2026-06-01",
-   "deadline": "",
-   "type": "Aankondiging opdracht",
-   "kind": "notice",
-   "link": "https://ted.europa.eu/nl/notice/-/detail/371089-2026",
-   "value": null,
-   "currency": "EUR",
-   "firstSeen": "2026-10-15T10:34:30.264Z"
-  },
-  {
-   "pub": "356037-2026",
-   "title": "Duitsland – Astronomische en optische instrumenten – GSSAC Universal Network of Telescope Arrays (GUNTA)",
-   "buyer": "Deutsche Raumfahrtagentur im DLR e.V.",
-   "country": "DE",
-   "published": "2026-05-26",
-   "deadline": "",
-   "type": "Aankondiging opdracht",
-   "kind": "notice",
-   "link": "https://ted.europa.eu/nl/notice/-/detail/356037-2026",
-   "value": null,
-   "currency": "EUR",
-   "firstSeen": "2026-10-15T10:34:30.264Z"
-  },
-  {
-   "pub": "247451-2026",
-   "title": "Duitsland – Satellieten – Informationseinholung im Rahmen einer MARKTERKUNDUNG - Für die Beschaffung von Systemen für die „weltraumbasierte optische Detektion und Verfolgung von Objekten in der Erdumlaufbahn“.",
-   "buyer": "Deutsche Raumfahrtagentur im Deutschen Zentrum für Luft- und Raumfahrt e.V.",
-   "country": "DE",
-   "published": "2026-04-13",
-   "deadline": "",
-   "type": "Vooraankondiging",
-   "kind": "prior",
-   "link": "https://ted.europa.eu/nl/notice/-/detail/247451-2026",
-   "value": null,
-   "currency": "EUR",
-   "firstSeen": "2026-10-15T10:34:30.264Z"
-  },
-  {
-   "pub": "138429-2026",
-   "title": "Frankrijk – Aanleg van elektriciteit – HA_NDO_202619 EVOLUTION RESEAU SATELLITAIRE",
-   "buyer": "SOCIETE HYDRO-ELECTRIQUE DU MIDI",
-   "country": "FR",
-   "published": "2026-02-27",
-   "deadline": "",
-   "type": "Aankondiging opdracht",
-   "kind": "notice",
-   "link": "https://ted.europa.eu/nl/notice/-/detail/138429-2026",
-   "value": null,
-   "currency": "EUR",
-   "firstSeen": "2026-10-15T10:34:30.264Z"
-  },
-  {
-   "pub": "118041-2026",
-   "title": "Duitsland – Astronomische en optische instrumenten – GSSAC Laser Ranging System +3",
-   "buyer": "Deutsche Raumfahrtagentur im DLR e.V.",
-   "country": "DE",
-   "published": "2026-02-19",
-   "deadline": "",
-   "type": "Aankondiging opdracht",
-   "kind": "notice",
-   "link": "https://ted.europa.eu/nl/notice/-/detail/118041-2026",
-   "value": null,
    "currency": "EUR",
    "firstSeen": "2026-10-15T10:34:30.264Z"
   }
