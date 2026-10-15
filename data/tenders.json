@@ -1,22 +1,22 @@
 {
- "updated": "2026-10-15T12:54:18.529Z",
+ "updated": "2026-10-15T12:54:33.680Z",
  "queryVersion": "988f8a55b8",
  "sources": {
   "TED": {
    "ok": true,
-   "at": "2026-10-15T12:54:18.529Z",
+   "at": "2026-10-15T12:54:33.680Z",
    "count": 40
   },
   "Wereldbank": {
    "ok": true,
-   "at": "2026-10-15T12:54:18.529Z",
+   "at": "2026-10-15T12:54:33.680Z",
    "count": 55
   },
   "Find a Tender": {
    "ok": true,
-   "at": "2026-10-15T12:54:18.529Z",
+   "at": "2026-10-15T12:54:33.680Z",
    "count": 0,
-   "since": "2026-10-15T10:54:18.529Z"
+   "since": "2026-10-15T10:54:33.680Z"
   },
   "SAM.gov": {
    "ok": true,
@@ -64,8 +64,8 @@
    "firstSeen": "2000-01-01T00:00:00.000Z"
   },
   {
-   "pub": "US-56d779c9b599432a833bad56a6b58ac1",
    "source": "SAM.gov",
+   "pub": "US-56d779c9b599432a833bad56a6b58ac1",
    "title": "Request for Proposal (RFP) - Resilient Missile Warning Tracking (RMWT) Low Earth Orbit (LEO) Ground Entry Points (GEPs)",
    "buyer": "FA2401 SPACE DEVELOPMENT AGENCY SDA",
    "country": "US",
@@ -117,8 +117,8 @@
    "firstSeen": "2000-01-01T00:00:00.000Z"
   },
   {
-   "pub": "US-ccc2c97b68674c8c90374e492c9e82f1",
    "source": "SAM.gov",
+   "pub": "US-ccc2c97b68674c8c90374e492c9e82f1",
    "title": "Commercial Low Earth Orbit (LEO) Destination Contract (CLDC) Draft Request for Proposal",
    "buyer": "NASA JOHNSON SPACE CENTER",
    "country": "US",
@@ -133,8 +133,8 @@
    "firstSeen": "2026-10-15T12:54:18.529Z"
   },
   {
-   "pub": "US-aee4374189ab4118b3ec0dcb00ae8408",
    "source": "SAM.gov",
+   "pub": "US-aee4374189ab4118b3ec0dcb00ae8408",
    "title": "Commercial Low Earth Orbit (LEO) Destination Contract (CLDC) Request for Proposal",
    "buyer": "NASA JOHNSON SPACE CENTER",
    "country": "US",
@@ -149,8 +149,8 @@
    "firstSeen": "2026-10-15T12:54:18.529Z"
   },
   {
-   "pub": "US-6c348d84905c459bbf69adaa8c90fc1b",
    "source": "SAM.gov",
+   "pub": "US-6c348d84905c459bbf69adaa8c90fc1b",
    "title": "Commercial Low Earth Orbit (LEO) Destination Contract (CLDC) Technical Library",
    "buyer": "NASA JOHNSON SPACE CENTER",
    "country": "US",
@@ -241,8 +241,8 @@
    "firstSeen": "2000-01-01T00:00:00.000Z"
   },
   {
-   "pub": "US-b4d395c5e6164ffaa451046aae87a18b",
    "source": "SAM.gov",
+   "pub": "US-b4d395c5e6164ffaa451046aae87a18b",
    "title": "Commercial Low Earth Orbit (LEO) Destination Contract (CLDC) Request for Proposal",
    "buyer": "NASA JOHNSON SPACE CENTER",
    "country": "US",
@@ -1123,8 +1123,8 @@
    "firstSeen": "2000-01-01T00:00:00.000Z"
   },
   {
-   "pub": "US-f9bd4348f87e49a3bdd64642c29af055",
    "source": "SAM.gov",
+   "pub": "US-f9bd4348f87e49a3bdd64642c29af055",
    "title": "Commercial Low Earth Orbit (LEO) Development Program Phase 2 Industry Acquisition Update",
    "buyer": "NASA JOHNSON SPACE CENTER",
    "country": "US",
@@ -1139,8 +1139,8 @@
    "firstSeen": "2026-10-15T12:54:18.529Z"
   },
   {
-   "pub": "US-6cfcbb09d2514a03b45649ad4acbaa49",
    "source": "SAM.gov",
+   "pub": "US-6cfcbb09d2514a03b45649ad4acbaa49",
    "title": "POSTPONED: Commercial Low Earth Orbit (LEO) Destination Contract (CLDC) Industry Day",
    "buyer": "NATIONAL AERONAUTICS AND SPACE ADMINISTRATION",
    "country": "US",
