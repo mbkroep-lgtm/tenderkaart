@@ -1,12 +1,17 @@
 // Haalt Starlink- en satellietinternet-tenders op bij TED (Tenders Electronic Daily)
 // en werkt data/tenders.json bij. Draait automatisch via GitHub Actions.
 import { readFile, writeFile, mkdir } from 'node:fs/promises';
+import { createHash } from 'node:crypto';
 
 const API = 'https://api.ted.europa.eu/v3/notices/search';
 const FILE = new URL('../data/tenders.json', import.meta.url);
 
-const QUERY = '(FT ~ ("starlink" OR "satellite internet" OR "satellite broadband" OR "LEO satellite" OR "low earth orbit" OR "satellietinternet" OR "Satelliteninternet" OR "internet par satellite" OR "internet satelital" OR "internet satellitare" OR "internet satelitarny") OR classification-cpv IN (32531000 32532000 32533000 32534000)) SORT BY publication-date DESC';
+// Elke zoekterm als losse FT-voorwaarde: TED ondersteunt geen ("a" OR "b") binnen één FT ~ (dat geeft 0 resultaten).
+const TERMS = ["starlink", "satellite internet", "satellite broadband", "satellite connectivity", "satellite communication services", "satcom", "VSAT", "OneWeb", "satellietinternet", "satellietverbinding", "Satelliteninternet", "Satellitenkommunikation", "internet par satellite", "connectivité satellitaire", "internet satelital", "conectividad satelital", "internet satellitare", "connettività satellitare", "internet satelitarny", "łączność satelitarna", "mobile connectivity", "backup connectivity", "emergency communication", "noodcommunicatie", "Notfallkommunikation", "rural broadband"];
+const CPV = '32531000 32532000 32533000';
+const QUERY = '(' + TERMS.map(t => `FT ~ "${t}"`).join(' OR ') + ` OR classification-cpv IN (${CPV})) SORT BY publication-date DESC`;
 const BASE = ['publication-number', 'notice-title', 'buyer-name', 'buyer-country', 'publication-date', 'deadline-receipt-tender-date-lot', 'notice-type'];
+const DEADLINE2 = ['deadline-receipt-request-date-lot'];
 const EXTRA = ['estimated-value-proc', 'estimated-value-cur-proc', 'estimated-value-lot', 'estimated-value-cur-lot'];
 
 const ISO3 = { ALB: 'AL', AND: 'AD', AUT: 'AT', BLR: 'BY', BEL: 'BE', BIH: 'BA', BGR: 'BG', HRV: 'HR', CYP: 'CY', CZE: 'CZ', DNK: 'DK', EST: 'EE', FIN: 'FI', FRA: 'FR', DEU: 'DE', GRC: 'GR', HUN: 'HU', ISL: 'IS', IRL: 'IE', ITA: 'IT', XKX: 'XK', LVA: 'LV', LIE: 'LI', LTU: 'LT', LUX: 'LU', MLT: 'MT', MDA: 'MD', MCO: 'MC', MNE: 'ME', NLD: 'NL', MKD: 'MK', NOR: 'NO', POL: 'PL', PRT: 'PT', ROU: 'RO', SMR: 'SM', SRB: 'RS', SVK: 'SK', SVN: 'SI', ESP: 'ES', SWE: 'SE', CHE: 'CH', UKR: 'UA', GBR: 'GB', VAT: 'VA', TUR: 'TR', GEO: 'GE', ARM: 'AM' };
@@ -87,7 +92,7 @@ function toTender(n) {
     buyer: text(n['buyer-name']),
     country: ISO3[countryRaw] || (countryRaw.length === 2 ? countryRaw : ''),
     published: date(n['publication-date']),
-    deadline: date(n['deadline-receipt-tender-date-lot']),
+    deadline: date(n['deadline-receipt-tender-date-lot']) || date(n['deadline-receipt-request-date-lot']),
     type: TYPES[typeRaw] || typeRaw,
     kind: /^(can-|veat)/.test(typeRaw) ? 'award' : /^pin-/.test(typeRaw) ? 'prior' : 'notice',
     link: link(n, pub),
@@ -96,13 +101,13 @@ function toTender(n) {
   };
 }
 
+// Probeer eerst alle velden; kent TED een extra veld niet, dan stap voor stap minder.
 let notices;
-try {
-  notices = await fetchAll([...BASE, ...EXTRA]);
-} catch (e) {
-  console.warn('Ophalen met waardevelden lukte niet, opnieuw zonder:', e.message);
-  notices = await fetchAll(BASE);
+for (const fields of [[...BASE, ...EXTRA, ...DEADLINE2], [...BASE, ...EXTRA], BASE]) {
+  try { notices = await fetchAll(fields); console.log('Velden gebruikt:', fields.length); break; }
+  catch (e) { console.warn('Ophalen lukte niet met', fields.length, 'velden:', e.message); }
 }
+if (!notices) throw new Error('Ophalen bij TED is helemaal mislukt.');
 const fresh = notices.map(toTender).filter(Boolean);
 console.log(`${fresh.length} tenders opgehaald bij TED.`);
 
@@ -110,6 +115,13 @@ let old = { updated: null, tenders: [] };
 try { old = JSON.parse(await readFile(FILE, 'utf8')); } catch { /* eerste keer */ }
 
 const now = new Date().toISOString();
+// Is de zoekopdracht veranderd? Dan oude berichten die niet meer gevonden worden weggooien.
+const queryVersion = createHash('sha1').update(QUERY).digest('hex').slice(0, 10);
+const freshPubs = new Set(fresh.map(t => t.pub));
+if (old.queryVersion !== queryVersion) {
+  old.tenders = (old.tenders || []).filter(t => freshPubs.has(t.pub));
+  console.log('Zoekopdracht gewijzigd: oude berichten buiten de nieuwe zoekopdracht verwijderd.');
+}
 const byPub = new Map((old.tenders || []).map(t => [t.pub, t]));
 let added = 0;
 for (const t of fresh) {
@@ -129,5 +141,5 @@ const tenders = [...byPub.values()]
   .sort((a, b) => (a.deadline || '9999').localeCompare(b.deadline || '9999'));
 
 await mkdir(new URL('../data/', import.meta.url), { recursive: true });
-await writeFile(FILE, JSON.stringify({ updated: now, source: 'TED – Tenders Electronic Daily', count: tenders.length, tenders }, null, 1) + '\n');
+await writeFile(FILE, JSON.stringify({ updated: now, queryVersion, source: 'TED – Tenders Electronic Daily', count: tenders.length, tenders }, null, 1) + '\n');
 console.log(`Opgeslagen: ${tenders.length} tenders (${added} nieuw).`);
