@@ -193,3 +193,9 @@ header{position:relative}
 .toast{position:fixed;left:50%;bottom:calc(20px + env(safe-area-inset-bottom,0px));transform:translateX(-50%);z-index:50;display:flex;gap:12px;align-items:center;
   background:var(--panel-2);border:1px solid var(--beam);border-radius:10px;padding:10px 14px;box-shadow:0 10px 30px rgba(0,0,0,.5);font-size:13px;max-width:calc(100% - 32px)}
 .toast button{font-size:12px;padding:4px 10px}
+
+.deftag{font:600 10px var(--f-mono);letter-spacing:.05em;text-transform:uppercase;color:#ffcf8a;border:1px solid rgba(255,180,84,.5);background:rgba(255,180,84,.08);border-radius:4px;padding:0 5px}
+.deftag.ua{text-transform:none;letter-spacing:0;font-weight:500}
+.filters{grid-template-columns:minmax(180px,2fr) repeat(6,minmax(110px,1fr))}
+@media (max-width:1250px){.filters{grid-template-columns:repeat(4,minmax(0,1fr))}.filters .grow{grid-column:1/-1}}
+@media (max-width:600px){.filters{grid-template-columns:1fr 1fr}}

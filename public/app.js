@@ -42,7 +42,7 @@ function fmtMoney(n, cur){
 // ---------- Status ----------
 let tenders = [];
 let updated = null;
-const state = { q:"", status:"open", country:"", sort:"deadline", minValue:0, source:"" };
+const state = { q:"", status:"open", country:"", sort:"deadline", minValue:0, source:"", def:"" };
 try { Object.assign(state, JSON.parse(localStorage.getItem("tk-filters") || "{}")); state.country = ""; state.q = ""; } catch(e) {}
 function saveFilters(){ try { localStorage.setItem("tk-filters", JSON.stringify({status:state.status, sort:state.sort, minValue:state.minValue})); } catch(e) {} }
 
@@ -82,6 +82,8 @@ function filtered(ignoreCountry){
   return tenders.filter(t => {
     const st = statusOf(t);
     if(state.source && (t.source || "TED") !== state.source) return false;
+    if(state.def === "no" && t.defense) return false;
+    if(state.def === "only" && !t.defense) return false;
     if(effStatus() === "open" && !isOpen(t)) return false;
     if(state.status === "soon" && st !== "soon") return false;
     if(state.status === "new" && (!isNew(t) || !isOpen(t))) return false;
@@ -303,6 +305,8 @@ function drawLabels(){
 
 // ---------- Lijst ----------
 const dlText = t => { const st = statusOf(t); return (st === "awarded" || st === "prior") ? leftText(t) : `Sluit ${fmt(t.deadline)} · ${leftText(t)}`; };
+const defHtml = t => (t.defense ? `<span class="deftag" title="Opdrachtgever is een defensie-organisatie">Defensie</span>` : "")
+  + (t.policyUA && window.isAdmin ? `<span class="deftag ua" title="Beleid BroadbandEU">Oekraïne: bevestiging niet-militair gebruik nodig</span>` : "");
 const valHtml = t => t.value ? `<span class="val">${esc(fmtMoney(t.value, t.currency))}</span>` : "";
 const newHtml = t => isNew(t) ? `<span class="newtag">NIEUW</span>` : "";
 function leftText(t){ const st = statusOf(t);
@@ -312,11 +316,11 @@ function titleHtml(t){ return t.link ? `<a href="${esc(t.link)}" target="_blank"
 const hideBtn = t => window.isAdmin ? `<button type="button" class="hide-btn" data-hide="${esc(t.pub)}" title="Verbergen voor iedereen">Verberg</button>` : "";
 function card(t){
   return `<article class="t ${statusOf(t)}">${hideBtn(t)}<h3>${newHtml(t)}${titleHtml(t)}</h3>
-    <div class="meta"><span class="src">${esc(t.source || "TED")}</span><span>${esc(t.country ? cname(t.country) : (t.countryName || "Onbekend land"))}</span>${t.buyer ? `<span>${esc(t.buyer)}</span>` : ""}</div>
+    <div class="meta"><span class="src">${esc(t.source || "TED")}</span>${defHtml(t)}<span>${esc(t.country ? cname(t.country) : (t.countryName || "Onbekend land"))}</span>${t.buyer ? `<span>${esc(t.buyer)}</span>` : ""}</div>
     <div class="meta"><span class="dl">${dlText(t)}</span>${valHtml(t)}<span class="mono">Gepubl. ${fmt(t.published)}</span><span class="mono">${esc(t.pub)}</span>${t.type ? `<span>${esc(t.type)}</span>` : ""}</div></article>`;
 }
 function panelCard(t){
-  return `<article class="t ${statusOf(t)}">${hideBtn(t)}<h3>${newHtml(t)}${titleHtml(t)}</h3>${t.buyer ? `<div class="meta"><span>${esc(t.buyer)}</span></div>` : ""}<div class="meta"><span class="dl">${dlText(t)}</span>${valHtml(t)}</div></article>`;
+  return `<article class="t ${statusOf(t)}">${hideBtn(t)}<h3>${newHtml(t)}${titleHtml(t)}</h3><div class="meta"><span class="src">${esc(t.source || "TED")}</span>${defHtml(t)}${t.buyer ? `<span>${esc(t.buyer)}</span>` : ""}</div><div class="meta"><span class="dl">${dlText(t)}</span>${valHtml(t)}</div></article>`;
 }
 const SORTERS = {
   deadline: (a,b) => (a.deadline || "9999").localeCompare(b.deadline || "9999"),
@@ -342,7 +346,10 @@ function render(){
   const cs = [...new Set(tenders.map(t => t.country).filter(Boolean))].sort((a,b) => cname(a).localeCompare(cname(b), "nl"));
   sel.innerHTML = `<option value="">Alle landen</option>` + cs.map(c => `<option value="${c}">${esc(cname(c))}</option>`).join("");
   sel.value = state.country;
-  $("fSource").value = state.source; $("fStatus").value = state.status; $("fSort").value = state.sort; $("fValue").value = String(state.minValue);
+  const srcSel = $("fSource");
+  const srcs = [...new Set(tenders.map(t => t.source || "TED"))].sort((a,b) => a.localeCompare(b, "nl"));
+  if(srcSel.options.length !== srcs.length + 1) srcSel.innerHTML = `<option value="">Alle bronnen</option>` + srcs.map(s => `<option value="${esc(s)}">${esc(s)}</option>`).join("");
+  srcSel.value = state.source; $("fDef").value = state.def; $("fStatus").value = state.status; $("fSort").value = state.sort; $("fValue").value = String(state.minValue);
   const box = $("list");
   if(!loaded) {}
   else if(loadError) box.innerHTML = `<div class="empty">De tenders konden niet worden geladen. Ververs de pagina over een paar minuten.</div>`;
@@ -368,6 +375,7 @@ function renderPanel(list){
 $("q").addEventListener("input", e => { state.q = e.target.value; render(); });
 $("fStatus").addEventListener("change", e => { state.status = e.target.value; saveFilters(); render(); });
 $("fSource").addEventListener("change", e => { state.source = e.target.value; render(); });
+$("fDef").addEventListener("change", e => { state.def = e.target.value; render(); });
 $("fSort").addEventListener("change", e => { state.sort = e.target.value; saveFilters(); render(); });
 $("fValue").addEventListener("change", e => { state.minValue = Number(e.target.value) || 0; saveFilters(); render(); });
 $("fCountry").addEventListener("change", e => { state.country = e.target.value; render(); if(state.country) focusCountry(state.country); });

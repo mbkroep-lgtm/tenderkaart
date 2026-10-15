@@ -21,11 +21,11 @@ async function act(body, okText){
 
 function renderSources(){
   $("updated").textContent = "Gegevens laatst bijgewerkt: " + when(D.updated) + ". Elke werkdag rond 07:00 automatisch.";
-  const names = ["TED", "Find a Tender", "Wereldbank", "SAM.gov"];
+  const names = [...new Set([...Object.keys(D.sources || {}), ...D.tenders.map(t => t.source)])].sort((a,b) => a.localeCompare(b, "nl"));
   const counts = {}; D.tenders.forEach(t => counts[t.source] = (counts[t.source] || 0) + 1);
   $("srcRows").innerHTML = names.map(n => {
     const s = D.sources[n];
-    const status = !s ? `<span class="note">nog niet opgehaald</span>` : s.ok ? `<span class="ok">werkt</span>` : `<span class="bad">fout</span><br><small class="note">${esc(s.error || "")}</small>`;
+    const status = !s ? `<span class="note">nog niet opgehaald</span>` : s.ok ? `<span class="ok">werkt</span>${s.note ? `<br><small class="note">${esc(s.note)}</small>` : ""}` : `<span class="bad">fout</span><br><small class="note">${esc(s.error || "")}</small>`;
     return `<tr><td>${esc(n)}</td><td>${status}</td><td>${s ? when(s.at) : "–"}</td><td class="num">${counts[n] || 0}</td></tr>`;
   }).join("");
   $("btnRefresh").disabled = !D.canRefresh;
