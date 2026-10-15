@@ -1,8 +1,8 @@
 {
- "updated": "2026-10-15T11:42:12.304Z",
- "queryVersion": "0b74a5daf7",
+ "updated": "2026-10-15T11:45:56.639Z",
+ "queryVersion": "bd8f2c65a6",
  "source": "TED – Tenders Electronic Daily",
- "count": 15,
+ "count": 12,
  "tenders": [
   {
    "pub": "191062-2026",
@@ -16,7 +16,12 @@
    "link": "https://ted.europa.eu/nl/notice/-/detail/191062-2026",
    "value": 450000000,
    "currency": "NOK",
-   "firstSeen": "2026-10-15T10:34:30.264Z"
+   "firstSeen": "2026-10-15T10:34:30.264Z",
+   "cpv": [
+    "64000000",
+    "64221000",
+    "64225000"
+   ]
   },
   {
    "pub": "534538-2026",
@@ -30,35 +35,11 @@
    "link": "https://ted.europa.eu/nl/notice/-/detail/534538-2026",
    "value": null,
    "currency": "EUR",
-   "firstSeen": "2026-10-15T11:41:02.024Z"
-  },
-  {
-   "pub": "638067-2026",
-   "title": "Portugal – Mobiele containers voor bijzondere doeleinden – 3026007659 / Fornecimento de Equipamentos Missões Militares Trator Mar",
-   "buyer": "Ministério da Defesa Nacional - Marinha",
-   "country": "PT",
-   "published": "2026-09-16",
-   "deadline": "2026-10-14",
-   "type": "Aankondiging opdracht",
-   "kind": "notice",
-   "link": "https://ted.europa.eu/nl/notice/-/detail/638067-2026",
-   "value": 325903.97,
-   "currency": "EUR",
-   "firstSeen": "2026-10-15T10:34:30.264Z"
-  },
-  {
-   "pub": "432792-2026",
-   "title": "België, Tsjechië – Zakelijke dienstverlening: juridisch, marketing, consulting, drukkerij en beveiliging – FWC Legal and management support on the implementation of components of the European Space Programme",
-   "buyer": "European Commission, DG DEFIS - Defence Industry and Space",
-   "country": "BE",
-   "published": "2026-06-25",
-   "deadline": "",
-   "type": "Vooraankondiging",
-   "link": "https://ted.europa.eu/nl/notice/-/detail/432792-2026",
-   "value": 60000000,
-   "currency": "EUR",
-   "firstSeen": "2000-01-01T00:00:00.000Z",
-   "kind": "prior"
+   "firstSeen": "2026-10-15T11:41:02.024Z",
+   "cpv": [
+    "32522000",
+    "32530000"
+   ]
   },
   {
    "pub": "713864-2026",
@@ -72,7 +53,10 @@
    "link": "https://ted.europa.eu/nl/notice/-/detail/713864-2026",
    "value": 25198500,
    "currency": "RON",
-   "firstSeen": "2026-10-15T10:34:30.264Z"
+   "firstSeen": "2026-10-15T10:34:30.264Z",
+   "cpv": [
+    "64214100"
+   ]
   },
   {
    "pub": "704090-2026",
@@ -86,7 +70,10 @@
    "link": "https://ted.europa.eu/nl/notice/-/detail/704090-2026",
    "value": 25198500,
    "currency": "RON",
-   "firstSeen": "2026-10-15T10:34:30.264Z"
+   "firstSeen": "2026-10-15T10:34:30.264Z",
+   "cpv": [
+    "64214100"
+   ]
   },
   {
    "pub": "588532-2026",
@@ -100,7 +87,10 @@
    "link": "https://ted.europa.eu/nl/notice/-/detail/588532-2026",
    "value": 25198500,
    "currency": "RON",
-   "firstSeen": "2026-10-15T10:34:30.264Z"
+   "firstSeen": "2026-10-15T10:34:30.264Z",
+   "cpv": [
+    "64214100"
+   ]
   },
   {
    "pub": "580834-2026",
@@ -114,7 +104,10 @@
    "link": "https://ted.europa.eu/nl/notice/-/detail/580834-2026",
    "value": 11748.4,
    "currency": "EUR",
-   "firstSeen": "2026-10-15T10:34:30.264Z"
+   "firstSeen": "2026-10-15T10:34:30.264Z",
+   "cpv": [
+    "32500000"
+   ]
   },
   {
    "pub": "571696-2026",
@@ -128,7 +121,10 @@
    "link": "https://ted.europa.eu/nl/notice/-/detail/571696-2026",
    "value": null,
    "currency": "EUR",
-   "firstSeen": "2026-10-15T10:34:30.264Z"
+   "firstSeen": "2026-10-15T10:34:30.264Z",
+   "cpv": [
+    "32500000"
+   ]
   },
   {
    "pub": "568301-2026",
@@ -142,7 +138,10 @@
    "link": "https://ted.europa.eu/nl/notice/-/detail/568301-2026",
    "value": null,
    "currency": "EUR",
-   "firstSeen": "2026-10-15T10:34:30.264Z"
+   "firstSeen": "2026-10-15T10:34:30.264Z",
+   "cpv": [
+    "32500000"
+   ]
   },
   {
    "pub": "568320-2026",
@@ -156,7 +155,10 @@
    "link": "https://ted.europa.eu/nl/notice/-/detail/568320-2026",
    "value": null,
    "currency": "EUR",
-   "firstSeen": "2026-10-15T10:34:30.264Z"
+   "firstSeen": "2026-10-15T10:34:30.264Z",
+   "cpv": [
+    "32500000"
+   ]
   },
   {
    "pub": "568435-2026",
@@ -170,7 +172,10 @@
    "link": "https://ted.europa.eu/nl/notice/-/detail/568435-2026",
    "value": null,
    "currency": "EUR",
-   "firstSeen": "2026-10-15T10:34:30.264Z"
+   "firstSeen": "2026-10-15T10:34:30.264Z",
+   "cpv": [
+    "32500000"
+   ]
   },
   {
    "pub": "552899-2026",
@@ -184,21 +189,10 @@
    "link": "https://ted.europa.eu/nl/notice/-/detail/552899-2026",
    "value": 25198500,
    "currency": "RON",
-   "firstSeen": "2026-10-15T10:34:30.264Z"
-  },
-  {
-   "pub": "545525-2026",
-   "title": "Roemenië – Bermpaaltjes – Achizitie de balize in cadrul Proiectului „Îmbunătățirea nivelului de semnalizare, protecție și monitorizare a stării de conservare a habitatelor și speciilor din zonele de maxim interes (zone strict protejate și colonii) din RBDD” SMIS 320666 finanțat prin Programul Dezvoltare.",
-   "buyer": "ADMINISTRATIA REZERVATIEI BIOSFEREI DELTA DUNARII",
-   "country": "RO",
-   "published": "2026-08-06",
-   "deadline": "",
-   "type": "Gegunde opdracht",
-   "kind": "award",
-   "link": "https://ted.europa.eu/nl/notice/-/detail/545525-2026",
-   "value": 26320972.32,
-   "currency": "RON",
-   "firstSeen": "2026-10-15T10:34:30.264Z"
+   "firstSeen": "2026-10-15T10:34:30.264Z",
+   "cpv": [
+    "64214100"
+   ]
   },
   {
    "pub": "673322-2026",
@@ -212,7 +206,11 @@
    "link": "https://ted.europa.eu/nl/notice/-/detail/673322-2026",
    "value": null,
    "currency": "EUR",
-   "firstSeen": "2026-10-15T11:41:38.820Z"
+   "firstSeen": "2026-10-15T11:41:38.820Z",
+   "cpv": [
+    "32522000",
+    "32530000"
+   ]
   }
  ]
 }
