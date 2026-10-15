@@ -38,14 +38,31 @@ addEventListener("pagehide", markVisit);
 document.addEventListener("visibilitychange", () => { if(document.visibilityState === "hidden") markVisit(); });
 const isNew = t => !!(t.firstSeen && t.firstSeen > prevVisit);
 
-function statusOf(t){ const dl = daysLeft(t.deadline); if(dl === null) return "open"; if(dl < 0) return "closed"; if(dl <= 14) return "soon"; return "open"; }
+// soort bericht: echte aankondiging, gegunde opdracht of vooraankondiging
+const AWARD_TYPES = ["Gegunde opdracht", "Wijziging opdracht", "Vrijwillige transparantie"];
+function kindOf(t){
+  if(t.kind) return t.kind;
+  if(AWARD_TYPES.includes(t.type)) return "award";
+  if(t.type === "Vooraankondiging") return "prior";
+  return "notice";
+}
+function statusOf(t){
+  const k = kindOf(t);
+  if(k === "award") return "awarded";
+  if(k === "prior") return "prior";
+  const dl = daysLeft(t.deadline);
+  if(dl === null) return "open"; if(dl < 0) return "closed"; if(dl <= 14) return "soon"; return "open";
+}
+const isOpen = t => { const s = statusOf(t); return s === "open" || s === "soon"; };
 function filtered(ignoreCountry){
   const q = state.q.trim().toLowerCase();
   return tenders.filter(t => {
     const st = statusOf(t);
-    if(state.status === "open" && st === "closed") return false;
+    if(state.status === "open" && !isOpen(t)) return false;
     if(state.status === "soon" && st !== "soon") return false;
-    if(state.status === "new" && (!isNew(t) || st === "closed")) return false;
+    if(state.status === "new" && (!isNew(t) || !isOpen(t))) return false;
+    if(state.status === "prior" && st !== "prior") return false;
+    if(state.status === "awarded" && st !== "awarded") return false;
     if(state.minValue > 0 && !(t.value >= state.minValue)) return false;
     if(!ignoreCountry && state.country && t.country !== state.country) return false;
     if(q && !(`${t.title} ${t.buyer} ${t.pub} ${cname(t.country)}`.toLowerCase().includes(q))) return false;
@@ -225,17 +242,20 @@ function drawLabels(){
 }
 
 // ---------- Lijst ----------
+const dlText = t => { const st = statusOf(t); return (st === "awarded" || st === "prior") ? leftText(t) : `Sluit ${fmt(t.deadline)} · ${leftText(t)}`; };
 const valHtml = t => t.value ? `<span class="val">${esc(fmtMoney(t.value, t.currency))}</span>` : "";
 const newHtml = t => isNew(t) ? `<span class="newtag">NIEUW</span>` : "";
-function leftText(t){ const dl = daysLeft(t.deadline); return dl === null ? "geen sluitingsdatum" : dl < 0 ? "gesloten" : dl === 0 ? "sluit vandaag" : `nog ${dl} dag${dl === 1 ? "" : "en"}`; }
+function leftText(t){ const st = statusOf(t);
+  if(st === "awarded") return "gegund"; if(st === "prior") return "vooraankondiging, inschrijven nog niet mogelijk";
+  const dl = daysLeft(t.deadline); return dl === null ? "geen sluitingsdatum" : dl < 0 ? "gesloten" : dl === 0 ? "sluit vandaag" : `nog ${dl} dag${dl === 1 ? "" : "en"}`; }
 function titleHtml(t){ return t.link ? `<a href="${esc(t.link)}" target="_blank" rel="noopener">${esc(t.title)}</a>` : esc(t.title); }
 function card(t){
   return `<article class="t ${statusOf(t)}"><h3>${newHtml(t)}${titleHtml(t)}</h3>
     <div class="meta"><span>${esc(cname(t.country))}</span>${t.buyer ? `<span>${esc(t.buyer)}</span>` : ""}</div>
-    <div class="meta"><span class="dl">Sluit ${fmt(t.deadline)} · ${leftText(t)}</span>${valHtml(t)}<span class="mono">Gepubl. ${fmt(t.published)}</span><span class="mono">${esc(t.pub)}</span>${t.type ? `<span>${esc(t.type)}</span>` : ""}</div></article>`;
+    <div class="meta"><span class="dl">${dlText(t)}</span>${valHtml(t)}<span class="mono">Gepubl. ${fmt(t.published)}</span><span class="mono">${esc(t.pub)}</span>${t.type ? `<span>${esc(t.type)}</span>` : ""}</div></article>`;
 }
 function panelCard(t){
-  return `<article class="t ${statusOf(t)}"><h3>${newHtml(t)}${titleHtml(t)}</h3>${t.buyer ? `<div class="meta"><span>${esc(t.buyer)}</span></div>` : ""}<div class="meta"><span class="dl">Sluit ${fmt(t.deadline)} · ${leftText(t)}</span>${valHtml(t)}</div></article>`;
+  return `<article class="t ${statusOf(t)}"><h3>${newHtml(t)}${titleHtml(t)}</h3>${t.buyer ? `<div class="meta"><span>${esc(t.buyer)}</span></div>` : ""}<div class="meta"><span class="dl">${dlText(t)}</span>${valHtml(t)}</div></article>`;
 }
 const SORTERS = {
   deadline: (a,b) => (a.deadline || "9999").localeCompare(b.deadline || "9999"),
@@ -247,10 +267,10 @@ let loaded = false, loadError = false;
 function render(){
   const list = filtered(false).sort(SORTERS[state.sort] || SORTERS.deadline);
   if(loaded){
-    $("sOpen").textContent = tenders.filter(t => statusOf(t) !== "closed").length;
-    $("sNew").textContent = tenders.filter(t => isNew(t) && statusOf(t) !== "closed").length;
+    $("sOpen").textContent = tenders.filter(isOpen).length;
+    $("sNew").textContent = tenders.filter(t => isNew(t) && isOpen(t)).length;
     $("sSoon").textContent = tenders.filter(t => statusOf(t) === "soon").length;
-    $("sCountries").textContent = new Set(tenders.filter(t => statusOf(t) !== "closed" && t.country).map(t => t.country)).size;
+    $("sCountries").textContent = new Set(tenders.filter(t => isOpen(t) && t.country).map(t => t.country)).size;
     $("sUpdated").textContent = updated ? new Date(updated).toLocaleString("nl-NL", {day:"numeric", month:"short", hour:"2-digit", minute:"2-digit"}) : "nog niet";
   }
   $("listCount").textContent = loaded ? `${list.length} tender${list.length === 1 ? "" : "s"}` : "Laden…";
@@ -275,7 +295,7 @@ function renderPanel(list){
   if(!state.country){ p.hidden = true; return; }
   const n = list.length;
   $("cpTitle").textContent = cname(state.country);
-  $("cpSub").textContent = `${n} tender${n === 1 ? "" : "s"} · ${({open:"nog open", soon:"sluit binnen 14 dagen", new:"alleen nieuw", all:"alles"})[state.status]}`;
+  $("cpSub").textContent = `${n} tender${n === 1 ? "" : "s"} · ${({open:"nog open", soon:"sluit binnen 14 dagen", new:"alleen nieuw", prior:"vooraankondigingen", awarded:"gegunde opdrachten", all:"alles"})[state.status]}`;
   $("cpList").innerHTML = n ? list.map(panelCard).join("") : `<div class="empty">Geen tenders met deze filters. Kies bij Status "Alles" om ook gesloten tenders te zien.</div>`;
   p.hidden = false;
 }

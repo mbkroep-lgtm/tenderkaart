@@ -89,6 +89,7 @@ function toTender(n) {
     published: date(n['publication-date']),
     deadline: date(n['deadline-receipt-tender-date-lot']),
     type: TYPES[typeRaw] || typeRaw,
+    kind: /^(can-|veat)/.test(typeRaw) ? 'award' : /^pin-/.test(typeRaw) ? 'prior' : 'notice',
     link: link(n, pub),
     value,
     currency: (currency || 'EUR').toUpperCase().slice(0, 3)

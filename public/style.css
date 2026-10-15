@@ -160,3 +160,7 @@ header{position:relative}
 .account{display:flex;align-items:center;gap:10px;font-size:12px;color:var(--muted)}
 .account button{font-size:12px;padding:5px 10px}
 @media (max-width:600px){.account{width:100%;justify-content:space-between}}
+.t.awarded{border-left-color:#6b7fa3;opacity:.8}
+.t.awarded .dl{color:#9fb0cc}
+.t.prior{border-left-color:#a98bff}
+.t.prior .dl{color:#c9b8ff}
