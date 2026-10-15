@@ -75,7 +75,7 @@
 
   <div class="main">
     <div class="mapbox" id="mapbox">
-      <svg id="map" role="img" aria-label="Kaart van Europa met aantal tenders per land"></svg>
+      <svg id="map" role="img" aria-label="Wereldbol met aantal tenders per land"></svg>
       <div class="legend"><span>1</span><i></i><span id="legMax">meer</span></div>
       <div class="zoom">
         <button type="button" id="zIn" aria-label="Inzoomen">+</button>
@@ -83,7 +83,7 @@
         <button type="button" id="zHome" class="txt" aria-label="Naar Europa">Europa</button>
         <button type="button" id="zWorld" class="txt" aria-label="Hele wereld tonen">Wereld</button>
       </div>
-      <div class="hint">Slepen om te verschuiven · scrollen of knijpen om te zoomen</div>
+      <div class="hint">Slepen om de bol te draaien · scrollen of knijpen om te zoomen</div>
       <div class="mapnote" id="mapnote">Kaart laden…</div>
       <aside class="cpanel" id="cpanel" hidden aria-live="polite">
         <div class="cp-head"><div><h2 id="cpTitle"></h2><p id="cpSub"></p></div><button type="button" id="cpClose" aria-label="Sluiten">×</button></div>
@@ -92,7 +92,6 @@
     </div>
 
     <div class="side">
-      <p class="autoall" id="autoAll" hidden>Er zijn nu geen open LEO-tenders. Je ziet daarom alle berichten: gegunde opdrachten, vooraankondigingen en gesloten tenders.</p>
       <div class="listhead"><span id="listCount">Laden…</span><span id="selChip"></span></div>
       <div class="list" id="list"><div class="loading">Tenders laden…</div></div>
     </div>
