@@ -115,9 +115,9 @@ for (const fields of [[...BASE, ...EXTRA, ...DEADLINE2, ...CPVFIELD], [...BASE, 
   catch (e) { console.warn('Ophalen lukte niet met', fields.length, 'velden:', e.message); }
 }
 if (!notices) throw new Error('Ophalen bij TED is helemaal mislukt.');
-// Alleen telecom: apparatuur (CPV 32…) of telecomdiensten (CPV 64…).
+// Alleen telecom: hoofdcategorie (eerste CPV-code) is apparatuur (32…) of telecomdiensten (64…).
 // Zonder CPV-gegevens laten we het bericht staan.
-const isTelecom = t => !t.cpv.length || t.cpv.some(c => c.startsWith('32') || c.startsWith('64'));
+const isTelecom = t => !t.cpv.length || /^(32|64)/.test(t.cpv[0]);
 const all = notices.map(toTender).filter(Boolean);
 const fresh = all.filter(isTelecom);
 console.log(`${all.length - fresh.length} berichten buiten telecom weggefilterd.`);
@@ -128,7 +128,7 @@ try { old = JSON.parse(await readFile(FILE, 'utf8')); } catch { /* eerste keer *
 
 const now = new Date().toISOString();
 // Is de zoekopdracht veranderd? Dan oude berichten die niet meer gevonden worden weggooien.
-const FILTER_VERSION = 'telecom-32-64'; // verhogen als het filter verandert, dan wordt opnieuw opgeschoond
+const FILTER_VERSION = 'telecom-main-32-64'; // verhogen als het filter verandert, dan wordt opnieuw opgeschoond
 const queryVersion = createHash('sha1').update(QUERY + FILTER_VERSION).digest('hex').slice(0, 10);
 const freshPubs = new Set(fresh.map(t => t.pub));
 if (old.queryVersion !== queryVersion) {
