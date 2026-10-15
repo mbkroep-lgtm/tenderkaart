@@ -5,7 +5,10 @@ import { readFile, writeFile, mkdir } from 'node:fs/promises';
 const API = 'https://api.ted.europa.eu/v3/notices/search';
 const FILE = new URL('../data/tenders.json', import.meta.url);
 
-const QUERY = '(FT ~ ("starlink" OR "satellite internet" OR "satellite broadband" OR "satellite connectivity" OR "satellite communication services" OR "satcom" OR "VSAT" OR "LEO satellite" OR "low earth orbit" OR "OneWeb" OR "satellietinternet" OR "satellietverbinding" OR "Satelliteninternet" OR "Satellitenkommunikation" OR "internet par satellite" OR "connectivité satellitaire" OR "internet satelital" OR "conectividad satelital" OR "internet satellitare" OR "connettività satellitare" OR "internet satelitarny" OR "łączność satelitarna" OR "mobile connectivity" OR "backup connectivity" OR "emergency communication" OR "noodcommunicatie" OR "Notfallkommunikation" OR "rural broadband") OR classification-cpv IN (32531000 32532000 32533000 32534000)) SORT BY publication-date DESC';
+// Elke zoekterm als losse FT-voorwaarde: TED ondersteunt geen ("a" OR "b") binnen één FT ~ (dat geeft 0 resultaten).
+const TERMS = ["starlink", "satellite internet", "satellite broadband", "satellite connectivity", "satellite communication services", "satcom", "VSAT", "LEO satellite", "low earth orbit", "OneWeb", "satellietinternet", "satellietverbinding", "Satelliteninternet", "Satellitenkommunikation", "internet par satellite", "connectivité satellitaire", "internet satelital", "conectividad satelital", "internet satellitare", "connettività satellitare", "internet satelitarny", "łączność satelitarna", "mobile connectivity", "backup connectivity", "emergency communication", "noodcommunicatie", "Notfallkommunikation", "rural broadband"];
+const CPV = '32531000 32532000 32533000 32534000';
+const QUERY = '(' + TERMS.map(t => `FT ~ "${t}"`).join(' OR ') + ` OR classification-cpv IN (${CPV})) SORT BY publication-date DESC`;
 const BASE = ['publication-number', 'notice-title', 'buyer-name', 'buyer-country', 'publication-date', 'deadline-receipt-tender-date-lot', 'notice-type'];
 const EXTRA = ['estimated-value-proc', 'estimated-value-cur-proc', 'estimated-value-lot', 'estimated-value-cur-lot'];
 

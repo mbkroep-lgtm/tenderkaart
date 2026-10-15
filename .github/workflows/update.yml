@@ -27,13 +27,11 @@ jobs:
           node-version: 20
       - name: Tenders ophalen
         run: node scripts/fetch-ted.mjs
-      - name: Diagnose (tijdelijk)
-        run: node scripts/diag.mjs || true
       - name: Opslaan
         run: |
           git config user.name "tenderkaart-bot"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add data/tenders.json data/diag.json 2>/dev/null || git add data/tenders.json
+          git add data/tenders.json
           if git diff --cached --quiet; then
             echo "Geen wijzigingen."
           else
