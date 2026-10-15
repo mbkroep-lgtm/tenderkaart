@@ -199,3 +199,12 @@ header{position:relative}
 .filters{grid-template-columns:minmax(180px,2fr) repeat(6,minmax(110px,1fr))}
 @media (max-width:1250px){.filters{grid-template-columns:repeat(4,minmax(0,1fr))}.filters .grow{grid-column:1/-1}}
 @media (max-width:600px){.filters{grid-template-columns:1fr 1fr}}
+
+/* ---- BroadbandEU-logo ---- */
+.brand{display:inline-block;line-height:0;margin:0 0 14px}
+.brand img{height:22px;width:auto;display:block;opacity:.95}
+.brand:hover img{opacity:1}
+.brand.small{margin:0}.brand.small img{height:16px;opacity:.7}
+.auth-card .brand{margin-bottom:18px}.auth-card .brand img{height:24px}
+footer{align-items:center}
+@media (max-width:600px){.brand img{height:18px}}
