@@ -8,7 +8,7 @@ const FILE = new URL('../data/tenders.json', import.meta.url);
 
 // Alleen LEO-satellietverbindingen. Elke term als losse FT-voorwaarde:
 // TED ondersteunt geen ("a" OR "b") binnen één FT ~ (dat geeft 0 resultaten).
-const BRANDS = ["starlink", "OneWeb", "Kuiper", "Amazon Leo"];
+const BRANDS = ["starlink", "OneWeb", "Project Kuiper", "Amazon Leo"]; // los "Kuiper" is ook een Nederlandse achternaam
 // Alleen vaste combinaties: los "LEO" geeft veel ruis (Leopard, namen, woorden in andere talen).
 const PHRASES = ["LEO satellite", "LEO satellites", "LEO satellite internet", "LEO connectivity", "LEO-satelliet", "LEO-satellieten",
   "LEO-Satellit", "LEO-Satelliten", "satellite LEO", "satellites LEO", "satélite LEO", "satélites LEO", "satellite a bassa orbita",
