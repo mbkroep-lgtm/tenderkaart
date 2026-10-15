@@ -1,22 +1,22 @@
 {
- "updated": "2026-10-15T11:52:34.155Z",
+ "updated": "2026-10-15T12:03:52.601Z",
  "queryVersion": "8a23162347",
  "sources": {
   "TED": {
    "ok": true,
-   "at": "2026-10-15T11:52:34.155Z",
+   "at": "2026-10-15T12:03:52.601Z",
    "count": 40
   },
   "Wereldbank": {
    "ok": true,
-   "at": "2026-10-15T11:52:34.155Z",
+   "at": "2026-10-15T12:03:52.601Z",
    "count": 62
   },
   "Find a Tender": {
    "ok": true,
-   "at": "2026-10-15T11:52:34.155Z",
+   "at": "2026-10-15T12:03:52.601Z",
    "count": 0,
-   "since": "2026-10-15T09:52:34.155Z"
+   "since": "2026-10-15T10:03:52.601Z"
   }
  },
  "count": 75,
@@ -1067,7 +1067,7 @@
    "source": "Wereldbank",
    "title": "Procurement of Starlink internet Equipment for Registration centers",
    "buyer": "Somalia Capacity Advancement, Livelihoods and Entrepreneurship, through Digital Uplift Project (SCAL",
-   "country": "",
+   "country": "SO",
    "countryName": "Somalia, Federal Republic of",
    "published": "2026-01-15",
    "deadline": "",
