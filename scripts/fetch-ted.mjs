@@ -6,10 +6,15 @@ import { createHash } from 'node:crypto';
 const API = 'https://api.ted.europa.eu/v3/notices/search';
 const FILE = new URL('../data/tenders.json', import.meta.url);
 
-// Elke zoekterm als losse FT-voorwaarde: TED ondersteunt geen ("a" OR "b") binnen één FT ~ (dat geeft 0 resultaten).
-const TERMS = ["starlink", "satellite internet", "satellite broadband", "satellite connectivity", "satellite communication services", "satcom", "VSAT", "OneWeb", "satellietinternet", "satellietverbinding", "Satelliteninternet", "Satellitenkommunikation", "internet par satellite", "connectivité satellitaire", "internet satelital", "conectividad satelital", "internet satellitare", "connettività satellitare", "internet satelitarny", "łączność satelitarna", "mobile connectivity", "backup connectivity", "emergency communication", "noodcommunicatie", "Notfallkommunikation", "rural broadband"];
-const CPV = '32531000 32532000 32533000';
-const QUERY = '(' + TERMS.map(t => `FT ~ "${t}"`).join(' OR ') + ` OR classification-cpv IN (${CPV})) SORT BY publication-date DESC`;
+// Alleen LEO-satellietverbindingen. Elke term als losse FT-voorwaarde:
+// TED ondersteunt geen ("a" OR "b") binnen één FT ~ (dat geeft 0 resultaten).
+const BRANDS = ["starlink", "OneWeb", "Project Kuiper", "Amazon Leo"]; // los "Kuiper" is ook een Nederlandse achternaam
+// Alleen vaste combinaties: los "LEO" geeft veel ruis (Leopard, namen, woorden in andere talen).
+const PHRASES = ["LEO satellite", "LEO satellites", "LEO satellite internet", "LEO connectivity", "LEO-satelliet", "LEO-satellieten",
+  "LEO-Satellit", "LEO-Satelliten", "satellite LEO", "satellites LEO", "satélite LEO", "satélites LEO", "satellite a bassa orbita",
+  "satelliti LEO", "satelity LEO", "low earth orbit satellite", "low earth orbit satellites", "low-earth orbit satellite"];
+const any = list => list.map(t => `FT ~ "${t}"`).join(' OR ');
+const QUERY = `(${any(BRANDS)} OR ${any(PHRASES)}) SORT BY publication-date DESC`;
 const BASE = ['publication-number', 'notice-title', 'buyer-name', 'buyer-country', 'publication-date', 'deadline-receipt-tender-date-lot', 'notice-type'];
 const DEADLINE2 = ['deadline-receipt-request-date-lot'];
 const EXTRA = ['estimated-value-proc', 'estimated-value-cur-proc', 'estimated-value-lot', 'estimated-value-cur-lot'];
