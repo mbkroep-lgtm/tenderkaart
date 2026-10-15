@@ -25,3 +25,18 @@ td.num{font-variant-numeric:tabular-nums;font-family:var(--f-mono)}
 button.danger:hover{border-color:#ff8a8a;color:#ffc2c2}
 code{font-family:var(--f-mono);font-size:12px}
 button[disabled]{opacity:.45;cursor:not-allowed}
+
+.progress{border:1px solid var(--line);border-radius:10px;padding:12px 14px;background:var(--panel-2);display:flex;flex-direction:column;gap:10px}
+.pg-head{display:flex;justify-content:space-between;gap:10px;font-size:14px}
+.mono{font-family:var(--f-mono);font-variant-numeric:tabular-nums;color:var(--muted);font-size:12px}
+.bar{height:6px;border-radius:3px;background:var(--line);overflow:hidden}
+.bar i{display:block;height:100%;width:0;background:var(--beam);border-radius:3px;transition:width .6s ease}
+.progress.done .bar i{background:#7ee0a1}.progress.failed .bar i{background:#ff8a8a}
+.steps{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:6px}
+.steps li{font-size:12px;color:var(--faint);display:flex;gap:6px;align-items:center}
+.steps li::before{content:"";flex:none;width:10px;height:10px;border-radius:50%;border:1.5px solid var(--faint)}
+.steps li.active{color:var(--beam-strong)}.steps li.active::before{border-color:var(--beam);background:radial-gradient(var(--beam) 40%,transparent 45%);animation:pulse 1.2s ease-in-out infinite}
+.steps li.ok{color:var(--ink)}.steps li.ok::before{border-color:#7ee0a1;background:#7ee0a1}
+.steps li.bad{color:#ffc2c2}.steps li.bad::before{border-color:#ff8a8a;background:#ff8a8a}
+@keyframes pulse{50%{opacity:.4}}
+@media (prefers-reduced-motion:reduce){.steps li.active::before{animation:none}.bar i{transition:none}}

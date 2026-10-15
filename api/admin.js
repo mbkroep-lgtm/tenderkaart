@@ -28,10 +28,33 @@ async function customers() {
   return out.sort((a, b) => (b.at || '').localeCompare(a.at || ''));
 }
 
+// Voortgang van de laatste ophaalronde op GitHub
+async function latestRun() {
+  const token = env('GITHUB_TOKEN');
+  if (!token) return json({ error: 'GITHUB_TOKEN ontbreekt.' }, 400);
+  const repo = env('GITHUB_REPO') || 'mbkroep-lgtm/tenderkaart';
+  const gh = async u => {
+    const r = await fetch(`https://api.github.com/repos/${repo}${u}`, { headers: { Authorization: `Bearer ${token}`, Accept: 'application/vnd.github+json', 'User-Agent': 'tendermap' } });
+    if (!r.ok) throw new Error('GitHub gaf ' + r.status);
+    return r.json();
+  };
+  const runs = await gh('/actions/workflows/update.yml/runs?per_page=3');
+  const run = (runs.workflow_runs || [])[0];
+  if (!run) return json({ run: null });
+  let steps = [];
+  try {
+    const jobs = await gh(`/actions/runs/${run.id}/jobs`);
+    steps = (jobs.jobs?.[0]?.steps || []).map(s => ({ name: s.name, status: s.status, conclusion: s.conclusion, started_at: s.started_at, completed_at: s.completed_at }));
+  } catch { /* stappen zijn er nog niet */ }
+  return json({ run: { id: run.id, status: run.status, conclusion: run.conclusion, event: run.event, created_at: run.created_at,
+    started_at: run.run_started_at, updated_at: run.updated_at, url: run.html_url }, steps, now: new Date().toISOString() });
+}
+
 export async function GET(request) {
   try {
     const me = await guard(request);
     if (!me) return json({ error: 'Alleen voor beheerders.' }, 403);
+    if (new URL(request.url).searchParams.get('runs')) return await latestRun();
     const data = JSON.parse(await readFile(path.join(process.cwd(), 'data', 'tenders.json'), 'utf8'));
     const [hidden, words, freeEmails, freeDomains, cust] = await Promise.all([
       getHidden(), getWords(), redis('SMEMBERS', 'free:emails'), redis('SMEMBERS', 'free:domains'), customers()
