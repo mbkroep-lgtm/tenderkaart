@@ -28,6 +28,8 @@ jobs:
           node-version: 22
       - name: Tenders ophalen
         run: node scripts/fetch-tenders.mjs
+        env:
+          SAM_API_KEY: ${{ secrets.SAM_API_KEY }}
       - name: Opslaan
         run: |
           git config user.name "tenderkaart-bot"

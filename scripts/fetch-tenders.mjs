@@ -260,6 +260,41 @@ async function fetchFts(sinceIso) {
   return out;
 }
 
+// ---------- Bron 4: SAM.gov (Amerikaanse overheid) ----------
+// Gratis sleutel heeft een laag dagquotum (±10 verzoeken): daarom hooguit één keer per ~20 uur, 4 zoektermen.
+const SAM_API = 'https://api.sam.gov/opportunities/v2/search';
+const SAM_TYPES = { 'Award Notice': 'award', 'Presolicitation': 'prior', 'Sources Sought': 'prior', 'Special Notice': 'prior' };
+const usDate = d => { const x = new Date(d); return `${String(x.getUTCMonth() + 1).padStart(2, '0')}/${String(x.getUTCDate()).padStart(2, '0')}/${x.getUTCFullYear()}`; };
+async function fetchSam(key) {
+  const terms = ['starlink', 'oneweb', 'low earth orbit', 'LEO satellite'];
+  const byId = new Map();
+  for (const term of terms) {
+    const url = `${SAM_API}?api_key=${encodeURIComponent(key)}&limit=1000&offset=0&postedFrom=${usDate(NOW - 364 * DAY)}&postedTo=${usDate(NOW)}&title=${encodeURIComponent(term)}`;
+    const d = await getJson(url, {}, 1);
+    for (const o of d.opportunitiesData || []) if (o.noticeId) byId.set(o.noticeId, o);
+  }
+  const out = [];
+  for (const o of byId.values()) {
+    if (!LEO_RE.test(`${o.title || ''} ${o.description || ''}`) && !/low earth orbit/i.test(o.title || '')) continue;
+    const kind = SAM_TYPES[o.type] || 'notice';
+    const c3 = String(o.placeOfPerformance?.country?.code || 'USA').toUpperCase();
+    out.push({
+      pub: 'US-' + o.noticeId, source: 'SAM.gov',
+      title: o.title || '(zonder titel)',
+      buyer: String(o.fullParentPathName || o.department || '').split('.').slice(-1)[0].trim() || o.fullParentPathName || '',
+      country: c3 === 'USA' ? 'US' : (ISO3[c3] || (c3.length === 2 ? c3 : 'US')),
+      published: date(o.postedDate),
+      deadline: kind === 'award' ? '' : date(o.responseDeadLine),
+      type: o.type || 'Bericht', kind,
+      cpv: [],
+      link: o.uiLink || `https://sam.gov/opp/${o.noticeId}/view`,
+      value: num(o.award?.amount), currency: 'USD'
+    });
+  }
+  console.log(`SAM.gov: ${byId.size} gevonden, ${out.length} over LEO.`);
+  return out;
+}
+
 // ---------- Samenvoegen ----------
 let old = { updated: null, tenders: [], sources: {} };
 try { old = JSON.parse(await readFile(FILE, 'utf8')); } catch { /* eerste keer */ }
@@ -278,6 +313,10 @@ const SOURCES = [
   ['Wereldbank', () => fetchWorldBank()],
   ['Find a Tender', () => fetchFts(ftsSince)]
 ];
+const SAM_KEY = process.env.SAM_API_KEY || '';
+const lastSam = Date.parse(old.sources['SAM.gov']?.at || 0) || 0;
+if (SAM_KEY && (reset || NOW - lastSam > 20 * 3600e3 || !old.sources['SAM.gov']?.ok)) SOURCES.push(['SAM.gov', () => fetchSam(SAM_KEY)]);
+else if (SAM_KEY) console.log('SAM.gov: vandaag al opgehaald, overgeslagen (dagquotum).');
 
 const oldBySource = {};
 for (const t of old.tenders || []) (oldBySource[t.source || 'TED'] ||= []).push({ source: 'TED', ...t });
@@ -309,6 +348,11 @@ for (const [name, fn] of SOURCES) {
     result.push(...previous);
     sourceInfo[name] = { ...(old.sources[name] || {}), ok: false, error: e.message.slice(0, 200), at: nowIso };
   }
+}
+
+for (const name of Object.keys(oldBySource)) if (!SOURCES.some(([n]) => n === name)) {
+  result.push(...oldBySource[name]);
+  if (old.sources[name]) sourceInfo[name] = old.sources[name];
 }
 
 const seen = new Set();
