@@ -136,3 +136,8 @@ footer{display:flex;flex-wrap:wrap;justify-content:space-between;gap:8px;padding
 [hidden]{display:none!important}
 html{-webkit-text-size-adjust:100%}
 body{margin:0}
+
+.t.awarded{border-left-color:#6b7fa3;opacity:.8}
+.t.awarded .dl{color:#9fb0cc}
+.t.prior{border-left-color:#a98bff}
+.t.prior .dl{color:#c9b8ff}
