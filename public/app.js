@@ -309,13 +309,14 @@ function leftText(t){ const st = statusOf(t);
   if(st === "awarded") return "gegund"; if(st === "prior") return "vooraankondiging, inschrijven nog niet mogelijk";
   const dl = daysLeft(t.deadline); return dl === null ? "geen sluitingsdatum" : dl < 0 ? "gesloten" : dl === 0 ? "sluit vandaag" : `nog ${dl} dag${dl === 1 ? "" : "en"}`; }
 function titleHtml(t){ return t.link ? `<a href="${esc(t.link)}" target="_blank" rel="noopener">${esc(t.title)}</a>` : esc(t.title); }
+const hideBtn = t => window.isAdmin ? `<button type="button" class="hide-btn" data-hide="${esc(t.pub)}" title="Verbergen voor iedereen">Verberg</button>` : "";
 function card(t){
-  return `<article class="t ${statusOf(t)}"><h3>${newHtml(t)}${titleHtml(t)}</h3>
+  return `<article class="t ${statusOf(t)}">${hideBtn(t)}<h3>${newHtml(t)}${titleHtml(t)}</h3>
     <div class="meta"><span class="src">${esc(t.source || "TED")}</span><span>${esc(t.country ? cname(t.country) : (t.countryName || "Onbekend land"))}</span>${t.buyer ? `<span>${esc(t.buyer)}</span>` : ""}</div>
     <div class="meta"><span class="dl">${dlText(t)}</span>${valHtml(t)}<span class="mono">Gepubl. ${fmt(t.published)}</span><span class="mono">${esc(t.pub)}</span>${t.type ? `<span>${esc(t.type)}</span>` : ""}</div></article>`;
 }
 function panelCard(t){
-  return `<article class="t ${statusOf(t)}"><h3>${newHtml(t)}${titleHtml(t)}</h3>${t.buyer ? `<div class="meta"><span>${esc(t.buyer)}</span></div>` : ""}<div class="meta"><span class="dl">${dlText(t)}</span>${valHtml(t)}</div></article>`;
+  return `<article class="t ${statusOf(t)}">${hideBtn(t)}<h3>${newHtml(t)}${titleHtml(t)}</h3>${t.buyer ? `<div class="meta"><span>${esc(t.buyer)}</span></div>` : ""}<div class="meta"><span class="dl">${dlText(t)}</span>${valHtml(t)}</div></article>`;
 }
 const SORTERS = {
   deadline: (a,b) => (a.deadline || "9999").localeCompare(b.deadline || "9999"),
@@ -371,6 +372,30 @@ $("fSort").addEventListener("change", e => { state.sort = e.target.value; saveFi
 $("fValue").addEventListener("change", e => { state.minValue = Number(e.target.value) || 0; saveFilters(); render(); });
 $("fCountry").addEventListener("change", e => { state.country = e.target.value; render(); if(state.country) focusCountry(state.country); });
 $("cpClose").addEventListener("click", () => { state.country = ""; render(); });
+
+// Beheerder: tender verbergen (voor iedereen), met de mogelijkheid het direct ongedaan te maken
+document.addEventListener("click", async e => {
+  const b = e.target.closest && e.target.closest("[data-hide]"); if(!b) return;
+  const pub = b.dataset.hide; b.disabled = true; b.textContent = "Bezig…";
+  try {
+    const r = await fetch("/api/admin", {method:"POST", credentials:"same-origin", headers:{"Content-Type":"application/json"}, body:JSON.stringify({action:"hide", pub})});
+    if(!r.ok) throw new Error((await r.json().catch(() => ({}))).error || "Verbergen lukte niet.");
+    const t = tenders.find(x => x.pub === pub);
+    tenders = tenders.filter(x => x.pub !== pub); render();
+    showToast(`Verborgen: ${t ? t.title.slice(0, 60) : pub}`, async () => {
+      await fetch("/api/admin", {method:"POST", credentials:"same-origin", headers:{"Content-Type":"application/json"}, body:JSON.stringify({action:"unhide", pub})});
+      if(t){ tenders.push(t); render(); }
+    });
+  } catch(err) { b.disabled = false; b.textContent = "Verberg"; alert(err.message); }
+});
+function showToast(text, undo){
+  let el = document.getElementById("toast");
+  if(!el){ el = document.createElement("div"); el.id = "toast"; el.className = "toast"; document.body.appendChild(el); }
+  el.innerHTML = `<span></span><button type="button">Ongedaan maken</button>`;
+  el.querySelector("span").textContent = text;
+  el.querySelector("button").onclick = async () => { el.hidden = true; await undo(); };
+  el.hidden = false; clearTimeout(el._t); el._t = setTimeout(() => el.hidden = true, 7000);
+}
 
 // ---------- Starten (na inloggen) ----------
 let started = false;

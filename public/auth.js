@@ -29,7 +29,10 @@ function showEmail(){
   $("stepCode").hidden = true; $("stepEmail").hidden = false; msg("");
   $("authEmail").focus();
 }
-function showApp(who){
+function showApp(who, admin){
+  window.isAdmin = !!admin;
+  document.body.classList.toggle("admin", !!admin);
+  $("btnAdmin").hidden = !admin;
   $("authView").hidden = true;
   $("appView").hidden = false;
   $("whoami").textContent = who || "";
@@ -56,7 +59,8 @@ $("stepCode").addEventListener("submit", async e => {
   const btn = $("btnCode"); busy(btn, true, "Controleren…"); msg("");
   try {
     const d = await api("/api/verify", {method:"POST", body:JSON.stringify({email, code})});
-    showApp(d.email);
+    let admin = false; try { admin = (await api("/api/me")).admin; } catch(e) {}
+    showApp(d.email, admin);
   } catch(err) { msg(err.message, true); }
   busy(btn, false);
 });
@@ -100,7 +104,7 @@ $("btnLogout").addEventListener("click", async () => {
 
   try {
     const r = await fetch("/api/me", {credentials:"same-origin", cache:"no-store"});
-    if(r.ok){ const d = await r.json(); showApp(d.email); return; }
+    if(r.ok){ const d = await r.json(); showApp(d.email, d.admin); return; }
   } catch(e) {}
   $("authView").hidden = false;
   if(cancelled) msg("De betaling is geannuleerd. Je kunt het opnieuw proberen wanneer je wilt.", true);

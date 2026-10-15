@@ -1,0 +1,27 @@
+.adm{gap:16px}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:16px 18px;display:flex;flex-direction:column;gap:10px;min-width:0}
+.card-head{display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap}
+.card h2{font-family:var(--f-display);font-size:20px;margin:0;font-weight:600}
+.card h3{font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin:10px 0 0;font-weight:600}
+.note{margin:0;color:var(--muted);font-size:13px;max-width:75ch}
+.row{display:flex;gap:8px;flex-wrap:wrap;align-items:center}
+.row input{flex:1 1 220px;width:auto}
+.tablewrap{overflow-x:auto}
+table{border-collapse:collapse;width:100%;font-size:13px}
+th{text-align:left;font-size:11px;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);font-weight:500;padding:6px 8px;border-bottom:1px solid var(--line)}
+td{padding:8px;border-bottom:1px solid var(--line);vertical-align:top}
+td.num{font-variant-numeric:tabular-nums;font-family:var(--f-mono)}
+.ok{color:#7ee0a1}.bad{color:#ff9b9b}
+.chips{display:flex;flex-wrap:wrap;gap:6px}
+.chips .chip{background:var(--panel-2)}
+.chips .chip.fixed{border-color:var(--line);color:var(--muted)}
+.items{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:6px;max-height:420px;overflow-y:auto}
+.items li{display:flex;justify-content:space-between;align-items:flex-start;gap:10px;background:var(--panel-2);border:1px solid var(--line);border-radius:8px;padding:8px 10px;font-size:13px}
+.items li .t-title{min-width:0;overflow-wrap:anywhere}
+.items li small{display:block;color:var(--muted);font-family:var(--f-mono);font-size:11px;margin-top:2px}
+.items li button{flex:none;font-size:12px;padding:4px 10px}
+.adm-msg{margin:0;padding:10px 12px;border-radius:8px;font-size:13px;background:rgba(124,196,255,.1);border:1px solid var(--beam);color:var(--beam-strong)}
+.adm-msg.err{background:rgba(255,120,120,.08);border-color:#ff8a8a;color:#ffc2c2}
+button.danger:hover{border-color:#ff8a8a;color:#ffc2c2}
+code{font-family:var(--f-mono);font-size:12px}
+button[disabled]{opacity:.45;cursor:not-allowed}

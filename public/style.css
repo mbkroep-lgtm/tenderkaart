@@ -183,3 +183,13 @@ header{position:relative}
 #map path.eu:hover{filter:none;stroke:var(--beam-strong);stroke-width:1.4px}
 #map path.sel{filter:none;stroke:#fff;stroke-width:2px}
 #map{will-change:contents}
+
+/* ---- beheer ---- */
+.account .btn{font:500 12px var(--f-body);padding:5px 10px;text-decoration:none;color:var(--beam-strong);border:1px solid var(--beam);border-radius:6px;background:var(--panel-2)}
+.t{position:relative}
+.hide-btn{position:absolute;top:8px;right:8px;font-size:11px;padding:2px 8px;color:var(--muted);background:var(--panel);opacity:.75}
+.hide-btn:hover{opacity:1;color:#ffc2c2;border-color:#ff8a8a}
+.admin .t h3{padding-right:64px}
+.toast{position:fixed;left:50%;bottom:calc(20px + env(safe-area-inset-bottom,0px));transform:translateX(-50%);z-index:50;display:flex;gap:12px;align-items:center;
+  background:var(--panel-2);border:1px solid var(--beam);border-radius:10px;padding:10px 14px;box-shadow:0 10px 30px rgba(0,0,0,.5);font-size:13px;max-width:calc(100% - 32px)}
+.toast button{font-size:12px;padding:4px 10px}

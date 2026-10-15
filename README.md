@@ -20,6 +20,8 @@ Kaart van Europa met aanbestedingen voor Starlink en satellietinternet uit TED (
 | `PRICE_CENTS` | Prijs in centen, standaard `1000` (= € 10) |
 | `ACCESS_DAYS` | Hoe lang toegang geldig is; `0` of leeg = voor altijd |
 | `SITE_NAME` | Naam in e-mails en op Stripe, standaard `TenderMap` |
+| `ADMIN_EMAILS` | Beheerders (komma's ertussen): zien de knop Beheer en /admin.html |
+| `GITHUB_TOKEN` | Optioneel: fijnmazige GitHub-token met Actions: Read and write op deze repository, voor de knop Nu verversen |
 | `STRIPE_WEBHOOK_SECRET` | Optioneel vangnet voor betalingen (`whsec_…`), endpoint `/api/stripe-webhook` |
 
 Handmatig tenders verversen: tabblad **Actions** → **Tenders ophalen bij TED** → **Run workflow**.
