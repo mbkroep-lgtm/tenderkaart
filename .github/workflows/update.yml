@@ -23,6 +23,8 @@ jobs:
     timeout-minutes: 90
     steps:
       - uses: actions/checkout@v4
+        with:
+          ref: main   # altijd de nieuwste versie, ook als de taak in de wachtrij stond
       - uses: actions/setup-node@v4
         with:
           node-version: 22
@@ -34,15 +36,15 @@ jobs:
         run: |
           git config user.name "tenderkaart-bot"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add data/tenders.json
-          if git diff --cached --quiet; then
-            echo "Geen wijzigingen."
-            exit 0
-          fi
-          git commit -m "Tenders bijgewerkt $(date -u +%F)"
-          # is er intussen iets anders naar GitHub gezet? Dan eerst bijwerken en opnieuw proberen.
+          cp data/tenders.json "$RUNNER_TEMP/tenders.json"
           for i in 1 2 3 4 5; do
-            git pull --rebase origin main && git push && exit 0
+            # altijd bovenop de nieuwste versie: het verse resultaat van deze ronde wint
+            git fetch -q origin main && git reset -q --hard origin/main
+            cp "$RUNNER_TEMP/tenders.json" data/tenders.json
+            git add data/tenders.json
+            if git diff --cached --quiet; then echo "Geen wijzigingen."; exit 0; fi
+            git commit -q -m "Tenders bijgewerkt $(date -u +%F)"
+            git push -q origin HEAD:main && exit 0
             echo "Opslaan lukte niet (poging $i), even wachten…"
             sleep $((i * 10))
           done
