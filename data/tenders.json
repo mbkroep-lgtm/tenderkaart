@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-15T11:42:12.304Z",
+ "updated": "2026-10-15T11:44:24.557Z",
  "queryVersion": "0b74a5daf7",
  "source": "TED – Tenders Electronic Daily",
  "count": 15,
@@ -16,7 +16,12 @@
    "link": "https://ted.europa.eu/nl/notice/-/detail/191062-2026",
    "value": 450000000,
    "currency": "NOK",
-   "firstSeen": "2026-10-15T10:34:30.264Z"
+   "firstSeen": "2026-10-15T10:34:30.264Z",
+   "cpv": [
+    "64000000",
+    "64221000",
+    "64225000"
+   ]
   },
   {
    "pub": "534538-2026",
@@ -30,7 +35,11 @@
    "link": "https://ted.europa.eu/nl/notice/-/detail/534538-2026",
    "value": null,
    "currency": "EUR",
-   "firstSeen": "2026-10-15T11:41:02.024Z"
+   "firstSeen": "2026-10-15T11:41:02.024Z",
+   "cpv": [
+    "32522000",
+    "32530000"
+   ]
   },
   {
    "pub": "638067-2026",
@@ -58,7 +67,20 @@
    "value": 60000000,
    "currency": "EUR",
    "firstSeen": "2000-01-01T00:00:00.000Z",
-   "kind": "prior"
+   "kind": "prior",
+   "cpv": [
+    "79000000",
+    "79100000",
+    "72224000",
+    "71600000",
+    "72246000",
+    "73200000",
+    "79415000",
+    "32533000",
+    "35631100",
+    "35631200",
+    "38630000"
+   ]
   },
   {
    "pub": "713864-2026",
@@ -72,7 +94,10 @@
    "link": "https://ted.europa.eu/nl/notice/-/detail/713864-2026",
    "value": 25198500,
    "currency": "RON",
-   "firstSeen": "2026-10-15T10:34:30.264Z"
+   "firstSeen": "2026-10-15T10:34:30.264Z",
+   "cpv": [
+    "64214100"
+   ]
   },
   {
    "pub": "704090-2026",
@@ -86,7 +111,10 @@
    "link": "https://ted.europa.eu/nl/notice/-/detail/704090-2026",
    "value": 25198500,
    "currency": "RON",
-   "firstSeen": "2026-10-15T10:34:30.264Z"
+   "firstSeen": "2026-10-15T10:34:30.264Z",
+   "cpv": [
+    "64214100"
+   ]
   },
   {
    "pub": "588532-2026",
@@ -100,7 +128,10 @@
    "link": "https://ted.europa.eu/nl/notice/-/detail/588532-2026",
    "value": 25198500,
    "currency": "RON",
-   "firstSeen": "2026-10-15T10:34:30.264Z"
+   "firstSeen": "2026-10-15T10:34:30.264Z",
+   "cpv": [
+    "64214100"
+   ]
   },
   {
    "pub": "580834-2026",
@@ -114,7 +145,10 @@
    "link": "https://ted.europa.eu/nl/notice/-/detail/580834-2026",
    "value": 11748.4,
    "currency": "EUR",
-   "firstSeen": "2026-10-15T10:34:30.264Z"
+   "firstSeen": "2026-10-15T10:34:30.264Z",
+   "cpv": [
+    "32500000"
+   ]
   },
   {
    "pub": "571696-2026",
@@ -128,7 +162,10 @@
    "link": "https://ted.europa.eu/nl/notice/-/detail/571696-2026",
    "value": null,
    "currency": "EUR",
-   "firstSeen": "2026-10-15T10:34:30.264Z"
+   "firstSeen": "2026-10-15T10:34:30.264Z",
+   "cpv": [
+    "32500000"
+   ]
   },
   {
    "pub": "568301-2026",
@@ -142,7 +179,10 @@
    "link": "https://ted.europa.eu/nl/notice/-/detail/568301-2026",
    "value": null,
    "currency": "EUR",
-   "firstSeen": "2026-10-15T10:34:30.264Z"
+   "firstSeen": "2026-10-15T10:34:30.264Z",
+   "cpv": [
+    "32500000"
+   ]
   },
   {
    "pub": "568320-2026",
@@ -156,7 +196,10 @@
    "link": "https://ted.europa.eu/nl/notice/-/detail/568320-2026",
    "value": null,
    "currency": "EUR",
-   "firstSeen": "2026-10-15T10:34:30.264Z"
+   "firstSeen": "2026-10-15T10:34:30.264Z",
+   "cpv": [
+    "32500000"
+   ]
   },
   {
    "pub": "568435-2026",
@@ -170,7 +213,10 @@
    "link": "https://ted.europa.eu/nl/notice/-/detail/568435-2026",
    "value": null,
    "currency": "EUR",
-   "firstSeen": "2026-10-15T10:34:30.264Z"
+   "firstSeen": "2026-10-15T10:34:30.264Z",
+   "cpv": [
+    "32500000"
+   ]
   },
   {
    "pub": "552899-2026",
@@ -184,7 +230,10 @@
    "link": "https://ted.europa.eu/nl/notice/-/detail/552899-2026",
    "value": 25198500,
    "currency": "RON",
-   "firstSeen": "2026-10-15T10:34:30.264Z"
+   "firstSeen": "2026-10-15T10:34:30.264Z",
+   "cpv": [
+    "64214100"
+   ]
   },
   {
    "pub": "545525-2026",
@@ -212,7 +261,11 @@
    "link": "https://ted.europa.eu/nl/notice/-/detail/673322-2026",
    "value": null,
    "currency": "EUR",
-   "firstSeen": "2026-10-15T11:41:38.820Z"
+   "firstSeen": "2026-10-15T11:41:38.820Z",
+   "cpv": [
+    "32522000",
+    "32530000"
+   ]
   }
  ]
 }
