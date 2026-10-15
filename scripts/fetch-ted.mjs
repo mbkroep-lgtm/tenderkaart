@@ -9,12 +9,12 @@ const FILE = new URL('../data/tenders.json', import.meta.url);
 // Alleen LEO-satellietverbindingen. Elke term als losse FT-voorwaarde:
 // TED ondersteunt geen ("a" OR "b") binnen één FT ~ (dat geeft 0 resultaten).
 const BRANDS = ["starlink", "OneWeb", "Kuiper", "Amazon Leo"];
-const LEO = ["LEO", "low earth orbit", "low-earth orbit", "lage baan", "erdnahe Umlaufbahn", "niedrige Umlaufbahn",
-  "orbite basse", "órbita baja", "orbita bassa", "niska orbita"];
-const CONNECT = ["internet", "connectivity", "broadband", "terminal", "satellietverbinding", "Konnektivität",
-  "connectivité", "conectividad", "connettività", "łączność"];
-const any = list => '(' + list.map(t => `FT ~ "${t}"`).join(' OR ') + ')';
-const QUERY = `(${any(BRANDS)} OR (${any(LEO)} AND ${any(CONNECT)})) SORT BY publication-date DESC`;
+// Alleen vaste combinaties: los "LEO" geeft veel ruis (Leopard, namen, woorden in andere talen).
+const PHRASES = ["LEO satellite", "LEO satellites", "LEO satellite internet", "LEO connectivity", "LEO-satelliet", "LEO-satellieten",
+  "LEO-Satellit", "LEO-Satelliten", "satellite LEO", "satellites LEO", "satélite LEO", "satélites LEO", "satellite a bassa orbita",
+  "satelliti LEO", "satelity LEO", "low earth orbit satellite", "low earth orbit satellites", "low-earth orbit satellite"];
+const any = list => list.map(t => `FT ~ "${t}"`).join(' OR ');
+const QUERY = `(${any(BRANDS)} OR ${any(PHRASES)}) SORT BY publication-date DESC`;
 const BASE = ['publication-number', 'notice-title', 'buyer-name', 'buyer-country', 'publication-date', 'deadline-receipt-tender-date-lot', 'notice-type'];
 const DEADLINE2 = ['deadline-receipt-request-date-lot'];
 const EXTRA = ['estimated-value-proc', 'estimated-value-cur-proc', 'estimated-value-lot', 'estimated-value-cur-lot'];
