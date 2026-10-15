@@ -1,8 +1,8 @@
 {
- "updated": "2026-10-15T11:45:00.452Z",
- "queryVersion": "665900146f",
+ "updated": "2026-10-15T11:45:56.639Z",
+ "queryVersion": "bd8f2c65a6",
  "source": "TED – Tenders Electronic Daily",
- "count": 13,
+ "count": 12,
  "tenders": [
   {
    "pub": "191062-2026",
@@ -39,33 +39,6 @@
    "cpv": [
     "32522000",
     "32530000"
-   ]
-  },
-  {
-   "pub": "432792-2026",
-   "title": "België, Tsjechië – Zakelijke dienstverlening: juridisch, marketing, consulting, drukkerij en beveiliging – FWC Legal and management support on the implementation of components of the European Space Programme",
-   "buyer": "European Commission, DG DEFIS - Defence Industry and Space",
-   "country": "BE",
-   "published": "2026-06-25",
-   "deadline": "",
-   "type": "Vooraankondiging",
-   "link": "https://ted.europa.eu/nl/notice/-/detail/432792-2026",
-   "value": 60000000,
-   "currency": "EUR",
-   "firstSeen": "2000-01-01T00:00:00.000Z",
-   "kind": "prior",
-   "cpv": [
-    "79000000",
-    "79100000",
-    "72224000",
-    "71600000",
-    "72246000",
-    "73200000",
-    "79415000",
-    "32533000",
-    "35631100",
-    "35631200",
-    "38630000"
    ]
   },
   {
