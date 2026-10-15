@@ -97,21 +97,26 @@ function filtered(ignoreCountry){
 // ---------- Wereldbol ----------
 const ns = "http://www.w3.org/2000/svg";
 const W = 1000, H = 760;
-const HOME = {rot:[-14, -50, 0], zoom:1.9};  // Europa in beeld
+const HOME = {rot:[-14, -38, 0], zoom:0.95};  // hele aardbol, Europa naar voren
 let proj = null, gpath = null, s0 = 1, zoom = HOME.zoom;
 let features = [];            // {key, f, el, eu, best, area}
 let paths = {}, labels = null, counts = {}, sphereEl = null, gratEl = null, gratGeo = null;
-let dragging = false, suppressClick = false, raf = 0;
+let dragging = false, suppressClick = false, raf = 0, idleTimer = 0, quality = "high";
 
 async function buildMap(){
   const svg = $("map");
   if(!window.d3 || !window.topojson){ $("mapnote").textContent = "De kaart kon niet laden. De lijst werkt gewoon."; return; }
-  let world;
+  let world, light;
   try {
-    const r = await fetch("https://cdn.jsdelivr.net/npm/world-atlas@2.0.2/countries-50m.json");
-    world = await r.json();
+    // gedetailleerde kaart voor stilstand, lichte kaart voor tijdens het draaien
+    [world, light] = await Promise.all([
+      fetch("https://cdn.jsdelivr.net/npm/world-atlas@2.0.2/countries-50m.json").then(r => r.json()),
+      fetch("https://cdn.jsdelivr.net/npm/world-atlas@2.0.2/countries-110m.json").then(r => r.json()).catch(() => null)
+    ]);
   } catch(e) { $("mapnote").textContent = "De kaart kon niet laden. De lijst werkt gewoon."; return; }
   const geo = topojson.feature(world, world.objects.countries);
+  const lightById = {};
+  if(light) topojson.feature(light, light.objects.countries).features.forEach(f => { if(f.id != null) lightById[f.id] = f; });
 
   svg.setAttribute("viewBox", `0 0 ${W} ${H}`);
   svg.style.aspectRatio = `${W}/${H}`;
@@ -123,7 +128,7 @@ async function buildMap(){
   // oceaan met gloed
   const defs = document.createElementNS(ns, "defs");
   defs.innerHTML = `<radialGradient id="ocean" cx="42%" cy="38%" r="65%"><stop offset="0%" stop-color="#16305a"/><stop offset="70%" stop-color="#0c1a33"/><stop offset="100%" stop-color="#081224"/></radialGradient>
-    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%"><feGaussianBlur stdDeviation="10"/></filter>`;
+    <radialGradient id="halo"><stop offset="88%" stop-color="rgba(90,160,255,.28)"/><stop offset="100%" stop-color="rgba(90,160,255,0)"/></radialGradient>`;
   svg.appendChild(defs);
   const halo = document.createElementNS(ns, "circle"); halo.setAttribute("class","halo"); svg.appendChild(halo);
   sphereEl = document.createElementNS(ns, "path"); sphereEl.setAttribute("class","sphere"); svg.appendChild(sphereEl);
@@ -147,7 +152,7 @@ async function buildMap(){
       const polys = f.geometry.type === "Polygon" ? [f.geometry.coordinates] : f.geometry.coordinates;
       polys.forEach(rings => { const p = {type:"Polygon", coordinates:rings}; const a = d3.geoArea(p); if(a > area){ area = a; best = p; } });
     }
-    features.push({key, f, el, eu, centroid: best ? d3.geoCentroid(best) : null, area});
+    features.push({key, f, fl: f.id != null ? lightById[f.id] || null : null, el, eu, centroid: best ? d3.geoCentroid(best) : null, area});
   });
 
   labels = document.createElementNS(ns, "g"); labels.setAttribute("class","labels"); svg.appendChild(labels);
@@ -173,15 +178,26 @@ async function buildMap(){
 function redraw(){
   if(!proj) return;
   const s = proj.scale();
+  const low = quality === "low";
+  proj.precision(low ? 1.5 : 0.4);
   const halo = $("map").querySelector(".halo");
-  if(halo){ halo.setAttribute("cx", W/2); halo.setAttribute("cy", H/2); halo.setAttribute("r", s + 4); }
+  if(halo){ halo.setAttribute("cx", W/2); halo.setAttribute("cy", H/2); halo.setAttribute("r", s * 1.08); }
   sphereEl.setAttribute("d", gpath({type:"Sphere"}));
   gratEl.setAttribute("d", gpath(gratGeo) || "");
-  for(const x of features) x.el.setAttribute("d", gpath(x.f) || "");
-  drawLabels();
+  for(const x of features){
+    const f = low ? x.fl : x.f;          // tijdens draaien: lichte kaart (kleine eilanden even weg)
+    x.el.setAttribute("d", f ? (gpath(f) || "") : "");
+  }
+  if(low) labels.innerHTML = ""; else drawLabels();
 }
-const scheduleRedraw = () => { if(!raf) raf = requestAnimationFrame(() => { raf = 0; redraw(); }); };
-function setZoom(z){ zoom = Math.max(0.85, Math.min(14, z)); proj.scale(s0 * zoom); scheduleRedraw(); }
+// tijdens bewegen licht tekenen, bij stilstand meteen weer gedetailleerd
+const scheduleRedraw = () => {
+  quality = "low";
+  if(!raf) raf = requestAnimationFrame(() => { raf = 0; redraw(); });
+  clearTimeout(idleTimer);
+  idleTimer = setTimeout(() => { quality = "high"; redraw(); }, 160);
+};
+function setZoom(z){ zoom = Math.max(0.6, Math.min(14, z)); proj.scale(s0 * zoom); scheduleRedraw(); }
 
 // vloeiend naar een draaiing en zoom bewegen
 function flyTo(rot, z, ms = 700){
@@ -189,10 +205,11 @@ function flyTo(rot, z, ms = 700){
   const r0 = proj.rotate(), z0 = zoom;
   const ir = d3.interpolate(r0, rot), iz = d3.interpolate(z0, z);
   const reduce = window.matchMedia && matchMedia("(prefers-reduced-motion: reduce)").matches;
-  if(reduce){ proj.rotate(rot); setZoom(z); return; }
+  if(reduce){ proj.rotate(rot); zoom = z; proj.scale(s0*z); quality = "high"; redraw(); return; }
   const t0 = performance.now();
   const step = now => { const t = Math.min(1, (now - t0)/ms), e = d3.easeCubicInOut(t);
-    proj.rotate(ir(e)); zoom = iz(e); proj.scale(s0*zoom); redraw(); if(t < 1) requestAnimationFrame(step); };
+    proj.rotate(ir(e)); zoom = iz(e); proj.scale(s0*zoom);
+    quality = t < 1 ? "low" : "high"; redraw(); if(t < 1) requestAnimationFrame(step); };
   requestAnimationFrame(step);
 }
 
@@ -228,8 +245,8 @@ function setupGlobe(svg, tip){
   svg.addEventListener("wheel", e => { e.preventDefault(); setZoom(zoom * Math.exp(-e.deltaY*(e.deltaMode === 1 ? 0.05 : 0.0018))); }, {passive:false});
   $("zIn").onclick = () => setZoom(zoom * 1.5);
   $("zOut").onclick = () => setZoom(zoom / 1.5);
-  $("zHome").onclick = () => flyTo(HOME.rot, HOME.zoom);
-  $("zWorld").onclick = () => flyTo([proj.rotate()[0], -20, 0], 1);
+  $("zHome").onclick = () => flyTo([-14, -50, 0], 2.4);
+  $("zWorld").onclick = () => flyTo([proj.rotate()[0], -20, 0], 0.95);
 }
 // bij klik op een land in de lijst: daarheen draaien
 function focusCountry(c){
