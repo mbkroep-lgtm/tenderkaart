@@ -128,7 +128,8 @@ try { old = JSON.parse(await readFile(FILE, 'utf8')); } catch { /* eerste keer *
 
 const now = new Date().toISOString();
 // Is de zoekopdracht veranderd? Dan oude berichten die niet meer gevonden worden weggooien.
-const queryVersion = createHash('sha1').update(QUERY).digest('hex').slice(0, 10);
+const FILTER_VERSION = 'telecom-32-64'; // verhogen als het filter verandert, dan wordt opnieuw opgeschoond
+const queryVersion = createHash('sha1').update(QUERY + FILTER_VERSION).digest('hex').slice(0, 10);
 const freshPubs = new Set(fresh.map(t => t.pub));
 if (old.queryVersion !== queryVersion) {
   old.tenders = (old.tenders || []).filter(t => freshPubs.has(t.pub));
