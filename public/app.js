@@ -288,11 +288,15 @@ $("fValue").addEventListener("change", e => { state.minValue = Number(e.target.v
 $("fCountry").addEventListener("change", e => { state.country = e.target.value; render(); });
 $("cpClose").addEventListener("click", () => { state.country = ""; render(); });
 
-// ---------- Starten ----------
-render();
-buildMap();
-fetch("data/tenders.json?v=" + Date.now(), {cache:"no-store"})
-  .then(r => { if(!r.ok) throw new Error(r.status); return r.json(); })
-  .then(d => { tenders = Array.isArray(d.tenders) ? d.tenders : []; updated = d.updated; loaded = true; render(); })
-  .catch(() => { loaded = true; loadError = true; render(); });
+// ---------- Starten (na inloggen) ----------
+let started = false;
+window.startTenderApp = function(){
+  if(started) return; started = true;
+  render();
+  buildMap();
+  fetch("/api/tenders", {cache:"no-store", credentials:"same-origin"})
+    .then(r => { if(r.status === 401){ location.reload(); throw new Error("uitgelogd"); } if(!r.ok) throw new Error(r.status); return r.json(); })
+    .then(d => { tenders = Array.isArray(d.tenders) ? d.tenders : []; updated = d.updated; loaded = true; render(); })
+    .catch(() => { loaded = true; loadError = true; render(); });
+};
 })();

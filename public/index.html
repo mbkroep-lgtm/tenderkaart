@@ -12,13 +12,43 @@
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<div class="wrap">
+<main class="auth" id="authView" hidden>
+  <div class="auth-card">
+    <p class="eyebrow">Aanbestedingen Europa · bron TED</p>
+    <h1>Starlink <span>Tenderkaart</span></h1>
+    <p class="auth-lead">Alle Europese aanbestedingen voor Starlink en satellietinternet op één kaart. Elke werkdag bijgewerkt.</p>
+
+    <form id="stepEmail" class="auth-step" novalidate>
+      <label for="authEmail">E-mailadres</label>
+      <input id="authEmail" type="email" autocomplete="email" inputmode="email" placeholder="naam@bedrijf.nl" required>
+      <button type="submit" class="primary" id="btnEmail">Doorgaan</button>
+      <p class="auth-note">Nieuw? Toegang kost <b>€ 10</b>, eenmalig. Je betaalt veilig via Stripe en krijgt daarna een inlogcode per e-mail. Heb je al toegang, dan sturen we direct een code.</p>
+    </form>
+
+    <form id="stepCode" class="auth-step" novalidate hidden>
+      <p class="auth-sent">We hebben een code van 6 cijfers gestuurd naar <b id="codeEmail"></b>.</p>
+      <label for="authCode">Inlogcode</label>
+      <input id="authCode" type="text" inputmode="numeric" autocomplete="one-time-code" maxlength="6" pattern="[0-9]{6}" placeholder="000000">
+      <button type="submit" class="primary" id="btnCode">Inloggen</button>
+      <div class="auth-links">
+        <button type="button" class="link" id="btnResend">Nieuwe code sturen</button>
+        <button type="button" class="link" id="btnOther">Ander e-mailadres</button>
+      </div>
+    </form>
+
+    <p class="auth-msg" id="authMsg" role="status" hidden></p>
+  </div>
+  <p class="auth-foot">made by Merijn · BroadbandEU</p>
+</main>
+
+<div class="wrap" id="appView" hidden>
   <header>
     <div>
       <p class="eyebrow">Aanbestedingen Europa · bron TED</p>
       <h1>Starlink <span>Tenderkaart</span> <small class="byline">made by Merijn</small></h1>
       <p class="sub">Europese aanbestedingen voor satellietinternet uit TED. Klik op een land om de opdrachten te zien.</p>
     </div>
+    <div class="account"><span id="whoami"></span><button type="button" id="btnLogout">Uitloggen</button></div>
   </header>
 
   <div class="stats">
@@ -92,5 +122,6 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/7.8.5/d3.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/topojson-client@3.1.0/dist/topojson-client.min.js"></script>
 <script src="app.js"></script>
+<script src="auth.js"></script>
 </body>
 </html>
