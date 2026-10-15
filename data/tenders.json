@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-15T09:45:43.284Z",
+ "updated": "2026-10-15T10:27:47.399Z",
  "source": "TED – Tenders Electronic Daily",
  "count": 49,
  "tenders": [
@@ -14,7 +14,8 @@
    "link": "https://ted.europa.eu/nl/notice/-/detail/298752-2026",
    "value": null,
    "currency": "EUR",
-   "firstSeen": "2000-01-01T00:00:00.000Z"
+   "firstSeen": "2000-01-01T00:00:00.000Z",
+   "kind": "notice"
   },
   {
    "pub": "321801-2026",
@@ -27,7 +28,8 @@
    "link": "https://ted.europa.eu/nl/notice/-/detail/321801-2026",
    "value": null,
    "currency": "EUR",
-   "firstSeen": "2000-01-01T00:00:00.000Z"
+   "firstSeen": "2000-01-01T00:00:00.000Z",
+   "kind": "notice"
   },
   {
    "pub": "348912-2026",
@@ -40,7 +42,8 @@
    "link": "https://ted.europa.eu/nl/notice/-/detail/348912-2026",
    "value": null,
    "currency": "EUR",
-   "firstSeen": "2000-01-01T00:00:00.000Z"
+   "firstSeen": "2000-01-01T00:00:00.000Z",
+   "kind": "notice"
   },
   {
    "pub": "381268-2026",
@@ -53,7 +56,8 @@
    "link": "https://ted.europa.eu/nl/notice/-/detail/381268-2026",
    "value": null,
    "currency": "EUR",
-   "firstSeen": "2000-01-01T00:00:00.000Z"
+   "firstSeen": "2000-01-01T00:00:00.000Z",
+   "kind": "notice"
   },
   {
    "pub": "412266-2026",
@@ -66,7 +70,8 @@
    "link": "https://ted.europa.eu/nl/notice/-/detail/412266-2026",
    "value": null,
    "currency": "EUR",
-   "firstSeen": "2000-01-01T00:00:00.000Z"
+   "firstSeen": "2000-01-01T00:00:00.000Z",
+   "kind": "notice"
   },
   {
    "pub": "431591-2026",
@@ -79,7 +84,8 @@
    "link": "https://ted.europa.eu/nl/notice/-/detail/431591-2026",
    "value": null,
    "currency": "EUR",
-   "firstSeen": "2000-01-01T00:00:00.000Z"
+   "firstSeen": "2000-01-01T00:00:00.000Z",
+   "kind": "notice"
   },
   {
    "pub": "449437-2026",
@@ -92,7 +98,8 @@
    "link": "https://ted.europa.eu/nl/notice/-/detail/449437-2026",
    "value": null,
    "currency": "EUR",
-   "firstSeen": "2000-01-01T00:00:00.000Z"
+   "firstSeen": "2000-01-01T00:00:00.000Z",
+   "kind": "notice"
   },
   {
    "pub": "371767-2026",
@@ -105,7 +112,8 @@
    "link": "https://ted.europa.eu/nl/notice/-/detail/371767-2026",
    "value": null,
    "currency": "EUR",
-   "firstSeen": "2000-01-01T00:00:00.000Z"
+   "firstSeen": "2000-01-01T00:00:00.000Z",
+   "kind": "notice"
   },
   {
    "pub": "467443-2026",
@@ -118,7 +126,8 @@
    "link": "https://ted.europa.eu/nl/notice/-/detail/467443-2026",
    "value": null,
    "currency": "EUR",
-   "firstSeen": "2000-01-01T00:00:00.000Z"
+   "firstSeen": "2000-01-01T00:00:00.000Z",
+   "kind": "notice"
   },
   {
    "pub": "477867-2026",
@@ -131,7 +140,8 @@
    "link": "https://ted.europa.eu/nl/notice/-/detail/477867-2026",
    "value": null,
    "currency": "EUR",
-   "firstSeen": "2000-01-01T00:00:00.000Z"
+   "firstSeen": "2000-01-01T00:00:00.000Z",
+   "kind": "notice"
   },
   {
    "pub": "546320-2026",
@@ -144,7 +154,8 @@
    "link": "https://ted.europa.eu/nl/notice/-/detail/546320-2026",
    "value": null,
    "currency": "EUR",
-   "firstSeen": "2000-01-01T00:00:00.000Z"
+   "firstSeen": "2000-01-01T00:00:00.000Z",
+   "kind": "notice"
   },
   {
    "pub": "629816-2026",
@@ -157,7 +168,8 @@
    "link": "https://ted.europa.eu/nl/notice/-/detail/629816-2026",
    "value": null,
    "currency": "EUR",
-   "firstSeen": "2000-01-01T00:00:00.000Z"
+   "firstSeen": "2000-01-01T00:00:00.000Z",
+   "kind": "notice"
   },
   {
    "pub": "637715-2026",
@@ -170,7 +182,8 @@
    "link": "https://ted.europa.eu/nl/notice/-/detail/637715-2026",
    "value": null,
    "currency": "EUR",
-   "firstSeen": "2000-01-01T00:00:00.000Z"
+   "firstSeen": "2000-01-01T00:00:00.000Z",
+   "kind": "notice"
   },
   {
    "pub": "711344-2026",
@@ -183,7 +196,8 @@
    "link": "https://ted.europa.eu/nl/notice/-/detail/711344-2026",
    "value": null,
    "currency": "EUR",
-   "firstSeen": "2000-01-01T00:00:00.000Z"
+   "firstSeen": "2000-01-01T00:00:00.000Z",
+   "kind": "award"
   },
   {
    "pub": "705605-2026",
@@ -196,7 +210,8 @@
    "link": "https://ted.europa.eu/nl/notice/-/detail/705605-2026",
    "value": null,
    "currency": "EUR",
-   "firstSeen": "2000-01-01T00:00:00.000Z"
+   "firstSeen": "2000-01-01T00:00:00.000Z",
+   "kind": "prior"
   },
   {
    "pub": "697085-2026",
@@ -209,7 +224,8 @@
    "link": "https://ted.europa.eu/nl/notice/-/detail/697085-2026",
    "value": null,
    "currency": "EUR",
-   "firstSeen": "2000-01-01T00:00:00.000Z"
+   "firstSeen": "2000-01-01T00:00:00.000Z",
+   "kind": "award"
   },
   {
    "pub": "693170-2026",
@@ -222,7 +238,8 @@
    "link": "https://ted.europa.eu/nl/notice/-/detail/693170-2026",
    "value": 6000000,
    "currency": "CZK",
-   "firstSeen": "2000-01-01T00:00:00.000Z"
+   "firstSeen": "2000-01-01T00:00:00.000Z",
+   "kind": "award"
   },
   {
    "pub": "689448-2026",
@@ -235,7 +252,8 @@
    "link": "https://ted.europa.eu/nl/notice/-/detail/689448-2026",
    "value": 457788.43,
    "currency": "RON",
-   "firstSeen": "2000-01-01T00:00:00.000Z"
+   "firstSeen": "2000-01-01T00:00:00.000Z",
+   "kind": "award"
   },
   {
    "pub": "664845-2026",
@@ -248,7 +266,8 @@
    "link": "https://ted.europa.eu/nl/notice/-/detail/664845-2026",
    "value": 82560,
    "currency": "EUR",
-   "firstSeen": "2000-01-01T00:00:00.000Z"
+   "firstSeen": "2000-01-01T00:00:00.000Z",
+   "kind": "award"
   },
   {
    "pub": "664593-2026",
@@ -261,7 +280,8 @@
    "link": "https://ted.europa.eu/nl/notice/-/detail/664593-2026",
    "value": null,
    "currency": "EUR",
-   "firstSeen": "2000-01-01T00:00:00.000Z"
+   "firstSeen": "2000-01-01T00:00:00.000Z",
+   "kind": "award"
   },
   {
    "pub": "658475-2026",
@@ -274,7 +294,8 @@
    "link": "https://ted.europa.eu/nl/notice/-/detail/658475-2026",
    "value": null,
    "currency": "EUR",
-   "firstSeen": "2000-01-01T00:00:00.000Z"
+   "firstSeen": "2000-01-01T00:00:00.000Z",
+   "kind": "prior"
   },
   {
    "pub": "640086-2026",
@@ -287,7 +308,8 @@
    "link": "https://ted.europa.eu/nl/notice/-/detail/640086-2026",
    "value": 175741.56,
    "currency": "EUR",
-   "firstSeen": "2000-01-01T00:00:00.000Z"
+   "firstSeen": "2000-01-01T00:00:00.000Z",
+   "kind": "award"
   },
   {
    "pub": "637913-2026",
@@ -300,7 +322,8 @@
    "link": "https://ted.europa.eu/nl/notice/-/detail/637913-2026",
    "value": null,
    "currency": "EUR",
-   "firstSeen": "2000-01-01T00:00:00.000Z"
+   "firstSeen": "2000-01-01T00:00:00.000Z",
+   "kind": "award"
   },
   {
    "pub": "636007-2026",
@@ -313,7 +336,8 @@
    "link": "https://ted.europa.eu/nl/notice/-/detail/636007-2026",
    "value": 1100000,
    "currency": "EUR",
-   "firstSeen": "2000-01-01T00:00:00.000Z"
+   "firstSeen": "2000-01-01T00:00:00.000Z",
+   "kind": "award"
   },
   {
    "pub": "633816-2026",
@@ -326,7 +350,8 @@
    "link": "https://ted.europa.eu/nl/notice/-/detail/633816-2026",
    "value": 7500000,
    "currency": "RON",
-   "firstSeen": "2000-01-01T00:00:00.000Z"
+   "firstSeen": "2000-01-01T00:00:00.000Z",
+   "kind": "award"
   },
   {
    "pub": "626116-2026",
@@ -339,7 +364,8 @@
    "link": "https://ted.europa.eu/nl/notice/-/detail/626116-2026",
    "value": 275260.68,
    "currency": "EUR",
-   "firstSeen": "2000-01-01T00:00:00.000Z"
+   "firstSeen": "2000-01-01T00:00:00.000Z",
+   "kind": "award"
   },
   {
    "pub": "627451-2026",
@@ -352,7 +378,8 @@
    "link": "https://ted.europa.eu/nl/notice/-/detail/627451-2026",
    "value": null,
    "currency": "EUR",
-   "firstSeen": "2000-01-01T00:00:00.000Z"
+   "firstSeen": "2000-01-01T00:00:00.000Z",
+   "kind": "award"
   },
   {
    "pub": "620736-2026",
@@ -365,7 +392,8 @@
    "link": "https://ted.europa.eu/nl/notice/-/detail/620736-2026",
    "value": 230000,
    "currency": "EUR",
-   "firstSeen": "2000-01-01T00:00:00.000Z"
+   "firstSeen": "2000-01-01T00:00:00.000Z",
+   "kind": "award"
   },
   {
    "pub": "613874-2026",
@@ -378,7 +406,8 @@
    "link": "https://ted.europa.eu/nl/notice/-/detail/613874-2026",
    "value": null,
    "currency": "EUR",
-   "firstSeen": "2000-01-01T00:00:00.000Z"
+   "firstSeen": "2000-01-01T00:00:00.000Z",
+   "kind": "prior"
   },
   {
    "pub": "594901-2026",
@@ -391,7 +420,8 @@
    "link": "https://ted.europa.eu/nl/notice/-/detail/594901-2026",
    "value": 7500000,
    "currency": "RON",
-   "firstSeen": "2000-01-01T00:00:00.000Z"
+   "firstSeen": "2000-01-01T00:00:00.000Z",
+   "kind": "award"
   },
   {
    "pub": "591509-2026",
@@ -404,7 +434,8 @@
    "link": "https://ted.europa.eu/nl/notice/-/detail/591509-2026",
    "value": 7500000,
    "currency": "RON",
-   "firstSeen": "2000-01-01T00:00:00.000Z"
+   "firstSeen": "2000-01-01T00:00:00.000Z",
+   "kind": "award"
   },
   {
    "pub": "576342-2026",
@@ -417,7 +448,8 @@
    "link": "https://ted.europa.eu/nl/notice/-/detail/576342-2026",
    "value": 179360500,
    "currency": "RON",
-   "firstSeen": "2000-01-01T00:00:00.000Z"
+   "firstSeen": "2000-01-01T00:00:00.000Z",
+   "kind": "award"
   },
   {
    "pub": "548932-2026",
@@ -430,7 +462,8 @@
    "link": "https://ted.europa.eu/nl/notice/-/detail/548932-2026",
    "value": null,
    "currency": "EUR",
-   "firstSeen": "2000-01-01T00:00:00.000Z"
+   "firstSeen": "2000-01-01T00:00:00.000Z",
+   "kind": "award"
   },
   {
    "pub": "544483-2026",
@@ -443,7 +476,8 @@
    "link": "https://ted.europa.eu/nl/notice/-/detail/544483-2026",
    "value": null,
    "currency": "EUR",
-   "firstSeen": "2000-01-01T00:00:00.000Z"
+   "firstSeen": "2000-01-01T00:00:00.000Z",
+   "kind": "award"
   },
   {
    "pub": "543635-2026",
@@ -456,7 +490,8 @@
    "link": "https://ted.europa.eu/nl/notice/-/detail/543635-2026",
    "value": 775000,
    "currency": "EUR",
-   "firstSeen": "2000-01-01T00:00:00.000Z"
+   "firstSeen": "2000-01-01T00:00:00.000Z",
+   "kind": "award"
   },
   {
    "pub": "538080-2026",
@@ -469,7 +504,8 @@
    "link": "https://ted.europa.eu/nl/notice/-/detail/538080-2026",
    "value": null,
    "currency": "EUR",
-   "firstSeen": "2000-01-01T00:00:00.000Z"
+   "firstSeen": "2000-01-01T00:00:00.000Z",
+   "kind": "award"
   },
   {
    "pub": "534718-2026",
@@ -482,7 +518,8 @@
    "link": "https://ted.europa.eu/nl/notice/-/detail/534718-2026",
    "value": null,
    "currency": "EUR",
-   "firstSeen": "2000-01-01T00:00:00.000Z"
+   "firstSeen": "2000-01-01T00:00:00.000Z",
+   "kind": "award"
   },
   {
    "pub": "528581-2026",
@@ -495,7 +532,8 @@
    "link": "https://ted.europa.eu/nl/notice/-/detail/528581-2026",
    "value": 179360500,
    "currency": "RON",
-   "firstSeen": "2000-01-01T00:00:00.000Z"
+   "firstSeen": "2000-01-01T00:00:00.000Z",
+   "kind": "award"
   },
   {
    "pub": "501180-2026",
@@ -508,7 +546,8 @@
    "link": "https://ted.europa.eu/nl/notice/-/detail/501180-2026",
    "value": 179360500,
    "currency": "RON",
-   "firstSeen": "2000-01-01T00:00:00.000Z"
+   "firstSeen": "2000-01-01T00:00:00.000Z",
+   "kind": "award"
   },
   {
    "pub": "497769-2026",
@@ -521,7 +560,8 @@
    "link": "https://ted.europa.eu/nl/notice/-/detail/497769-2026",
    "value": null,
    "currency": "EUR",
-   "firstSeen": "2000-01-01T00:00:00.000Z"
+   "firstSeen": "2000-01-01T00:00:00.000Z",
+   "kind": "award"
   },
   {
    "pub": "489160-2026",
@@ -534,7 +574,8 @@
    "link": "https://ted.europa.eu/nl/notice/-/detail/489160-2026",
    "value": null,
    "currency": "EUR",
-   "firstSeen": "2000-01-01T00:00:00.000Z"
+   "firstSeen": "2000-01-01T00:00:00.000Z",
+   "kind": "award"
   },
   {
    "pub": "482656-2026",
@@ -547,7 +588,8 @@
    "link": "https://ted.europa.eu/nl/notice/-/detail/482656-2026",
    "value": 898684.29,
    "currency": "RON",
-   "firstSeen": "2000-01-01T00:00:00.000Z"
+   "firstSeen": "2000-01-01T00:00:00.000Z",
+   "kind": "award"
   },
   {
    "pub": "476408-2026",
@@ -560,7 +602,8 @@
    "link": "https://ted.europa.eu/nl/notice/-/detail/476408-2026",
    "value": null,
    "currency": "EUR",
-   "firstSeen": "2000-01-01T00:00:00.000Z"
+   "firstSeen": "2000-01-01T00:00:00.000Z",
+   "kind": "award"
   },
   {
    "pub": "472815-2026",
@@ -573,7 +616,8 @@
    "link": "https://ted.europa.eu/nl/notice/-/detail/472815-2026",
    "value": null,
    "currency": "EUR",
-   "firstSeen": "2000-01-01T00:00:00.000Z"
+   "firstSeen": "2000-01-01T00:00:00.000Z",
+   "kind": "notice"
   },
   {
    "pub": "433252-2026",
@@ -586,7 +630,8 @@
    "link": "https://ted.europa.eu/nl/notice/-/detail/433252-2026",
    "value": null,
    "currency": "SEK",
-   "firstSeen": "2000-01-01T00:00:00.000Z"
+   "firstSeen": "2000-01-01T00:00:00.000Z",
+   "kind": "prior"
   },
   {
    "pub": "432792-2026",
@@ -599,7 +644,8 @@
    "link": "https://ted.europa.eu/nl/notice/-/detail/432792-2026",
    "value": 60000000,
    "currency": "EUR",
-   "firstSeen": "2000-01-01T00:00:00.000Z"
+   "firstSeen": "2000-01-01T00:00:00.000Z",
+   "kind": "prior"
   },
   {
    "pub": "191571-2026",
@@ -612,7 +658,8 @@
    "link": "https://ted.europa.eu/nl/notice/-/detail/191571-2026",
    "value": null,
    "currency": "EUR",
-   "firstSeen": "2000-01-01T00:00:00.000Z"
+   "firstSeen": "2000-01-01T00:00:00.000Z",
+   "kind": "prior"
   },
   {
    "pub": "167897-2026",
@@ -625,7 +672,8 @@
    "link": "https://ted.europa.eu/nl/notice/-/detail/167897-2026",
    "value": 800000000,
    "currency": "SEK",
-   "firstSeen": "2000-01-01T00:00:00.000Z"
+   "firstSeen": "2000-01-01T00:00:00.000Z",
+   "kind": "notice"
   },
   {
    "pub": "828726-2025",
@@ -638,7 +686,8 @@
    "link": "https://ted.europa.eu/nl/notice/-/detail/828726-2025",
    "value": null,
    "currency": "EUR",
-   "firstSeen": "2000-01-01T00:00:00.000Z"
+   "firstSeen": "2000-01-01T00:00:00.000Z",
+   "kind": "notice"
   }
  ]
 }
