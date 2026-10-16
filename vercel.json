@@ -6,6 +6,9 @@
     },
     "api/admin.js": {
       "includeFiles": "data/**"
+    },
+    "api/cron.js": {
+      "includeFiles": "data/**"
     }
   },
   "headers": [
@@ -25,6 +28,12 @@
           "value": "DENY"
         }
       ]
+    }
+  ],
+  "crons": [
+    {
+      "path": "/api/cron",
+      "schedule": "0 7 * * 1-5"
     }
   ]
 }

@@ -1,8 +1,11 @@
-name: Tenders ophalen (TED, Wereldbank, Find a Tender)
+name: Tenders ophalen
 
 on:
   schedule:
-    - cron: '17 5 * * 1-5'   # elke werkdag rond 06:17/07:17 Nederlandse tijd
+    # elke werkdag een paar keer: GitHub slaat geplande taken soms over, en een extra ronde kost niets
+    - cron: '17 5 * * 1-5'
+    - cron: '47 9 * * 1-5'
+    - cron: '23 13 * * 1-5'
   workflow_dispatch:          # handmatig starten via het tabblad Actions
   push:
     branches: [main]
