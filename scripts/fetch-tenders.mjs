@@ -572,8 +572,68 @@ async function fetchUndp() {
   return out;
 }
 
+// Taiwan (PCC, via de openbare g0v-koppeling pcc-api.openfun.app). Titels in het Chinees.
+// 低軌 = lage baan (LEO), 星鏈 = Starlink (maar niet als deel van 衛星鏈路 = satellietverbinding)
+const TW_KIND = t => /決標|無法決標|廢標/.test(t) ? 'award' : /徵求廠商提供參考資料|公開閱覽|預告/.test(t) ? 'prior' : 'notice';
+function rocDate(s) { // "115/10/27 17:00" → 2026-10-27
+  const m = String(s || '').match(/(\d{2,4})\/(\d{1,2})\/(\d{1,2})/);
+  if (!m) return '';
+  const y = Number(m[1]) < 1911 ? Number(m[1]) + 1911 : Number(m[1]);
+  return `${y}-${m[2].padStart(2, '0')}-${m[3].padStart(2, '0')}`;
+}
+async function twGet(url) {
+  for (let i = 0; i < 4; i++) {
+    const r = await fetch(url, { headers: { ...UA, Accept: 'application/json' }, signal: AbortSignal.timeout(60000) });
+    if (r.ok) { try { return await r.json(); } catch {} }
+    await sleep(3000 * (i + 1)); // soms tijdelijk geblokkeerd
+  }
+  throw new Error('pcc-api.openfun.app niet bereikbaar');
+}
+async function fetchTaiwan() {
+  const byJob = new Map();
+  let blocked = 0;
+  for (const q of ['低軌', '星鏈', 'OneWeb', 'Starlink']) {
+    let d; try { d = await twGet('https://pcc-api.openfun.app/api/searchbytitle?query=' + encodeURIComponent(q)); } catch { blocked++; continue; }
+    for (const x of d.records || []) {
+      const title = x.brief?.title || '';
+      if (!/低軌|(?<!衛)星鏈|oneweb|starlink/i.test(title)) continue;
+      if (!/衛星|星鏈|通訊|網路|oneweb|starlink/i.test(title)) continue;
+      const key = `${x.unit_id}|${x.job_number}`;
+      const prev = byJob.get(key);
+      if (!prev || x.date > prev.date) byJob.set(key, x);
+    }
+    await sleep(1500);
+  }
+  if (blocked === 4) throw new Error('pcc-api.openfun.app blokkeerde alle zoekopdrachten');
+  const out = [];
+  for (const x of byJob.values()) {
+    const ds = String(x.date);
+    const published = `${ds.slice(0, 4)}-${ds.slice(4, 6)}-${ds.slice(6, 8)}`;
+    if (published < histCutoff) continue;
+    const kind = TW_KIND(x.brief?.type || '');
+    let deadline = '';
+    if (kind === 'notice' && x.tender_api_url) {
+      try {
+        const d = await twGet(x.tender_api_url.replace(/^http:/, 'https:'));
+        const rec = (d.records || []).find(r => r.filename === x.filename) || (d.records || [])[0] || {};
+        const det = rec.detail || {};
+        const k = Object.keys(det).find(k => /截止投標|截止收件|收受投標文件截止/.test(k));
+        deadline = k ? rocDate(det[k]) : '';
+      } catch { /* zonder sluitingsdatum */ }
+      await sleep(800);
+    }
+    out.push({
+      pub: `TW-${x.unit_id}-${x.job_number}`, source: 'PCC (Taiwan)', title: x.brief?.title || '(zonder titel)', buyer: x.unit_name || '',
+      country: 'TW', published, deadline, type: x.brief?.type || '公告', kind, cpv: [],
+      link: 'https://pcc-api.openfun.app' + (x.url || ''), value: null, currency: 'TWD'
+    });
+  }
+  say('PCC (Taiwan)', `${byJob.size} aanbestedingen over LEO${blocked ? `, ${blocked} zoekopdracht(en) tijdelijk geblokkeerd` : ''}.`);
+  return out;
+}
+
 // Defensie-markering: militaire opdrachtgever of Oekraïne (daar altijd bevestiging niet-militair gebruik nodig)
-const DEFENSE_RE = /(defen[cs]e|defensie|verteidigung|bundeswehr|armée|armasuisse|ministerul apararii|unitatea militara|military|militar|army|navy|air force|marine corps|військов|збройн|національної гвардії|міністерство оборони|оборони)/i;
+const DEFENSE_RE = /(defen[cs]e|defensie|verteidigung|bundeswehr|armée|armasuisse|ministerul apararii|unitatea militara|military|militar|army|navy|air force|marine corps|військов|збройн|національної гвардії|міністерство оборони|оборони|國防|國軍|海巡)/i;
 function markDefense(t) {
   if (DEFENSE_RE.test(`${t.buyer || ''} ${t.title || ''}`)) t.defense = true;
   if (t.country === 'UA') t.policyUA = true;
@@ -607,7 +667,8 @@ const SOURCES = [
   ['PNCP (Brazilië)', () => fetchPncp()],
   ['CanadaBuys', () => fetchCanadaBuys()],
   ['AusTender', () => fetchAusTender(ausSince)],
-  ['UNDP', () => fetchUndp()]
+  ['UNDP', () => fetchUndp()],
+  ['PCC (Taiwan)', () => fetchTaiwan()]
 ];
 const SAM_KEY = process.env.SAM_API_KEY || '';
 const lastSam = Date.parse(old.sources['SAM.gov']?.at || 0) || 0;
