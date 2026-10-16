@@ -1,102 +1,102 @@
 {
- "updated": "2026-10-16T09:19:17.508Z",
+ "updated": "2026-10-16T09:46:42.492Z",
  "queryVersion": "79a21b7991",
  "sources": {
   "TED": {
    "ok": true,
-   "at": "2026-10-16T09:19:17.508Z",
+   "at": "2026-10-16T09:46:42.492Z",
    "count": 40,
    "note": ""
   },
   "Wereldbank": {
    "ok": true,
-   "at": "2026-10-16T09:19:17.508Z",
+   "at": "2026-10-16T09:46:42.492Z",
    "count": 55,
    "note": "63 gevonden, 55 echt over LEO."
   },
   "Find a Tender": {
    "ok": true,
-   "at": "2026-10-16T09:19:17.508Z",
+   "at": "2026-10-16T09:46:42.492Z",
    "count": 0,
-   "note": "1 pagina's, 72 berichten bekeken, 0 over LEO.",
-   "since": "2026-10-16T07:19:17.508Z"
+   "note": "1 pagina's, 94 berichten bekeken, 0 over LEO.",
+   "since": "2026-10-16T07:46:42.492Z"
   },
   "Contracts Finder": {
    "ok": true,
-   "at": "2026-10-16T09:19:17.508Z",
+   "at": "2026-10-16T09:46:42.492Z",
    "count": 4,
    "note": "295 gevonden, 22 over LEO."
   },
   "TenderNed": {
    "ok": true,
-   "at": "2026-10-16T09:19:17.508Z",
+   "at": "2026-10-16T09:46:42.492Z",
    "count": 0,
    "note": "106 gevonden, 0 over LEO."
   },
   "Prozorro": {
    "ok": true,
-   "at": "2026-10-16T09:19:17.508Z",
+   "at": "2026-10-16T09:46:42.492Z",
    "count": 56,
    "note": "56 lopende procedures."
   },
   "BOAMP": {
    "ok": true,
-   "at": "2026-10-16T09:19:17.508Z",
+   "at": "2026-10-16T09:46:42.492Z",
    "count": 1,
    "note": "5 gevonden, 1 over LEO."
   },
   "SIMAP (Zwitserland)": {
    "ok": true,
-   "at": "2026-10-16T09:19:17.508Z",
+   "at": "2026-10-16T09:46:42.492Z",
    "count": 0,
    "note": "20 gevonden, 0 over LEO."
   },
   "SECOP (Colombia)": {
    "ok": true,
-   "at": "2026-10-16T09:19:17.508Z",
+   "at": "2026-10-16T09:46:42.492Z",
    "count": 68,
    "note": "68 gevonden, 68 over LEO."
   },
   "PNCP (Brazilië)": {
    "ok": false,
    "error": "fetch failed",
-   "at": "2026-10-16T09:19:17.508Z"
+   "at": "2026-10-16T09:46:42.492Z"
   },
   "CanadaBuys": {
    "ok": true,
-   "at": "2026-10-16T09:19:17.508Z",
+   "at": "2026-10-16T09:46:42.492Z",
    "count": 0,
    "note": "906 open tenders bekeken, 0 over LEO."
   },
   "AusTender": {
    "ok": true,
-   "at": "2026-10-16T09:19:17.508Z",
+   "at": "2026-10-16T09:46:42.492Z",
    "count": 0,
-   "note": "33 contracten bekeken, 0 over LEO.",
-   "since": "2026-10-16T07:19:17.508Z"
+   "note": "32 contracten bekeken, 0 over LEO.",
+   "since": "2026-10-16T07:46:42.492Z"
   },
   "UNDP": {
    "ok": true,
-   "at": "2026-10-16T09:19:17.508Z",
+   "at": "2026-10-16T09:46:42.492Z",
    "count": 1,
    "note": "974 berichten bekeken, 1 over LEO."
   },
   "PCC (Taiwan)": {
    "ok": true,
-   "at": "2026-10-16T09:19:17.508Z",
+   "at": "2026-10-16T09:46:42.492Z",
    "count": 16,
    "note": "38 aanbestedingen over LEO."
   },
   "SAM.gov": {
    "ok": false,
    "error": "api.sam.gov gaf 429: {\"code\":\"900804\",\"message\":\"Message throttled out\",\"description\":\"You have exceeded your quota .You can access API after 2026-Oct-17 00:00:00+0000 UTC\",\"nextAccessTime\":\"2026-Oct-",
-   "at": "2026-10-16T09:19:17.508Z"
+   "at": "2026-10-16T09:46:42.492Z"
   },
   "Vertalen": {
    "ok": true,
-   "at": "2026-10-16T09:19:17.508Z",
-   "count": 1,
-   "note": "DeepL: 1 nieuw vertaald.",
+   "at": "2026-10-16T09:46:42.492Z",
+   "count": 0,
+   "note": "DeepL: 0 nieuw vertaald.",
    "engine": "DeepL"
   }
  },
@@ -530,24 +530,24 @@
    "trEngine": "DeepL"
   },
   {
-   "pub": "UA-UA-2026-10-10-000157-a",
+   "pub": "UA-UA-2026-10-10-000391-a",
    "source": "Prozorro",
-   "title": "Супутниковий термінал Starlink Mini",
-   "buyer": "Військова частина А3814",
+   "title": "Супутникова система Starlink Mini ",
+   "buyer": "Військова частина А1536",
    "country": "UA",
    "published": "2026-10-10",
-   "deadline": "2026-10-20",
-   "deadlineAt": "2026-10-20T06:00:00.000Z",
+   "deadline": "2026-10-22",
+   "deadlineAt": "2026-10-22T07:00:00.000Z",
    "type": "Aankondiging opdracht",
    "kind": "notice",
    "cpv": [],
-   "link": "https://prozorro.gov.ua/tender/UA-2026-10-10-000157-a",
-   "value": 63000,
+   "link": "https://prozorro.gov.ua/tender/UA-2026-10-10-000391-a",
+   "value": 49882,
    "currency": "UAH",
    "defense": true,
    "policyUA": true,
    "firstSeen": "2026-10-15T13:42:58.648Z",
-   "titleNl": "Starlink Mini-satellietterminal",
+   "titleNl": "Het Starlink Mini-satellietsysteem ",
    "trEngine": "DeepL"
   },
   {
@@ -572,24 +572,24 @@
    "trEngine": "DeepL"
   },
   {
-   "pub": "UA-UA-2026-10-10-000391-a",
+   "pub": "UA-UA-2026-10-10-000157-a",
    "source": "Prozorro",
-   "title": "Супутникова система Starlink Mini ",
-   "buyer": "Військова частина А1536",
+   "title": "Супутниковий термінал Starlink Mini",
+   "buyer": "Військова частина А3814",
    "country": "UA",
    "published": "2026-10-10",
-   "deadline": "2026-10-22",
-   "deadlineAt": "2026-10-22T07:00:00.000Z",
+   "deadline": "2026-10-20",
+   "deadlineAt": "2026-10-20T06:00:00.000Z",
    "type": "Aankondiging opdracht",
    "kind": "notice",
    "cpv": [],
-   "link": "https://prozorro.gov.ua/tender/UA-2026-10-10-000391-a",
-   "value": 49882,
+   "link": "https://prozorro.gov.ua/tender/UA-2026-10-10-000157-a",
+   "value": 63000,
    "currency": "UAH",
    "defense": true,
    "policyUA": true,
    "firstSeen": "2026-10-15T13:42:58.648Z",
-   "titleNl": "Het Starlink Mini-satellietsysteem ",
+   "titleNl": "Starlink Mini-satellietterminal",
    "trEngine": "DeepL"
   },
   {
@@ -4208,27 +4208,6 @@
    "trEngine": "DeepL"
   },
   {
-   "pub": "UA-UA-2026-10-14-014528-a",
-   "source": "Prozorro",
-   "title": "Супутниковий модем Starlink Internet Satellite 3 gen",
-   "buyer": "ВІЙСЬКОВА ЧАСТИНА А 4576",
-   "country": "UA",
-   "published": "",
-   "deadline": "2026-10-17",
-   "deadlineAt": "2026-10-16T21:00:00.000Z",
-   "type": "Aankondiging opdracht",
-   "kind": "notice",
-   "cpv": [],
-   "link": "https://prozorro.gov.ua/tender/UA-2026-10-14-014528-a",
-   "value": 375000,
-   "currency": "UAH",
-   "defense": true,
-   "policyUA": true,
-   "firstSeen": "2026-10-15T13:42:58.648Z",
-   "titleNl": "Starlink Internet Satellite 3 gen-satellietmodem",
-   "trEngine": "DeepL"
-  },
-  {
    "pub": "UA-UA-2026-10-14-009976-a",
    "source": "Prozorro",
    "title": "Cупутниковий модем Starlink Internet Satellite 3 gen",
@@ -4247,6 +4226,27 @@
    "policyUA": true,
    "firstSeen": "2026-10-15T13:42:58.648Z",
    "titleNl": "Starlink Internet Satellite 3e generatie satellietmodem",
+   "trEngine": "DeepL"
+  },
+  {
+   "pub": "UA-UA-2026-10-14-014528-a",
+   "source": "Prozorro",
+   "title": "Супутниковий модем Starlink Internet Satellite 3 gen",
+   "buyer": "ВІЙСЬКОВА ЧАСТИНА А 4576",
+   "country": "UA",
+   "published": "",
+   "deadline": "2026-10-17",
+   "deadlineAt": "2026-10-16T21:00:00.000Z",
+   "type": "Aankondiging opdracht",
+   "kind": "notice",
+   "cpv": [],
+   "link": "https://prozorro.gov.ua/tender/UA-2026-10-14-014528-a",
+   "value": 375000,
+   "currency": "UAH",
+   "defense": true,
+   "policyUA": true,
+   "firstSeen": "2026-10-15T13:42:58.648Z",
+   "titleNl": "Starlink Internet Satellite 3 gen-satellietmodem",
    "trEngine": "DeepL"
   },
   {
