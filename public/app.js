@@ -137,6 +137,93 @@ function updateNight(){
   twilightGeo = d3.geoCircle().center(anti).radius(97)();
 }
 
+// ---- Starlink-satellieten (knop op de kaart, onthouden per browser; ?sats=1 of ?sats=0 in de link kan ook) ----
+const SAT_ALT = 1.085;                 // ~550 km boven de aarde, in aardstralen
+const SAT_TRAIL = 45000;               // spoortje: waar de satelliet 45 seconden geleden was
+let satsOn = false, satData = null, satLoading = false;
+const satCache = {t:0, now:null, prev:null};
+try { satsOn = localStorage.getItem("tk-sats") === "1"; } catch(e) {}
+{ const v = new URLSearchParams(location.search).get("sats"); if(v === "1") satsOn = true; if(v === "0") satsOn = false; }
+function loadSats(){
+  if(satData || satLoading || !window.StarlinkSats) return;
+  satLoading = true; satInfo("Satellieten laden…");
+  fetch("/starlink.json").then(r => { if(!r.ok) throw new Error(r.status); return r.json(); })
+    .then(d => { satData = StarlinkSats.decode(d); satCache.now = satCache.prev = null; satInfo(); redraw(); })
+    .catch(() => { satInfo("Satellieten konden niet laden"); })
+    .finally(() => { satLoading = false; });
+}
+function satInfo(msg){
+  const el = $("satInfo"); if(!el) return;
+  el.hidden = !satsOn;
+  el.innerHTML = msg ? esc(msg) : satData ? `<b>${satData.n.toLocaleString("nl-NL")}</b> Starlink-satellieten · posities van nu` : "";
+}
+function setSats(on){
+  satsOn = on;
+  try { localStorage.setItem("tk-sats", on ? "1" : "0"); } catch(e) {}
+  const b = $("zSat"); if(b){ b.setAttribute("aria-pressed", on ? "true" : "false"); b.classList.toggle("on", on); }
+  satInfo();
+  if(on) loadSats();
+  redraw();
+}
+// eigen tekenlaag (canvas) boven de bol: tienduizend punten zijn daar veel sneller dan in de kaart zelf
+let satCanvas = null, satCtx = null, satK = 1, satDpr = 1, satOx = 0, satOy = 0;
+function sizeSatCanvas(){
+  const svg = $("map"); if(!satCanvas || !svg) return;
+  const r = svg.getBoundingClientRect(), pr = satCanvas.parentElement.getBoundingClientRect(), pb = satCanvas.parentElement;
+  const w = r.width, h = r.height, dpr = Math.min(2, window.devicePixelRatio || 1);
+  satCanvas.style.left = (r.left - pr.left - pb.clientLeft) + "px"; satCanvas.style.top = (r.top - pr.top - pb.clientTop) + "px";
+  satCanvas.style.width = w + "px"; satCanvas.style.height = h + "px";
+  satCanvas.width = Math.round(w * dpr); satCanvas.height = Math.round(h * dpr);
+  // de bol past in het vak zoals een svg dat doet (passend en gecentreerd)
+  const kc = Math.min(w / W, h / H);
+  satK = kc * dpr; satDpr = dpr; satOx = (w - W * kc) / 2 * dpr; satOy = (h - H * kc) / 2 * dpr;
+}
+function drawSats(){
+  if(!satCtx) return;
+  satCtx.setTransform(1, 0, 0, 1, 0, 0);
+  satCtx.clearRect(0, 0, satCanvas.width, satCanvas.height);
+  window.__satN = 0;
+  if(!satsOn || !satData) return;
+  const now = Date.now();
+  if(!satCache.now || now - satCache.t > 1000){   // posities hooguit één keer per seconde uitrekenen
+    satCache.t = now;
+    satCache.now = StarlinkSats.positions(satData, now, satCache.now);
+    satCache.prev = StarlinkSats.positions(satData, now - SAT_TRAIL, satCache.prev);
+  }
+  // draaiing van de bol als matrix (zelfde volgorde als d3: eerst lengte, dan breedte, dan kanteling)
+  const D = Math.PI / 180, [r0, r1, r2] = proj.rotate();
+  const cl = Math.cos(r0*D), sl = Math.sin(r0*D), cp = Math.cos(r1*D), sp = Math.sin(r1*D), cg = Math.cos(r2*D), sg = Math.sin(r2*D);
+  const [tx, ty] = proj.translate(), R = proj.scale() * SAT_ALT, inner = 1 / (SAT_ALT * SAT_ALT), k = satK;
+  const pos = new Float32Array(2);
+  const place = (lon, lat) => {
+    const la = lat * D, lo = lon * D, c = Math.cos(la);
+    let x = c * Math.cos(lo), y = c * Math.sin(lo), z = Math.sin(la);
+    const x1 = x * cl - y * sl, y1 = x * sl + y * cl;             // om de as draaien (lengtegraad)
+    const x2 = x1 * cp - z * sp, z2 = z * cp + x1 * sp;            // kantelen (breedtegraad)
+    const y3 = y1 * cg - z2 * sg, z3 = y1 * sg + z2 * cg;          // kanteling
+    if(x2 < 0 && y3*y3 + z3*z3 < inner) return false;              // achter de aarde
+    const sx = satOx + (tx + R * y3) * k, sy = satOy + (ty - R * z3) * k;
+    if(sx < -20 || sy < -20 || sx > satCanvas.width + 20 || sy > satCanvas.height + 20) return false;
+    pos[0] = sx; pos[1] = sy; return true;
+  };
+  const A = satCache.now, B = satCache.prev, n = satData.n, dots = new Float32Array(n * 2);
+  let m = 0;
+  satCtx.beginPath();
+  for(let i = 0; i < n; i++){
+    if(!place(A[2*i], A[2*i+1])) continue;
+    const ax = pos[0], ay = pos[1]; dots[m++] = ax; dots[m++] = ay;
+    if(place(B[2*i], B[2*i+1]) && Math.abs(pos[0] - ax) + Math.abs(pos[1] - ay) < 80 * k){ satCtx.moveTo(pos[0], pos[1]); satCtx.lineTo(ax, ay); }
+  }
+  const big = Math.max(0.55, Math.min(1, R * k / satDpr / 330));   // kleine bol (telefoon) = fijnere stipjes
+  satCtx.lineWidth = 0.9 * satDpr * big; satCtx.strokeStyle = "rgba(150,205,255,.24)"; satCtx.stroke();
+  const sz = 1.6 * satDpr * big, h = sz / 2;
+  satCtx.fillStyle = "rgba(214,239,255,.85)";
+  for(let j = 0; j < m; j += 2) satCtx.fillRect(dots[j] - h, dots[j+1] - h, sz, sz);
+  window.__satN = m / 2;
+}
+// ook als de bol stilstaat bewegen de satellieten door
+setInterval(() => { if(satsOn && satData && proj && !dragging && quality === "high") drawSats(); }, 2000);
+
 async function buildMap(){
   const svg = $("map");
   if(!window.d3 || !window.topojson){ $("mapnote").textContent = "De kaart kon niet laden. De lijst werkt gewoon."; return; }
@@ -172,6 +259,10 @@ async function buildMap(){
   twilightEl = document.createElementNS(ns, "path"); twilightEl.setAttribute("class","twilight"); svg.appendChild(twilightEl);
   nightEl = document.createElementNS(ns, "path"); nightEl.setAttribute("class","night"); svg.appendChild(nightEl);
   updateNight(); setInterval(() => { updateNight(); redraw(); }, 60000);
+  satCanvas = document.createElement("canvas"); satCanvas.className = "satlayer"; satCanvas.setAttribute("aria-hidden", "true");
+  svg.after(satCanvas); satCtx = satCanvas.getContext("2d"); sizeSatCanvas();
+  if(window.ResizeObserver) new ResizeObserver(() => { sizeSatCanvas(); drawSats(); }).observe(svg);
+  else addEventListener("resize", () => { sizeSatCanvas(); drawSats(); });
 
   geo.features.forEach((f, i) => {
     if(!f.geometry) return;
@@ -228,6 +319,7 @@ function redraw(){
     x.el.setAttribute("d", f ? (gpath(f) || "") : "");
   }
   if(nightGeo){ nightEl.setAttribute("d", gpath(nightGeo) || ""); twilightEl.setAttribute("d", gpath(twilightGeo) || ""); }
+  drawSats();
   drawOffices();
   if(low && !TV) labels.innerHTML = ""; else drawLabels();
 }
@@ -288,6 +380,8 @@ function setupGlobe(svg, tip){
   $("zOut").onclick = () => setZoom(zoom / 1.5);
   $("zHome").onclick = () => flyTo([-14, -50, 0], 2.4);
   $("zWorld").onclick = () => flyTo([proj.rotate()[0], -20, 0], 0.95);
+  $("zSat").onclick = () => setSats(!satsOn);
+  setSats(satsOn);
 }
 // staat het landvenster open (breed scherm)? Dan de bol naar links schuiven zodat het land zichtbaar blijft.
 let shiftTarget = W/2, shiftRaf = 0;

@@ -1,0 +1,49 @@
+name: Satellieten bijwerken
+
+on:
+  schedule:
+    - cron: '41 3 * * *'      # elke dag (ook in het weekend) verse baangegevens van CelesTrak
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - 'scripts/fetch-sats.mjs'
+      - '.github/workflows/sats.yml'
+
+permissions:
+  contents: write
+
+concurrency:
+  group: ted-update            # niet tegelijk met het ophalen van tenders opslaan
+  cancel-in-progress: false
+
+jobs:
+  sats:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Baangegevens ophalen
+        run: node scripts/fetch-sats.mjs
+      - name: Opslaan
+        run: |
+          [ -f public/starlink.json ] || { echo "Geen bestand."; exit 0; }
+          git config user.name "tenderkaart-bot"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          cp public/starlink.json "$RUNNER_TEMP/starlink.json"
+          for i in 1 2 3 4 5; do
+            git fetch -q origin main && git reset -q --hard origin/main
+            cp "$RUNNER_TEMP/starlink.json" public/starlink.json
+            git add public/starlink.json
+            if git diff --cached --quiet; then echo "Geen wijzigingen."; exit 0; fi
+            git commit -q -m "Satellieten bijgewerkt $(date -u +%F)"
+            git push -q origin HEAD:main && exit 0
+            echo "Opslaan lukte niet (poging $i), even wachten…"
+            sleep $((i * 10))
+          done
+          exit 1
