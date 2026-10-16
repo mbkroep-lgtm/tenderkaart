@@ -1,20 +1,20 @@
-name: Bronnen testen (tijdelijk)
+name: Voorbeeld satellieten (tijdelijk)
 on:
   push:
     branches: [diag]
 permissions:
   contents: write
 jobs:
-  probe:
+  sats:
     runs-on: ubuntu-latest
-    timeout-minutes: 15
+    timeout-minutes: 20
     steps:
       - uses: actions/checkout@v4
-      - uses: actions/setup-node@v4
+      - uses: actions/setup-python@v5
         with:
-          node-version: 22
-      - run: node scripts/probe.mjs
+          python-version: '3.12'
+      - run: pip install sgp4 && python scripts/sats.py
       - run: |
           git config user.name "tenderkaart-bot"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add data/probe.json && git commit -q -m "Testresultaat bronnen" && git push -q origin HEAD:diag
+          git add preview && git commit -q -m "Voorbeelddata satellieten" && git push -q origin HEAD:diag
