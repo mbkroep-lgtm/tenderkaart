@@ -39,7 +39,7 @@ function renderWords(){
     : `<span class="note">Nog geen eigen uitsluitwoorden.</span>`;
 }
 function tenderLine(t, btn){
-  return `<li><div class="t-title"><a href="${esc(t.link)}" target="_blank" rel="noopener">${esc(t.title)}</a>
+  return `<li><div class="t-title"><a href="${esc(t.link)}" target="_blank" rel="noopener">${esc(t.titleNl || t.title)}</a>
     <small>${esc(t.source)} · ${esc(cname(t.country, t.countryName))} · ${esc(t.published || "")} · ${esc(t.pub)}</small></div>${btn}</li>`;
 }
 function renderHidden(){
@@ -53,7 +53,7 @@ function renderHidden(){
 function renderSearch(){
   const q = $("tSearch").value.trim().toLowerCase();
   const hidden = new Set(D.hidden);
-  const list = D.tenders.filter(t => !hidden.has(t.pub) && (!q || `${t.title} ${t.pub} ${cname(t.country, t.countryName)} ${t.source}`.toLowerCase().includes(q))).slice(0, 40);
+  const list = D.tenders.filter(t => !hidden.has(t.pub) && (!q || `${t.title} ${t.titleNl || ""} ${t.pub} ${cname(t.country, t.countryName)} ${t.source}`.toLowerCase().includes(q))).slice(0, 40);
   $("tList").innerHTML = list.length ? list.map(t => tenderLine(t, `<button type="button" class="danger" data-hide="${esc(t.pub)}">Verberg</button>`)).join("") : `<li><span class="note">Geen tenders gevonden.</span></li>`;
 }
 function renderCustomers(){

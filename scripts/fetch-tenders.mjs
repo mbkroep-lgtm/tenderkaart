@@ -712,12 +712,71 @@ for (const name of Object.keys(oldBySource)) if (!SOURCES.some(([n]) => n === na
   if (old.sources[name]) sourceInfo[name] = old.sources[name];
 }
 
+// ---------- Vertalen naar het Nederlands ----------
+// Met DEEPL_API_KEY: DeepL (beste kwaliteit, gratis tot 500.000 tekens per maand).
+// Zonder sleutel: MyMemory (gratis, beperkt aantal tekens per dag; wat niet lukt, wordt de volgende ronde vertaald).
+const DUTCH_SOURCES = new Set(['TED', 'TenderNed']);
+const SRC_LANG = { 'Prozorro': 'uk', 'SECOP (Colombia)': 'es', 'PNCP (Brazilië)': 'pt', 'BOAMP': 'fr', 'SIMAP (Zwitserland)': 'de', 'PCC (Taiwan)': 'zh-TW',
+  'Contracts Finder': 'en', 'Find a Tender': 'en', 'SAM.gov': 'en', 'CanadaBuys': 'en', 'AusTender': 'en' };
+const trCache = new Map((old.tenders || []).filter(t => t.titleNl).map(t => [t.title, t.titleNl]));
+async function deepl(texts, key) {
+  const host = key.endsWith(':fx') ? 'https://api-free.deepl.com' : 'https://api.deepl.com';
+  const body = new URLSearchParams(); texts.forEach(t => body.append('text', t)); body.append('target_lang', 'NL');
+  const r = await fetch(host + '/v2/translate', { method: 'POST', headers: { Authorization: 'DeepL-Auth-Key ' + key, 'Content-Type': 'application/x-www-form-urlencoded' }, body, signal: AbortSignal.timeout(60000) });
+  if (!r.ok) throw new Error('DeepL gaf ' + r.status);
+  return (await r.json()).translations.map(x => x.text);
+}
+async function mymemory(text, lang) {
+  const q = text.slice(0, 480);
+  const pair = `${lang || 'Autodetect'}|nl`;
+  const r = await fetch(`https://api.mymemory.translated.net/get?q=${encodeURIComponent(q)}&langpair=${encodeURIComponent(pair)}`, { headers: UA, signal: AbortSignal.timeout(30000) });
+  if (r.status === 429) throw Object.assign(new Error('dagquotum op'), { quota: true });
+  const d = await r.json();
+  const out = d?.responseData?.translatedText || '';
+  if (/MYMEMORY WARNING|QUOTA/i.test(out) || d.responseStatus === 429) throw Object.assign(new Error('dagquotum op'), { quota: true });
+  if (d.responseStatus && d.responseStatus !== 200) throw new Error('MyMemory: ' + (d.responseDetails || d.responseStatus));
+  return out.replace(/&#39;/g, "'").replace(/&quot;/g, '"').replace(/&amp;/g, '&');
+}
+async function translateAll(list) {
+  const todo = [];
+  for (const t of list) {
+    if (DUTCH_SOURCES.has(t.source) || !t.title) continue;
+    if (trCache.has(t.title)) { t.titleNl = trCache.get(t.title); continue; }
+    todo.push(t);
+  }
+  // nieuwste en open berichten eerst
+  todo.sort((a, b) => (b.kind === 'notice') - (a.kind === 'notice') || (b.published || '').localeCompare(a.published || ''));
+  const key = process.env.DEEPL_API_KEY || '';
+  let done = 0, failed = 0, quota = false;
+  if (key) {
+    for (let i = 0; i < todo.length; i += 40) {
+      const chunk = todo.slice(i, i + 40);
+      try { const tr = await deepl(chunk.map(t => t.title.slice(0, 1000)), key); chunk.forEach((t, j) => { if (tr[j]) { t.titleNl = tr[j]; trCache.set(t.title, tr[j]); done++; } }); }
+      catch (e) { console.warn('DeepL:', e.message); failed += chunk.length; break; }
+    }
+  } else {
+    for (const t of todo) {
+      if (quota) break;
+      try { const tr = await mymemory(t.title, SRC_LANG[t.source]); if (tr && tr.toLowerCase() !== t.title.toLowerCase()) { t.titleNl = tr; trCache.set(t.title, tr); } done++; }
+      catch (e) { if (e.quota) quota = true; else failed++; }
+      await sleep(300);
+    }
+  }
+  const rest = todo.length - done;
+  NOTES['Vertalen'] = `${key ? 'DeepL' : 'MyMemory'}: ${done} nieuw vertaald${rest ? `, ${rest} volgen later${quota ? ' (dagquotum op)' : ''}` : ''}.`;
+  console.log('Vertalen:', NOTES['Vertalen']);
+  return { ok: true, at: nowIso, count: done, note: NOTES['Vertalen'], engine: key ? 'DeepL' : 'MyMemory' };
+}
+
 const seen = new Set();
 const tenders = result
   .filter(t => { if (seen.has(t.pub)) return false; seen.add(t.pub); return true; })
   .filter(recent)
   .sort((a, b) => (b.published || '').localeCompare(a.published || ''));
 
+let trInfo;
+try { trInfo = await translateAll(tenders); } catch (e) { trInfo = { ok: false, at: nowIso, error: e.message }; }
+sourceInfo['Vertalen'] = trInfo;
 await mkdir(new URL('../data/', import.meta.url), { recursive: true });
 await writeFile(FILE, JSON.stringify({ updated: nowIso, queryVersion: version, sources: sourceInfo, count: tenders.length, tenders }, null, 1) + '\n');
 const per = {}; tenders.forEach(t => per[t.source] = (per[t.source] || 0) + 1);

@@ -62,7 +62,7 @@ export async function GET(request) {
     return json({
       me,
       updated: data.updated, sources: data.sources || {},
-      tenders: (data.tenders || []).map(t => ({ pub: t.pub, title: t.title, source: t.source, country: t.country, countryName: t.countryName, published: t.published, deadline: t.deadline, kind: t.kind, link: t.link })),
+      tenders: (data.tenders || []).map(t => ({ pub: t.pub, title: t.title, titleNl: t.titleNl, source: t.source, country: t.country, countryName: t.countryName, published: t.published, deadline: t.deadline, kind: t.kind, link: t.link })),
       hidden, words,
       free: { emails: freeEmails || [], domains: freeDomains || [], envDomains: env('FREE_DOMAINS'), envEmails: env('FREE_EMAILS') },
       customers: cust,

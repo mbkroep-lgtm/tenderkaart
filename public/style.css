@@ -236,3 +236,8 @@ footer{flex-direction:row;align-items:flex-start}
 .internal img{height:14px;width:auto;opacity:.7}
 .watermark{position:absolute;top:14px;left:14px;height:20px;width:auto;opacity:.45;pointer-events:none;z-index:1}
 @media (max-width:600px){.watermark{height:15px}}
+
+.t h3 .orig{display:block;margin-top:3px;font:400 12px var(--f-body);color:var(--faint);overflow-wrap:anywhere}
+.filters{grid-template-columns:minmax(180px,2fr) repeat(7,minmax(100px,1fr))}
+@media (max-width:1350px){.filters{grid-template-columns:repeat(4,minmax(0,1fr))}.filters .grow{grid-column:1/-1}}
+@media (max-width:600px){.filters{grid-template-columns:1fr 1fr}}

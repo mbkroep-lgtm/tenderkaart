@@ -91,7 +91,7 @@ function filtered(ignoreCountry){
     if(state.status === "awarded" && st !== "awarded") return false;
     if(state.minValue > 0 && !(t.value >= state.minValue)) return false;
     if(!ignoreCountry && state.country && t.country !== state.country) return false;
-    if(q && !(`${t.title} ${t.buyer} ${t.pub} ${cname(t.country)}`.toLowerCase().includes(q))) return false;
+    if(q && !(`${t.title} ${t.titleNl || ""} ${t.buyer} ${t.pub} ${cname(t.country)}`.toLowerCase().includes(q))) return false;
     return true;
   });
 }
@@ -312,7 +312,14 @@ const newHtml = t => isNew(t) ? `<span class="newtag">NIEUW</span>` : "";
 function leftText(t){ const st = statusOf(t);
   if(st === "awarded") return "gegund"; if(st === "prior") return "vooraankondiging, inschrijven nog niet mogelijk";
   const dl = daysLeft(t.deadline); return dl === null ? "geen sluitingsdatum" : dl < 0 ? "gesloten" : dl === 0 ? "sluit vandaag" : `nog ${dl} dag${dl === 1 ? "" : "en"}`; }
-function titleHtml(t){ return t.link ? `<a href="${esc(t.link)}" target="_blank" rel="noopener">${esc(t.title)}</a>` : esc(t.title); }
+let showOriginal = false;
+try { showOriginal = localStorage.getItem("tk-orig") === "1"; } catch(e) {}
+const shownTitle = t => (!showOriginal && t.titleNl) ? t.titleNl : t.title;
+function titleHtml(t){
+  const main = t.link ? `<a href="${esc(t.link)}" target="_blank" rel="noopener">${esc(shownTitle(t))}</a>` : esc(shownTitle(t));
+  const other = t.titleNl ? (showOriginal ? t.titleNl : t.title) : "";
+  return main + (other ? `<span class="orig" title="${showOriginal ? "Nederlandse vertaling" : "Originele titel"}">${showOriginal ? "NL: " : ""}${esc(other)}</span>` : "");
+}
 const hideBtn = t => window.isAdmin ? `<button type="button" class="hide-btn" data-hide="${esc(t.pub)}" title="Verbergen voor iedereen">Verberg</button>` : "";
 function card(t){
   return `<article class="t ${statusOf(t)}">${hideBtn(t)}<h3>${newHtml(t)}${titleHtml(t)}</h3>
@@ -377,6 +384,8 @@ $("q").addEventListener("input", e => { state.q = e.target.value; render(); });
 $("fStatus").addEventListener("change", e => { state.status = e.target.value; saveFilters(); render(); });
 $("fSource").addEventListener("change", e => { state.source = e.target.value; render(); });
 $("fDef").addEventListener("change", e => { state.def = e.target.value; render(); });
+$("fLang").addEventListener("change", e => { showOriginal = e.target.value === "orig"; try { localStorage.setItem("tk-orig", showOriginal ? "1" : "0"); } catch(err) {} render(); });
+$("fLang").value = showOriginal ? "orig" : "nl";
 $("fSort").addEventListener("change", e => { state.sort = e.target.value; saveFilters(); render(); });
 $("fValue").addEventListener("change", e => { state.minValue = Number(e.target.value) || 0; saveFilters(); render(); });
 $("fCountry").addEventListener("change", e => { state.country = e.target.value; render(); if(state.country) focusCountry(state.country); });
@@ -391,7 +400,7 @@ document.addEventListener("click", async e => {
     if(!r.ok) throw new Error((await r.json().catch(() => ({}))).error || "Verbergen lukte niet.");
     const t = tenders.find(x => x.pub === pub);
     tenders = tenders.filter(x => x.pub !== pub); render();
-    showToast(`Verborgen: ${t ? t.title.slice(0, 60) : pub}`, async () => {
+    showToast(`Verborgen: ${t ? shownTitle(t).slice(0, 60) : pub}`, async () => {
       await fetch("/api/admin", {method:"POST", credentials:"same-origin", headers:{"Content-Type":"application/json"}, body:JSON.stringify({action:"unhide", pub})});
       if(t){ tenders.push(t); render(); }
     });
