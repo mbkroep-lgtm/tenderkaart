@@ -1,9 +1,33 @@
 # Tijdelijk: posities van Starlink-satellieten voor een voorbeeldfilmpje.
 import json, math, urllib.request, datetime as dt
 from sgp4.api import Satrec, jday
-req = urllib.request.Request('https://celestrak.org/NORAD/elements/gp.php?GROUP=starlink&FORMAT=tle', headers={'User-Agent': 'tendermap-preview'})
-lines = urllib.request.urlopen(req, timeout=60).read().decode().strip().splitlines()
-sats = [Satrec.twoline2rv(lines[i+1], lines[i+2]) for i in range(0, len(lines) - 2, 3)]
+import os, traceback
+os.makedirs('preview', exist_ok=True)
+log = open('preview/log.txt', 'w')
+def fetch(url):
+    req = urllib.request.Request(url, headers={'User-Agent': 'Mozilla/5.0 (tendermap-preview)'})
+    return urllib.request.urlopen(req, timeout=90).read().decode()
+txt = None
+for url in ['https://celestrak.org/NORAD/elements/gp.php?GROUP=starlink&FORMAT=tle',
+            'https://celestrak.com/NORAD/elements/gp.php?GROUP=starlink&FORMAT=tle',
+            'https://celestrak.org/NORAD/elements/supplemental/sup-gp.php?FILE=starlink&FORMAT=tle']:
+    try:
+        txt = fetch(url); log.write(f'{url}: {len(txt)} tekens, begin: {txt[:120]!r}\n')
+        if txt.count('\n') > 100: break
+    except Exception as e:
+        log.write(f'{url}: FOUT {e}\n')
+log.flush()
+lines = [l.rstrip() for l in txt.strip().splitlines() if l.strip()]
+sats = []
+i = 0
+while i < len(lines) - 1:
+    if lines[i].startswith('1 ') and lines[i+1].startswith('2 '):
+        try: sats.append(Satrec.twoline2rv(lines[i], lines[i+1]))
+        except Exception: pass
+        i += 2
+    else:
+        i += 1
+log.write(f'{len(sats)} satellieten gelezen\n'); log.flush()
 t0 = dt.datetime.now(dt.timezone.utc).replace(microsecond=0)
 FRAMES, STEP = 60, 20
 def gmst(jd):
