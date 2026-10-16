@@ -207,7 +207,7 @@ async function buildMap(){
     tip.style.left = (e.clientX - r.left) + "px"; tip.style.top = (e.clientY - r.top) + "px"; tip.hidden = false;
   });
   svg.addEventListener("mouseleave", () => tip.hidden = true);
-  const pick = c => { if(!c || c[0] === "x") return; state.country = state.country === c ? "" : c; render(); if(state.country) focusCountry(state.country); };
+  const pick = c => { if(TV || !c || c[0] === "x") return; state.country = state.country === c ? "" : c; render(); if(state.country) focusCountry(state.country); };
   svg.addEventListener("click", e => { if(suppressClick){ suppressClick = false; return; } pick(e.target.dataset && e.target.dataset.c); });
   svg.addEventListener("keydown", e => { if(e.key === "Enter" || e.key === " "){ e.preventDefault(); pick(e.target.dataset && e.target.dataset.c); } });
   render();
@@ -501,20 +501,35 @@ let tvPausedUntil = 0;
 function startTv(){
   document.body.classList.add("tv");
   state.status = "open"; state.country = ""; state.q = ""; state.source = ""; state.def = ""; state.minValue = 0;
-  const pause = () => { tvPausedUntil = Date.now() + 30000; };
-  ["pointerdown","wheel","keydown"].forEach(ev => addEventListener(ev, pause, {passive:true}));
-  // langzaam draaien (ongeveer 3 minuten per rondje)
-  let last = performance.now();
+  // alleen even pauzeren als iemand zelf de bol draait of zoomt (niet bij knoppen)
+  const pause = () => { tvPausedUntil = Date.now() + 8000; };
+  const svg = $("map");
+  ["pointerdown","wheel"].forEach(ev => svg.addEventListener(ev, pause, {passive:true}));
+  // slepen altijd netjes afsluiten, ook als de muis buiten de bol wordt losgelaten
+  const endDrag = () => { if(dragging){ dragging = false; svg.classList.remove("dragging"); } };
+  ["pointerup","pointercancel","blur"].forEach(ev => addEventListener(ev, endDrag));
+  document.addEventListener("fullscreenchange", endDrag);
+  // langzaam draaien (ongeveer 3 minuten per rondje); een fout mag het draaien nooit stoppen
+  let last = performance.now(), lastFrame = Date.now();
   const spin = now => {
-    const dt = Math.min(100, now - last); last = now;
-    if(proj && Date.now() > tvPausedUntil && !dragging){
-      const r = proj.rotate(); proj.rotate([r[0] + dt * 0.002, r[1] + (-28 - r[1]) * 0.002, 0]);
-      if(zoom > 1.05 || zoom < 0.9){ zoom += (0.98 - zoom) * 0.01; proj.scale(s0 * zoom); }
-      quality = "low"; redraw();
-    }
+    lastFrame = Date.now();
+    try {
+      const dt = Math.min(100, now - last); last = now;
+      if(proj && Date.now() > tvPausedUntil && !dragging){
+        const r = proj.rotate(); proj.rotate([r[0] + dt * 0.002, r[1] + (-28 - r[1]) * 0.002, 0]);
+        if(zoom > 1.05 || zoom < 0.9){ zoom += (0.98 - zoom) * 0.01; proj.scale(s0 * zoom); }
+        quality = "low"; redraw();
+      }
+    } catch(e) { console.error(e); }
     requestAnimationFrame(spin);
   };
   requestAnimationFrame(spin);
+  // vangnet: als het scherm een tijd niets heeft getekend (bv. na slaapstand), opnieuw starten
+  setInterval(() => { if(Date.now() - lastFrame > 5000 && document.visibilityState === "visible"){ last = performance.now(); requestAnimationFrame(spin); } }, 5000);
+  document.addEventListener("visibilitychange", () => { last = performance.now(); if(document.visibilityState === "visible") keepAwake(); });
+  // voorkomen dat het scherm in slaapstand gaat (waar de browser dat toestaat)
+  const keepAwake = () => { try { navigator.wakeLock && navigator.wakeLock.request("screen").catch(() => {}); } catch(e) {} };
+  keepAwake();
   setInterval(loadTenders, 10 * 60 * 1000);          // elke 10 minuten nieuwe gegevens
   setTimeout(() => location.reload(), 6 * 3600 * 1000); // elke 6 uur de hele pagina (nieuwe versie van de site)
   const clock = () => { const el = $("tvClock"); if(el) el.textContent = new Date().toLocaleString("nl-NL", {weekday:"long", day:"numeric", month:"long", hour:"2-digit", minute:"2-digit"}); };
