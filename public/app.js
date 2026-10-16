@@ -105,6 +105,37 @@ let proj = null, gpath = null, s0 = 1, zoom = HOME.zoom;
 let features = [];            // {key, f, el, eu, best, area}
 let paths = {}, labels = null, counts = {}, sphereEl = null, gratEl = null, gratGeo = null;
 let dragging = false, suppressClick = false, raf = 0, idleTimer = 0, quality = "high";
+let nightEl = null, twilightEl = null, officesEl = null;
+const TV = new URLSearchParams(location.search).has("tv");
+// BroadbandEU-kantoren
+const OFFICES = [{name:"Tynaarlo", at:[6.620, 53.077]}, {name:"Etten-Leur", at:[4.636, 51.570]}];
+
+// ---- positie van de zon (voor dag en nacht), naar de formules van NOAA ----
+const RAD = Math.PI / 180;
+function sunPosition(date){
+  const c = (date - Date.UTC(2000, 0, 1, 12)) / 864e5 / 36525;
+  const L0 = ((280.46646 + c*(36000.76983 + c*0.0003032)) % 360 + 360) % 360 * RAD;
+  const M = (357.52911 + c*(35999.05029 - 0.0001537*c)) * RAD;
+  const e = 0.016708634 - c*(0.000042037 + 0.0000001267*c);
+  const C = (Math.sin(M)*(1.914602 - c*(0.004817 + 0.000014*c)) + Math.sin(2*M)*(0.019993 - 0.000101*c) + Math.sin(3*M)*0.000289) * RAD;
+  const omega = (125.04 - 1934.136*c) * RAD;
+  const lambda = L0 + C - (0.00569 + 0.00478*Math.sin(omega)) * RAD;
+  const eps0 = (23 + (26 + (21.448 - c*(46.8150 + c*(0.00059 - c*0.001813)))/60)/60) * RAD;
+  const eps = eps0 + 0.00256*Math.cos(omega)*RAD;
+  const decl = Math.asin(Math.sin(eps)*Math.sin(lambda));
+  const y = Math.tan(eps/2)**2;
+  const eqTime = y*Math.sin(2*L0) - 2*e*Math.sin(M) + 4*e*y*Math.sin(M)*Math.cos(2*L0) - 0.5*y*y*Math.sin(4*L0) - 1.25*e*e*Math.sin(2*M);
+  const dayStart = Date.UTC(date.getUTCFullYear(), date.getUTCMonth(), date.getUTCDate());
+  const lon = (dayStart - date) / 864e5 * 360 - 180 - eqTime / RAD;
+  return [((lon + 540) % 360) - 180, decl / RAD];
+}
+let nightGeo = null, twilightGeo = null;
+function updateNight(){
+  const [lon, lat] = sunPosition(new Date());
+  const anti = [lon + 180, -lat];
+  nightGeo = d3.geoCircle().center(anti).radius(90)();
+  twilightGeo = d3.geoCircle().center(anti).radius(97)();
+}
 
 async function buildMap(){
   const svg = $("map");
@@ -138,6 +169,9 @@ async function buildMap(){
   gratGeo = d3.geoGraticule().step([15,15])();
   gratEl = document.createElementNS(ns, "path"); gratEl.setAttribute("class","grat"); svg.appendChild(gratEl);
   const g = document.createElementNS(ns, "g"); g.setAttribute("class","lands"); svg.appendChild(g);
+  twilightEl = document.createElementNS(ns, "path"); twilightEl.setAttribute("class","twilight"); svg.appendChild(twilightEl);
+  nightEl = document.createElementNS(ns, "path"); nightEl.setAttribute("class","night"); svg.appendChild(nightEl);
+  updateNight(); setInterval(() => { updateNight(); redraw(); }, 60000);
 
   geo.features.forEach((f, i) => {
     if(!f.geometry) return;
@@ -159,6 +193,7 @@ async function buildMap(){
   });
 
   labels = document.createElementNS(ns, "g"); labels.setAttribute("class","labels"); svg.appendChild(labels);
+  officesEl = document.createElementNS(ns, "g"); officesEl.setAttribute("class","offices"); svg.appendChild(officesEl);
   $("mapnote").hidden = true;
   redraw();
 
@@ -192,7 +227,9 @@ function redraw(){
     const f = low ? x.fl : x.f;          // tijdens draaien: lichte kaart (kleine eilanden even weg)
     x.el.setAttribute("d", f ? (gpath(f) || "") : "");
   }
-  if(low) labels.innerHTML = ""; else drawLabels();
+  if(nightGeo){ nightEl.setAttribute("d", gpath(nightGeo) || ""); twilightEl.setAttribute("d", gpath(twilightGeo) || ""); }
+  drawOffices();
+  if(low && !TV) labels.innerHTML = ""; else drawLabels();
 }
 // tijdens bewegen licht tekenen, bij stilstand meteen weer gedetailleerd
 const scheduleRedraw = () => {
@@ -301,7 +338,29 @@ function drawLabels(){
     const ci = document.createElementNS(ns,"circle"); ci.setAttribute("cx",p[0]); ci.setAttribute("cy",p[1]); ci.setAttribute("r",r); ci.setAttribute("class","dot");
     const tx = document.createElementNS(ns,"text"); tx.setAttribute("x",p[0]); tx.setAttribute("y",p[1]); tx.setAttribute("class","cnt"); tx.style.fontSize = (r*1.15) + "px"; tx.textContent = n > 99 ? "99+" : n;
     labels.appendChild(ci); labels.appendChild(tx);
+    if(TV && freshCountries.has(c)){
+      const ring = document.createElementNS(ns,"circle"); ring.setAttribute("cx",p[0]); ring.setAttribute("cy",p[1]); ring.setAttribute("r",r); ring.setAttribute("class","pulse");
+      labels.insertBefore(ring, ci);
+    }
   });
+}
+let freshCountries = new Set();
+
+function drawOffices(){
+  if(!officesEl || !proj) return;
+  officesEl.innerHTML = "";
+  const centre = proj.invert(proj.translate());
+  const close = zoom >= 4;                 // ver weg: één markering voor beide kantoren
+  const list = close ? OFFICES : [{name:"Tynaarlo en Etten-Leur", at:[5.63, 52.32]}];
+  for(const o of list){
+    if(d3.geoDistance(o.at, centre) > Math.PI/2 - 0.02) continue;
+    const p = proj(o.at); if(!p) continue;
+    const s = 15;
+    const g = document.createElementNS(ns, "g"); g.setAttribute("class","office"); g.setAttribute("transform", `translate(${p[0]},${p[1]})`);
+    g.innerHTML = `<title>BroadbandEU · ${esc(o.name)}</title><circle r="${s*0.95}" class="office-ring"/><image href="/favicon.svg" x="${-s/2}" y="${-s/2}" width="${s}" height="${s}"/>`
+      + (close ? `<text x="${s*0.8}" y="4" class="office-name">BroadbandEU · ${esc(o.name)}</text>` : "");
+    officesEl.appendChild(g);
+  }
 }
 
 // ---------- Lijst ----------
@@ -427,9 +486,48 @@ window.startTenderApp = function(){
   if(started) return; started = true;
   render();
   buildMap();
-  fetch("/api/tenders", {cache:"no-store", credentials:"same-origin"})
-    .then(r => { if(r.status === 401){ location.reload(); throw new Error("uitgelogd"); } if(!r.ok) throw new Error(r.status); return r.json(); })
-    .then(d => { tenders = Array.isArray(d.tenders) ? d.tenders : []; updated = d.updated; loaded = true; render(); })
-    .catch(() => { loaded = true; loadError = true; render(); });
+  loadTenders();
+  if(TV) startTv();
 };
+function loadTenders(){
+  return fetch("/api/tenders", {cache:"no-store", credentials:"same-origin"})
+    .then(r => { if(r.status === 401){ location.reload(); throw new Error("uitgelogd"); } if(!r.ok) throw new Error(r.status); return r.json(); })
+    .then(d => { tenders = Array.isArray(d.tenders) ? d.tenders : []; updated = d.updated; loaded = true; loadError = false; render(); if(TV) tvUpdate(); })
+    .catch(() => { if(!loaded){ loaded = true; loadError = true; render(); } });
+}
+
+// ---------- Tv-modus (/?tv=1): schermvullend, draaiende bol, ververst zichzelf ----------
+let tvPausedUntil = 0;
+function startTv(){
+  document.body.classList.add("tv");
+  state.status = "open"; state.country = ""; state.q = ""; state.source = ""; state.def = ""; state.minValue = 0;
+  const pause = () => { tvPausedUntil = Date.now() + 30000; };
+  ["pointerdown","wheel","keydown"].forEach(ev => addEventListener(ev, pause, {passive:true}));
+  // langzaam draaien (ongeveer 3 minuten per rondje)
+  let last = performance.now();
+  const spin = now => {
+    const dt = Math.min(100, now - last); last = now;
+    if(proj && Date.now() > tvPausedUntil && !dragging){
+      const r = proj.rotate(); proj.rotate([r[0] + dt * 0.002, r[1] + (-28 - r[1]) * 0.002, 0]);
+      if(zoom > 1.05 || zoom < 0.9){ zoom += (0.98 - zoom) * 0.01; proj.scale(s0 * zoom); }
+      quality = "low"; redraw();
+    }
+    requestAnimationFrame(spin);
+  };
+  requestAnimationFrame(spin);
+  setInterval(loadTenders, 10 * 60 * 1000);          // elke 10 minuten nieuwe gegevens
+  setTimeout(() => location.reload(), 6 * 3600 * 1000); // elke 6 uur de hele pagina (nieuwe versie van de site)
+  const clock = () => { const el = $("tvClock"); if(el) el.textContent = new Date().toLocaleString("nl-NL", {weekday:"long", day:"numeric", month:"long", hour:"2-digit", minute:"2-digit"}); };
+  clock(); setInterval(clock, 15000);
+  $("tvFull").addEventListener("click", () => { document.documentElement.requestFullscreen && document.documentElement.requestFullscreen().catch(() => {}); });
+}
+function tvUpdate(){
+  const dayAgo = new Date(Date.now() - 864e5).toISOString();
+  const open = tenders.filter(isOpen).sort((a,b) => (a.deadlineAt || a.deadline || "9999").localeCompare(b.deadlineAt || b.deadline || "9999"));
+  freshCountries = new Set(open.filter(t => t.firstSeen && t.firstSeen > dayAgo && t.firstSeen > "2001").map(t => t.country));
+  const items = open.slice(0, 30).map(t => `<span class="tk-item"><b>${esc(t.country ? cname(t.country) : (t.countryName || ""))}</b> ${esc(shownTitle(t).slice(0, 90))} <i>${esc(leftText(t))}</i></span>`).join("");
+  const tk = $("tvTicker");
+  if(tk) tk.innerHTML = items ? `<div class="tk-track">${items}${items}</div>` : `<span class="tk-item">Op dit moment geen open LEO-tenders</span>`;
+  drawLabels();
+}
 })();

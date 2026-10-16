@@ -66,6 +66,7 @@
     <div class="account"><span id="whoami"></span><a class="btn" id="btnAdmin" href="/admin.html" hidden>Beheer</a><button type="button" id="btnLogout">Uitloggen</button><button type="button" id="btnInstall" class="link" hidden>Als app installeren</button><button type="button" id="btnLogin" class="link" hidden>Inloggen</button></div>
   </header>
 
+  <div class="tvbar"><span id="tvClock"></span><button type="button" id="tvFull">Volledig scherm</button><a href="/">Tv-modus sluiten</a></div>
   <div class="stats">
     <div class="stat"><b id="sOpen">–</b><small>Open tenders</small></div>
     <div class="stat new"><b id="sNew">–</b><small>Nieuw sinds je vorige bezoek</small></div>
@@ -137,6 +138,7 @@
         <button type="button" id="zOut" aria-label="Uitzoomen">−</button>
         <button type="button" id="zHome" class="txt" aria-label="Naar Europa">Europa</button>
         <button type="button" id="zWorld" class="txt" aria-label="Hele wereld tonen">Wereld</button>
+        <a class="txt tvlink" id="zTv" href="/?tv=1" target="_blank" rel="noopener" title="Tv-modus voor een scherm op kantoor">Tv</a>
       </div>
       <div class="hint">Slepen om de bol te draaien · scrollen of knijpen om te zoomen</div>
       <div class="mapnote" id="mapnote">Kaart laden…</div>
@@ -153,6 +155,7 @@
     </div>
   </div>
 
+  <div class="tvticker" id="tvTicker" aria-live="off"></div>
   <footer>
     <div class="foot-brand"><a class="brand small" href="https://www.broadbandeu.com" target="_blank" rel="noopener"><img src="/broadbandeu-logo.svg" alt="BroadbandEU" width="236" height="32"></a>
       <span>Handelsweg 16B, 9482 WE Tynaarlo · +31 850 666 152</span>
