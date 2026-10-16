@@ -68,6 +68,7 @@ function statusOf(t){
   if(k === "award") return "awarded";
   const dl = daysLeft(t.deadline);
   if(dl !== null && dl < 0) return "closed";            // sluitingsdatum voorbij = gesloten, wat voor bericht ook
+  if(t.deadlineAt && Date.parse(t.deadlineAt) <= Date.now()) return "closed";   // sluitingstijd vandaag al voorbij
   if(k === "prior") return "prior";
   if(dl === null){                                      // geen sluitingsdatum: na 3 maanden als gesloten beschouwen
     const age = t.published ? (today() - new Date(t.published + "T00:00:00")) / DAY : 0;
@@ -311,7 +312,10 @@ const valHtml = t => t.value ? `<span class="val">${esc(fmtMoney(t.value, t.curr
 const newHtml = t => isNew(t) ? `<span class="newtag">NIEUW</span>` : "";
 function leftText(t){ const st = statusOf(t);
   if(st === "awarded") return "gegund"; if(st === "prior") return "vooraankondiging, inschrijven nog niet mogelijk";
-  const dl = daysLeft(t.deadline); return dl === null ? "geen sluitingsdatum" : dl < 0 ? "gesloten" : dl === 0 ? "sluit vandaag" : `nog ${dl} dag${dl === 1 ? "" : "en"}`; }
+  if(st === "closed") return "gesloten";
+  const dl = daysLeft(t.deadline);
+  if(dl === 0 && t.deadlineAt) return "sluit vandaag om " + new Date(t.deadlineAt).toLocaleTimeString("nl-NL", {hour:"2-digit", minute:"2-digit"});
+  return dl === null ? "geen sluitingsdatum" : dl < 0 ? "gesloten" : dl === 0 ? "sluit vandaag" : `nog ${dl} dag${dl === 1 ? "" : "en"}`; }
 let showOriginal = false;
 try { showOriginal = localStorage.getItem("tk-orig") === "1"; } catch(e) {}
 const shownTitle = t => (!showOriginal && t.titleNl) ? t.titleNl : t.title;

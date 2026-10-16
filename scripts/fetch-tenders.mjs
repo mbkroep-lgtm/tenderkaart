@@ -73,6 +73,14 @@ function date(v) {
   let m = s.match(/^(\d{4}-\d{2}-\d{2})/); if (m) return m[1];
   const d = Date.parse(s); return Number.isFinite(d) ? isoDay(d) : '';
 }
+// Volledig sluitingstijdstip (ISO) als de bron een tijd meegeeft; anders leeg.
+function when(v) {
+  if (v == null || v === '') return '';
+  const s = String(Array.isArray(v) ? v[0] : v);
+  if (!/\d{1,2}:\d{2}/.test(s)) return '';
+  const d = Date.parse(s);
+  return Number.isFinite(d) ? new Date(d).toISOString() : '';
+}
 function num(v) {
   if (v == null || v === '') return null;
   if (Array.isArray(v)) { const ns = v.map(num).filter(x => x != null); return ns.length ? ns.reduce((a, b) => a + b, 0) : null; }
@@ -248,7 +256,7 @@ async function fetchFts(sinceIso) {
       buyer: r.buyer?.name || '',
       country: 'GB',
       published: date(r.date),
-      deadline: isAward ? '' : date(t.tenderPeriod?.endDate),
+      deadline: isAward ? '' : date(t.tenderPeriod?.endDate), deadlineAt: isAward ? '' : when(t.tenderPeriod?.endDate),
       type: isAward ? 'Gegunde opdracht' : isPrior ? 'Vooraankondiging' : t.status === 'cancelled' ? 'Geannuleerd' : 'Aankondiging opdracht',
       kind: isAward || t.status === 'cancelled' ? 'award' : isPrior ? 'prior' : 'notice',
       cpv: cpvMain ? [String(cpvMain)] : [],
@@ -284,7 +292,7 @@ async function fetchSam(key) {
       buyer: String(o.fullParentPathName || o.department || '').split('.').slice(-1)[0].trim() || o.fullParentPathName || '',
       country: c3 === 'USA' ? 'US' : (ISO3[c3] || (c3.length === 2 ? c3 : 'US')),
       published: date(o.postedDate),
-      deadline: kind === 'award' ? '' : date(o.responseDeadLine),
+      deadline: kind === 'award' ? '' : date(o.responseDeadLine), deadlineAt: kind === 'award' ? '' : when(o.responseDeadLine),
       type: o.type || 'Bericht', kind,
       cpv: [],
       link: o.uiLink || `https://sam.gov/opp/${o.noticeId}/view`,
@@ -323,7 +331,7 @@ async function fetchContractsFinder() {
     const prior = /early|pipeline|engagement/i.test(n.noticeType || '');
     out.push({
       pub: 'CF-' + n.id, source: 'Contracts Finder', title: n.title || '(zonder titel)', buyer: n.organisationName || '',
-      country: 'GB', published: date(n.publishedDate), deadline: award ? '' : date(n.deadlineDate),
+      country: 'GB', published: date(n.publishedDate), deadline: award ? '' : date(n.deadlineDate), deadlineAt: award ? '' : when(n.deadlineDate),
       type: award ? 'Gegunde opdracht' : prior ? 'Vooraankondiging' : st === 'withdrawn' ? 'Ingetrokken' : 'Aankondiging opdracht',
       kind: award || st === 'withdrawn' || st === 'closed' ? 'award' : prior ? 'prior' : 'notice', cpv: [],
       link: `https://www.contractsfinder.service.gov.uk/Notice/${n.id}`,
@@ -352,7 +360,7 @@ async function fetchProzorro() {
       pub: 'UA-' + x.tenderID, source: 'Prozorro', title: x.title || '(zonder titel)',
       buyer: x.procuringEntity?.name || x.procuringEntity?.identifier?.legalName || '', country: 'UA',
       published: date(x.enquiryPeriod?.startDate || x.tenderPeriod?.startDate || x.dateCreated),
-      deadline: date(x.tenderPeriod?.endDate), type: tendering ? 'Aankondiging opdracht' : 'In beoordeling',
+      deadline: date(x.tenderPeriod?.endDate), deadlineAt: when(x.tenderPeriod?.endDate), type: tendering ? 'Aankondiging opdracht' : 'In beoordeling',
       kind: tendering ? 'notice' : 'award', cpv: [],
       link: `https://prozorro.gov.ua/tender/${encodeURIComponent(x.tenderID)}`,
       value: num(x.value?.amount), currency: x.value?.currency || 'UAH'
@@ -376,7 +384,7 @@ async function fetchTenderNed() {
     const award = /gegund|gunning|beëindiging/i.test(code), prior = /vooraankondiging|marktconsultatie/i.test(code);
     out.push({
       pub: 'NL-' + x.publicatieId, source: 'TenderNed', title: x.aanbestedingNaam || '(zonder titel)', buyer: x.opdrachtgeverNaam || '',
-      country: 'NL', published: date(x.publicatieDatum), deadline: award ? '' : date(x.sluitingsDatum),
+      country: 'NL', published: date(x.publicatieDatum), deadline: award ? '' : date(x.sluitingsDatum), deadlineAt: award ? '' : when(x.sluitingsDatum ? x.sluitingsDatum + '+02:00' : ''),
       type: x.publicatiecode?.omschrijving || x.typePublicatie?.omschrijving || 'Aankondiging', kind: award ? 'award' : prior ? 'prior' : 'notice',
       cpv: [], link: x.link?.href || `https://www.tenderned.nl/aankondigingen/overzicht/${x.publicatieId}`, value: null, currency: 'EUR'
     });
@@ -399,7 +407,7 @@ async function fetchBoamp() {
     const award = /ATTRIBUTION/i.test(x.nature || ''), prior = /PRE|PREINFO/i.test(x.nature || '');
     out.push({
       pub: 'FR-' + x.idweb, source: 'BOAMP', title: x.objet || '(zonder titel)', buyer: x.nomacheteur || '', country: 'FR',
-      published: date(x.dateparution), deadline: award ? '' : date(x.datelimitereponse), type: x.nature_libelle || 'Avis',
+      published: date(x.dateparution), deadline: award ? '' : date(x.datelimitereponse), deadlineAt: award ? '' : when(x.datelimitereponse), type: x.nature_libelle || 'Avis',
       kind: award ? 'award' : prior ? 'prior' : 'notice', cpv: [], link: x.url_avis || `https://www.boamp.fr/pages/avis/?q=idweb:${x.idweb}`, value: null, currency: 'EUR'
     });
   }
@@ -689,7 +697,7 @@ for (const [name, fn] of SOURCES) {
     // Find a Tender werkt met alleen de laatste wijzigingen: oude berichten blijven staan.
     // Find a Tender en AusTender halen alleen wijzigingen op: hun eerdere berichten blijven staan.
     // Bij de andere bronnen blijven eerdere berichten ook staan (tot ze te oud zijn), behalve na een reset.
-    const carry = previous.filter(t => !freshIds.has(t.pub) && keep(t) && !reset).map(markDefense);
+    const carry = name === 'Prozorro' ? [] : previous.filter(t => !freshIds.has(t.pub) && keep(t) && !reset).map(markDefense);
     const prevById = new Map(previous.map(t => [t.pub, t]));
     for (const t of fresh) {
       const p = prevById.get(t.pub);
