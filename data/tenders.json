@@ -1,98 +1,104 @@
 {
- "updated": "2026-10-16T07:17:28.454Z",
+ "updated": "2026-10-16T07:24:34.003Z",
  "queryVersion": "79a21b7991",
  "sources": {
   "TED": {
    "ok": true,
-   "at": "2026-10-16T07:17:28.454Z",
+   "at": "2026-10-16T07:24:34.003Z",
    "count": 40,
    "note": ""
   },
   "Wereldbank": {
    "ok": true,
-   "at": "2026-10-16T07:17:28.454Z",
+   "at": "2026-10-16T07:24:34.003Z",
    "count": 55,
    "note": "63 gevonden, 55 echt over LEO."
   },
   "Find a Tender": {
    "ok": true,
-   "at": "2026-10-16T07:17:28.454Z",
+   "at": "2026-10-16T07:24:34.003Z",
    "count": 0,
-   "note": "1 pagina's, 7 berichten bekeken, 0 over LEO.",
-   "since": "2026-10-16T05:17:28.454Z"
+   "note": "1 pagina's, 8 berichten bekeken, 0 over LEO.",
+   "since": "2026-10-16T05:24:34.003Z"
   },
   "Contracts Finder": {
    "ok": true,
-   "at": "2026-10-16T07:17:28.454Z",
+   "at": "2026-10-16T07:24:34.003Z",
    "count": 4,
    "note": "295 gevonden, 22 over LEO."
   },
   "TenderNed": {
    "ok": true,
-   "at": "2026-10-16T07:17:28.454Z",
+   "at": "2026-10-16T07:24:34.003Z",
    "count": 0,
    "note": "106 gevonden, 0 over LEO."
   },
   "Prozorro": {
    "ok": true,
-   "at": "2026-10-16T07:17:28.454Z",
+   "at": "2026-10-16T07:24:34.003Z",
    "count": 55,
    "note": "55 lopende procedures."
   },
   "BOAMP": {
    "ok": true,
-   "at": "2026-10-16T07:17:28.454Z",
+   "at": "2026-10-16T07:24:34.003Z",
    "count": 1,
    "note": "5 gevonden, 1 over LEO."
   },
   "SIMAP (Zwitserland)": {
    "ok": true,
-   "at": "2026-10-16T07:17:28.454Z",
+   "at": "2026-10-16T07:24:34.003Z",
    "count": 0,
    "note": "20 gevonden, 0 over LEO."
   },
   "SECOP (Colombia)": {
    "ok": true,
-   "at": "2026-10-16T07:17:28.454Z",
+   "at": "2026-10-16T07:24:34.003Z",
    "count": 68,
    "note": "68 gevonden, 68 over LEO."
   },
   "PNCP (Brazilië)": {
    "ok": false,
    "error": "fetch failed",
-   "at": "2026-10-16T07:17:28.454Z"
+   "at": "2026-10-16T07:24:34.003Z"
   },
   "CanadaBuys": {
    "ok": true,
-   "at": "2026-10-16T07:17:28.454Z",
+   "at": "2026-10-16T07:24:34.003Z",
    "count": 0,
    "note": "906 open tenders bekeken, 0 over LEO."
   },
   "AusTender": {
    "ok": true,
-   "at": "2026-10-16T07:17:28.454Z",
+   "at": "2026-10-16T07:24:34.003Z",
    "count": 0,
    "note": "13 contracten bekeken, 0 over LEO.",
-   "since": "2026-10-16T05:17:28.454Z"
+   "since": "2026-10-16T05:24:34.003Z"
   },
   "UNDP": {
    "ok": true,
-   "at": "2026-10-16T07:17:28.454Z",
+   "at": "2026-10-16T07:24:34.003Z",
    "count": 1,
    "note": "974 berichten bekeken, 1 over LEO."
   },
   "PCC (Taiwan)": {
    "ok": true,
-   "at": "2026-10-16T07:17:28.454Z",
+   "at": "2026-10-16T07:24:34.003Z",
    "count": 16,
    "note": "38 aanbestedingen over LEO."
   },
+  "SAM.gov": {
+   "ok": true,
+   "at": "2026-10-16T07:24:34.003Z",
+   "count": 0,
+   "note": "0 gevonden, 0 over LEO."
+  },
   "Vertalen": {
    "ok": true,
-   "at": "2026-10-16T07:17:28.454Z",
-   "count": 119,
-   "note": "MyMemory: 119 nieuw vertaald, 61 volgen later (dagquotum op).",
-   "engine": "MyMemory"
+   "at": "2026-10-16T07:24:34.003Z",
+   "count": 180,
+   "note": "DeepL: 180 nieuw vertaald.",
+   "engine": "DeepL"
   }
  },
  "count": 220,
@@ -133,7 +139,8 @@
    "defense": true,
    "policyUA": true,
    "firstSeen": "2026-10-15T13:42:58.648Z",
-   "titleNl": "Starlink-satellietmodem."
+   "titleNl": "Starlink-satellietmodem.",
+   "trEngine": "DeepL"
   },
   {
    "pub": "UA-UA-2026-10-15-001300-a",
@@ -152,7 +159,8 @@
    "defense": true,
    "policyUA": true,
    "firstSeen": "2026-10-15T13:42:58.648Z",
-   "titleNl": "Starlink Mini KIT TERMINAL"
+   "titleNl": "Starlink Mini KIT-terminal",
+   "trEngine": "DeepL"
   },
   {
    "pub": "TW-3.79.1.3-115A25",
@@ -169,7 +177,8 @@
    "value": null,
    "currency": "TWD",
    "firstSeen": "2026-10-16T07:13:38.622Z",
-   "titleNl": "115 Taipei City Gemeentelijk Gebouw Low Rail Satelliet Bouw Vastgoed Aankoop Case"
+   "titleNl": "Aanbesteding voor de aanschaf van goederen en diensten in het kader van de aanleg van een low-orbit-satelliet in het stadhuis van Taipei in het jaar 115",
+   "trEngine": "DeepL"
   },
   {
    "pub": "UA-UA-2026-10-14-000357-a",
@@ -188,7 +197,8 @@
    "defense": true,
    "policyUA": true,
    "firstSeen": "2026-10-15T13:42:58.648Z",
-   "titleNl": "Satellietterminal (mobiel)"
+   "titleNl": "Satellietcommunicatieterminal (mobiel)",
+   "trEngine": "DeepL"
   },
   {
    "pub": "WB-OP00474904",
@@ -207,7 +217,9 @@
    "link": "https://projects.worldbank.org/en/projects-operations/procurement-detail/OP00474904",
    "value": null,
    "currency": "USD",
-   "firstSeen": "2000-01-01T00:00:00.000Z"
+   "firstSeen": "2000-01-01T00:00:00.000Z",
+   "titleNl": "Levering, installatie en abonnement op speciale internetdiensten (Starlink) voor de provinciale kantoren (15 provincies) in het kader van de operationele ondersteuning van het Ministerie van Gender, Kinderen en Sociale Bescherming",
+   "trEngine": "DeepL"
   },
   {
    "pub": "UA-UA-2026-10-13-001611-a",
@@ -226,7 +238,8 @@
    "defense": true,
    "policyUA": true,
    "firstSeen": "2026-10-15T13:42:58.648Z",
-   "titleNl": "Starlink-satellietmodems"
+   "titleNl": "Starlink-satellietmodems ",
+   "trEngine": "DeepL"
   },
   {
    "pub": "UA-UA-2026-10-13-011903-a",
@@ -245,7 +258,8 @@
    "defense": true,
    "policyUA": true,
    "firstSeen": "2026-10-15T13:42:58.648Z",
-   "titleNl": "Telecommunicatiesatellietapparatuur (Starlink)"
+   "titleNl": "Telecommunicatieapparatuur voor satellietcommunicatie (Starlink)",
+   "trEngine": "DeepL"
   },
   {
    "pub": "UA-UA-2026-10-13-008779-a",
@@ -264,7 +278,8 @@
    "defense": true,
    "policyUA": true,
    "firstSeen": "2026-10-15T13:42:58.648Z",
-   "titleNl": "Starlink Internet Satellite Mini Satellite Modem, of gelijkwaardig"
+   "titleNl": "Starlink Internet Satellite Mini-satellietmodem, of een gelijkwaardig product",
+   "trEngine": "DeepL"
   },
   {
    "pub": "UA-UA-2026-10-13-000855-a",
@@ -283,7 +298,8 @@
    "defense": true,
    "policyUA": true,
    "firstSeen": "2026-10-15T13:42:58.648Z",
-   "titleNl": "Providerservices (Starlink-internettoegangsdiensten)"
+   "titleNl": "Diensten van providers (internetdiensten van „Starlink“)",
+   "trEngine": "DeepL"
   },
   {
    "pub": "UA-UA-2026-10-13-004708-a",
@@ -301,7 +317,8 @@
    "currency": "UAH",
    "policyUA": true,
    "firstSeen": "2026-10-15T13:42:58.648Z",
-   "titleNl": "Diensten voor ondersteuning, onderhoud en beheer van Starlink-accounts"
+   "titleNl": "Ondersteuning, beheer en administratie van uw Starlink-account ",
+   "trEngine": "DeepL"
   },
   {
    "pub": "UA-UA-2026-10-13-012631-a",
@@ -320,7 +337,8 @@
    "defense": true,
    "policyUA": true,
    "firstSeen": "2026-10-15T13:42:58.648Z",
-   "titleNl": "CCZ Starlink mini kit (DK 021:2015: 32530000-7 — Telecommunicatiesatellietapparatuur)"
+   "titleNl": "CCZ Starlink mini Kit (DK 021:2015: 32530000-7 — Telecommunicatieapparatuur voor satellietgebruik)",
+   "trEngine": "DeepL"
   },
   {
    "pub": "CO-CO1.REQ.11196165",
@@ -337,7 +355,8 @@
    "value": 2910000,
    "currency": "COP",
    "firstSeen": "2026-10-16T07:08:15.941Z",
-   "titleNl": "Levering, installatie en configuratie van Starlink Mini satelliet-internetsysteem voor het hoofdkantoor"
+   "titleNl": "Levering, installatie en configuratie van het Starlink Mini-satellietinternetsysteem voor het hoofdkantoor",
+   "trEngine": "DeepL"
   },
   {
    "pub": "704090-2026",
@@ -376,7 +395,8 @@
    "value": null,
    "currency": "USD",
    "firstSeen": "2000-01-01T00:00:00.000Z",
-   "titleNl": "Inkoop,distributie en installatie van digitale geletterdheid apparaten voor middelbare scholen1250 Geen Destop Computer(25 Nee per school, 50 Projector en gemotoriseerde projector,internet service en zonne-energie(8kva) 30 sch.software brails handleiding"
+   "titleNl": "Aankoop, distributie en installatie van apparatuur voor digitale geletterdheid voor middelbare scholen: 1250 desktopcomputers (25 per school), 50 projectoren en gemotoriseerde projectoren, internetverbinding en zonne-energie (8 kVA), 30 scholen, software, braillehandleidingen",
+   "trEngine": "DeepL"
   },
   {
    "pub": "UA-UA-2026-10-12-012912-a",
@@ -395,7 +415,8 @@
    "defense": true,
    "policyUA": true,
    "firstSeen": "2026-10-15T13:42:58.648Z",
-   "titleNl": "Satellietterminals"
+   "titleNl": "Satellietterminals",
+   "trEngine": "DeepL"
   },
   {
    "pub": "UA-UA-2026-10-12-008854-a",
@@ -414,7 +435,8 @@
    "defense": true,
    "policyUA": true,
    "firstSeen": "2026-10-15T13:42:58.648Z",
-   "titleNl": "Telecommunicatiesatellietapparatuur"
+   "titleNl": "Telecommunicatieapparatuur voor satellietcommunicatie",
+   "trEngine": "DeepL"
   },
   {
    "pub": "UNDP-50606",
@@ -432,7 +454,8 @@
    "value": null,
    "currency": "USD",
    "firstSeen": "2026-10-15T13:42:58.648Z",
-   "titleNl": "Starlink-abonnement 1 TB/maand over 12 maanden"
+   "titleNl": "Starlink-abonnement van 1 TB/maand gedurende 12 maanden",
+   "trEngine": "DeepL"
   },
   {
    "pub": "UA-UA-2026-10-10-000373-a",
@@ -451,7 +474,8 @@
    "defense": true,
    "policyUA": true,
    "firstSeen": "2026-10-15T13:42:58.648Z",
-   "titleNl": "Starlink Mini satellietsysteem"
+   "titleNl": "Het Starlink Mini-satellietsysteem ",
+   "trEngine": "DeepL"
   },
   {
    "pub": "UA-UA-2026-10-10-000391-a",
@@ -470,7 +494,8 @@
    "defense": true,
    "policyUA": true,
    "firstSeen": "2026-10-15T13:42:58.648Z",
-   "titleNl": "Starlink Mini satellietsysteem"
+   "titleNl": "Het Starlink Mini-satellietsysteem ",
+   "trEngine": "DeepL"
   },
   {
    "pub": "UA-UA-2026-10-10-000157-a",
@@ -489,7 +514,8 @@
    "defense": true,
    "policyUA": true,
    "firstSeen": "2026-10-15T13:42:58.648Z",
-   "titleNl": "Starlink Mini satellietterminal"
+   "titleNl": "Starlink Mini-satellietterminal",
+   "trEngine": "DeepL"
   },
   {
    "pub": "UA-UA-2026-10-10-000568-a",
@@ -508,7 +534,8 @@
    "defense": true,
    "policyUA": true,
    "firstSeen": "2026-10-15T13:42:58.648Z",
-   "titleNl": "STARLINK Satellite Dish Kit Gen3 REV4/Starlink Standard 4 X"
+   "titleNl": "STARLINK-satellietcommunicatiestation – Satellite Dish Kit Gen3 REV4/Starlink Standard 4 X",
+   "trEngine": "DeepL"
   },
   {
    "pub": "UA-UA-2026-10-10-000580-a",
@@ -527,7 +554,8 @@
    "defense": true,
    "policyUA": true,
    "firstSeen": "2026-10-15T13:42:58.648Z",
-   "titleNl": "Starlink Mini X-satellietstation"
+   "titleNl": "Starlink Mini X-satellietcommunicatiestation ",
+   "trEngine": "DeepL"
   },
   {
    "pub": "UA-UA-2026-10-10-000572-a",
@@ -546,7 +574,8 @@
    "defense": true,
    "policyUA": true,
    "firstSeen": "2026-10-15T13:42:58.648Z",
-   "titleNl": "Starlink Mini Internet Kit Satellietstation"
+   "titleNl": "Starlink Mini Internet Kit – satellietcommunicatiestation",
+   "trEngine": "DeepL"
   },
   {
    "pub": "CF-c2b6d290-aa98-464d-8155-aff4b1e1be15",
@@ -562,7 +591,9 @@
    "link": "https://www.contractsfinder.service.gov.uk/Notice/c2b6d290-aa98-464d-8155-aff4b1e1be15",
    "value": 250000,
    "currency": "GBP",
-   "firstSeen": "2026-10-15T13:42:58.648Z"
+   "firstSeen": "2026-10-15T13:42:58.648Z",
+   "titleNl": "UKSAC26_0053 Juridisch advies inzake Eutelsat-OneWeb",
+   "trEngine": "DeepL"
   },
   {
    "pub": "UA-UA-2026-10-09-000650-a",
@@ -581,7 +612,8 @@
    "defense": true,
    "policyUA": true,
    "firstSeen": "2026-10-15T13:42:58.648Z",
-   "titleNl": "Starlink Gen2-terminal"
+   "titleNl": "Starlink Gen2-terminal",
+   "trEngine": "DeepL"
   },
   {
    "pub": "UA-UA-2026-10-09-013520-a",
@@ -600,7 +632,8 @@
    "defense": true,
    "policyUA": true,
    "firstSeen": "2026-10-15T13:42:58.648Z",
-   "titleNl": "Starlink Gen3 (Rev4) Standaardkit nieuw (geen account)"
+   "titleNl": "Starlink GEN3 (Rev4) Standard Kit, nieuw (zonder account)",
+   "trEngine": "DeepL"
   },
   {
    "pub": "UA-UA-2026-10-09-000243-a",
@@ -619,7 +652,8 @@
    "defense": true,
    "policyUA": true,
    "firstSeen": "2026-10-15T13:42:58.648Z",
-   "titleNl": "Satellietterminal (mobiel)"
+   "titleNl": "Satellietcommunicatieterminal (mobiel)",
+   "trEngine": "DeepL"
   },
   {
    "pub": "UA-UA-2026-10-08-013885-a",
@@ -638,7 +672,8 @@
    "defense": true,
    "policyUA": true,
    "firstSeen": "2026-10-15T13:42:58.648Z",
-   "titleNl": "Starlink Voedingskabels"
+   "titleNl": "Starlink-voedingskabels",
+   "trEngine": "DeepL"
   },
   {
    "pub": "UA-UA-2026-10-08-010086-a",
@@ -657,7 +692,8 @@
    "defense": true,
    "policyUA": true,
    "firstSeen": "2026-10-15T13:42:58.648Z",
-   "titleNl": "Starlink 4X-satellietstationkits"
+   "titleNl": "Starlink 4X-satellietcommunicatiestationsets",
+   "trEngine": "DeepL"
   },
   {
    "pub": "UA-UA-2026-10-08-008343-a",
@@ -675,7 +711,8 @@
    "currency": "UAH",
    "policyUA": true,
    "firstSeen": "2026-10-15T13:42:58.648Z",
-   "titleNl": "Behuizing voor installatie van Starlink Gen 3 terminal op een auto of gelijkwaardig DK 021:2015: 32530000-7 — Telecommunicatiesatellietapparatuur"
+   "titleNl": "Behuizing voor de montage van een Starlink Gen 3-terminal op een auto of een equivalent van DK 021:2015: 32530000-7 — Telecommunicatieapparatuur voor satellietcommunicatie",
+   "trEngine": "DeepL"
   },
   {
    "pub": "UA-UA-2026-10-08-007976-a",
@@ -694,7 +731,8 @@
    "defense": true,
    "policyUA": true,
    "firstSeen": "2026-10-15T13:42:58.648Z",
-   "titleNl": "Satellietmodems"
+   "titleNl": "Satellietmodems",
+   "trEngine": "DeepL"
   },
   {
    "pub": "UA-UA-2026-10-08-012086-a",
@@ -712,7 +750,8 @@
    "currency": "UAH",
    "policyUA": true,
    "firstSeen": "2026-10-15T13:42:58.648Z",
-   "titleNl": "Starlink mini-satellietterminals met aanpassing aan een auto of gelijkwaardig (code 32530000-7 \"Telecommunicatiesatellietapparatuur\" van de nationale classificator van Oekraïne volgens DK 021:2015 \"Unified Procurement Dictionary\")"
+   "titleNl": "Starlink Mini-satellietterminals met aanpassing voor gebruik in een auto of een gelijkwaardig product (code 32530000-7 „Telecommunicatieapparatuur voor satellietcommunicatie“ van de nationale classificatie van Oekraïne volgens DK 021:2015 „Uniform aankoopwoordenboek”)",
+   "trEngine": "DeepL"
   },
   {
    "pub": "UA-UA-2026-10-08-005360-a",
@@ -730,7 +769,8 @@
    "currency": "UAH",
    "policyUA": true,
    "firstSeen": "2026-10-15T13:42:58.648Z",
-   "titleNl": "Een set satellietapparatuur"
+   "titleNl": "Set satellietapparatuur",
+   "trEngine": "DeepL"
   },
   {
    "pub": "UA-UA-2026-10-07-003878-a",
@@ -749,7 +789,8 @@
    "defense": true,
    "policyUA": true,
    "firstSeen": "2026-10-15T13:42:58.648Z",
-   "titleNl": "\"Starlink satellietterminal (code DK 021:2015 : 32530000-7 \" Telecommunicatiesatellietapparatuur \")\""
+   "titleNl": "„Starlink-satellietterminal (volgens code DK 021:2015: 32530000-7 ‚Telecommunicatieapparatuur voor satellietgebruik‘)“",
+   "trEngine": "DeepL"
   },
   {
    "pub": "UA-UA-2026-10-07-003944-a",
@@ -767,7 +808,8 @@
    "currency": "UAH",
    "policyUA": true,
    "firstSeen": "2026-10-16T07:08:15.941Z",
-   "titleNl": "\"Telecommunicatiesatellietapparatuur\" (code 32530000-7  onder DK 021:2015) (Starlink Mini Satellite Terminal)"
+   "titleNl": "„Telecommunicatieapparatuur voor satellietgebruik“ (code 32530000-7 volgens DK 021:2015) (Starlink Mini-satellietterminal)   ",
+   "trEngine": "DeepL"
   },
   {
    "pub": "UA-UA-2026-10-07-005482-a",
@@ -786,7 +828,8 @@
    "defense": true,
    "policyUA": true,
    "firstSeen": "2026-10-15T13:42:58.648Z",
-   "titleNl": "satellietcommunicatiestation (Starlink Internet Satellite 3gen satellietmodem, zonder binding aan de plaats, zonder een account voor een nieuwe registratie) - 10 stuks; satellietcommunicatiestation (Starlink Internet Satellite Mini satellietmodem, zonder binding aan de plaats, zonder een account voor een nieuwe registratie) –  44 stuks."
+   "titleNl": "satellietcommunicatiestation (Starlink Internet Satellite 3gen-satellietmodem, niet aan een locatie gebonden, zonder account voor nieuwe registratie) – 10 stuks; satellietcommunicatiestation (Starlink Internet Satellite Mini-satellietmodem, niet locatiegebonden, zonder account voor nieuwe registratie) – 44 stuks.",
+   "trEngine": "DeepL"
   },
   {
    "pub": "UA-UA-2026-10-06-006083-a",
@@ -804,7 +847,8 @@
    "currency": "UAH",
    "policyUA": true,
    "firstSeen": "2026-10-15T13:42:58.648Z",
-   "titleNl": "Starlink accountondersteuning, onderhoud en beheersdiensten volgens de code DK 021:2015:72250000-2 - Diensten metbetrekking tot systemen en ondersteuning"
+   "titleNl": "Diensten voor ondersteuning, beheer en administratie van een Starlink-account volgens DK-code 021:2015:72250000-2 – Diensten in verband met systemen en ondersteuning",
+   "trEngine": "DeepL"
   },
   {
    "pub": "CO-CO1.REQ.11164234",
@@ -821,7 +865,8 @@
    "value": 18366500,
    "currency": "COP",
    "firstSeen": "2026-10-15T13:42:58.648Z",
-   "titleNl": "AANKOOP, INSTALLATIE, CONFIGURATIE EN INBEDRIJFSTELLING VAN STARLINK-APPARATUUR, EVENALS HET LEVEREN VAN SNELLE SATELLIETCONNECTIVITEITSDIENSTEN VOOR VIJF (5) GEZONDHEIDSCENTRA DIE AAN DE E.S.E. ZIJN VERBONDEN"
+   "titleNl": "AANKOOP, INSTALLATIE, CONFIGURATIE EN INBEDRIJFSTELLING VAN STARLINK-APPARATUUR, EVENALS HET VERLENEN VAN DE DIENST VOOR SNELLE SATELLIETVERBINDINGEN AAN VIJF (5) GEZONDHEIDSCENTRA DIE AAN DE E.S.E. ZIJN GEKOPPELD",
+   "trEngine": "DeepL"
   },
   {
    "source": "Prozorro",
@@ -839,7 +884,9 @@
    "currency": "UAH",
    "defense": true,
    "policyUA": true,
-   "firstSeen": "2026-10-15T13:42:58.648Z"
+   "firstSeen": "2026-10-15T13:42:58.648Z",
+   "titleNl": "DK 021:2015: 32530000-7 — Telecommunicatieapparatuur voor satellietcommunicatie: Starlink Gen3 Rev4-satellietmodems – 30 stuks (zonder accounts).",
+   "trEngine": "DeepL"
   },
   {
    "pub": "CO-CO1.REQ.11149315",
@@ -855,7 +902,9 @@
    "link": "https://community.secop.gov.co/Public/Tendering/OpportunityDetail/Index?noticeUID=CO1.NTC.11012119",
    "value": 33655500,
    "currency": "COP",
-   "firstSeen": "2026-10-15T13:42:58.648Z"
+   "firstSeen": "2026-10-15T13:42:58.648Z",
+   "titleNl": "AANKOOP, INSTALLATIE EN INBEDRIJFSTELLING VAN OPLOSSINGEN VOOR \nINTERNETVERBINDING VIA SATELLIETANTENNES VAN HET TYPE STARLINK OF \nsoortgelijke, inclusief de levering van de internetdienst, voor zes (6) \nlocaties",
+   "trEngine": "DeepL"
   },
   {
    "pub": "TW-A.15.3.2-115-012",
@@ -871,7 +920,9 @@
    "link": "https://pcc-api.openfun.app/index/case/A.15.3.2/115-012/20261005/BDM-2-71295936",
    "value": null,
    "currency": "TWD",
-   "firstSeen": "2026-10-16T07:13:38.622Z"
+   "firstSeen": "2026-10-16T07:13:38.622Z",
+   "titleNl": "Aanbesteding voor communicatiediensten via laagbaansatellieten van het Midden-district voor het boekjaar 115-116",
+   "trEngine": "DeepL"
   },
   {
    "pub": "UA-UA-2026-10-02-004687-a",
@@ -889,7 +940,8 @@
    "currency": "UAH",
    "policyUA": true,
    "firstSeen": "2026-10-15T13:42:58.648Z",
-   "titleNl": "DK 021:2015: 72250000-2 Diensten metbetrekking tot systemen en ondersteuning (Starlink-satellietnetwerkverbindingsdiensten (Starlink-accountondersteuning, onderhoud en beheer), 86 terminals)"
+   "titleNl": "DK 021:2015: 72250000-2 Diensten in verband met systemen en ondersteuning (diensten voor aansluiting op het Starlink-satellietcommunicatienetwerk (ondersteuning, beheer en administratie van een Starlink-account), 86 terminals)",
+   "trEngine": "DeepL"
   },
   {
    "source": "Prozorro",
@@ -907,7 +959,9 @@
    "currency": "UAH",
    "defense": true,
    "policyUA": true,
-   "firstSeen": "2026-10-15T13:42:58.648Z"
+   "firstSeen": "2026-10-15T13:42:58.648Z",
+   "titleNl": "Starlink Gen 3 [REV 4] satellietmodem",
+   "trEngine": "DeepL"
   },
   {
    "pub": "TW-3.95.32-1167102",
@@ -923,7 +977,9 @@
    "link": "https://pcc-api.openfun.app/index/case/3.95.32/1167102/20261002/PPW-1-70118068",
    "value": null,
    "currency": "TWD",
-   "firstSeen": "2026-10-16T07:13:38.622Z"
+   "firstSeen": "2026-10-16T07:13:38.622Z",
+   "titleNl": "Vaste eindapparatuur voor satellieten in een lage baan, jaar 116",
+   "trEngine": "DeepL"
   },
   {
    "pub": "UA-UA-2026-10-01-004269-a",
@@ -941,7 +997,8 @@
    "currency": "UAH",
    "policyUA": true,
    "firstSeen": "2026-10-15T13:42:58.648Z",
-   "titleNl": "Starlink-accountondersteuning, -onderhoud en -beheerdiensten"
+   "titleNl": "Diensten voor ondersteuning, beheer en administratie van Starlink-accounts ",
+   "trEngine": "DeepL"
   },
   {
    "pub": "UA-UA-2026-10-01-011763-a",
@@ -959,7 +1016,8 @@
    "currency": "UAH",
    "policyUA": true,
    "firstSeen": "2026-10-15T13:42:58.648Z",
-   "titleNl": "Dienstverlener diensten (code 72410000-7 onder DK 021:2015) (Starlink satelliet Internet service netwerktoegangsdiensten)"
+   "titleNl": "Diensten van internetproviders (code 72410000-7 volgens DK 021:2015) (toegangsdiensten tot het satellietinternetnetwerk van Starlink)  ",
+   "trEngine": "DeepL"
   },
   {
    "pub": "UA-UA-2026-09-30-009694-a",
@@ -977,7 +1035,8 @@
    "currency": "UAH",
    "policyUA": true,
    "firstSeen": "2026-10-15T13:42:58.648Z",
-   "titleNl": "Starlink-satellietkit Accountonderhoudsdiensten"
+   "titleNl": "Onderhoudsdiensten voor het Starlink-satellietpakket",
+   "trEngine": "DeepL"
   },
   {
    "pub": "UA-UA-2026-09-29-009306-a",
@@ -994,7 +1053,9 @@
    "value": 435000,
    "currency": "UAH",
    "policyUA": true,
-   "firstSeen": "2026-10-15T13:42:58.648Z"
+   "firstSeen": "2026-10-15T13:42:58.648Z",
+   "titleNl": "Diensten voor ondersteuning, beheer en administratie van Starlink-accounts ",
+   "trEngine": "DeepL"
   },
   {
    "pub": "UA-UA-2026-09-29-001497-a",
@@ -1012,7 +1073,9 @@
    "currency": "UAH",
    "defense": true,
    "policyUA": true,
-   "firstSeen": "2026-10-15T13:42:58.648Z"
+   "firstSeen": "2026-10-15T13:42:58.648Z",
+   "titleNl": "Ondersteuning en beheer van je Starlink-account",
+   "trEngine": "DeepL"
   },
   {
    "pub": "UA-UA-2026-09-29-009625-a",
@@ -1029,7 +1092,9 @@
    "value": 607453,
    "currency": "UAH",
    "policyUA": true,
-   "firstSeen": "2026-10-15T13:42:58.648Z"
+   "firstSeen": "2026-10-15T13:42:58.648Z",
+   "titleNl": "DK 021:2015: 32530000-7 Telecommunicatieapparatuur voor satellietcommunicatie (Starlink MINI-satellietcommunicatieset of gelijkwaardig)",
+   "trEngine": "DeepL"
   },
   {
    "pub": "CO-CO1.REQ.11090978",
@@ -1046,7 +1111,8 @@
    "value": 38339658,
    "currency": "COP",
    "firstSeen": "2026-10-15T13:42:58.648Z",
-   "titleNl": "LEVERING VAN INTERNETVERBINDINGSDIENSTEN EN WI-FI-GEBIED EN DE LEVERING EN INSTALLATIE VAN 4 STARLINK-ANTENNES VOOR ZUSTER TERESA ADELE EN HAAR VIER KANTOREN"
+   "titleNl": "LEVERING VAN INTERNETVERBINDINGEN EN EEN WIFI-ZONE, ALS WEL DE LEVERING EN INSTALLATIE VAN 4 STARLINK-ANTENNES VOOR DE ESE SOR TERESA ADELE EN HAAR VIER VESTIGINGEN",
+   "trEngine": "DeepL"
   },
   {
    "pub": "TW-A.47.1.7-B115909",
@@ -1063,7 +1129,9 @@
    "value": null,
    "currency": "TWD",
    "defense": true,
-   "firstSeen": "2026-10-16T07:13:38.622Z"
+   "firstSeen": "2026-10-16T07:13:38.622Z",
+   "titleNl": "Aanbesteding voor de versterking van de capaciteit van apparatuur en diensten voor breedbandsystemen met laagbaansatellieten",
+   "trEngine": "DeepL"
   },
   {
    "pub": "TW-3.92.35-114086-1",
@@ -1079,7 +1147,9 @@
    "link": "https://pcc-api.openfun.app/index/case/3.92.35/114086-1/20260915/BDM-1-71282456",
    "value": null,
    "currency": "TWD",
-   "firstSeen": "2026-10-16T07:13:38.622Z"
+   "firstSeen": "2026-10-16T07:13:38.622Z",
+   "titleNl": "Maatschappelijk weerbaar tegen storingen in de communicatieapparatuur voor lage-baan-satellieten",
+   "trEngine": "DeepL"
   },
   {
    "pub": "WB-OP00468029",
@@ -1098,7 +1168,9 @@
    "link": "https://projects.worldbank.org/en/projects-operations/procurement-detail/OP00468029",
    "value": null,
    "currency": "USD",
-   "firstSeen": "2000-01-01T00:00:00.000Z"
+   "firstSeen": "2000-01-01T00:00:00.000Z",
+   "titleNl": "Aankoop, installatie en onderhoud van 125 Starlink-sets voor de resterende 125 inspecties",
+   "trEngine": "DeepL"
   },
   {
    "pub": "WB-OP00468028",
@@ -1117,7 +1189,9 @@
    "link": "https://projects.worldbank.org/en/projects-operations/procurement-detail/OP00468028",
    "value": null,
    "currency": "USD",
-   "firstSeen": "2000-01-01T00:00:00.000Z"
+   "firstSeen": "2000-01-01T00:00:00.000Z",
+   "titleNl": "Aankoop, installatie en onderhoud van 125 Starlink-sets voor de resterende 125 inspecties",
+   "trEngine": "DeepL"
   },
   {
    "pub": "WB-OP00468199",
@@ -1136,7 +1210,9 @@
    "link": "https://projects.worldbank.org/en/projects-operations/procurement-detail/OP00468199",
    "value": null,
    "currency": "USD",
-   "firstSeen": "2000-01-01T00:00:00.000Z"
+   "firstSeen": "2000-01-01T00:00:00.000Z",
+   "titleNl": "Aankoop van IT-apparatuur, meubilair en communicatieapparatuur, inclusief een Starlink-set",
+   "trEngine": "DeepL"
   },
   {
    "pub": "WB-OP00467413",
@@ -1155,7 +1231,9 @@
    "link": "https://projects.worldbank.org/en/projects-operations/procurement-detail/OP00467413",
    "value": null,
    "currency": "USD",
-   "firstSeen": "2000-01-01T00:00:00.000Z"
+   "firstSeen": "2000-01-01T00:00:00.000Z",
+   "titleNl": "Aankoop van Starlink-pakketten voor internet",
+   "trEngine": "DeepL"
   },
   {
    "pub": "CO-CO1.REQ.10961693",
@@ -1172,7 +1250,8 @@
    "value": null,
    "currency": "COP",
    "firstSeen": "2026-10-15T13:42:58.648Z",
-   "titleNl": "Leveren als een lening aan de Nationale Brandweer, voor tijdelijk en gratis gebruik, zeventien (17) Starlink merk satellietantennes, Starlink Mini model, samen met hun respectieve accessoires, met de p"
+   "titleNl": "Zeventien (17) satellietantennes van het merk Starlink, model Starlink Mini, samen met de bijbehorende accessoires, in bruikleen te verstrekken aan de Nationale Brandweer, voor tijdelijk en kosteloos gebruik, met de p",
+   "trEngine": "DeepL"
   },
   {
    "pub": "CO-CO1.REQ.10989801",
@@ -1189,7 +1268,8 @@
    "value": 236000000,
    "currency": "COP",
    "firstSeen": "2026-10-15T13:42:58.648Z",
-   "titleNl": "AANKOOP VAN DESKTOPS EN LAPTOPS, VIDEOBEAMS, STARLINK SATELLIETANTENNES, VENTILATOREN EN AIRCONDITIONING APPARATUUR, GERICHT OP HET VERSTERKEN VAN HET ACADEMISCH EN ADMINISTRATIEF BEHEER VAN HET CENTRUM"
+   "titleNl": "AANKOOP VAN DESKTOP- EN LAPTOPS, VIDEOBEAMERS, STARLINK-SATELLIETANTENNES, VENTILATOREN EN AIRCONDITIONINGAPPARATUUR, BEDOELD VOOR DE VERSTERKING VAN HET ACADEMISCH EN ADMINISTRATIEF BEHEER VAN HET CENTRUM",
+   "trEngine": "DeepL"
   },
   {
    "pub": "CO-CO1.REQ.10943823",
@@ -1206,7 +1286,8 @@
    "value": 35212449,
    "currency": "COP",
    "firstSeen": "2026-10-15T13:42:58.648Z",
-   "titleNl": "HET IS DE LEVERING DOOR DTI COLOMBIA S.A.S VAN 3 STARLINK-ANTENNES AAN HET ESE SAN ROQUE MUNICIPAL HOSPITAL VAN DE GEMEENTE SAN ROQUE, MET AL ZIJN ACCESSOIRES EN INTERNETSERVICE."
+   "titleNl": "HET BETREFT DE LEVERING DOOR DTI COLOMBIA S.A.S. VAN 3 STARLINK-ANTENNES AAN DE E.S.E. HOSPITAL MUNICIPAL SAN ROQUE VAN DE GEMEENTE SAN ROQUE, MET ALLE BIJBEHORENDE APPARATUUR EN INTERNETDIENST.",
+   "trEngine": "DeepL"
   },
   {
    "pub": "592004-2026",
@@ -1268,7 +1349,8 @@
    "value": 16303000,
    "currency": "COP",
    "firstSeen": "2026-10-15T13:42:58.648Z",
-   "titleNl": "CONTRACTEER DE HUUR EN INSTALLATIE TEGEN ALLE KOSTEN VAN TWEE (2) STARLINK V4-SATELLIETKITS EN DE BIJBEHORENDE ONBEPERKTE SATELLIETINTERNETDIENST, OM DE CONNECTIVITEIT EN ADEQUATE WERKING VAN DE AFHANKELIJKHEDEN TE GARANDEREN"
+   "titleNl": "DE HUUR EN INSTALLATIE VAN TWEE (2) STARLINK V4-SATELLIETKITS EN DE BIJBEHORENDE ONBEPERKTE SATELLIETINTERNETDIENST, OM DE CONNECTIVITEIT EN DE GOEDE WERKING VAN DE VESTIGINGEN TE WAARBORGEN",
+   "trEngine": "DeepL"
   },
   {
    "pub": "CO-CO1.REQ.10902657",
@@ -1285,7 +1367,8 @@
    "value": 706000,
    "currency": "COP",
    "firstSeen": "2026-10-15T13:42:58.648Z",
-   "titleNl": "Installatie, configuratie en inbedrijfstelling van de Starlink internet satellietantenne kit geschonken door de nationale overheid aan het San Rafael de Risaralda Departmental Hospital E.S.E."
+   "titleNl": "Installatie, configuratie en inbedrijfstelling van de satellietantenne-set voor internet van het merk Starlink, geschonken door de nationale overheid aan het Departementaal Ziekenhuis San Rafael de Risaralda E.S.E.",
+   "trEngine": "DeepL"
   },
   {
    "pub": "580834-2026",
@@ -1322,7 +1405,9 @@
    "link": "https://projects.worldbank.org/en/projects-operations/procurement-detail/OP00464024",
    "value": null,
    "currency": "USD",
-   "firstSeen": "2000-01-01T00:00:00.000Z"
+   "firstSeen": "2000-01-01T00:00:00.000Z",
+   "titleNl": "Levering van internetverbinding op scholen (Starlink-internetabonnement van 12 maanden)",
+   "trEngine": "DeepL"
   },
   {
    "pub": "576737-2026",
@@ -1357,7 +1442,8 @@
    "value": 13528808,
    "currency": "COP",
    "firstSeen": "2026-10-15T13:42:58.648Z",
-   "titleNl": "BEHEERSONDERSTEUNING VOOR HET UITVOEREN VAN ONDERHOUDS- EN/OF REPARATIEACTIVITEITEN VAN HET INTERNETBEDRADINGSSYSTEEM, COMPUTERAPPARATUUR VAN HET GEMEENTELIJK PALEIS EN STARLINK-ANTENNENHUUR VOOR DE EXTERNE ACTIVITEITEN VAN DE"
+   "titleNl": "ONDERSTEUNING VAN HET MANAGEMENT BIJ HET UITVOEREN VAN ONDERHOUDS- EN/OF REPARATIEWERKZAAMHEDEN AAN HET INTERNETBEKABELINGSSYSTEEM, de computerapparatuur van het stadhuis en de huur van een StarLink-antenne voor de externe activiteiten van de",
+   "trEngine": "DeepL"
   },
   {
    "pub": "571696-2026",
@@ -1448,7 +1534,9 @@
    "link": "https://projects.worldbank.org/en/projects-operations/procurement-detail/OP00462727",
    "value": null,
    "currency": "USD",
-   "firstSeen": "2000-01-01T00:00:00.000Z"
+   "firstSeen": "2000-01-01T00:00:00.000Z",
+   "titleNl": "Aanwerving van een dienstverlener voor de levering van internet- en datadiensten aan het kantoor van de Provinciale Eenheid voor de Uitvoering van het Project",
+   "trEngine": "DeepL"
   },
   {
    "pub": "WB-OP00450672",
@@ -1468,7 +1556,8 @@
    "value": null,
    "currency": "USD",
    "firstSeen": "2000-01-01T00:00:00.000Z",
-   "titleNl": "Aankoop van starlinks kits aangedreven door zonne-energie voor de 27 UAC's"
+   "titleNl": "Aankoop van Starlink-kits op zonne-energie voor de 27 CAU’s",
+   "trEngine": "DeepL"
   },
   {
    "pub": "TW-A.47.1.6-DNB11528L",
@@ -1485,7 +1574,9 @@
    "value": null,
    "currency": "TWD",
    "defense": true,
-   "firstSeen": "2026-10-16T07:13:38.622Z"
+   "firstSeen": "2026-10-16T07:13:38.622Z",
+   "titleNl": "Toevoeging van extra diensten aan het onderhoud van de laaggelegen satellietstations in de Dongsha- en Nansha-regio in het jaar 115",
+   "trEngine": "DeepL"
   },
   {
    "pub": "552899-2026",
@@ -1521,7 +1612,8 @@
    "value": 7600000,
    "currency": "COP",
    "firstSeen": "2026-10-15T13:42:58.648Z",
-   "titleNl": "ACQUISITIE, INSTALLATIE, JAARLIJKSE BETALING VAN SATELLIET INTERNET SERVICE\n400 MBPS STARLINK EN LEVERING EN INSTALLATIE VAN EEN\nTOEGANG TOT NETWERKSIGNAALVERSTERKER/ROUTER VOOR OPTIMALISATIE OP LOCATIE\nHOOFD"
+   "titleNl": "AANKOOP, INSTALLATIE EN JAARLIJKSE BETALING VAN DE SATELLIETINTERNETDIENST\nSTARLINK VAN 400 MBPS EN LEVERING EN INSTALLATIE VAN EEN\nTOEGANGSPUNT/ROUTER MET NETWERKSIGNAALVERSTERKER VOOR OPTIMALISATIE OP HET\nHOOFDKANTOOR ",
+   "trEngine": "DeepL"
   },
   {
    "pub": "CO-CO1.REQ.10797653",
@@ -1538,7 +1630,8 @@
    "value": 7021000,
    "currency": "COP",
    "firstSeen": "2026-10-15T13:42:58.648Z",
-   "titleNl": "LEVERING VAN DE ROAMINGDIENST VOOR SATELLIETCONNECTIVITEIT MET BEHULP VAN STARLINK-TECHNOLOGIE, OM INTERNETTOEGANG TE GARANDEREN BIJ ACTIVITEITEN BUITEN DE MUUR EN ALS CONNECTIVITEITSONDERSTEUNING VAN HET SPECIALE ZIEKENHUIS VAN CUB"
+   "titleNl": "LEVERING VAN DE MOBIELE SATELLIETVERBINDINGSDIENST MET BEHULP VAN STARLINK-TECHNOLOGIE, OM INTERNETTOEGANG TE GARANDEREN BIJ EXTRAMURALE ACTIVITEITEN EN ALS BACK-UP VOOR DE INTERNETVERBINDING VAN HET SPECIALE ZIEKENHUIS VAN CUB",
+   "trEngine": "DeepL"
   },
   {
    "pub": "CO-CO1.REQ.10766383",
@@ -1554,7 +1647,9 @@
    "link": "https://community.secop.gov.co/Public/Tendering/OpportunityDetail/Index?noticeUID=CO1.NTC.10620615",
    "value": 482376073,
    "currency": "COP",
-   "firstSeen": "2026-10-15T13:42:58.648Z"
+   "firstSeen": "2026-10-15T13:42:58.648Z",
+   "titleNl": "STARLINK-SATELLIETDIENST EN AANKOOP VAN ANTENNES VOOR DE EENHEDEN VAN HET NATIONALE LEGER, UIT TE VOEREN IN HET BEGROTINGSJAAR 2026",
+   "trEngine": "DeepL"
   },
   {
    "pub": "CO-CO1.REQ.10737204",
@@ -1571,7 +1666,8 @@
    "value": 482376073,
    "currency": "COP",
    "firstSeen": "2026-10-15T13:42:58.648Z",
-   "titleNl": "STARLINK SATELLIETDIENST EN VERWERVING VAN ANTENNES, VOOR DE EENHEDEN VAN HET NATIONALE LEGER DIE IN 2026 MOETEN WORDEN UITGEVOERD"
+   "titleNl": "STARLINK-SATELLIETDIENST EN AANKOOP VAN ANTENNES VOOR DE EENHEDEN VAN HET NATIONALE LEGER, UIT TE VOEREN IN HET BEGROTINGSJAAR 2026",
+   "trEngine": "DeepL"
   },
   {
    "pub": "CO-CO1.REQ.10735013",
@@ -1588,7 +1684,8 @@
    "value": 2500000,
    "currency": "COP",
    "firstSeen": "2026-10-15T13:42:58.648Z",
-   "titleNl": "HET LEVEREN EN INSTALLEREN VAN EEN STARLINK ANTENNE"
+   "titleNl": "LEVERING EN INSTALLATIE VAN EEN STARLINK-ANTENNE",
+   "trEngine": "DeepL"
   },
   {
    "pub": "WB-OP00456763",
@@ -1609,7 +1706,8 @@
    "currency": "USD",
    "policyUA": true,
    "firstSeen": "2000-01-01T00:00:00.000Z",
-   "titleNl": "Aanschaf van computer- en telecommunicatieapparatuur"
+   "titleNl": "Aankoop van computer- en telecommunicatieapparatuur",
+   "trEngine": "DeepL"
   },
   {
    "pub": "472815-2026",
@@ -1662,7 +1760,9 @@
    "link": "https://pcc-api.openfun.app/index/case/A.15.3.3/1155013587/20260709/BDM-1-71226823",
    "value": null,
    "currency": "TWD",
-   "firstSeen": "2026-10-16T07:13:38.622Z"
+   "firstSeen": "2026-10-16T07:13:38.622Z",
+   "titleNl": "Project voor de aanleg van communicatiediensten via laagbaansatellieten ter verbetering van de verkeersvoorzieningen op de bergtrajecten van de Nan-Heng-snelweg in het jaar 115",
+   "trEngine": "DeepL"
   },
   {
    "pub": "CO-CO1.REQ.10614327",
@@ -1679,7 +1779,8 @@
    "value": 482376073,
    "currency": "COP",
    "firstSeen": "2026-10-15T13:42:58.648Z",
-   "titleNl": "STARLINK SATELLIETDIENST EN VERWERVING VAN ANTENNES, VOOR DE EENHEDEN VAN HET NATIONALE LEGER DIE IN 2026 MOETEN WORDEN UITGEVOERD"
+   "titleNl": "STARLINK-SATELLIETDIENST EN AANKOOP VAN ANTENNES VOOR DE EENHEDEN VAN HET NATIONALE LEGER, UIT TE VOEREN IN HET BEGROTINGSJAAR 2026",
+   "trEngine": "DeepL"
   },
   {
    "pub": "CO-CO1.REQ.10588002",
@@ -1695,7 +1796,9 @@
    "link": "https://community.secop.gov.co/Public/Tendering/OpportunityDetail/Index?noticeUID=CO1.NTC.10478719",
    "value": 25000000,
    "currency": "COP",
-   "firstSeen": "2026-10-15T13:42:58.648Z"
+   "firstSeen": "2026-10-15T13:42:58.648Z",
+   "titleNl": "AANKOOP VAN STARLINK MINI-ANTENNES EN SATELLIETINTERNETDIENST VOOR DE EENHEDEN VAN HET NATIONALE LEGER IN HET KADER VAN HET STRATEGISCHE PROJECT GENOEMD  VERSTERKING VAN DE INTERIM-INSTITUTIONELE ALLIANTIESINSTITUTIONELE ALLIANTIES, MET HET OOG OP ",
+   "trEngine": "DeepL"
   },
   {
    "pub": "464890-2026",
@@ -1731,7 +1834,8 @@
    "value": 779001,
    "currency": "COP",
    "firstSeen": "2026-10-15T13:42:58.648Z",
-   "titleNl": "satellietinternetdiensten verwerven met STARLINK voor het hoofdkantoor van Abriaqui en het Movil-satellietinternet"
+   "titleNl": "de aanschaf van satellietinternetdiensten via STARLINK voor de vestiging in Abriaqui en mobiel satellietinternet",
+   "trEngine": "DeepL"
   },
   {
    "pub": "TW--B115909",
@@ -1747,7 +1851,9 @@
    "link": "https://pcc-api.openfun.app/index/case//B115909/20260701/DTG-1-70014018",
    "value": null,
    "currency": "TWD",
-   "firstSeen": "2026-10-16T07:13:38.622Z"
+   "firstSeen": "2026-10-16T07:13:38.622Z",
+   "titleNl": "Aanbesteding voor de versterking van de capaciteit van apparatuur en diensten voor breedbandsystemen met laagbaansatellieten",
+   "trEngine": "DeepL"
   },
   {
    "pub": "443143-2026",
@@ -1785,7 +1891,9 @@
    "link": "https://projects.worldbank.org/en/projects-operations/procurement-detail/OP00454510",
    "value": null,
    "currency": "USD",
-   "firstSeen": "2000-01-01T00:00:00.000Z"
+   "firstSeen": "2000-01-01T00:00:00.000Z",
+   "titleNl": "Selectie van een internetprovider (ISP) voor de kantoren van de Provinciale Projectuitvoeringseenheid (UPEP) van Kasaï Central in Kananga, in de provincie Kasaï Central.",
+   "trEngine": "DeepL"
   },
   {
    "pub": "CO-CO1.REQ.10565049",
@@ -1801,7 +1909,9 @@
    "link": "https://community.secop.gov.co/Public/Tendering/OpportunityDetail/Index?noticeUID=CO1.NTC.10420609",
    "value": 27507540,
    "currency": "COP",
-   "firstSeen": "2026-10-15T13:42:58.648Z"
+   "firstSeen": "2026-10-15T13:42:58.648Z",
+   "titleNl": "LEVERING EN ACTIVERING VAN DE MOBIELE SATELLIETINTERNETDIENST VIA REEDS GEÏNSTALLEERDE STARLINK-ANTENNES, WAARMEE EEN CONTINUE LEVERING VAN DE INTERNETVERBINDING WORDT GEGARANDEERD VOLGENS DE TECHNISCHE SPECIFICATIES",
+   "trEngine": "DeepL"
   },
   {
    "pub": "437036-2026",
@@ -1839,7 +1949,9 @@
    "link": "https://projects.worldbank.org/en/projects-operations/procurement-detail/OP00452759",
    "value": null,
    "currency": "USD",
-   "firstSeen": "2000-01-01T00:00:00.000Z"
+   "firstSeen": "2000-01-01T00:00:00.000Z",
+   "titleNl": "Aanbesteding via onderhandse gunning door het bedrijf MEDIABOX voor de levering van een internetverbinding via Starlink met het oog op de digitalisering van 314 medische centra en 68 onderwijsinstellingen voor een periode van 24 maanden",
+   "trEngine": "DeepL"
   },
   {
    "pub": "WB-OP00426117",
@@ -1858,7 +1970,9 @@
    "link": "https://projects.worldbank.org/en/projects-operations/procurement-detail/OP00426117",
    "value": null,
    "currency": "USD",
-   "firstSeen": "2000-01-01T00:00:00.000Z"
+   "firstSeen": "2000-01-01T00:00:00.000Z",
+   "titleNl": "Programma voor gezondheidsveiligheid in West- en Centraal-Afrika – Fase III",
+   "trEngine": "DeepL"
   },
   {
    "pub": "CO-CO1.REQ.10529279",
@@ -1875,7 +1989,8 @@
    "value": 21810000,
    "currency": "COP",
    "firstSeen": "2026-10-15T13:42:58.648Z",
-   "titleNl": "LEVERING, INSTALLATIE EN CONFIGURATIE VAN SATELLIET-INTERNETDIENSTEN (STARLINK) VOOR HET ESE-ZIEKENHUIS SAN JUAN DE DIOS DE SONSÓN EN ZIJN ALTERNATIEVE KANTOREN MET ALS DOEL DE NODIGE CONNECTIVITEIT TE GARANDEREN VOOR"
+   "titleNl": "LEVERING, INSTALLATIE EN CONFIGURATIE VAN  SATELLIETINTERNETDIENSTEN (STARLINK) VOOR DE E.S.E. HOSPITAL SAN JUAN DE DIOS IN SONSÓN EN HAAR ALTERNATIEVE VESTIGINGEN, MET ALS DOEL DE NODIGE INTERNETVERBINDING TE WAARBORGEN VOOR",
+   "trEngine": "DeepL"
   },
   {
    "pub": "WB-OP00451686",
@@ -1894,7 +2009,9 @@
    "link": "https://projects.worldbank.org/en/projects-operations/procurement-detail/OP00451686",
    "value": null,
    "currency": "USD",
-   "firstSeen": "2000-01-01T00:00:00.000Z"
+   "firstSeen": "2000-01-01T00:00:00.000Z",
+   "titleNl": "Starlink-verbinding voor plattelandsgemeenschappen",
+   "trEngine": "DeepL"
   },
   {
    "pub": "TW-3.92.35-114086",
@@ -1910,7 +2027,9 @@
    "link": "https://pcc-api.openfun.app/index/case/3.92.35/114086/20260611/BDM-2-71076796",
    "value": null,
    "currency": "TWD",
-   "firstSeen": "2026-10-16T07:13:38.622Z"
+   "firstSeen": "2026-10-16T07:13:38.622Z",
+   "titleNl": "Maatschappelijke weerbaarheid tegen storingen in communicatieapparatuur voor lage-baan-satellieten",
+   "trEngine": "DeepL"
   },
   {
    "pub": "CO-CO1.REQ.10510171",
@@ -1927,26 +2046,8 @@
    "value": 52725505,
    "currency": "COP",
    "firstSeen": "2026-10-15T13:42:58.648Z",
-   "titleNl": "Levering van de starlink-service voor 3 antennes, 2 zakelijke antennes en een standaard voor de transmissieprocessen die het kanaal heeft van overal in de regio en audiolicenties voor stoorstations"
-  },
-  {
-   "pub": "WB-OP00449674",
-   "source": "Wereldbank",
-   "title": "Acquisition, installation et maintenance de 191 kits Starlink et composants d’extension réseau pour les 3 nouvelles DREN, les 9 Ecoles Normales et 179 inspections prioritaires dotées de tablettes",
-   "buyer": "Niger Learning Improvement for Results in Education Project",
-   "country": "NE",
-   "countryName": "Niger",
-   "published": "2026-06-08",
-   "deadline": "",
-   "type": "Contract Award",
-   "kind": "award",
-   "cpv": [],
-   "wbGroup": "GO",
-   "wbMethod": "RFQ",
-   "link": "https://projects.worldbank.org/en/projects-operations/procurement-detail/OP00449674",
-   "value": null,
-   "currency": "USD",
-   "firstSeen": "2000-01-01T00:00:00.000Z"
+   "titleNl": "Levering van de Starlink-dienst voor 3 antennes – 2 zakelijke en 1 standaard – voor de uitzendingen van de zender vanuit elke locatie in de regio, en het verkrijgen van een audiovergunning voor radiostations",
+   "trEngine": "DeepL"
   },
   {
    "pub": "WB-OP00449676",
@@ -1965,7 +2066,30 @@
    "link": "https://projects.worldbank.org/en/projects-operations/procurement-detail/OP00449676",
    "value": null,
    "currency": "USD",
-   "firstSeen": "2000-01-01T00:00:00.000Z"
+   "firstSeen": "2000-01-01T00:00:00.000Z",
+   "titleNl": "Aankoop, installatie en onderhoud van 191 Starlink-sets en onderdelen voor netwerkuitbreiding voor de 3 nieuwe DREN’s, de 9 lerarenopleidingen en 179 prioritaire inspectiediensten die zijn uitgerust met tablets",
+   "trEngine": "DeepL"
+  },
+  {
+   "pub": "WB-OP00449674",
+   "source": "Wereldbank",
+   "title": "Acquisition, installation et maintenance de 191 kits Starlink et composants d’extension réseau pour les 3 nouvelles DREN, les 9 Ecoles Normales et 179 inspections prioritaires dotées de tablettes",
+   "buyer": "Niger Learning Improvement for Results in Education Project",
+   "country": "NE",
+   "countryName": "Niger",
+   "published": "2026-06-08",
+   "deadline": "",
+   "type": "Contract Award",
+   "kind": "award",
+   "cpv": [],
+   "wbGroup": "GO",
+   "wbMethod": "RFQ",
+   "link": "https://projects.worldbank.org/en/projects-operations/procurement-detail/OP00449674",
+   "value": null,
+   "currency": "USD",
+   "firstSeen": "2000-01-01T00:00:00.000Z",
+   "titleNl": "Aankoop, installatie en onderhoud van 191 Starlink-sets en onderdelen voor netwerkuitbreiding voor de 3 nieuwe DREN’s, de 9 lerarenopleidingen en 179 prioritaire inspectiediensten die zijn uitgerust met tablets",
+   "trEngine": "DeepL"
   },
   {
    "pub": "CO-CO1.REQ.10497900",
@@ -1982,7 +2106,8 @@
    "value": null,
    "currency": "COP",
    "firstSeen": "2026-10-15T13:42:58.648Z",
-   "titleNl": "MARKTSTUDIE -  PROCES NR. 090 STARLINK SATELLIETDIENST EN VERWERVING van ANTENNES, VOOR DE EENHEDEN VAN HET NATIONALE LEGER die IN 2026 moeten worden UITGEVOERD"
+   "titleNl": "MARKTONDERZOEK -  PROCES Nr. 090: STARLINK-SATELLIETDIENST EN AANKOOP VAN ANTENNES VOOR DE EENHEDEN VAN HET NATIONALE LEGER,  UIT TE VOEREN IN DE LOOP VAN HET JAAR 2026",
+   "trEngine": "DeepL"
   },
   {
    "pub": "376719-2026",
@@ -2017,7 +2142,8 @@
    "value": 4950400,
    "currency": "COP",
    "firstSeen": "2026-10-15T13:42:58.648Z",
-   "titleNl": "INTERNET KIT SATELITEL STARLINK STANDAARD V4 VERHUUR APPARATUUR MET INTERNETVERBINDING ONBEPERKT DATA (RESIDENTIEEL) VASTE LOCATIE"
+   "titleNl": "STARLINK STANDAARD V4 SATELLIETINTERNETKIT – VERHUUR VAN APPARATUUR MET INTERNETVERBINDING EN ONBEPERKTE DATAVOLUME (PRIVÉ) VASTE LOCATIE",
+   "trEngine": "DeepL"
   },
   {
    "pub": "CO-CO1.REQ.10483443",
@@ -2034,7 +2160,8 @@
    "value": 2210000,
    "currency": "COP",
    "firstSeen": "2026-10-15T13:42:58.648Z",
-   "titleNl": "aanschaf, installatie, configuratie en inbedrijfstelling van een satelliet internetconnectiviteitssysteem met behulp van een Starlink-antenne, inclusief de levering van apparatuur, accessoires, benodigde materialen en"
+   "titleNl": "aankoop, installatie, configuratie en inbedrijfstelling van een systeem voor internetverbinding via satelliet met behulp van een Starlink-antenne, inclusief de levering van apparatuur, accessoires en benodigde materialen, en",
+   "trEngine": "DeepL"
   },
   {
    "pub": "331380-2026",
@@ -2072,7 +2199,8 @@
    "value": 54126300,
    "currency": "COP",
    "firstSeen": "2026-10-15T13:42:58.648Z",
-   "titleNl": "LEVERING VAN STARLINK MINI SATELLIET CONNECTIVITEITSKITS EN DRAAGBARE LAADSTATIONS MET 75W ZONNEPANEEL, OM DE OPERATIONELE EN CONNECTIVITEITSCAPACITEIT TE VERSTERKEN IN HET KADER VAN RESOLUTIE 092 VAN 2026 VAN DE MINI"
+   "titleNl": "LEVERING VAN STARLINK MINI-KITS VOOR SATELLIETVERBINDING EN DRAAGBARE OPLADESTATIONS MET EEN ZONNEPANEEL VAN 75 W, TER VERSTERKING VAN DE OPERATIONELE EN CONNECTIVITEITSCAPACITEIT IN HET KADER VAN RESOLUTIE 092 VAN 2026 VAN HET MINI",
+   "trEngine": "DeepL"
   },
   {
    "pub": "CO-CO1.REQ.10430342",
@@ -2089,7 +2217,8 @@
    "value": null,
    "currency": "COP",
    "firstSeen": "2026-10-15T13:42:58.648Z",
-   "titleNl": "MARKTSTUDIE - PROCES NR.90 STARLINK SATELLIETDIENST EN VERWERVING van ANTENNES, VOOR DE EENHEDEN VAN HET NATIONALE LEGER die IN 2026 moeten worden UITGEVOERD"
+   "titleNl": "MARKTONDERZOEK - PROCEDURE NR. 90: STARLINK-SATELLIETDIENST EN AANKOOP VAN ANTENNES VOOR DE EENHEDEN VAN HET NATIONALE LEGER, UIT TE VOEREN IN HET BEGROTINGSJAAR 2026",
+   "trEngine": "DeepL"
   },
   {
    "pub": "CO-CO1.REQ.10428619",
@@ -2106,7 +2235,8 @@
    "value": 851998,
    "currency": "COP",
    "firstSeen": "2026-10-15T13:42:58.648Z",
-   "titleNl": "Schaf satellietinternetdiensten aan met STARLINK voor het hoofdkantoor van Abriaqui en het Movil-satellietinternet"
+   "titleNl": "Aanschaf van satellietinternetdiensten via STARLINK voor de vestiging in Abriaqui en mobiel satellietinternet",
+   "trEngine": "DeepL"
   },
   {
    "pub": "CO-CO1.REQ.10415034",
@@ -2123,7 +2253,8 @@
    "value": null,
    "currency": "COP",
    "firstSeen": "2026-10-15T13:42:58.648Z",
-   "titleNl": "MARKTSTUDIE - VERWERVING VAN STARLINK MINI-ANTENNES EN SATELLIET-INTERNETDIENST VOOR NATIONALE LEGEREENHEDEN"
+   "titleNl": "MARKTONDERZOEK – AANKOOP VAN STARLINK MINI-ANTENNES EN SATELLIETINTERNETDIENST VOOR DE EENHEDEN VAN HET NATIONALE LEGER",
+   "trEngine": "DeepL"
   },
   {
    "pub": "CO-CO1.REQ.10409302",
@@ -2139,7 +2270,9 @@
    "link": "https://community.secop.gov.co/Public/Tendering/OpportunityDetail/Index?noticeUID=CO1.NTC.10265703",
    "value": 34884453,
    "currency": "COP",
-   "firstSeen": "2026-10-15T13:42:58.648Z"
+   "firstSeen": "2026-10-15T13:42:58.648Z",
+   "titleNl": "LEVERING EN ACTIVERING VAN DE MOBIELE SATELLIETINTERNETDIENST VIA REEDS GEÏNSTALLEERDE STARLINK-ANTENNES, WAARMEE EEN CONTINUE LEVERING VAN DE INTERNETVERBINDING WORDT GEGARANDEERD VOLGENS DE TECHNISCHE SPECIFICATIES",
+   "trEngine": "DeepL"
   },
   {
    "pub": "WB-OP00442616",
@@ -2159,7 +2292,8 @@
    "value": null,
    "currency": "USD",
    "firstSeen": "2000-01-01T00:00:00.000Z",
-   "titleNl": "Offerteaanvraag voor Starlink-acquisitie en -abonnement ten behoeve van de DGSF"
+   "titleNl": "Offerteaanvraag voor de aanschaf van en het abonnement op Starlink ten behoeve van de DGSF",
+   "trEngine": "DeepL"
   },
   {
    "pub": "295573-2026",
@@ -2197,7 +2331,8 @@
    "value": null,
    "currency": "USD",
    "firstSeen": "2000-01-01T00:00:00.000Z",
-   "titleNl": "Verwerving van computerapparatuur ter ondersteuning van de informatiebeheersystemen van MAAP, INIP en INNOQ"
+   "titleNl": "Aankoop van computerapparatuur ter ondersteuning van de informatiemanagementsystemen van MAAP, INIP en INNOQ",
+   "trEngine": "DeepL"
   },
   {
    "pub": "CF-67a9e3b8-52ad-45a4-ba60-e3f85de18e90",
@@ -2213,7 +2348,9 @@
    "link": "https://www.contractsfinder.service.gov.uk/Notice/67a9e3b8-52ad-45a4-ba60-e3f85de18e90",
    "value": 216340,
    "currency": "GBP",
-   "firstSeen": "2026-10-15T13:42:58.648Z"
+   "firstSeen": "2026-10-15T13:42:58.648Z",
+   "titleNl": "NECS / DD ICB -  Starlink-internetdiensten voor CoIN",
+   "trEngine": "DeepL"
   },
   {
    "pub": "TW-3.5.48-PL15211",
@@ -2230,7 +2367,9 @@
    "value": null,
    "currency": "TWD",
    "defense": true,
-   "firstSeen": "2026-10-16T07:13:38.622Z"
+   "firstSeen": "2026-10-16T07:13:38.622Z",
+   "titleNl": "Aanbesteding voor breedbanddiensten via satellieten in een lage baan, onderdeel B",
+   "trEngine": "DeepL"
   },
   {
    "pub": "CF-c2f26733-ec0d-4883-ae17-42c920d06ded",
@@ -2246,7 +2385,9 @@
    "link": "https://www.contractsfinder.service.gov.uk/Notice/c2f26733-ec0d-4883-ae17-42c920d06ded",
    "value": 87000,
    "currency": "GBP",
-   "firstSeen": "2026-10-15T13:42:58.648Z"
+   "firstSeen": "2026-10-15T13:42:58.648Z",
+   "titleNl": "Toekomstige consumenten",
+   "trEngine": "DeepL"
   },
   {
    "pub": "CO-CO1.REQ.10337053",
@@ -2263,7 +2404,8 @@
    "value": 3593002,
    "currency": "COP",
    "firstSeen": "2026-10-15T13:42:58.648Z",
-   "titleNl": "LEVERING VAN STANDAARD STARLINK-KIT VOOR HET ESE-ZIEKENHUIS SAN PEDRO DE LA ESE-ZIEKENHUIS SAN PEDRO DE SABANALARGA ANTIOQUIA"
+   "titleNl": "LEVERING VAN EEN STARLINK STANDARD-KIT AAN DE E.S.E. HOSPITAL SAN PEDRO VAN DE E.S.E. HOSPITAL SAN PEDRO IN SABANALARGA, ANTIOQUIA",
+   "trEngine": "DeepL"
   },
   {
    "pub": "238402-2026",
@@ -2335,7 +2477,8 @@
    "value": 10650000,
    "currency": "COP",
    "firstSeen": "2026-10-15T13:42:58.648Z",
-   "titleNl": "DE LEVERING VAN LEASEDIENSTEN VOOR TECHNOLOGISCHE INFRASTRUCTUUR VOOR SATELLIETCONNECTIVITEIT CONTRACTEREN, INCLUSIEF DE LEVERING, INSTALLATIE, CONFIGURATIE, BEDIENING, MONITORING EN TECHNISCHE ONDERSTEUNING VAN TWEE (2) TERMIJNEN"
+   "titleNl": "HET AANBESTEDEN VAN DIENSTEN VOOR DE VERHUUR VAN TECHNOLOGISCHE INFRASTRUCTUUR VOOR SATELLIETVERBINDINGEN, MET INBEGRIP VAN DE LEVERING, INSTALLATIE, CONFIGURATIE, BEDRIJF, MONITORING EN TECHNISCHE ONDERSTEUNING VAN TWEE (2) TERM",
+   "trEngine": "DeepL"
   },
   {
    "pub": "WB-OP00432408",
@@ -2355,7 +2498,8 @@
    "value": null,
    "currency": "USD",
    "firstSeen": "2000-01-01T00:00:00.000Z",
-   "titleNl": "Aankoop en installatie van starlink-kits aangedreven door zonne-energie ten behoeve van prioritaire locaties (gezondheidscentra, universiteiten, middelbare scholen en vluchtelingenkampen en ENASTIC-vestigingen) in Tsjaad"
+   "titleNl": "Aankoop en installatie van Starlink-kits op zonne-energie ten behoeve van prioritaire locaties (gezondheidscentra, universiteiten, middelbare scholen, vluchtelingenkampen en de vestigingen van ENASTIC) in Tsjaad",
+   "trEngine": "DeepL"
   },
   {
    "pub": "CO-CO1.REQ.10316022",
@@ -2372,7 +2516,8 @@
    "value": 46926000,
    "currency": "COP",
    "firstSeen": "2026-10-15T13:42:58.648Z",
-   "titleNl": "LEVERING VAN SATELLIET-INTERNETDIENSTEN VOOR VIER STARLINK-ANTENNES VAN HET LUIS ABLANQUE DE LA PLATA ESE-ZIEKENHUISNETWERK"
+   "titleNl": "LEVERING VAN SATELLIETINTERNETDIENSTEN VOOR VIER STARLINK-ANTENNES VAN HET NETWERK VAN HET LUIS ABLANQUE-ZIEKENHUIS IN LA PLATA (E.S.E.)",
+   "trEngine": "DeepL"
   },
   {
    "pub": "219678-2026",
@@ -2407,7 +2552,8 @@
    "value": null,
    "currency": "COP",
    "firstSeen": "2026-10-15T13:42:58.648Z",
-   "titleNl": "LEVERING EN ACTIVERING VAN DE ROAMING SATELLIET-INTERNETDIENST MET BEHULP VAN REEDS GEÏNSTALLEERDE STARLINK-ANTENNES, WAARDOOR DE CONTINUE LEVERING VAN DE INTERNETCONNECTIVITEITSDIENST WORDT GEGARANDEERD IN OVEREENSTEMMING MET DE TEA-SPECIFICATIES"
+   "titleNl": "LEVERING EN ACTIVERING VAN DE MOBIELE SATELLIETINTERNETDIENST VIA REEDS GEÏNSTALLEERDE STARLINK-ANTENNES, WAARMEE EEN CONTINUE LEVERING VAN DE INTERNETVERBINDING WORDT GEGARANDEERD VOLGENS DE TECHNISCHE SPECIFICATIES",
+   "trEngine": "DeepL"
   },
   {
    "pub": "CO-CO1.REQ.10286779",
@@ -2423,7 +2569,9 @@
    "link": "https://community.secop.gov.co/Public/Tendering/OpportunityDetail/Index?noticeUID=CO1.NTC.10143794",
    "value": 66185488,
    "currency": "COP",
-   "firstSeen": "2026-10-15T13:42:58.648Z"
+   "firstSeen": "2026-10-15T13:42:58.648Z",
+   "titleNl": "LEVERING VAN SATELLIETINTERNETDIENSTEN AAN 17 STARLINK-ANTENNES DIE ZIJN GEÏNSTALLEERD IN RESERVATEN EN/OF INHEEMSE GEMEENSCHAPPEN IN HET DEPARTEMENT META, TER ONTWIKKELING VAN ETNO-ECOLOGISCHE STRATEGIEËN, ONDER LEIDING VAN CORMACAREN",
+   "trEngine": "DeepL"
   },
   {
    "pub": "191062-2026",
@@ -2460,7 +2608,8 @@
    "value": 66185488,
    "currency": "COP",
    "firstSeen": "2026-10-15T13:42:58.648Z",
-   "titleNl": "LEVERING VAN SATELLIET-INTERNETDIENST AAN 17 STARLINK-ANTENNES GEÏNSTALLEERD IN RESERVERINGEN EN/OF INHEEMSE GEMEENSCHAPPEN VAN HET DEPARTEMENT META, VOOR DE ONTWIKKELING VAN MILIEUSTRATEGIEËN, GELEID DOOR CORMACAREN"
+   "titleNl": "LEVERING VAN SATELLIETINTERNETDIENSTEN AAN 17 STARLINK-ANTENNES DIE ZIJN GEÏNSTALLEERD IN RESERVATEN EN/OF INHEEMSE GEMEENSCHAPPEN IN HET DEPARTEMENT META, TER ONTWIKKELING VAN ETNO-ECOLOGISCHE STRATEGIEËN, ONDER LEIDING VAN CORMACAREN",
+   "trEngine": "DeepL"
   },
   {
    "pub": "172194-2026",
@@ -2496,7 +2645,8 @@
    "value": 74458674,
    "currency": "COP",
    "firstSeen": "2026-10-15T13:42:58.648Z",
-   "titleNl": "LEVERING VAN SATELLIET-INTERNETDIENST AAN 17 STARLINK-ANTENNES GEÏNSTALLEERD IN RESERVERINGEN EN/OF INHEEMSE GEMEENSCHAPPEN VAN HET DEPARTEMENT META, VOOR DE ONTWIKKELING VAN MILIEUSTRATEGIEËN, GELEID DOOR CORMACAREN"
+   "titleNl": "LEVERING VAN SATELLIETINTERNETDIENSTEN AAN 17 STARLINK-ANTENNES DIE ZIJN GEÏNSTALLEERD IN RESERVATEN EN/OF INHEEMSE GEMEENSCHAPPEN IN HET DEPARTEMENT META, TER ONTWIKKELING VAN ETNO-ECOLOGISCHE STRATEGIEËN, ONDER LEIDING VAN CORMACAREN",
+   "trEngine": "DeepL"
   },
   {
    "pub": "CO-CO1.REQ.10244714",
@@ -2513,7 +2663,8 @@
    "value": 131030606,
    "currency": "COP",
    "firstSeen": "2026-10-15T13:42:58.648Z",
-   "titleNl": "CONTRACT DE LEVERING VAN 4 GPBS BANDBREEDTE DEDICATED INTERNET KANAAL DIENSTEN, MET DERTIG (30) VASTE IP 'S; DE LEVERING VAN DE STARLINK ZAKELIJKE SATELLIETDIENST VOOR ROAMING EN BEDIENING OP AFSTAND; EN DE"
+   "titleNl": "HET AFNEMEN VAN DIENSTEN VOOR EEN TOEGEWIJDE INTERNETVERBINDING MET EEN BANDBREEDTE VAN 4 GPBS, MET DERTIG (30) VASTE IP-ADRESSEN; DE LEVERING VAN DE STARLINK BUSINESS-SATELLIETDIENST VOOR MOBIEL EN EXTERN GEBRUIK; EN DE A",
+   "trEngine": "DeepL"
   },
   {
    "pub": "CO-CO1.REQ.10234135",
@@ -2529,7 +2680,9 @@
    "link": "https://community.secop.gov.co/Public/Tendering/OpportunityDetail/Index?noticeUID=CO1.NTC.10091848",
    "value": 32000000,
    "currency": "COP",
-   "firstSeen": "2026-10-15T13:42:58.648Z"
+   "firstSeen": "2026-10-15T13:42:58.648Z",
+   "titleNl": "AANKOOP VAN EEN STARLINK-ANTENNE STANDAARDKIT (MOBIEL) – COMPLETE\nWIFI-KIT MET MOBIEL ABONNEMENT, INCLUSIEF ÉÉN JAAR SERVICE EN EEN\nONDERHOUD INBEGREPEN, IN HET KADER VAN HET SAN FRANCISCO-PROGRAMMA\nVERZEKERD EN MET EEN OPENBARE BESTELLING",
+   "trEngine": "DeepL"
   },
   {
    "pub": "CF-10084264-820c-4ccb-8028-16544ede11f8",
@@ -2545,7 +2698,9 @@
    "link": "https://www.contractsfinder.service.gov.uk/Notice/10084264-820c-4ccb-8028-16544ede11f8",
    "value": 18674,
    "currency": "GBP",
-   "firstSeen": "2026-10-15T13:42:58.648Z"
+   "firstSeen": "2026-10-15T13:42:58.648Z",
+   "titleNl": "Breedbandinternetdiensten via satellieten in een lage baan om de aarde (LEO) – Perceel 1 OneWeb",
+   "trEngine": "DeepL"
   },
   {
    "pub": "138600-2026",
@@ -2580,7 +2735,9 @@
    "link": "https://community.secop.gov.co/Public/Tendering/OpportunityDetail/Index?noticeUID=CO1.NTC.10067822",
    "value": 38147200,
    "currency": "COP",
-   "firstSeen": "2026-10-15T13:42:58.648Z"
+   "firstSeen": "2026-10-15T13:42:58.648Z",
+   "titleNl": "AANKOOP VAN EEN DJI MAVIC 3 THERMAL-DRONE EN EEN STARLINK-ANTENNEKIT VOOR SATELLIETINTERNET IN HET KADER VAN  PROJECT NR. 14 VAN HET FONDS VOOR TERRITORIALE VEILIGHEID - FONSET VOOR INSTITUTIONELE VERSTERKING BIJ HET GEMEENTEBESTUUR VAN ALBAN",
+   "trEngine": "DeepL"
   },
   {
    "pub": "TW-3.82.13-1150000010",
@@ -2596,7 +2753,9 @@
    "link": "https://pcc-api.openfun.app/index/case/3.82.13/1150000010/20260225/BDM-1-71117801",
    "value": null,
    "currency": "TWD",
-   "firstSeen": "2026-10-16T07:13:38.622Z"
+   "firstSeen": "2026-10-16T07:13:38.622Z",
+   "titleNl": "Verhuizing en installatie van apparatuur voor lage-baan-satellieten bij het politiebureau van het tweede administratieve centrum van New Taipei City",
+   "trEngine": "DeepL"
   },
   {
    "pub": "TW-3.15.26-MPB1141205C005",
@@ -2612,7 +2771,9 @@
    "link": "https://pcc-api.openfun.app/index/case/3.15.26/MPB1141205C005/20260225/PPW-1-70093968",
    "value": null,
    "currency": "TWD",
-   "firstSeen": "2026-10-16T07:13:38.622Z"
+   "firstSeen": "2026-10-16T07:13:38.622Z",
+   "titleNl": "Voorstel voor de verdere afhandeling van apparatuur in het kader van het onderhoud en de exploitatie van het door satellieten in een lage baan ondersteunde zoek- en reddingssysteem",
+   "trEngine": "DeepL"
   },
   {
    "pub": "128587-2026",
@@ -2650,7 +2811,8 @@
    "value": 10450000,
    "currency": "COP",
    "firstSeen": "2026-10-15T13:42:58.648Z",
-   "titleNl": "LEVER 8 ST ARLINK MINI-ANTENNES VOOR HET HOOFDKANTOOR EN 1 STANDAARD STARLINK ANTENNE VOOR HET HOOFDKWARTIER VOOR DE ONDERWIJSINSTELLING, D.W.Z. REGIONAAL CENTRUM VOOR ONDERZOEK, ONDERWIJS EN UITBREIDING VAN TAURAMENA -CRIEE"
+   "titleNl": "LEVERING VAN 8 ST ARLINK MINI-ANTENNES VOOR DE VESTIGINGEN EN 1 STANDARD STARLINK-ANTENNE VOOR HET HOOFDKANTOOR, BESTEMD VOOR DE ONDERWIJSINSTELLING I.E. REGIONAAL CENTRUM VOOR ONDERZOEK, ONDERWIJS EN VOORLICHTING VAN TAURAMENA - CRIEE",
+   "trEngine": "DeepL"
   },
   {
    "pub": "125512-2026",
@@ -2709,7 +2871,9 @@
    "link": "https://projects.worldbank.org/en/projects-operations/procurement-detail/OP00426675",
    "value": null,
    "currency": "USD",
-   "firstSeen": "2000-01-01T00:00:00.000Z"
+   "firstSeen": "2000-01-01T00:00:00.000Z",
+   "titleNl": "Aankoop van 7 Starlink-sets voor de buitenste eilanden",
+   "trEngine": "DeepL"
   },
   {
    "pub": "CO-CO1.REQ.10159975",
@@ -2726,7 +2890,8 @@
    "value": 14480000,
    "currency": "COP",
    "firstSeen": "2026-10-15T13:42:58.648Z",
-   "titleNl": "Doel van het contract: Levering van twee Starlink-antennes, drie fs 120 Stihl -zeisen, zes acrylplaten.  Voor de I.E.R Trinidad Arriba en het hoofdkantoor in de gemeente Nechi."
+   "titleNl": "Voorwerp van de overeenkomst: Levering van twee Starlink-antennes, drie Stihl FS 120-bosmaaiers en zes acrylplaten. Bestemd voor de I.E.R. Trinidad Arriba en haar vestigingen in de gemeente Nechi.",
+   "trEngine": "DeepL"
   },
   {
    "pub": "CO-CO1.REQ.10119547",
@@ -2743,7 +2908,8 @@
    "value": 6240000,
    "currency": "COP",
    "firstSeen": "2026-10-15T13:42:58.648Z",
-   "titleNl": "LEVERING VAN DE ROAMINGDIENST VOOR SATELLIETCONNECTIVITEIT MET BEHULP VAN STARLINK-TECHNOLOGIE, OM INTERNETTOEGANG TE GARANDEREN BIJ ACTIVITEITEN BUITEN DE MUUR EN ALS CONNECTIVITEITSONDERSTEUNING VAN HET SPECIALE ZIEKENHUIS VAN CUB"
+   "titleNl": "LEVERING VAN DE MOBIELE SATELLIETVERBINDINGSDIENST MET BEHULP VAN STARLINK-TECHNOLOGIE, OM INTERNETTOEGANG TE GARANDEREN BIJ EXTRAMURALE ACTIVITEITEN EN ALS BACK-UP VOOR DE INTERNETVERBINDING VAN HET SPECIALE ZIEKENHUIS VAN CUB",
+   "trEngine": "DeepL"
   },
   {
    "pub": "CO-CO1.REQ.10107079",
@@ -2760,7 +2926,8 @@
    "value": 10941317,
    "currency": "COP",
    "firstSeen": "2026-10-15T13:42:58.648Z",
-   "titleNl": "LEVERING VAN TELEMETRISCHE SATELLIETDIENSTEN ALGEMEEN ONDERHOUD EN INTEGRATIE MET DE STARLINK-ANTENNE VAN HET STATION IN HET PCH-INGANGSGEBIED DE WATERVAL  IN DE ABEJORRAL MUNICPIO"
+   "titleNl": "LEVERING VAN SATELLIETTELEMETRIEDIENSTEN, ALGEMEEN ONDERHOUD EN INTEGRATIE MET DE STARLINK-ANTENNE VAN HET STATION IN DE TOEGANGSZONE VAN DE PCH LA CASCADA, GELEGEN IN DE GEMEENTE ABEJORRAL",
+   "trEngine": "DeepL"
   },
   {
    "pub": "WB-OP00424205",
@@ -2779,7 +2946,9 @@
    "link": "https://projects.worldbank.org/en/projects-operations/procurement-detail/OP00424205",
    "value": null,
    "currency": "USD",
-   "firstSeen": "2000-01-01T00:00:00.000Z"
+   "firstSeen": "2000-01-01T00:00:00.000Z",
+   "titleNl": "Aankoop, installatie, configuratie en onderhoud van 64 Starlink-satellietinternetpakketten ten behoeve van 52 centrale instellingen van het Ministerie van Onderwijs (MEN), 3 regionale onderwijsdirecties (DREN) en 9 nationale onderwijsinstellingen (EN-ENS)",
+   "trEngine": "DeepL"
   },
   {
    "pub": "WB-OP00424206",
@@ -2798,7 +2967,9 @@
    "link": "https://projects.worldbank.org/en/projects-operations/procurement-detail/OP00424206",
    "value": null,
    "currency": "USD",
-   "firstSeen": "2000-01-01T00:00:00.000Z"
+   "firstSeen": "2000-01-01T00:00:00.000Z",
+   "titleNl": "Aankoop, installatie, configuratie en onderhoud van 64 Starlink-satellietinternetpakketten ten behoeve van 52 centrale instellingen van het Ministerie van Onderwijs (MEN), 3 regionale onderwijsdirecties (DREN) en 9 nationale onderwijsinstellingen (EN-ENS)",
+   "trEngine": "DeepL"
   },
   {
    "pub": "WB-OP00424208",
@@ -2817,7 +2988,9 @@
    "link": "https://projects.worldbank.org/en/projects-operations/procurement-detail/OP00424208",
    "value": null,
    "currency": "USD",
-   "firstSeen": "2000-01-01T00:00:00.000Z"
+   "firstSeen": "2000-01-01T00:00:00.000Z",
+   "titleNl": "Aankoop, installatie, configuratie en onderhoud van 64 Starlink-satellietinternetpakketten ten behoeve van 52 centrale instellingen van het Ministerie van Onderwijs (MEN), 3 regionale onderwijsdirecties (DREN) en 9 nationale onderwijsinstellingen (EN-ENS)",
+   "trEngine": "DeepL"
   },
   {
    "pub": "WB-OP00424154",
@@ -2837,7 +3010,8 @@
    "value": null,
    "currency": "USD",
    "firstSeen": "2000-01-01T00:00:00.000Z",
-   "titleNl": "Verwerving van de IT-apparatuur die nodig is voor de uitvoering van het register van roerende zekerheidsrechten"
+   "titleNl": "Aankoop van de IT-apparatuur die nodig is voor de invoering van het register van zakelijke zekerheden op roerende goederen",
+   "trEngine": "DeepL"
   },
   {
    "pub": "61541-2026",
@@ -2873,7 +3047,8 @@
    "value": 4877691,
    "currency": "COP",
    "firstSeen": "2026-10-15T13:42:58.648Z",
-   "titleNl": "Levering van internetdiensten via kabelverbinding met een starlink-antenne en levering van de bedrading voor het E.S.E.-ziekenhuis la Misericordia de Yalí, volgens de gepresenteerde offerte."
+   "titleNl": "Levering van internetdiensten via een kabelverbinding met een Starlink-antenne en levering van de antenne aan de E.S.E. Hospital la Misericordia de Yalí, overeenkomstig de ingediende offerte.",
+   "trEngine": "DeepL"
   },
   {
    "pub": "CO-CO1.REQ.9958563",
@@ -2890,7 +3065,8 @@
    "value": 23980000,
    "currency": "COP",
    "firstSeen": "2026-10-15T13:42:58.648Z",
-   "titleNl": "DE SERVICE VERLENEN ALS SYSTEEMTECHNICUS VOOR HET BEHEER, DE CONTROLE EN HET CORRECTIEF EN PREVENTIEF ONDERHOUD VAN DE STARLINK SATELLIETINTERNETDIENST, WAARDOOR EEN CONTINUE EN OPERATIONELE WERKING VAN DE INFRASTRUCTUUR WORDT GEGARANDEERD"
+   "titleNl": "WERKVERRICHTEN ALS SYSTEEMTECHNICUS VOOR HET BEHEER, DE CONTROLE EN HET CORRECTIEVE EN PREVENTIEVE ONDERHOUD VAN DE STARLINK-SATELLIETINTERNETDIENST, waarbij de ononderbroken en operationele werking van de infrastructuur wordt gewaarborgd",
+   "trEngine": "DeepL"
   },
   {
    "pub": "42457-2026",
@@ -2926,7 +3102,8 @@
    "value": 20293212,
    "currency": "COP",
    "firstSeen": "2026-10-15T13:42:58.648Z",
-   "titleNl": "BEHEERSONDERSTEUNING VOOR HET UITVOEREN VAN ONDERHOUDS- EN/OF REPARATIEACTIVITEITEN VAN HET INTERNETBEDRADINGSSYSTEEM, COMPUTERAPPARATUUR VAN HET GEMEENTELIJK PALEIS EN STARLINK-ANTENNENHUUR VOOR DE EXTERNE ACTIVITEITEN VAN DE"
+   "titleNl": "ONDERSTEUNING VAN HET MANAGEMENT BIJ HET UITVOEREN VAN ONDERHOUDS- EN/OF REPARATIEWERKZAAMHEDEN AAN HET INTERNETBEKABELINGSSYSTEEM, de computerapparatuur van het stadhuis en de huur van een StarLink-antenne voor de externe activiteiten van de",
+   "trEngine": "DeepL"
   },
   {
    "pub": "WB-OP00421544",
@@ -2946,7 +3123,8 @@
    "value": null,
    "currency": "USD",
    "firstSeen": "2000-01-01T00:00:00.000Z",
-   "titleNl": "Prestatiebeurs jaar 3: CTE-apparatuur"
+   "titleNl": "Prestatiesubsidie jaar 3: CTE-apparatuur",
+   "trEngine": "DeepL"
   },
   {
    "pub": "29645-2026",
@@ -2986,7 +3164,9 @@
    "link": "https://projects.worldbank.org/en/projects-operations/procurement-detail/OP00420916",
    "value": null,
    "currency": "USD",
-   "firstSeen": "2000-01-01T00:00:00.000Z"
+   "firstSeen": "2000-01-01T00:00:00.000Z",
+   "titleNl": "Aankoop van Starlink-internetapparatuur voor registratiecentra",
+   "trEngine": "DeepL"
   },
   {
    "pub": "CO-CO1.REQ.9635863",
@@ -3003,7 +3183,8 @@
    "value": 1300000,
    "currency": "COP",
    "firstSeen": "2026-10-15T13:42:58.648Z",
-   "titleNl": "VERWIJDEREN VAN RIEMEN EN VERWISSELEN VAN ZEKERINGEN VOOR DEZELFDE TRANSFORMATOR, PLAATSEN VAN STRIPS EN VERWISSELEN VAN STOPCONTACTEN IN DE TUINKAMER, INSTALLATIE VAN STRIPS OM ETHERNET- EN STARLINK-KABEL TE PLAATSEN MET ZIJN RESPECTIEVELIJKE DOOS EN"
+   "titleNl": "DEMONTAGE VAN KABELGOOTEN EN VERVANGING VAN ZEKERINGEN VOOR DEZELFDE TRANSFORMATOR, PLAATSING VAN STEKKERBLOKKEN EN VERVANGING VAN STOPCONTACTEN IN DE TUINKAMER, INSTALLATIE VAN STEKKERBLOKKEN VOOR HET AANBRENGEN VAN ETHERNET- EN STARLINK-KABELS MET BIJBEHORENDE DOOS EN T",
+   "trEngine": "DeepL"
   },
   {
    "pub": "CO-CO1.REQ.9634692",
@@ -3020,7 +3201,8 @@
    "value": 1116000,
    "currency": "COP",
    "firstSeen": "2026-10-15T13:42:58.648Z",
-   "titleNl": "VOOR EEN UITGEBREID TRAININGSPROJECT."
+   "titleNl": "VOOR EEN PROJECT VOOR INTEGRALE OPLEIDING.",
+   "trEngine": "DeepL"
   },
   {
    "pub": "CO-CO1.REQ.9549174",
@@ -3037,7 +3219,8 @@
    "value": 46995420,
    "currency": "COP",
    "firstSeen": "2026-10-15T13:42:58.648Z",
-   "titleNl": "TOEGANGSDIENSTEN VERLENEN AAN \nINTERNET, CONFORM HET \nSPECIFIEKE VEZELBEHOEFTEN \n50 MB GLASVEZEL EN AANSLUITING \nSATELLIET VOOR ESE HOSPITAL SAN JOSÉ \nDE GUADUAS, 5MB VOOR HET CENTRUM VAN \nGEZONDHEID VAN C"
+   "titleNl": "HET VERLENEN VAN INTERNETTOEGANGSDIENSTEN, \nIN OVEREENSTEMMING MET DE \nSPECIFIEKE BEHOEFTEN AAN \n50 MB GLASVEZEL EN EEN \nSATELLIETVERBINDING VOOR DE ESE HOSPITAL SAN JOSÉ \nDE GUADUAS, 5 MB VOOR HET GEZONDHEIDSCENTRUM \nVAN C",
+   "trEngine": "DeepL"
   },
   {
    "pub": "WB-OP00419124",
@@ -3057,7 +3240,8 @@
    "value": null,
    "currency": "USD",
    "firstSeen": "2000-01-01T00:00:00.000Z",
-   "titleNl": "Inkoop van 7 Starlink Kit voor Outer-eilanden"
+   "titleNl": "Aankoop van 7 Starlink-pakketten voor de buitenste eilanden",
+   "trEngine": "DeepL"
   },
   {
    "pub": "CO-CO1.REQ.9502787",
@@ -3074,7 +3258,8 @@
    "value": 5679130,
    "currency": "COP",
    "firstSeen": "2026-10-15T13:42:58.648Z",
-   "titleNl": "LEVERING VAN TOEGANGSCONTROLEAPPARATUUR EN CCTV-CAMERA 'S, VIDEOBEWAKINGSRECORDER, ANTENNE VOOR TOEGANG TOT STARLINK SATELLIET INTERNET EN UTP-KABEL X 305 MTS"
+   "titleNl": "LEVERING VAN TOEGANGSCONTROLEAPPARATUUR EN CCTV-CAMERA'S, VIDEOBEWAKINGSRECORDER, ANTENNE VOOR STARLINK-INTERNETTOEGANG VIA SATELLIET EN 305 METER UTP-KABEL",
+   "trEngine": "DeepL"
   },
   {
    "pub": "CO-CO1.REQ.9493728",
@@ -3091,7 +3276,8 @@
    "value": null,
    "currency": "COP",
    "firstSeen": "2026-10-15T13:42:58.648Z",
-   "titleNl": "HET CONTRACTEREN VAN DE LEVERING VAN 4 GPBS BANDBREEDTE DEDICATED INTERNET KANAALDIENSTEN, MET DERTIG (30) VASTE IP 'S; DE LEVERING VAN STARLINK ZAKELIJKE SATELLIETDIENST VOOR BEDIENING OP AFSTAND; EN DE VERWERVING VAN"
+   "titleNl": "HET AFSLUITEN VAN EEN OVEREENKOMST VOOR DE LEVERING VAN EEN TOEGEWIJDE INTERNETVERBINDING MET EEN BANDBREEDTE VAN 4 GPBS, MET DERTIG (30) VASTE IP-ADRESSEN; DE LEVERING VAN DE STARLINK BUSINESS-SATELLIETDIENST VOOR BEDRIJF OP AFSTAND; EN DE AANKOOP VAN",
+   "trEngine": "DeepL"
   },
   {
    "pub": "CO-CO1.REQ.9452241",
@@ -3108,7 +3294,8 @@
    "value": 1499510,
    "currency": "COP",
    "firstSeen": "2026-10-15T13:42:58.648Z",
-   "titleNl": "LEVERINGEN VAN HOOGWAARDIGE MATERIALEN, VOOR: INSTALLATIE EN CONFIGURATIE VAN STARLINK INTERNETANTENNE MET ZIJN RESPECTIEVE LOCATIE EN INSTALLATIE VAN ELEKTRISCHE BEDRADING EN DATANETWERK IN 3CER VLOERPLAFOND EN 1E VERDIEPING. SOPOR"
+   "titleNl": "LEVERING VAN HOOGWAARDIGE MATERIALEN, VOOR: INSTALLATIE EN CONFIGURATIE VAN DE STARLINK-INTERNETANTENNE MET DE BIJBEHORENDE PLAATSING EN AANLEG VAN ELEKTRISCHE BEDRADING EN DATANETWERK OP DE 3E VERDIEPING (DAK) EN DE 1E VERDIEPING. ONDERSTEUNING",
+   "trEngine": "DeepL"
   },
   {
    "pub": "CO-CO1.REQ.9433647",
@@ -3125,7 +3312,8 @@
    "value": 400312572,
    "currency": "COP",
    "firstSeen": "2026-10-15T13:42:58.648Z",
-   "titleNl": "STARLINK SPECIALE GLASVEZEL-, BREEDBAND- EN SATELLIETINTERNETDIENST VOOR DE UNIVERSITEIT VAN DE AMAZONE"
+   "titleNl": "SPECIFIEKE INTERNETDIENST VIA GLASVEZEL, BREEDBAND EN STARLINK-SATELLIET VOOR DE UNIVERSITEIT VAN DE AMAZONIE",
+   "trEngine": "DeepL"
   },
   {
    "pub": "827046-2025",
@@ -3161,7 +3349,8 @@
    "value": 62800000,
    "currency": "COP",
    "firstSeen": "2026-10-15T13:42:58.648Z",
-   "titleNl": "Overname van Starlink Mini Satellite Internet Kits voor de verschillende Valor + projecten en hun klanten."
+   "titleNl": "Aankoop van Starlink Mini-satellietinternetkits voor de verschillende projecten van Valor + en hun klanten.",
+   "trEngine": "DeepL"
   },
   {
    "pub": "815921-2025",
@@ -3196,7 +3385,9 @@
    "link": "https://community.secop.gov.co/Public/Tendering/OpportunityDetail/Index?noticeUID=CO1.NTC.9250382",
    "value": 117517260,
    "currency": "COP",
-   "firstSeen": "2026-10-15T13:42:58.648Z"
+   "firstSeen": "2026-10-15T13:42:58.648Z",
+   "titleNl": "AANKOOP VAN STARLINK-ANTENNES VOOR DE LEGEREENHEDEN TER VERSTERKING VAN DE OPERATIONELE CAPACITEITEN DOOR MIDDEL VAN TECHNOLOGISCHE INNOVATIE BIJ DE EENHEDEN VAN DE ZESDE BRIGADE, TEN BEHOEVE VAN DE VEILIGHEID VAN HET DEPVAN TOLIMA",
+   "trEngine": "DeepL"
   },
   {
    "pub": "TW-99024356-TTC-114210001435-1",
@@ -3212,7 +3403,9 @@
    "link": "https://pcc-api.openfun.app/index/case/99024356/TTC-114210001435-1/20251204/BDM-1-71035762",
    "value": null,
    "currency": "TWD",
-   "firstSeen": "2026-10-16T07:13:38.622Z"
+   "firstSeen": "2026-10-16T07:13:38.622Z",
+   "titleNl": "Aanbesteding voor het activeren van de MOCN-functionaliteit van basisstations en het testen van de integratie van het backhaul-netwerk voor satellieten in een lage baan – Eerste contractwijziging",
+   "trEngine": "DeepL"
   },
   {
    "pub": "TW-99024356-TTC-114210001435",
@@ -3228,7 +3421,9 @@
    "link": "https://pcc-api.openfun.app/index/case/99024356/TTC-114210001435/20251204/BDM-2-70981014",
    "value": null,
    "currency": "TWD",
-   "firstSeen": "2026-10-16T07:13:38.622Z"
+   "firstSeen": "2026-10-16T07:13:38.622Z",
+   "titleNl": "Aanbesteding voor het activeren van de MOCN-functionaliteit van basisstations en het testen van de integratie van het backhaul-netwerk voor satellieten in een lage baan",
+   "trEngine": "DeepL"
   },
   {
    "pub": "WB-OP00413058",
@@ -3247,7 +3442,9 @@
    "link": "https://projects.worldbank.org/en/projects-operations/procurement-detail/OP00413058",
    "value": null,
    "currency": "USD",
-   "firstSeen": "2000-01-01T00:00:00.000Z"
+   "firstSeen": "2000-01-01T00:00:00.000Z",
+   "titleNl": "Aankoop, installatie en onderhoud van 19 Starlink-sets voor het UCP, de URAT’s en de 10 proefscholen in de regio Maradi",
+   "trEngine": "DeepL"
   },
   {
    "pub": "WB-OP00412597",
@@ -3266,7 +3463,9 @@
    "link": "https://projects.worldbank.org/en/projects-operations/procurement-detail/OP00412597",
    "value": null,
    "currency": "USD",
-   "firstSeen": "2000-01-01T00:00:00.000Z"
+   "firstSeen": "2000-01-01T00:00:00.000Z",
+   "titleNl": "Aankoop van Starlink voor het kantoor in Savusavu",
+   "trEngine": "DeepL"
   },
   {
    "pub": "CO-CO1.REQ.9345216",
@@ -3282,7 +3481,9 @@
    "link": "https://community.secop.gov.co/Public/Tendering/OpportunityDetail/Index?noticeUID=CO1.NTC.9203239",
    "value": 1097090000,
    "currency": "COP",
-   "firstSeen": "2026-10-15T13:42:58.648Z"
+   "firstSeen": "2026-10-15T13:42:58.648Z",
+   "titleNl": "AANKOOP VAN STARLINK-SATELLIETANTENNES (MINI-KIT) MET INTERNETABONNEMENT, VOOR ANTIDRONE-SYSTEMEN VAN HET NATIONALE LEGER",
+   "trEngine": "DeepL"
   },
   {
    "pub": "CO-CO1.REQ.9334937",
@@ -3299,7 +3500,8 @@
    "value": 1097090000,
    "currency": "COP",
    "firstSeen": "2026-10-15T13:42:58.648Z",
-   "titleNl": "VERWERVING VAN STARLINK  KIT MINI SATELLIETANTENNES MET INTERNETCONNECTIVITEITSPLAN, VOOR ANTIDRONES-SYSTEMEN VAN HET NATIONALE LEGER"
+   "titleNl": "AANKOOP VAN STARLINK-SATELLIETANTENNES (MINI-KIT) MET INTERNETABONNEMENT, VOOR ANTIDRONE-SYSTEMEN VAN HET NATIONALE LEGER",
+   "trEngine": "DeepL"
   },
   {
    "pub": "774304-2025",
@@ -3372,7 +3574,8 @@
    "value": null,
    "currency": "COP",
    "firstSeen": "2026-10-15T13:42:58.648Z",
-   "titleNl": "VERWERVING van STARLINK MINI ANTENNES EN SATELLIET INTERNET SERVICE VOOR INFANTERIE BATALJON Nr. 8 BATTLE OF PICHINCHA"
+   "titleNl": "AANKOOP VAN STARLINK MINI-ANTENNES EN SATELLIETINTERNETDIENST VOOR HET 8e INFANTERIEBATALJON – SLAG BIJ PICHINCHA",
+   "trEngine": "DeepL"
   },
   {
    "pub": "CO-CO1.REQ.9259846",
@@ -3388,7 +3591,9 @@
    "link": "https://community.secop.gov.co/Public/Tendering/OpportunityDetail/Index?noticeUID=CO1.NTC.9121365",
    "value": 21900000,
    "currency": "COP",
-   "firstSeen": "2026-10-15T13:42:58.648Z"
+   "firstSeen": "2026-10-15T13:42:58.648Z",
+   "titleNl": "Het aanschaffen van antennes en de Starlink-satellietdienst als aanvullende verbindingsmogelijkheid voor het Centrum voor Natuurlijke Hulpbronnen, Industrie en Biodiversiteit.",
+   "trEngine": "DeepL"
   },
   {
    "pub": "CO-CO1.REQ.9258612",
@@ -3405,7 +3610,8 @@
    "value": 12579553,
    "currency": "COP",
    "firstSeen": "2026-10-15T13:42:58.648Z",
-   "titleNl": "HUUR DE STARLINK SATELLIET-INTERNETSERVICE EN HUUR DE APPARATUUR DIE NODIG IS VOOR DE PCH SAN JOSE DE LA MONTAÑA POWERHOUSE"
+   "titleNl": "AANMELDING VOOR DE STARLINK-SATELLIETINTERNETDIENST EN HET HUREN VAN DE BENODIGDE APPARATUUR VOOR DE MACHINEKAMER VAN DE SAN JOSE DE LA MONTAÑA-WATERKRACHT CENTRALE",
+   "trEngine": "DeepL"
   },
   {
    "pub": "CO-CO1.REQ.9252602",
@@ -3422,7 +3628,8 @@
    "value": 1097090000,
    "currency": "COP",
    "firstSeen": "2026-10-15T13:42:58.648Z",
-   "titleNl": "VERWERVING VAN STARLINK  KIT MINI SATELLIETANTENNES MET INTERNETCONNECTIVITEITSPLAN, VOOR ANTIDRONES-SYSTEMEN VAN HET NATIONALE LEGER"
+   "titleNl": "AANKOOP VAN STARLINK-SATELLIETANTENNES (MINI-KIT) MET INTERNETABONNEMENT, VOOR ANTIDRONE-SYSTEMEN VAN HET NATIONALE LEGER",
+   "trEngine": "DeepL"
   },
   {
    "pub": "TW-3.1.6-Q114-054",
@@ -3438,7 +3645,9 @@
    "link": "https://pcc-api.openfun.app/index/case/3.1.6/Q114-054/20251111/BDM-1-71013069",
    "value": null,
    "currency": "TWD",
-   "firstSeen": "2026-10-16T07:13:38.622Z"
+   "firstSeen": "2026-10-16T07:13:38.622Z",
+   "titleNl": "Het project voor communicatie via satellieten in een lage baan uit het 114e jaar",
+   "trEngine": "DeepL"
   },
   {
    "pub": "738555-2025",
@@ -3491,7 +3700,8 @@
    "value": null,
    "currency": "COP",
    "firstSeen": "2026-10-15T13:42:58.648Z",
-   "titleNl": "MARKTSTUDIE - PROCES 152 VERWERVING VAN ANTENNES EN STARLINK SATELLIET INTERNET SERVICE VOOR EENHEDEN VAN HET NATIONALE LEGER"
+   "titleNl": "MARKTONDERZOEK - PROCES 152 AANKOOP VAN ANTENNES EN STARLINK-SATELLIETINTERNETDIENST VOOR EENHEDEN VAN HET NATIONALE LEGER",
+   "trEngine": "DeepL"
   },
   {
    "pub": "700788-2025",
@@ -3526,7 +3736,9 @@
    "link": "https://pcc-api.openfun.app/index/case/3.10.90.19/11415000102/20251022/aaa-70999457",
    "value": null,
    "currency": "TWD",
-   "firstSeen": "2026-10-16T07:13:38.622Z"
+   "firstSeen": "2026-10-16T07:13:38.622Z",
+   "titleNl": "Een partij communicatiemodules voor satellieten in een lage baan, enz.",
+   "trEngine": "DeepL"
   },
   {
    "pub": "WB-OP00402198",
@@ -3545,7 +3757,9 @@
    "link": "https://projects.worldbank.org/en/projects-operations/procurement-detail/OP00402198",
    "value": null,
    "currency": "USD",
-   "firstSeen": "2000-01-01T00:00:00.000Z"
+   "firstSeen": "2000-01-01T00:00:00.000Z",
+   "titleNl": "Starlink-pakketten en maandelijks abonnement voor MEHRD-scholen",
+   "trEngine": "DeepL"
   },
   {
    "pub": "WB-OP00402053",
@@ -3564,7 +3778,9 @@
    "link": "https://projects.worldbank.org/en/projects-operations/procurement-detail/OP00402053",
    "value": null,
    "currency": "USD",
-   "firstSeen": "2000-01-01T00:00:00.000Z"
+   "firstSeen": "2000-01-01T00:00:00.000Z",
+   "titleNl": "Installatie van glasvezel, installatie van een videocompressiesysteem, installatie van IP-camera’s, installatie van een lokaal netwerk en andere apparatuur",
+   "trEngine": "DeepL"
   },
   {
    "pub": "WB-OP00401588",
@@ -3584,7 +3800,8 @@
    "value": null,
    "currency": "USD",
    "firstSeen": "2000-01-01T00:00:00.000Z",
-   "titleNl": "Aankoop van Starlink kits aangedreven door zonne-energie voor ANATS User Reception Centres (UAC's)"
+   "titleNl": "Aankoop van Starlink-kits op zonne-energie voor de gebruikerscentra (CAU) van de ANATS",
+   "trEngine": "DeepL"
   },
   {
    "pub": "WB-OP00400492",
@@ -3603,7 +3820,9 @@
    "link": "https://projects.worldbank.org/en/projects-operations/procurement-detail/OP00400492",
    "value": null,
    "currency": "USD",
-   "firstSeen": "2000-01-01T00:00:00.000Z"
+   "firstSeen": "2000-01-01T00:00:00.000Z",
+   "titleNl": "Internetverbinding: Aankoop en installatie van STARLINK-apparatuur en een jaarabonnement ten behoeve van de UGP en voor de vier antennes van het project",
+   "trEngine": "DeepL"
   },
   {
    "pub": "CO-CO1.REQ.9069377",
@@ -3620,7 +3839,8 @@
    "value": 2000000,
    "currency": "COP",
    "firstSeen": "2026-10-15T13:42:58.648Z",
-   "titleNl": "AANKOOP VAN STARLINK-KIT VOOR HET HOOFDKANTOOR VAN BETANIA VOLGENS BREUK"
+   "titleNl": "AANKOOP VAN EEN STARLINK-KIT VOOR HET HOOFDKANTOOR IN BETANIA VOLGENS FRACTURA",
+   "trEngine": "DeepL"
   },
   {
    "pub": "CO-CO1.REQ.9064427",
@@ -3637,7 +3857,8 @@
    "value": 17538088,
    "currency": "COP",
    "firstSeen": "2026-10-15T13:42:58.648Z",
-   "titleNl": "TOEGANGSDIENSTEN VERLENEN AAN \nINTERNET, CONFORM HET \nSPECIFIEKE BEHOEFTEN OP HET GEBIED VAN GLASVEZEL \n50 MB GLASVEZEL- EN SATELLIETVERBINDING VOOR \nHET ESE-ZIEKENHUIS SAN JOSÉ DE GUADUAS, \n5MB VOOR HET GEZONDHEIDSCENTRUM VAN \nC"
+   "titleNl": "HET VERLENEN VAN INTERNETTOEGANGSDIENSTEN, \nIN OVEREENSTEMMING MET DE \nSPECIFIEKE BEHOEFTEN AAN GLASVEZELVERBINDINGEN \nVAN 50 MB GLASVEZEL EN SATELLIETVERBINDING VOOR \nDE ESE HOSPITAL SAN JOSÉ DE GUADUAS, \n5 MB VOOR HET GEZONDHEIDSCENTRUM VAN \nC",
+   "trEngine": "DeepL"
   },
   {
    "pub": "CO-CO1.REQ.9017409",
@@ -3654,7 +3875,8 @@
    "value": 5443000,
    "currency": "COP",
    "firstSeen": "2026-10-15T13:42:58.648Z",
-   "titleNl": "AANKOOP VAN TECHNOLOGISCHE EN COMMUNICATIE-INFRASTRUCTUUR, WAARONDER EEN STARLINK-KIT, ROUTERS, WIFI-ADAPTERS EN OPSLAGEENHEDEN (VASTE SCHIJVEN), OM DE WERKING VAN HET KENNEDY ESE D-ZIEKENHUIS TE VERSTERKEN"
+   "titleNl": "AANKOOP VAN TECHNOLOGISCHE EN COMMUNICATIE-INFRASTRUCTUUR, WAARONDER EEN STARLINK-KIT, ROUTERS, WIFI-ADAPTERS EN OPSLAGUNITS (SSD'S), TER VERSTERKING VAN DE WERKING VAN HET KENNEDY-ZIEKENHUIS ESE D",
+   "trEngine": "DeepL"
   },
   {
    "pub": "CO-CO1.REQ.9000182",
@@ -3671,7 +3893,8 @@
    "value": 4698120,
    "currency": "COP",
    "firstSeen": "2026-10-15T13:42:58.648Z",
-   "titleNl": "Aankoop van Starlink satellietantenne accessoirekits voor de ontwikkeling van veldactiviteiten in overeenstemming met overeenkomst 24-057 in overeenstemming met het ingediende voorstel en de richtlijnen vastgesteld door de"
+   "titleNl": "Aankoop van accessoirepakketten voor Starlink-satellietantennes ten behoeve van veldwerk, in overeenstemming met overeenkomst 24-057 en conform het ingediende voorstel en de richtlijnen vastgesteld door de",
+   "trEngine": "DeepL"
   },
   {
    "pub": "CO-CO1.REQ.8982911",
@@ -3688,7 +3911,8 @@
    "value": null,
    "currency": "COP",
    "firstSeen": "2026-10-15T13:42:58.648Z",
-   "titleNl": "Contracteer de overname van Starlink-satellietkit en -service om hoge snelheid en connectiviteit met lage latentie te garanderen in de verschillende ESAP-hoofdkantoren in het hele land"
+   "titleNl": "Het afsluiten van een contract voor de aanschaf van een Starlink-pakket en satellietdienst, teneinde te zorgen voor een snelle verbinding met lage latentie op de verschillende vestigingen van de ESAP in het hele land",
+   "trEngine": "DeepL"
   },
   {
    "pub": "FR-25-102136",
@@ -3705,7 +3929,8 @@
    "value": null,
    "currency": "EUR",
    "firstSeen": "2026-10-15T13:42:58.648Z",
-   "titleNl": "Abonnementen op Starlink-services, reserveaccessoires en bijbehorende services."
+   "titleNl": "Abonnementen op Starlink-diensten, reserveonderdelen en aanverwante diensten.",
+   "trEngine": "DeepL"
   },
   {
    "pub": "WB-OP00378139",
@@ -3724,7 +3949,9 @@
    "link": "https://projects.worldbank.org/en/projects-operations/procurement-detail/OP00378139",
    "value": null,
    "currency": "USD",
-   "firstSeen": "2000-01-01T00:00:00.000Z"
+   "firstSeen": "2000-01-01T00:00:00.000Z",
+   "titleNl": "Het inschakelen van een dienstverlener voor het leveren van internetdiensten aan de gemeenten ter ondersteuning van de implementatie van PFM Smart",
+   "trEngine": "DeepL"
   },
   {
    "pub": "CO-CO1.REQ.8899467",
@@ -3741,7 +3968,8 @@
    "value": 28560000,
    "currency": "COP",
    "firstSeen": "2026-10-15T13:42:58.648Z",
-   "titleNl": "DE AANNEMER VERBINDT ZICH ERTOE MET RTVC DE VERHUURDIENST UIT TE VOEREN VAN TWEE (2) STARLINK SATELLIETPRODUCTIE-EENHEDEN VOOR NATIONAAL GEBRUIK MET HUN OVEREENKOMSTIGE INTERNETDIENSTEN MET EEN BANDBREEDTE VAN 1 TB DE"
+   "titleNl": "DE AANNEMER VERBINDT ZICH JEGENS RTVC TOT HET VERLENEN VAN DE VERHUURDIENST VAN TWEE (2) STARLINK-SATELLIETPRODUCTIE-EENHEDEN VOOR NATIONAAL GEBRUIK, MET DE BIJBEHORENDE INTERNETDIENSTEN MET EEN BANDBREEDTE VAN 1 TB, DE ",
+   "trEngine": "DeepL"
   },
   {
    "pub": "UA-UA-2026-10-15-012946-a",
@@ -3759,7 +3987,8 @@
    "currency": "UAH",
    "policyUA": true,
    "firstSeen": "2026-10-16T07:08:15.941Z",
-   "titleNl": "Starlink-terminal"
+   "titleNl": "Starlink-terminal",
+   "trEngine": "DeepL"
   },
   {
    "pub": "UA-UA-2026-10-13-004017-a",
@@ -3777,7 +4006,9 @@
    "currency": "UAH",
    "defense": true,
    "policyUA": true,
-   "firstSeen": "2026-10-15T13:42:58.648Z"
+   "firstSeen": "2026-10-15T13:42:58.648Z",
+   "titleNl": "Starlink Mini-satellietmodem",
+   "trEngine": "DeepL"
   },
   {
    "pub": "UA-UA-2026-10-10-000256-a",
@@ -3796,7 +4027,8 @@
    "defense": true,
    "policyUA": true,
    "firstSeen": "2026-10-15T13:42:58.648Z",
-   "titleNl": "Starlink Mini satellietmodem"
+   "titleNl": "Starlink Mini-satellietmodem",
+   "trEngine": "DeepL"
   },
   {
    "pub": "UA-UA-2026-10-10-000249-a",
@@ -3815,7 +4047,8 @@
    "defense": true,
    "policyUA": true,
    "firstSeen": "2026-10-15T13:42:58.648Z",
-   "titleNl": "Starlink Mini satellietmodem"
+   "titleNl": "Starlink Mini-satellietmodem",
+   "trEngine": "DeepL"
   },
   {
    "pub": "UA-UA-2026-10-14-009230-a",
@@ -3833,7 +4066,8 @@
    "currency": "UAH",
    "policyUA": true,
    "firstSeen": "2026-10-15T13:42:58.648Z",
-   "titleNl": "Starlink Standaard 4X Satelliet Modem"
+   "titleNl": "Starlink Standard 4X-satellietmodem",
+   "trEngine": "DeepL"
   },
   {
    "pub": "UA-UA-2026-10-15-014087-a",
@@ -3852,7 +4086,8 @@
    "defense": true,
    "policyUA": true,
    "firstSeen": "2026-10-16T07:08:15.941Z",
-   "titleNl": "Starlink Standaard 4X Satelliet Modem"
+   "titleNl": "Starlink Standard 4X-satellietmodem",
+   "trEngine": "DeepL"
   },
   {
    "pub": "UA-UA-2026-10-14-014519-a",
@@ -3871,7 +4106,8 @@
    "defense": true,
    "policyUA": true,
    "firstSeen": "2026-10-15T13:42:58.648Z",
-   "titleNl": "Starlink Internet Satelliet Mini Satelliet Modem"
+   "titleNl": "Starlink Internet Satellite Mini-satellietmodem",
+   "trEngine": "DeepL"
   },
   {
    "pub": "UA-UA-2026-10-14-011024-a",
@@ -3890,26 +4126,8 @@
    "defense": true,
    "policyUA": true,
    "firstSeen": "2026-10-15T13:42:58.648Z",
-   "titleNl": "Starlink Internet Satellite 3gen Satellietmodem"
-  },
-  {
-   "pub": "UA-UA-2026-10-14-014528-a",
-   "source": "Prozorro",
-   "title": "Супутниковий модем Starlink Internet Satellite 3 gen",
-   "buyer": "ВІЙСЬКОВА ЧАСТИНА А 4576",
-   "country": "UA",
-   "published": "",
-   "deadline": "2026-10-17",
-   "type": "Aankondiging opdracht",
-   "kind": "notice",
-   "cpv": [],
-   "link": "https://prozorro.gov.ua/tender/UA-2026-10-14-014528-a",
-   "value": 375000,
-   "currency": "UAH",
-   "defense": true,
-   "policyUA": true,
-   "firstSeen": "2026-10-15T13:42:58.648Z",
-   "titleNl": "Starlink Internet Satellite 3 gen Satellietmodem"
+   "titleNl": "Starlink Internet Satellite 3gen-satellietmodem ",
+   "trEngine": "DeepL"
   },
   {
    "pub": "UA-UA-2026-10-14-009976-a",
@@ -3928,7 +4146,28 @@
    "defense": true,
    "policyUA": true,
    "firstSeen": "2026-10-15T13:42:58.648Z",
-   "titleNl": "Starlink Internet Satellite 3 gen Satellietmodem"
+   "titleNl": "Starlink Internet Satellite 3e generatie satellietmodem",
+   "trEngine": "DeepL"
+  },
+  {
+   "pub": "UA-UA-2026-10-14-014528-a",
+   "source": "Prozorro",
+   "title": "Супутниковий модем Starlink Internet Satellite 3 gen",
+   "buyer": "ВІЙСЬКОВА ЧАСТИНА А 4576",
+   "country": "UA",
+   "published": "",
+   "deadline": "2026-10-17",
+   "type": "Aankondiging opdracht",
+   "kind": "notice",
+   "cpv": [],
+   "link": "https://prozorro.gov.ua/tender/UA-2026-10-14-014528-a",
+   "value": 375000,
+   "currency": "UAH",
+   "defense": true,
+   "policyUA": true,
+   "firstSeen": "2026-10-15T13:42:58.648Z",
+   "titleNl": "Starlink Internet Satellite 3 gen-satellietmodem",
+   "trEngine": "DeepL"
   },
   {
    "pub": "UA-UA-2026-10-13-012075-a",
@@ -3945,7 +4184,9 @@
    "value": 312500,
    "currency": "UAH",
    "policyUA": true,
-   "firstSeen": "2026-10-15T13:42:58.648Z"
+   "firstSeen": "2026-10-15T13:42:58.648Z",
+   "titleNl": "Satellietmodems (telecommunicatieapparatuur voor satellietcommunicatie (Starlink Mini-satellietmodem of gelijkwaardig))",
+   "trEngine": "DeepL"
   },
   {
    "pub": "UA-UA-2026-10-15-010005-a",
@@ -3963,7 +4204,8 @@
    "currency": "UAH",
    "policyUA": true,
    "firstSeen": "2026-10-15T13:42:58.648Z",
-   "titleNl": "32530000-7 - Telecommunicatiesatellietapparatuur \"Starlink satellietmodem\" (32531000-4)"
+   "titleNl": "32530000-7 - Telecommunicatieapparatuur voor satellietcommunicatie „Starlink-satellietmodem“ (32531000-4)",
+   "trEngine": "DeepL"
   },
   {
    "pub": "UA-UA-2026-10-15-002171-a",
@@ -3981,7 +4223,8 @@
    "currency": "UAH",
    "policyUA": true,
    "firstSeen": "2026-10-15T13:42:58.648Z",
-   "titleNl": "Satellietmodems Starlink Internet Satellite 3gen (volgens DK 021:2015 - 32530000-7 - Telecommunicatiesatellietapparatuur )"
+   "titleNl": "Starlink Internet Satellite 3gen-satellietmodems (volgens DK 021:2015 - 32530000-7 - Telecommunicatieapparatuur voor satellietgebruik)",
+   "trEngine": "DeepL"
   },
   {
    "pub": "UA-UA-2026-10-14-008562-a",
@@ -3999,7 +4242,8 @@
    "currency": "UAH",
    "policyUA": true,
    "firstSeen": "2026-10-15T13:42:58.648Z",
-   "titleNl": "Aankoop van apparatuur en langetermijnartikelen (Starlink Standard 4X satellietmodem) volgens DK 021-2015 (CPV) -32530000-7- Telecommunicatiesatellietapparatuur"
+   "titleNl": "Aankoop van apparatuur en duurzame goederen (Starlink Standard 4X-satellietmodem) overeenkomstig DK 021-2015 (CPV) -32530000-7 – Telecommunicatieapparatuur voor satellietgebruik",
+   "trEngine": "DeepL"
   },
   {
    "pub": "UA-UA-2026-10-14-006688-a",
@@ -4017,7 +4261,8 @@
    "currency": "UAH",
    "policyUA": true,
    "firstSeen": "2026-10-15T13:42:58.648Z",
-   "titleNl": "Aankoop van apparatuur en langetermijnartikelen (Starlink Standard 4X satellietmodem) volgens DK 021-2015 (CPV) -32530000-7- Telecommunicatiesatellietapparatuur"
+   "titleNl": "Aankoop van apparatuur en duurzame goederen (Starlink Standard 4X-satellietmodem) overeenkomstig DK 021-2015 (CPV) -32530000-7 – Telecommunicatieapparatuur voor satellietgebruik",
+   "trEngine": "DeepL"
   },
   {
    "source": "Prozorro",
@@ -4035,7 +4280,8 @@
    "currency": "UAH",
    "policyUA": true,
    "firstSeen": "2026-10-15T13:42:58.648Z",
-   "titleNl": "Starlink Mini satellietmodem"
+   "titleNl": "Starlink Mini-satellietmodem",
+   "trEngine": "DeepL"
   },
   {
    "source": "Prozorro",
@@ -4053,7 +4299,8 @@
    "currency": "UAH",
    "policyUA": true,
    "firstSeen": "2026-10-15T13:42:58.648Z",
-   "titleNl": "Starlink Internet Satellite 3gen Satellietmodem"
+   "titleNl": "Starlink Internet Satellite 3gen-satellietmodem",
+   "trEngine": "DeepL"
   }
  ]
 }
