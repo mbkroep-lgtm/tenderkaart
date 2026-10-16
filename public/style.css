@@ -241,3 +241,13 @@ footer{flex-direction:row;align-items:flex-start}
 .filters{grid-template-columns:minmax(180px,2fr) repeat(7,minmax(100px,1fr))}
 @media (max-width:1350px){.filters{grid-template-columns:repeat(4,minmax(0,1fr))}.filters .grow{grid-column:1/-1}}
 @media (max-width:600px){.filters{grid-template-columns:1fr 1fr}}
+
+.qty{font:600 12px var(--f-mono);font-variant-numeric:tabular-nums;color:#04101f;background:var(--beam-strong);border-radius:4px;padding:0 6px}
+
+/* ---- app installeren ---- */
+.install-tip{position:fixed;left:50%;bottom:calc(20px + env(safe-area-inset-bottom,0px));transform:translateX(-50%);z-index:60;width:min(380px,calc(100% - 32px));
+  background:var(--panel-2);border:1px solid var(--beam);border-radius:12px;padding:14px 16px;box-shadow:0 12px 34px rgba(0,0,0,.5);font-size:13px;color:var(--muted)}
+.install-tip p{margin:0 0 8px}.install-tip b{color:var(--ink)}
+.install-tip button{font-size:12px;padding:5px 12px}
+/* als app: ruimte voor de statusbalk van de telefoon */
+@media (display-mode: standalone){body{padding-top:calc(12px + env(safe-area-inset-top,0px))}.hint{display:none}}

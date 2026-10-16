@@ -308,7 +308,7 @@ function drawLabels(){
 const dlText = t => { const st = statusOf(t); return (st === "awarded" || st === "prior") ? leftText(t) : `Sluit ${fmt(t.deadline)} · ${leftText(t)}`; };
 const defHtml = t => (t.defense ? `<span class="deftag" title="Opdrachtgever is een defensie-organisatie">Defensie</span>` : "")
   + (t.policyUA && window.isAdmin ? `<span class="deftag ua" title="Beleid BroadbandEU">Oekraïne: bevestiging niet-militair gebruik nodig</span>` : "");
-const valHtml = t => t.value ? `<span class="val">${esc(fmtMoney(t.value, t.currency))}</span>` : "";
+const valHtml = t => (t.qty ? `<span class="qty" title="Aantal uit de titel gehaald">${t.qty}×</span>` : "") + (t.value ? `<span class="val">${esc(fmtMoney(t.value, t.currency))}</span>` : "");
 const newHtml = t => isNew(t) ? `<span class="newtag">NIEUW</span>` : "";
 function leftText(t){ const st = statusOf(t);
   if(st === "awarded") return "gegund"; if(st === "prior") return "vooraankondiging, inschrijven nog niet mogelijk";
@@ -337,6 +337,7 @@ const SORTERS = {
   deadline: (a,b) => (a.deadline || "9999").localeCompare(b.deadline || "9999"),
   pub: (a,b) => (b.published || "").localeCompare(a.published || ""),
   value: (a,b) => (b.value || -1) - (a.value || -1),
+  qty: (a,b) => (b.qty || 0) - (a.qty || 0) || (a.deadline || "9999").localeCompare(b.deadline || "9999"),
   country: (a,b) => cname(a.country).localeCompare(cname(b.country), "nl") || (a.deadline || "9999").localeCompare(b.deadline || "9999")
 };
 let loaded = false, loadError = false;

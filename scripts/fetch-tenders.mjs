@@ -720,6 +720,33 @@ for (const name of Object.keys(oldBySource)) if (!SOURCES.some(([n]) => n === na
   if (old.sources[name]) sourceInfo[name] = old.sources[name];
 }
 
+// ---------- Aantallen uit de titel halen (bv. "44 шт", "x4", "Diecisiete (17)", "6組") ----------
+const QTY_UNIT = '(?:шт\\.?|штук[аи]?|комплект(?:и|ів)?|stuks?|st\\.|units?|pcs\\.?|pieces?|kits?|sets?|terminals?|terminales?|antenn?as?|antennes?|modems?|módems?|unidades?|equipos?|abonnements?|subscriptions?|suscripciones?|licenses?|套|組|组|台|個|个|具)';
+const QTY_RES = [
+  new RegExp(`(?<![\\p{L}\\d./:-])(?<!(?:gen|rev|v|version|versie|модель)\\s?)(\\d{1,4})\\s*[-–]?\\s*${QTY_UNIT}(?![\\p{L}])`, 'giu'),   // 44 шт, 17 antenas, 6組 (niet: Gen 3-terminal)
+  new RegExp(`(?<![\\p{L}\\d])x\\s?(\\d{1,4})(?![\\d\\p{L}])`, 'giu'),                    // terminals x4
+  new RegExp(`\\p{L}{3,}\\s*\\((\\d{1,4})\\)`, 'gu'),                                       // Diecisiete (17)
+  new RegExp(`(?:кількість|aantal|quantity|cantidad)\\s*[:\\-–]?\\s*(\\d{1,4})`, 'giu')
+];
+function extractQty(text) {
+  if (!text) return null;
+  const found = [];
+  for (const re of QTY_RES) {
+    re.lastIndex = 0;
+    let m;
+    while ((m = re.exec(text))) {
+      const n = Number(m[1]);
+      if (n > 0 && n < 5000 && !(n >= 1990 && n <= 2100)) found.push({ n, at: m.index });
+    }
+  }
+  if (!found.length) return null;
+  // dezelfde plek niet dubbel tellen (bv. "Diecisiete (17) antenas")
+  found.sort((a, b) => a.at - b.at);
+  const uniq = [];
+  for (const f of found) if (!uniq.some(u => Math.abs(u.at - f.at) < 25 && u.n === f.n)) uniq.push(f);
+  return uniq.reduce((s, f) => s + f.n, 0);
+}
+
 // ---------- Vertalen naar het Nederlands ----------
 // Met DEEPL_API_KEY: DeepL (beste kwaliteit, gratis tot 500.000 tekens per maand).
 // Zonder sleutel: MyMemory (gratis, beperkt aantal tekens per dag; wat niet lukt, wordt de volgende ronde vertaald).
@@ -787,6 +814,7 @@ const tenders = result
 let trInfo;
 try { trInfo = await translateAll(tenders); } catch (e) { trInfo = { ok: false, at: nowIso, error: e.message }; }
 sourceInfo['Vertalen'] = trInfo;
+for (const t of tenders) { const q = extractQty(t.title) ?? extractQty(t.titleNl); if (q) t.qty = q; else delete t.qty; }
 await mkdir(new URL('../data/', import.meta.url), { recursive: true });
 await writeFile(FILE, JSON.stringify({ updated: nowIso, queryVersion: version, sources: sourceInfo, count: tenders.length, tenders }, null, 1) + '\n');
 const per = {}; tenders.forEach(t => per[t.source] = (per[t.source] || 0) + 1);
