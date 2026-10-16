@@ -1,106 +1,107 @@
 {
- "updated": "2026-10-16T14:14:56.816Z",
+ "updated": "2026-10-16T17:31:05.703Z",
  "queryVersion": "79a21b7991",
  "sources": {
   "TED": {
    "ok": true,
-   "at": "2026-10-16T14:14:56.816Z",
+   "at": "2026-10-16T17:31:05.703Z",
    "count": 40,
    "note": ""
   },
   "Wereldbank": {
    "ok": true,
-   "at": "2026-10-16T14:14:56.816Z",
+   "at": "2026-10-16T17:31:05.703Z",
    "count": 55,
    "note": "63 gevonden, 55 echt over LEO."
   },
   "Find a Tender": {
    "ok": true,
-   "at": "2026-10-16T14:14:56.816Z",
+   "at": "2026-10-16T17:31:05.703Z",
    "count": 0,
-   "note": "4 pagina's, 366 berichten bekeken, 0 over LEO.",
-   "since": "2026-10-16T12:14:56.816Z"
+   "note": "4 pagina's, 318 berichten bekeken, 0 over LEO.",
+   "since": "2026-10-16T15:31:05.703Z"
   },
   "Contracts Finder": {
    "ok": true,
-   "at": "2026-10-16T14:14:56.816Z",
+   "at": "2026-10-16T17:31:05.703Z",
    "count": 4,
    "note": "295 gevonden, 22 over LEO."
   },
   "TenderNed": {
    "ok": true,
-   "at": "2026-10-16T14:14:56.816Z",
+   "at": "2026-10-16T17:31:05.703Z",
    "count": 0,
    "note": "106 gevonden, 0 over LEO."
   },
   "Prozorro": {
    "ok": true,
-   "at": "2026-10-16T14:14:56.816Z",
-   "count": 59,
-   "note": "59 lopende procedures."
+   "at": "2026-10-16T17:31:05.703Z",
+   "count": 60,
+   "note": "60 lopende procedures."
   },
   "BOAMP": {
    "ok": true,
-   "at": "2026-10-16T14:14:56.816Z",
+   "at": "2026-10-16T17:31:05.703Z",
    "count": 1,
    "note": "5 gevonden, 1 over LEO."
   },
   "SIMAP (Zwitserland)": {
    "ok": true,
-   "at": "2026-10-16T14:14:56.816Z",
+   "at": "2026-10-16T17:31:05.703Z",
    "count": 0,
    "note": "20 gevonden, 0 over LEO."
   },
   "SECOP (Colombia)": {
    "ok": true,
-   "at": "2026-10-16T14:14:56.816Z",
+   "at": "2026-10-16T17:31:05.703Z",
    "count": 68,
    "note": "68 gevonden, 68 over LEO."
   },
   "PNCP (Brazilië)": {
    "ok": false,
    "error": "fetch failed",
-   "at": "2026-10-16T14:14:56.816Z"
+   "at": "2026-10-16T17:31:05.703Z"
   },
   "CanadaBuys": {
    "ok": true,
-   "at": "2026-10-16T14:14:56.816Z",
+   "at": "2026-10-16T17:31:05.703Z",
    "count": 1,
    "note": "892 open tenders bekeken, 1 over LEO."
   },
   "AusTender": {
-   "ok": true,
-   "at": "2026-10-16T14:14:56.816Z",
+   "ok": false,
+   "at": "2026-10-16T17:31:05.703Z",
    "count": 0,
    "note": "32 contracten bekeken, 0 over LEO.",
-   "since": "2026-10-16T12:14:56.816Z"
+   "since": "2026-10-16T12:14:56.816Z",
+   "error": "api.tenders.gov.au gaf 400: {\"errorCode\": 100, \"message\": \"No Records found for Date Range ['2026-10-16T12:14:56Z'-'2026-10-16T17:31:05Z']\"}"
   },
   "UNDP": {
    "ok": true,
-   "at": "2026-10-16T14:14:56.816Z",
+   "at": "2026-10-16T17:31:05.703Z",
    "count": 1,
    "note": "974 berichten bekeken, 1 over LEO."
   },
   "PCC (Taiwan)": {
    "ok": true,
-   "at": "2026-10-16T14:14:56.816Z",
+   "at": "2026-10-16T17:31:05.703Z",
    "count": 16,
    "note": "38 aanbestedingen over LEO."
   },
   "SAM.gov": {
    "ok": false,
    "error": "api.sam.gov gaf 429: {\"code\":\"900804\",\"message\":\"Message throttled out\",\"description\":\"You have exceeded your quota .You can access API after 2026-Oct-17 00:00:00+0000 UTC\",\"nextAccessTime\":\"2026-Oct-",
-   "at": "2026-10-16T14:14:56.816Z"
+   "at": "2026-10-16T17:31:05.703Z"
   },
   "Vertalen": {
    "ok": true,
-   "at": "2026-10-16T14:14:56.816Z",
-   "count": 3,
-   "note": "DeepL: 3 nieuw vertaald.",
+   "at": "2026-10-16T17:31:05.703Z",
+   "count": 1,
+   "note": "DeepL: 1 nieuw vertaald.",
    "engine": "DeepL"
   }
  },
- "count": 221,
+ "count": 222,
  "tenders": [
   {
    "pub": "UA-UA-2026-10-16-008743-a",
@@ -140,6 +141,27 @@
    "policyUA": true,
    "firstSeen": "2026-10-16T09:19:17.508Z",
    "titleNl": "32530000-7 — Telecommunicatieapparatuur voor satellietgebruik (Starlink-satellietpakket inclusief onderhoud)",
+   "trEngine": "DeepL"
+  },
+  {
+   "pub": "UA-UA-2026-10-16-012751-a",
+   "source": "Prozorro",
+   "title": "32530000-7 Телекомунікаційне супутникове обладнання (Термінал супутникового зв'язку Starlink Standart 4X з додатковим кабелем)",
+   "buyer": "Військова частина 2142",
+   "country": "UA",
+   "published": "2026-10-16",
+   "deadline": "2026-11-02",
+   "deadlineAt": "2026-11-02T06:00:00.000Z",
+   "type": "Aankondiging opdracht",
+   "kind": "notice",
+   "cpv": [],
+   "link": "https://prozorro.gov.ua/tender/UA-2026-10-16-012751-a",
+   "value": 645000,
+   "currency": "UAH",
+   "defense": true,
+   "policyUA": true,
+   "firstSeen": "2026-10-16T17:31:05.703Z",
+   "titleNl": "32530000-7 Telecommunicatieapparatuur voor satellietcommunicatie (Starlink Standard 4X-satellietterminal met extra kabel)",
    "trEngine": "DeepL"
   },
   {
@@ -613,6 +635,27 @@
    "trEngine": "DeepL"
   },
   {
+   "pub": "UA-UA-2026-10-10-000157-a",
+   "source": "Prozorro",
+   "title": "Супутниковий термінал Starlink Mini",
+   "buyer": "Військова частина А3814",
+   "country": "UA",
+   "published": "2026-10-10",
+   "deadline": "2026-10-20",
+   "deadlineAt": "2026-10-20T06:00:00.000Z",
+   "type": "Aankondiging opdracht",
+   "kind": "notice",
+   "cpv": [],
+   "link": "https://prozorro.gov.ua/tender/UA-2026-10-10-000157-a",
+   "value": 63000,
+   "currency": "UAH",
+   "defense": true,
+   "policyUA": true,
+   "firstSeen": "2026-10-15T13:42:58.648Z",
+   "titleNl": "Starlink Mini-satellietterminal",
+   "trEngine": "DeepL"
+  },
+  {
    "pub": "UA-UA-2026-10-10-000373-a",
    "source": "Prozorro",
    "title": "Супутникова система Starlink Mini ",
@@ -652,27 +695,6 @@
    "policyUA": true,
    "firstSeen": "2026-10-15T13:42:58.648Z",
    "titleNl": "Het Starlink Mini-satellietsysteem ",
-   "trEngine": "DeepL"
-  },
-  {
-   "pub": "UA-UA-2026-10-10-000157-a",
-   "source": "Prozorro",
-   "title": "Супутниковий термінал Starlink Mini",
-   "buyer": "Військова частина А3814",
-   "country": "UA",
-   "published": "2026-10-10",
-   "deadline": "2026-10-20",
-   "deadlineAt": "2026-10-20T06:00:00.000Z",
-   "type": "Aankondiging opdracht",
-   "kind": "notice",
-   "cpv": [],
-   "link": "https://prozorro.gov.ua/tender/UA-2026-10-10-000157-a",
-   "value": 63000,
-   "currency": "UAH",
-   "defense": true,
-   "policyUA": true,
-   "firstSeen": "2026-10-15T13:42:58.648Z",
-   "titleNl": "Starlink Mini-satellietterminal",
    "trEngine": "DeepL"
   },
   {
@@ -2883,24 +2905,6 @@
    "trEngine": "DeepL"
   },
   {
-   "pub": "TW-3.15.26-MPB1141205C005",
-   "source": "PCC (Taiwan)",
-   "title": "低軌道衛星輔助搜救系統維運後續設備處理案",
-   "buyer": "交通部航港局",
-   "country": "TW",
-   "published": "2026-02-25",
-   "deadline": "",
-   "type": "公開徵求廠商提供參考資料公告",
-   "kind": "prior",
-   "cpv": [],
-   "link": "https://pcc-api.openfun.app/index/case/3.15.26/MPB1141205C005/20260225/PPW-1-70093968",
-   "value": null,
-   "currency": "TWD",
-   "firstSeen": "2026-10-16T07:13:38.622Z",
-   "titleNl": "Voorstel voor de verdere afhandeling van apparatuur in het kader van het onderhoud en de exploitatie van het door satellieten in een lage baan ondersteunde zoek- en reddingssysteem",
-   "trEngine": "DeepL"
-  },
-  {
    "pub": "TW-3.82.13-1150000010",
    "source": "PCC (Taiwan)",
    "title": "新北市第二行政中心警察局低軌衛星設備搬遷及安裝",
@@ -2916,6 +2920,24 @@
    "currency": "TWD",
    "firstSeen": "2026-10-16T07:13:38.622Z",
    "titleNl": "Verhuizing en installatie van apparatuur voor lage-baan-satellieten bij het politiebureau van het tweede administratieve centrum van New Taipei City",
+   "trEngine": "DeepL"
+  },
+  {
+   "pub": "TW-3.15.26-MPB1141205C005",
+   "source": "PCC (Taiwan)",
+   "title": "低軌道衛星輔助搜救系統維運後續設備處理案",
+   "buyer": "交通部航港局",
+   "country": "TW",
+   "published": "2026-02-25",
+   "deadline": "",
+   "type": "公開徵求廠商提供參考資料公告",
+   "kind": "prior",
+   "cpv": [],
+   "link": "https://pcc-api.openfun.app/index/case/3.15.26/MPB1141205C005/20260225/PPW-1-70093968",
+   "value": null,
+   "currency": "TWD",
+   "firstSeen": "2026-10-16T07:13:38.622Z",
+   "titleNl": "Voorstel voor de verdere afhandeling van apparatuur in het kader van het onderhoud en de exploitatie van het door satellieten in een lage baan ondersteunde zoek- en reddingssysteem",
    "trEngine": "DeepL"
   },
   {
