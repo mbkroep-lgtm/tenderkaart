@@ -1,75 +1,280 @@
 {
- "taiwan_g0v": {
+ "低軌衛星": {
   "status": 403,
-  "type": "text/html; charset=UTF-8",
-  "length": 5531,
-  "start": "<!DOCTYPE html><html lang=\"en-US\"><head><title>Just a moment...</title><meta http-equiv=\"Content-Type\" content=\"text/html; charset=UTF-8\"><meta http-equiv=\"X-UA-Compatible\" content=\"IE=Edge\"><meta name=\"robots\" content=\"noindex,nofollow\"><meta name=\"viewport\" content=\"width=device-width,initial-scale=1\"><meta http-equiv=\"content-security-policy\" content=\"default-src &#39;none&#39;; script-src &#39;nonce-kXozzrlEVxBSfgmuVYFnO0&#39; &#39;unsafe-eval&#39; https://challenges.cloudflare.com; script-src-attr &#39;none&#39;; style-src &#39;unsafe-inline&#39;; img-src &#39;self&#39; https://challenges.cloudflare.com; connect-src &#39;self&#39; https://challenges.cloudflare.com; frame-src &#39;self&#39; https://challenges.cloudflare.com blob:; child-src &#39;self&#39; https://challenges.cloudflare.com blob:; worker-src blob:; form-action http: https:; base-uri &#39;self&#39;\"><style>*{box-sizing:border-box;margin:0;padding:0}html{line-height:1.15;-webkit-text-size-adjust:100%;color:#313131;font-family:system-ui,-apple-system,BlinkMacSystemFont,\"Segoe UI\",Roboto,\"Helvetica Neue\",Arial,\"Noto Sans\",sans-serif,\"Apple Color Emoji\",\"Segoe UI Emoji\",\"Segoe UI Symbol\",\"Noto Color Emoji\"}body{displa",
-  "hit": "n></div></noscript></div></div><script nonce=\"kXozzrlEVxBSfgmuVYFnO0\">(function(){window._cf_chl_opt = {cFPWv: 'b',cH: 'OBmUVd8TdRQMGMfXKGcgG1h7YPRmxys8fVD.1Mue.sw-1792134728-1.2.1.1-VqNwbIslBFHpBAS3VTsdSQ_mdbWpGxkSdtc3jgruQZJGlf7iT8ECvdN6P3Euy7x9',cITimeS: '1792134728',cN: 'kXozzrlEVxBSfgmuVYFnO0',cRay: 'a4b540e41bffad11',cTplC:0,cTplO:0,cTplV:5,cType: 'managed',cUPMDTk:\"/api/searchbytitle?query=starlink\\u0026__cf_chl_tk=A44OQczoIeaAMua9VUBJl2T_KZUrfDNRZTiKac9mMqg-1792134728-1.0.1.1-bODDUyiTL1slY.aOcVMPx7_FeSzBtIwRgy.Ix77ZuFw\",cvId: '3',cZone: 'pcc-api.openfun.app',fa:\"/api/searchbytitle?query=starlink\\u0026__cf_chl_f_tk=A44OQczoIeaAMua9VUBJl2T_KZUrfDNRZTiKac9mMqg-1792134728-1.0.1.1-bODDUyiTL1slY.aOcVMPx7_FeSzBtIwRgy.Ix77ZuFw\",md: 'IJL7aQkCAusWWZcxfMAd17AuykVOlpvVkZxUV1G9yw8-1792134728-1.2.1.1-Ay.d1GSmnLM42xjJRO74EBTS9a5KN_YaVU2jVz8mz0akOFN5gD8rvjT.h_VEjDAiECqI2uASK3pd2hoiIY9lYu1xxw4BIpe9rLkq6XYZU.SBWT9GyiyL9r6uSMQMhONfR3lzsFD9Cway0oV0uEx8Gamw6AshiWkft0qdjmIGeBcl6_HW5WG9qivCvEqlSPRwJF"
+  "start": "<!DOCTYPE html><html lang=\"en-US\"><head><title>Just a moment...</title><meta http-equiv=\"Content-Type\" content=\"text/html; charset=UTF-8\"><meta http-equiv=\"X-UA-Compatible\" content=\"IE=Edge\"><meta nam"
  },
- "taiwan_g0v_sat": {
+ "OneWeb": {
   "status": 200,
-  "type": "application/json",
-  "length": 94115,
-  "start": "{\"query\":\"\\\"\\u885b\\u661f\\\"\",\"page\":1,\"total_records\":10000,\"total_pages\":100,\"took\":0.1986830234527588,\"records\":[{\"date\":20261016,\"filename\":\"TIQ-11-71137212\",\"brief\":{\"type\":\"\\u516c\\u958b\\u53d6\\u5f97\\u5831\\u50f9\\u55ae\\u6216\\u4f01\\u5283\\u66f8\\u516c\\u544a\",\"title\":\"\\u885b\\u661f\\u96fb\\u8a716\\u7d44\",\"category\":\"\\u8ca1\\u7269\\u985e47-\\u6536\\u97f3\\u6a5f\\u3001\\u96fb\\u8996,\\u901a\\u8a0a\\u5668\\u6750\\u53ca\\u5100\\u5668\",\"companies\":{\"ids\":[],\"names\":[],\"id_key\":{},\"name_key\":{}}},\"job_number\":\"W11556\",\"unit_id\":\"3.9.26.3\",\"unit_name\":\"\\u570b\\u7acb\\u6210\\u529f\\u5927\\u5b78\\u91ab\\u5b78\\u9662\\u9644\\u8a2d\\u91ab\\u9662\",\"unit_api_url\":\"http:\\/\\/pcc-api.openfun.app\\/api\\/listbyunit?unit_id=3.9.26.3\",\"tender_api_url\":\"http:\\/\\/pcc-api.openfun.app\\/api\\/tender?unit_id=3.9.26.3&job_number=W11556\",\"unit_url\":\"\\/index\\/unit\\/3.9.26.3\",\"url\":\"\\/index\\/case\\/3.9.26.3\\/W11556\\/20261016\\/TIQ-11-71137212\"},{\"date\":20261016,\"filename\":\"TIQ-11-71137159\",\"brief\":{\"type\":\"\\u516c\\u958b\\u53d6\\u5f97\\u5831\\u50f9\\u55ae\\u6216\\u4f01\\u5283\\u66f8\\u516c\\u544a\",\"title\":\"\\u9ad8\\u89e3\\u6790\\u5ea6\\u5149\\u5b78\\u885b\\u661f\\u5f71\\u50cf\",\"category\":\"\\u8ca1\\u7269\\u985e482-\\u505a\\u70ba\\u6e2c\\u91cf\\u3001\\u6aa2\\u67e5\\u3001\\u822a\\u884c\\",
-  "hit": null
+  "total": 0,
+  "pages": 0,
+  "first": [],
+  "titles": []
  },
- "taiwan_pcc": {
+ "星鏈": {
   "status": 200,
-  "type": "text/html;charset=UTF-8",
-  "length": 59333,
-  "start": "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.01 Transitional//EN\" \"http://www.w3.org/TR/html4/loose.dtd\">\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n<html lang=\"zh-Hant-TW\" xml:lang=\"zh-tw\">\r\n<head>\r\n<meta charset=\"UTF-8\"/>\r\n<meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge\"/>\r\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\"/>\r\n<meta property=\"og:image\" content=\"/prkms/images/icon.gif\" />\r\n\r\n\r\n\r\n\r\n<title>政府電子採購網</title>\r\n<link rel=\"icon\" href=\"/prkms/images/icon.gif\">\r\n\r\n<!--練習區滑鼠跟隨游標CSS設定及是否「練習區」-->\r\n\r\n\r\n<!--練習區滑鼠跟隨游標CSS設定及是否「練習區」-->\r\n<script type=\"application/ld+json\">\r\n{\r\n  \"@context\": \"https://schema.org\",\r\n  \"@type\": \"WebSite\",\r\n  \"name\": \"政府電子採購網\",\r\n  \"alternateName\": [\"臺灣政府採購\", \"電子採購\", \"臺灣採購\", \"政府採購\", \"採購網\"],\r\n  \"url\": \"https://web.pcc.gov.tw\"\r\n}\r\n</script>\r\n<style>\r\ninput:focus {\r\n    color: #495057;\r\n    border-color: #80bdff;\r\n    outline: 0;\r\n    box-shadow: 0 0 0 0.2rem rgb(0 123 255 / 25%);\r\n}\r\n\r\ntextarea:focus {\r\n    color: #495057;\r\n    background-color: #fff;\r\n    border-color: #80bdff;\r\n    outline: 0;\r\n    box-shadow: 0 0 0 0.2rem rgb(0 123 255 / 25%);\r\n}\r\n\r\nselect:focus-visible {\r\n    color: #495057;\r\n    background-color: #fff;\r\n    border-color: #80bdff;\r\n    outline:",
-  "hit": null
+  "total": 9,
+  "pages": 1,
+  "first": [
+   {
+    "date": 20260515,
+    "filename": "BDM-1-71178833",
+    "brief": {
+     "type": "決標公告",
+     "title": "突擊艇衛星鏈路系統",
+     "companies": {
+      "ids": [
+       "27950876"
+      ],
+      "names": [
+       "中華電信股份有限公司企業客戶分公司"
+      ],
+      "id_key": {
+       "27950876": [
+        "投標廠商:投標廠商1:廠商代碼"
+       ]
+      },
+      "name_key": {
+       "中華電信股份有限公司企業客戶分公司": [
+        "投標廠商:投標廠商1:廠商名稱",
+        "決標品項:第1品項:得標廠商1:得標廠商"
+       ]
+      }
+     }
+    },
+    "job_number": "GF4-115015",
+    "unit_id": "A.7.31.1",
+    "unit_name": "臺灣銀行股份有限公司",
+    "unit_api_url": "http://pcc-api.openfun.app/api/listbyunit?unit_id=A.7.31.1",
+    "tender_api_url": "http://pcc-api.openfun.app/api/tender?unit_id=A.7.31.1&job_number=GF4-115015",
+    "unit_url": "/index/unit/A.7.31.1",
+    "url": "/index/case/A.7.31.1/GF4-115015/20260515/BDM-1-71178833"
+   },
+   {
+    "date": 20250917,
+    "filename": "PPW-1-70079038",
+    "brief": {
+     "type": "公開徵求廠商提供參考資料公告",
+     "title": "突擊艇衛星鏈路系統",
+     "companies": {
+      "ids": [],
+      "names": [],
+      "id_key": {},
+      "name_key": {}
+     }
+    },
+    "job_number": "CGIB115034",
+    "unit_id": "A.47.1.8",
+    "unit_name": "海洋委員會海巡署偵防分署",
+    "unit_api_url": "http://pcc-api.openfun.app/api/listbyunit?unit_id=A.47.1.8",
+    "tender_api_url": "http://pcc-api.openfun.app/api/tender?unit_id=A.47.1.8&job_number=CGIB115034",
+    "unit_url": "/index/unit/A.47.1.8",
+    "url": "/index/case/A.47.1.8/CGIB115034/20250917/PPW-1-70079038"
+   }
+  ],
+  "titles": [
+   [
+    20260515,
+    "決標公告",
+    "突擊艇衛星鏈路系統",
+    "臺灣銀行股份有限公司"
+   ],
+   [
+    20250917,
+    "公開徵求廠商提供參考資料公告",
+    "突擊艇衛星鏈路系統",
+    "海洋委員會海巡署偵防分署"
+   ],
+   [
+    20230524,
+    "決標公告",
+    "112年度設置星鏈網路設備財務採購",
+    "臺中市南屯區永春國民小學"
+   ],
+   [
+    20230509,
+    "公開招標公告",
+    "112年度設置星鏈網路設備財務採購",
+    "臺中市南屯區永春國民小學"
+   ],
+   [
+    20230509,
+    "無法決標公告",
+    "112年度設置星鏈網路設備財務採購",
+    "臺中市南屯區永春國民小學"
+   ],
+   [
+    20230424,
+    "公開招標公告",
+    "112年度設置星鏈網路設備財務採購",
+    "臺中市南屯區永春國民小學"
+   ],
+   [
+    20070409,
+    "決標公告",
+    "電離層閃爍對跳頻寬頻衛星鏈路之影響研究等1項",
+    "國防部軍備局中科院資訊通信研究所"
+   ],
+   [
+    20070316,
+    "公開取得報價單或企劃書公告",
+    "電離層閃爍對跳頻寬頻衛星鏈路之影響研究等1項",
+    "國防部軍備局中科院資訊通信研究所"
+   ],
+   [
+    20070303,
+    "公開取得報價單或企劃書公告",
+    "電離層閃爍對跳頻寬頻衛星鏈路之影響研究等1項",
+    "國防部軍備局中科院資訊通信研究所"
+   ]
+  ]
  },
- "adb_rss": {
-  "status": 403,
-  "type": "text/html; charset=UTF-8",
-  "length": 6129,
-  "start": "<!DOCTYPE html>\n<!--[if lt IE 7]> <html class=\"no-js ie6 oldie\" lang=\"en-US\"> <![endif]-->\n<!--[if IE 7]>    <html class=\"no-js ie7 oldie\" lang=\"en-US\"> <![endif]-->\n<!--[if IE 8]>    <html class=\"no-js ie8 oldie\" lang=\"en-US\"> <![endif]-->\n<!--[if gt IE 8]><!--> <html class=\"no-js\" lang=\"en-US\"> <!--<![endif]-->\n<head>\n<title>Attention Required! | Cloudflare</title>\n<meta charset=\"UTF-8\" />\n<meta http-equiv=\"Content-Type\" content=\"text/html; charset=UTF-8\" />\n<meta http-equiv=\"X-UA-Compatible\" content=\"IE=Edge\" />\n<meta name=\"robots\" content=\"noindex, nofollow\" />\n<meta name=\"viewport\" content=\"width=device-width,initial-scale=1\" />\n<link rel=\"stylesheet\" id=\"cf_styles-css\" href=\"/cdn-cgi/styles/cf.errors.css\" />\n<!--[if lt IE 9]><link rel=\"stylesheet\" id='cf_styles-ie-css' href=\"/cdn-cgi/styles/cf.errors.ie.css\" /><![endif]-->\n<style>body{margin:0;padding:0}</style>\n\n\n<!--[if gte IE 10]><!-->\n<script type=\"6df61027a2ad455d6a229a06-text/javascript\">\n  if (!navigator.cookieEnabled) {\n    window.addEventListener('DOMContentLoaded', function () {\n      var cookieEl = document.getElementById('cookie-alert');\n      cookieEl.style.display = 'block';\n    })\n  }\n</script>\n<!--<![endif]-->",
-  "hit": null
- },
- "adb_search": {
-  "status": 403,
-  "type": "text/html; charset=UTF-8",
-  "length": 6129,
-  "start": "<!DOCTYPE html>\n<!--[if lt IE 7]> <html class=\"no-js ie6 oldie\" lang=\"en-US\"> <![endif]-->\n<!--[if IE 7]>    <html class=\"no-js ie7 oldie\" lang=\"en-US\"> <![endif]-->\n<!--[if IE 8]>    <html class=\"no-js ie8 oldie\" lang=\"en-US\"> <![endif]-->\n<!--[if gt IE 8]><!--> <html class=\"no-js\" lang=\"en-US\"> <!--<![endif]-->\n<head>\n<title>Attention Required! | Cloudflare</title>\n<meta charset=\"UTF-8\" />\n<meta http-equiv=\"Content-Type\" content=\"text/html; charset=UTF-8\" />\n<meta http-equiv=\"X-UA-Compatible\" content=\"IE=Edge\" />\n<meta name=\"robots\" content=\"noindex, nofollow\" />\n<meta name=\"viewport\" content=\"width=device-width,initial-scale=1\" />\n<link rel=\"stylesheet\" id=\"cf_styles-css\" href=\"/cdn-cgi/styles/cf.errors.css\" />\n<!--[if lt IE 9]><link rel=\"stylesheet\" id='cf_styles-ie-css' href=\"/cdn-cgi/styles/cf.errors.ie.css\" /><![endif]-->\n<style>body{margin:0;padding:0}</style>\n\n\n<!--[if gte IE 10]><!-->\n<script type=\"64ee89ed1cc578dbb1b56b40-text/javascript\">\n  if (!navigator.cookieEnabled) {\n    window.addEventListener('DOMContentLoaded', function () {\n      var cookieEl = document.getElementById('cookie-alert');\n      cookieEl.style.display = 'block';\n    })\n  }\n</script>\n<!--<![endif]-->",
-  "hit": null
- },
- "afdb": {
-  "status": 403,
-  "type": "text/html; charset=UTF-8",
-  "length": 5655,
-  "start": "<!DOCTYPE html><html lang=\"en-US\"><head><title>Just a moment...</title><meta http-equiv=\"Content-Type\" content=\"text/html; charset=UTF-8\"><meta http-equiv=\"X-UA-Compatible\" content=\"IE=Edge\"><meta name=\"robots\" content=\"noindex,nofollow\"><meta name=\"viewport\" content=\"width=device-width,initial-scale=1\"><meta http-equiv=\"content-security-policy\" content=\"default-src &#39;none&#39;; script-src &#39;nonce-3BvaU86q93wH0cqrMSap29&#39; &#39;unsafe-eval&#39; https://challenges.cloudflare.com; script-src-attr &#39;none&#39;; style-src &#39;unsafe-inline&#39;; img-src &#39;self&#39; https://challenges.cloudflare.com; connect-src &#39;self&#39; https://challenges.cloudflare.com; frame-src &#39;self&#39; https://challenges.cloudflare.com blob:; child-src &#39;self&#39; https://challenges.cloudflare.com blob:; worker-src blob:; form-action http: https:; base-uri &#39;self&#39;\"><style>*{box-sizing:border-box;margin:0;padding:0}html{line-height:1.15;-webkit-text-size-adjust:100%;color:#313131;font-family:system-ui,-apple-system,BlinkMacSystemFont,\"Segoe UI\",Roboto,\"Helvetica Neue\",Arial,\"Noto Sans\",sans-serif,\"Apple Color Emoji\",\"Segoe UI Emoji\",\"Segoe UI Symbol\",\"Noto Color Emoji\"}body{displa",
-  "hit": null
- },
- "iadb": {
-  "status": 403,
-  "type": "text/html; charset=UTF-8",
-  "length": 5844,
-  "start": "<!DOCTYPE html>\n<!--[if lt IE 7]> <html class=\"no-js ie6 oldie\" lang=\"en-US\"> <![endif]-->\n<!--[if IE 7]>    <html class=\"no-js ie7 oldie\" lang=\"en-US\"> <![endif]-->\n<!--[if IE 8]>    <html class=\"no-js ie8 oldie\" lang=\"en-US\"> <![endif]-->\n<!--[if gt IE 8]><!--> <html class=\"no-js\" lang=\"en-US\"> <!--<![endif]-->\n<head>\n<title>Attention Required! | Cloudflare</title>\n<meta charset=\"UTF-8\" />\n<meta http-equiv=\"Content-Type\" content=\"text/html; charset=UTF-8\" />\n<meta http-equiv=\"X-UA-Compatible\" content=\"IE=Edge\" />\n<meta name=\"robots\" content=\"noindex, nofollow\" />\n<meta name=\"viewport\" content=\"width=device-width,initial-scale=1\" />\n<link rel=\"stylesheet\" id=\"cf_styles-css\" href=\"/cdn-cgi/styles/cf.errors.css\" />\n<!--[if lt IE 9]><link rel=\"stylesheet\" id='cf_styles-ie-css' href=\"/cdn-cgi/styles/cf.errors.ie.css\" /><![endif]-->\n<style>body{margin:0;padding:0}</style>\n\n\n<!--[if gte IE 10]><!-->\n<script>\n  if (!navigator.cookieEnabled) {\n    window.addEventListener('DOMContentLoaded', function () {\n      var cookieEl = document.getElementById('cookie-alert');\n      cookieEl.style.display = 'block';\n    })\n  }\n</script>\n<!--<![endif]-->\n\n</head>\n<body>\n  <div id=\"cf-wrapper\">\n    <di",
-  "hit": null
- },
- "maldives": {
-  "error": "fetch failed"
- },
- "timor": {
+ "Starlink": {
   "status": 200,
-  "type": "text/html;charset=UTF-8",
-  "length": 7441,
-  "start": "<!DOCTYPE html PUBLIC \"-//W3C//DTD XHTML 1.0 Transitional//EN\" \"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd\">\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n<html xmlns=\"http://www.w3.org/1999/xhtml\">\r\n\t<head>\r\n\t\t<title>Tender opportunities and awards</title>\r\n\t\t<meta http-equiv=\"Content-Type\" content=\"text/html; charset=UTF-8\" />\r\n\t\t<link rel=\"stylesheet\" type=\"text/css\" href=\"/css_files/reset.css\" media=\"screen\" />\r\n\t\t<link rel=\"stylesheet\" type=\"text/css\" href=\"/css_files/grid.css\" media=\"screen\" />\r\n\t\t<link rel=\"stylesheet\" type=\"text/css\" href=\"/css_files/wow.css\" media=\"screen\" />\r\n\t\t<link rel=\"stylesheet\" type=\"text/css\" href=\"/css_files/basic.css\" media=\"screen\" />\r\n\t\t<link rel=\"stylesheet\" type=\"text/css\" href=\"/css_files/components.css\" media=\"screen\" />\r\n\t\t<link rel=\"stylesheet\" type=\"text/css\" href=\"/css_files/top_menu.css\" media=\"screen\" />\r\n\t\t<link rel=\"stylesheet\" type=\"text/css\" href=\"/css_files/tables.css\" media=\"screen\" />\r\n\t\t<link rel=\"stylesheet\" type=\"text/css\" href=\"/css_files/jquery-ui-1.8.4.custom.css\" media=\"screen\" />\r\n\t\t\r\n\t\t<link rel=\"stylesheet\" type=\"text/css\" href=\"/ajax_themes/css;jsessionid=781C7B5F319C6199DECDF5EEBA3C1193\" media=\"screen\" />\r\n\t\t<script type=\"text/ja",
-  "hit": null
+  "total": 0,
+  "pages": 0,
+  "first": [],
+  "titles": []
  },
- "hk_data": {
-  "status": 404,
-  "type": "text/html; charset=utf-8",
-  "length": 2522,
-  "start": "\n<!DOCTYPE html>\n<html lang=\"en\">\n\n<head>\n    <meta charset=\"utf-8\">\n    <meta content=\"IE=edge\" http-equiv=\"X-UA-Compatible\">\n    <meta content=\"width=device-width, initial-scale=1, shrink-to-fit=no\" name=\"viewport\">\n    <link rel=\"apple-touch-icon\" sizes=\"180x180\" href=\"/assets/shared/img/favicon/apple-touch-icon.png\">\n    <link rel=\"icon\" type=\"image/png\" sizes=\"32x32\" href=\"/assets/shared/img/favicon/favicon-32x32.png\">\n    <link rel=\"icon\" type=\"image/png\" sizes=\"16x16\" href=\"/assets/shared/img/favicon/favicon-16x16.png\">\n    <link rel=\"manifest\" href=\"/assets/shared/img/favicon/site.webmanifest\" crossorigin=\"use-credentials\">\n    <link rel=\"shortcut icon\" href=\"/assets/shared/img/favicon/favicon.ico\">\n    <meta name=\"msapplication-TileColor\" content=\"#ffffff\">\n    <meta name=\"msapplication-config\" content=\"/assets/shared/img/favicon/browserconfig.xml\">\n    <meta name=\"theme-color\" content=\"#ffffff\">\n    <title>Page Not Found</title>\n    <link href=\"/assets/themes/main/css/style.css?v=1\" media=\"all\" rel=\"stylesheet\">\n    <link rel=\"stylesheet\" href=\"/assets/themes/main/css/bw-site.css?v=1\">\n  </head>\n\n  <body>\n    <div class=\"wrapper\">\n      <header class=\"page-head page-head-",
-  "hit": null
- },
- "openopps": {
+ "低軌": {
   "status": 200,
-  "type": "text/html",
-  "length": 452674,
-  "start": "<!DOCTYPE html><html lang=\"en\"> <head><meta charset=\"UTF-8\"><meta name=\"viewport\" content=\"width=device-width, initial-scale=1, maximum-scale=5\"><link rel=\"preconnect\" href=\"https://openopps-marketing-static.s3.eu-west-2.amazonaws.com\" crossorigin><link rel=\"preconnect\" href=\"https://www.googletagmanager.com\" crossorigin><link rel=\"preconnect\" href=\"https://bat.bing.net\" crossorigin><link rel=\"preload\" href=\"/_astro/the-future-regular.BpKlzT8_.woff2\" as=\"font\" type=\"font/woff2\" crossorigin><link rel=\"preload\" href=\"/_astro/the-future-bold.Cklauk-I.woff2\" as=\"font\" type=\"font/woff2\" crossorigin><link rel=\"shortcut icon\" href=\"https://openopps-marketing-static.s3.eu-west-2.amazonaws.com/68a13074-90c8-4269-84bc-78cac7a04fcb.png\"><meta name=\"msapplication-TileColor\" content=\"#000000\"><meta name=\"theme-color\" media=\"(prefers-color-scheme: light)\" content=\"#fff\"><meta name=\"theme-color\" media=\"(prefers-color-scheme: dark)\" content=\"#0d1b16\"><meta name=\"generator\" content=\"Astro v5.16.3\"><style>:root{ --font-primary: 'The Future', '_font_fallback_1160166333147', sans-serif; } :root{ --font-secondary: 'The Future', '_font_fallback_1163777526703', sans-serif; }</style><title>Government Data",
-  "hit": null
+  "total": 72,
+  "pages": 1,
+  "first": [
+   {
+    "date": 20261015,
+    "filename": "TIQ-1-71137040",
+    "brief": {
+     "type": "公開招標公告",
+     "title": "115年度臺北市市政大樓低軌衛星建置財物採購案",
+     "category": "財物類47-收音機、電視,通訊器材及儀器",
+     "companies": {
+      "ids": [],
+      "names": [],
+      "id_key": {},
+      "name_key": {}
+     }
+    },
+    "job_number": "115A25",
+    "unit_id": "3.79.1.3",
+    "unit_name": "臺北市市政大樓公共事務管理中心",
+    "unit_api_url": "http://pcc-api.openfun.app/api/listbyunit?unit_id=3.79.1.3",
+    "tender_api_url": "http://pcc-api.openfun.app/api/tender?unit_id=3.79.1.3&job_number=115A25",
+    "unit_url": "/index/unit/3.79.1.3",
+    "url": "/index/case/3.79.1.3/115A25/20261015/TIQ-1-71137040"
+   },
+   {
+    "date": 20261014,
+    "filename": "NAI-1-71304747",
+    "brief": {
+     "type": "無法決標公告",
+     "title": "115年度臺北市市政大樓低軌衛星建置財物採購案",
+     "companies": {
+      "ids": [],
+      "names": [],
+      "id_key": {},
+      "name_key": {}
+     }
+    },
+    "job_number": "115A25",
+    "unit_id": "3.79.1.3",
+    "unit_name": "臺北市市政大樓公共事務管理中心",
+    "unit_api_url": "http://pcc-api.openfun.app/api/listbyunit?unit_id=3.79.1.3",
+    "tender_api_url": "http://pcc-api.openfun.app/api/tender?unit_id=3.79.1.3&job_number=115A25",
+    "unit_url": "/index/unit/3.79.1.3",
+    "url": "/index/case/3.79.1.3/115A25/20261014/NAI-1-71304747"
+   }
+  ],
+  "titles": [
+   [
+    20261015,
+    "公開招標公告",
+    "115年度臺北市市政大樓低軌衛星建置財物採購案",
+    "臺北市市政大樓公共事務管理中心"
+   ],
+   [
+    20261014,
+    "無法決標公告",
+    "115年度臺北市市政大樓低軌衛星建置財物採購案",
+    "臺北市市政大樓公共事務管理中心"
+   ],
+   [
+    20261005,
+    "更正決標公告",
+    "115-116年度中分局低軌道衛星通訊服務採購案",
+    "交通部公路局中區養護工程分局"
+   ],
+   [
+    20261002,
+    "決標公告",
+    "115-116年度中分局低軌道衛星通訊服務採購案",
+    "交通部公路局中區養護工程分局"
+   ],
+   [
+    20261002,
+    "公開徵求廠商提供參考資料公告",
+    "116年度低軌衛星固定式終端設備",
+    "臺南市政府消防局"
+   ],
+   [
+    20261002,
+    "公開招標公告",
+    "115年度臺北市市政大樓低軌衛星建置財物採購案",
+    "臺北市市政大樓公共事務管理中心"
+   ],
+   [
+    20260921,
+    "決標公告",
+    "低軌衛星寬頻系統設備及服務量能強化採購案",
+    "海洋委員會海巡署艦隊分署"
+   ],
+   [
+    20260915,
+    "決標公告",
+    "全社會防禦韌性低軌衛星通聯設備",
+    "國立聯合大學"
+   ],
+   [
+    20260811,
+    "決標公告",
+    "115年度東、南沙地區低軌衛星站點維運服務流量加值",
+    "海洋委員會海巡署東南沙分署"
+   ],
+   [
+    20260731,
+    "公開招標公告",
+    "低軌衛星寬頻系統設備及服務量能強化採購案",
+    "海洋委員會海巡署艦隊分署"
+   ],
+   [
+    20260709,
+    "決標公告",
+    "115年度南橫公路山區路段交通設備通信改善低軌道衛星通訊服務建置案",
+    "交通部公路局南區養護工程分局"
+   ],
+   [
+    20260701,
+    "招標文件公開閱覽公告資料公告",
+    "低軌衛星寬頻系統設備及服務量能強化採購案",
+    ""
+   ],
+   [
+    20260626,
+    "公開招標公告",
+    "115年度南橫公路山區路段交通設備通信改善低軌道衛星通訊服務建置案",
+    "交通部公路局南區養護工程分局"
+   ],
+   [
+    20260612,
+    "公開招標更正公告",
+    "115年度南橫公路山區路段交通設備通信改善低軌道衛星通訊服務建置案",
+    "交通部公路局南區養護工程分局"
+   ],
+   [
+    20260611,
+    "更正決標公告",
+    "全社會防禦韌性低軌衛星通訊設備",
+    "國立聯合大學"
+   ]
+  ]
  }
 }
