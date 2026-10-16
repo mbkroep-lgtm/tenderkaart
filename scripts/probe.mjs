@@ -1,13 +1,7 @@
 import { writeFile } from 'node:fs/promises';
-const terms = ['低軌衛星', 'OneWeb', '星鏈', 'Starlink', '低軌'];
-const out = {};
-for (const q of terms) {
-  try {
-    const r = await fetch('https://pcc-api.openfun.app/api/searchbytitle?query=' + encodeURIComponent(q), { headers: { 'User-Agent': 'Mozilla/5.0 (tendermap)', Accept: 'application/json' }, signal: AbortSignal.timeout(30000) });
-    const t = await r.text();
-    let j = null; try { j = JSON.parse(t); } catch {}
-    out[q] = j ? { status: r.status, total: j.total_records, pages: j.total_pages, first: j.records?.slice(0, 2), titles: j.records?.slice(0, 15).map(x => [x.date, x.brief?.type, x.brief?.title, x.unit_name]) } : { status: r.status, start: t.slice(0, 200) };
-  } catch (e) { out[q] = { error: String(e.message || e) }; }
-  await new Promise(r => setTimeout(r, 1500));
-}
-await writeFile(new URL('../data/probe.json', import.meta.url), JSON.stringify(out, null, 1));
+const r = await fetch('https://prozorro.gov.ua/api/search/tenders', { method: 'POST', headers: { 'Content-Type': 'application/json', 'User-Agent': 'Mozilla/5.0 (tendermap)' }, body: JSON.stringify({ text: 'UA-2026-10-07-005482-a', page: 1 }) });
+const d = await r.json();
+const x = (d.data || []).find(t => t.tenderID === 'UA-2026-10-07-005482-a') || d.data?.[0];
+let full = null;
+try { const p = await fetch('https://prozorro.gov.ua/api/tenders/UA-2026-10-07-005482-a', { headers: { 'User-Agent': 'Mozilla/5.0' } }); full = (await p.text()).slice(0, 4000); } catch (e) { full = String(e); }
+await writeFile(new URL('../data/probe.json', import.meta.url), JSON.stringify({ search: x, full }, null, 1));
