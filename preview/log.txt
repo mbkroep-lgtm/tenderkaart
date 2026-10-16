@@ -1,0 +1,2 @@
+https://celestrak.org/NORAD/elements/gp.php?GROUP=starlink&FORMAT=tle: 1789536 tekens, begin: 'STARLINK-1008           \r\n1 44714U 19074B   26288.46864891  .00046196  00000+0  42815-3 0  9991\r\n2 44714  53.1449 204.56'
+10652 satellieten gelezen
