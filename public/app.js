@@ -170,7 +170,7 @@ let satCanvas = null, satCtx = null, satK = 1, satDpr = 1, satOx = 0, satOy = 0;
 function sizeSatCanvas(){
   const svg = $("map"); if(!satCanvas || !svg) return;
   const r = svg.getBoundingClientRect(), pr = satCanvas.parentElement.getBoundingClientRect(), pb = satCanvas.parentElement;
-  const w = r.width, h = r.height, dpr = Math.min(2, window.devicePixelRatio || 1);
+  const w = r.width, h = r.height, dpr = TV ? 1 : Math.min(2, window.devicePixelRatio || 1);   // tv: geen extra scherpte, scheelt veel rekenwerk
   satCanvas.style.left = (r.left - pr.left - pb.clientLeft) + "px"; satCanvas.style.top = (r.top - pr.top - pb.clientTop) + "px";
   satCanvas.style.width = w + "px"; satCanvas.style.height = h + "px";
   satCanvas.width = Math.round(w * dpr); satCanvas.height = Math.round(h * dpr);
@@ -208,11 +208,12 @@ function drawSats(){
   };
   const A = satCache.now, B = satCache.prev, n = satData.n, dots = new Float32Array(n * 2);
   let m = 0;
+  const trails = !TV;   // tv: geen spoortjes, alleen stipjes (veel lichter)
   satCtx.beginPath();
   for(let i = 0; i < n; i++){
     if(!place(A[2*i], A[2*i+1])) continue;
     const ax = pos[0], ay = pos[1]; dots[m++] = ax; dots[m++] = ay;
-    if(place(B[2*i], B[2*i+1]) && Math.abs(pos[0] - ax) + Math.abs(pos[1] - ay) < 80 * k){ satCtx.moveTo(pos[0], pos[1]); satCtx.lineTo(ax, ay); }
+    if(trails && place(B[2*i], B[2*i+1]) && Math.abs(pos[0] - ax) + Math.abs(pos[1] - ay) < 80 * k){ satCtx.moveTo(pos[0], pos[1]); satCtx.lineTo(ax, ay); }
   }
   const big = Math.max(0.55, Math.min(1, R * k / satDpr / 330));   // kleine bol (telefoon) = fijnere stipjes
   satCtx.lineWidth = 0.9 * satDpr * big; satCtx.strokeStyle = "rgba(150,205,255,.24)"; satCtx.stroke();
@@ -308,7 +309,7 @@ function redraw(){
   if(!proj) return;
   const s = proj.scale();
   const low = quality === "low";
-  proj.precision(low ? 1.5 : 0.4);
+  proj.precision(low ? (TV ? 2.5 : 1.5) : 0.4);
   const halo = $("map").querySelector(".halo");
   const [tx, ty] = proj.translate();
   if(halo){ halo.setAttribute("cx", tx); halo.setAttribute("cy", ty); halo.setAttribute("r", s * 1.08); }
@@ -321,7 +322,7 @@ function redraw(){
   if(nightGeo){ nightEl.setAttribute("d", gpath(nightGeo) || ""); twilightEl.setAttribute("d", gpath(twilightGeo) || ""); }
   drawSats();
   drawOffices();
-  if(low && !TV) labels.innerHTML = ""; else drawLabels();
+  if(low && !TV) hideLabels(); else drawLabels();
 }
 // tijdens bewegen licht tekenen, bij stilstand meteen weer gedetailleerd
 const scheduleRedraw = () => {
@@ -399,7 +400,7 @@ function setShift(open){
 }
 // bij klik op een land in de lijst: daarheen draaien
 function focusCountry(c){
-  const x = features.find(f => f.key === c);
+  const x = (featureByKey && featureByKey.get(c)) || features.find(f => f.key === c);
   if(x && x.centroid) flyTo([-x.centroid[0], -x.centroid[1], 0], Math.max(zoom, 2.2));
 }
 
@@ -418,26 +419,49 @@ function paintMap(){
   });
   drawLabels();
 }
+// bolletjes met aantallen: elementen hergebruiken in plaats van elke keer opnieuw maken (scheelt veel op tv's)
+const labelPool = new Map();   // land -> {ci, tx, ring}
+let featureByKey = null;
 function drawLabels(){
   if(!labels || !proj) return;
-  labels.innerHTML = "";
+  if(!featureByKey){ featureByKey = new Map(); for(const f of features) featureByKey.set(f.key, f); }
   const centre = proj.invert(proj.translate());
   const s = proj.scale();
-  Object.entries(counts).forEach(([c, n]) => {
-    const x = features.find(f => f.key === c); if(!x || !x.centroid) return;
-    if(d3.geoDistance(x.centroid, centre) > Math.PI/2 - 0.05) return;   // achterkant van de bol
-    const p = proj(x.centroid); if(!p) return;
-    // bolletje schaalt mee met de grootte van het land op het scherm
-    const r = Math.max(5, Math.min(16, Math.sqrt(x.area) * s * 0.28));
-    const ci = document.createElementNS(ns,"circle"); ci.setAttribute("cx",p[0]); ci.setAttribute("cy",p[1]); ci.setAttribute("r",r); ci.setAttribute("class","dot");
-    const tx = document.createElementNS(ns,"text"); tx.setAttribute("x",p[0]); tx.setAttribute("y",p[1]); tx.setAttribute("class","cnt"); tx.style.fontSize = (r*1.15) + "px"; tx.textContent = n > 99 ? "99+" : n;
-    labels.appendChild(ci); labels.appendChild(tx);
-    if(TV && freshCountries.has(c)){
-      const ring = document.createElementNS(ns,"circle"); ring.setAttribute("cx",p[0]); ring.setAttribute("cy",p[1]); ring.setAttribute("r",r); ring.setAttribute("class","pulse");
-      labels.insertBefore(ring, ci);
+  const seen = new Set();
+  for(const [c, n] of Object.entries(counts)){
+    const x = featureByKey.get(c); if(!x || !x.centroid) continue;
+    if(d3.geoDistance(x.centroid, centre) > Math.PI/2 - 0.05) continue;   // achterkant van de bol
+    const p = proj(x.centroid); if(!p) continue;
+    seen.add(c);
+    let L = labelPool.get(c);
+    if(!L){
+      const ci = document.createElementNS(ns,"circle"); ci.setAttribute("class","dot");
+      const tx = document.createElementNS(ns,"text"); tx.setAttribute("class","cnt");
+      labels.appendChild(ci); labels.appendChild(tx);
+      L = {ci, tx, ring:null, n:-1, r:-1}; labelPool.set(c, L);
     }
-  });
+    // bolletje schaalt mee met de grootte van het land op het scherm
+    const r = Math.round(Math.max(5, Math.min(16, Math.sqrt(x.area) * s * 0.28)) * 2) / 2;
+    const px = p[0].toFixed(1), py = p[1].toFixed(1);
+    L.ci.setAttribute("cx", px); L.ci.setAttribute("cy", py);
+    L.tx.setAttribute("x", px); L.tx.setAttribute("y", py);
+    if(L.r !== r){ L.r = r; L.ci.setAttribute("r", r); L.tx.style.fontSize = (r*1.15) + "px"; }
+    if(L.n !== n){ L.n = n; L.tx.textContent = n > 99 ? "99+" : n; }
+    L.ci.style.display = L.tx.style.display = "";
+    const wantRing = TV && freshCountries.has(c);
+    if(wantRing && !L.ring){ L.ring = document.createElementNS(ns,"circle"); L.ring.setAttribute("class","pulse"); labels.insertBefore(L.ring, L.ci); }
+    if(L.ring){
+      L.ring.style.display = wantRing ? "" : "none";
+      if(wantRing){ L.ring.setAttribute("cx", px); L.ring.setAttribute("cy", py); L.ring.setAttribute("r", r); }
+    }
+  }
+  for(const [c, L] of labelPool){
+    if(seen.has(c)) continue;
+    L.ci.style.display = L.tx.style.display = "none";
+    if(L.ring) L.ring.style.display = "none";
+  }
 }
+function hideLabels(){ for(const L of labelPool.values()){ L.ci.style.display = L.tx.style.display = "none"; if(L.ring) L.ring.style.display = "none"; } }
 let freshCountries = new Set();
 
 function drawOffices(){
@@ -603,21 +627,30 @@ function startTv(){
   const endDrag = () => { if(dragging){ dragging = false; svg.classList.remove("dragging"); } };
   ["pointerup","pointercancel","blur"].forEach(ev => addEventListener(ev, endDrag));
   document.addEventListener("fullscreenchange", endDrag);
-  // langzaam draaien (ongeveer 3 minuten per rondje); een fout mag het draaien nooit stoppen
-  let last = performance.now(), lastFrame = Date.now();
+  // langzaam draaien (ongeveer 3 minuten per rondje); een fout mag het draaien nooit stoppen.
+  // Tv's hebben een trage processor: niet elk beeldje tekenen, maar hooguit ~20 keer per seconde,
+  // en vanzelf minder vaak als het tekenen langzaam gaat. Het draaien blijft even snel (gaat op tijd, niet op beeldjes).
+  let last = performance.now(), lastFrame = Date.now(), lastDraw = 0, avgCost = 0, gap = 50;
   const spin = now => {
     lastFrame = Date.now();
     try {
-      const dt = Math.min(100, now - last); last = now;
-      if(proj && Date.now() > tvPausedUntil && !dragging){
-        const r = proj.rotate(); proj.rotate([r[0] + dt * 0.002, r[1] + (-28 - r[1]) * 0.002, 0]);
-        if(zoom > 1.05 || zoom < 0.9){ zoom += (0.98 - zoom) * 0.01; proj.scale(s0 * zoom); }
-        quality = "low"; redraw();
+      if(now - lastDraw >= gap){
+        const dt = Math.min(250, now - last); last = now; lastDraw = now;
+        if(proj && Date.now() > tvPausedUntil && !dragging){
+          const t0 = performance.now();
+          const r = proj.rotate(); proj.rotate([r[0] + dt * 0.002, r[1] + (-28 - r[1]) * Math.min(1, dt * 0.00012), 0]);
+          if(zoom > 1.05 || zoom < 0.9){ zoom += (0.98 - zoom) * Math.min(1, dt * 0.0006); proj.scale(s0 * zoom); }
+          quality = "low"; redraw();
+          const cost = performance.now() - t0;
+          avgCost = avgCost ? avgCost * 0.9 + cost * 0.1 : cost;
+          gap = Math.max(50, Math.min(200, avgCost * 2.5));   // 20 tot 5 beeldjes per seconde, afhankelijk van het scherm
+        }
       }
     } catch(e) { console.error(e); }
     requestAnimationFrame(spin);
   };
   requestAnimationFrame(spin);
+  window.__tvStats = () => ({avgCostMs: +avgCost.toFixed(1), fps: +(1000 / gap).toFixed(1)});
   // vangnet: als het scherm een tijd niets heeft getekend (bv. na slaapstand), opnieuw starten
   setInterval(() => { if(Date.now() - lastFrame > 5000 && document.visibilityState === "visible"){ last = performance.now(); requestAnimationFrame(spin); } }, 5000);
   document.addEventListener("visibilitychange", () => { last = performance.now(); if(document.visibilityState === "visible") keepAwake(); });
