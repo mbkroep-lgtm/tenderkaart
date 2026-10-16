@@ -718,7 +718,9 @@ for (const name of Object.keys(oldBySource)) if (!SOURCES.some(([n]) => n === na
 const DUTCH_SOURCES = new Set(['TED', 'TenderNed']);
 const SRC_LANG = { 'Prozorro': 'uk', 'SECOP (Colombia)': 'es', 'PNCP (Brazilië)': 'pt', 'BOAMP': 'fr', 'SIMAP (Zwitserland)': 'de', 'PCC (Taiwan)': 'zh-TW',
   'Contracts Finder': 'en', 'Find a Tender': 'en', 'SAM.gov': 'en', 'CanadaBuys': 'en', 'AusTender': 'en' };
-const trCache = new Map((old.tenders || []).filter(t => t.titleNl).map(t => [t.title, t.titleNl]));
+// Met DeepL-sleutel: oudere MyMemory-vertalingen eenmalig opnieuw vertalen met DeepL (betere kwaliteit).
+const TR_ENGINE = process.env.DEEPL_API_KEY ? 'DeepL' : 'MyMemory';
+const trCache = new Map((old.tenders || []).filter(t => t.titleNl && (TR_ENGINE === 'MyMemory' || t.trEngine === 'DeepL')).map(t => [t.title, t.titleNl]));
 async function deepl(texts, key) {
   const host = key.endsWith(':fx') ? 'https://api-free.deepl.com' : 'https://api.deepl.com';
   const body = new URLSearchParams(); texts.forEach(t => body.append('text', t)); body.append('target_lang', 'NL');
@@ -741,7 +743,7 @@ async function translateAll(list) {
   const todo = [];
   for (const t of list) {
     if (DUTCH_SOURCES.has(t.source) || !t.title) continue;
-    if (trCache.has(t.title)) { t.titleNl = trCache.get(t.title); continue; }
+    if (trCache.has(t.title)) { t.titleNl = trCache.get(t.title); t.trEngine = TR_ENGINE; continue; }
     todo.push(t);
   }
   // nieuwste en open berichten eerst
@@ -751,13 +753,13 @@ async function translateAll(list) {
   if (key) {
     for (let i = 0; i < todo.length; i += 40) {
       const chunk = todo.slice(i, i + 40);
-      try { const tr = await deepl(chunk.map(t => t.title.slice(0, 1000)), key); chunk.forEach((t, j) => { if (tr[j]) { t.titleNl = tr[j]; trCache.set(t.title, tr[j]); done++; } }); }
+      try { const tr = await deepl(chunk.map(t => t.title.slice(0, 1000)), key); chunk.forEach((t, j) => { if (tr[j]) { t.titleNl = tr[j]; t.trEngine = 'DeepL'; trCache.set(t.title, tr[j]); done++; } }); }
       catch (e) { console.warn('DeepL:', e.message); failed += chunk.length; break; }
     }
   } else {
     for (const t of todo) {
       if (quota) break;
-      try { const tr = await mymemory(t.title, SRC_LANG[t.source]); if (tr && tr.toLowerCase() !== t.title.toLowerCase()) { t.titleNl = tr; trCache.set(t.title, tr); } done++; }
+      try { const tr = await mymemory(t.title, SRC_LANG[t.source]); if (tr && tr.toLowerCase() !== t.title.toLowerCase()) { t.titleNl = tr; t.trEngine = 'MyMemory'; trCache.set(t.title, tr); } done++; }
       catch (e) { if (e.quota) quota = true; else failed++; }
       await sleep(300);
     }
