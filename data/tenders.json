@@ -1,91 +1,85 @@
 {
- "updated": "2026-10-16T07:08:15.941Z",
+ "updated": "2026-10-16T07:09:30.401Z",
  "queryVersion": "79a21b7991",
  "sources": {
   "TED": {
    "ok": true,
-   "at": "2026-10-16T07:08:15.941Z",
+   "at": "2026-10-16T07:09:30.401Z",
    "count": 40,
    "note": ""
   },
   "Wereldbank": {
    "ok": true,
-   "at": "2026-10-16T07:08:15.941Z",
+   "at": "2026-10-16T07:09:30.401Z",
    "count": 55,
    "note": "63 gevonden, 55 echt over LEO."
   },
   "Find a Tender": {
    "ok": true,
-   "at": "2026-10-16T07:08:15.941Z",
+   "at": "2026-10-16T07:09:30.401Z",
    "count": 0,
-   "note": "4 pagina's, 304 berichten bekeken, 0 over LEO.",
-   "since": "2026-10-16T05:08:15.941Z"
+   "note": "1 pagina's, 7 berichten bekeken, 0 over LEO.",
+   "since": "2026-10-16T05:09:30.401Z"
   },
   "Contracts Finder": {
    "ok": true,
-   "at": "2026-10-16T07:08:15.941Z",
+   "at": "2026-10-16T07:09:30.401Z",
    "count": 4,
    "note": "295 gevonden, 22 over LEO."
   },
   "TenderNed": {
    "ok": true,
-   "at": "2026-10-16T07:08:15.941Z",
+   "at": "2026-10-16T07:09:30.401Z",
    "count": 0,
    "note": "106 gevonden, 0 over LEO."
   },
   "Prozorro": {
    "ok": true,
-   "at": "2026-10-16T07:08:15.941Z",
+   "at": "2026-10-16T07:09:30.401Z",
    "count": 55,
    "note": "55 lopende procedures."
   },
   "BOAMP": {
    "ok": true,
-   "at": "2026-10-16T07:08:15.941Z",
+   "at": "2026-10-16T07:09:30.401Z",
    "count": 1,
    "note": "5 gevonden, 1 over LEO."
   },
   "SIMAP (Zwitserland)": {
    "ok": true,
-   "at": "2026-10-16T07:08:15.941Z",
+   "at": "2026-10-16T07:09:30.401Z",
    "count": 0,
    "note": "20 gevonden, 0 over LEO."
   },
   "SECOP (Colombia)": {
    "ok": true,
-   "at": "2026-10-16T07:08:15.941Z",
+   "at": "2026-10-16T07:09:30.401Z",
    "count": 68,
    "note": "68 gevonden, 68 over LEO."
   },
   "PNCP (Brazilië)": {
    "ok": false,
    "error": "fetch failed",
-   "at": "2026-10-16T07:08:15.941Z"
+   "at": "2026-10-16T07:09:30.401Z"
   },
   "CanadaBuys": {
    "ok": true,
-   "at": "2026-10-16T07:08:15.941Z",
+   "at": "2026-10-16T07:09:30.401Z",
    "count": 0,
    "note": "906 open tenders bekeken, 0 over LEO."
   },
   "AusTender": {
    "ok": true,
-   "at": "2026-10-16T07:08:15.941Z",
+   "at": "2026-10-16T07:09:30.401Z",
    "count": 0,
-   "note": "100 contracten bekeken, 0 over LEO.",
-   "since": "2026-10-16T05:08:15.941Z"
+   "note": "14 contracten bekeken, 0 over LEO.",
+   "since": "2026-10-16T05:09:30.401Z"
   },
   "UNDP": {
    "ok": true,
-   "at": "2026-10-16T07:08:15.941Z",
+   "at": "2026-10-16T07:09:30.401Z",
    "count": 1,
    "note": "974 berichten bekeken, 1 over LEO."
-  },
-  "SAM.gov": {
-   "ok": true,
-   "at": "2026-10-16T07:08:15.941Z",
-   "count": 0,
-   "note": "0 gevonden, 0 over LEO."
   }
  },
  "count": 204,
@@ -1721,25 +1715,6 @@
    "firstSeen": "2026-10-15T13:42:58.648Z"
   },
   {
-   "pub": "WB-OP00449674",
-   "source": "Wereldbank",
-   "title": "Acquisition, installation et maintenance de 191 kits Starlink et composants d’extension réseau pour les 3 nouvelles DREN, les 9 Ecoles Normales et 179 inspections prioritaires dotées de tablettes",
-   "buyer": "Niger Learning Improvement for Results in Education Project",
-   "country": "NE",
-   "countryName": "Niger",
-   "published": "2026-06-08",
-   "deadline": "",
-   "type": "Contract Award",
-   "kind": "award",
-   "cpv": [],
-   "wbGroup": "GO",
-   "wbMethod": "RFQ",
-   "link": "https://projects.worldbank.org/en/projects-operations/procurement-detail/OP00449674",
-   "value": null,
-   "currency": "USD",
-   "firstSeen": "2000-01-01T00:00:00.000Z"
-  },
-  {
    "pub": "WB-OP00449676",
    "source": "Wereldbank",
    "title": "Acquisition, installation et maintenance de 191 kits Starlink et composants d’extension réseau pour les 3 nouvelles DREN, les 9 Ecoles Normales et 179 inspections prioritaires dotées de tablettes",
@@ -1754,6 +1729,25 @@
    "wbGroup": "GO",
    "wbMethod": "RFQ",
    "link": "https://projects.worldbank.org/en/projects-operations/procurement-detail/OP00449676",
+   "value": null,
+   "currency": "USD",
+   "firstSeen": "2000-01-01T00:00:00.000Z"
+  },
+  {
+   "pub": "WB-OP00449674",
+   "source": "Wereldbank",
+   "title": "Acquisition, installation et maintenance de 191 kits Starlink et composants d’extension réseau pour les 3 nouvelles DREN, les 9 Ecoles Normales et 179 inspections prioritaires dotées de tablettes",
+   "buyer": "Niger Learning Improvement for Results in Education Project",
+   "country": "NE",
+   "countryName": "Niger",
+   "published": "2026-06-08",
+   "deadline": "",
+   "type": "Contract Award",
+   "kind": "award",
+   "cpv": [],
+   "wbGroup": "GO",
+   "wbMethod": "RFQ",
+   "link": "https://projects.worldbank.org/en/projects-operations/procurement-detail/OP00449674",
    "value": null,
    "currency": "USD",
    "firstSeen": "2000-01-01T00:00:00.000Z"
@@ -3445,6 +3439,23 @@
    "firstSeen": "2026-10-15T13:42:58.648Z"
   },
   {
+   "pub": "UA-UA-2026-10-14-009230-a",
+   "source": "Prozorro",
+   "title": "Супутниковий модем Starlink Standard 4X",
+   "buyer": "ВЕЛИКОГАЇВСЬКА СІЛЬСЬКА РАДА",
+   "country": "UA",
+   "published": "",
+   "deadline": "2026-10-19",
+   "type": "Aankondiging opdracht",
+   "kind": "notice",
+   "cpv": [],
+   "link": "https://prozorro.gov.ua/tender/UA-2026-10-14-009230-a",
+   "value": 140000,
+   "currency": "UAH",
+   "policyUA": true,
+   "firstSeen": "2026-10-15T13:42:58.648Z"
+  },
+  {
    "pub": "UA-UA-2026-10-15-014087-a",
    "source": "Prozorro",
    "title": "Супутниковий модем Starlink Standard 4X",
@@ -3461,23 +3472,6 @@
    "defense": true,
    "policyUA": true,
    "firstSeen": "2026-10-16T07:08:15.941Z"
-  },
-  {
-   "pub": "UA-UA-2026-10-14-009230-a",
-   "source": "Prozorro",
-   "title": "Супутниковий модем Starlink Standard 4X",
-   "buyer": "ВЕЛИКОГАЇВСЬКА СІЛЬСЬКА РАДА",
-   "country": "UA",
-   "published": "",
-   "deadline": "2026-10-19",
-   "type": "Aankondiging opdracht",
-   "kind": "notice",
-   "cpv": [],
-   "link": "https://prozorro.gov.ua/tender/UA-2026-10-14-009230-a",
-   "value": 140000,
-   "currency": "UAH",
-   "policyUA": true,
-   "firstSeen": "2026-10-15T13:42:58.648Z"
   },
   {
    "pub": "UA-UA-2026-10-14-014519-a",
@@ -3516,24 +3510,6 @@
    "firstSeen": "2026-10-15T13:42:58.648Z"
   },
   {
-   "pub": "UA-UA-2026-10-14-009976-a",
-   "source": "Prozorro",
-   "title": "Cупутниковий модем Starlink Internet Satellite 3 gen",
-   "buyer": "УПРАВЛІННЯ 2 КОРПУСУ НАЦІОНАЛЬНОЇ ГВАРДІЇ УКРАЇНИ \"ХАРТІЯ\" (ВІЙСЬКОВА ЧАСТИНА 4125)",
-   "country": "UA",
-   "published": "",
-   "deadline": "2026-10-17",
-   "type": "Aankondiging opdracht",
-   "kind": "notice",
-   "cpv": [],
-   "link": "https://prozorro.gov.ua/tender/UA-2026-10-14-009976-a",
-   "value": 226660,
-   "currency": "UAH",
-   "defense": true,
-   "policyUA": true,
-   "firstSeen": "2026-10-15T13:42:58.648Z"
-  },
-  {
    "pub": "UA-UA-2026-10-14-014528-a",
    "source": "Prozorro",
    "title": "Супутниковий модем Starlink Internet Satellite 3 gen",
@@ -3546,6 +3522,24 @@
    "cpv": [],
    "link": "https://prozorro.gov.ua/tender/UA-2026-10-14-014528-a",
    "value": 375000,
+   "currency": "UAH",
+   "defense": true,
+   "policyUA": true,
+   "firstSeen": "2026-10-15T13:42:58.648Z"
+  },
+  {
+   "pub": "UA-UA-2026-10-14-009976-a",
+   "source": "Prozorro",
+   "title": "Cупутниковий модем Starlink Internet Satellite 3 gen",
+   "buyer": "УПРАВЛІННЯ 2 КОРПУСУ НАЦІОНАЛЬНОЇ ГВАРДІЇ УКРАЇНИ \"ХАРТІЯ\" (ВІЙСЬКОВА ЧАСТИНА 4125)",
+   "country": "UA",
+   "published": "",
+   "deadline": "2026-10-17",
+   "type": "Aankondiging opdracht",
+   "kind": "notice",
+   "cpv": [],
+   "link": "https://prozorro.gov.ua/tender/UA-2026-10-14-009976-a",
+   "value": 226660,
    "currency": "UAH",
    "defense": true,
    "policyUA": true,
