@@ -1,107 +1,127 @@
 {
- "updated": "2026-10-16T09:54:34.526Z",
+ "updated": "2026-10-16T14:14:56.816Z",
  "queryVersion": "79a21b7991",
  "sources": {
   "TED": {
    "ok": true,
-   "at": "2026-10-16T09:54:34.526Z",
+   "at": "2026-10-16T14:14:56.816Z",
    "count": 40,
    "note": ""
   },
   "Wereldbank": {
    "ok": true,
-   "at": "2026-10-16T09:54:34.526Z",
+   "at": "2026-10-16T14:14:56.816Z",
    "count": 55,
    "note": "63 gevonden, 55 echt over LEO."
   },
   "Find a Tender": {
    "ok": true,
-   "at": "2026-10-16T09:54:34.526Z",
+   "at": "2026-10-16T14:14:56.816Z",
    "count": 0,
-   "note": "2 pagina's, 105 berichten bekeken, 0 over LEO.",
-   "since": "2026-10-16T07:54:34.526Z"
+   "note": "4 pagina's, 366 berichten bekeken, 0 over LEO.",
+   "since": "2026-10-16T12:14:56.816Z"
   },
   "Contracts Finder": {
    "ok": true,
-   "at": "2026-10-16T09:54:34.526Z",
+   "at": "2026-10-16T14:14:56.816Z",
    "count": 4,
    "note": "295 gevonden, 22 over LEO."
   },
   "TenderNed": {
    "ok": true,
-   "at": "2026-10-16T09:54:34.526Z",
+   "at": "2026-10-16T14:14:56.816Z",
    "count": 0,
    "note": "106 gevonden, 0 over LEO."
   },
   "Prozorro": {
    "ok": true,
-   "at": "2026-10-16T09:54:34.526Z",
-   "count": 56,
-   "note": "56 lopende procedures."
+   "at": "2026-10-16T14:14:56.816Z",
+   "count": 59,
+   "note": "59 lopende procedures."
   },
   "BOAMP": {
    "ok": true,
-   "at": "2026-10-16T09:54:34.526Z",
+   "at": "2026-10-16T14:14:56.816Z",
    "count": 1,
    "note": "5 gevonden, 1 over LEO."
   },
   "SIMAP (Zwitserland)": {
    "ok": true,
-   "at": "2026-10-16T09:54:34.526Z",
+   "at": "2026-10-16T14:14:56.816Z",
    "count": 0,
    "note": "20 gevonden, 0 over LEO."
   },
   "SECOP (Colombia)": {
    "ok": true,
-   "at": "2026-10-16T09:54:34.526Z",
+   "at": "2026-10-16T14:14:56.816Z",
    "count": 68,
    "note": "68 gevonden, 68 over LEO."
   },
   "PNCP (Brazilië)": {
    "ok": false,
    "error": "fetch failed",
-   "at": "2026-10-16T09:54:34.526Z"
+   "at": "2026-10-16T14:14:56.816Z"
   },
   "CanadaBuys": {
    "ok": true,
-   "at": "2026-10-16T09:54:34.526Z",
-   "count": 0,
-   "note": "906 open tenders bekeken, 0 over LEO."
+   "at": "2026-10-16T14:14:56.816Z",
+   "count": 1,
+   "note": "892 open tenders bekeken, 1 over LEO."
   },
   "AusTender": {
    "ok": true,
-   "at": "2026-10-16T09:54:34.526Z",
+   "at": "2026-10-16T14:14:56.816Z",
    "count": 0,
    "note": "32 contracten bekeken, 0 over LEO.",
-   "since": "2026-10-16T07:54:34.526Z"
+   "since": "2026-10-16T12:14:56.816Z"
   },
   "UNDP": {
    "ok": true,
-   "at": "2026-10-16T09:54:34.526Z",
+   "at": "2026-10-16T14:14:56.816Z",
    "count": 1,
    "note": "974 berichten bekeken, 1 over LEO."
   },
   "PCC (Taiwan)": {
    "ok": true,
-   "at": "2026-10-16T09:54:34.526Z",
+   "at": "2026-10-16T14:14:56.816Z",
    "count": 16,
    "note": "38 aanbestedingen over LEO."
   },
   "SAM.gov": {
    "ok": false,
    "error": "api.sam.gov gaf 429: {\"code\":\"900804\",\"message\":\"Message throttled out\",\"description\":\"You have exceeded your quota .You can access API after 2026-Oct-17 00:00:00+0000 UTC\",\"nextAccessTime\":\"2026-Oct-",
-   "at": "2026-10-16T09:54:34.526Z"
+   "at": "2026-10-16T14:14:56.816Z"
   },
   "Vertalen": {
    "ok": true,
-   "at": "2026-10-16T09:54:34.526Z",
-   "count": 0,
-   "note": "DeepL: 0 nieuw vertaald.",
+   "at": "2026-10-16T14:14:56.816Z",
+   "count": 3,
+   "note": "DeepL: 3 nieuw vertaald.",
    "engine": "DeepL"
   }
  },
- "count": 217,
+ "count": 221,
  "tenders": [
+  {
+   "pub": "UA-UA-2026-10-16-008743-a",
+   "source": "Prozorro",
+   "title": "Послуги з підключення до мережі супутникового зв'язку Starlink (підтримка, ведення, обслуговування та управління акаунтом Starlink)",
+   "buyer": "ФІЛІЯ \"ЦЕНТРАЛЬНИЙ ЛІСОВИЙ ОФІС\" ДЕРЖАВНОГО СПЕЦІАЛІЗОВАНОГО ГОСПОДАРСЬКОГО ПІДПРИЄМСТВА \"ЛІСИ УКРАЇНИ\"",
+   "country": "UA",
+   "published": "2026-10-16",
+   "deadline": "2026-11-01",
+   "deadlineAt": "2026-10-31T22:00:00.000Z",
+   "type": "Aankondiging opdracht",
+   "kind": "notice",
+   "cpv": [],
+   "link": "https://prozorro.gov.ua/tender/UA-2026-10-16-008743-a",
+   "value": 1039568,
+   "currency": "UAH",
+   "policyUA": true,
+   "firstSeen": "2026-10-16T14:14:56.816Z",
+   "titleNl": "Diensten voor aansluiting op het Starlink-satellietnetwerk (ondersteuning, beheer, onderhoud en het beheren van een Starlink-account)",
+   "trEngine": "DeepL"
+  },
   {
    "pub": "UA-UA-2026-10-16-002348-a",
    "source": "Prozorro",
@@ -120,6 +140,48 @@
    "policyUA": true,
    "firstSeen": "2026-10-16T09:19:17.508Z",
    "titleNl": "32530000-7 — Telecommunicatieapparatuur voor satellietgebruik (Starlink-satellietpakket inclusief onderhoud)",
+   "trEngine": "DeepL"
+  },
+  {
+   "pub": "UA-UA-2026-10-16-007247-a",
+   "source": "Prozorro",
+   "title": "Супутниковий модем Starlink Internet Satellite Gen3 Rev4\nЗгідно ДК 021:2015 32530000-7 - Телекомунікаційне супутникове обладнання",
+   "buyer": "Військова частина А5044",
+   "country": "UA",
+   "published": "2026-10-16",
+   "deadline": "2026-10-27",
+   "deadlineAt": "2026-10-27T13:26:00.000Z",
+   "type": "Aankondiging opdracht",
+   "kind": "notice",
+   "cpv": [],
+   "link": "https://prozorro.gov.ua/tender/UA-2026-10-16-007247-a",
+   "value": 677770,
+   "currency": "UAH",
+   "defense": true,
+   "policyUA": true,
+   "firstSeen": "2026-10-16T14:14:56.816Z",
+   "titleNl": "Starlink Internet Satellite Gen3 Rev4-satellietmodem\nVolgens DK 021:2015 32530000-7 – Telecommunicatieapparatuur voor satellietgebruik",
+   "trEngine": "DeepL"
+  },
+  {
+   "pub": "UA-UA-2026-10-16-008506-a",
+   "source": "Prozorro",
+   "title": "Телекомунікаційне супутникове обладнання",
+   "buyer": "Військова частина Т0960",
+   "country": "UA",
+   "published": "2026-10-16",
+   "deadline": "2026-10-27",
+   "deadlineAt": "2026-10-27T12:11:00.000Z",
+   "type": "Aankondiging opdracht",
+   "kind": "notice",
+   "cpv": [],
+   "link": "https://prozorro.gov.ua/tender/UA-2026-10-16-008506-a",
+   "value": 213063,
+   "currency": "UAH",
+   "defense": true,
+   "policyUA": true,
+   "firstSeen": "2026-10-16T14:14:56.816Z",
+   "titleNl": "Telecommunicatieapparatuur voor satellietcommunicatie",
    "trEngine": "DeepL"
   },
   {
@@ -161,6 +223,27 @@
    "defense": true,
    "policyUA": true,
    "firstSeen": "2026-10-16T09:19:17.508Z",
+   "titleNl": "Telecommunicatieapparatuur voor satellietcommunicatie",
+   "trEngine": "DeepL"
+  },
+  {
+   "pub": "UA-UA-2026-10-16-012174-a",
+   "source": "Prozorro",
+   "title": "Телекомунікаційне супутникове обладнання",
+   "buyer": "Військова частина Т0960",
+   "country": "UA",
+   "published": "2026-10-16",
+   "deadline": "2026-10-28",
+   "deadlineAt": "2026-10-28T14:33:00.000Z",
+   "type": "Aankondiging opdracht",
+   "kind": "notice",
+   "cpv": [],
+   "link": "https://prozorro.gov.ua/tender/UA-2026-10-16-012174-a",
+   "value": 64392,
+   "currency": "UAH",
+   "defense": true,
+   "policyUA": true,
+   "firstSeen": "2026-10-16T14:14:56.816Z",
    "titleNl": "Telecommunicatieapparatuur voor satellietcommunicatie",
    "trEngine": "DeepL"
   },
@@ -4062,27 +4145,6 @@
    "trEngine": "DeepL"
   },
   {
-   "pub": "UA-UA-2026-10-13-004017-a",
-   "source": "Prozorro",
-   "title": "Супутниковий модем Starlink Mini",
-   "buyer": "ДЕРЖАВНА ОРГАНІЗАЦІЯ (УСТАНОВА, ЗАКЛАД) 10 МОБІЛЬНИЙ ПРИКОРДОННИЙ ЗАГІН ДЕРЖАВНОЇ ПРИКОРДОННОЇ СЛУЖБИ УКРАЇНИ (ВІЙСЬКОВА ЧАСТИНА 1496)",
-   "country": "UA",
-   "published": "",
-   "deadline": "2026-10-16",
-   "deadlineAt": "2026-10-15T21:00:00.000Z",
-   "type": "In beoordeling",
-   "kind": "award",
-   "cpv": [],
-   "link": "https://prozorro.gov.ua/tender/UA-2026-10-13-004017-a",
-   "value": 328700,
-   "currency": "UAH",
-   "defense": true,
-   "policyUA": true,
-   "firstSeen": "2026-10-15T13:42:58.648Z",
-   "titleNl": "Starlink Mini-satellietmodem",
-   "trEngine": "DeepL"
-  },
-  {
    "pub": "UA-UA-2026-10-10-000256-a",
    "source": "Prozorro",
    "title": "Супутниковий модем Starlink Mini",
@@ -4125,26 +4187,6 @@
    "trEngine": "DeepL"
   },
   {
-   "pub": "UA-UA-2026-10-14-009230-a",
-   "source": "Prozorro",
-   "title": "Супутниковий модем Starlink Standard 4X",
-   "buyer": "ВЕЛИКОГАЇВСЬКА СІЛЬСЬКА РАДА",
-   "country": "UA",
-   "published": "",
-   "deadline": "2026-10-19",
-   "deadlineAt": "2026-10-19T06:00:00.000Z",
-   "type": "Aankondiging opdracht",
-   "kind": "notice",
-   "cpv": [],
-   "link": "https://prozorro.gov.ua/tender/UA-2026-10-14-009230-a",
-   "value": 140000,
-   "currency": "UAH",
-   "policyUA": true,
-   "firstSeen": "2026-10-15T13:42:58.648Z",
-   "titleNl": "Starlink Standard 4X-satellietmodem",
-   "trEngine": "DeepL"
-  },
-  {
    "pub": "UA-UA-2026-10-15-014087-a",
    "source": "Prozorro",
    "title": "Супутниковий модем Starlink Standard 4X",
@@ -4162,6 +4204,26 @@
    "defense": true,
    "policyUA": true,
    "firstSeen": "2026-10-16T07:08:15.941Z",
+   "titleNl": "Starlink Standard 4X-satellietmodem",
+   "trEngine": "DeepL"
+  },
+  {
+   "pub": "UA-UA-2026-10-14-009230-a",
+   "source": "Prozorro",
+   "title": "Супутниковий модем Starlink Standard 4X",
+   "buyer": "ВЕЛИКОГАЇВСЬКА СІЛЬСЬКА РАДА",
+   "country": "UA",
+   "published": "",
+   "deadline": "2026-10-19",
+   "deadlineAt": "2026-10-19T06:00:00.000Z",
+   "type": "Aankondiging opdracht",
+   "kind": "notice",
+   "cpv": [],
+   "link": "https://prozorro.gov.ua/tender/UA-2026-10-14-009230-a",
+   "value": 140000,
+   "currency": "UAH",
+   "policyUA": true,
+   "firstSeen": "2026-10-15T13:42:58.648Z",
    "titleNl": "Starlink Standard 4X-satellietmodem",
    "trEngine": "DeepL"
   },
@@ -4290,6 +4352,26 @@
    "trEngine": "DeepL"
   },
   {
+   "pub": "UA-UA-2026-10-14-008562-a",
+   "source": "Prozorro",
+   "title": "Придбання обладнання і предметів довгострокового користування (супутниковий модем Starlink Standard 4X) згідно ДК 021-2015 (CPV) -32530000-7- Телекомунікаційне супутникове обладнання",
+   "buyer": "Комунальний  заклад \"Кіноконцертний зал ім.О.Довженка\"",
+   "country": "UA",
+   "published": "",
+   "deadline": "2026-10-20",
+   "deadlineAt": "2026-10-20T11:00:00.000Z",
+   "type": "Aankondiging opdracht",
+   "kind": "notice",
+   "cpv": [],
+   "link": "https://prozorro.gov.ua/tender/UA-2026-10-14-008562-a",
+   "value": 23000,
+   "currency": "UAH",
+   "policyUA": true,
+   "firstSeen": "2026-10-15T13:42:58.648Z",
+   "titleNl": "Aankoop van apparatuur en duurzame goederen (Starlink Standard 4X-satellietmodem) overeenkomstig DK 021-2015 (CPV) -32530000-7 – Telecommunicatieapparatuur voor satellietgebruik",
+   "trEngine": "DeepL"
+  },
+  {
    "pub": "UA-UA-2026-10-14-006688-a",
    "source": "Prozorro",
    "title": "Придбання обладнання і предметів довгострокового користування (супутниковий модем Starlink Standard 4X) згідно ДК 021-2015 (CPV) -32530000-7- Телекомунікаційне супутникове обладнання",
@@ -4310,23 +4392,21 @@
    "trEngine": "DeepL"
   },
   {
-   "pub": "UA-UA-2026-10-14-008562-a",
-   "source": "Prozorro",
-   "title": "Придбання обладнання і предметів довгострокового користування (супутниковий модем Starlink Standard 4X) згідно ДК 021-2015 (CPV) -32530000-7- Телекомунікаційне супутникове обладнання",
-   "buyer": "Комунальний  заклад \"Кіноконцертний зал ім.О.Довженка\"",
-   "country": "UA",
+   "pub": "CA-SSC-26-00035176:T",
+   "source": "CanadaBuys",
+   "title": "Lightspeed satellite services",
+   "buyer": "Shared Services Canada",
+   "country": "CA",
    "published": "",
-   "deadline": "2026-10-20",
-   "deadlineAt": "2026-10-20T11:00:00.000Z",
-   "type": "Aankondiging opdracht",
+   "deadline": "2026-11-02",
+   "type": "Tender notice",
    "kind": "notice",
    "cpv": [],
-   "link": "https://prozorro.gov.ua/tender/UA-2026-10-14-008562-a",
-   "value": 23000,
-   "currency": "UAH",
-   "policyUA": true,
-   "firstSeen": "2026-10-15T13:42:58.648Z",
-   "titleNl": "Aankoop van apparatuur en duurzame goederen (Starlink Standard 4X-satellietmodem) overeenkomstig DK 021-2015 (CPV) -32530000-7 – Telecommunicatieapparatuur voor satellietgebruik",
+   "link": "https://canadabuys.canada.ca/en/tender-opportunities",
+   "value": null,
+   "currency": "CAD",
+   "firstSeen": "2026-10-16T14:14:56.816Z",
+   "titleNl": "Lightspeed-satellietdiensten",
    "trEngine": "DeepL"
   }
  ]
