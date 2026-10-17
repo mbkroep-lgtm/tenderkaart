@@ -1,102 +1,108 @@
 {
- "updated": "2026-10-17T07:03:26.461Z",
+ "updated": "2026-10-17T07:05:12.703Z",
  "queryVersion": "79a21b7991",
  "sources": {
   "TED": {
    "ok": true,
-   "at": "2026-10-17T07:03:26.461Z",
+   "at": "2026-10-17T07:05:12.703Z",
    "count": 40,
    "note": ""
   },
   "Wereldbank": {
    "ok": true,
-   "at": "2026-10-17T07:03:26.461Z",
+   "at": "2026-10-17T07:05:12.703Z",
    "count": 55,
    "note": "63 gevonden, 55 echt over LEO."
   },
   "Find a Tender": {
    "ok": true,
-   "at": "2026-10-17T07:03:26.461Z",
+   "at": "2026-10-17T07:05:12.703Z",
    "count": 0,
    "note": "1 pagina's, 0 berichten bekeken, 0 over LEO.",
-   "since": "2026-10-17T05:03:26.461Z"
+   "since": "2026-10-17T05:05:12.703Z"
   },
   "Contracts Finder": {
    "ok": true,
-   "at": "2026-10-17T07:03:26.461Z",
+   "at": "2026-10-17T07:05:12.703Z",
    "count": 4,
    "note": "295 gevonden, 22 over LEO."
   },
   "TenderNed": {
    "ok": true,
-   "at": "2026-10-17T07:03:26.461Z",
+   "at": "2026-10-17T07:05:12.703Z",
    "count": 0,
    "note": "106 gevonden, 0 over LEO."
   },
   "Prozorro": {
    "ok": true,
-   "at": "2026-10-17T07:03:26.461Z",
-   "count": 60,
-   "note": "60 lopende procedures."
+   "at": "2026-10-17T07:05:12.703Z",
+   "count": 61,
+   "note": "61 lopende procedures."
   },
   "BOAMP": {
    "ok": true,
-   "at": "2026-10-17T07:03:26.461Z",
+   "at": "2026-10-17T07:05:12.703Z",
    "count": 1,
    "note": "5 gevonden, 1 over LEO."
   },
   "SIMAP (Zwitserland)": {
    "ok": true,
-   "at": "2026-10-17T07:03:26.461Z",
+   "at": "2026-10-17T07:05:12.703Z",
    "count": 0,
    "note": "20 gevonden, 0 over LEO."
   },
   "SECOP (Colombia)": {
    "ok": true,
-   "at": "2026-10-17T07:03:26.461Z",
+   "at": "2026-10-17T07:05:12.703Z",
    "count": 67,
    "note": "67 gevonden, 67 over LEO."
   },
   "PNCP (Brazilië)": {
    "ok": false,
    "error": "fetch failed",
-   "at": "2026-10-17T07:03:26.461Z"
+   "at": "2026-10-17T07:05:12.703Z"
   },
   "CanadaBuys": {
    "ok": true,
-   "at": "2026-10-17T07:03:26.461Z",
+   "at": "2026-10-17T07:05:12.703Z",
    "count": 1,
    "note": "892 open tenders bekeken, 1 over LEO."
   },
   "AusTender": {
    "ok": false,
-   "at": "2026-10-17T07:03:26.461Z",
+   "at": "2026-10-17T07:05:12.703Z",
    "count": 0,
    "note": "32 contracten bekeken, 0 over LEO.",
    "since": "2026-10-16T12:14:56.816Z",
-   "error": "api.tenders.gov.au gaf 400: {\"errorCode\": 100, \"message\": \"No Records found for Date Range ['2026-10-16T12:14:56Z'-'2026-10-17T07:03:26Z']\"}"
+   "error": "api.tenders.gov.au gaf 400: {\"errorCode\": 100, \"message\": \"No Records found for Date Range ['2026-10-16T12:14:56Z'-'2026-10-17T07:05:12Z']\"}"
   },
   "UNDP": {
    "ok": true,
-   "at": "2026-10-17T07:03:26.461Z",
+   "at": "2026-10-17T07:05:12.703Z",
    "count": 1,
    "note": "974 berichten bekeken, 1 over LEO."
   },
   "PCC (Taiwan)": {
    "ok": true,
-   "at": "2026-10-17T07:03:26.461Z",
+   "at": "2026-10-17T07:05:12.703Z",
    "count": 16,
    "note": "38 aanbestedingen over LEO."
   },
+  "SAM.gov": {
+   "ok": true,
+   "at": "2026-10-17T07:05:12.703Z",
+   "count": 0,
+   "note": "0 gevonden, 0 over LEO."
+  },
   "Vertalen": {
    "ok": true,
-   "at": "2026-10-17T07:03:26.461Z",
-   "count": 1,
-   "note": "DeepL: 1 nieuw vertaald.",
+   "at": "2026-10-17T07:05:12.703Z",
+   "count": 2,
+   "note": "DeepL: 2 nieuw vertaald.",
    "engine": "DeepL"
   }
  },
- "count": 221,
+ "count": 222,
  "tenders": [
   {
    "pub": "UA-UA-2026-10-17-000083-a",
@@ -114,7 +120,6 @@
    "value": 600000,
    "currency": "UAH",
    "defense": true,
-   "policyUA": true,
    "firstSeen": "2026-10-17T07:02:21.206Z",
    "titleNl": "Starlink Mini-satellietmodem ",
    "trEngine": "DeepL"
@@ -135,7 +140,6 @@
    "value": 1092500,
    "currency": "UAH",
    "defense": true,
-   "policyUA": true,
    "firstSeen": "2026-10-17T07:02:21.206Z",
    "titleNl": "Starlink Internet Satellite Mini-satellietmodem, 32530000-7 „Telecommunicatieapparatuur voor satellietgebruik“ volgens DK 021:2015 van het Uniforme Aankoopwoordenboek.",
    "trEngine": "DeepL"
@@ -155,7 +159,6 @@
    "link": "https://prozorro.gov.ua/tender/UA-2026-10-16-008743-a",
    "value": 1039568,
    "currency": "UAH",
-   "policyUA": true,
    "firstSeen": "2026-10-16T14:14:56.816Z",
    "titleNl": "Diensten voor aansluiting op het Starlink-satellietnetwerk (ondersteuning, beheer, onderhoud en het beheren van een Starlink-account)",
    "trEngine": "DeepL"
@@ -175,7 +178,6 @@
    "link": "https://prozorro.gov.ua/tender/UA-2026-10-16-002348-a",
    "value": 911060,
    "currency": "UAH",
-   "policyUA": true,
    "firstSeen": "2026-10-16T09:19:17.508Z",
    "titleNl": "32530000-7 — Telecommunicatieapparatuur voor satellietgebruik (Starlink-satellietpakket inclusief onderhoud)",
    "trEngine": "DeepL"
@@ -196,7 +198,6 @@
    "value": 645000,
    "currency": "UAH",
    "defense": true,
-   "policyUA": true,
    "firstSeen": "2026-10-16T17:31:05.703Z",
    "titleNl": "32530000-7 Telecommunicatieapparatuur voor satellietcommunicatie (Starlink Standard 4X-satellietterminal met extra kabel)",
    "trEngine": "DeepL"
@@ -217,7 +218,6 @@
    "value": 677770,
    "currency": "UAH",
    "defense": true,
-   "policyUA": true,
    "firstSeen": "2026-10-16T14:14:56.816Z",
    "titleNl": "Starlink Internet Satellite Gen3 Rev4-satellietmodem\nVolgens DK 021:2015 32530000-7 – Telecommunicatieapparatuur voor satellietgebruik",
    "trEngine": "DeepL"
@@ -238,7 +238,6 @@
    "value": 213063,
    "currency": "UAH",
    "defense": true,
-   "policyUA": true,
    "firstSeen": "2026-10-16T14:14:56.816Z",
    "titleNl": "Telecommunicatieapparatuur voor satellietcommunicatie",
    "trEngine": "DeepL"
@@ -259,7 +258,6 @@
    "value": 1400200,
    "currency": "UAH",
    "defense": true,
-   "policyUA": true,
    "firstSeen": "2026-10-16T09:19:17.508Z",
    "titleNl": "Satellietmodems",
    "trEngine": "DeepL"
@@ -280,7 +278,6 @@
    "value": 794840,
    "currency": "UAH",
    "defense": true,
-   "policyUA": true,
    "firstSeen": "2026-10-16T09:19:17.508Z",
    "titleNl": "Telecommunicatieapparatuur voor satellietcommunicatie",
    "trEngine": "DeepL"
@@ -301,7 +298,6 @@
    "value": 64392,
    "currency": "UAH",
    "defense": true,
-   "policyUA": true,
    "firstSeen": "2026-10-16T14:14:56.816Z",
    "titleNl": "Telecommunicatieapparatuur voor satellietcommunicatie",
    "trEngine": "DeepL"
@@ -341,7 +337,6 @@
    "value": 365700,
    "currency": "UAH",
    "defense": true,
-   "policyUA": true,
    "firstSeen": "2026-10-15T13:42:58.648Z",
    "titleNl": "Starlink-satellietmodem.",
    "trEngine": "DeepL"
@@ -362,7 +357,6 @@
    "value": 45800,
    "currency": "UAH",
    "defense": true,
-   "policyUA": true,
    "firstSeen": "2026-10-15T13:42:58.648Z",
    "titleNl": "Starlink Mini KIT-terminal",
    "trEngine": "DeepL"
@@ -401,7 +395,6 @@
    "value": 231624,
    "currency": "UAH",
    "defense": true,
-   "policyUA": true,
    "firstSeen": "2026-10-15T13:42:58.648Z",
    "titleNl": "Satellietcommunicatieterminal (mobiel)",
    "trEngine": "DeepL"
@@ -443,7 +436,6 @@
    "value": 121900,
    "currency": "UAH",
    "defense": true,
-   "policyUA": true,
    "firstSeen": "2026-10-15T13:42:58.648Z",
    "titleNl": "Starlink-satellietmodems ",
    "trEngine": "DeepL"
@@ -464,7 +456,6 @@
    "value": 1155000,
    "currency": "UAH",
    "defense": true,
-   "policyUA": true,
    "firstSeen": "2026-10-15T13:42:58.648Z",
    "titleNl": "Telecommunicatieapparatuur voor satellietcommunicatie (Starlink)",
    "trEngine": "DeepL"
@@ -485,7 +476,6 @@
    "value": 51310,
    "currency": "UAH",
    "defense": true,
-   "policyUA": true,
    "firstSeen": "2026-10-15T13:42:58.648Z",
    "titleNl": "Diensten van providers (internetdiensten van „Starlink“)",
    "trEngine": "DeepL"
@@ -506,7 +496,6 @@
    "value": 7950000,
    "currency": "UAH",
    "defense": true,
-   "policyUA": true,
    "firstSeen": "2026-10-15T13:42:58.648Z",
    "titleNl": "Starlink Internet Satellite Mini-satellietmodem, of een gelijkwaardig product",
    "trEngine": "DeepL"
@@ -526,7 +515,6 @@
    "link": "https://prozorro.gov.ua/tender/UA-2026-10-13-004708-a",
    "value": 374000,
    "currency": "UAH",
-   "policyUA": true,
    "firstSeen": "2026-10-15T13:42:58.648Z",
    "titleNl": "Ondersteuning, beheer en administratie van uw Starlink-account ",
    "trEngine": "DeepL"
@@ -547,7 +535,6 @@
    "value": 200010,
    "currency": "UAH",
    "defense": true,
-   "policyUA": true,
    "firstSeen": "2026-10-15T13:42:58.648Z",
    "titleNl": "CCZ Starlink mini Kit (DK 021:2015: 32530000-7 — Telecommunicatieapparatuur voor satellietgebruik)",
    "trEngine": "DeepL"
@@ -626,7 +613,6 @@
    "value": 144000,
    "currency": "UAH",
    "defense": true,
-   "policyUA": true,
    "firstSeen": "2026-10-15T13:42:58.648Z",
    "titleNl": "Satellietterminals",
    "trEngine": "DeepL"
@@ -647,7 +633,6 @@
    "value": 220000,
    "currency": "UAH",
    "defense": true,
-   "policyUA": true,
    "firstSeen": "2026-10-15T13:42:58.648Z",
    "titleNl": "Telecommunicatieapparatuur voor satellietcommunicatie",
    "trEngine": "DeepL"
@@ -687,7 +672,6 @@
    "value": 49882,
    "currency": "UAH",
    "defense": true,
-   "policyUA": true,
    "firstSeen": "2026-10-15T13:42:58.648Z",
    "titleNl": "Het Starlink Mini-satellietsysteem ",
    "trEngine": "DeepL"
@@ -708,7 +692,6 @@
    "value": 49882,
    "currency": "UAH",
    "defense": true,
-   "policyUA": true,
    "firstSeen": "2026-10-15T13:42:58.648Z",
    "titleNl": "Het Starlink Mini-satellietsysteem ",
    "trEngine": "DeepL"
@@ -729,7 +712,6 @@
    "value": 63000,
    "currency": "UAH",
    "defense": true,
-   "policyUA": true,
    "firstSeen": "2026-10-15T13:42:58.648Z",
    "titleNl": "Starlink Mini-satellietterminal",
    "trEngine": "DeepL"
@@ -750,9 +732,28 @@
    "value": 345000,
    "currency": "UAH",
    "defense": true,
-   "policyUA": true,
    "firstSeen": "2026-10-15T13:42:58.648Z",
    "titleNl": "STARLINK-satellietcommunicatiestation – Satellite Dish Kit Gen3 REV4/Starlink Standard 4 X",
+   "trEngine": "DeepL"
+  },
+  {
+   "pub": "UA-UA-2026-10-10-000580-a",
+   "source": "Prozorro",
+   "title": "Станція супутникового зв’язку Starlink Mini X ",
+   "buyer": "Військова частина А0998",
+   "country": "UA",
+   "published": "2026-10-10",
+   "deadline": "2026-10-19",
+   "deadlineAt": "2026-10-19T07:00:00.000Z",
+   "type": "Aankondiging opdracht",
+   "kind": "notice",
+   "cpv": [],
+   "link": "https://prozorro.gov.ua/tender/UA-2026-10-10-000580-a",
+   "value": 301000,
+   "currency": "UAH",
+   "defense": true,
+   "firstSeen": "2026-10-17T07:05:12.703Z",
+   "titleNl": "Starlink Mini X-satellietcommunicatiestation ",
    "trEngine": "DeepL"
   },
   {
@@ -771,7 +772,6 @@
    "value": 1950000,
    "currency": "UAH",
    "defense": true,
-   "policyUA": true,
    "firstSeen": "2026-10-15T13:42:58.648Z",
    "titleNl": "Starlink Mini Internet Kit – satellietcommunicatiestation",
    "trEngine": "DeepL"
@@ -811,7 +811,6 @@
    "value": 47288,
    "currency": "UAH",
    "defense": true,
-   "policyUA": true,
    "firstSeen": "2026-10-15T13:42:58.648Z",
    "titleNl": "Starlink Gen2-terminal",
    "trEngine": "DeepL"
@@ -832,7 +831,6 @@
    "value": 249925,
    "currency": "UAH",
    "defense": true,
-   "policyUA": true,
    "firstSeen": "2026-10-15T13:42:58.648Z",
    "titleNl": "Starlink GEN3 (Rev4) Standard Kit, nieuw (zonder account)",
    "trEngine": "DeepL"
@@ -853,7 +851,6 @@
    "value": 1930200,
    "currency": "UAH",
    "defense": true,
-   "policyUA": true,
    "firstSeen": "2026-10-15T13:42:58.648Z",
    "titleNl": "Satellietcommunicatieterminal (mobiel)",
    "trEngine": "DeepL"
@@ -874,7 +871,6 @@
    "value": 36540,
    "currency": "UAH",
    "defense": true,
-   "policyUA": true,
    "firstSeen": "2026-10-15T13:42:58.648Z",
    "titleNl": "Starlink-voedingskabels",
    "trEngine": "DeepL"
@@ -895,7 +891,6 @@
    "value": 1842166.9,
    "currency": "UAH",
    "defense": true,
-   "policyUA": true,
    "firstSeen": "2026-10-15T13:42:58.648Z",
    "titleNl": "Starlink 4X-satellietcommunicatiestationsets",
    "trEngine": "DeepL"
@@ -915,7 +910,6 @@
    "link": "https://prozorro.gov.ua/tender/UA-2026-10-08-008343-a",
    "value": 18843.76,
    "currency": "UAH",
-   "policyUA": true,
    "firstSeen": "2026-10-15T13:42:58.648Z",
    "titleNl": "Behuizing voor de montage van een Starlink Gen 3-terminal op een auto of een equivalent van DK 021:2015: 32530000-7 — Telecommunicatieapparatuur voor satellietcommunicatie",
    "trEngine": "DeepL"
@@ -936,7 +930,6 @@
    "value": 507129.18,
    "currency": "UAH",
    "defense": true,
-   "policyUA": true,
    "firstSeen": "2026-10-15T13:42:58.648Z",
    "titleNl": "Satellietmodems",
    "trEngine": "DeepL"
@@ -956,7 +949,6 @@
    "link": "https://prozorro.gov.ua/tender/UA-2026-10-08-012086-a",
    "value": 689897.65,
    "currency": "UAH",
-   "policyUA": true,
    "firstSeen": "2026-10-15T13:42:58.648Z",
    "titleNl": "Starlink Mini-satellietterminals met aanpassing voor gebruik in een auto of een gelijkwaardig product (code 32530000-7 „Telecommunicatieapparatuur voor satellietcommunicatie“ van de nationale classificatie van Oekraïne volgens DK 021:2015 „Uniform aankoopwoordenboek”)",
    "trEngine": "DeepL"
@@ -976,7 +968,6 @@
    "link": "https://prozorro.gov.ua/tender/UA-2026-10-08-005360-a",
    "value": 350566.67,
    "currency": "UAH",
-   "policyUA": true,
    "firstSeen": "2026-10-15T13:42:58.648Z",
    "titleNl": "Set satellietapparatuur",
    "trEngine": "DeepL"
@@ -997,7 +988,6 @@
    "value": 363450,
    "currency": "UAH",
    "defense": true,
-   "policyUA": true,
    "firstSeen": "2026-10-15T13:42:58.648Z",
    "titleNl": "„Starlink-satellietterminal (volgens code DK 021:2015: 32530000-7 ‚Telecommunicatieapparatuur voor satellietgebruik‘)“",
    "trEngine": "DeepL"
@@ -1017,7 +1007,6 @@
    "link": "https://prozorro.gov.ua/tender/UA-2026-10-07-003944-a",
    "value": 100800,
    "currency": "UAH",
-   "policyUA": true,
    "firstSeen": "2026-10-16T07:08:15.941Z",
    "titleNl": "„Telecommunicatieapparatuur voor satellietgebruik“ (code 32530000-7 volgens DK 021:2015) (Starlink Mini-satellietterminal)   ",
    "trEngine": "DeepL"
@@ -1037,7 +1026,6 @@
    "link": "https://prozorro.gov.ua/tender/UA-2026-10-06-006083-a",
    "value": 396513.33,
    "currency": "UAH",
-   "policyUA": true,
    "firstSeen": "2026-10-15T13:42:58.648Z",
    "titleNl": "Diensten voor ondersteuning, beheer en administratie van een Starlink-account volgens DK-code 021:2015:72250000-2 – Diensten in verband met systemen en ondersteuning",
    "trEngine": "DeepL"
@@ -1113,7 +1101,6 @@
    "link": "https://prozorro.gov.ua/tender/UA-2026-10-02-004687-a",
    "value": 952306.67,
    "currency": "UAH",
-   "policyUA": true,
    "firstSeen": "2026-10-15T13:42:58.648Z",
    "titleNl": "DK 021:2015: 72250000-2 Diensten in verband met systemen en ondersteuning (diensten voor aansluiting op het Starlink-satellietcommunicatienetwerk (ondersteuning, beheer en administratie van een Starlink-account), 86 terminals)",
    "trEngine": "DeepL",
@@ -1152,7 +1139,6 @@
    "link": "https://prozorro.gov.ua/tender/UA-2026-10-01-004269-a",
    "value": 1550400,
    "currency": "UAH",
-   "policyUA": true,
    "firstSeen": "2026-10-15T13:42:58.648Z",
    "titleNl": "Diensten voor ondersteuning, beheer en administratie van Starlink-accounts ",
    "trEngine": "DeepL"
@@ -1172,7 +1158,6 @@
    "link": "https://prozorro.gov.ua/tender/UA-2026-10-01-011763-a",
    "value": 449552.94,
    "currency": "UAH",
-   "policyUA": true,
    "firstSeen": "2026-10-15T13:42:58.648Z",
    "titleNl": "Diensten van internetproviders (code 72410000-7 volgens DK 021:2015) (toegangsdiensten tot het satellietinternetnetwerk van Starlink)  ",
    "trEngine": "DeepL"
@@ -1192,7 +1177,6 @@
    "link": "https://prozorro.gov.ua/tender/UA-2026-09-30-009694-a",
    "value": 102772.43,
    "currency": "UAH",
-   "policyUA": true,
    "firstSeen": "2026-10-15T13:42:58.648Z",
    "titleNl": "Onderhoudsdiensten voor het Starlink-satellietpakket",
    "trEngine": "DeepL"
@@ -1213,7 +1197,6 @@
    "value": 291491,
    "currency": "UAH",
    "defense": true,
-   "policyUA": true,
    "firstSeen": "2026-10-15T13:42:58.648Z",
    "titleNl": "Ondersteuning en beheer van je Starlink-account",
    "trEngine": "DeepL"
@@ -1233,7 +1216,6 @@
    "link": "https://prozorro.gov.ua/tender/UA-2026-09-29-009625-a",
    "value": 607453,
    "currency": "UAH",
-   "policyUA": true,
    "firstSeen": "2026-10-15T13:42:58.648Z",
    "titleNl": "DK 021:2015: 32530000-7 Telecommunicatieapparatuur voor satellietcommunicatie (Starlink MINI-satellietcommunicatieset of gelijkwaardig)",
    "trEngine": "DeepL"
@@ -1853,7 +1835,6 @@
    "link": "https://projects.worldbank.org/en/projects-operations/procurement-detail/OP00456763",
    "value": null,
    "currency": "USD",
-   "policyUA": true,
    "firstSeen": "2000-01-01T00:00:00.000Z",
    "titleNl": "Aankoop van computer- en telecommunicatieapparatuur",
    "trEngine": "DeepL"
@@ -4138,7 +4119,6 @@
    "link": "https://prozorro.gov.ua/tender/UA-2026-10-15-012946-a",
    "value": 78500,
    "currency": "UAH",
-   "policyUA": true,
    "firstSeen": "2026-10-16T07:08:15.941Z",
    "titleNl": "Starlink-terminal",
    "trEngine": "DeepL"
@@ -4159,7 +4139,6 @@
    "value": 1652496,
    "currency": "UAH",
    "defense": true,
-   "policyUA": true,
    "firstSeen": "2026-10-15T13:42:58.648Z",
    "titleNl": "Starlink Mini-satellietmodem",
    "trEngine": "DeepL"
@@ -4180,29 +4159,8 @@
    "value": 4957488,
    "currency": "UAH",
    "defense": true,
-   "policyUA": true,
    "firstSeen": "2026-10-15T13:42:58.648Z",
    "titleNl": "Starlink Mini-satellietmodem",
-   "trEngine": "DeepL"
-  },
-  {
-   "pub": "UA-UA-2026-10-14-009230-a",
-   "source": "Prozorro",
-   "title": "Супутниковий модем Starlink Standard 4X",
-   "buyer": "ВЕЛИКОГАЇВСЬКА СІЛЬСЬКА РАДА",
-   "country": "UA",
-   "published": "",
-   "deadline": "2026-10-19",
-   "deadlineAt": "2026-10-19T06:00:00.000Z",
-   "type": "Aankondiging opdracht",
-   "kind": "notice",
-   "cpv": [],
-   "link": "https://prozorro.gov.ua/tender/UA-2026-10-14-009230-a",
-   "value": 140000,
-   "currency": "UAH",
-   "policyUA": true,
-   "firstSeen": "2026-10-15T13:42:58.648Z",
-   "titleNl": "Starlink Standard 4X-satellietmodem",
    "trEngine": "DeepL"
   },
   {
@@ -4221,8 +4179,26 @@
    "value": 69000,
    "currency": "UAH",
    "defense": true,
-   "policyUA": true,
    "firstSeen": "2026-10-16T07:08:15.941Z",
+   "titleNl": "Starlink Standard 4X-satellietmodem",
+   "trEngine": "DeepL"
+  },
+  {
+   "pub": "UA-UA-2026-10-14-009230-a",
+   "source": "Prozorro",
+   "title": "Супутниковий модем Starlink Standard 4X",
+   "buyer": "ВЕЛИКОГАЇВСЬКА СІЛЬСЬКА РАДА",
+   "country": "UA",
+   "published": "",
+   "deadline": "2026-10-19",
+   "deadlineAt": "2026-10-19T06:00:00.000Z",
+   "type": "Aankondiging opdracht",
+   "kind": "notice",
+   "cpv": [],
+   "link": "https://prozorro.gov.ua/tender/UA-2026-10-14-009230-a",
+   "value": 140000,
+   "currency": "UAH",
+   "firstSeen": "2026-10-15T13:42:58.648Z",
    "titleNl": "Starlink Standard 4X-satellietmodem",
    "trEngine": "DeepL"
   },
@@ -4242,51 +4218,8 @@
    "value": 958333.33,
    "currency": "UAH",
    "defense": true,
-   "policyUA": true,
    "firstSeen": "2026-10-15T13:42:58.648Z",
    "titleNl": "Starlink Internet Satellite Mini-satellietmodem",
-   "trEngine": "DeepL"
-  },
-  {
-   "pub": "UA-UA-2026-10-14-011024-a",
-   "source": "Prozorro",
-   "title": "Супутниковий модем Starlink Internet Satellite 3gen ",
-   "buyer": "Військова частина А7788",
-   "country": "UA",
-   "published": "",
-   "deadline": "2026-10-21",
-   "deadlineAt": "2026-10-21T12:48:00.000Z",
-   "type": "Aankondiging opdracht",
-   "kind": "notice",
-   "cpv": [],
-   "link": "https://prozorro.gov.ua/tender/UA-2026-10-14-011024-a",
-   "value": 218235,
-   "currency": "UAH",
-   "defense": true,
-   "policyUA": true,
-   "firstSeen": "2026-10-17T07:03:26.461Z",
-   "titleNl": "Starlink Internet Satellite 3gen-satellietmodem ",
-   "trEngine": "DeepL"
-  },
-  {
-   "pub": "UA-UA-2026-10-14-009976-a",
-   "source": "Prozorro",
-   "title": "Cупутниковий модем Starlink Internet Satellite 3 gen",
-   "buyer": "УПРАВЛІННЯ 2 КОРПУСУ НАЦІОНАЛЬНОЇ ГВАРДІЇ УКРАЇНИ \"ХАРТІЯ\" (ВІЙСЬКОВА ЧАСТИНА 4125)",
-   "country": "UA",
-   "published": "",
-   "deadline": "2026-10-17",
-   "deadlineAt": "2026-10-17T06:00:00.000Z",
-   "type": "In beoordeling",
-   "kind": "award",
-   "cpv": [],
-   "link": "https://prozorro.gov.ua/tender/UA-2026-10-14-009976-a",
-   "value": 226660,
-   "currency": "UAH",
-   "defense": true,
-   "policyUA": true,
-   "firstSeen": "2026-10-15T13:42:58.648Z",
-   "titleNl": "Starlink Internet Satellite 3e generatie satellietmodem",
    "trEngine": "DeepL"
   },
   {
@@ -4305,7 +4238,6 @@
    "value": 375000,
    "currency": "UAH",
    "defense": true,
-   "policyUA": true,
    "firstSeen": "2026-10-15T13:42:58.648Z",
    "titleNl": "Starlink Internet Satellite 3 gen-satellietmodem",
    "trEngine": "DeepL"
@@ -4325,9 +4257,28 @@
    "link": "https://prozorro.gov.ua/tender/UA-2026-10-16-013217-a",
    "value": 39667,
    "currency": "UAH",
-   "policyUA": true,
    "firstSeen": "2026-10-17T07:02:21.206Z",
    "titleNl": "Starlink Internet Satellite 3gen-satellietmodem  met code",
+   "trEngine": "DeepL"
+  },
+  {
+   "pub": "UA-UA-2026-10-14-009976-a",
+   "source": "Prozorro",
+   "title": "Cупутниковий модем Starlink Internet Satellite 3 gen",
+   "buyer": "УПРАВЛІННЯ 2 КОРПУСУ НАЦІОНАЛЬНОЇ ГВАРДІЇ УКРАЇНИ \"ХАРТІЯ\" (ВІЙСЬКОВА ЧАСТИНА 4125)",
+   "country": "UA",
+   "published": "",
+   "deadline": "2026-10-17",
+   "deadlineAt": "2026-10-17T06:00:00.000Z",
+   "type": "In beoordeling",
+   "kind": "award",
+   "cpv": [],
+   "link": "https://prozorro.gov.ua/tender/UA-2026-10-14-009976-a",
+   "value": 226660,
+   "currency": "UAH",
+   "defense": true,
+   "firstSeen": "2026-10-15T13:42:58.648Z",
+   "titleNl": "Starlink Internet Satellite 3e generatie satellietmodem",
    "trEngine": "DeepL"
   },
   {
@@ -4345,9 +4296,27 @@
    "link": "https://prozorro.gov.ua/tender/UA-2026-10-15-010005-a",
    "value": 323125,
    "currency": "UAH",
-   "policyUA": true,
    "firstSeen": "2026-10-15T13:42:58.648Z",
    "titleNl": "32530000-7 - Telecommunicatieapparatuur voor satellietcommunicatie „Starlink-satellietmodem“ (32531000-4)",
+   "trEngine": "DeepL"
+  },
+  {
+   "pub": "UA-UA-2026-10-15-002171-a",
+   "source": "Prozorro",
+   "title": "Супутникові модеми Starlink Internet Satellite 3gen (за ДК 021:2015 - 32530000-7 - Телекомунікаційне супутникове обладнання )",
+   "buyer": "Снятинська міська рада Коломийського району Івано-Франківської області",
+   "country": "UA",
+   "published": "",
+   "deadline": "2026-10-20",
+   "deadlineAt": "2026-10-20T05:00:00.000Z",
+   "type": "Aankondiging opdracht",
+   "kind": "notice",
+   "cpv": [],
+   "link": "https://prozorro.gov.ua/tender/UA-2026-10-15-002171-a",
+   "value": 44000,
+   "currency": "UAH",
+   "firstSeen": "2026-10-17T07:05:12.703Z",
+   "titleNl": "Starlink Internet Satellite 3gen-satellietmodems (volgens DK 021:2015 - 32530000-7 - Telecommunicatieapparatuur voor satellietgebruik)",
    "trEngine": "DeepL"
   },
   {
@@ -4365,7 +4334,6 @@
    "link": "https://prozorro.gov.ua/tender/UA-2026-10-14-008562-a",
    "value": 23000,
    "currency": "UAH",
-   "policyUA": true,
    "firstSeen": "2026-10-15T13:42:58.648Z",
    "titleNl": "Aankoop van apparatuur en duurzame goederen (Starlink Standard 4X-satellietmodem) overeenkomstig DK 021-2015 (CPV) -32530000-7 – Telecommunicatieapparatuur voor satellietgebruik",
    "trEngine": "DeepL"
@@ -4385,7 +4353,6 @@
    "link": "https://prozorro.gov.ua/tender/UA-2026-10-14-006688-a",
    "value": 66000,
    "currency": "UAH",
-   "policyUA": true,
    "firstSeen": "2026-10-15T13:42:58.648Z",
    "titleNl": "Aankoop van apparatuur en duurzame goederen (Starlink Standard 4X-satellietmodem) overeenkomstig DK 021-2015 (CPV) -32530000-7 – Telecommunicatieapparatuur voor satellietgebruik",
    "trEngine": "DeepL"
