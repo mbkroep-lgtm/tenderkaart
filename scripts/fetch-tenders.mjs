@@ -528,7 +528,13 @@ async function fetchAusTender(sinceIso) {
     const to = new Date(Math.min(+from + 14 * DAY, +NOW));
     let url = `https://api.tenders.gov.au/ocds/findByDates/contractPublished/${from.toISOString().slice(0, 19)}Z/${to.toISOString().slice(0, 19)}Z`;
     for (let p = 0; url && p < 200; p++) {
-      const d = await getJson(url, { headers: UA });
+      let d;
+      try { d = await getJson(url, { headers: UA }); }
+      catch (e) {
+        // geen contracten in deze periode (bv. in het weekend): AusTender geeft dan een foutmelding in plaats van een lege lijst
+        if (/No Records found/i.test(e.message)) break;
+        throw e;
+      }
       for (const r of d.releases || []) {
         scanned++;
         const c = r.contracts?.[0] || {};
