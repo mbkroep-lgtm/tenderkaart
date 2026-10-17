@@ -17,7 +17,8 @@ const BRANDS = ['starlink', 'OneWeb', 'Project Kuiper', 'Amazon Leo']; // los "K
 // Alleen vaste combinaties: los "LEO" geeft veel ruis (Leopard, namen, woorden in andere talen).
 const PHRASES = ['LEO satellite', 'LEO satellites', 'LEO satellite internet', 'LEO connectivity', 'LEO-satelliet', 'LEO-satellieten',
   'LEO-Satellit', 'LEO-Satelliten', 'satellite LEO', 'satellites LEO', 'satélite LEO', 'satélites LEO', 'satellite a bassa orbita',
-  'satelliti LEO', 'satelity LEO', 'low earth orbit satellite', 'low earth orbit satellites', 'low-earth orbit satellite'];
+  'satelliti LEO', 'satelity LEO', 'satélite de órbita baixa', 'satélites de órbita baixa', 'satélite de baixa órbita',
+  'satélites de baixa órbita', 'órbita terrestre baixa', 'low earth orbit satellite', 'low earth orbit satellites', 'low-earth orbit satellite'];
 const esc = s => s.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
 const LEO_RE = new RegExp('(^|[^\\p{L}])(' + [...BRANDS, ...PHRASES].map(t => esc(t).replace(/[ -]/g, '[ -]?')).join('|') + ')([^\\p{L}]|$)', 'iu');
 // Ruimtevaarthardware en andere zaken die niets met verbindingen voor klanten te maken hebben.
@@ -439,29 +440,44 @@ async function fetchSecop() {
   return out;
 }
 
-// Brazilië (PNCP)
+// Brazilië (PNCP): de zoekfunctie blokkeert servers buiten Brazilië, de open-data-API niet.
+// Die heeft geen zoekwoord, dus we lopen alle aanbestedingen door die nu openstaan (~29.000, 50 per pagina)
+// en filteren zelf. Daarom één keer per dag; tussendoor blijven de resultaten van die ochtend staan.
 async function fetchPncp() {
-  const byId = new Map();
-  for (const tipo of ['edital', 'contrato']) {
-    for (let pagina = 1; pagina <= 5; pagina++) {
-      const d = await getJson(`https://pncp.gov.br/api/search/?q=starlink&tipos_documento=${tipo}&pagina=${pagina}&tam_pagina=100&ordenacao=-data`, { headers: UA });
-      for (const x of d.items || []) if (x.id) byId.set(x.id, { ...x, _tipo: tipo });
-      if ((d.items || []).length < 100) break;
+  const base = 'https://pncp.gov.br/api/consulta/v1/contratacoes/proposta';
+  const until = isoDay(+NOW + 730 * DAY).replace(/-/g, '');
+  const url = p => `${base}?dataFinal=${until}&pagina=${p}&tamanhoPagina=50`;
+  const page = async p => { for (let i = 0; ; i++) { try { return await getJson(url(p), { headers: UA }); } catch (e) { if (i >= 3) throw e; await sleep(3000 * (i + 1)); } } };
+  const first = await page(1);
+  const pages = Math.min(first.totalPaginas || 1, 2000);
+  const rows = [...(first.data || [])];
+  let next = 2, failed = 0;
+  // vier tegelijk: snel genoeg, en niet te zwaar voor hun server
+  await Promise.all([0, 1, 2, 3].map(async () => {
+    while (next <= pages) {
+      const p = next++;
+      try { rows.push(...((await page(p)).data || [])); } catch { failed++; }
     }
-  }
+  }));
+  if (failed > pages / 10) throw new Error(`${failed} van ${pages} pagina's mislukt`);
   const out = [];
-  for (const x of byId.values()) {
-    const award = x._tipo === 'contrato';
+  for (const x of rows) {
+    const text = `${x.objetoCompra || ''} ${x.informacaoComplementar || ''}`;
+    if (!LEO_RE.test(text)) continue;
+    const [cnpj, , rest] = String(x.numeroControlePNCP || '').split('-');
+    const [seq, ano] = String(rest || '').split('/');
+    const end = x.dataEncerramentoProposta ? x.dataEncerramentoProposta + '-03:00' : '';   // tijden in Brasília
     out.push({
-      pub: 'BR-' + x.id, source: 'PNCP (Brazilië)', title: x.description || x.title || '(zonder titel)', buyer: x.orgao_nome || x.unidade_nome || '',
-      country: 'BR', published: date(x.data_publicacao_pncp || x.createdAt), deadline: award ? '' : date(x.data_fim_vigencia || ''),
-      type: award ? 'Contrato' : (x.modalidade_licitacao_nome || 'Edital'), kind: award ? 'award' : 'notice', cpv: [],
-      link: x.item_url ? `https://pncp.gov.br/app/editais${x.item_url.replace(/^\/compras/, '')}` : 'https://pncp.gov.br/',
-      value: num(x.valor_global), currency: 'BRL'
+      pub: 'BR-' + (x.numeroControlePNCP || `${x.orgaoEntidade?.cnpj}-${x.anoCompra}-${x.sequencialCompra}`), source: 'PNCP (Brazilië)',
+      title: x.objetoCompra || '(zonder titel)', buyer: x.orgaoEntidade?.razaoSocial || x.unidadeOrgao?.nomeUnidade || '',
+      country: 'BR', published: date(x.dataPublicacaoPncp), deadline: date(end), deadlineAt: when(end),
+      type: x.modalidadeNome || 'Edital', kind: 'notice', cpv: [],
+      link: cnpj && seq && ano ? `https://pncp.gov.br/app/editais/${cnpj}/${ano}/${Number(seq)}` : 'https://pncp.gov.br/',
+      value: num(x.valorTotalEstimado), currency: 'BRL'
     });
   }
-  say('PNCP (Brazilië)', `${out.length} gevonden.`);
-  return out.filter(isFresh);
+  say('PNCP (Brazilië)', `${rows.length} open aanbestedingen bekeken${failed ? ` (${failed} pagina's mislukt)` : ''}, ${out.length} over LEO. Eén keer per dag.`);
+  return out;
 }
 
 // SIMAP (Zwitserland)
@@ -678,7 +694,6 @@ const SOURCES = [
   ['BOAMP', () => fetchBoamp()],
   ['SIMAP (Zwitserland)', () => fetchSimap()],
   ['SECOP (Colombia)', () => fetchSecop()],
-  ['PNCP (Brazilië)', () => fetchPncp()],
   ['CanadaBuys', () => fetchCanadaBuys()],
   ['AusTender', () => fetchAusTender(ausSince)],
   ['UNDP', () => fetchUndp()],
@@ -688,6 +703,9 @@ const SAM_KEY = process.env.SAM_API_KEY || '';
 const lastSam = Date.parse(old.sources['SAM.gov']?.at || 0) || 0;
 if (SAM_KEY && (reset || NOW - lastSam > 20 * 3600e3 || !old.sources['SAM.gov']?.ok)) SOURCES.push(['SAM.gov', () => fetchSam(SAM_KEY)]);
 else if (SAM_KEY) console.log('SAM.gov: vandaag al opgehaald, overgeslagen (dagquotum).');
+const lastPncp = Date.parse(old.sources['PNCP (Brazilië)']?.at || 0) || 0;
+if (reset || NOW - lastPncp > 20 * 3600e3 || !old.sources['PNCP (Brazilië)']?.ok) SOURCES.push(['PNCP (Brazilië)', () => fetchPncp()]);
+else console.log('PNCP: vandaag al opgehaald, overgeslagen.');
 
 const oldBySource = {};
 for (const t of old.tenders || []) (oldBySource[t.source || 'TED'] ||= []).push({ source: 'TED', ...t });
