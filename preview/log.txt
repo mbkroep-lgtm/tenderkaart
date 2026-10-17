@@ -1,7 +1,62 @@
-pagina 1: 5.9s n=50 totaal=34990 pag=700
-pagina 2: 6.0s n=50 totaal=34990 pag=700
-pagina 50: 1.9s n=50 totaal=34990 pag=700
-pagina 150: 2.0s n=50 totaal=34990 pag=700
-pagina 300: 2.4s n=50 totaal=34990 pag=700
-pagina 450: 3.2s n=50 totaal=34990 pag=700
-pagina 570: 3.3s n=50 totaal=34990 pag=700
+== 2 tegelijk, 30 pagina's in 117s
+160:13.3s n=50
+161:10.0s n=50
+162:8.6s n=50
+163:10.4s n=50
+164:8.4s n=50
+165:6.5s n=50
+166:12.1s n=50
+167:8.6s n=50
+168:7.2s n=50
+169:7.1s n=50
+170:8.5s n=50
+171:7.7s n=50
+172:7.1s n=50
+173:8.2s n=50
+174:4.1s n=50
+175:7.2s n=50
+176:3.1s n=50
+177:4.9s n=50
+178:5.0s n=50
+179:6.4s n=50
+180:11.3s n=50
+181:6.7s n=50
+182:7.1s n=50
+183:4.8s n=50
+184:5.3s n=50
+185:5.1s n=50
+186:5.5s n=50
+187:7.9s n=50
+188:4.8s n=50
+189:10.6s n=50
+== 4 tegelijk, 30 pagina's in 11s
+220:9.7s n=50
+221:8.6s n=50
+222:6.1s n=50
+223:3.1s n=50
+224:4.9s n=50
+225:FOUT 0.5s HTTP Error 429: Too Many Requests
+226:FOUT 0.5s HTTP Error 429: Too Many Requests
+227:FOUT 0.5s HTTP Error 429: Too Many Requests
+228:FOUT 0.5s HTTP Error 429: Too Many Requests
+229:FOUT 0.5s HTTP Error 429: Too Many Requests
+230:FOUT 0.5s HTTP Error 429: Too Many Requests
+231:FOUT 0.5s HTTP Error 429: Too Many Requests
+232:FOUT 0.5s HTTP Error 429: Too Many Requests
+233:FOUT 0.5s HTTP Error 429: Too Many Requests
+234:FOUT 0.5s HTTP Error 429: Too Many Requests
+235:FOUT 0.5s HTTP Error 429: Too Many Requests
+236:FOUT 0.5s HTTP Error 429: Too Many Requests
+237:FOUT 0.5s HTTP Error 429: Too Many Requests
+238:FOUT 0.5s HTTP Error 429: Too Many Requests
+239:FOUT 0.5s HTTP Error 429: Too Many Requests
+240:FOUT 0.5s HTTP Error 429: Too Many Requests
+241:FOUT 0.5s HTTP Error 429: Too Many Requests
+242:FOUT 0.5s HTTP Error 429: Too Many Requests
+243:FOUT 0.5s HTTP Error 429: Too Many Requests
+244:FOUT 0.5s HTTP Error 429: Too Many Requests
+245:FOUT 0.5s HTTP Error 429: Too Many Requests
+246:FOUT 0.5s HTTP Error 429: Too Many Requests
+247:FOUT 0.5s HTTP Error 429: Too Many Requests
+248:FOUT 0.5s HTTP Error 429: Too Many Requests
+249:FOUT 0.5s HTTP Error 429: Too Many Requests
