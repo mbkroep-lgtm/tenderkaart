@@ -483,8 +483,7 @@ function drawOffices(){
 
 // ---------- Lijst ----------
 const dlText = t => { const st = statusOf(t); return (st === "awarded" || st === "prior") ? leftText(t) : `Sluit ${fmt(t.deadline)} · ${leftText(t)}`; };
-const defHtml = t => (t.defense ? `<span class="deftag" title="Opdrachtgever is een defensie-organisatie">Defensie</span>` : "")
-  + (t.policyUA && window.isAdmin ? `<span class="deftag ua" title="Beleid BroadbandEU">Oekraïne: bevestiging niet-militair gebruik nodig</span>` : "");
+const defHtml = t => t.defense ? `<span class="deftag" title="Opdrachtgever is een defensie-organisatie">Defensie</span>` : "";
 const valHtml = t => (t.qty ? `<span class="qty" title="Aantal uit de titel gehaald">${t.qty}×</span>` : "") + (t.value ? `<span class="val">${esc(fmtMoney(t.value, t.currency))}</span>` : "");
 const newHtml = t => isNew(t) ? `<span class="newtag">NIEUW</span>` : "";
 function leftText(t){ const st = statusOf(t);

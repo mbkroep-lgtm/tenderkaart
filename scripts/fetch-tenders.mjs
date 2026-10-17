@@ -640,11 +640,11 @@ async function fetchTaiwan() {
   return out;
 }
 
-// Defensie-markering: militaire opdrachtgever of Oekraïne (daar altijd bevestiging niet-militair gebruik nodig)
+// Defensie-markering: militaire opdrachtgever
 const DEFENSE_RE = /(defen[cs]e|defensie|verteidigung|bundeswehr|armée|armasuisse|ministerul apararii|unitatea militara|military|militar|army|navy|air force|marine corps|військов|збройн|національної гвардії|міністерство оборони|оборони|國防|國軍|海巡)/i;
 function markDefense(t) {
   if (DEFENSE_RE.test(`${t.buyer || ''} ${t.title || ''}`)) t.defense = true;
-  if (t.country === 'UA') t.policyUA = true;
+  delete t.policyUA;
   return t;
 }
 
