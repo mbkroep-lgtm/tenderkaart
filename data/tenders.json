@@ -1,101 +1,108 @@
 {
- "updated": "2026-10-17T07:06:34.408Z",
- "queryVersion": "79a21b7991",
+ "updated": "2026-10-17T08:04:11.098Z",
+ "queryVersion": "9aac67d149",
  "sources": {
   "TED": {
    "ok": true,
-   "at": "2026-10-17T07:06:34.408Z",
+   "at": "2026-10-17T08:04:11.098Z",
    "count": 40,
    "note": ""
   },
   "Wereldbank": {
    "ok": true,
-   "at": "2026-10-17T07:06:34.408Z",
+   "at": "2026-10-17T08:04:11.098Z",
    "count": 55,
    "note": "63 gevonden, 55 echt over LEO."
   },
   "Find a Tender": {
    "ok": true,
-   "at": "2026-10-17T07:06:34.408Z",
+   "at": "2026-10-17T08:04:11.098Z",
    "count": 0,
-   "note": "1 pagina's, 0 berichten bekeken, 0 over LEO.",
-   "since": "2026-10-17T05:06:34.408Z"
+   "note": "152 pagina's, 15192 berichten bekeken, 0 over LEO.",
+   "since": "2026-10-17T06:04:11.098Z"
   },
   "Contracts Finder": {
    "ok": true,
-   "at": "2026-10-17T07:06:34.408Z",
+   "at": "2026-10-17T08:04:11.098Z",
    "count": 4,
    "note": "295 gevonden, 22 over LEO."
   },
   "TenderNed": {
    "ok": true,
-   "at": "2026-10-17T07:06:34.408Z",
+   "at": "2026-10-17T08:04:11.098Z",
    "count": 0,
    "note": "106 gevonden, 0 over LEO."
   },
   "Prozorro": {
    "ok": true,
-   "at": "2026-10-17T07:06:34.408Z",
-   "count": 61,
-   "note": "61 lopende procedures."
+   "at": "2026-10-17T08:04:11.098Z",
+   "count": 62,
+   "note": "62 lopende procedures."
   },
   "BOAMP": {
    "ok": true,
-   "at": "2026-10-17T07:06:34.408Z",
+   "at": "2026-10-17T08:04:11.098Z",
    "count": 1,
    "note": "5 gevonden, 1 over LEO."
   },
   "SIMAP (Zwitserland)": {
    "ok": true,
-   "at": "2026-10-17T07:06:34.408Z",
+   "at": "2026-10-17T08:04:11.098Z",
    "count": 0,
    "note": "20 gevonden, 0 over LEO."
   },
   "SECOP (Colombia)": {
    "ok": true,
-   "at": "2026-10-17T07:06:34.408Z",
+   "at": "2026-10-17T08:04:11.098Z",
    "count": 67,
    "note": "67 gevonden, 67 over LEO."
   },
-  "PNCP (Brazilië)": {
-   "ok": false,
-   "error": "fetch failed",
-   "at": "2026-10-17T07:06:34.408Z"
-  },
   "CanadaBuys": {
    "ok": true,
-   "at": "2026-10-17T07:06:34.408Z",
+   "at": "2026-10-17T08:04:11.098Z",
    "count": 1,
    "note": "892 open tenders bekeken, 1 over LEO."
   },
   "AusTender": {
    "ok": true,
-   "at": "2026-10-17T07:06:34.408Z",
+   "at": "2026-10-17T08:04:11.098Z",
    "count": 0,
-   "note": "0 contracten bekeken, 0 over LEO.",
-   "since": "2026-10-17T05:06:34.408Z"
+   "note": "8623 contracten bekeken, 0 over LEO.",
+   "since": "2026-10-17T06:04:11.098Z"
   },
   "UNDP": {
    "ok": true,
-   "at": "2026-10-17T07:06:34.408Z",
+   "at": "2026-10-17T08:04:11.098Z",
    "count": 1,
    "note": "974 berichten bekeken, 1 over LEO."
   },
   "PCC (Taiwan)": {
    "ok": true,
-   "at": "2026-10-17T07:06:34.408Z",
+   "at": "2026-10-17T08:04:11.098Z",
    "count": 16,
    "note": "38 aanbestedingen over LEO."
   },
+  "SAM.gov": {
+   "ok": false,
+   "error": "api.sam.gov gaf 429: {\"code\":\"900804\",\"message\":\"Message throttled out\",\"description\":\"You have exceeded your quota .You can access API after 2026-Oct-18 00:00:00+0000 UTC\",\"nextAccessTime\":\"2026-Oct-",
+   "at": "2026-10-17T08:04:11.098Z"
+  },
+  "PNCP (Brazilië)": {
+   "ok": true,
+   "at": "2026-10-17T08:04:11.098Z",
+   "count": 6,
+   "note": "13901 nieuwe aanbestedingen bekeken, 6 over LEO, nog bezig met inhalen (klaar t/m 2026-10-07). Nieuwe publicaties per dag, een dag later zichtbaar.",
+   "doneUntil": "2026-10-07"
+  },
   "Vertalen": {
    "ok": true,
-   "at": "2026-10-17T07:06:34.408Z",
-   "count": 1,
-   "note": "DeepL: 1 nieuw vertaald.",
+   "at": "2026-10-17T08:04:11.098Z",
+   "count": 7,
+   "note": "DeepL: 7 nieuw vertaald.",
    "engine": "DeepL"
   }
  },
- "count": 222,
+ "count": 229,
  "tenders": [
   {
    "pub": "UA-UA-2026-10-17-000083-a",
@@ -118,6 +125,26 @@
    "trEngine": "DeepL"
   },
   {
+   "pub": "UA-UA-2026-10-17-000166-a",
+   "source": "Prozorro",
+   "title": "Супутниковий модем Starlink Internet Satellite Mini",
+   "buyer": "ВІЙСЬКОВА ЧАСТИНА 3022 НАЦІОНАЛЬНОЇ ГВАРДІЇ УКРАЇНИ",
+   "country": "UA",
+   "published": "2026-10-17",
+   "deadline": "2026-10-27",
+   "deadlineAt": "2026-10-27T07:00:00.000Z",
+   "type": "Aankondiging opdracht",
+   "kind": "notice",
+   "cpv": [],
+   "link": "https://prozorro.gov.ua/tender/UA-2026-10-17-000166-a",
+   "value": 96250,
+   "currency": "UAH",
+   "defense": true,
+   "firstSeen": "2000-01-01T00:00:00.000Z",
+   "titleNl": "Starlink Internet Satellite Mini-satellietmodem",
+   "trEngine": "DeepL"
+  },
+  {
    "pub": "UA-UA-2026-10-17-000104-a",
    "source": "Prozorro",
    "title": "Супутниковий модем Starlink Internet Satellite Mini, 32530000-7 «Телекомунікаційне супутникове обладнання» за ДК 021:2015 Єдиного закупівельного словника.",
@@ -134,6 +161,26 @@
    "currency": "UAH",
    "defense": true,
    "firstSeen": "2026-10-17T07:02:21.206Z",
+   "titleNl": "Starlink Internet Satellite Mini-satellietmodem, 32530000-7 „Telecommunicatieapparatuur voor satellietgebruik“ volgens DK 021:2015 van het Uniforme Aankoopwoordenboek.",
+   "trEngine": "DeepL"
+  },
+  {
+   "pub": "UA-UA-2026-10-17-000120-a",
+   "source": "Prozorro",
+   "title": "Супутниковий модем Starlink Internet Satellite Mini, 32530000-7 «Телекомунікаційне супутникове обладнання» за ДК 021:2015 Єдиного закупівельного словника.",
+   "buyer": "ВІЙСЬКОВА ЧАСТИНА 9951",
+   "country": "UA",
+   "published": "2026-10-17",
+   "deadline": "2026-11-02",
+   "deadlineAt": "2026-11-02T10:00:00.000Z",
+   "type": "Aankondiging opdracht",
+   "kind": "notice",
+   "cpv": [],
+   "link": "https://prozorro.gov.ua/tender/UA-2026-10-17-000120-a",
+   "value": 490833.33,
+   "currency": "UAH",
+   "defense": true,
+   "firstSeen": "2000-01-01T00:00:00.000Z",
    "titleNl": "Starlink Internet Satellite Mini-satellietmodem, 32530000-7 „Telecommunicatieapparatuur voor satellietgebruik“ volgens DK 021:2015 van het Uniforme Aankoopwoordenboek.",
    "trEngine": "DeepL"
   },
@@ -650,26 +697,6 @@
    "trEngine": "DeepL"
   },
   {
-   "pub": "UA-UA-2026-10-10-000373-a",
-   "source": "Prozorro",
-   "title": "Супутникова система Starlink Mini ",
-   "buyer": "Військова частина А1536",
-   "country": "UA",
-   "published": "2026-10-10",
-   "deadline": "2026-10-22",
-   "deadlineAt": "2026-10-22T07:00:00.000Z",
-   "type": "Aankondiging opdracht",
-   "kind": "notice",
-   "cpv": [],
-   "link": "https://prozorro.gov.ua/tender/UA-2026-10-10-000373-a",
-   "value": 49882,
-   "currency": "UAH",
-   "defense": true,
-   "firstSeen": "2026-10-15T13:42:58.648Z",
-   "titleNl": "Het Starlink Mini-satellietsysteem ",
-   "trEngine": "DeepL"
-  },
-  {
    "pub": "UA-UA-2026-10-10-000391-a",
    "source": "Prozorro",
    "title": "Супутникова система Starlink Mini ",
@@ -682,6 +709,26 @@
    "kind": "notice",
    "cpv": [],
    "link": "https://prozorro.gov.ua/tender/UA-2026-10-10-000391-a",
+   "value": 49882,
+   "currency": "UAH",
+   "defense": true,
+   "firstSeen": "2026-10-15T13:42:58.648Z",
+   "titleNl": "Het Starlink Mini-satellietsysteem ",
+   "trEngine": "DeepL"
+  },
+  {
+   "pub": "UA-UA-2026-10-10-000373-a",
+   "source": "Prozorro",
+   "title": "Супутникова система Starlink Mini ",
+   "buyer": "Військова частина А1536",
+   "country": "UA",
+   "published": "2026-10-10",
+   "deadline": "2026-10-22",
+   "deadlineAt": "2026-10-22T07:00:00.000Z",
+   "type": "Aankondiging opdracht",
+   "kind": "notice",
+   "cpv": [],
+   "link": "https://prozorro.gov.ua/tender/UA-2026-10-10-000373-a",
    "value": 49882,
    "currency": "UAH",
    "defense": true,
@@ -1005,6 +1052,25 @@
    "trEngine": "DeepL"
   },
   {
+   "pub": "BR-18363929000140-1-000117/2026",
+   "source": "PNCP (Brazilië)",
+   "title": "CONTRATAÇÃO DE EMPRESA ESPECIALIZADA PARA PRESTAÇÃO DE SERVIÇO DE ACESSO À INTERNET VIA SATÉLITE DE BAIXA ÓRBITA TERRESTRE - LEO, COM FRANQUIA DE DADOS ILIMITADA, INCLUINDO ATIVAÇÃO, CONFIGURAÇÃO, SUPORTE TÉCNICO E MANUTENÇÃO DA SOLUÇÃO, BEM COMO A AQUISIÇÃO DE TERMINAIS PORTÁTEIS DE COMUNICAÇÃO VIA SATÉLITE E RESPECTIVOS ACESSÓRIOS NECESSÁRIOS AO SEU PLENO FUNCIONAMENTO, DESTINADOS AO ATENDIMENTO DAS AÇÕES ITINERANTES DE INSCRIÇÃO, ATUALIZAÇÃO CADASTRAL E ORIENTAÇÃO AOS USUÁRIOS DO CADASTRO ÚNICO PARA PROGRAMAS SOCIAIS DO GOVERNO FEDERAL  CADÚNICO E DOS PROGRAMAS SOCIAIS A ELE VINCULADOS, DESENVOLVIDAS PELA SECRETARIA MUNICIPAL DE DESENVOLVIMENTO SOCIAL DE BRUMADINHO, PELO PERÍODO DE 12 (DOZE) MESES.",
+   "buyer": "MUNICIPIO DE BRUMADINHO",
+   "country": "BR",
+   "published": "2026-10-07",
+   "deadline": "2026-10-16",
+   "deadlineAt": "2026-10-16T11:00:00.000Z",
+   "type": "Dispensa",
+   "kind": "notice",
+   "cpv": [],
+   "link": "https://pncp.gov.br/app/editais/18363929000140/2026/117",
+   "value": 22452.76,
+   "currency": "BRL",
+   "firstSeen": "2000-01-01T00:00:00.000Z",
+   "titleNl": "AANSTELLING VAN EEN GESPECIALISEERD BEDRIJF VOOR HET VERLENEN VAN INTERNETTOEGANG VIA EEN SATELLIET IN EEN LAGE BAAN ROND DE AARDE - LEO, MET ONBEPERKT DATAVERBRUIK, INCLUSIEF ACTIVERING, CONFIGURATIE, TECHNISCHE ONDERSTEUNING EN ONDERHOUD VAN DE OPLOSSING, EVENALS DE AANKOOP VAN DRAAGBARE TERMINALS VOOR SATELLIETCOMMUNICATIE EN DE BIJBEHORENDE ACCESSOIRES DIE NODIG ZIJN VOOR DE VOLLEDIGE WERKING ERVAN, BESTEMD VOOR DE ONDERSTEUNING VAN DE RONDREIZENDE INSCHRIJVINGSAKTIE, HET BIJWERKEN VAN REGISTRATIEGEGEVENS EN HET VERSTREKKEN VAN ADVIES AAN GEBRUIKERS VAN HET UNIFORME REGISTER VOOR SOCIALE PROGRAMMA’S VAN DE FEDERALE OVERHEID (CADÚNICO) EN DE DAARAAN GEKOPPELDE SOCIALE PROGRAMMA’S, die worden uitgevoerd door het gemeentelijk secretariaat voor sociale ontwikkeling van Brumadinho, voor een periode van 12 (twaalf) maanden.",
+   "trEngine": "DeepL"
+  },
+  {
    "pub": "UA-UA-2026-10-06-006083-a",
    "source": "Prozorro",
    "title": "Послуги з підтримки, ведення та управління акаунтом Starlink згідно коду ДК 021:2015:72250000-2 - Послуги, пов’язані із системами та підтримкою",
@@ -1043,6 +1109,63 @@
    "qty": 5
   },
   {
+   "pub": "BR-15023922000191-1-000109/2026",
+   "source": "PNCP (Brazilië)",
+   "title": "[LICITANET] - Registro de Preços para futura e eventual contratação de empresa para fornecimento de equipamentos e execução de serviços de instalação e manutenção de antenas Starlink, destinados ao atendimento das necessidades das Secretarias Municipais de Canarana-MT",
+   "buyer": "MUNICIPIO DE CANARANA",
+   "country": "BR",
+   "published": "2026-10-06",
+   "deadline": "2026-09-16",
+   "deadlineAt": "2026-09-16T16:00:00.000Z",
+   "type": "Pregão - Eletrônico",
+   "kind": "notice",
+   "cpv": [],
+   "link": "https://pncp.gov.br/app/editais/15023922000191/2026/109",
+   "value": 113957.35,
+   "currency": "BRL",
+   "firstSeen": "2000-01-01T00:00:00.000Z",
+   "titleNl": "[LICITANET] - Prijsregistratie met het oog op een toekomstige en eventuele aanstelling van een bedrijf voor de levering van apparatuur en de uitvoering van installatie- en onderhoudswerkzaamheden aan Starlink-antennes, ter voorziening in de behoeften van de gemeentelijke diensten van Canarana-MT",
+   "trEngine": "DeepL"
+  },
+  {
+   "pub": "BR-87613626000151-1-000419/2026",
+   "source": "PNCP (Brazilië)",
+   "title": "Contratação de empresa especializada para o fornecimento de solução de conectividade à internet via satélite para uso veicular, incluindo o fornecimento de antena Starlink e todos os acessórios necessários, bem como a instalação em veículo oficial.",
+   "buyer": "MUNICIPIO DE LAGOA VERMELHA",
+   "country": "BR",
+   "published": "2026-10-06",
+   "deadline": "",
+   "deadlineAt": "",
+   "type": "Dispensa",
+   "kind": "notice",
+   "cpv": [],
+   "link": "https://pncp.gov.br/app/editais/87613626000151/2026/419",
+   "value": 1422.9,
+   "currency": "BRL",
+   "firstSeen": "2000-01-01T00:00:00.000Z",
+   "titleNl": "Het inschakelen van een gespecialiseerd bedrijf voor het leveren van een oplossing voor internetverbinding via satelliet voor gebruik in voertuigen, inclusief de levering van een Starlink-antenne en alle benodigde accessoires, evenals de installatie in een dienstvoertuig.",
+   "trEngine": "DeepL"
+  },
+  {
+   "pub": "BR-13719646000175-1-000189/2026",
+   "source": "PNCP (Brazilië)",
+   "title": "Aquisição de kits de antena Starlink Mini veicular, para atender às necessidades do Fundo\r\nMunicipal de Saúde de Itaberaba/BA. \r\n",
+   "buyer": "MUNICIPIO DE ITABERABA",
+   "country": "BR",
+   "published": "2026-10-06",
+   "deadline": "2026-10-09",
+   "deadlineAt": "2026-10-10T02:59:00.000Z",
+   "type": "Dispensa",
+   "kind": "notice",
+   "cpv": [],
+   "link": "https://pncp.gov.br/app/editais/13719646000175/2026/189",
+   "value": 8040.78,
+   "currency": "BRL",
+   "firstSeen": "2000-01-01T00:00:00.000Z",
+   "titleNl": "Aankoop van Starlink Mini-antennekits voor in de auto, om te voorzien in de behoeften van het\nGemeentelijk Gezondheidsfonds van Itaberaba/BA. \n",
+   "trEngine": "DeepL"
+  },
+  {
    "pub": "CO-CO1.REQ.11149315",
    "source": "SECOP (Colombia)",
    "title": "ADQUISICIÓN, INSTALACIÓN Y PUESTA EN FUNCIONAMIENTO DE SOLUCIONES DE \nCONECTIVIDAD A INTERNET MEDIANTE ANTENAS SATELITALES TIPO STARLINK O \nSIMILAR, INCLUYENDO EL SUMINISTRO DEL SERVICIO DE INTERNET, PARA SEIS (6) \nPUNTO",
@@ -1077,6 +1200,44 @@
    "currency": "TWD",
    "firstSeen": "2026-10-16T07:13:38.622Z",
    "titleNl": "Aanbesteding voor communicatiediensten via laagbaansatellieten van het Midden-district voor het boekjaar 115-116",
+   "trEngine": "DeepL"
+  },
+  {
+   "pub": "BR-92695790000195-1-000063/2026",
+   "source": "PNCP (Brazilië)",
+   "title": "Contratação de empresa para a prestação de serviço de INTERNET VIA SATÉLITE DE ÓRBITA TERRESTRE BAIXA (LEO) com fornecimento de equipamento de internet via satélite, incluindo suporte com ventosas para instalação em 10 (dez) veículos, cabos, todos materiais necessários para sua instalação e demais elementos/equipamentos que se fizerem necessários, com contratação de plano móvel de dados de viagem dados de alta velocidade, ilimitados, baixa latência, apta a suportar aplicações institucionais, acesso a sistemas corporativos, videoconferência e tráfego contínuo de dados com cobertura terrestre em todo o território nacional, nas condições, quantidades e especificações estabelecidas no Termo de Referência",
+   "buyer": "CONSELHO REGIONAL DE ENGENHARIA E AGRONOMIA DO RS",
+   "country": "BR",
+   "published": "2026-10-05",
+   "deadline": "2026-10-21",
+   "deadlineAt": "2026-10-21T13:00:00.000Z",
+   "type": "Pregão - Eletrônico",
+   "kind": "notice",
+   "cpv": [],
+   "link": "https://pncp.gov.br/app/editais/92695790000195/2026/63",
+   "value": 25967.5,
+   "currency": "BRL",
+   "firstSeen": "2000-01-01T00:00:00.000Z",
+   "titleNl": "Aanbesteding voor de levering van INTERNET VIA SATELLIET IN EEN LAGE AARDSE BAAN (LEO) met levering van apparatuur voor internet via satelliet, inclusief bevestigingsbeugels met zuignappen voor installatie in 10 (tien) voertuigen, kabels, alle benodigde materialen voor de installatie en overige elementen/apparatuur die nodig mochten zijn, met afsluiting van een mobiel abonnement voor onbeperkte, hoge snelheid reisdataverkeer, onbeperkt, met lage latentie, geschikt voor institutionele toepassingen, toegang tot bedrijfssystemen, videoconferenties en continu dataverkeer met landdekking over het gehele nationale grondgebied, onder de voorwaarden, hoeveelheden en specificaties zoals vastgelegd in de Referentievoorwaarden",
+   "trEngine": "DeepL"
+  },
+  {
+   "pub": "BR-13927801000149-1-000254/2026",
+   "source": "PNCP (Brazilië)",
+   "title": "Contratação, através do sistema de Registro de Preços de empresa especializada em telecomunicações para prestação, sob demanda, de Serviços de Comunicação de Dados, mediante fornecimento de links de acesso à internet via Satélite de Baixa Órbita - LEO, nas modalidades fixa e móvel, incluindo a disponibilização dos equipamentos necessários em regime de locação, instalação, configuração, ativação, suporte técnico e manutenção, para atendimento às necessidades dos diversos órgãos e entidades da Prefeitura Municipal de Salvador, conforme condições, quantidades e exigências estabelecidas no Termo de Referência.",
+   "buyer": "MUNICIPIO DE SALVADOR",
+   "country": "BR",
+   "published": "2026-10-05",
+   "deadline": "2026-10-19",
+   "deadlineAt": "2026-10-19T12:00:00.000Z",
+   "type": "Pregão - Eletrônico",
+   "kind": "notice",
+   "cpv": [],
+   "link": "https://pncp.gov.br/app/editais/13927801000149/2026/254",
+   "value": 3674429.5,
+   "currency": "BRL",
+   "firstSeen": "2000-01-01T00:00:00.000Z",
+   "titleNl": "Aanbesteding, via het prijsregistratiesysteem, van een gespecialiseerd telecommunicatiebedrijf voor het op aanvraag leveren van datacommunicatiediensten, door middel van het verstrekken van internettoegangsverbindingen via satellieten in een lage baan - LEO, in zowel vaste als mobiele vorm, inclusief het ter beschikking stellen van de benodigde apparatuur op basis van huur, installatie, configuratie, activering, technische ondersteuning en onderhoud, om te voorzien in de behoeften van de diverse instanties en entiteiten van het gemeentebestuur van Salvador, overeenkomstig de voorwaarden, hoeveelheden en eisen zoals vastgelegd in de opdrachtomschrijving.",
    "trEngine": "DeepL"
   },
   {
@@ -1175,23 +1336,22 @@
    "trEngine": "DeepL"
   },
   {
-   "pub": "UA-UA-2026-09-29-001497-a",
+   "pub": "UA-UA-2026-09-29-009625-a",
    "source": "Prozorro",
-   "title": "Послуги підтримки та ведення облікового запису Starlink",
-   "buyer": "Військова частина А2227",
+   "title": "ДК 021:2015: 32530000-7 Телекомунікаційне супутникове обладнання (комплект супутникового зв’язку Starlink MINI або еквівалент)",
+   "buyer": "Головне управління Національної поліції в Одеській області",
    "country": "UA",
    "published": "2026-09-29",
-   "deadline": "2026-10-10",
-   "deadlineAt": "2026-10-10T05:00:00.000Z",
+   "deadline": "2026-10-15",
+   "deadlineAt": "2026-10-15T06:00:00.000Z",
    "type": "In beoordeling",
    "kind": "award",
    "cpv": [],
-   "link": "https://prozorro.gov.ua/tender/UA-2026-09-29-001497-a",
-   "value": 291491,
+   "link": "https://prozorro.gov.ua/tender/UA-2026-09-29-009625-a",
+   "value": 607453,
    "currency": "UAH",
-   "defense": true,
-   "firstSeen": "2026-10-15T13:42:58.648Z",
-   "titleNl": "Ondersteuning en beheer van je Starlink-account",
+   "firstSeen": "2000-01-01T00:00:00.000Z",
+   "titleNl": "DK 021:2015: 32530000-7 Telecommunicatieapparatuur voor satellietcommunicatie (Starlink MINI-satellietcommunicatieset of gelijkwaardig)",
    "trEngine": "DeepL"
   },
   {
@@ -4292,25 +4452,6 @@
    "currency": "UAH",
    "firstSeen": "2026-10-15T13:42:58.648Z",
    "titleNl": "32530000-7 - Telecommunicatieapparatuur voor satellietcommunicatie „Starlink-satellietmodem“ (32531000-4)",
-   "trEngine": "DeepL"
-  },
-  {
-   "pub": "UA-UA-2026-10-15-002171-a",
-   "source": "Prozorro",
-   "title": "Супутникові модеми Starlink Internet Satellite 3gen (за ДК 021:2015 - 32530000-7 - Телекомунікаційне супутникове обладнання )",
-   "buyer": "Снятинська міська рада Коломийського району Івано-Франківської області",
-   "country": "UA",
-   "published": "",
-   "deadline": "2026-10-20",
-   "deadlineAt": "2026-10-20T05:00:00.000Z",
-   "type": "Aankondiging opdracht",
-   "kind": "notice",
-   "cpv": [],
-   "link": "https://prozorro.gov.ua/tender/UA-2026-10-15-002171-a",
-   "value": 44000,
-   "currency": "UAH",
-   "firstSeen": "2026-10-17T07:05:12.703Z",
-   "titleNl": "Starlink Internet Satellite 3gen-satellietmodems (volgens DK 021:2015 - 32530000-7 - Telecommunicatieapparatuur voor satellietgebruik)",
    "trEngine": "DeepL"
   },
   {
