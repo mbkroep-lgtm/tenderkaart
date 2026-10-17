@@ -279,7 +279,13 @@ async function fetchSam(key) {
   const byId = new Map();
   for (const term of terms) {
     const url = `${SAM_API}?api_key=${encodeURIComponent(key)}&limit=1000&offset=0&postedFrom=${usDate(NOW - 364 * DAY)}&postedTo=${usDate(NOW)}&title=${encodeURIComponent(term)}`;
-    const d = await getJson(url, {}, 1);
+    let d;
+    try { d = await getJson(url, {}, 0); }
+    catch (e) {
+      // dagquotum op: niet steeds opnieuw proberen (dat kost alleen meer quotum), pas na middernacht UTC weer
+      if (/ 429/.test(e.message)) { const err = new Error('Dagquotum SAM.gov op'); err.quotaUntil = new Date(Math.floor(+NOW / DAY + 1) * DAY + 5 * 60e3).toISOString(); throw err; }
+      throw e;
+    }
     for (const o of d.opportunitiesData || []) if (o.noticeId) byId.set(o.noticeId, o);
   }
   const out = [];
@@ -723,8 +729,11 @@ const SOURCES = [
   ['PCC (Taiwan)', () => fetchTaiwan()]
 ];
 const SAM_KEY = process.env.SAM_API_KEY || '';
-const lastSam = Date.parse(old.sources['SAM.gov']?.at || 0) || 0;
-if (SAM_KEY && (reset || NOW - lastSam > 20 * 3600e3 || !old.sources['SAM.gov']?.ok)) SOURCES.push(['SAM.gov', () => fetchSam(SAM_KEY)]);
+const samOld = old.sources['SAM.gov'] || {};
+const lastSamOk = Date.parse(samOld.okAt || (samOld.ok && !samOld.quotaUntil ? samOld.at : 0) || 0) || 0;
+const samWaitUntil = Date.parse(samOld.quotaUntil || 0) || 0;
+if (SAM_KEY && +NOW < samWaitUntil) console.log('SAM.gov: dagquotum op, wacht tot ' + samOld.quotaUntil);
+else if (SAM_KEY && (reset || NOW - lastSamOk > 20 * 3600e3)) SOURCES.push(['SAM.gov', () => fetchSam(SAM_KEY)]);
 else if (SAM_KEY) console.log('SAM.gov: vandaag al opgehaald, overgeslagen (dagquotum).');
 let pncpDone = old.sources['PNCP (Brazilië)']?.doneUntil || '';
 if (pncpDone < isoDay(+NOW - DAY)) SOURCES.push(['PNCP (Brazilië)', async () => { const r = await fetchPncp(pncpDone); pncpDone = r.done; return r.items; }]);
@@ -754,10 +763,17 @@ for (const [name, fn] of SOURCES) {
     // bij een reset: berichten die al bekend waren, niet opnieuw als "nieuw" markeren
     if (reset) for (const t of fresh) { const p = prevById.get(t.pub); if (p?.firstSeen) t.firstSeen = p.firstSeen; }
     result.push(...fresh, ...carry);
-    sourceInfo[name] = { ok: true, at: nowIso, count: fresh.length, note: NOTES[name] || '', ...(['Find a Tender', 'AusTender'].includes(name) ? { since: new Date(NOW - 2 * 3600e3).toISOString() } : {}), ...(name === 'PNCP (Brazilië)' ? { doneUntil: pncpDone } : {}) };
+    sourceInfo[name] = { ok: true, at: nowIso, count: fresh.length, note: NOTES[name] || '', ...(['Find a Tender', 'AusTender'].includes(name) ? { since: new Date(NOW - 2 * 3600e3).toISOString() } : {}), ...(name === 'PNCP (Brazilië)' ? { doneUntil: pncpDone } : {}), ...(name === 'SAM.gov' ? { okAt: nowIso } : {}) };
   } catch (e) {
     console.error(`${name} mislukt, bestaande berichten blijven staan:`, e.message);
     result.push(...previous);
+    if (e.quotaUntil) {   // geen storing: alleen even wachten tot het quotum weer vrij is
+      const o = old.sources[name] || {};
+      const t = new Date(e.quotaUntil).toLocaleString('nl-NL', { timeZone: 'Europe/Amsterdam', weekday: 'long', hour: '2-digit', minute: '2-digit' });
+      sourceInfo[name] = { ...o, ok: true, error: undefined, at: nowIso, quotaUntil: e.quotaUntil, okAt: o.okAt || (o.ok ? o.at : undefined),
+        note: `Dagquotum bereikt; ${t} weer. De berichten van de vorige keer blijven staan.` };
+      continue;
+    }
     sourceInfo[name] = { ...(old.sources[name] || {}), ok: false, error: e.message.slice(0, 200), at: nowIso };
   }
 }
