@@ -441,43 +441,66 @@ async function fetchSecop() {
 }
 
 // Brazilië (PNCP): de zoekfunctie blokkeert servers buiten Brazilië, de open-data-API niet.
-// Die heeft geen zoekwoord, dus we lopen alle aanbestedingen door die nu openstaan (~29.000, 50 per pagina)
-// en filteren zelf. Daarom één keer per dag; tussendoor blijven de resultaten van die ochtend staan.
-async function fetchPncp() {
-  const base = 'https://pncp.gov.br/api/consulta/v1/contratacoes/proposta';
-  const until = isoDay(+NOW + 730 * DAY).replace(/-/g, '');
-  const url = p => `${base}?dataFinal=${until}&pagina=${p}&tamanhoPagina=50`;
-  const page = async p => { for (let i = 0; ; i++) { try { return await getJson(url(p), { headers: UA }); } catch (e) { if (i >= 3) throw e; await sleep(3000 * (i + 1)); } } };
-  const first = await page(1);
-  const pages = Math.min(first.totalPaginas || 1, 2000);
-  const rows = [...(first.data || [])];
-  let next = 2, failed = 0;
-  // vier tegelijk: snel genoeg, en niet te zwaar voor hun server
-  await Promise.all([0, 1, 2, 3].map(async () => {
-    while (next <= pages) {
-      const p = next++;
-      try { rows.push(...((await page(p)).data || [])); } catch { failed++; }
+// Die heeft geen zoekwoord en staat maar 2 verzoeken tegelijk toe. Daarom halen we per afgeronde dag de nieuw
+// gepubliceerde aanbestedingen op (aanbesteding, snelle aanbesteding, onderhandse gunning) en filteren zelf.
+// Elke ronde heeft een tijdslimiet; wat niet af is, komt de volgende ronde. Een dag telt pas als hij helemaal binnen is.
+const PNCP_MODES = { 6: 'Pregão eletrônico', 4: 'Concorrência eletrônica', 8: 'Dispensa', 7: 'Pregão presencial' };
+async function fetchPncp(doneUntil) {
+  const t0 = Date.now(), BUDGET = 12 * 60e3;
+  const base = 'https://pncp.gov.br/api/consulta/v1/contratacoes/publicacao';
+  const yesterday = isoDay(+NOW - DAY);
+  let day = doneUntil ? isoDay(Date.parse(doneUntil) + DAY) : isoDay(+NOW - 14 * DAY);   // eerste keer: 14 dagen terug
+  const out = [], seen = new Set();
+  let scanned = 0, done = doneUntil || '';
+  const page = async (mode, ymd, p) => {
+    const url = `${base}?dataInicial=${ymd}&dataFinal=${ymd}&codigoModalidadeContratacao=${mode}&pagina=${p}&tamanhoPagina=50`;
+    for (let i = 0; ; i++) {
+      try { return await getJson(url, { headers: UA, signal: AbortSignal.timeout(45000) }, 6); }
+      catch (e) { if (/\b204\b|Unexpected end/.test(e.message)) return { data: [] }; if (i >= 2) throw e; await sleep(5000 * (i + 1)); }
     }
-  }));
-  if (failed > pages / 10) throw new Error(`${failed} van ${pages} pagina's mislukt`);
-  const out = [];
-  for (const x of rows) {
-    const text = `${x.objetoCompra || ''} ${x.informacaoComplementar || ''}`;
-    if (!LEO_RE.test(text)) continue;
+  };
+  const take = x => {
+    scanned++;
+    if (!LEO_RE.test(`${x.objetoCompra || ''} ${x.informacaoComplementar || ''}`)) return;
+    const id = x.numeroControlePNCP || `${x.orgaoEntidade?.cnpj}-${x.anoCompra}-${x.sequencialCompra}`;
+    if (seen.has(id)) return; seen.add(id);
     const [cnpj, , rest] = String(x.numeroControlePNCP || '').split('-');
     const [seq, ano] = String(rest || '').split('/');
     const end = x.dataEncerramentoProposta ? x.dataEncerramentoProposta + '-03:00' : '';   // tijden in Brasília
     out.push({
-      pub: 'BR-' + (x.numeroControlePNCP || `${x.orgaoEntidade?.cnpj}-${x.anoCompra}-${x.sequencialCompra}`), source: 'PNCP (Brazilië)',
+      pub: 'BR-' + id, source: 'PNCP (Brazilië)',
       title: x.objetoCompra || '(zonder titel)', buyer: x.orgaoEntidade?.razaoSocial || x.unidadeOrgao?.nomeUnidade || '',
       country: 'BR', published: date(x.dataPublicacaoPncp), deadline: date(end), deadlineAt: when(end),
       type: x.modalidadeNome || 'Edital', kind: 'notice', cpv: [],
       link: cnpj && seq && ano ? `https://pncp.gov.br/app/editais/${cnpj}/${ano}/${Number(seq)}` : 'https://pncp.gov.br/',
       value: num(x.valorTotalEstimado), currency: 'BRL'
     });
+  };
+  while (day <= yesterday && Date.now() - t0 < BUDGET) {
+    const ymd = day.replace(/-/g, '');
+    let complete = true;
+    for (const mode of Object.keys(PNCP_MODES)) {
+      const first = await page(mode, ymd, 1);
+      (first.data || []).forEach(take);
+      const pages = first.totalPaginas || 1;
+      let next = 2;
+      // twee tegelijk: meer staat de API niet toe
+      await Promise.all([0, 1].map(async () => {
+        while (next <= pages) {
+          if (Date.now() - t0 > BUDGET + 5 * 60e3) { complete = false; return; }
+          const p = next++;
+          ((await page(mode, ymd, p)).data || []).forEach(take);
+        }
+      }));
+      if (!complete) break;
+    }
+    if (!complete) break;
+    done = day;
+    day = isoDay(Date.parse(day) + DAY);
   }
-  say('PNCP (Brazilië)', `${rows.length} open aanbestedingen bekeken${failed ? ` (${failed} pagina's mislukt)` : ''}, ${out.length} over LEO. Eén keer per dag.`);
-  return out;
+  const behind = done < yesterday ? `, nog bezig met inhalen (klaar t/m ${done || '-'})` : '';
+  say('PNCP (Brazilië)', `${scanned} nieuwe aanbestedingen bekeken, ${out.length} over LEO${behind}. Nieuwe publicaties per dag, een dag later zichtbaar.`);
+  return { items: out, done };
 }
 
 // SIMAP (Zwitserland)
@@ -703,9 +726,9 @@ const SAM_KEY = process.env.SAM_API_KEY || '';
 const lastSam = Date.parse(old.sources['SAM.gov']?.at || 0) || 0;
 if (SAM_KEY && (reset || NOW - lastSam > 20 * 3600e3 || !old.sources['SAM.gov']?.ok)) SOURCES.push(['SAM.gov', () => fetchSam(SAM_KEY)]);
 else if (SAM_KEY) console.log('SAM.gov: vandaag al opgehaald, overgeslagen (dagquotum).');
-const lastPncp = Date.parse(old.sources['PNCP (Brazilië)']?.at || 0) || 0;
-if (reset || NOW - lastPncp > 20 * 3600e3 || !old.sources['PNCP (Brazilië)']?.ok) SOURCES.push(['PNCP (Brazilië)', () => fetchPncp()]);
-else console.log('PNCP: vandaag al opgehaald, overgeslagen.');
+let pncpDone = old.sources['PNCP (Brazilië)']?.doneUntil || '';
+if (pncpDone < isoDay(+NOW - DAY)) SOURCES.push(['PNCP (Brazilië)', async () => { const r = await fetchPncp(pncpDone); pncpDone = r.done; return r.items; }]);
+else console.log('PNCP: gisteren is al binnen, overgeslagen.');
 
 const oldBySource = {};
 for (const t of old.tenders || []) (oldBySource[t.source || 'TED'] ||= []).push({ source: 'TED', ...t });
@@ -731,7 +754,7 @@ for (const [name, fn] of SOURCES) {
     // bij een reset: berichten die al bekend waren, niet opnieuw als "nieuw" markeren
     if (reset) for (const t of fresh) { const p = prevById.get(t.pub); if (p?.firstSeen) t.firstSeen = p.firstSeen; }
     result.push(...fresh, ...carry);
-    sourceInfo[name] = { ok: true, at: nowIso, count: fresh.length, note: NOTES[name] || '', ...(['Find a Tender', 'AusTender'].includes(name) ? { since: new Date(NOW - 2 * 3600e3).toISOString() } : {}) };
+    sourceInfo[name] = { ok: true, at: nowIso, count: fresh.length, note: NOTES[name] || '', ...(['Find a Tender', 'AusTender'].includes(name) ? { since: new Date(NOW - 2 * 3600e3).toISOString() } : {}), ...(name === 'PNCP (Brazilië)' ? { doneUntil: pncpDone } : {}) };
   } catch (e) {
     console.error(`${name} mislukt, bestaande berichten blijven staan:`, e.message);
     result.push(...previous);
