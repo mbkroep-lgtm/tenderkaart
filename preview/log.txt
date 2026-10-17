@@ -1,2 +1,23 @@
-11125 records
-ok
+$ curl -sS -m 40 -o /dev/null -w '%{http_code} %{time_total}s ip=%{remote_ip}\n' 'https://pncp.gov.br/api/search/?q=starlink&tipos_documento=edital&pagina=1&tam_pagina=10&ordenacao=-data'
+000 0.602615s ip=189.9.176.245
+curl: (56) Recv failure: Connection reset by peer
+
+$ curl -sS -m 40 -o /dev/null -w '%{http_code} %{time_total}s\n' 'https://pncp.gov.br/api/consulta/v1/contratacoes/publicacao?dataInicial=20261001&dataFinal=20261016&codigoModalidadeContratacao=6&pagina=1'
+200 1.774499s
+
+$ curl -sS -m 40 -o /dev/null -w '%{http_code}\n' https://pncp.gov.br/
+000
+curl: (56) Recv failure: Connection reset by peer
+
+$ curl -sS -m 40 -o /dev/null -w '%{http_code}\n' https://www.gov.br/
+301
+
+$ curl -sS -m 40 -o /dev/null -w '%{http_code}\n' 'https://compras.dados.gov.br/'
+301
+
+$ curl -sS -m 30 ifconfig.io/country_code
+US
+
+$ getent hosts pncp.gov.br
+189.9.176.245   pncp.gov.br
+
