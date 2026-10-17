@@ -1,23 +1,9 @@
-$ curl -sS -m 40 -o /dev/null -w '%{http_code} %{time_total}s ip=%{remote_ip}\n' 'https://pncp.gov.br/api/search/?q=starlink&tipos_documento=edital&pagina=1&tam_pagina=10&ordenacao=-data'
-000 0.602615s ip=189.9.176.245
-curl: (56) Recv failure: Connection reset by peer
-
-$ curl -sS -m 40 -o /dev/null -w '%{http_code} %{time_total}s\n' 'https://pncp.gov.br/api/consulta/v1/contratacoes/publicacao?dataInicial=20261001&dataFinal=20261016&codigoModalidadeContratacao=6&pagina=1'
-200 1.774499s
-
-$ curl -sS -m 40 -o /dev/null -w '%{http_code}\n' https://pncp.gov.br/
-000
-curl: (56) Recv failure: Connection reset by peer
-
-$ curl -sS -m 40 -o /dev/null -w '%{http_code}\n' https://www.gov.br/
-301
-
-$ curl -sS -m 40 -o /dev/null -w '%{http_code}\n' 'https://compras.dados.gov.br/'
-301
-
-$ curl -sS -m 30 ifconfig.io/country_code
-US
-
-$ getent hosts pncp.gov.br
-189.9.176.245   pncp.gov.br
-
+publicacao mod 6 1 dag: status 200 total 1715 pag 35 1.4s 
+publicacao mod 8 1 dag: status 200 total 3173 pag 64 1.2s 
+publicacao mod 4 1 dag: status 200 total 232 pag 5 0.9s 
+publicacao mod 9 1 dag: status 200 total 1040 pag 21 1.5s 
+publicacao mod 5 1 dag: status 200 total 10 pag 1 0.9s 
+publicacao mod 12 1 dag: status 200 total 93 pag 2 3.0s 
+proposta open: status 200 total 28889 pag 578 1.8s 
+{"valorTotalHomologado": 622500.0, "orgaoEntidade": {"cnpj": "82765488000102", "razaoSocial": "MUNICIPIO DE TAIO", "poderId": "N", "esferaId": "M"}, "dataAtualizacao": "2023-10-03T15:11:52", "dataInclusao": "2023-10-03T15:11:52", "anoCompra": 2023, "sequencialCompra": 15, "emendaParlamentar": null, "numeroControlePNCP": "82765488000102-1-000015/2023", "srp": false, "numeroCompra": "PRI 87", "processo": "87/2023", "objetoCompra": "CREDENCIAMENTO PARA CONTRATAÇÃO DE EMPRESAS PARA PRESTAÇÃO DE SERVIÇOS DE ESCAVADEIRA HIDRÁULICA, RETROESCAVADEIRA, MOTONIVELADORA, MINI ESCAVADEIRA, CAMINHÃO BASCULANTE, TRATOR SOBRE ESTEIRA E ROLO COMPACTADOR, PARA RECUPERAÇÃO DAS ESTRADAS VICINAIS E DEMAIS SERVIÇOS DESENVOLVIDOS PELA SECRETARIAS MUNICIPAIS, CONFORME ESPECIFICAÇÕES DO EDITAL E SEUS ANEXOS.", "informacaoComplementar": null, "dataAberturaProposta": "2023-09-27T17:00:30", "dataEncerramentoProposta": "2026-12-31T00:00:00", "dataPublicacaoPncp": "2023-10-03T15:11:52", "dataAtualizacaoGlobal": "2023-10-03T15:11:52", "unidadeOrgao": {"ufNome": "Santa Catarina", "ufSigla": "SC", "municipioNome": "Taió", "codigoUnidade": "06006", "nomeUnidade": "Serviços Rurais", "codigoIbge": "4217808"}, "orgaoSubRogado": null, "unidadeSubRogada": null, "amparoLegal": {"nome": "Lei 14.133/2021, Art. 78, I", "descricao": "Credenciamento: processo administrativo de chamamento público em que a Administração Pública convoca interessados em prestar serviços ou fornecer bens para que, preenchidos os requisitos n
+proposta 500: status 0 n 0 0.5s HTTP Error 400: 
