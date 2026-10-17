@@ -6,6 +6,8 @@ on:
     - cron: '17 5 * * 1-5'
     - cron: '47 9 * * 1-5'
     - cron: '23 13 * * 1-5'
+    # weekend: één ronde per dag is genoeg (er wordt dan weinig gepubliceerd)
+    - cron: '17 6 * * 0,6'
   workflow_dispatch:          # handmatig starten via het tabblad Actions
   push:
     branches: [main]

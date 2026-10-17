@@ -1,5 +1,5 @@
 // Vangnet voor de ophaalrondes: Vercel roept dit elke dag aan.
-// Tenders: op werkdagen, als de gegevens ouder zijn dan 6 uur. Satellieten: elke dag, als ze ouder zijn dan 30 uur.
+// Tenders: als de gegevens ouder zijn dan 6 uur (werkdagen) of 26 uur (weekend). Satellieten: elke dag, als ze ouder zijn dan 30 uur.
 // Is de automatische ronde van GitHub die ochtend niet gedraaid (GitHub slaat geplande taken soms over),
 // dan start deze functie hem alsnog.
 import { readFile } from 'node:fs/promises';
@@ -25,13 +25,12 @@ export async function GET(request) {
   };
   const out = {};
 
-  // tenders (alleen op werkdagen)
-  const day = new Date().getUTCDay();
+  // tenders (in het weekend draait er maar één ronde per dag)
+  const day = new Date().getUTCDay(), maxAge = day === 0 || day === 6 ? 26 : 6;
   let updated = null;
   try { updated = JSON.parse(await readFile(path.join(process.cwd(), 'data', 'tenders.json'), 'utf8')).updated; } catch {}
   const ageH = updated ? (Date.now() - Date.parse(updated)) / 3600e3 : Infinity;
-  if (day === 0 || day === 6) out.tenders = 'weekend, overgeslagen';
-  else if (ageH < 6) out.tenders = `${ageH.toFixed(1)} uur oud, overgeslagen`;
+  if (ageH < maxAge) out.tenders = `${ageH.toFixed(1)} uur oud, overgeslagen`;
   else out.tenders = await dispatch('update.yml');
 
   // satellieten (elke dag)
