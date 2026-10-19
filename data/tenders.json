@@ -1,87 +1,94 @@
 {
- "updated": "2026-10-19T10:44:34.562Z",
+ "updated": "2026-10-19T16:37:41.911Z",
  "queryVersion": "9aac67d149",
  "sources": {
   "TED": {
    "ok": true,
-   "at": "2026-10-19T10:44:34.562Z",
+   "at": "2026-10-19T16:37:41.911Z",
    "count": 41,
    "note": ""
   },
   "Wereldbank": {
    "ok": true,
-   "at": "2026-10-19T10:44:34.562Z",
+   "at": "2026-10-19T16:37:41.911Z",
    "count": 55,
    "note": "63 gevonden, 55 echt over LEO."
   },
   "Find a Tender": {
    "ok": true,
-   "at": "2026-10-19T10:44:34.562Z",
+   "at": "2026-10-19T16:37:41.911Z",
    "count": 0,
-   "note": "2 pagina's, 151 berichten bekeken, 0 over LEO.",
-   "since": "2026-10-19T08:44:34.562Z"
+   "note": "5 pagina's, 422 berichten bekeken, 0 over LEO.",
+   "since": "2026-10-19T14:37:41.911Z"
   },
   "Contracts Finder": {
    "ok": false,
-   "at": "2026-10-19T10:44:34.562Z",
+   "at": "2026-10-19T16:37:41.911Z",
    "count": 4,
    "note": "295 gevonden, 22 over LEO.",
-   "error": "Unexpected token '<', \"\t\t<!DOCTYPE \"... is not valid JSON"
+   "error": "The operation was aborted due to timeout"
   },
   "TenderNed": {
    "ok": true,
-   "at": "2026-10-19T10:44:34.562Z",
+   "at": "2026-10-19T16:37:41.911Z",
    "count": 0,
    "note": "106 gevonden, 0 over LEO."
   },
   "Prozorro": {
    "ok": true,
-   "at": "2026-10-19T10:44:34.562Z",
+   "at": "2026-10-19T16:37:41.911Z",
    "count": 63,
    "note": "63 lopende procedures."
   },
   "BOAMP": {
    "ok": true,
-   "at": "2026-10-19T10:44:34.562Z",
+   "at": "2026-10-19T16:37:41.911Z",
    "count": 1,
    "note": "5 gevonden, 1 over LEO."
   },
   "SIMAP (Zwitserland)": {
    "ok": true,
-   "at": "2026-10-19T10:44:34.562Z",
+   "at": "2026-10-19T16:37:41.911Z",
    "count": 0,
    "note": "20 gevonden, 0 over LEO."
   },
   "SECOP (Colombia)": {
    "ok": true,
-   "at": "2026-10-19T10:44:34.562Z",
+   "at": "2026-10-19T16:37:41.911Z",
    "count": 67,
    "note": "67 gevonden, 67 over LEO."
   },
   "CanadaBuys": {
    "ok": true,
-   "at": "2026-10-19T10:44:34.562Z",
+   "at": "2026-10-19T16:37:41.911Z",
    "count": 1,
    "note": "896 open tenders bekeken, 1 over LEO."
   },
   "AusTender": {
    "ok": true,
-   "at": "2026-10-19T10:44:34.562Z",
+   "at": "2026-10-19T16:37:41.911Z",
    "count": 0,
-   "note": "3 contracten bekeken, 0 over LEO.",
-   "since": "2026-10-19T08:44:34.562Z"
+   "note": "0 contracten bekeken, 0 over LEO.",
+   "since": "2026-10-19T14:37:41.911Z"
   },
   "UNDP": {
    "ok": true,
-   "at": "2026-10-19T10:44:34.562Z",
+   "at": "2026-10-19T16:37:41.911Z",
    "count": 1,
-   "note": "974 berichten bekeken, 1 over LEO."
+   "note": "973 berichten bekeken, 1 over LEO."
   },
   "PCC (Taiwan)": {
    "ok": true,
-   "at": "2026-10-19T10:44:34.562Z",
+   "at": "2026-10-19T16:37:41.911Z",
    "count": 16,
    "note": "38 aanbestedingen over LEO."
+  },
+  "SAM.gov": {
+   "ok": true,
+   "at": "2026-10-19T16:37:41.911Z",
+   "count": 1,
+   "note": "1 gevonden, 1 over LEO.",
+   "okAt": "2026-10-19T16:37:41.911Z"
   },
   "PNCP (Brazilië)": {
    "ok": true,
@@ -92,13 +99,13 @@
   },
   "Vertalen": {
    "ok": true,
-   "at": "2026-10-19T10:44:34.562Z",
+   "at": "2026-10-19T16:37:41.911Z",
    "count": 3,
    "note": "DeepL: 3 nieuw vertaald.",
    "engine": "DeepL"
   }
  },
- "count": 244,
+ "count": 245,
  "tenders": [
   {
    "pub": "721677-2026",
@@ -117,6 +124,26 @@
    "value": null,
    "currency": "EUR",
    "firstSeen": "2026-10-19T07:30:08.801Z"
+  },
+  {
+   "pub": "UA-UA-2026-10-19-012974-a",
+   "source": "Prozorro",
+   "title": "Термінал супутникового зв’язку Starlink Standard Kit V4X",
+   "buyer": "Військова частина А4124",
+   "country": "UA",
+   "published": "2026-10-19",
+   "deadline": "2026-10-27",
+   "deadlineAt": "2026-10-26T22:00:00.000Z",
+   "type": "Aankondiging opdracht",
+   "kind": "notice",
+   "cpv": [],
+   "link": "https://prozorro.gov.ua/tender/UA-2026-10-19-012974-a",
+   "value": 1080000,
+   "currency": "UAH",
+   "defense": true,
+   "firstSeen": "2026-10-19T16:37:41.911Z",
+   "titleNl": "Starlink Standard Kit V4X satellietcommunicatieterminal",
+   "trEngine": "DeepL"
   },
   {
    "pub": "UA-UA-2026-10-19-006152-a",
@@ -139,6 +166,26 @@
    "trEngine": "DeepL"
   },
   {
+   "pub": "UA-UA-2026-10-19-012998-a",
+   "source": "Prozorro",
+   "title": "Термінали супутникового зв’язку Starlink Mini X (комплекти з окремим роутером Mini Wi-Fi 6)",
+   "buyer": "Військова частина А0216",
+   "country": "UA",
+   "published": "2026-10-19",
+   "deadline": "2026-10-27",
+   "deadlineAt": "2026-10-27T08:00:00.000Z",
+   "type": "Aankondiging opdracht",
+   "kind": "notice",
+   "cpv": [],
+   "link": "https://prozorro.gov.ua/tender/UA-2026-10-19-012998-a",
+   "value": 325000,
+   "currency": "UAH",
+   "defense": true,
+   "firstSeen": "2026-10-19T16:37:41.911Z",
+   "titleNl": "Starlink Mini X-satellietcommunicatieterminals (sets met een aparte Mini Wi-Fi 6-router)",
+   "trEngine": "DeepL"
+  },
+  {
    "pub": "UA-UA-2026-10-19-005945-a",
    "source": "Prozorro",
    "title": "Послуги з підтримки, ведення та управління акаунтом Starlink (код 72250000-2 «Послуги, пов’язані із системами та підтримкою» національного класифікатора України за ДК 021:2015 «Єдиний закупівельний словник»).",
@@ -155,6 +202,25 @@
    "currency": "UAH",
    "firstSeen": "2026-10-19T10:44:34.562Z",
    "titleNl": "Diensten voor ondersteuning, beheer en administratie van een Starlink-account (code 72250000-2 „Diensten in verband met systemen en ondersteuning“ van de nationale classificatie van Oekraïne volgens DK 021:2015 „Uniform aankoopwoordenboek”).",
+   "trEngine": "DeepL"
+  },
+  {
+   "pub": "US-b01657fa20a34ec99f57f9237b0d48d9",
+   "source": "SAM.gov",
+   "title": "AT&T OneWeb Kits and Satellite Communication (SATCOM) Sole Source Justification Modification",
+   "buyer": "C5I CONTRACT OPERATIONS DIVISION 1 (CG-C5I-C1) ALEXANDRIA",
+   "country": "US",
+   "published": "2026-10-19",
+   "deadline": "",
+   "deadlineAt": "",
+   "type": "Justification",
+   "kind": "notice",
+   "cpv": [],
+   "link": "https://sam.gov/workspace/contract/opp/b01657fa20a34ec99f57f9237b0d48d9/view",
+   "value": null,
+   "currency": "USD",
+   "firstSeen": "2026-10-19T16:37:41.911Z",
+   "titleNl": "Wijziging van de motivering voor de aanwijzing van AT&T OneWeb als enige leverancier van kits en satellietcommunicatie (SATCOM)",
    "trEngine": "DeepL"
   },
   {
@@ -1298,26 +1364,6 @@
    "trEngine": "DeepL"
   },
   {
-   "pub": "UA-UA-2026-10-08-010086-a",
-   "source": "Prozorro",
-   "title": "Комплекти станції супутникового зв'язку Starlink 4 Х",
-   "buyer": "Військова частина А7382",
-   "country": "UA",
-   "published": "2026-10-08",
-   "deadline": "2026-10-17",
-   "deadlineAt": "2026-10-16T21:00:00.000Z",
-   "type": "In beoordeling",
-   "kind": "award",
-   "cpv": [],
-   "link": "https://prozorro.gov.ua/tender/UA-2026-10-08-010086-a",
-   "value": 1842166.9,
-   "currency": "UAH",
-   "defense": true,
-   "firstSeen": "2026-10-15T13:42:58.648Z",
-   "titleNl": "Starlink 4X-satellietcommunicatiestationsets",
-   "trEngine": "DeepL"
-  },
-  {
    "pub": "UA-UA-2026-10-08-008343-a",
    "source": "Prozorro",
    "title": "Корпус для установки термінала Starlink Gen 3 на автомобіль або еквівалент ДК 021:2015: 32530000-7 — Телекомунікаційне супутникове обладнання",
@@ -1696,25 +1742,6 @@
    "currency": "TWD",
    "firstSeen": "2026-10-16T07:13:38.622Z",
    "titleNl": "Vaste eindapparatuur voor satellieten in een lage baan, jaar 116",
-   "trEngine": "DeepL"
-  },
-  {
-   "pub": "UA-UA-2026-10-01-011763-a",
-   "source": "Prozorro",
-   "title": "Послуги провайдерів (код 72410000-7 за ДК 021:2015) (послуги доступу до мережі супутникового інтернет-сервісу Starlink)  ",
-   "buyer": "АКЦІОНЕРНЕ ТОВАРИСТВО \"УКРТРАНСНАФТА\"",
-   "country": "UA",
-   "published": "2026-10-01",
-   "deadline": "2026-10-19",
-   "deadlineAt": "2026-10-19T11:00:00.000Z",
-   "type": "Aankondiging opdracht",
-   "kind": "notice",
-   "cpv": [],
-   "link": "https://prozorro.gov.ua/tender/UA-2026-10-01-011763-a",
-   "value": 449552.94,
-   "currency": "UAH",
-   "firstSeen": "2026-10-15T13:42:58.648Z",
-   "titleNl": "Diensten van internetproviders (code 72410000-7 volgens DK 021:2015) (toegangsdiensten tot het satellietinternetnetwerk van Starlink)  ",
    "trEngine": "DeepL"
   },
   {
