@@ -1,85 +1,84 @@
 {
- "updated": "2026-10-19T16:37:41.911Z",
+ "updated": "2026-10-19T19:22:36.943Z",
  "queryVersion": "9aac67d149",
  "sources": {
   "TED": {
    "ok": true,
-   "at": "2026-10-19T16:37:41.911Z",
+   "at": "2026-10-19T19:22:36.943Z",
    "count": 41,
    "note": ""
   },
   "Wereldbank": {
    "ok": true,
-   "at": "2026-10-19T16:37:41.911Z",
+   "at": "2026-10-19T19:22:36.943Z",
    "count": 55,
    "note": "63 gevonden, 55 echt over LEO."
   },
   "Find a Tender": {
    "ok": true,
-   "at": "2026-10-19T16:37:41.911Z",
+   "at": "2026-10-19T19:22:36.943Z",
    "count": 0,
-   "note": "5 pagina's, 422 berichten bekeken, 0 over LEO.",
-   "since": "2026-10-19T14:37:41.911Z"
+   "note": "2 pagina's, 170 berichten bekeken, 0 over LEO.",
+   "since": "2026-10-19T17:22:36.943Z"
   },
   "Contracts Finder": {
-   "ok": false,
-   "at": "2026-10-19T16:37:41.911Z",
+   "ok": true,
+   "at": "2026-10-19T19:22:36.943Z",
    "count": 4,
-   "note": "295 gevonden, 22 over LEO.",
-   "error": "The operation was aborted due to timeout"
+   "note": "295 gevonden, 22 over LEO."
   },
   "TenderNed": {
    "ok": true,
-   "at": "2026-10-19T16:37:41.911Z",
+   "at": "2026-10-19T19:22:36.943Z",
    "count": 0,
    "note": "106 gevonden, 0 over LEO."
   },
   "Prozorro": {
    "ok": true,
-   "at": "2026-10-19T16:37:41.911Z",
-   "count": 63,
-   "note": "63 lopende procedures."
+   "at": "2026-10-19T19:22:36.943Z",
+   "count": 64,
+   "note": "64 lopende procedures."
   },
   "BOAMP": {
    "ok": true,
-   "at": "2026-10-19T16:37:41.911Z",
+   "at": "2026-10-19T19:22:36.943Z",
    "count": 1,
    "note": "5 gevonden, 1 over LEO."
   },
   "SIMAP (Zwitserland)": {
    "ok": true,
-   "at": "2026-10-19T16:37:41.911Z",
+   "at": "2026-10-19T19:22:36.943Z",
    "count": 0,
    "note": "20 gevonden, 0 over LEO."
   },
   "SECOP (Colombia)": {
    "ok": true,
-   "at": "2026-10-19T16:37:41.911Z",
+   "at": "2026-10-19T19:22:36.943Z",
    "count": 67,
    "note": "67 gevonden, 67 over LEO."
   },
   "CanadaBuys": {
    "ok": true,
-   "at": "2026-10-19T16:37:41.911Z",
+   "at": "2026-10-19T19:22:36.943Z",
    "count": 1,
    "note": "896 open tenders bekeken, 1 over LEO."
   },
   "AusTender": {
    "ok": true,
-   "at": "2026-10-19T16:37:41.911Z",
+   "at": "2026-10-19T19:22:36.943Z",
    "count": 0,
    "note": "0 contracten bekeken, 0 over LEO.",
-   "since": "2026-10-19T14:37:41.911Z"
+   "since": "2026-10-19T17:22:36.943Z"
   },
   "UNDP": {
    "ok": true,
-   "at": "2026-10-19T16:37:41.911Z",
+   "at": "2026-10-19T19:22:36.943Z",
    "count": 1,
    "note": "973 berichten bekeken, 1 over LEO."
   },
   "PCC (Taiwan)": {
    "ok": true,
-   "at": "2026-10-19T16:37:41.911Z",
+   "at": "2026-10-19T19:22:36.943Z",
    "count": 16,
    "note": "38 aanbestedingen over LEO."
   },
@@ -99,13 +98,13 @@
   },
   "Vertalen": {
    "ok": true,
-   "at": "2026-10-19T16:37:41.911Z",
-   "count": 3,
-   "note": "DeepL: 3 nieuw vertaald.",
+   "at": "2026-10-19T19:22:36.943Z",
+   "count": 1,
+   "note": "DeepL: 1 nieuw vertaald.",
    "engine": "DeepL"
   }
  },
- "count": 245,
+ "count": 246,
  "tenders": [
   {
    "pub": "721677-2026",
@@ -205,8 +204,8 @@
    "trEngine": "DeepL"
   },
   {
-   "pub": "US-b01657fa20a34ec99f57f9237b0d48d9",
    "source": "SAM.gov",
+   "pub": "US-b01657fa20a34ec99f57f9237b0d48d9",
    "title": "AT&T OneWeb Kits and Satellite Communication (SATCOM) Sole Source Justification Modification",
    "buyer": "C5I CONTRACT OPERATIONS DIVISION 1 (CG-C5I-C1) ALEXANDRIA",
    "country": "US",
@@ -1227,8 +1226,8 @@
    "trEngine": "DeepL"
   },
   {
-   "source": "Contracts Finder",
    "pub": "CF-c2b6d290-aa98-464d-8155-aff4b1e1be15",
+   "source": "Contracts Finder",
    "title": "UKSAC26_0053 Eutelsat-OneWeb Legal Advice",
    "buyer": "DSIT",
    "country": "GB",
@@ -2744,28 +2743,6 @@
    "qty": 3
   },
   {
-   "pub": "WB-OP00449674",
-   "source": "Wereldbank",
-   "title": "Acquisition, installation et maintenance de 191 kits Starlink et composants d’extension réseau pour les 3 nouvelles DREN, les 9 Ecoles Normales et 179 inspections prioritaires dotées de tablettes",
-   "buyer": "Niger Learning Improvement for Results in Education Project",
-   "country": "NE",
-   "countryName": "Niger",
-   "published": "2026-06-08",
-   "deadline": "",
-   "type": "Contract Award",
-   "kind": "award",
-   "cpv": [],
-   "wbGroup": "GO",
-   "wbMethod": "RFQ",
-   "link": "https://projects.worldbank.org/en/projects-operations/procurement-detail/OP00449674",
-   "value": null,
-   "currency": "USD",
-   "firstSeen": "2000-01-01T00:00:00.000Z",
-   "titleNl": "Aankoop, installatie en onderhoud van 191 Starlink-sets en onderdelen voor netwerkuitbreiding voor de 3 nieuwe DREN’s, de 9 lerarenopleidingen en 179 prioritaire inspectiediensten die zijn uitgerust met tablets",
-   "trEngine": "DeepL",
-   "qty": 191
-  },
-  {
    "pub": "WB-OP00449676",
    "source": "Wereldbank",
    "title": "Acquisition, installation et maintenance de 191 kits Starlink et composants d’extension réseau pour les 3 nouvelles DREN, les 9 Ecoles Normales et 179 inspections prioritaires dotées de tablettes",
@@ -2780,6 +2757,28 @@
    "wbGroup": "GO",
    "wbMethod": "RFQ",
    "link": "https://projects.worldbank.org/en/projects-operations/procurement-detail/OP00449676",
+   "value": null,
+   "currency": "USD",
+   "firstSeen": "2000-01-01T00:00:00.000Z",
+   "titleNl": "Aankoop, installatie en onderhoud van 191 Starlink-sets en onderdelen voor netwerkuitbreiding voor de 3 nieuwe DREN’s, de 9 lerarenopleidingen en 179 prioritaire inspectiediensten die zijn uitgerust met tablets",
+   "trEngine": "DeepL",
+   "qty": 191
+  },
+  {
+   "pub": "WB-OP00449674",
+   "source": "Wereldbank",
+   "title": "Acquisition, installation et maintenance de 191 kits Starlink et composants d’extension réseau pour les 3 nouvelles DREN, les 9 Ecoles Normales et 179 inspections prioritaires dotées de tablettes",
+   "buyer": "Niger Learning Improvement for Results in Education Project",
+   "country": "NE",
+   "countryName": "Niger",
+   "published": "2026-06-08",
+   "deadline": "",
+   "type": "Contract Award",
+   "kind": "award",
+   "cpv": [],
+   "wbGroup": "GO",
+   "wbMethod": "RFQ",
+   "link": "https://projects.worldbank.org/en/projects-operations/procurement-detail/OP00449674",
    "value": null,
    "currency": "USD",
    "firstSeen": "2000-01-01T00:00:00.000Z",
@@ -3031,8 +3030,8 @@
    "trEngine": "DeepL"
   },
   {
-   "source": "Contracts Finder",
    "pub": "CF-67a9e3b8-52ad-45a4-ba60-e3f85de18e90",
+   "source": "Contracts Finder",
    "title": "NECS / DD ICB -  Starlink Internet Services for CoIN",
    "buyer": "NHS SOUTH, CENTRAL AND WEST COMMISSIONING SUPPORT UNIT",
    "country": "GB",
@@ -3069,8 +3068,8 @@
    "trEngine": "DeepL"
   },
   {
-   "source": "Contracts Finder",
    "pub": "CF-c2f26733-ec0d-4883-ae17-42c920d06ded",
+   "source": "Contracts Finder",
    "title": "Future Consumers",
    "buyer": "OFCOM",
    "country": "GB",
@@ -3388,8 +3387,8 @@
    "trEngine": "DeepL"
   },
   {
-   "source": "Contracts Finder",
    "pub": "CF-10084264-820c-4ccb-8028-16544ede11f8",
+   "source": "Contracts Finder",
    "title": "Broadband Internet Services via Low Earth Orbit (LEO) Satellites - Lot 1 OneWeb",
    "buyer": "FCDO Services",
    "country": "GB",
@@ -4682,6 +4681,26 @@
    "defense": true,
    "firstSeen": "2026-10-16T07:08:15.941Z",
    "titleNl": "Starlink Standard 4X-satellietmodem",
+   "trEngine": "DeepL"
+  },
+  {
+   "pub": "UA-UA-2026-10-19-005252-a",
+   "source": "Prozorro",
+   "title": "Супутниковий модем Starlink Internet Satellite 3gen.",
+   "buyer": "Військова частина А3316",
+   "country": "UA",
+   "published": "",
+   "deadline": "2026-10-23",
+   "deadlineAt": "2026-10-23T11:50:00.000Z",
+   "type": "Aankondiging opdracht",
+   "kind": "notice",
+   "cpv": [],
+   "link": "https://prozorro.gov.ua/tender/UA-2026-10-19-005252-a",
+   "value": 504000,
+   "currency": "UAH",
+   "defense": true,
+   "firstSeen": "2026-10-19T19:22:36.943Z",
+   "titleNl": "Starlink Internet Satellite 3gen-satellietmodem.",
    "trEngine": "DeepL"
   },
   {
