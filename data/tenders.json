@@ -1,86 +1,93 @@
 {
- "updated": "2026-10-20T10:01:56.710Z",
+ "updated": "2026-10-20T14:29:10.183Z",
  "queryVersion": "9aac67d149",
  "sources": {
   "TED": {
    "ok": true,
-   "at": "2026-10-20T10:01:56.710Z",
+   "at": "2026-10-20T14:29:10.183Z",
    "count": 41,
    "note": ""
   },
   "Wereldbank": {
    "ok": true,
-   "at": "2026-10-20T10:01:56.710Z",
+   "at": "2026-10-20T14:29:10.183Z",
    "count": 55,
    "note": "63 gevonden, 55 echt over LEO."
   },
   "Find a Tender": {
    "ok": true,
-   "at": "2026-10-20T10:01:56.710Z",
+   "at": "2026-10-20T14:29:10.183Z",
    "count": 0,
-   "note": "2 pagina's, 131 berichten bekeken, 0 over LEO.",
-   "since": "2026-10-20T08:01:56.710Z"
+   "note": "4 pagina's, 370 berichten bekeken, 0 over LEO.",
+   "since": "2026-10-20T12:29:10.183Z"
   },
   "Contracts Finder": {
    "ok": true,
-   "at": "2026-10-20T10:01:56.710Z",
+   "at": "2026-10-20T14:29:10.183Z",
    "count": 4,
    "note": "295 gevonden, 22 over LEO."
   },
   "TenderNed": {
    "ok": true,
-   "at": "2026-10-20T10:01:56.710Z",
+   "at": "2026-10-20T14:29:10.183Z",
    "count": 0,
    "note": "106 gevonden, 0 over LEO."
   },
   "Prozorro": {
    "ok": true,
-   "at": "2026-10-20T10:01:56.710Z",
+   "at": "2026-10-20T14:29:10.183Z",
    "count": 62,
    "note": "62 lopende procedures."
   },
   "BOAMP": {
    "ok": true,
-   "at": "2026-10-20T10:01:56.710Z",
+   "at": "2026-10-20T14:29:10.183Z",
    "count": 1,
    "note": "5 gevonden, 1 over LEO."
   },
   "SIMAP (Zwitserland)": {
    "ok": true,
-   "at": "2026-10-20T10:01:56.710Z",
+   "at": "2026-10-20T14:29:10.183Z",
    "count": 0,
    "note": "20 gevonden, 0 over LEO."
   },
   "SECOP (Colombia)": {
    "ok": true,
-   "at": "2026-10-20T10:01:56.710Z",
+   "at": "2026-10-20T14:29:10.183Z",
    "count": 67,
    "note": "67 gevonden, 67 over LEO."
   },
   "CanadaBuys": {
    "ok": true,
-   "at": "2026-10-20T10:01:56.710Z",
+   "at": "2026-10-20T14:29:10.183Z",
    "count": 1,
-   "note": "896 open tenders bekeken, 1 over LEO."
+   "note": "899 open tenders bekeken, 1 over LEO."
   },
   "AusTender": {
    "ok": true,
-   "at": "2026-10-20T10:01:56.710Z",
+   "at": "2026-10-20T14:29:10.183Z",
    "count": 0,
-   "note": "2 contracten bekeken, 0 over LEO.",
-   "since": "2026-10-20T08:01:56.710Z"
+   "note": "0 contracten bekeken, 0 over LEO.",
+   "since": "2026-10-20T12:29:10.183Z"
   },
   "UNDP": {
    "ok": true,
-   "at": "2026-10-20T10:01:56.710Z",
+   "at": "2026-10-20T14:29:10.183Z",
    "count": 1,
-   "note": "974 berichten bekeken, 1 over LEO."
+   "note": "972 berichten bekeken, 1 over LEO."
   },
   "PCC (Taiwan)": {
    "ok": true,
-   "at": "2026-10-20T10:01:56.710Z",
+   "at": "2026-10-20T14:29:10.183Z",
    "count": 16,
    "note": "38 aanbestedingen over LEO."
+  },
+  "SAM.gov": {
+   "ok": true,
+   "at": "2026-10-20T14:29:10.183Z",
+   "count": 1,
+   "note": "1 gevonden, 1 over LEO.",
+   "okAt": "2026-10-20T14:29:10.183Z"
   },
   "PNCP (Brazilië)": {
    "ok": true,
@@ -89,16 +96,9 @@
    "note": "4443 nieuwe aanbestedingen bekeken, 1 over LEO. Nieuwe publicaties per dag, een dag later zichtbaar.",
    "doneUntil": "2026-10-19"
   },
-  "SAM.gov": {
-   "ok": true,
-   "at": "2026-10-19T16:37:41.911Z",
-   "count": 1,
-   "note": "1 gevonden, 1 over LEO.",
-   "okAt": "2026-10-19T16:37:41.911Z"
-  },
   "Vertalen": {
    "ok": true,
-   "at": "2026-10-20T10:01:56.710Z",
+   "at": "2026-10-20T14:29:10.183Z",
    "count": 3,
    "note": "DeepL: 3 nieuw vertaald.",
    "engine": "DeepL"
@@ -106,6 +106,26 @@
  },
  "count": 246,
  "tenders": [
+  {
+   "pub": "UA-UA-2026-10-20-011860-a",
+   "source": "Prozorro",
+   "title": "Супутниковий модем Starlink Internet Satellite 3gen; Супутниковий модем Starlink Mini",
+   "buyer": "Військова частина 3052 Національної гвардії України",
+   "country": "UA",
+   "published": "2026-10-20",
+   "deadline": "2026-10-28",
+   "deadlineAt": "2026-10-27T22:00:00.000Z",
+   "type": "Aankondiging opdracht",
+   "kind": "notice",
+   "cpv": [],
+   "link": "https://prozorro.gov.ua/tender/UA-2026-10-20-011860-a",
+   "value": 100220,
+   "currency": "UAH",
+   "defense": true,
+   "firstSeen": "2026-10-20T14:29:10.183Z",
+   "titleNl": "Starlink Internet Satellite 3gen-satellietmodem; Starlink Mini-satellietmodem",
+   "trEngine": "DeepL"
+  },
   {
    "pub": "UA-UA-2026-10-20-002965-a",
    "source": "Prozorro",
@@ -244,6 +264,25 @@
    "trEngine": "DeepL"
   },
   {
+   "pub": "US-b01657fa20a34ec99f57f9237b0d48d9",
+   "source": "SAM.gov",
+   "title": "AT&T OneWeb Kits and Satellite Communication (SATCOM) Sole Source Justification Modification",
+   "buyer": "C5I CONTRACT OPERATIONS DIVISION 1 (CG-C5I-C1) ALEXANDRIA",
+   "country": "US",
+   "published": "2026-10-19",
+   "deadline": "",
+   "deadlineAt": "",
+   "type": "Justification",
+   "kind": "notice",
+   "cpv": [],
+   "link": "https://sam.gov/workspace/contract/opp/b01657fa20a34ec99f57f9237b0d48d9/view",
+   "value": null,
+   "currency": "USD",
+   "firstSeen": "2026-10-19T16:37:41.911Z",
+   "titleNl": "Wijziging van de motivering voor de aanwijzing van AT&T OneWeb als enige leverancier van kits en satellietcommunicatie (SATCOM)",
+   "trEngine": "DeepL"
+  },
+  {
    "source": "PNCP (Brazilië)",
    "pub": "BR-29172467000109-1-000598/2026",
    "title": "Contratação de empresa especializada para prestação continuada de serviço de conectividade à internet banda larga via satélite de órbita baixa (LEO – Low Earth Orbit), compreendendo o fornecimento, em regime de comodato, dos equipamentos necessários, instalação, configuração, ativação, gerenciamento, monitoramento, suporte técnico e manutenção, destinada ao atendimento das unidades escolares da Secretaria de Educação, Juventude e Inovação – SEJIN localizadas em áreas rurais, insulares e de difíc",
@@ -260,25 +299,6 @@
    "currency": "BRL",
    "firstSeen": "2026-10-20T07:30:12.114Z",
    "titleNl": "Het inschakelen van een gespecialiseerd bedrijf voor de voortdurende levering van breedbandinternet via satellieten in een lage baan (LEO – Low Earth Orbit), met inbegrip van de levering, op basis van bruikleen, van de benodigde apparatuur, installatie, configuratie, activering, beheer, monitoring, technische ondersteuning en onderhoud, ten behoeve van de onderwijsinstellingen van het Secretariaat voor Onderwijs, Jeugd en Innovatie – SEJIN, gelegen in landelijke, insulaire en moeilijk bereikbare gebieden",
-   "trEngine": "DeepL"
-  },
-  {
-   "source": "SAM.gov",
-   "pub": "US-b01657fa20a34ec99f57f9237b0d48d9",
-   "title": "AT&T OneWeb Kits and Satellite Communication (SATCOM) Sole Source Justification Modification",
-   "buyer": "C5I CONTRACT OPERATIONS DIVISION 1 (CG-C5I-C1) ALEXANDRIA",
-   "country": "US",
-   "published": "2026-10-19",
-   "deadline": "",
-   "deadlineAt": "",
-   "type": "Justification",
-   "kind": "notice",
-   "cpv": [],
-   "link": "https://sam.gov/workspace/contract/opp/b01657fa20a34ec99f57f9237b0d48d9/view",
-   "value": null,
-   "currency": "USD",
-   "firstSeen": "2026-10-19T16:37:41.911Z",
-   "titleNl": "Wijziging van de motivering voor de aanwijzing van AT&T OneWeb als enige leverancier van kits en satellietcommunicatie (SATCOM)",
    "trEngine": "DeepL"
   },
   {
@@ -342,26 +362,6 @@
    "trEngine": "DeepL"
   },
   {
-   "pub": "UA-UA-2026-10-17-000166-a",
-   "source": "Prozorro",
-   "title": "Супутниковий модем Starlink Internet Satellite Mini",
-   "buyer": "ВІЙСЬКОВА ЧАСТИНА 3022 НАЦІОНАЛЬНОЇ ГВАРДІЇ УКРАЇНИ",
-   "country": "UA",
-   "published": "2026-10-17",
-   "deadline": "2026-10-27",
-   "deadlineAt": "2026-10-27T07:00:00.000Z",
-   "type": "Aankondiging opdracht",
-   "kind": "notice",
-   "cpv": [],
-   "link": "https://prozorro.gov.ua/tender/UA-2026-10-17-000166-a",
-   "value": 96250,
-   "currency": "UAH",
-   "defense": true,
-   "firstSeen": "2000-01-01T00:00:00.000Z",
-   "titleNl": "Starlink Internet Satellite Mini-satellietmodem",
-   "trEngine": "DeepL"
-  },
-  {
    "pub": "UA-UA-2026-10-17-000603-a",
    "source": "Prozorro",
    "title": "Термінал супутникового зв'язку (Starlink 4X/Gen3)",
@@ -379,6 +379,26 @@
    "defense": true,
    "firstSeen": "2026-10-17T19:55:56.797Z",
    "titleNl": "Satellietcommunicatieterminal (Starlink 4X/Gen3)",
+   "trEngine": "DeepL"
+  },
+  {
+   "pub": "UA-UA-2026-10-17-000166-a",
+   "source": "Prozorro",
+   "title": "Супутниковий модем Starlink Internet Satellite Mini",
+   "buyer": "ВІЙСЬКОВА ЧАСТИНА 3022 НАЦІОНАЛЬНОЇ ГВАРДІЇ УКРАЇНИ",
+   "country": "UA",
+   "published": "2026-10-17",
+   "deadline": "2026-10-27",
+   "deadlineAt": "2026-10-27T07:00:00.000Z",
+   "type": "Aankondiging opdracht",
+   "kind": "notice",
+   "cpv": [],
+   "link": "https://prozorro.gov.ua/tender/UA-2026-10-17-000166-a",
+   "value": 96250,
+   "currency": "UAH",
+   "defense": true,
+   "firstSeen": "2000-01-01T00:00:00.000Z",
+   "titleNl": "Starlink Internet Satellite Mini-satellietmodem",
    "trEngine": "DeepL"
   },
   {
@@ -1144,26 +1164,6 @@
    "trEngine": "DeepL"
   },
   {
-   "pub": "UA-UA-2026-10-10-000391-a",
-   "source": "Prozorro",
-   "title": "Супутникова система Starlink Mini ",
-   "buyer": "Військова частина А1536",
-   "country": "UA",
-   "published": "2026-10-10",
-   "deadline": "2026-10-22",
-   "deadlineAt": "2026-10-22T07:00:00.000Z",
-   "type": "Aankondiging opdracht",
-   "kind": "notice",
-   "cpv": [],
-   "link": "https://prozorro.gov.ua/tender/UA-2026-10-10-000391-a",
-   "value": 49882,
-   "currency": "UAH",
-   "defense": true,
-   "firstSeen": "2026-10-15T13:42:58.648Z",
-   "titleNl": "Het Starlink Mini-satellietsysteem ",
-   "trEngine": "DeepL"
-  },
-  {
    "pub": "UA-UA-2026-10-10-000373-a",
    "source": "Prozorro",
    "title": "Супутникова система Starlink Mini ",
@@ -1176,6 +1176,26 @@
    "kind": "notice",
    "cpv": [],
    "link": "https://prozorro.gov.ua/tender/UA-2026-10-10-000373-a",
+   "value": 49882,
+   "currency": "UAH",
+   "defense": true,
+   "firstSeen": "2026-10-15T13:42:58.648Z",
+   "titleNl": "Het Starlink Mini-satellietsysteem ",
+   "trEngine": "DeepL"
+  },
+  {
+   "pub": "UA-UA-2026-10-10-000391-a",
+   "source": "Prozorro",
+   "title": "Супутникова система Starlink Mini ",
+   "buyer": "Військова частина А1536",
+   "country": "UA",
+   "published": "2026-10-10",
+   "deadline": "2026-10-22",
+   "deadlineAt": "2026-10-22T07:00:00.000Z",
+   "type": "Aankondiging opdracht",
+   "kind": "notice",
+   "cpv": [],
+   "link": "https://prozorro.gov.ua/tender/UA-2026-10-10-000391-a",
    "value": 49882,
    "currency": "UAH",
    "defense": true,
@@ -1201,26 +1221,6 @@
    "defense": true,
    "firstSeen": "2026-10-15T13:42:58.648Z",
    "titleNl": "STARLINK-satellietcommunicatiestation – Satellite Dish Kit Gen3 REV4/Starlink Standard 4 X",
-   "trEngine": "DeepL"
-  },
-  {
-   "pub": "UA-UA-2026-10-10-000572-a",
-   "source": "Prozorro",
-   "title": "Станція супутникового зв’язку  Starlink Mini Internet Kit",
-   "buyer": "Військова частина А0998",
-   "country": "UA",
-   "published": "2026-10-10",
-   "deadline": "2026-10-19",
-   "deadlineAt": "2026-10-19T07:00:00.000Z",
-   "type": "In beoordeling",
-   "kind": "award",
-   "cpv": [],
-   "link": "https://prozorro.gov.ua/tender/UA-2026-10-10-000572-a",
-   "value": 1950000,
-   "currency": "UAH",
-   "defense": true,
-   "firstSeen": "2026-10-15T13:42:58.648Z",
-   "titleNl": "Starlink Mini Internet Kit – satellietcommunicatiestation",
    "trEngine": "DeepL"
   },
   {
@@ -1280,26 +1280,6 @@
    "defense": true,
    "firstSeen": "2026-10-15T13:42:58.648Z",
    "titleNl": "Starlink GEN3 (Rev4) Standard Kit, nieuw (zonder account)",
-   "trEngine": "DeepL"
-  },
-  {
-   "pub": "UA-UA-2026-10-09-000243-a",
-   "source": "Prozorro",
-   "title": "Термінал супутникового зв’язку (мобільний)",
-   "buyer": "ГОЛОВНЕ УПРАВЛІННЯ НАЦІОНАЛЬНОЇ ГВАРДІЇ УКРАЇНИ",
-   "country": "UA",
-   "published": "2026-10-09",
-   "deadline": "2026-10-20",
-   "deadlineAt": "2026-10-19T21:00:00.000Z",
-   "type": "In beoordeling",
-   "kind": "award",
-   "cpv": [],
-   "link": "https://prozorro.gov.ua/tender/UA-2026-10-09-000243-a",
-   "value": 1930200,
-   "currency": "UAH",
-   "defense": true,
-   "firstSeen": "2026-10-15T13:42:58.648Z",
-   "titleNl": "Satellietcommunicatieterminal (mobiel)",
    "trEngine": "DeepL"
   },
   {
@@ -2702,28 +2682,6 @@
    "qty": 3
   },
   {
-   "pub": "WB-OP00449676",
-   "source": "Wereldbank",
-   "title": "Acquisition, installation et maintenance de 191 kits Starlink et composants d’extension réseau pour les 3 nouvelles DREN, les 9 Ecoles Normales et 179 inspections prioritaires dotées de tablettes",
-   "buyer": "Niger Learning Improvement for Results in Education Project",
-   "country": "NE",
-   "countryName": "Niger",
-   "published": "2026-06-08",
-   "deadline": "",
-   "type": "Contract Award",
-   "kind": "award",
-   "cpv": [],
-   "wbGroup": "GO",
-   "wbMethod": "RFQ",
-   "link": "https://projects.worldbank.org/en/projects-operations/procurement-detail/OP00449676",
-   "value": null,
-   "currency": "USD",
-   "firstSeen": "2000-01-01T00:00:00.000Z",
-   "titleNl": "Aankoop, installatie en onderhoud van 191 Starlink-sets en onderdelen voor netwerkuitbreiding voor de 3 nieuwe DREN’s, de 9 lerarenopleidingen en 179 prioritaire inspectiediensten die zijn uitgerust met tablets",
-   "trEngine": "DeepL",
-   "qty": 191
-  },
-  {
    "pub": "WB-OP00449674",
    "source": "Wereldbank",
    "title": "Acquisition, installation et maintenance de 191 kits Starlink et composants d’extension réseau pour les 3 nouvelles DREN, les 9 Ecoles Normales et 179 inspections prioritaires dotées de tablettes",
@@ -2738,6 +2696,28 @@
    "wbGroup": "GO",
    "wbMethod": "RFQ",
    "link": "https://projects.worldbank.org/en/projects-operations/procurement-detail/OP00449674",
+   "value": null,
+   "currency": "USD",
+   "firstSeen": "2000-01-01T00:00:00.000Z",
+   "titleNl": "Aankoop, installatie en onderhoud van 191 Starlink-sets en onderdelen voor netwerkuitbreiding voor de 3 nieuwe DREN’s, de 9 lerarenopleidingen en 179 prioritaire inspectiediensten die zijn uitgerust met tablets",
+   "trEngine": "DeepL",
+   "qty": 191
+  },
+  {
+   "pub": "WB-OP00449676",
+   "source": "Wereldbank",
+   "title": "Acquisition, installation et maintenance de 191 kits Starlink et composants d’extension réseau pour les 3 nouvelles DREN, les 9 Ecoles Normales et 179 inspections prioritaires dotées de tablettes",
+   "buyer": "Niger Learning Improvement for Results in Education Project",
+   "country": "NE",
+   "countryName": "Niger",
+   "published": "2026-06-08",
+   "deadline": "",
+   "type": "Contract Award",
+   "kind": "award",
+   "cpv": [],
+   "wbGroup": "GO",
+   "wbMethod": "RFQ",
+   "link": "https://projects.worldbank.org/en/projects-operations/procurement-detail/OP00449676",
    "value": null,
    "currency": "USD",
    "firstSeen": "2000-01-01T00:00:00.000Z",
@@ -3402,24 +3382,6 @@
    "trEngine": "DeepL"
   },
   {
-   "pub": "TW-3.82.13-1150000010",
-   "source": "PCC (Taiwan)",
-   "title": "新北市第二行政中心警察局低軌衛星設備搬遷及安裝",
-   "buyer": "新北市政府警察局",
-   "country": "TW",
-   "published": "2026-02-25",
-   "deadline": "",
-   "type": "決標公告",
-   "kind": "award",
-   "cpv": [],
-   "link": "https://pcc-api.openfun.app/index/case/3.82.13/1150000010/20260225/BDM-1-71117801",
-   "value": null,
-   "currency": "TWD",
-   "firstSeen": "2026-10-16T07:13:38.622Z",
-   "titleNl": "Verhuizing en installatie van apparatuur voor lage-baan-satellieten bij het politiebureau van het tweede administratieve centrum van New Taipei City",
-   "trEngine": "DeepL"
-  },
-  {
    "pub": "TW-3.15.26-MPB1141205C005",
    "source": "PCC (Taiwan)",
    "title": "低軌道衛星輔助搜救系統維運後續設備處理案",
@@ -3435,6 +3397,24 @@
    "currency": "TWD",
    "firstSeen": "2026-10-16T07:13:38.622Z",
    "titleNl": "Voorstel voor de verdere afhandeling van apparatuur in het kader van het onderhoud en de exploitatie van het door satellieten in een lage baan ondersteunde zoek- en reddingssysteem",
+   "trEngine": "DeepL"
+  },
+  {
+   "pub": "TW-3.82.13-1150000010",
+   "source": "PCC (Taiwan)",
+   "title": "新北市第二行政中心警察局低軌衛星設備搬遷及安裝",
+   "buyer": "新北市政府警察局",
+   "country": "TW",
+   "published": "2026-02-25",
+   "deadline": "",
+   "type": "決標公告",
+   "kind": "award",
+   "cpv": [],
+   "link": "https://pcc-api.openfun.app/index/case/3.82.13/1150000010/20260225/BDM-1-71117801",
+   "value": null,
+   "currency": "TWD",
+   "firstSeen": "2026-10-16T07:13:38.622Z",
+   "titleNl": "Verhuizing en installatie van apparatuur voor lage-baan-satellieten bij het politiebureau van het tweede administratieve centrum van New Taipei City",
    "trEngine": "DeepL"
   },
   {
@@ -4604,25 +4584,6 @@
    "trEngine": "DeepL"
   },
   {
-   "pub": "UA-UA-2026-10-15-012946-a",
-   "source": "Prozorro",
-   "title": "Термінал Starlink",
-   "buyer": "КП \"Харківські теплові мережі\"",
-   "country": "UA",
-   "published": "",
-   "deadline": "2026-10-20",
-   "deadlineAt": "2026-10-19T21:00:00.000Z",
-   "type": "In beoordeling",
-   "kind": "award",
-   "cpv": [],
-   "link": "https://prozorro.gov.ua/tender/UA-2026-10-15-012946-a",
-   "value": 78500,
-   "currency": "UAH",
-   "firstSeen": "2026-10-16T07:08:15.941Z",
-   "titleNl": "Starlink-terminal",
-   "trEngine": "DeepL"
-  },
-  {
    "pub": "UA-UA-2026-10-20-002716-a",
    "source": "Prozorro",
    "title": "Мережеве обладнання Starlink",
@@ -4640,6 +4601,63 @@
    "defense": true,
    "firstSeen": "2026-10-20T10:01:56.710Z",
    "titleNl": "Starlink-netwerkapparatuur",
+   "trEngine": "DeepL"
+  },
+  {
+   "pub": "UA-UA-2026-10-20-010034-a",
+   "source": "Prozorro",
+   "title": "Супутниковий модем Starlink Standard 4X",
+   "buyer": "Виконавчий комітет Луцької міської ради",
+   "country": "UA",
+   "published": "",
+   "deadline": "2026-10-23",
+   "deadlineAt": "2026-10-22T21:00:00.000Z",
+   "type": "Aankondiging opdracht",
+   "kind": "notice",
+   "cpv": [],
+   "link": "https://prozorro.gov.ua/tender/UA-2026-10-20-010034-a",
+   "value": 38333.33,
+   "currency": "UAH",
+   "firstSeen": "2026-10-20T14:29:10.183Z",
+   "titleNl": "Starlink Standard 4X-satellietmodem",
+   "trEngine": "DeepL"
+  },
+  {
+   "pub": "UA-UA-2026-10-20-013213-a",
+   "source": "Prozorro",
+   "title": "Супутниковий модем Starlink Standard 4X",
+   "buyer": "Рогатинська міська рада",
+   "country": "UA",
+   "published": "",
+   "deadline": "2026-10-23",
+   "deadlineAt": "2026-10-22T21:00:00.000Z",
+   "type": "Aankondiging opdracht",
+   "kind": "notice",
+   "cpv": [],
+   "link": "https://prozorro.gov.ua/tender/UA-2026-10-20-013213-a",
+   "value": 23333.33,
+   "currency": "UAH",
+   "firstSeen": "2026-10-20T14:29:10.183Z",
+   "titleNl": "Starlink Standard 4X-satellietmodem",
+   "trEngine": "DeepL"
+  },
+  {
+   "pub": "UA-UA-2026-10-20-010603-a",
+   "source": "Prozorro",
+   "title": "Супутниковий модем Starlink Internet Satellite Mini",
+   "buyer": "Рогатинська міська рада",
+   "country": "UA",
+   "published": "",
+   "deadline": "2026-10-23",
+   "deadlineAt": "2026-10-22T21:00:00.000Z",
+   "type": "Aankondiging opdracht",
+   "kind": "notice",
+   "cpv": [],
+   "link": "https://prozorro.gov.ua/tender/UA-2026-10-20-010603-a",
+   "value": 495000,
+   "currency": "UAH",
+   "firstSeen": "2026-10-20T14:29:10.183Z",
+   "titleNl": "Starlink Internet Satellite Mini-satellietmodem",
    "trEngine": "DeepL"
   },
   {
@@ -4796,25 +4814,6 @@
    "currency": "UAH",
    "firstSeen": "2026-10-20T07:30:12.114Z",
    "titleNl": "Starlink Mini-satellietmodem (code volgens DK 021:2015: 32530000-7 Telecommunicatieapparatuur voor satellietgebruik)",
-   "trEngine": "DeepL"
-  },
-  {
-   "pub": "UA-UA-2026-10-14-008562-a",
-   "source": "Prozorro",
-   "title": "Придбання обладнання і предметів довгострокового користування (супутниковий модем Starlink Standard 4X) згідно ДК 021-2015 (CPV) -32530000-7- Телекомунікаційне супутникове обладнання",
-   "buyer": "Комунальний  заклад \"Кіноконцертний зал ім.О.Довженка\"",
-   "country": "UA",
-   "published": "",
-   "deadline": "2026-10-20",
-   "deadlineAt": "2026-10-20T11:00:00.000Z",
-   "type": "Aankondiging opdracht",
-   "kind": "notice",
-   "cpv": [],
-   "link": "https://prozorro.gov.ua/tender/UA-2026-10-14-008562-a",
-   "value": 23000,
-   "currency": "UAH",
-   "firstSeen": "2026-10-15T13:42:58.648Z",
-   "titleNl": "Aankoop van apparatuur en duurzame goederen (Starlink Standard 4X-satellietmodem) overeenkomstig DK 021-2015 (CPV) -32530000-7 – Telecommunicatieapparatuur voor satellietgebruik",
    "trEngine": "DeepL"
   },
   {
