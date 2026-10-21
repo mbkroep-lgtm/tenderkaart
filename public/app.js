@@ -113,6 +113,7 @@ function filtered(ignoreCountry){
     if(state.status === "soon" && st !== "soon") return false;
     if(state.status === "new" && (!isNew(t) || !isOpen(t))) return false;
     if(state.status === "changed" && !isRecent(t)) return false;
+    if(state.status === "mine" && !(OWNERS[t.pub] && OWNERS[t.pub].owner === window.userEmail)) return false;
     if(state.status === "prior" && st !== "prior") return false;
     if(state.status === "awarded" && st !== "awarded") return false;
     if(state.minValue > 0 && !(t.value >= state.minValue)) return false;
@@ -632,7 +633,7 @@ function titleHtml(t){
 const hideBtn = t => window.isAdmin ? `<button type="button" class="hide-btn" data-hide="${esc(t.pub)}" title="Verbergen voor iedereen">Verberg</button>` : "";
 function card(t){
   return `<article class="t ${statusOf(t)}">${hideBtn(t)}<h3>${scoreHtml(t)}${newHtml(t)}${titleHtml(t)}</h3>
-    <div class="meta"><span class="src">${esc(t.source || "TED")}</span>${defHtml(t)}${changedHtml(t)}${bidHtml(t)}<span>${esc(t.country ? cname(t.country) : (t.countryName || "Onbekend land"))}</span>${t.buyer ? `<span>${esc(t.buyer)}</span>` : ""}</div>
+    <div class="meta"><span class="src">${esc(t.source || "TED")}</span>${defHtml(t)}${changedHtml(t)}${ownerHtml(t)}${bidHtml(t)}<span>${esc(t.country ? cname(t.country) : (t.countryName || "Onbekend land"))}</span>${t.buyer ? `<span>${esc(t.buyer)}</span>` : ""}</div>
     <div class="meta"><span class="dl">${dlText(t)}</span>${valHtml(t)}<span class="mono">Gepubl. ${fmt(t.published)}</span><span class="mono">${esc(t.pub)}</span>${t.type ? `<span>${esc(t.type)}</span>` : ""}${applyBtn(t)}</div></article>`;
 }
 function panelCard(t){
@@ -654,6 +655,23 @@ const CHANGE_NL = c => c.what === "deadline" ? `sluitingsdatum ${fmt(c.from)} �
 const changedHtml = t => { if(!t.changedAt || Date.now() - Date.parse(t.changedAt) > 7 * 864e5) return "";
   const txt = (t.changes || []).slice(-3).map(c => `${new Date(c.at).toLocaleDateString("nl-NL", {day:"numeric", month:"short"})}: ${CHANGE_NL(c)}`).join("\n");
   return `<span class="deftag chg" title="${esc(txt || "Gewijzigd")}">Gewijzigd</span>`; };
+// naam uit een e-mailadres: jan.jansen@broadbandeu.com → Jan Jansen
+const nameOf = em => String(em || "").split("@")[0].replace(/[._-]+/g, " ").replace(/\b\w/g, c => c.toUpperCase());
+// eigenaar: wie pakt deze tender op
+function setOwner(pub, owner){
+  return fetch("/api/bid", {method:"POST", credentials:"same-origin", headers:{"Content-Type":"application/json"}, body:JSON.stringify({action:"owner", pub, owner})})
+    .then(r => r.json().then(d => { if(!r.ok) throw new Error(d.error || "Opslaan lukte niet."); return d; }))
+    .then(d => { if(owner){ OWNERS[pub] = {owner:d.owner, by:d.by, at:d.at}; if(!STAFF.includes(d.owner)) STAFF.push(d.owner); } else delete OWNERS[pub]; });
+}
+const ownerHtml = t => {
+  const o = OWNERS[t.pub], cur = o ? o.owner : "";
+  const tip = o ? `Eigenaar: ${nameOf(o.owner)}${o.by && o.by !== o.owner ? " · toegewezen door " + nameOf(o.by) : ""} · ${new Date(o.at).toLocaleDateString("nl-NL", {day:"numeric", month:"short"})}` : "Wie pakt deze tender op?";
+  if(!window.userEmail) return o ? `<span class="deftag owner" title="${esc(tip)}">👤 ${esc(nameOf(cur))}</span>` : "";
+  const me = window.userEmail, others = [...new Set([...STAFF, cur].filter(e => e && e !== me))].sort((a, b) => nameOf(a).localeCompare(nameOf(b), "nl"));
+  return `<select class="ownsel${cur ? " set" : ""}${cur === me ? " mine" : ""}" data-owner="${esc(t.pub)}" aria-label="Eigenaar" title="${esc(tip)}">
+    <option value="">${cur ? "Geen eigenaar" : "Eigenaar…"}</option><option value="${esc(me)}"${cur === me ? " selected" : ""}>👤 Ik (${esc(nameOf(me))})</option>
+    ${others.map(e => `<option value="${esc(e)}"${e === cur ? " selected" : ""}>👤 ${esc(nameOf(e))}</option>`).join("")}<option value="__other">Iemand anders…</option></select>`;
+};
 const who = pub => { const w = BIDBY[pub]; if(!w) return ""; const name = String(w.by || "").split("@")[0].replace(/[._-]+/g, " ").replace(/\b\w/g, c => c.toUpperCase());
   return `${name} · ${new Date(w.at).toLocaleDateString("nl-NL", {day:"numeric", month:"short"})}`; };
 // status zetten via /api/bid (iedere ingelogde medewerker)
@@ -675,7 +693,7 @@ const CAT_LABEL = { leo:"LEO / Starlink", sat:"Satelliet", mobile:"4G/5G", micro
 const CAT_PRIO = { leo:1, sat:1, mobile:1, microwave:1, managed:1, hybrid:1, temp:1, need:0.9, fiber:0.75, wifi:0.75, maritime:0.75, industrial:0.75, infra:0.75, haps:0.5, other:0.5 };
 // Landen waar Starlink (nog) niet beschikbaar is (medio 2026; zelfde lijst als scripts/terms.mjs)
 let STARLINK_BLOCKED = new Set(["CN","RU","IR","KP","BY","CU","SY","AF","ZA","TR","EG","PK","MM"]);   // wordt bijgewerkt uit Beheer
-let BIDS = {}, BIDBY = {};   // inschrijfstatus per tender, en wie die zette
+let BIDS = {}, BIDBY = {}, OWNERS = {}, STAFF = [];   // inschrijfstatus, wie die zette, eigenaar per tender, collega's
 const BID_LABEL = { ingeschreven:"Ingeschreven", gewonnen:"Gewonnen", verloren:"Verloren", geen:"Niet inschrijven" };
 const EUROPE = new Set("AL AD AT BE BA BG HR CY CZ DK EE FI FR DE GR HU IS IE IT XK LV LI LT LU MT MD MC ME NL MK NO PL PT RO SM RS SK SI ES SE CH UA GB VA".split(" "));
 // grove omrekening naar euro (alleen voor de score, niet voor weergave)
@@ -801,6 +819,7 @@ function openApply(pub){
       ${icsOf(t) ? `<button type="button" class="btn" id="adIcs">Deadline in agenda</button>` : ""}
       <a class="btn" href="${esc(mail)}">Mail naar verkoop</a>
       <button type="button" class="btn" id="adCopy">Kopieer conceptbrief</button>
+      ${window.userEmail ? `<button type="button" class="btn" id="adOwn">${OWNERS[t.pub] ? (OWNERS[t.pub].owner === window.userEmail ? "✓ Jij pakt dit op" : "👤 " + esc(nameOf(OWNERS[t.pub].owner)) + " pakt dit op") : "Ik pak dit op"}</button>` : ""}
       ${window.userEmail ? `<button type="button" class="btn" id="adMark">${BIDS[t.pub] === "ingeschreven" ? "✓ Ingeschreven" + (who(t.pub) ? " (" + esc(who(t.pub)) + ")" : "") : "Markeer als ingeschreven"}</button>` : ""}
     </div>
     <h3>AI-inschrijfdossier</h3>
@@ -820,6 +839,9 @@ function openApply(pub){
     const url = URL.createObjectURL(new Blob([icsOf(t)], {type:"text/calendar"})), el = document.createElement("a");
     el.href = url; el.download = `deadline-${t.pub.replace(/[^A-Za-z0-9-]/g, "")}.ics`; document.body.appendChild(el); el.click(); el.remove(); setTimeout(() => URL.revokeObjectURL(url), 5000);
   };
+  if($("adOwn")) $("adOwn").onclick = () => { const o = OWNERS[t.pub];
+    if(o && o.owner !== window.userEmail && !confirm(`${nameOf(o.owner)} pakt dit al op. Wil je het overnemen?`)) return;
+    setOwner(t.pub, window.userEmail).then(() => { $("adOwn").textContent = "✓ Jij pakt dit op"; render(); }).catch(err => alert(err.message)); };
   if($("adMark")) $("adMark").onclick = () => setBid(t.pub, "ingeschreven")
     .then(() => { $("adMark").textContent = "✓ Ingeschreven (" + who(t.pub) + ")"; render(); }).catch(err => alert(err.message));
   if(dlg.showModal) dlg.showModal(); else dlg.setAttribute("open", "");
@@ -925,7 +947,7 @@ function topList(){
 function topCard(t, i){
   const a = adviceOf(t), eur = eurOf(t);
   return `<article class="t top ${statusOf(t)}">${hideBtn(t)}<div class="rank">${i + 1}</div><h3>${scoreHtml(t)}${newHtml(t)}${titleHtml(t)}</h3>
-    <div class="meta"><span class="src">${esc(t.source || "TED")}</span>${defHtml(t)}${changedHtml(t)}${bidHtml(t)}<span>${esc(t.country ? cname(t.country) : (t.countryName || "Onbekend land"))}</span>${t.buyer ? `<span>${esc(t.buyer)}</span>` : ""}</div>
+    <div class="meta"><span class="src">${esc(t.source || "TED")}</span>${defHtml(t)}${changedHtml(t)}${ownerHtml(t)}${bidHtml(t)}<span>${esc(t.country ? cname(t.country) : (t.countryName || "Onbekend land"))}</span>${t.buyer ? `<span>${esc(t.buyer)}</span>` : ""}</div>
     <div class="meta"><span class="dl">${dlText(t)}</span>${valHtml(t)}${eur && (t.currency || "EUR").toUpperCase() !== "EUR" ? `<span class="mono">≈ ${fmtEur(eur)}</span>` : ""}${t.link ? `<a class="golink" href="${esc(t.link)}" target="_blank" rel="noopener">Naar de tender ↗</a>` : ""}${applyBtn(t)}</div>
     <div class="advice"><b class="v-${a.verdict.replace(/\s/g, "").toLowerCase()}">${a.verdict}</b> ${esc(a.why.join(" · "))}</div></article>`;
 }
@@ -939,10 +961,10 @@ function downloadCsv(){
   const cell = v => { const s = v == null ? "" : String(v); return /[";\n\r]/.test(s) ? `"${s.replace(/"/g, '""')}"` : s; };
   const dec = n => n == null || n === "" ? "" : String(n).replace(".", ",");
   const tijd = t => t.deadlineAt ? new Date(t.deadlineAt).toLocaleTimeString("nl-NL", {hour:"2-digit", minute:"2-digit", timeZone:"Europe/Amsterdam"}) : "";
-  const head = ["Score","Status","Categorieën","Land","Titel (Nederlands)","Originele titel","Opdrachtgever","Bron","Soort","Defensie","Gepubliceerd","Sluitingsdatum","Sluitingstijd (NL)","Aantal","Waarde","Valuta","Kenmerk","Link","Waarde in euro (ca.)","Advies","Inschrijfstatus","Status gezet door","Gewijzigd"];
+  const head = ["Score","Status","Categorieën","Land","Titel (Nederlands)","Originele titel","Opdrachtgever","Bron","Soort","Defensie","Gepubliceerd","Sluitingsdatum","Sluitingstijd (NL)","Aantal","Waarde","Valuta","Kenmerk","Link","Waarde in euro (ca.)","Advies","Eigenaar","Inschrijfstatus","Status gezet door","Gewijzigd"];
   const rows = list.map(t => [scoreOf(t), STATUS_NL[statusOf(t)] || statusOf(t), (t.cats || [t.topic === "conn" ? "other" : "leo"]).map(c => CAT_LABEL[c] || c).join(", "), t.country ? cname(t.country) : (t.countryName || ""), t.titleNl || t.title, t.title, t.buyer,
     t.source || "TED", hwScope(t) === "hw" ? "Alleen hardware" : hwScope(t) === "svc" ? "Met dienst" : "", t.defense ? "Ja" : "", t.published || "", t.deadline || "", tijd(t),
-    t.qty || "", dec(t.value), t.value ? (t.currency || "") : "", t.pub, t.link, eurOf(t) ? Math.round(eurOf(t)) : "", adviceText(t), BID_LABEL[BIDS[t.pub]] || "", who(t.pub),
+    t.qty || "", dec(t.value), t.value ? (t.currency || "") : "", t.pub, t.link, eurOf(t) ? Math.round(eurOf(t)) : "", adviceText(t), OWNERS[t.pub] ? nameOf(OWNERS[t.pub].owner) : "", BID_LABEL[BIDS[t.pub]] || "", who(t.pub),
     t.changedAt ? (t.changes || []).map(CHANGE_NL).join("; ") : ""]);
   const csv = "\ufeff" + [head, ...rows].map(r => r.map(cell).join(";")).join("\r\n");
   const url = URL.createObjectURL(new Blob([csv], {type: "text/csv;charset=utf-8"}));
@@ -1007,6 +1029,12 @@ $("fDef").addEventListener("change", e => { state.def = e.target.value; render()
 $("fHw").addEventListener("change", e => { state.hw = e.target.value; render(); });
 $("vAll").addEventListener("click", () => setView("all"));
 $("vTop").addEventListener("click", () => setView("top"));
+document.addEventListener("change", e => {
+  const os = e.target.closest && e.target.closest("select.ownsel"); if(!os) return;
+  const pub = os.dataset.owner; let owner = os.value;
+  if(owner === "__other"){ owner = (prompt("E-mailadres van de collega (@broadbandeu.com of @broadbandnl.com):") || "").trim().toLowerCase(); if(!owner){ render(); return; } }
+  setOwner(pub, owner).then(() => render()).catch(err => { alert(err.message); render(); });
+});
 document.addEventListener("change", e => {
   const sel = e.target.closest && e.target.closest("select.bidsel"); if(!sel) return;
   const pub = sel.dataset.bid, status = sel.value;
@@ -1093,6 +1121,8 @@ function loadTenders(mode){   // mode: "start" (pagina geopend) of "check" (auto
       if(Array.isArray(d.nostar)) STARLINK_BLOCKED = new Set(d.nostar);
       BIDS = d.bids && typeof d.bids === "object" ? d.bids : {};
       BIDBY = d.bidBy && typeof d.bidBy === "object" ? d.bidBy : {};
+      OWNERS = d.owners && typeof d.owners === "object" ? d.owners : {};
+      STAFF = Array.isArray(d.staff) ? d.staff : [];
       tenders = Array.isArray(d.tenders) ? d.tenders : []; updated = d.updated; loaded = true; loadError = false; render(); if(TV) tvUpdate();
       const fresh = before ? tenders.filter(t => !before.has(t.pub) && isOpen(t)) : tenders.filter(t => isNew(t) && isOpen(t));
       const n = fresh.length, ms = TV ? 12000 : 6000;

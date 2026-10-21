@@ -2,7 +2,7 @@
 // Door de beheerder verborgen tenders en uitsluitwoorden worden hier al weggefilterd.
 import { readFile } from 'node:fs/promises';
 import path from 'node:path';
-import { json, readSession, hasAccess, isAdmin, getHidden, getWords, getNoStar, getBids, getBidBy, getMaintenance, applyAdminFilters, requireLogin, fail } from '../lib/core.js';
+import { json, readSession, hasAccess, isAdmin, getHidden, getWords, getNoStar, getBids, getBidBy, getMaintenance, getOwners, getStaff, applyAdminFilters, requireLogin, fail } from '../lib/core.js';
 
 export async function GET(request) {
   try {
@@ -13,12 +13,14 @@ export async function GET(request) {
     if (m && m.on && !isAdmin(email)) return json({ maintenance: true, message: m.message || '' }, 503);
     const data = JSON.parse(await readFile(path.join(process.cwd(), 'data', 'tenders.json'), 'utf8'));
     // verborgen tenders en uitsluitwoorden; lukt de database even niet, dan toch de kaart tonen
-    let hidden = [], words = [], bids = {}, bidBy = {};
-    try { [hidden, words, bids, bidBy] = await Promise.all([getHidden(), getWords(), getBids(), getBidBy()]); } catch (e) { console.error(e); }
+    let hidden = [], words = [], bids = {}, bidBy = {}, owners = {}, staff = [];
+    try { [hidden, words, bids, bidBy, owners, staff] = await Promise.all([getHidden(), getWords(), getBids(), getBidBy(), getOwners(), getStaff()]); } catch (e) { console.error(e); }
     data.nostar = await getNoStar();
     data.bids = bids;
     // namen alleen voor ingelogde medewerkers
     data.bidBy = email ? bidBy : {};
+    data.owners = email ? owners : {};
+    data.staff = email ? [...new Set([...staff, email])].sort() : [];
     const all = data.tenders || [];
     data.tenders = applyAdminFilters(all, hidden, words);
     data.hiddenCount = all.length - data.tenders.length;

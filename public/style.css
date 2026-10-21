@@ -396,3 +396,7 @@ body.maint-on{overflow:hidden}
 .maint-card .maint-by{margin-top:18px;font:500 11px var(--f-mono);letter-spacing:.08em;color:var(--faint)}
 .ad-foot.by{text-align:right;font-family:var(--f-mono);letter-spacing:.06em;margin-top:6px}
 body.tv .tvbar .tvby{font-size:11px;letter-spacing:.08em;color:var(--faint)}
+.ownsel{font:600 11px var(--f-mono);padding:1px 4px;border-radius:5px;background:var(--panel-2);color:var(--muted);border:1px solid var(--line);height:auto;width:auto;max-width:170px}
+.ownsel.set{color:#d6c2ff;border-color:rgba(190,160,255,.55)}
+.ownsel.mine{color:#06121f;background:#d6c2ff;border-color:#d6c2ff}
+.deftag.owner{color:#d6c2ff;border-color:rgba(190,160,255,.55);background:rgba(190,160,255,.08);text-transform:none}
