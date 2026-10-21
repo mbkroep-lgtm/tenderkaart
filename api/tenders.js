@@ -15,6 +15,7 @@ export async function GET(request) {
     const all = data.tenders || [];
     data.tenders = applyAdminFilters(all, hidden, words);
     data.hiddenCount = all.length - data.tenders.length;
+    data.build = process.env.VERCEL_GIT_COMMIT_SHA || '';   // nieuwe versie van de site of gegevens: open pagina's verversen zich
     if (!isAdmin(email)) delete data.sources;
     return new Response(JSON.stringify(data), { headers: { 'Content-Type': 'application/json; charset=utf-8', 'Cache-Control': 'private, no-store' } });
   } catch (e) { return fail(e); }
