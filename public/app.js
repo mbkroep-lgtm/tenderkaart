@@ -9,9 +9,11 @@ const NAME_FIX = {XK:"Kosovo"};
 const cname = c => { if(!c) return "Onbekend"; if(NAME_FIX[c]) return NAME_FIX[c]; try { const n = NL_REGION && NL_REGION.of(c); return n && n !== c ? n : c; } catch(e) { return c; } };
 // Engelse kaartnamen → landcode
 const EN = {};
+// verouderde landcodes met dezelfde naam als een bestaand land overslaan (anders wordt Frankrijk "FX" en het VK "UK")
+const OLD_CODES = new Set(["AN","HV","DY","BU","ZR","CS","YU","DD","FX","UK","NH","RH","SU","TP","VD","YD"]);
 if(EN_REGION) for(let a = 65; a <= 90; a++) for(let b = 65; b <= 90; b++){
   const code = String.fromCharCode(a, b); let n; try { n = EN_REGION.of(code); } catch(e) {}
-  if(n && n !== code) EN[n.toLowerCase()] = code;
+  if(n && n !== code && !OLD_CODES.has(code)) EN[n.toLowerCase()] = code;
 }
 Object.assign(EN, {"bosnia and herz.":"BA","czech rep.":"CZ",czechia:"CZ",macedonia:"MK","north macedonia":"MK",kosovo:"XK",russia:"RU",
   "united states of america":"US","dem. rep. congo":"CD","congo":"CG","central african rep.":"CF","s. sudan":"SS","eq. guinea":"GQ",
