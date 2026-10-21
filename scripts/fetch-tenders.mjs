@@ -6,54 +6,29 @@
 // Valt één bron uit, dan blijven de bestaande berichten van die bron gewoon staan.
 import { readFile, writeFile, mkdir } from 'node:fs/promises';
 import { createHash } from 'node:crypto';
+import { BRANDS, CATEGORIES, COMBOS, SEARCH_TERMS, TED_TERMS_LIST } from './terms.mjs';
 
 const FILE = new URL('../data/tenders.json', import.meta.url);
 const NOW = new Date();
 const DAY = 864e5;
 const isoDay = d => new Date(d).toISOString().slice(0, 10);
 
-// ---------- Wat telt als LEO ----------
-const BRANDS = ['starlink', 'OneWeb', 'Project Kuiper', 'Amazon Leo']; // los "Kuiper" is ook een Nederlandse achternaam
-// Alleen vaste combinaties: los "LEO" geeft veel ruis (Leopard, namen, woorden in andere talen).
-const PHRASES = ['LEO satellite', 'LEO satellites', 'LEO satellite internet', 'LEO connectivity', 'LEO-satelliet', 'LEO-satellieten',
-  'LEO-Satellit', 'LEO-Satelliten', 'satellite LEO', 'satellites LEO', 'satélite LEO', 'satélites LEO', 'satellite a bassa orbita',
-  'satelliti LEO', 'satelity LEO', 'satélite de órbita baixa', 'satélites de órbita baixa', 'satélite de baixa órbita',
-  'satélites de baixa órbita', 'órbita terrestre baixa', 'satelital de órbita baja', 'satelitales de órbita baja', 'satélites de órbita baja',
-  'órbita terrestre baja', 'satelity niskoorbitowe', 'satelitarny LEO', 'niskiej orbicie okołoziemskiej', 'sateliți LEO', 'orbită joasă',
-  'LEO-Satellitenkommunikation', 'lavbane-satellitt', 'LEO-satellitt', 'low earth orbit satellite', 'low earth orbit satellites', 'low-earth orbit satellite'];
+// ---------- Wat we zoeken: zie scripts/terms.mjs (categorieën, combinaties, zoektermen) ----------
 const esc = s => s.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
 const termRe = list => new RegExp('(^|[^\\p{L}\\d])(' + list.map(t => esc(t).replace(/[ -]/g, '[ -]?')).join('|') + ')([^\\p{L}\\d]|$)', 'iu');
-const LEO_ONLY_RE = termRe([...BRANDS, ...PHRASES]);
-// Bredere connectiviteit (op verzoek, okt 2026): managed connectivity, zakelijke satellietverbindingen, SD-WAN,
-// tijdelijke netwerken en 4G/5G-backup. Deze tenders krijgen onderwerp "conn", LEO/Starlink krijgt "leo".
-const CONN_TERMS = [
-  'managed connectivity', 'connectivity as a service', 'beheerde connectiviteit', 'managed WAN', 'managed network services',
-  'SD-WAN', 'SDWAN',
-  'satellite internet', 'satellite broadband', 'satellite connectivity', 'business satellite', 'satellietinternet', 'satellietverbinding',
-  'satellietverbindingen', 'internet via satelliet', 'Satelliteninternet', 'Satellitenverbindung', 'Satelliten-Internet', 'internet par satellite',
-  'internet satellitaire', 'connexion satellitaire', 'connexion par satellite', 'internet via satélite', 'internet por satélite', 'internet satelital',
-  'internet satélite', 'servicio de internet satelital', 'internet satellitare', 'connettività satellitare', 'internet satelitarny',
-  'internet przez satelitę', 'internet prin satelit', 'satellittinternett', 'satellittbredbånd', 'супутниковий інтернет', 'супутникового інтернету',
-  'спутниковый интернет', 'спутникового интернета',
-  'temporary network', 'temporary networks', 'temporary connectivity', 'temporary internet', 'event connectivity', 'tijdelijk netwerk',
-  'tijdelijke netwerken', 'tijdelijke internetverbinding', 'tijdelijke verbinding', 'temporäres Netzwerk', 'temporäre Netzwerke',
-  'temporäre Internetanbindung', 'réseau temporaire', 'réseaux temporaires', 'red temporal', 'rete temporanea',
-  '4G backup', '5G backup', 'LTE backup', '4G/5G backup', '4G back-up', '5G back-up', '4G failover', '5G failover', 'LTE failover',
-  'backup 4G', 'backup 5G', 'mobile backup', 'mobiele backup', 'mobiele back-up', 'secours 4G', 'secours 5G', 'Mobilfunk-Backup', 'LTE-Backup',
-  // microwave / straalverbindingen
-  'straalverbinding', 'straalverbindingen', 'microgolfverbinding', 'microwave link', 'microwave links', 'microwave backhaul', 'microwave radio',
-  'point-to-point microwave', 'point-to-point radio', 'licensed microwave', 'Richtfunk', 'Richtfunkstrecke', 'Richtfunkstrecken',
-  'Richtfunkverbindung', 'Richtfunkverbindungen', 'Richtfunkanlage', 'Richtfunksystem', 'faisceau hertzien', 'faisceaux hertziens',
-  'liaison hertzienne', 'liaisons hertziennes', 'radioenlace', 'radioenlaces', 'enlace de microondas', 'enlaces de microondas',
-  'enlace microondas', 'feixe hertziano', 'feixes hertzianos', 'ligação de micro-ondas', 'ponte radio', 'ponti radio', 'collegamento in ponte radio',
-  'radiolinia', 'radiolinie', 'linia radiowa', 'radioreleu', 'radiolinje', 'radiolinjer', 'radiolänk', 'радіорелейний', 'радіорелейного',
-  'радіорелейної', 'радиорелейной', 'радиорелейная', 'радиорелейного'
-];
-const CONN_RE = termRe(CONN_TERMS);
-// LEO_RE = alles wat we zoeken (LEO én de bredere connectiviteit); de onderwerp-markering scheidt ze weer
-const LEO_RE = termRe([...BRANDS, ...PHRASES, ...CONN_TERMS]);
-const topicOf = t => LEO_ONLY_RE.test(`${t.title || ''} ${t.titleNl || ''}`) || !CONN_RE.test(`${t.title || ''} ${t.titleNl || ''}`) ? 'leo' : 'conn';
-// Ruimtevaarthardware en andere zaken die niets met verbindingen voor klanten te maken hebben.
+const CAT_RES = CATEGORIES.map(c => ({ key: c.key, re: termRe(c.terms) }));
+const COMBO_RES = COMBOS.map(c => ({ key: c.key, a: termRe(c.a), b: termRe(c.b) }));
+const ALL_RE = termRe(CATEGORIES.flatMap(c => c.terms));
+// LEO_RE: "past deze tekst bij wat we zoeken?" (alle categorieën of een combinatie). Naam is historisch.
+const LEO_RE = { test: s => ALL_RE.test(s) || COMBO_RES.some(c => c.a.test(s) && c.b.test(s)),
+  source: ALL_RE.source + COMBO_RES.map(c => c.a.source + c.b.source).join('') };
+// categorieën van een tender (op titel en vertaling); niets in de titel = alleen in de beschrijving gevonden
+function catsOf(t) {
+  const s = `${t.title || ''} ${t.titleNl || ''}`;
+  const k = CAT_RES.filter(c => c.re.test(s)).map(c => c.key);
+  for (const c of COMBO_RES) if (c.a.test(s) && c.b.test(s) && !k.includes(c.key)) k.push(c.key);
+  return k.length ? k : ['other'];
+}
 const EXCLUDE_RE = /(inter-?satellite|intersatellit|launch service|trägerrakete|lanceerdienst|telescope|teleskop|flight[- ]model|raumfahrzeug|spacecraft|missile|space station|destination contract|ruimtestation)/i;
 // Telecom: hoofdcategorie (eerste CPV-code) apparatuur (32…) of diensten (64…). Zonder CPV: laten staan.
 const isTelecom = t => !t.cpv?.length || /^(32|64|72|48|50|51)/.test(t.cpv[0]);   // + IT-diensten/software/onderhoud (SD-WAN)
@@ -146,10 +121,9 @@ const TED_TYPES = {
 };
 // TED ondersteunt geen ("a" OR "b") binnen één FT ~ (dat geeft 0 resultaten): elke term los.
 const ftAny = list => list.map(t => `FT ~ "${t}"`).join(' OR ');
-const TED_CONN = ['managed connectivity', 'SD-WAN', 'satellite internet', 'satellite connectivity', 'satellietinternet', 'satellietverbinding',
-  'Satelliteninternet', 'internet par satellite', 'internet satelital', 'internet via satélite', 'temporary network', 'tijdelijk netwerk',
-  '4G backup', '5G backup', 'LTE backup', 'microwave link', 'straalverbinding', 'Richtfunk', 'faisceau hertzien', 'radioenlace', 'ponte radio', 'radiolinia'];
-const TED_TERMS = `(${ftAny(BRANDS)} OR ${ftAny(PHRASES)} OR ${ftAny(TED_CONN)})`;
+// TED: termen in groepjes zoeken (één enorme zoekvraag wordt geweigerd)
+const TED_CHUNKS = []; for (let i = 0; i < TED_TERMS_LIST.length; i += 10) TED_CHUNKS.push(`(${ftAny(TED_TERMS_LIST.slice(i, i + 10))})`);
+const TED_TERMS = TED_CHUNKS.join(' OR ');
 const TED_BASE = ['publication-number', 'notice-title', 'buyer-name', 'buyer-country', 'publication-date', 'deadline-receipt-tender-date-lot', 'notice-type'];
 const TED_OPTIONAL = [['estimated-value-proc', 'estimated-value-cur-proc', 'estimated-value-lot', 'estimated-value-cur-lot'], ['deadline-receipt-request-date-lot'], ['classification-cpv']];
 
@@ -188,23 +162,31 @@ async function tedSearch(query, scope, fields) {
 }
 async function fetchTed() {
   const since = isoDay(NOW - 365 * DAY).replace(/-/g, '');
-  // eerst een jaar geschiedenis; lukt die zoekvorm niet, dan alleen actieve berichten
-  const attempts = [
-    [`(${TED_TERMS} AND publication-date >= ${since}) SORT BY publication-date DESC`, 'ALL'],
-    [`${TED_TERMS} SORT BY publication-date DESC`, 'ACTIVE']
-  ];
-  for (const [query, scope] of attempts) {
-    // velden: probeer alles, en laat bij een fout steeds een optionele groep weg
-    for (let k = TED_OPTIONAL.length; k >= 0; k--) {
-      const fields = [...TED_BASE, ...TED_OPTIONAL.slice(0, k).flat()];
-      try {
-        const ns = await tedSearch(query, scope, fields);
-        console.log(`TED: ${ns.length} berichten (scope ${scope}, ${fields.length} velden).`);
-        return ns.map(tedTender).filter(Boolean);
-      } catch (e) { console.warn(`TED (${scope}, ${fields.length} velden) lukte niet:`, e.message.slice(0, 200)); }
+  const byPub = new Map(); let failed = 0;
+  for (const terms of TED_CHUNKS) {
+    // eerst een jaar geschiedenis; lukt die zoekvorm niet, dan alleen actieve berichten
+    const attempts = [
+      [`(${terms} AND publication-date >= ${since}) SORT BY publication-date DESC`, 'ALL'],
+      [`${terms} SORT BY publication-date DESC`, 'ACTIVE']
+    ];
+    let ok = false;
+    for (const [query, scope] of attempts) {
+      if (ok) break;
+      // velden: probeer alles, en laat bij een fout steeds een optionele groep weg
+      for (let k = TED_OPTIONAL.length; k >= 0; k--) {
+        const fields = [...TED_BASE, ...TED_OPTIONAL.slice(0, k).flat()];
+        try {
+          const ns = await tedSearch(query, scope, fields);
+          for (const t of ns.map(tedTender).filter(Boolean)) byPub.set(t.pub, t);
+          ok = true; break;
+        } catch (e) { console.warn(`TED (${scope}, ${fields.length} velden) lukte niet:`, e.message.slice(0, 200)); }
+      }
     }
+    if (!ok) failed++;
   }
-  throw new Error('TED: alle zoekpogingen mislukt');
+  if (failed === TED_CHUNKS.length) throw new Error('TED: alle zoekpogingen mislukt');
+  console.log(`TED: ${byPub.size} berichten (${TED_CHUNKS.length - failed} van ${TED_CHUNKS.length} zoekgroepen gelukt).`);
+  return [...byPub.values()];
 }
 
 // ---------- Bron 2: Wereldbank ----------
@@ -349,7 +331,7 @@ async function fetchSam(key) {
 const NOTES = {};
 const say = (name, msg) => { NOTES[name] = msg; console.log(`${name}: ${msg}`); };
 const UA = { 'User-Agent': 'Mozilla/5.0 (tendermap; +https://tenderkaart.vercel.app)' };
-const CORE_TERMS = ['starlink', 'oneweb', 'LEO satellite', 'Project Kuiper', 'Amazon Leo', 'SD-WAN', 'managed connectivity', 'satellite internet', 'satellite connectivity', '4G backup', '5G backup', 'temporary network', 'microwave link', 'point-to-point radio'];
+const CORE_TERMS = [...SEARCH_TERMS, 'Project Kuiper', 'Amazon Leo'];
 const postJson = (url, body) => getJson(url, { method: 'POST', headers: { 'Content-Type': 'application/json', ...UA }, body: JSON.stringify(body) }, 2);
 const getText = async url => {
   const r = await fetch(url, { headers: UA, signal: AbortSignal.timeout(120000) });
@@ -1068,7 +1050,7 @@ async function fetchTaiwan() {
 }
 
 // Defensie-markering: militaire opdrachtgever
-const DEFENSE_RE = /(defen[cs]e|defensie|verteidigung|bundeswehr|armée|armasuisse|ministerul apararii|unitatea militara|military|militar|army|navy|air force|marine corps|військов|збройн|національної гвардії|міністерство оборони|оборони|國防|國軍|海巡)/i;
+const DEFENSE_RE = /(defen[cs]e|defensie|verteidigung|bundeswehr|armée|armasuisse|ministerul apararii|unitatea militara|military|militar|army|navy|air force|marine corps|військов|збройн|національної гвардії|міністерство оборони|оборони|國防|國軍|海巡|sił zbrojnych|wojsk|ejército|fuerzas armadas|forças armadas|exército|marinha|forsvar|armata|министерство обороны|вооруженн|воинск|forces armées|marine nationale|carabinieri|guardia civil)/i;
 function markDefense(t) {
   if (DEFENSE_RE.test(`${t.buyer || ''} ${t.title || ''}`)) t.defense = true;
   delete t.policyUA;
@@ -1267,7 +1249,7 @@ const tenders = result
 
 let trInfo;
 try { trInfo = await translateAll(tenders); } catch (e) { trInfo = { ok: false, at: nowIso, error: e.message }; }
-for (const t of tenders) t.topic = topicOf(t);   // leo of conn (bredere connectiviteit)
+for (const t of tenders) { t.cats = catsOf(t); t.topic = t.cats.includes('leo') ? 'leo' : 'conn'; }   // categorieën; topic leo of conn
 sourceInfo['Vertalen'] = trInfo;
 for (const t of tenders) { const q = extractQty(t.title) ?? extractQty(t.titleNl); if (q) t.qty = q; else delete t.qty; }
 await mkdir(new URL('../data/', import.meta.url), { recursive: true });

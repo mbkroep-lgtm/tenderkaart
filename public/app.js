@@ -101,7 +101,7 @@ function filtered(ignoreCountry){
     if(state.source && (t.source || "TED") !== state.source) return false;
     if(state.def === "no" && t.defense) return false;
     if(state.def === "only" && !t.defense) return false;
-    if(state.topic && (t.topic || "leo") !== state.topic) return false;
+    if(state.topic && !(t.cats || [t.topic || "leo"]).includes(state.topic)) return false;
     if(state.hw === "only" && hwScope(t) !== "hw") return false;
     if(state.hw === "no" && hwScope(t) === "hw") return false;
     if(effStatus() === "open" && !isOpen(t)) return false;
@@ -591,7 +591,8 @@ function drawOffices(){
 // ---------- Lijst ----------
 const dlText = t => { const st = statusOf(t); return (st === "awarded" || st === "prior") ? leftText(t) : `Sluit ${fmt(t.deadline)} · ${leftText(t)}`; };
 const defHtml = t => (t.defense ? `<span class="deftag" title="Opdrachtgever is een defensie-organisatie">Defensie</span>` : "")
-  + (t.topic === "conn" ? `<span class="deftag conn" title="Bredere connectiviteit: managed connectivity, satellietverbindingen, SD-WAN, straalverbindingen, tijdelijke netwerken of 4G/5G-backup">Connectiviteit</span>` : "")
+  + (t.cats || []).filter(c => c !== "leo").slice(0, 2).map(c => `<span class="deftag conn" title="Categorie">${esc(CAT_LABEL[c] || c)}</span>`).join("")
+  + (STARLINK_BLOCKED.has(t.country) ? `<span class="deftag nostar" title="Starlink is in dit land (nog) niet beschikbaar of niet toegestaan">Geen Starlink</span>` : "")
   + (hwScope(t) === "hw" ? `<span class="deftag hw" title="Alleen apparatuur, zonder abonnement of dienst (afgeleid uit de titel)">Alleen hardware</span>` : "");
 const valHtml = t => (t.qty ? `<span class="qty" title="Aantal uit de titel gehaald">${t.qty}×</span>` : "") + (t.value ? `<span class="val">${esc(fmtMoney(t.value, t.currency))}</span>` : "");
 const newHtml = t => isNew(t) ? `<span class="newtag">NIEUW</span>` : "";
@@ -611,21 +612,49 @@ function titleHtml(t){
 }
 const hideBtn = t => window.isAdmin ? `<button type="button" class="hide-btn" data-hide="${esc(t.pub)}" title="Verbergen voor iedereen">Verberg</button>` : "";
 function card(t){
-  return `<article class="t ${statusOf(t)}">${hideBtn(t)}<h3>${newHtml(t)}${titleHtml(t)}</h3>
+  return `<article class="t ${statusOf(t)}">${hideBtn(t)}<h3>${scoreHtml(t)}${newHtml(t)}${titleHtml(t)}</h3>
     <div class="meta"><span class="src">${esc(t.source || "TED")}</span>${defHtml(t)}<span>${esc(t.country ? cname(t.country) : (t.countryName || "Onbekend land"))}</span>${t.buyer ? `<span>${esc(t.buyer)}</span>` : ""}</div>
     <div class="meta"><span class="dl">${dlText(t)}</span>${valHtml(t)}<span class="mono">Gepubl. ${fmt(t.published)}</span><span class="mono">${esc(t.pub)}</span>${t.type ? `<span>${esc(t.type)}</span>` : ""}</div></article>`;
 }
 function panelCard(t){
-  return `<article class="t ${statusOf(t)}">${hideBtn(t)}<h3>${newHtml(t)}${titleHtml(t)}</h3><div class="meta"><span class="src">${esc(t.source || "TED")}</span>${defHtml(t)}${t.buyer ? `<span>${esc(t.buyer)}</span>` : ""}</div><div class="meta"><span class="dl">${dlText(t)}</span>${valHtml(t)}</div></article>`;
+  return `<article class="t ${statusOf(t)}">${hideBtn(t)}<h3>${scoreHtml(t)}${newHtml(t)}${titleHtml(t)}</h3><div class="meta"><span class="src">${esc(t.source || "TED")}</span>${defHtml(t)}${t.buyer ? `<span>${esc(t.buyer)}</span>` : ""}</div><div class="meta"><span class="dl">${dlText(t)}</span>${valHtml(t)}</div></article>`;
 }
 const SORTERS = {
   deadline: (a,b) => (a.deadline || "9999").localeCompare(b.deadline || "9999"),
   pub: (a,b) => (b.published || "").localeCompare(a.published || ""),
   value: (a,b) => (b.value || -1) - (a.value || -1),
+  score: (a,b) => scoreOf(b) - scoreOf(a) || (a.deadline || "9999").localeCompare(b.deadline || "9999"),
   qty: (a,b) => (b.qty || 0) - (a.qty || 0) || (a.deadline || "9999").localeCompare(b.deadline || "9999"),
   country: (a,b) => cname(a.country).localeCompare(cname(b.country), "nl") || (a.deadline || "9999").localeCompare(b.deadline || "9999")
 };
 let loaded = false, loadError = false;
+// ---------- Categorieën en commerciële score ----------
+const CAT_LABEL = { leo:"LEO / Starlink", sat:"Satelliet", mobile:"4G/5G", microwave:"Straalverbinding", fiber:"Glasvezel", wifi:"Wi-Fi",
+  managed:"Managed / SD-WAN", hybrid:"Hybride / backup", temp:"Tijdelijk / nood", maritime:"Maritiem", industrial:"Industrieel / IoT", haps:"HAPS",
+  infra:"Infrastructuur", need:"Behoefte", other:"In beschrijving" };
+const CAT_PRIO = { leo:1, sat:1, mobile:1, microwave:1, managed:1, hybrid:1, temp:1, need:0.9, fiber:0.75, wifi:0.75, maritime:0.75, industrial:0.75, infra:0.75, haps:0.5, other:0.5 };
+// Landen waar Starlink (nog) niet beschikbaar is (medio 2026; zelfde lijst als scripts/terms.mjs)
+const STARLINK_BLOCKED = new Set(["CN","RU","IR","KP","BY","CU","SY","AF","ZA","TR","EG","PK","MM"]);
+const EUROPE = new Set("AL AD AT BE BA BG HR CY CZ DK EE FI FR DE GR HU IS IE IT XK LV LI LT LU MT MD MC ME NL MK NO PL PT RO SM RS SK SI ES SE CH UA GB VA".split(" "));
+// grove omrekening naar euro (alleen voor de score, niet voor weergave)
+const EUR = { EUR:1, USD:0.92, GBP:1.17, CHF:1.05, NOK:0.085, SEK:0.087, DKK:0.134, PLN:0.23, CZK:0.04, HUF:0.0025, RON:0.2, BGN:0.51, UAH:0.022,
+  BRL:0.17, COP:0.00022, CAD:0.67, AUD:0.6, NZD:0.55, ZAR:0.05, KES:0.0071, DOP:0.015, KZT:0.0018, TWD:0.028, MXN:0.05, CLP:0.001, PEN:0.25, ARS:0.001 };
+function scoreOf(t){
+  if(t._score !== undefined) return t._score;
+  const cats = t.cats || [t.topic === "conn" ? "other" : "leo"];
+  const tech = Math.max(...cats.map(c => CAT_PRIO[c] ?? 0.5));
+  const eur = t.value ? t.value * (EUR[(t.currency || "EUR").toUpperCase()] ?? 0) : 0;
+  const val = eur > 0 ? Math.max(0.1, Math.min(1, (Math.log10(eur) - 3.5) / 3.5)) : 0.4;   // 10k€ ≈ 0,15 · 100k€ ≈ 0,43 · 1M€ ≈ 0,71 · 10M€ = 1
+  const scope = hwScope(t), rec = scope === "svc" ? 1 : scope === "hw" ? 0 : 0.5;
+  const geo = STARLINK_BLOCKED.has(t.country) ? 0 : EUROPE.has(t.country) ? 1 : t.country ? 0.6 : 0.5;
+  const st = statusOf(t), dl = daysLeft(t.deadline);
+  let feas = st === "closed" || st === "awarded" ? 0 : st === "prior" ? 0.8 : dl === null ? 0.7 : dl <= 2 ? 0.2 : dl <= 7 ? 0.6 : 1;
+  if(t.defense) feas *= 0.6;
+  return (t._score = Math.round(100 * (0.30 * tech + 0.20 * val + 0.20 * rec + 0.15 * geo + 0.15 * feas)));
+}
+const scoreHtml = t => { const v = scoreOf(t), c = v >= 70 ? "hi" : v >= 50 ? "mid" : "lo";
+  return `<span class="score ${c}" title="Commerciële score: techniek 30% · waarde 20% · terugkerende omzet 20% · geografie 15% · uitvoerbaarheid 15%">${v}</span>`; };
+
 // CSV-export van de lijst zoals hij nu gefilterd en gesorteerd is (puntkomma's en een BOM, zodat Excel hem goed opent)
 const STATUS_NL = { open:"Open", soon:"Sluit binnenkort", closed:"Gesloten", awarded:"Gegund", prior:"Vooraankondiging" };
 function downloadCsv(){
@@ -633,8 +662,8 @@ function downloadCsv(){
   const cell = v => { const s = v == null ? "" : String(v); return /[";\n\r]/.test(s) ? `"${s.replace(/"/g, '""')}"` : s; };
   const dec = n => n == null || n === "" ? "" : String(n).replace(".", ",");
   const tijd = t => t.deadlineAt ? new Date(t.deadlineAt).toLocaleTimeString("nl-NL", {hour:"2-digit", minute:"2-digit", timeZone:"Europe/Amsterdam"}) : "";
-  const head = ["Status","Onderwerp","Land","Titel (Nederlands)","Originele titel","Opdrachtgever","Bron","Soort","Defensie","Gepubliceerd","Sluitingsdatum","Sluitingstijd (NL)","Aantal","Waarde","Valuta","Kenmerk","Link"];
-  const rows = list.map(t => [STATUS_NL[statusOf(t)] || statusOf(t), t.topic === "conn" ? "Connectiviteit" : "LEO / Starlink", t.country ? cname(t.country) : (t.countryName || ""), t.titleNl || t.title, t.title, t.buyer,
+  const head = ["Score","Status","Categorieën","Land","Titel (Nederlands)","Originele titel","Opdrachtgever","Bron","Soort","Defensie","Gepubliceerd","Sluitingsdatum","Sluitingstijd (NL)","Aantal","Waarde","Valuta","Kenmerk","Link"];
+  const rows = list.map(t => [scoreOf(t), STATUS_NL[statusOf(t)] || statusOf(t), (t.cats || [t.topic === "conn" ? "other" : "leo"]).map(c => CAT_LABEL[c] || c).join(", "), t.country ? cname(t.country) : (t.countryName || ""), t.titleNl || t.title, t.title, t.buyer,
     t.source || "TED", hwScope(t) === "hw" ? "Alleen hardware" : hwScope(t) === "svc" ? "Met dienst" : "", t.defense ? "Ja" : "", t.published || "", t.deadline || "", tijd(t),
     t.qty || "", dec(t.value), t.value ? (t.currency || "") : "", t.pub, t.link]);
   const csv = "\ufeff" + [head, ...rows].map(r => r.map(cell).join(";")).join("\r\n");

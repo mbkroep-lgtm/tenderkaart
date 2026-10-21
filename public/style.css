@@ -319,3 +319,8 @@ body.tv .refreshnote.show{transform:translate(-50%,0)}
 .csvbtn{font:600 11px var(--f-mono);letter-spacing:.06em;padding:3px 9px;border-radius:6px;background:transparent;border:1px solid var(--line);color:var(--beam);cursor:pointer}
 .csvbtn:hover{border-color:var(--beam)}
 .deftag.conn{color:#b9f0d0;border-color:rgba(120,220,170,.45);background:rgba(120,220,170,.08)}
+.score{display:inline-grid;place-items:center;min-width:26px;height:20px;padding:0 5px;margin-right:8px;border-radius:5px;font:700 11px var(--f-mono);vertical-align:2px}
+.score.hi{background:rgba(120,220,170,.18);color:#9ff0c4;border:1px solid rgba(120,220,170,.5)}
+.score.mid{background:rgba(124,196,255,.12);color:#a9c8f0;border:1px solid rgba(124,196,255,.4)}
+.score.lo{background:rgba(255,255,255,.04);color:var(--muted);border:1px solid var(--line)}
+.deftag.nostar{color:#ffb3b3;border-color:rgba(255,120,120,.5);background:rgba(255,120,120,.08)}
