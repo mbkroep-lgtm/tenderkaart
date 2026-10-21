@@ -104,16 +104,6 @@ $("btnLogout").addEventListener("click", async () => {
   const cancelled = params.get("geannuleerd");
   if(paid || cancelled) history.replaceState(null, "", "/");
 
-  if(paid){
-    $("authView").hidden = false;
-    msg("Betaling controleren…");
-    try {
-      const d = await api("/api/confirm?session_id=" + encodeURIComponent(paid));
-      showCode(d.email, d.recent);
-      msg("Bedankt voor je betaling! Je inlogcode is onderweg naar je e-mail.");
-    } catch(err) { showEmail(); msg(err.message, true); }
-    return;
-  }
 
   let me = {requireLogin:false};
   try {
