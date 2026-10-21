@@ -3,7 +3,7 @@
 // POST → { action, ... } om iets te wijzigen
 import { readFile } from 'node:fs/promises';
 import path from 'node:path';
-import { json, readSession, isAdmin, redis, getHidden, getWords, normEmail, validEmail, env, readJson, fail } from '../lib/core.js';
+import { json, readSession, isAdmin, allowedDomains, redis, getHidden, getWords, normEmail, validEmail, env, readJson, fail } from '../lib/core.js';
 
 async function guard(request) {
   const email = readSession(request);
@@ -56,8 +56,8 @@ export async function GET(request) {
     if (!me) return json({ error: 'Alleen voor beheerders.' }, 403);
     if (new URL(request.url).searchParams.get('runs')) return await latestRun();
     const data = JSON.parse(await readFile(path.join(process.cwd(), 'data', 'tenders.json'), 'utf8'));
-    const [hidden, words, freeEmails, freeDomains, cust] = await Promise.all([
-      getHidden(), getWords(), redis('SMEMBERS', 'free:emails'), redis('SMEMBERS', 'free:domains'), customers()
+    const [hidden, words, freeEmails, freeDomains, cust, blocked] = await Promise.all([
+      getHidden(), getWords(), redis('SMEMBERS', 'free:emails'), redis('SMEMBERS', 'free:domains'), customers(), redis('SMEMBERS', 'blocked')
     ]);
     return json({
       me,
@@ -66,6 +66,7 @@ export async function GET(request) {
       hidden, words,
       free: { emails: freeEmails || [], domains: freeDomains || [], envDomains: env('FREE_DOMAINS'), envEmails: env('FREE_EMAILS') },
       customers: cust,
+      blocked: (blocked || []).sort(), staffDomains: allowedDomains(),
       canRefresh: !!env('GITHUB_TOKEN')
     });
   } catch (e) { return fail(e); }
@@ -86,6 +87,13 @@ export async function POST(request) {
       case 'words': {
         const words = [...new Set((Array.isArray(b.words) ? b.words : []).map(w => String(w).trim()).filter(w => w.length >= 2 && w.length <= 60))].slice(0, 200);
         await redis('SET', 'exclude:words', JSON.stringify(words)); return json({ ok: true, words });
+      }
+      case 'block-add': case 'block-remove': {   // medewerker de toegang ontzeggen of teruggeven
+        const v = normEmail(b.value);
+        if (!validEmail(v)) return json({ error: 'Vul een geldig e-mailadres in.' }, 400);
+        if (b.action === 'block-add' && isAdmin(v)) return json({ error: 'Een beheerder kun je niet blokkeren.' }, 400);
+        await redis(b.action === 'block-add' ? 'SADD' : 'SREM', 'blocked', v);
+        return json({ ok: true });
       }
       case 'free-add': case 'free-remove': {
         const v = normEmail(b.value).replace(/^@/, '');

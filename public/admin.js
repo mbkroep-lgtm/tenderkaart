@@ -61,6 +61,12 @@ function renderCustomers(){
   $("custRows").innerHTML = D.customers.length
     ? D.customers.map(c => `<tr><td>${esc(c.email)}</td><td>${when(c.at)}</td><td>${c.manual ? "handmatig" : "betaald via Stripe"}</td><td><button type="button" class="danger" data-revoke="${esc(c.email)}">Intrekken</button></td></tr>`).join("")
     : `<tr><td colspan="4" class="note">Nog geen klanten.</td></tr>`;
+  const bl = D.blocked || [];
+  $("blockCount").textContent = bl.length;
+  if(D.staffDomains) $("staffNote").textContent = `Iedereen met een e-mailadres op ${D.staffDomains.map(d => "@" + d).join(" of ")} kan inloggen. Wie hier staat, kan dat niet meer; is hij nu ingelogd, dan wordt hij er direct uitgezet.`;
+  $("blocked").innerHTML = bl.length
+    ? bl.map(v => `<span class="chip">${esc(v)}<button type="button" data-unblock="${esc(v)}" aria-label="Toegang teruggeven aan ${esc(v)}" title="Toegang teruggeven">×</button></span>`).join("")
+    : `<span class="note">Niemand geblokkeerd.</span>`;
   const items = [...D.free.domains.map(v => ({v, label:"@" + v})), ...D.free.emails.map(v => ({v, label:v}))];
   $("free").innerHTML = items.length
     ? items.map(x => `<span class="chip">${esc(x.label)}<button type="button" data-free="${esc(x.v)}" aria-label="Verwijder ${esc(x.label)}">×</button></span>`).join("")
@@ -87,10 +93,12 @@ document.addEventListener("click", e => {
   else if(b.dataset.unhide){ act({action:"unhide", pub:b.dataset.unhide}, "Tender teruggezet."); }
   else if(b.dataset.hide){ act({action:"hide", pub:b.dataset.hide}, "Tender verborgen."); }
   else if(b.dataset.revoke){ if(confirm(`Toegang intrekken voor ${b.dataset.revoke}? Deze persoon moet dan opnieuw betalen.`)) act({action:"revoke", value:b.dataset.revoke}, "Toegang ingetrokken."); }
+  else if(b.dataset.unblock){ act({action:"block-remove", value:b.dataset.unblock}, `Toegang teruggegeven aan ${b.dataset.unblock}.`); }
   else if(b.dataset.free){ act({action:"free-remove", value:b.dataset.free}, "Gratis toegang verwijderd."); }
 });
 $("wordForm").addEventListener("submit", e => { e.preventDefault(); const w = $("wordInput").value.trim(); if(w.length < 2) return msg("Een uitsluitwoord moet minstens 2 tekens hebben.", true); $("wordInput").value = ""; act({action:"words", words:[...D.words, w]}, `"${w}" toegevoegd.`); });
 $("grantForm").addEventListener("submit", e => { e.preventDefault(); const v = $("grantInput").value.trim(); $("grantInput").value = ""; act({action:"grant", value:v}, `Toegang gegeven aan ${v}.`); });
+$("blockForm").addEventListener("submit", e => { e.preventDefault(); const v = $("blockInput").value.trim(); if(!v) return; $("blockInput").value = ""; act({action:"block-add", value:v}, `${v} heeft geen toegang meer.`); });
 $("freeForm").addEventListener("submit", e => { e.preventDefault(); const v = $("freeInput").value.trim(); $("freeInput").value = ""; act({action:"free-add", value:v}, `Gratis toegang voor ${v}.`); });
 $("tSearch").addEventListener("input", renderSearch);
 // ---------- voortgang van een ophaalronde ----------

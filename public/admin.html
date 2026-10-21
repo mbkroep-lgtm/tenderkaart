@@ -57,7 +57,11 @@
   </section>
 
   <section class="card">
-    <div class="card-head"><h2>Klanten en toegang</h2></div>
+    <div class="card-head"><h2>Medewerkers en toegang</h2></div>
+    <h3>Toegang ontzegd (<span id="blockCount">0</span>)</h3>
+    <p class="note" id="staffNote">Iedereen met een e-mailadres van BroadbandEU kan inloggen. Wie hier staat, kan dat niet meer; is hij nu ingelogd, dan wordt hij er direct uitgezet.</p>
+    <div class="chips" id="blocked"></div>
+    <form class="row" id="blockForm"><input id="blockInput" type="email" placeholder="naam@broadbandeu.com"><button type="submit" class="danger">Toegang ontzeggen</button></form>
     <h3>Betaald of handmatig toegang (<span id="custCount">0</span>)</h3>
     <div class="tablewrap"><table><thead><tr><th>E-mailadres</th><th>Sinds</th><th>Hoe</th><th></th></tr></thead><tbody id="custRows"></tbody></table></div>
     <form class="row" id="grantForm"><input id="grantInput" type="email" placeholder="klant@bedrijf.nl"><button type="submit">Toegang geven (zonder betaling)</button></form>
