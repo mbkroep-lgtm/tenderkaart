@@ -10,7 +10,7 @@ C=[
  ("kz2","GET","https://goszakup.gov.kz/ru/search/lots?filter%5Bname%5D=starlink&count_record=50&page=1",None,{}),
  ("za_day","GET","https://ocds-api.etenders.gov.za/api/OCDSReleases?PageNumber=1&PageSize=1000&dateFrom=2026-10-20&dateTo=2026-10-20",None,{}),
  ("kenya_p","GET","https://tenders.go.ke/api/active-tenders?page=2&perPage=100",None,{}),
-]]
+]
 log=[]
 for name,m,url,body,h in C:
     t=time.time()
