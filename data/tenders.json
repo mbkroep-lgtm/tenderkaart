@@ -1,158 +1,168 @@
 {
- "updated": "2026-10-21T10:08:40.494Z",
- "queryVersion": "ac4526b2d0",
+ "updated": "2026-10-21T10:13:34.906Z",
+ "queryVersion": "ec27e2fd8f",
  "sources": {
   "TED": {
    "ok": true,
-   "at": "2026-10-21T10:08:40.494Z",
-   "count": 434,
+   "at": "2026-10-21T10:13:34.906Z",
+   "count": 383,
    "note": ""
   },
   "Wereldbank": {
    "ok": true,
-   "at": "2026-10-21T10:08:40.494Z",
+   "at": "2026-10-21T10:13:34.906Z",
    "count": 78,
    "note": "94 gevonden, 78 echt over LEO."
   },
   "Find a Tender": {
    "ok": true,
-   "at": "2026-10-21T10:08:40.494Z",
-   "count": 0,
-   "note": "2 pagina's, 120 berichten bekeken, 0 over LEO.",
-   "since": "2026-10-21T08:08:40.494Z"
+   "at": "2026-10-21T10:13:34.906Z",
+   "count": 22,
+   "note": "150 pagina's, 14998 berichten bekeken, 23 over LEO.",
+   "since": "2026-10-21T08:13:34.906Z"
   },
   "Contracts Finder": {
    "ok": true,
-   "at": "2026-10-21T10:08:40.494Z",
-   "count": 30,
-   "note": "2101 gevonden, 341 over LEO."
+   "at": "2026-10-21T10:13:34.906Z",
+   "count": 26,
+   "note": "1793 gevonden, 276 over LEO."
   },
   "TenderNed": {
    "ok": true,
-   "at": "2026-10-21T10:08:40.494Z",
-   "count": 22,
-   "note": "584 gevonden, 87 over LEO."
+   "at": "2026-10-21T10:13:34.906Z",
+   "count": 20,
+   "note": "584 gevonden, 77 over LEO."
   },
   "Prozorro": {
    "ok": true,
-   "at": "2026-10-21T10:08:40.494Z",
+   "at": "2026-10-21T10:13:34.906Z",
    "count": 64,
    "note": "64 lopende procedures."
   },
   "BOAMP": {
    "ok": true,
-   "at": "2026-10-21T10:08:40.494Z",
+   "at": "2026-10-21T10:13:34.906Z",
    "count": 10,
    "note": "93 gevonden, 10 over LEO."
   },
   "SIMAP (Zwitserland)": {
    "ok": true,
-   "at": "2026-10-21T10:08:40.494Z",
+   "at": "2026-10-21T10:13:34.906Z",
    "count": 0,
    "note": "24 gevonden, 0 over LEO."
   },
   "SECOP (Colombia)": {
    "ok": true,
-   "at": "2026-10-21T10:08:40.494Z",
+   "at": "2026-10-21T10:13:34.906Z",
    "count": 199,
    "note": "251 gevonden, 199 over LEO."
   },
   "CanadaBuys": {
    "ok": true,
-   "at": "2026-10-21T10:08:40.494Z",
-   "count": 6,
-   "note": "899 open tenders bekeken, 6 over LEO."
+   "at": "2026-10-21T10:13:34.906Z",
+   "count": 5,
+   "note": "897 open tenders bekeken, 5 over LEO."
   },
   "AusTender": {
    "ok": true,
-   "at": "2026-10-21T10:08:40.494Z",
-   "count": 0,
-   "note": "0 contracten bekeken, 0 over LEO.",
-   "since": "2026-10-21T08:08:40.494Z"
+   "at": "2026-10-21T10:13:34.906Z",
+   "count": 2,
+   "note": "8472 contracten bekeken, 2 over LEO.",
+   "since": "2026-10-21T08:13:34.906Z"
   },
   "UNDP": {
    "ok": true,
-   "at": "2026-10-21T10:08:40.494Z",
+   "at": "2026-10-21T10:13:34.906Z",
    "count": 2,
-   "note": "971 berichten bekeken, 2 over LEO."
+   "note": "970 berichten bekeken, 2 over LEO."
   },
   "PCC (Taiwan)": {
    "ok": true,
-   "at": "2026-10-21T10:08:40.494Z",
+   "at": "2026-10-21T10:13:34.906Z",
    "count": 16,
    "note": "38 aanbestedingen over LEO."
   },
   "Doffin (Noorwegen)": {
    "ok": true,
-   "at": "2026-10-21T10:08:40.494Z",
+   "at": "2026-10-21T10:13:34.906Z",
    "count": 2,
    "note": "43 gevonden, 27 over LEO."
   },
   "BASE (Portugal)": {
    "ok": true,
-   "at": "2026-10-21T10:08:40.494Z",
+   "at": "2026-10-21T10:13:34.906Z",
    "count": 3,
    "note": "10 gevonden, 9 over LEO."
   },
   "BZP (Polen)": {
    "ok": true,
-   "at": "2026-10-21T10:08:40.494Z",
-   "count": 0,
-   "note": "0 over LEO in de nieuwe publicaties.",
-   "doneUntil": "2026-10-20"
+   "at": "2026-10-21T10:13:34.906Z",
+   "count": 20,
+   "note": "20 over LEO in de nieuwe publicaties (nog bezig met inhalen, klaar t/m 2026-10-16).",
+   "doneUntil": "2026-10-16"
   },
   "SEAP (Roemenië)": {
    "ok": true,
-   "at": "2026-10-21T10:08:40.494Z",
+   "at": "2026-10-21T10:13:34.906Z",
    "count": 0,
-   "note": "92 nieuwe aankondigingen bekeken, 0 over LEO.",
-   "since": "2026-10-21T08:08:40.494Z"
+   "note": "1679 nieuwe aankondigingen bekeken, 0 over LEO.",
+   "since": "2026-10-21T08:13:34.906Z"
   },
   "oeffentlichevergabe.de": {
    "ok": true,
-   "at": "2026-10-21T10:08:40.494Z",
-   "count": 0,
-   "note": "0 over LEO in de nieuwe Duitse aankondigingen.",
+   "at": "2026-10-21T10:13:34.906Z",
+   "count": 7,
+   "note": "12 over LEO in de nieuwe Duitse aankondigingen.",
    "doneUntil": "2026-10-20"
   },
   "PLACSP (Spanje)": {
-   "ok": true,
-   "at": "2026-10-21T10:08:40.494Z",
+   "ok": false,
+   "at": "2026-10-21T10:13:34.906Z",
    "count": 0,
    "note": "111 wijzigingen bekeken (1 pagina's), 0 over LEO.",
-   "since": "2026-10-21T08:08:40.494Z"
+   "since": "2026-10-21T08:08:40.494Z",
+   "error": "The operation was aborted due to timeout"
   },
   "eTenders (Zuid-Afrika)": {
    "ok": false,
    "error": "ocds-api.etenders.gov.za gaf 500: ",
-   "at": "2026-10-21T10:08:40.494Z"
+   "at": "2026-10-21T10:13:34.906Z"
   },
   "DGCP (Dominicaanse Rep.)": {
    "ok": true,
-   "at": "2026-10-21T10:08:40.494Z",
-   "count": 0,
-   "note": "100 processen bekeken, 0 over LEO.",
-   "since": "2026-10-21T08:08:40.494Z"
+   "at": "2026-10-21T10:13:34.906Z",
+   "count": 2,
+   "note": "6000 processen bekeken, 2 over LEO.",
+   "since": "2026-10-21T08:13:34.906Z"
   },
   "Goszakup (Kazachstan)": {
-   "ok": true,
-   "at": "2026-10-21T10:08:40.494Z",
+   "ok": false,
+   "at": "2026-10-21T10:13:34.906Z",
    "count": 3,
-   "note": "7 loten gevonden, 3 over LEO. Zonder datums: status bepaalt open of gesloten."
+   "note": "7 loten gevonden, 3 over LEO. Zonder datums: status bepaalt open of gesloten.",
+   "error": "fetch failed"
   },
   "PPIP (Kenia)": {
    "ok": true,
-   "at": "2026-10-21T09:34:06.584Z",
+   "at": "2026-10-21T10:13:34.906Z",
    "count": 1,
-   "note": "425 lopende tenders bekeken, 1 over LEO. Eén keer per dag.",
-   "okAt": "2026-10-21T09:34:06.584Z"
+   "note": "427 lopende tenders bekeken, 1 over LEO. Eén keer per dag.",
+   "okAt": "2026-10-21T10:13:34.906Z"
   },
   "SERCOP (Ecuador)": {
    "ok": true,
-   "at": "2026-10-21T09:34:06.584Z",
+   "at": "2026-10-21T10:13:34.906Z",
    "count": 11,
    "note": "18 gevonden, 15 over LEO. Eén keer per dag (strenge limiet).",
-   "okAt": "2026-10-21T09:34:06.584Z"
+   "okAt": "2026-10-21T10:13:34.906Z"
+  },
+  "SAM.gov": {
+   "ok": true,
+   "at": "2026-10-21T10:13:34.906Z",
+   "count": 1,
+   "note": "Dagquotum bereikt; donderdag 02:05 weer. De berichten van de vorige keer blijven staan.",
+   "okAt": "2026-10-21T09:34:06.584Z",
+   "quotaUntil": "2026-10-22T00:05:00.000Z"
   },
   "PNCP (Brazilië)": {
    "ok": true,
@@ -161,26 +171,19 @@
    "note": "4820 nieuwe aanbestedingen bekeken, 5 over LEO. Nieuwe publicaties per dag, een dag later zichtbaar.",
    "doneUntil": "2026-10-20"
   },
-  "SAM.gov": {
-   "ok": true,
-   "at": "2026-10-21T09:34:06.584Z",
-   "count": 1,
-   "note": "1 gevonden, 1 over LEO.",
-   "okAt": "2026-10-21T09:34:06.584Z"
-  },
   "Vertalen": {
    "ok": true,
-   "at": "2026-10-21T10:08:40.494Z",
-   "count": 1,
-   "note": "DeepL: 1 nieuw vertaald.",
+   "at": "2026-10-21T10:13:34.906Z",
+   "count": 3,
+   "note": "DeepL: 3 nieuw vertaald.",
    "engine": "DeepL"
   }
  },
- "count": 928,
+ "count": 848,
  "tenders": [
   {
-   "source": "PPIP (Kenia)",
    "pub": "KE-309200",
+   "source": "PPIP (Kenia)",
    "title": "SUPPLY, DELIVERY, INSTALLATION, CONFIGURATION, TESTING, COMMISSIONING AND SUPPORT OF AN ENTERPRISE WIRELESS LOCAL AREA NETWORK (WLAN) AND NETWORK ACCESS CONTROL (NAC) SOLUTION",
    "buyer": "Kenya Reinsurance Corporation Ltd",
    "country": "KE",
@@ -226,8 +229,8 @@
    "topic": "leo"
   },
   {
-   "source": "AusTender",
    "pub": "AU-CN4283857",
+   "source": "AusTender",
    "title": "This is for the remaining balance of our Starlink contract w",
    "buyer": "Australian Radiation Protection and Nuclear Safety Agency",
    "country": "AU",
@@ -248,8 +251,8 @@
    "topic": "leo"
   },
   {
-   "source": "Find a Tender",
    "pub": "UK-ocds-h6vhtk-078b82",
+   "source": "Find a Tender",
    "title": "Dedicated Internet Access",
    "buyer": "Rotherham Borough Council",
    "country": "GB",
@@ -392,8 +395,31 @@
    "topic": "leo"
   },
   {
-   "source": "SERCOP (Ecuador)",
+   "pub": "CA-cb-583-52232307",
+   "source": "CanadaBuys",
+   "title": "High-Altitude Platform System (HAPS) for Ultra-Long-Range (ULR) Wireless Backhaul",
+   "buyer": "Department of Public Works and Government Services (PSPC)",
+   "country": "CA",
+   "published": "2026-10-20",
+   "deadline": "2026-12-01",
+   "type": "Tender notice",
+   "kind": "notice",
+   "cpv": [],
+   "link": "https://canadabuys.canada.ca/en/tender-opportunities",
+   "value": null,
+   "currency": "CAD",
+   "firstSeen": "2000-01-01T00:00:00.000Z",
+   "titleNl": "High-Altitude Platform System (HAPS) voor draadloze backhaul over ultralange afstanden (ULR)",
+   "trEngine": "DeepL",
+   "cats": [
+    "haps",
+    "infra"
+   ],
+   "topic": "conn"
+  },
+  {
    "pub": "EC-ocds-5wno2w-SIE-ALA23-2026-011-119075",
+   "source": "SERCOP (Ecuador)",
    "title": "CONTRATACIÓN DE SERVICIO DE INTERNET SATELITAL STARLINK, ORIENTADO AL FORTALECIMIENTO DE LAS CAPACIDADES OPERACIONALES DEL GOMAI “MANABÍ”, EN EL MARCO DE LAS OPERACIONES MILITARES DE SEGURIDAD HIDROCARBURÍFERA",
    "buyer": "ALA DE COMBATE NO. 23",
    "country": "EC",
@@ -637,8 +663,8 @@
    "topic": "conn"
   },
   {
-   "source": "Find a Tender",
    "pub": "UK-ocds-h6vhtk-078b3e",
+   "source": "Find a Tender",
    "title": "Satellite Communications (SATCOM) for Uncrewed Aerial Vehicle (UAV) Platforms",
    "buyer": "Ministry of Defence",
    "country": "GB",
@@ -661,31 +687,8 @@
    "topic": "conn"
   },
   {
-   "source": "Find a Tender",
-   "pub": "UK-ocds-h6vhtk-060eb7",
-   "title": "Independent Connection Provider (ICP)",
-   "buyer": "North West Anglia NHS Foundation Trust",
-   "country": "GB",
-   "published": "2026-10-19",
-   "deadline": "",
-   "deadlineAt": "",
-   "type": "Gegunde opdracht",
-   "kind": "award",
-   "cpv": [],
-   "link": "https://www.find-tender.service.gov.uk/Notice/098630-2026",
-   "value": 9517084.38,
-   "currency": "GBP",
-   "firstSeen": "2000-01-01T00:00:00.000Z",
-   "titleNl": "Onafhankelijke internetprovider (ICP)",
-   "trEngine": "DeepL",
-   "cats": [
-    "other"
-   ],
-   "topic": "conn"
-  },
-  {
-   "source": "Find a Tender",
    "pub": "UK-ocds-h6vhtk-078a9d",
+   "source": "Find a Tender",
    "title": "Enhanced Information Service for Emergency Calls (EISEC)",
    "buyer": "Leicester, Leicestershire and Rutland Combined Fire Authority",
    "country": "GB",
@@ -879,8 +882,8 @@
    "topic": "conn"
   },
   {
-   "source": "DGCP (Dominicaanse Rep.)",
    "pub": "DO-ETED-DAF-CD-2026-0585",
+   "source": "DGCP (Dominicaanse Rep.)",
    "title": "ORDENADOR DE SOBREMESA,  INTEL CORE ULTRA 7 265F, 64 GB DDR5, WINDOWS 11 PRO, WI-FI 6, BLURTOOTH 5.4 AI PC, HDMI 2.1, DISPLAY PORT",
    "buyer": "Empresa de Transmisión Eléctrica Dominicana",
    "country": "DO",
@@ -900,29 +903,6 @@
     "wifi"
    ],
    "topic": "conn"
-  },
-  {
-   "source": "PNCP (Brazilië)",
-   "pub": "BR-29172467000109-1-000598/2026",
-   "title": "Contratação de empresa especializada para prestação continuada de serviço de conectividade à internet banda larga via satélite de órbita baixa (LEO – Low Earth Orbit), compreendendo o fornecimento, em regime de comodato, dos equipamentos necessários, instalação, configuração, ativação, gerenciamento, monitoramento, suporte técnico e manutenção, destinada ao atendimento das unidades escolares da Secretaria de Educação, Juventude e Inovação – SEJIN localizadas em áreas rurais, insulares e de difíc",
-   "buyer": "MUNICIPIO DE ANGRA DOS REIS",
-   "country": "BR",
-   "published": "2026-10-19",
-   "deadline": "2026-11-10",
-   "deadlineAt": "2026-11-10T13:00:00.000Z",
-   "type": "Pregão - Eletrônico",
-   "kind": "notice",
-   "cpv": [],
-   "link": "https://pncp.gov.br/app/editais/29172467000109/2026/598",
-   "value": 266052,
-   "currency": "BRL",
-   "firstSeen": "2026-10-20T07:30:12.114Z",
-   "titleNl": "Het inschakelen van een gespecialiseerd bedrijf voor de voortdurende levering van breedbandinternet via satellieten in een lage baan (LEO – Low Earth Orbit), met inbegrip van de levering, op basis van bruikleen, van de benodigde apparatuur, installatie, configuratie, activering, beheer, monitoring, technische ondersteuning en onderhoud, ten behoeve van de onderwijsinstellingen van het Secretariaat voor Onderwijs, Jeugd en Innovatie – SEJIN, gelegen in landelijke, insulaire en moeilijk bereikbare gebieden",
-   "trEngine": "DeepL",
-   "cats": [
-    "leo"
-   ],
-   "topic": "leo"
   },
   {
    "source": "SAM.gov",
@@ -945,6 +925,29 @@
    "cats": [
     "leo",
     "sat"
+   ],
+   "topic": "leo"
+  },
+  {
+   "source": "PNCP (Brazilië)",
+   "pub": "BR-29172467000109-1-000598/2026",
+   "title": "Contratação de empresa especializada para prestação continuada de serviço de conectividade à internet banda larga via satélite de órbita baixa (LEO – Low Earth Orbit), compreendendo o fornecimento, em regime de comodato, dos equipamentos necessários, instalação, configuração, ativação, gerenciamento, monitoramento, suporte técnico e manutenção, destinada ao atendimento das unidades escolares da Secretaria de Educação, Juventude e Inovação – SEJIN localizadas em áreas rurais, insulares e de difíc",
+   "buyer": "MUNICIPIO DE ANGRA DOS REIS",
+   "country": "BR",
+   "published": "2026-10-19",
+   "deadline": "2026-11-10",
+   "deadlineAt": "2026-11-10T13:00:00.000Z",
+   "type": "Pregão - Eletrônico",
+   "kind": "notice",
+   "cpv": [],
+   "link": "https://pncp.gov.br/app/editais/29172467000109/2026/598",
+   "value": 266052,
+   "currency": "BRL",
+   "firstSeen": "2026-10-20T07:30:12.114Z",
+   "titleNl": "Het inschakelen van een gespecialiseerd bedrijf voor de voortdurende levering van breedbandinternet via satellieten in een lage baan (LEO – Low Earth Orbit), met inbegrip van de levering, op basis van bruikleen, van de benodigde apparatuur, installatie, configuratie, activering, beheer, monitoring, technische ondersteuning en onderhoud, ten behoeve van de onderwijsinstellingen van het Secretariaat voor Onderwijs, Jeugd en Innovatie – SEJIN, gelegen in landelijke, insulaire en moeilijk bereikbare gebieden",
+   "trEngine": "DeepL",
+   "cats": [
+    "leo"
    ],
    "topic": "leo"
   },
@@ -997,34 +1000,8 @@
    "topic": "conn"
   },
   {
-   "source": "oeffentlichevergabe.de",
-   "pub": "DE-2e5c2834-aa16-4dcc-bd4b-5e1326c6ade2",
-   "title": "Gemeinde Stockheim - Gigabit-RL 2.0 (2025) - Auswahlverfahren einer Dienstleistungskonzession im Wirtschaftlichkeitslückenmodell für die Planung, Errichtung und den Betrieb eines Gigabit-Netzes",
-   "buyer": "Gemeinde Stockheim",
-   "country": "DE",
-   "published": "2026-10-18",
-   "deadline": "",
-   "deadlineAt": "",
-   "type": "Negotiated with prior publication of a call for competition / competitive with negotiation",
-   "kind": "notice",
-   "cpv": [
-    "72411000",
-    "72411000"
-   ],
-   "link": "https://oeffentlichevergabe.de/ui/de/search/details?noticeId=2e5c2834-aa16-4dcc-bd4b-5e1326c6ade2",
-   "value": 10219114.08,
-   "currency": "EUR",
-   "firstSeen": "2000-01-01T00:00:00.000Z",
-   "titleNl": "Gemeente Stockheim – Gigabit-RL 2.0 (2025) – Selectieprocedure voor een dienstverleningsconcessie volgens het model voor het overbruggen van het rendabiliteitstekort voor de planning, aanleg en exploitatie van een gigabitnetwerk",
-   "trEngine": "DeepL",
-   "cats": [
-    "other"
-   ],
-   "topic": "conn"
-  },
-  {
-   "source": "oeffentlichevergabe.de",
    "pub": "DE-3c215cab-d038-44b5-91b1-0b997bc9e9fd",
+   "source": "oeffentlichevergabe.de",
    "title": "Gemeinde Mickhausen: Errichtung und Betrieb eines Gigabitnetzes",
    "buyer": "Gemeinde Mickhausen",
    "country": "DE",
@@ -1048,8 +1025,8 @@
    "topic": "conn"
   },
   {
-   "source": "oeffentlichevergabe.de",
    "pub": "DE-79c1f1d5-f814-44dc-9bec-0a61b8819a46",
+   "source": "oeffentlichevergabe.de",
    "title": "LWL-Hochgeschwindigkeitsanbindungen Mainz 2026",
    "buyer": "Landesbetrieb Daten und Information Rheinland-Pfalz (LDI)",
    "country": "DE",
@@ -1097,30 +1074,6 @@
    "topic": "leo"
   },
   {
-   "pub": "UA-UA-2026-10-17-000166-a",
-   "source": "Prozorro",
-   "title": "Супутниковий модем Starlink Internet Satellite Mini",
-   "buyer": "ВІЙСЬКОВА ЧАСТИНА 3022 НАЦІОНАЛЬНОЇ ГВАРДІЇ УКРАЇНИ",
-   "country": "UA",
-   "published": "2026-10-17",
-   "deadline": "2026-10-27",
-   "deadlineAt": "2026-10-27T07:00:00.000Z",
-   "type": "Aankondiging opdracht",
-   "kind": "notice",
-   "cpv": [],
-   "link": "https://prozorro.gov.ua/tender/UA-2026-10-17-000166-a",
-   "value": 96250,
-   "currency": "UAH",
-   "defense": true,
-   "firstSeen": "2000-01-01T00:00:00.000Z",
-   "titleNl": "Starlink Internet Satellite Mini-satellietmodem",
-   "trEngine": "DeepL",
-   "cats": [
-    "leo"
-   ],
-   "topic": "leo"
-  },
-  {
    "pub": "UA-UA-2026-10-17-000603-a",
    "source": "Prozorro",
    "title": "Термінал супутникового зв'язку (Starlink 4X/Gen3)",
@@ -1138,6 +1091,30 @@
    "defense": true,
    "firstSeen": "2026-10-17T19:55:56.797Z",
    "titleNl": "Satellietcommunicatieterminal (Starlink 4X/Gen3)",
+   "trEngine": "DeepL",
+   "cats": [
+    "leo"
+   ],
+   "topic": "leo"
+  },
+  {
+   "pub": "UA-UA-2026-10-17-000166-a",
+   "source": "Prozorro",
+   "title": "Супутниковий модем Starlink Internet Satellite Mini",
+   "buyer": "ВІЙСЬКОВА ЧАСТИНА 3022 НАЦІОНАЛЬНОЇ ГВАРДІЇ УКРАЇНИ",
+   "country": "UA",
+   "published": "2026-10-17",
+   "deadline": "2026-10-27",
+   "deadlineAt": "2026-10-27T07:00:00.000Z",
+   "type": "Aankondiging opdracht",
+   "kind": "notice",
+   "cpv": [],
+   "link": "https://prozorro.gov.ua/tender/UA-2026-10-17-000166-a",
+   "value": 96250,
+   "currency": "UAH",
+   "defense": true,
+   "firstSeen": "2000-01-01T00:00:00.000Z",
+   "titleNl": "Starlink Internet Satellite Mini-satellietmodem",
    "trEngine": "DeepL",
    "cats": [
     "leo"
@@ -1217,33 +1194,8 @@
    "topic": "leo"
   },
   {
-   "source": "oeffentlichevergabe.de",
-   "pub": "DE-25940436",
-   "title": "Räumlichkeiten, Technik und Catering für ein Barcamp in Berlin am 29. April 2027",
-   "buyer": "Kompetenzzentrum Technik-Diversity-Chancengleichheit e. V.",
-   "country": "DE",
-   "published": "2026-10-17",
-   "deadline": "",
-   "deadlineAt": "",
-   "type": "Public announcement",
-   "kind": "notice",
-   "cpv": [
-    "50"
-   ],
-   "link": "https://oeffentlichevergabe.de/ui/de/search/details?noticeId=25940436",
-   "value": null,
-   "currency": "EUR",
-   "firstSeen": "2000-01-01T00:00:00.000Z",
-   "titleNl": "Locatie, techniek en catering voor een Barcamp in Berlijn op 29 april 2027",
-   "trEngine": "DeepL",
-   "cats": [
-    "other"
-   ],
-   "topic": "conn"
-  },
-  {
-   "source": "oeffentlichevergabe.de",
    "pub": "DE-25944450",
+   "source": "oeffentlichevergabe.de",
    "title": "Verlängerung HPE Foundation Care für WLAN-Infrastruktur inkl. Aruba ClearPass.",
    "buyer": "Stiftung Staatstheater Nürnberg",
    "country": "DE",
@@ -1283,29 +1235,6 @@
    "value": null,
    "currency": "EUR",
    "firstSeen": "2000-01-01T00:00:00.000Z",
-   "cats": [
-    "other"
-   ],
-   "topic": "conn"
-  },
-  {
-   "source": "Find a Tender",
-   "pub": "UK-ocds-h6vhtk-07750b",
-   "title": "Upper Thurne Package 3 Construction Works",
-   "buyer": "Broads (2006) Internal Drainage Board",
-   "country": "GB",
-   "published": "2026-10-16",
-   "deadline": "2027-01-19",
-   "deadlineAt": "2027-01-19T12:00:00.000Z",
-   "type": "Aankondiging opdracht",
-   "kind": "notice",
-   "cpv": [],
-   "link": "https://www.find-tender.service.gov.uk/Notice/098197-2026",
-   "value": 6500000,
-   "currency": "GBP",
-   "firstSeen": "2000-01-01T00:00:00.000Z",
-   "titleNl": "Bouwwerkzaamheden aan pakket 3 van Upper Thurne",
-   "trEngine": "DeepL",
    "cats": [
     "other"
    ],
@@ -1503,8 +1432,35 @@
    "topic": "conn"
   },
   {
-   "source": "oeffentlichevergabe.de",
+   "pub": "PL-2026/BZP 00491520",
+   "source": "BZP (Polen)",
+   "title": "„Wdrożenie i uruchomienie rozwiązania open-source dla obszaru IT i OT/ICS/IioT”",
+   "buyer": "Gmina Szydłów",
+   "country": "PL",
+   "published": "2026-10-16",
+   "deadline": "2026-10-26",
+   "deadlineAt": "2026-10-26T09:00:00.000Z",
+   "type": "Ogłoszenie o zamówieniu",
+   "kind": "notice",
+   "cpv": [
+    "72263000",
+    "48000000",
+    "72000000"
+   ],
+   "link": "https://ezamowienia.gov.pl/mp-client/tenders/ocds-148610-eddfa51d-0739-49d2-b4da-d001dca276ce",
+   "value": null,
+   "currency": "PLN",
+   "firstSeen": "2000-01-01T00:00:00.000Z",
+   "titleNl": "„Implementatie en ingebruikname van een open-sourceoplossing voor IT en OT/ICS/IIoT”",
+   "trEngine": "DeepL",
+   "cats": [
+    "industrial"
+   ],
+   "topic": "conn"
+  },
+  {
    "pub": "DE-cfbd3e50-470d-468c-8bbe-621c57f5a54d",
+   "source": "oeffentlichevergabe.de",
    "title": "Beschaffung aktiver Netzwerk- und WLAN-Komponenten inkl. Implementierung",
    "buyer": "Klinikum Main-Spessart – Eigenbetrieb des Landkreises Main-Spessart",
    "country": "DE",
@@ -1528,8 +1484,8 @@
    "topic": "conn"
   },
   {
-   "source": "oeffentlichevergabe.de",
    "pub": "DE-d829a433-1798-4518-8c82-603d0dfb5681",
+   "source": "oeffentlichevergabe.de",
    "title": "Mobilfunknetze (Ericsson, Huawei, Nokia, Siemens)",
    "buyer": "Rheinland-Pfälzische Technische Universität Kaiserslautern-Landau",
    "country": "DE",
@@ -1556,8 +1512,8 @@
    "topic": "conn"
   },
   {
-   "source": "SERCOP (Ecuador)",
    "pub": "EC-ocds-5wno2w-SIE-CBDMQ-2026-050-2525",
+   "source": "SERCOP (Ecuador)",
    "title": "RENOVACION DEL SERVICIO DE INTERNET SATELITAL",
    "buyer": "CUERPO DE BOMBEROS DEL DISTRITO METROPOLITANO DE QUITO",
    "country": "EC",
@@ -1673,31 +1629,8 @@
    "topic": "leo"
   },
   {
-   "source": "Find a Tender",
-   "pub": "UK-ocds-h6vhtk-0788e6",
-   "title": "Provision of Hydrodynamic Services for the Anglian Coastal Monitoring Programme",
-   "buyer": "ENVIRONMENT AGENCY",
-   "country": "GB",
-   "published": "2026-10-15",
-   "deadline": "",
-   "deadlineAt": "",
-   "type": "Vooraankondiging",
-   "kind": "prior",
-   "cpv": [],
-   "link": "https://www.find-tender.service.gov.uk/Notice/097649-2026",
-   "value": 1300685,
-   "currency": "GBP",
-   "firstSeen": "2000-01-01T00:00:00.000Z",
-   "titleNl": "Levering van hydrodynamische diensten voor het Anglian-kustmonitoringprogramma",
-   "trEngine": "DeepL",
-   "cats": [
-    "other"
-   ],
-   "topic": "conn"
-  },
-  {
-   "source": "Find a Tender",
    "pub": "UK-ocds-h6vhtk-05d5d0",
+   "source": "Find a Tender",
    "title": "Wide Area Network (WAN) Connectivity",
    "buyer": "East Riding of Yorkshire Council",
    "country": "GB",
@@ -1834,8 +1767,8 @@
    "topic": "conn"
   },
   {
-   "source": "oeffentlichevergabe.de",
    "pub": "DE-6beeeff7-b0c7-4511-87c3-ea58e1220157",
+   "source": "oeffentlichevergabe.de",
    "title": "Darkfiberanbindung BR Standorte München",
    "buyer": "Bayerischer Rundfunk A.d.ö.R.",
    "country": "DE",
@@ -1975,8 +1908,8 @@
    "topic": "conn"
   },
   {
-   "source": "Find a Tender",
    "pub": "UK-ocds-h6vhtk-0787f1",
+   "source": "Find a Tender",
    "title": "Supply of AMARI Callbox Mini 5G/NTN Network Test Platforms and Software Licences",
    "buyer": "NPL Management Limited",
    "country": "GB",
@@ -1998,31 +1931,8 @@
    "topic": "conn"
   },
   {
-   "source": "Find a Tender",
-   "pub": "UK-ocds-h6vhtk-0787df",
-   "title": "Supply of Liquid Fuels",
-   "buyer": "NETWORK RAIL INFRASTRUCTURE LIMITED",
-   "country": "GB",
-   "published": "2026-10-14",
-   "deadline": "",
-   "deadlineAt": "",
-   "type": "Vooraankondiging",
-   "kind": "prior",
-   "cpv": [],
-   "link": "https://www.find-tender.service.gov.uk/Notice/097161-2026",
-   "value": 9621987,
-   "currency": "GBP",
-   "firstSeen": "2000-01-01T00:00:00.000Z",
-   "titleNl": "Levering van vloeibare brandstoffen",
-   "trEngine": "DeepL",
-   "cats": [
-    "other"
-   ],
-   "topic": "conn"
-  },
-  {
-   "source": "Find a Tender",
    "pub": "UK-ocds-h6vhtk-0787da",
+   "source": "Find a Tender",
    "title": "Nuffield Data Centre (NUDC) Structured Cabling Provision & Installation",
    "buyer": "University of Portsmouth Higher Education Corporation",
    "country": "GB",
@@ -2044,8 +1954,8 @@
    "topic": "conn"
   },
   {
-   "source": "Find a Tender",
    "pub": "UK-ocds-h6vhtk-0787ca",
+   "source": "Find a Tender",
    "title": "GD3 Logger Requirements",
    "buyer": "NORTHERN GAS NETWORKS LIMITED",
    "country": "GB",
@@ -2067,8 +1977,8 @@
    "topic": "conn"
   },
   {
-   "source": "Find a Tender",
    "pub": "UK-ocds-h6vhtk-0787c1",
+   "source": "Find a Tender",
    "title": "Compass IOT Limited",
    "buyer": "Police and Crime Commissioner for South Wales",
    "country": "GB",
@@ -2083,29 +1993,6 @@
    "currency": "GBP",
    "firstSeen": "2000-01-01T00:00:00.000Z",
    "titleNl": "Compass IOT Limited",
-   "trEngine": "DeepL",
-   "cats": [
-    "other"
-   ],
-   "topic": "conn"
-  },
-  {
-   "source": "Find a Tender",
-   "pub": "UK-ocds-h6vhtk-078702",
-   "title": "N2O Liquid Phase Monitoring Devices",
-   "buyer": "YORKSHIRE WATER SERVICES LIMITED",
-   "country": "GB",
-   "published": "2026-10-14",
-   "deadline": "",
-   "deadlineAt": "",
-   "type": "Gegunde opdracht",
-   "kind": "award",
-   "cpv": [],
-   "link": "https://www.find-tender.service.gov.uk/Notice/096760-2026",
-   "value": 1500000,
-   "currency": "GBP",
-   "firstSeen": "2000-01-01T00:00:00.000Z",
-   "titleNl": "Apparatuur voor het monitoren van N2O in vloeibare fase",
    "trEngine": "DeepL",
    "cats": [
     "other"
@@ -2159,33 +2046,8 @@
    "topic": "conn"
   },
   {
-   "source": "oeffentlichevergabe.de",
-   "pub": "DE-0048d357-39e7-450c-b590-8ef308eac739",
-   "title": "Auswahlverfahren einer Dienstleistungskonzession im Betreibermodell für den Betrieb eines Gigabit-Netzes gemäß Gigabit-Richtlinie 2.0 in der Stadt Krautheim",
-   "buyer": "Stadt Krautheim",
-   "country": "DE",
-   "published": "2026-10-14",
-   "deadline": "",
-   "deadlineAt": "",
-   "type": "Vergebener Auftrag",
-   "kind": "award",
-   "cpv": [
-    "72411000"
-   ],
-   "link": "https://oeffentlichevergabe.de/ui/de/search/details?noticeId=0048d357-39e7-450c-b590-8ef308eac739",
-   "value": null,
-   "currency": "EUR",
-   "firstSeen": "2000-01-01T00:00:00.000Z",
-   "titleNl": "Selectieprocedure voor een dienstverleningsconcessie volgens het exploitatiemodel voor de exploitatie van een gigabit-netwerk overeenkomstig de Gigabit-richtlijn 2.0 in de stad Krautheim",
-   "trEngine": "DeepL",
-   "cats": [
-    "other"
-   ],
-   "topic": "conn"
-  },
-  {
-   "source": "oeffentlichevergabe.de",
    "pub": "DE-85419089-b106-4a12-9f41-446b2938c073",
+   "source": "oeffentlichevergabe.de",
    "title": "Errichtung und Betrieb eines Gigabit-Netzes für sechs Gemeinden des Landkreises Freising im Rahmen einer Wirtschaftlichkeitslückenförderung",
    "buyer": "Landkreis Freising",
    "country": "DE",
@@ -2286,8 +2148,8 @@
    "topic": "leo"
   },
   {
-   "source": "Find a Tender",
    "pub": "UK-ocds-h6vhtk-0786f4",
+   "source": "Find a Tender",
    "title": "ES RDE 079 - Using partnership working to scope a lowcost, permanent estuarine t",
    "buyer": "NATURAL ENGLAND",
    "country": "GB",
@@ -2309,8 +2171,8 @@
    "topic": "conn"
   },
   {
-   "source": "Find a Tender",
    "pub": "UK-ocds-h6vhtk-0786d3",
+   "source": "Find a Tender",
    "title": "Transport For Wales - Exploring Cycle Hire Opportunities Across Wales",
    "buyer": "Transport for Wales (TFW)",
    "country": "GB",
@@ -2475,77 +2337,8 @@
    "topic": "leo"
   },
   {
-   "source": "oeffentlichevergabe.de",
-   "pub": "DE-01a12f0c-ea9c-4dc8-88e8-0703f413a251",
-   "title": "BM2026158IT-DL2027",
-   "buyer": "BITMARCK",
-   "country": "DE",
-   "published": "2026-10-13",
-   "deadline": "",
-   "deadlineAt": "",
-   "type": "Open",
-   "kind": "notice",
-   "cpv": [
-    "72000000",
-    "72000000",
-    "72000000",
-    "72000000",
-    "72000000",
-    "72000000",
-    "72000000",
-    "72000000",
-    "72000000",
-    "72000000",
-    "72000000",
-    "72000000",
-    "72000000",
-    "72000000",
-    "72000000",
-    "72000000",
-    "72000000",
-    "72000000",
-    "72000000",
-    "72000000"
-   ],
-   "link": "https://oeffentlichevergabe.de/ui/de/search/details?noticeId=01a12f0c-ea9c-4dc8-88e8-0703f413a251",
-   "value": 16785,
-   "currency": "EUR",
-   "firstSeen": "2000-01-01T00:00:00.000Z",
-   "titleNl": "BM2026158IT-DL2027",
-   "trEngine": "DeepL",
-   "cats": [
-    "other"
-   ],
-   "topic": "conn"
-  },
-  {
-   "source": "oeffentlichevergabe.de",
-   "pub": "DE-d33135d7-089d-4d2c-baf4-2b122562cfa7",
-   "title": "Einführung von Ki in der Eingangsverarbeitung",
-   "buyer": "ARD ZDF Deutschlandradio Beitragsservice",
-   "country": "DE",
-   "published": "2026-10-13",
-   "deadline": "",
-   "deadlineAt": "",
-   "type": "Negotiated with prior publication of a call for competition / competitive with negotiation",
-   "kind": "notice",
-   "cpv": [
-    "72000000"
-   ],
-   "link": "https://oeffentlichevergabe.de/ui/de/search/details?noticeId=d33135d7-089d-4d2c-baf4-2b122562cfa7",
-   "value": null,
-   "currency": "EUR",
-   "firstSeen": "2000-01-01T00:00:00.000Z",
-   "titleNl": "Introductie van Ki in de invoerverwerking",
-   "trEngine": "DeepL",
-   "cats": [
-    "other"
-   ],
-   "topic": "conn"
-  },
-  {
-   "source": "SERCOP (Ecuador)",
    "pub": "EC-ocds-5wno2w-SIE-DPSMS-2026-010-334440",
+   "source": "SERCOP (Ecuador)",
    "title": "SERVICIO DE INTERNET SATELITAL BANDA KU (STARLINK) PARA LOS ESTABLECIMIENTOS DE SALUD DE PRIMER NIVEL DE LA DIRECCIÓN PROVINCIAL DE SALUD DE MORONA SANTIAGO",
    "buyer": "DIRECCIÓN PROVINCIAL DE SALUD DE MORONA SANTIAGO",
    "country": "EC",
@@ -2684,8 +2477,8 @@
    "topic": "conn"
   },
   {
-   "source": "Find a Tender",
    "pub": "UK-ocds-h6vhtk-078555",
+   "source": "Find a Tender",
    "title": "CM79 - TELEMETRY SATELLITE COMMUNICATION",
    "buyer": "Trinity House",
    "country": "GB",
@@ -2778,30 +2571,6 @@
    "topic": "leo"
   },
   {
-   "pub": "UA-UA-2026-10-10-000373-a",
-   "source": "Prozorro",
-   "title": "Супутникова система Starlink Mini ",
-   "buyer": "Військова частина А1536",
-   "country": "UA",
-   "published": "2026-10-10",
-   "deadline": "2026-10-22",
-   "deadlineAt": "2026-10-22T07:00:00.000Z",
-   "type": "Aankondiging opdracht",
-   "kind": "notice",
-   "cpv": [],
-   "link": "https://prozorro.gov.ua/tender/UA-2026-10-10-000373-a",
-   "value": 49882,
-   "currency": "UAH",
-   "defense": true,
-   "firstSeen": "2026-10-15T13:42:58.648Z",
-   "titleNl": "Het Starlink Mini-satellietsysteem ",
-   "trEngine": "DeepL",
-   "cats": [
-    "leo"
-   ],
-   "topic": "leo"
-  },
-  {
    "pub": "UA-UA-2026-10-10-000391-a",
    "source": "Prozorro",
    "title": "Супутникова система Starlink Mini ",
@@ -2814,6 +2583,30 @@
    "kind": "notice",
    "cpv": [],
    "link": "https://prozorro.gov.ua/tender/UA-2026-10-10-000391-a",
+   "value": 49882,
+   "currency": "UAH",
+   "defense": true,
+   "firstSeen": "2026-10-15T13:42:58.648Z",
+   "titleNl": "Het Starlink Mini-satellietsysteem ",
+   "trEngine": "DeepL",
+   "cats": [
+    "leo"
+   ],
+   "topic": "leo"
+  },
+  {
+   "pub": "UA-UA-2026-10-10-000373-a",
+   "source": "Prozorro",
+   "title": "Супутникова система Starlink Mini ",
+   "buyer": "Військова частина А1536",
+   "country": "UA",
+   "published": "2026-10-10",
+   "deadline": "2026-10-22",
+   "deadlineAt": "2026-10-22T07:00:00.000Z",
+   "type": "Aankondiging opdracht",
+   "kind": "notice",
+   "cpv": [],
+   "link": "https://prozorro.gov.ua/tender/UA-2026-10-10-000373-a",
    "value": 49882,
    "currency": "UAH",
    "defense": true,
@@ -3018,30 +2811,6 @@
     "leo"
    ],
    "topic": "leo"
-  },
-  {
-   "pub": "UA-UA-2026-10-09-000243-a",
-   "source": "Prozorro",
-   "title": "Термінал супутникового зв’язку (мобільний)",
-   "buyer": "ГОЛОВНЕ УПРАВЛІННЯ НАЦІОНАЛЬНОЇ ГВАРДІЇ УКРАЇНИ",
-   "country": "UA",
-   "published": "2026-10-09",
-   "deadline": "2026-10-20",
-   "deadlineAt": "2026-10-19T21:00:00.000Z",
-   "type": "In beoordeling",
-   "kind": "award",
-   "cpv": [],
-   "link": "https://prozorro.gov.ua/tender/UA-2026-10-09-000243-a",
-   "value": 1930200,
-   "currency": "UAH",
-   "defense": true,
-   "firstSeen": "2026-10-20T18:01:22.997Z",
-   "titleNl": "Satellietcommunicatieterminal (mobiel)",
-   "trEngine": "DeepL",
-   "cats": [
-    "other"
-   ],
-   "topic": "conn"
   },
   {
    "pub": "UA-UA-2026-10-09-010440-a",
@@ -3579,8 +3348,8 @@
    "qty": 5
   },
   {
-   "source": "AusTender",
    "pub": "AU-CN4280647",
+   "source": "AusTender",
    "title": "Data Carriage and Dark Fibre Services (TM-02039-VOC)",
    "buyer": "Australian Transaction Reports and Analysis Centre",
    "country": "AU",
@@ -3601,8 +3370,8 @@
    "topic": "conn"
   },
   {
-   "source": "DGCP (Dominicaanse Rep.)",
    "pub": "DO-CORAAPLATA-DAF-CD-2026-0103",
+   "source": "DGCP (Dominicaanse Rep.)",
    "title": "SERVICIO DE INTERNET PARA SISTEMAS DE VIDEOVIGILANCIA DE LA ESTACION DE OBRA DE TOMA DE MADRE VIEJA, (INTERNET SATELITAL) ",
    "buyer": "Corporación de Acueducto y Alcantarillado Puerto Plata",
    "country": "DO",
@@ -3927,8 +3696,8 @@
    "topic": "conn"
   },
   {
-   "source": "SERCOP (Ecuador)",
    "pub": "EC-ocds-5wno2w-SIE-PG-2026-014-31125",
+   "source": "SERCOP (Ecuador)",
    "title": "SERVICIO DE INTERNET SATELITAL PARA LA PREFECTURA DEL GUAYAS",
    "buyer": "Gobierno Provincial del Guayas",
    "country": "EC",
@@ -3949,8 +3718,8 @@
    "topic": "conn"
   },
   {
-   "source": "Find a Tender",
    "pub": "UK-ocds-h6vhtk-06658c",
+   "source": "Find a Tender",
    "title": "Network Strategy SD-WAN and Security Service Edge (SSE)",
    "buyer": "General Medical Council (GMC)",
    "country": "GB",
@@ -3968,29 +3737,6 @@
    "trEngine": "DeepL",
    "cats": [
     "managed"
-   ],
-   "topic": "conn"
-  },
-  {
-   "source": "Find a Tender",
-   "pub": "UK-ocds-h6vhtk-077d01",
-   "title": "Contract for the Supply of Hydroacoustic River Flow Instrumentation",
-   "buyer": "ENVIRONMENT AGENCY",
-   "country": "GB",
-   "published": "2026-09-30",
-   "deadline": "",
-   "deadlineAt": "",
-   "type": "Vooraankondiging",
-   "kind": "prior",
-   "cpv": [],
-   "link": "https://www.find-tender.service.gov.uk/Notice/092123-2026",
-   "value": 4000000,
-   "currency": "GBP",
-   "firstSeen": "2000-01-01T00:00:00.000Z",
-   "titleNl": "Contract voor de levering van hydro-akoestische meetapparatuur voor rivierstroming",
-   "trEngine": "DeepL",
-   "cats": [
-    "other"
    ],
    "topic": "conn"
   },
@@ -4063,28 +3809,6 @@
    "topic": "conn"
   },
   {
-   "pub": "668493-2026",
-   "source": "TED",
-   "title": "Polen – WAN-diensten – Zakup usług telekomunikacyjnych sieci WAN",
-   "buyer": "Państwowe Gospodarstwo Wodne Wody Polskie",
-   "country": "PL",
-   "published": "2026-09-29",
-   "deadline": "2026-10-16",
-   "type": "Aankondiging opdracht",
-   "kind": "notice",
-   "cpv": [
-    "72720000"
-   ],
-   "link": "https://ted.europa.eu/nl/notice/-/detail/668493-2026",
-   "value": null,
-   "currency": "EUR",
-   "firstSeen": "2000-01-01T00:00:00.000Z",
-   "cats": [
-    "other"
-   ],
-   "topic": "conn"
-  },
-  {
    "pub": "670068-2026",
    "source": "TED",
    "title": "Duitsland – Interconnectiediensten – Dark Fiber",
@@ -4109,8 +3833,30 @@
    "topic": "conn"
   },
   {
-   "source": "Find a Tender",
+   "pub": "668493-2026",
+   "source": "TED",
+   "title": "Polen – WAN-diensten – Zakup usług telekomunikacyjnych sieci WAN",
+   "buyer": "Państwowe Gospodarstwo Wodne Wody Polskie",
+   "country": "PL",
+   "published": "2026-09-29",
+   "deadline": "2026-10-16",
+   "type": "Aankondiging opdracht",
+   "kind": "notice",
+   "cpv": [
+    "72720000"
+   ],
+   "link": "https://ted.europa.eu/nl/notice/-/detail/668493-2026",
+   "value": null,
+   "currency": "EUR",
+   "firstSeen": "2000-01-01T00:00:00.000Z",
+   "cats": [
+    "other"
+   ],
+   "topic": "conn"
+  },
+  {
    "pub": "UK-ocds-h6vhtk-077c5a",
+   "source": "Find a Tender",
    "title": "Supply and installation of SD-WAN devices and consultancy",
    "buyer": "The Police & Crime Commissioner for Sussex",
    "country": "GB",
@@ -4130,29 +3876,6 @@
    "trEngine": "DeepL",
    "cats": [
     "managed"
-   ],
-   "topic": "conn"
-  },
-  {
-   "source": "Find a Tender",
-   "pub": "UK-ocds-h6vhtk-077b8b",
-   "title": "PRO005084-Services-Framework-DNM Linear Monitor Installs",
-   "buyer": "United Utilities Water Limited",
-   "country": "GB",
-   "published": "2026-09-29",
-   "deadline": "2026-12-16",
-   "deadlineAt": "2026-12-16T14:00:00.000Z",
-   "type": "Aankondiging opdracht",
-   "kind": "notice",
-   "cpv": [],
-   "link": "https://www.find-tender.service.gov.uk/Notice/091633-2026",
-   "value": 25000000,
-   "currency": "GBP",
-   "firstSeen": "2000-01-01T00:00:00.000Z",
-   "titleNl": "PRO005084-Diensten-Kader-Installaties van DNM Lineaire Monitoren",
-   "trEngine": "DeepL",
-   "cats": [
-    "other"
    ],
    "topic": "conn"
   },
@@ -4229,31 +3952,8 @@
    "topic": "conn"
   },
   {
-   "source": "Find a Tender",
-   "pub": "UK-ocds-h6vhtk-077bba",
-   "title": "Apprenticeship with Myerscough College",
-   "buyer": "National Highways Limited",
-   "country": "GB",
-   "published": "2026-09-28",
-   "deadline": "",
-   "deadlineAt": "",
-   "type": "Gegunde opdracht",
-   "kind": "award",
-   "cpv": [],
-   "link": "https://www.find-tender.service.gov.uk/Notice/091526-2026",
-   "value": 11200,
-   "currency": "GBP",
-   "firstSeen": "2000-01-01T00:00:00.000Z",
-   "titleNl": "Stage bij Myerscough College",
-   "trEngine": "DeepL",
-   "cats": [
-    "other"
-   ],
-   "topic": "conn"
-  },
-  {
-   "source": "Find a Tender",
    "pub": "UK-ocds-h6vhtk-077bb5",
+   "source": "Find a Tender",
    "title": "Fuel Pumps, Tanks Installation with Telemetry",
    "buyer": "Test Valley Borough Council",
    "country": "GB",
@@ -4271,52 +3971,6 @@
    "trEngine": "DeepL",
    "cats": [
     "industrial"
-   ],
-   "topic": "conn"
-  },
-  {
-   "source": "Find a Tender",
-   "pub": "UK-ocds-h6vhtk-077a70",
-   "title": "IoT Devices for Insight into Freebridge Homes",
-   "buyer": "Freebridge Community Housing Limited",
-   "country": "GB",
-   "published": "2026-09-25",
-   "deadline": "2026-10-16",
-   "deadlineAt": "2026-10-16T11:00:00.000Z",
-   "type": "Aankondiging opdracht",
-   "kind": "notice",
-   "cpv": [],
-   "link": "https://www.find-tender.service.gov.uk/Notice/090950-2026",
-   "value": null,
-   "currency": "GBP",
-   "firstSeen": "2000-01-01T00:00:00.000Z",
-   "titleNl": "IoT-apparaten voor inzicht in Freebridge-woningen",
-   "trEngine": "DeepL",
-   "cats": [
-    "other"
-   ],
-   "topic": "conn"
-  },
-  {
-   "source": "Find a Tender",
-   "pub": "UK-ocds-h6vhtk-077a33",
-   "title": "Remote Offsite IT Backup and Disaster Recovery Services",
-   "buyer": "The Pioneer Housing and Community Group Limited",
-   "country": "GB",
-   "published": "2026-09-25",
-   "deadline": "",
-   "deadlineAt": "",
-   "type": "Gegunde opdracht",
-   "kind": "award",
-   "cpv": [],
-   "link": "https://www.find-tender.service.gov.uk/Notice/090850-2026",
-   "value": 123120,
-   "currency": "GBP",
-   "firstSeen": "2000-01-01T00:00:00.000Z",
-   "titleNl": "IT-back-up- en noodhersteldiensten op afstand buiten de locatie",
-   "trEngine": "DeepL",
-   "cats": [
-    "other"
    ],
    "topic": "conn"
   },
@@ -4411,8 +4065,8 @@
    "topic": "conn"
   },
   {
-   "source": "SERCOP (Ecuador)",
    "pub": "EC-ocds-5wno2w-SIE-GADPDM-2026-034-2609",
+   "source": "SERCOP (Ecuador)",
    "title": "SERVICIO INSTITUCIONAL DE INTERNET SEGURO DE ALTA DISPONIBILIDAD CON TECNOLOGÍA SD-WAN Y GESTIÓN INTEGRAL DE SEGURIDAD PARA EL GADPM Y SUS DEPENDENCIAS DESCONCENTRADAS",
    "buyer": "GOBIERNO AUTONOMO DESCENTRALIZADO PROVINCIAL DE MANABI",
    "country": "EC",
@@ -4480,28 +4134,6 @@
    "topic": "conn"
   },
   {
-   "pub": "656419-2026",
-   "source": "TED",
-   "title": "Polen – Netwerkuitrusting – Dostawa i wdrożenie urządzeń brzegowych typu Next Generation Firewall niezbędne do podłączenia Akademii Pożarniczej do sieci SD-WAN Państwowej Straży Pożarnej",
-   "buyer": "Akademia Pożarnicza",
-   "country": "PL",
-   "published": "2026-09-23",
-   "deadline": "2026-10-08",
-   "type": "Aankondiging opdracht",
-   "kind": "notice",
-   "cpv": [
-    "32420000"
-   ],
-   "link": "https://ted.europa.eu/nl/notice/-/detail/656419-2026",
-   "value": null,
-   "currency": "EUR",
-   "firstSeen": "2000-01-01T00:00:00.000Z",
-   "cats": [
-    "managed"
-   ],
-   "topic": "conn"
-  },
-  {
    "pub": "656516-2026",
    "source": "TED",
    "title": "Polen – Netwerkuitrusting – Dostawa i wdrożenie urządzeń brzegowych typu Next Generation Firewall niezbędne do podłączenia Akademii Pożarniczej do sieci SD-WAN Państwowej Straży Pożarnej",
@@ -4515,6 +4147,28 @@
     "32420000"
    ],
    "link": "https://ted.europa.eu/nl/notice/-/detail/656516-2026",
+   "value": null,
+   "currency": "EUR",
+   "firstSeen": "2000-01-01T00:00:00.000Z",
+   "cats": [
+    "managed"
+   ],
+   "topic": "conn"
+  },
+  {
+   "pub": "656419-2026",
+   "source": "TED",
+   "title": "Polen – Netwerkuitrusting – Dostawa i wdrożenie urządzeń brzegowych typu Next Generation Firewall niezbędne do podłączenia Akademii Pożarniczej do sieci SD-WAN Państwowej Straży Pożarnej",
+   "buyer": "Akademia Pożarnicza",
+   "country": "PL",
+   "published": "2026-09-23",
+   "deadline": "2026-10-08",
+   "type": "Aankondiging opdracht",
+   "kind": "notice",
+   "cpv": [
+    "32420000"
+   ],
+   "link": "https://ted.europa.eu/nl/notice/-/detail/656419-2026",
    "value": null,
    "currency": "EUR",
    "firstSeen": "2000-01-01T00:00:00.000Z",
@@ -4571,8 +4225,8 @@
    "topic": "conn"
   },
   {
-   "source": "Find a Tender",
    "pub": "UK-ocds-h6vhtk-0778b2",
+   "source": "Find a Tender",
    "title": "Flood Telemetry Devices",
    "buyer": "Nottinghamshire County Council",
    "country": "GB",
@@ -4590,29 +4244,6 @@
    "trEngine": "DeepL",
    "cats": [
     "industrial"
-   ],
-   "topic": "conn"
-  },
-  {
-   "source": "Find a Tender",
-   "pub": "UK-ocds-h6vhtk-06b32b",
-   "title": "003257 - Digital Road Management Platform",
-   "buyer": "Durham County Council",
-   "country": "GB",
-   "published": "2026-09-23",
-   "deadline": "2026-10-30",
-   "deadlineAt": "2026-10-30T10:00:00.000Z",
-   "type": "Aankondiging opdracht",
-   "kind": "notice",
-   "cpv": [],
-   "link": "https://www.find-tender.service.gov.uk/Notice/090091-2026",
-   "value": 600000,
-   "currency": "GBP",
-   "firstSeen": "2000-01-01T00:00:00.000Z",
-   "titleNl": "003257 - Digitaal platform voor wegenbeheer",
-   "trEngine": "DeepL",
-   "cats": [
-    "other"
    ],
    "topic": "conn"
   },
@@ -4787,31 +4418,8 @@
    "topic": "conn"
   },
   {
-   "source": "Find a Tender",
-   "pub": "UK-ocds-h6vhtk-0776a8",
-   "title": "The Provision of Secure Payment Kiosks",
-   "buyer": "Denbighshire County Council",
-   "country": "GB",
-   "published": "2026-09-21",
-   "deadline": "",
-   "deadlineAt": "",
-   "type": "Vooraankondiging",
-   "kind": "prior",
-   "cpv": [],
-   "link": "https://www.find-tender.service.gov.uk/Notice/089251-2026",
-   "value": 1,
-   "currency": "GBP",
-   "firstSeen": "2000-01-01T00:00:00.000Z",
-   "titleNl": "De levering van beveiligde betaalterminals",
-   "trEngine": "DeepL",
-   "cats": [
-    "other"
-   ],
-   "topic": "conn"
-  },
-  {
-   "source": "Find a Tender",
    "pub": "UK-ocds-h6vhtk-069e5c",
+   "source": "Find a Tender",
    "title": "NSpOC: Sovereign Sensor - Active RF Radar Capability",
    "buyer": "Department for Science, Innovation & Technology",
    "country": "GB",
@@ -4903,31 +4511,8 @@
    "topic": "conn"
   },
   {
-   "source": "Find a Tender",
-   "pub": "UK-ocds-h6vhtk-06f470",
-   "title": "Provision of Corporate and Professional Services to Big Life Schools Multi Academy Trust",
-   "buyer": "Big Life Schools",
-   "country": "GB",
-   "published": "2026-09-18",
-   "deadline": "2026-10-07",
-   "deadlineAt": "2026-10-07T11:00:00.000Z",
-   "type": "Aankondiging opdracht",
-   "kind": "notice",
-   "cpv": [],
-   "link": "https://www.find-tender.service.gov.uk/Notice/088854-2026",
-   "value": 545000,
-   "currency": "GBP",
-   "firstSeen": "2000-01-01T00:00:00.000Z",
-   "titleNl": "Verlening van zakelijke en professionele diensten aan Big Life Schools Multi Academy Trust",
-   "trEngine": "DeepL",
-   "cats": [
-    "other"
-   ],
-   "topic": "conn"
-  },
-  {
-   "source": "Find a Tender",
    "pub": "UK-ocds-h6vhtk-06e5d6",
+   "source": "Find a Tender",
    "title": "Propane Bulk Supply Delivery and Storage",
    "buyer": "SEVERN TRENT WATER LIMITED",
    "country": "GB",
@@ -4974,31 +4559,8 @@
    "topic": "conn"
   },
   {
-   "source": "Find a Tender",
-   "pub": "UK-ocds-h6vhtk-0774cf",
-   "title": "TfGM - Cloud Public Address System",
-   "buyer": "Transport for Greater Manchester",
-   "country": "GB",
-   "published": "2026-09-17",
-   "deadline": "2026-10-30",
-   "deadlineAt": "2026-10-30T16:00:00.000Z",
-   "type": "Aankondiging opdracht",
-   "kind": "notice",
-   "cpv": [],
-   "link": "https://www.find-tender.service.gov.uk/Notice/088386-2026",
-   "value": null,
-   "currency": "GBP",
-   "firstSeen": "2000-01-01T00:00:00.000Z",
-   "titleNl": "TfGM - Cloud-omroepsysteem",
-   "trEngine": "DeepL",
-   "cats": [
-    "other"
-   ],
-   "topic": "conn"
-  },
-  {
-   "source": "Find a Tender",
    "pub": "UK-ocds-h6vhtk-02d28a",
+   "source": "Find a Tender",
    "title": "Call-off from the Software Value Added Re-Seller Framework Agreement",
    "buyer": "University of the Highlands and Islands",
    "country": "GB",
@@ -5044,8 +4606,8 @@
    "topic": "conn"
   },
   {
-   "source": "Find a Tender",
    "pub": "UK-ocds-h6vhtk-06f468",
+   "source": "Find a Tender",
    "title": "Land Observations Networks Modems and Sims - Re-tender",
    "buyer": "Met Office",
    "country": "GB",
@@ -5067,8 +4629,8 @@
    "topic": "conn"
   },
   {
-   "source": "Find a Tender",
    "pub": "UK-ocds-h6vhtk-06faa3",
+   "source": "Find a Tender",
    "title": "DDaT26423 - Infrastructure and Network Monitoring Solution ",
    "buyer": "UK Shared Business Services Ltd",
    "country": "GB",
@@ -5164,8 +4726,8 @@
    "topic": "conn"
   },
   {
-   "source": "Find a Tender",
    "pub": "UK-ocds-h6vhtk-0592b5",
+   "source": "Find a Tender",
    "title": "Managed Network Services",
    "buyer": "Essex County Council",
    "country": "GB",
@@ -5187,8 +4749,8 @@
    "topic": "conn"
   },
   {
-   "source": "Find a Tender",
    "pub": "UK-ocds-h6vhtk-044ef8",
+   "source": "Find a Tender",
    "title": "prj_6010 - Telemetry Framework Lots 5a, 5b and 5c",
    "buyer": "Southern Water Services Limited",
    "country": "GB",
@@ -5234,51 +4796,6 @@
    "topic": "conn"
   },
   {
-   "source": "Find a Tender",
-   "pub": "UK-ocds-h6vhtk-06f917",
-   "title": "IoT Devices for Insight into Environmental Conditions Within Freebridge Homes",
-   "buyer": "Freebridge Community Housing Limited",
-   "country": "GB",
-   "published": "2026-09-14",
-   "deadline": "2026-10-05",
-   "deadlineAt": "2026-10-05T11:00:00.000Z",
-   "type": "Aankondiging opdracht",
-   "kind": "notice",
-   "cpv": [],
-   "link": "https://www.find-tender.service.gov.uk/Notice/086849-2026",
-   "value": null,
-   "currency": "GBP",
-   "firstSeen": "2000-01-01T00:00:00.000Z",
-   "titleNl": "IoT-apparaten voor inzicht in de omgevingsomstandigheden in Freebridge-woningen",
-   "trEngine": "DeepL",
-   "cats": [
-    "other"
-   ],
-   "topic": "conn"
-  },
-  {
-   "pub": "627167-2026",
-   "source": "TED",
-   "title": "Frankrijk – Radio-, televisie-, communicatie-, telecommunicatietoestellen en aanverwante apparatuur – Fourniture de matériels d'équipements radioélectrique et de vidéo-protection pour les services relevant du SGAMI Ile de France et les services du ministère de l’Intérieur associés.",
-   "buyer": "PREFECTURE DE POLICE DE PARIS",
-   "country": "FR",
-   "published": "2026-09-11",
-   "deadline": "2026-10-20",
-   "type": "Aankondiging opdracht",
-   "kind": "notice",
-   "cpv": [
-    "32000000"
-   ],
-   "link": "https://ted.europa.eu/nl/notice/-/detail/627167-2026",
-   "value": null,
-   "currency": "EUR",
-   "firstSeen": "2000-01-01T00:00:00.000Z",
-   "cats": [
-    "other"
-   ],
-   "topic": "conn"
-  },
-  {
    "pub": "628091-2026",
    "source": "TED",
    "title": "Italië – Reparatie en onderhoud van elektrische uitrusting in gebouwen – gara a procedura aperta per l' affidamento della manutenzione di I e II livello degli impianti elettrici e speciali del Minimetrò",
@@ -5301,20 +4818,20 @@
    "topic": "conn"
   },
   {
-   "pub": "625255-2026",
+   "pub": "627167-2026",
    "source": "TED",
-   "title": "Italië – Interconnectiediensten – GARA APERTA EX ART. 71 DEL CODICE CON PROCEDURA TELEMATICA PER L’APPALTO DI FORNITURA IN 4 LOTTI DI COLLEGAMENTI E SERVIZI DI MANUTENZIONE ANNESSI PER L’EVOLUZIONE DELL’INFRASTRUTTURA DI INTERCONNESSIONE DELL’AEROPORTO “G. B. PASTINE” DI CIAMPINO",
-   "buyer": "ADR Tel S.p.A.",
-   "country": "IT",
-   "published": "2026-09-10",
-   "deadline": "2026-09-30",
+   "title": "Frankrijk – Radio-, televisie-, communicatie-, telecommunicatietoestellen en aanverwante apparatuur – Fourniture de matériels d'équipements radioélectrique et de vidéo-protection pour les services relevant du SGAMI Ile de France et les services du ministère de l’Intérieur associés.",
+   "buyer": "PREFECTURE DE POLICE DE PARIS",
+   "country": "FR",
+   "published": "2026-09-11",
+   "deadline": "2026-10-20",
    "type": "Aankondiging opdracht",
    "kind": "notice",
    "cpv": [
-    "64221000"
+    "32000000"
    ],
-   "link": "https://ted.europa.eu/nl/notice/-/detail/625255-2026",
-   "value": 1145000,
+   "link": "https://ted.europa.eu/nl/notice/-/detail/627167-2026",
+   "value": null,
    "currency": "EUR",
    "firstSeen": "2000-01-01T00:00:00.000Z",
    "cats": [
@@ -5400,99 +4917,6 @@
    "topic": "leo"
   },
   {
-   "source": "Find a Tender",
-   "pub": "UK-ocds-h6vhtk-06f6e8",
-   "title": "PSBA – CLOUD CONNECT",
-   "buyer": "Cardiff and Vale University Health Board",
-   "country": "GB",
-   "published": "2026-09-10",
-   "deadline": "",
-   "deadlineAt": "",
-   "type": "Gegunde opdracht",
-   "kind": "award",
-   "cpv": [
-    "72720000"
-   ],
-   "link": "https://www.find-tender.service.gov.uk/Notice/085926-2026",
-   "value": 543675.47,
-   "currency": "GBP",
-   "firstSeen": "2000-01-01T00:00:00.000Z",
-   "titleNl": "PSBA – CLOUD CONNECT",
-   "trEngine": "DeepL",
-   "cats": [
-    "other"
-   ],
-   "topic": "conn"
-  },
-  {
-   "source": "Find a Tender",
-   "pub": "UK-ocds-h6vhtk-05262f",
-   "title": "Next Generation on Train Wifi (Members of RM6370)",
-   "buyer": "LONDON NORTH EASTERN RAILWAY LIMITED",
-   "country": "GB",
-   "published": "2026-09-10",
-   "deadline": "2026-10-16",
-   "deadlineAt": "2026-10-16T11:00:00.000Z",
-   "type": "Aankondiging opdracht",
-   "kind": "notice",
-   "cpv": [],
-   "link": "https://www.find-tender.service.gov.uk/Notice/085646-2026",
-   "value": 34600000,
-   "currency": "GBP",
-   "firstSeen": "2000-01-01T00:00:00.000Z",
-   "titleNl": "De volgende generatie wifi in de trein (leden van RM6370)",
-   "trEngine": "DeepL",
-   "cats": [
-    "other"
-   ],
-   "topic": "conn"
-  },
-  {
-   "pub": "CA-cb-846-73690703",
-   "source": "CanadaBuys",
-   "title": "RF Data Fusion for Command and Control",
-   "buyer": "Department of Public Works and Government Services (PSPC)",
-   "country": "CA",
-   "published": "2026-09-10",
-   "deadline": "2026-10-29",
-   "type": "Tender notice",
-   "kind": "notice",
-   "cpv": [],
-   "link": "https://canadabuys.canada.ca/en/tender-opportunities",
-   "value": null,
-   "currency": "CAD",
-   "firstSeen": "2000-01-01T00:00:00.000Z",
-   "titleNl": "RF-gegevensfusie voor commando en controle",
-   "trEngine": "DeepL",
-   "cats": [
-    "other"
-   ],
-   "topic": "conn"
-  },
-  {
-   "source": "Find a Tender",
-   "pub": "UK-ocds-h6vhtk-06f556",
-   "title": "Enhanced Security Operations Managed Service",
-   "buyer": "STUDENT LOANS COMPANY",
-   "country": "GB",
-   "published": "2026-09-09",
-   "deadline": "",
-   "deadlineAt": "",
-   "type": "Vooraankondiging",
-   "kind": "prior",
-   "cpv": [],
-   "link": "https://www.find-tender.service.gov.uk/Notice/085261-2026",
-   "value": null,
-   "currency": "GBP",
-   "firstSeen": "2000-01-01T00:00:00.000Z",
-   "titleNl": "Managed Service voor verbeterde beveiligingsactiviteiten",
-   "trEngine": "DeepL",
-   "cats": [
-    "other"
-   ],
-   "topic": "conn"
-  },
-  {
    "pub": "CO-CO1.REQ.11015265",
    "source": "SECOP (Colombia)",
    "title": "PRESTAR EL SERVICIO DE CONECTIVIDAD A INTERNET SATELITAL PARA LOS PUESTOS DE SALUD DE PUERTO DE ORO, PUREMBARÁ, RÍO MISTRATÓ, ARKAKAY Y SAN ANTONIO DE CHAMÍ, ADSCRITOS A LA E.S.E. HOSPITAL SAN VICENTE DE PAÚL DE MISTRATÓ",
@@ -5537,31 +4961,6 @@
    "topic": "conn"
   },
   {
-   "pub": "618049-2026",
-   "source": "TED",
-   "title": "Duitsland – Telefoon- en datatransmissiediensten – Innerstädtische Verbindungen der Kommunen und Internetaccess mit DDoS Absicherung",
-   "buyer": "ekom21 - Kommunales Gebietsrechenzentrum Hessen",
-   "country": "DE",
-   "published": "2026-09-08",
-   "deadline": "2026-09-25",
-   "type": "Aankondiging opdracht",
-   "kind": "notice",
-   "cpv": [
-    "64210000",
-    "32561000",
-    "72720000",
-    "72400000"
-   ],
-   "link": "https://ted.europa.eu/nl/notice/-/detail/618049-2026",
-   "value": null,
-   "currency": "EUR",
-   "firstSeen": "2000-01-01T00:00:00.000Z",
-   "cats": [
-    "other"
-   ],
-   "topic": "conn"
-  },
-  {
    "pub": "618037-2026",
    "source": "TED",
    "title": "Polen – WAN-diensten – Świadczenie usług operatora sieci rozległej WAN KSI ZUS",
@@ -5578,6 +4977,31 @@
     "72511000"
    ],
    "link": "https://ted.europa.eu/nl/notice/-/detail/618037-2026",
+   "value": null,
+   "currency": "EUR",
+   "firstSeen": "2000-01-01T00:00:00.000Z",
+   "cats": [
+    "other"
+   ],
+   "topic": "conn"
+  },
+  {
+   "pub": "618049-2026",
+   "source": "TED",
+   "title": "Duitsland – Telefoon- en datatransmissiediensten – Innerstädtische Verbindungen der Kommunen und Internetaccess mit DDoS Absicherung",
+   "buyer": "ekom21 - Kommunales Gebietsrechenzentrum Hessen",
+   "country": "DE",
+   "published": "2026-09-08",
+   "deadline": "2026-09-25",
+   "type": "Aankondiging opdracht",
+   "kind": "notice",
+   "cpv": [
+    "64210000",
+    "32561000",
+    "72720000",
+    "72400000"
+   ],
+   "link": "https://ted.europa.eu/nl/notice/-/detail/618049-2026",
    "value": null,
    "currency": "EUR",
    "firstSeen": "2000-01-01T00:00:00.000Z",
@@ -5817,29 +5241,6 @@
    "topic": "conn"
   },
   {
-   "pub": "596516-2026",
-   "source": "TED",
-   "title": "Ierland – Mobieletelefoondiensten – Managed Mobility Services for Mobile Devices and SIM Cards incorporating Device as a Service (DaaS)",
-   "buyer": "Office of Public Works (OPW)",
-   "country": "IE",
-   "published": "2026-08-31",
-   "deadline": "",
-   "type": "Gegunde opdracht",
-   "kind": "award",
-   "cpv": [
-    "64212000",
-    "64200000"
-   ],
-   "link": "https://ted.europa.eu/nl/notice/-/detail/596516-2026",
-   "value": 200000,
-   "currency": "EUR",
-   "firstSeen": "2000-01-01T00:00:00.000Z",
-   "cats": [
-    "other"
-   ],
-   "topic": "conn"
-  },
-  {
    "pub": "597077-2026",
    "source": "TED",
    "title": "Bulgarije – Elektronische bulletin boards – „Обезпечаване на сигнализацията за обособяване на нискоемисионни зони на територията наСтолична община, чрез доставка, монтаж, сервизно обслужване и гаранционно поддържане наелектронни информационни табла и знаци с променливо съдържание, както и извършване навсички съпътстващи пускането им в експлоатация строително-монтажни и ремонтни работи“",
@@ -6058,28 +5459,6 @@
    "topic": "conn"
   },
   {
-   "pub": "592081-2026",
-   "source": "TED",
-   "title": "Duitsland – Telecommunicatiediensten, met uitzondering van telefoon en datatransmissie – Betrieb Transportnetz",
-   "buyer": "Dataport AöR",
-   "country": "DE",
-   "published": "2026-08-27",
-   "deadline": "2026-09-08",
-   "type": "Aankondiging opdracht",
-   "kind": "notice",
-   "cpv": [
-    "64220000"
-   ],
-   "link": "https://ted.europa.eu/nl/notice/-/detail/592081-2026",
-   "value": null,
-   "currency": "EUR",
-   "firstSeen": "2000-01-01T00:00:00.000Z",
-   "cats": [
-    "other"
-   ],
-   "topic": "conn"
-  },
-  {
    "pub": "591421-2026",
    "source": "TED",
    "title": "Nederland – Telecommunicatiediensten – Straalverbinding LEG-EPL",
@@ -6098,6 +5477,28 @@
    "firstSeen": "2000-01-01T00:00:00.000Z",
    "cats": [
     "microwave"
+   ],
+   "topic": "conn"
+  },
+  {
+   "pub": "592081-2026",
+   "source": "TED",
+   "title": "Duitsland – Telecommunicatiediensten, met uitzondering van telefoon en datatransmissie – Betrieb Transportnetz",
+   "buyer": "Dataport AöR",
+   "country": "DE",
+   "published": "2026-08-27",
+   "deadline": "2026-09-08",
+   "type": "Aankondiging opdracht",
+   "kind": "notice",
+   "cpv": [
+    "64220000"
+   ],
+   "link": "https://ted.europa.eu/nl/notice/-/detail/592081-2026",
+   "value": null,
+   "currency": "EUR",
+   "firstSeen": "2000-01-01T00:00:00.000Z",
+   "cats": [
+    "other"
    ],
    "topic": "conn"
   },
@@ -6399,29 +5800,6 @@
    "topic": "conn"
   },
   {
-   "pub": "576925-2026",
-   "source": "TED",
-   "title": "Moldavië – Telecommunicatiebenodigdheden – Piese de schimb și consumabile pentru sistemele și echipamentele de control al frontierei",
-   "buyer": "Inspectoratul General al Poliției de Frontieră al MAI",
-   "country": "MD",
-   "published": "2026-08-20",
-   "deadline": "2026-09-18",
-   "type": "Aankondiging opdracht",
-   "kind": "notice",
-   "cpv": [
-    "32500000",
-    "32510000"
-   ],
-   "link": "https://ted.europa.eu/nl/notice/-/detail/576925-2026",
-   "value": 3000000,
-   "currency": "MDL",
-   "firstSeen": "2000-01-01T00:00:00.000Z",
-   "cats": [
-    "other"
-   ],
-   "topic": "conn"
-  },
-  {
    "pub": "577491-2026",
    "source": "TED",
    "title": "Duitsland – Antennes en reflectoren – Fraunhofer FHR- PR1270536 - Antennen für ein synchronisiertes multistatisches Empfangssystem",
@@ -6531,29 +5909,6 @@
    "link": "https://ted.europa.eu/nl/notice/-/detail/573764-2026",
    "value": null,
    "currency": "EUR",
-   "firstSeen": "2000-01-01T00:00:00.000Z",
-   "cats": [
-    "other"
-   ],
-   "topic": "conn"
-  },
-  {
-   "pub": "574593-2026",
-   "source": "TED",
-   "title": "Moldavië – Telecommunicatiebenodigdheden – Piese de schimb și consumabile pentru sistemele și echipamentele de control al frontierei",
-   "buyer": "Inspectoratul General al Poliției de Frontieră al MAI",
-   "country": "MD",
-   "published": "2026-08-19",
-   "deadline": "",
-   "type": "Vooraankondiging",
-   "kind": "prior",
-   "cpv": [
-    "32500000",
-    "32510000"
-   ],
-   "link": "https://ted.europa.eu/nl/notice/-/detail/574593-2026",
-   "value": 3000000,
-   "currency": "MDL",
    "firstSeen": "2000-01-01T00:00:00.000Z",
    "cats": [
     "other"
@@ -6849,29 +6204,6 @@
    "topic": "conn"
   },
   {
-   "pub": "566077-2026",
-   "source": "TED",
-   "title": "Moldavië – Televisie- en radio-ontvangers, audio- of video-opnameapparatuur of -reproductietoestellen – Echipamente Radio Backbone și Backhaul (sistem de radioreleu)",
-   "buyer": "Inspectoratul General al Poliției de Frontieră al MAI",
-   "country": "MD",
-   "published": "2026-08-14",
-   "deadline": "",
-   "type": "Aankondiging opdracht",
-   "kind": "notice",
-   "cpv": [
-    "32300000"
-   ],
-   "link": "https://ted.europa.eu/nl/notice/-/detail/566077-2026",
-   "value": 6000000,
-   "currency": "MDL",
-   "firstSeen": "2000-01-01T00:00:00.000Z",
-   "cats": [
-    "microwave",
-    "infra"
-   ],
-   "topic": "conn"
-  },
-  {
    "pub": "NL-436224",
    "source": "TenderNed",
    "title": "Connectiviteit GRSK",
@@ -6932,29 +6264,6 @@
    "link": "https://ted.europa.eu/nl/notice/-/detail/562680-2026",
    "value": null,
    "currency": "EUR",
-   "firstSeen": "2000-01-01T00:00:00.000Z",
-   "cats": [
-    "other"
-   ],
-   "topic": "conn"
-  },
-  {
-   "pub": "559080-2026",
-   "source": "TED",
-   "title": "Denemarken – Internetproviders (ISP) – Framework Agreement for Broadband Services",
-   "buyer": "Ørsted Services A/S",
-   "country": "DK",
-   "published": "2026-08-12",
-   "deadline": "2026-09-15",
-   "type": "Aankondiging opdracht",
-   "kind": "notice",
-   "cpv": [
-    "72411000",
-    "72222300"
-   ],
-   "link": "https://ted.europa.eu/nl/notice/-/detail/559080-2026",
-   "value": 50000000,
-   "currency": "DKK",
    "firstSeen": "2000-01-01T00:00:00.000Z",
    "cats": [
     "other"
@@ -7029,31 +6338,6 @@
     "leo"
    ],
    "topic": "leo"
-  },
-  {
-   "pub": "555656-2026",
-   "source": "TED",
-   "title": "Noorwegen – Mobiele telefoons – Procurement of mobile telephony services and telephones.",
-   "buyer": "Meløy kommune",
-   "country": "NO",
-   "published": "2026-08-11",
-   "deadline": "2026-08-24",
-   "type": "Aankondiging opdracht",
-   "kind": "notice",
-   "cpv": [
-    "32250000",
-    "32550000",
-    "64200000",
-    "64212000"
-   ],
-   "link": "https://ted.europa.eu/nl/notice/-/detail/555656-2026",
-   "value": 18200000,
-   "currency": "NOK",
-   "firstSeen": "2000-01-01T00:00:00.000Z",
-   "cats": [
-    "other"
-   ],
-   "topic": "conn"
   },
   {
    "pub": "TW-A.47.1.6-DNB11528L",
@@ -8036,28 +7320,6 @@
    "topic": "conn"
   },
   {
-   "pub": "505854-2026",
-   "source": "TED",
-   "title": "Italië – Interconnectiediensten – GARA APERTA EX ART. 71 DEL CODICE CON PROCEDURA TELEMATICA PER L’APPALTO DI FORNITURA IN 4 LOTTI DI COLLEGAMENTI E SERVIZI DI MANUTENZIONE ANNESSI PER L’EVOLUZIONE DELL’INFRASTRUTTURA DI INTERCONNESSIONE DELL’AEROPORTO “G. B. PASTINE” DI CIAMPINO",
-   "buyer": "ADR Tel S.p.A.",
-   "country": "IT",
-   "published": "2026-07-22",
-   "deadline": "2026-09-15",
-   "type": "Aankondiging opdracht",
-   "kind": "notice",
-   "cpv": [
-    "64221000"
-   ],
-   "link": "https://ted.europa.eu/nl/notice/-/detail/505854-2026",
-   "value": 1145000,
-   "currency": "EUR",
-   "firstSeen": "2000-01-01T00:00:00.000Z",
-   "cats": [
-    "other"
-   ],
-   "topic": "conn"
-  },
-  {
    "pub": "CO-CO1.REQ.10696493",
    "source": "SECOP (Colombia)",
    "title": "ADQUISICIÓN DE REPUESTOS PARA SISTEMAS DE RADIOENLACES EN BANDA LICENCIADA DE LA FAC",
@@ -8699,36 +7961,6 @@
    "topic": "leo"
   },
   {
-   "pub": "466941-2026",
-   "source": "TED",
-   "title": "Noorwegen – Telecommunicatiediensten – Telecoms",
-   "buyer": "DEPARTEMENTENES DIGITALISERINGSORGANISASJON (DIO)",
-   "country": "NO",
-   "published": "2026-07-07",
-   "deadline": "2026-09-03",
-   "type": "Aankondiging opdracht",
-   "kind": "notice",
-   "cpv": [
-    "64200000",
-    "32531000",
-    "64210000",
-    "64212000",
-    "64213000",
-    "64214000",
-    "64215000",
-    "64216000",
-    "64226000"
-   ],
-   "link": "https://ted.europa.eu/nl/notice/-/detail/466941-2026",
-   "value": 150000000,
-   "currency": "NOK",
-   "firstSeen": "2000-01-01T00:00:00.000Z",
-   "cats": [
-    "other"
-   ],
-   "topic": "conn"
-  },
-  {
    "pub": "CO-CO1.REQ.10609468",
    "source": "SECOP (Colombia)",
    "title": "adquirir los servicios de Internet satelital con STARLINK para la sede de Abriaqui y el internet satelital Movil",
@@ -9189,29 +8421,6 @@
    "topic": "conn"
   },
   {
-   "pub": "440502-2026",
-   "source": "TED",
-   "title": "Moldavië – Televisie- en radio-ontvangers, audio- of video-opnameapparatuur of -reproductietoestellen – Echipamente Radio Backbone și Backhaul (sistem de radioreleu)",
-   "buyer": "Inspectoratul General al Poliției de Frontieră al MAI",
-   "country": "MD",
-   "published": "2026-06-26",
-   "deadline": "",
-   "type": "Vooraankondiging",
-   "kind": "prior",
-   "cpv": [
-    "32300000"
-   ],
-   "link": "https://ted.europa.eu/nl/notice/-/detail/440502-2026",
-   "value": 6000000,
-   "currency": "MDL",
-   "firstSeen": "2000-01-01T00:00:00.000Z",
-   "cats": [
-    "microwave",
-    "infra"
-   ],
-   "topic": "conn"
-  },
-  {
    "pub": "440809-2026",
    "source": "TED",
    "title": "Spanje – Telecommunicatiebenodigdheden – Despliegue de fibra óptica y radioenlace para CEDETEX",
@@ -9370,60 +8579,6 @@
    "trEngine": "DeepL",
    "cats": [
     "microwave"
-   ],
-   "topic": "conn"
-  },
-  {
-   "pub": "431010-2026",
-   "source": "TED",
-   "title": "Ierland – Telefoon- en datatransmissiediensten – TR3701 - Service Provider(s) to provide Mobility Services, Bulk Text and Connected Devices pursuant to a framework agreement.",
-   "buyer": "Electricity Supply Board ( ESB )",
-   "country": "IE",
-   "published": "2026-06-24",
-   "deadline": "2026-07-06",
-   "type": "Aankondiging opdracht",
-   "kind": "notice",
-   "cpv": [
-    "64210000",
-    "72000000",
-    "72400000",
-    "72500000",
-    "64000000",
-    "72300000",
-    "64200000",
-    "64211000",
-    "64211100",
-    "64211200",
-    "64212100",
-    "64212200",
-    "64212300",
-    "64212400",
-    "64212500",
-    "64212600",
-    "64212700",
-    "32250000",
-    "32236000",
-    "32344270",
-    "32552150",
-    "32552330",
-    "32552160",
-    "32552310",
-    "32000000",
-    "32551300",
-    "32551400",
-    "32552140",
-    "32552120",
-    "32550000",
-    "32551000",
-    "32552110",
-    "32551200"
-   ],
-   "link": "https://ted.europa.eu/nl/notice/-/detail/431010-2026",
-   "value": 43029858,
-   "currency": "EUR",
-   "firstSeen": "2000-01-01T00:00:00.000Z",
-   "cats": [
-    "other"
    ],
    "topic": "conn"
   },
@@ -9717,7 +8872,7 @@
    "pub": "PT-448635",
    "source": "BASE (Portugal)",
    "title": "4026014784/DA/A0206/2026-Aquisição de terminais satélite Starlink e Iridium, Servidor IA e Photo Scan",
-   "buyer": "Estado-Maior do Exército",
+   "buyer": "Estado Maior do Exército",
    "country": "PT",
    "published": "2026-06-17",
    "deadline": "2026-07-15",
@@ -9898,34 +9053,8 @@
    "topic": "conn"
   },
   {
-   "pub": "406064-2026",
-   "source": "TED",
-   "title": "Polen – Communicatie-uitrusting – B3: Przygotowanie, konfiguracja i dostawa zestawów Sterowników Syreny, Zestawów Plug and Play, Kontrolerów Ostrzegania SOiA oraz bramek Gateway LoRa, LoRaWAN",
-   "buyer": "Komenda Główna Państwowej Straży Pożarnej",
-   "country": "PL",
-   "published": "2026-06-12",
-   "deadline": "",
-   "type": "Gegunde opdracht",
-   "kind": "award",
-   "cpv": [
-    "32570000",
-    "35121700",
-    "32344210",
-    "48000000",
-    "72000000"
-   ],
-   "link": "https://ted.europa.eu/nl/notice/-/detail/406064-2026",
-   "value": 31994640,
-   "currency": "PLN",
-   "firstSeen": "2000-01-01T00:00:00.000Z",
-   "cats": [
-    "other"
-   ],
-   "topic": "conn"
-  },
-  {
-   "source": "SERCOP (Ecuador)",
    "pub": "EC-ocds-5wno2w-SIE-DP16SP-2026-002-44928",
+   "source": "SERCOP (Ecuador)",
    "title": "CONTRATACION DE SERVICIO DE INTERNET SATELITAL PARA LAS UNIDADES DEL PRIMER NIVEL DE ATENCIÓN DE SALUD PRIORIZADAS DE LA ESTRATEGIA NACIONAL ECUADOR CRECE SIN DESNUTRICIÓN DE LA DIRECCIÓN PROVINCIAL DE SALUD DE PASTAZA",
    "buyer": "DIRECCION PROVINCIAL DE SALUD DE PASTAZA",
    "country": "EC",
@@ -10066,55 +9195,6 @@
    ],
    "topic": "leo",
    "qty": 3
-  },
-  {
-   "pub": "391638-2026",
-   "source": "TED",
-   "title": "Noorwegen – Mobiele telefoons – Procurement of mobile telephony services and telephones.",
-   "buyer": "Meløy kommune",
-   "country": "NO",
-   "published": "2026-06-08",
-   "deadline": "2026-08-17",
-   "type": "Aankondiging opdracht",
-   "kind": "notice",
-   "cpv": [
-    "32250000",
-    "32550000",
-    "64200000",
-    "64212000"
-   ],
-   "link": "https://ted.europa.eu/nl/notice/-/detail/391638-2026",
-   "value": 18200000,
-   "currency": "NOK",
-   "firstSeen": "2000-01-01T00:00:00.000Z",
-   "cats": [
-    "other"
-   ],
-   "topic": "conn"
-  },
-  {
-   "pub": "389958-2026",
-   "source": "TED",
-   "title": "Spanje – Telecommunicatiesysteem – Suministro, instalación y puesta en marcha de infraestructura robótica y de comunicaciones para la protección de la población, los primeros intervinientes y las infraestructuras en escenarios extremos de desastre, dividido en seis lotes, en el marco de la ayuda EQC2024-007967-P, financiado por MCIU / AEI / 10.13039/501100011033 / UE, FEDER. 6 Lotes.",
-   "buyer": "Rectorado de la Universidad de Málaga",
-   "country": "ES",
-   "published": "2026-06-08",
-   "deadline": "",
-   "type": "Gegunde opdracht",
-   "kind": "award",
-   "cpv": [
-    "32524000",
-    "34221200",
-    "35613000"
-   ],
-   "link": "https://ted.europa.eu/nl/notice/-/detail/389958-2026",
-   "value": 177000,
-   "currency": "EUR",
-   "firstSeen": "2000-01-01T00:00:00.000Z",
-   "cats": [
-    "other"
-   ],
-   "topic": "conn"
   },
   {
    "pub": "WB-OP00449676",
@@ -10990,29 +10070,6 @@
    "topic": "conn"
   },
   {
-   "pub": "CF-972f0444-bd34-4cce-b50a-2e79cbf047a1",
-   "source": "Contracts Finder",
-   "title": "LAN switch and wireless LAN replacement",
-   "buyer": "Enfield Council",
-   "country": "GB",
-   "published": "2026-05-18",
-   "deadline": "",
-   "deadlineAt": "",
-   "type": "Gegunde opdracht",
-   "kind": "award",
-   "cpv": [],
-   "link": "https://www.contractsfinder.service.gov.uk/Notice/972f0444-bd34-4cce-b50a-2e79cbf047a1",
-   "value": 506757,
-   "currency": "GBP",
-   "firstSeen": "2000-01-01T00:00:00.000Z",
-   "titleNl": "Vervanging van LAN-switch en draadloos LAN",
-   "trEngine": "DeepL",
-   "cats": [
-    "wifi"
-   ],
-   "topic": "conn"
-  },
-  {
    "pub": "CF-348cf507-f40e-4bae-a0ca-f8a5e8b6fc23",
    "source": "Contracts Finder",
    "title": "Provision of Managed Network and Voice Services",
@@ -11076,29 +10133,6 @@
    "value": null,
    "currency": "EUR",
    "firstSeen": "2000-01-01T00:00:00.000Z",
-   "cats": [
-    "other"
-   ],
-   "topic": "conn"
-  },
-  {
-   "pub": "CF-05bd37c4-c33e-40ff-80ed-bcd368b25702",
-   "source": "Contracts Finder",
-   "title": "THE PROVISION OF AN INTERNET ONLY NETWORK SERVICE (WAN)",
-   "buyer": "Health &amp; Safety Executive",
-   "country": "GB",
-   "published": "2026-05-14",
-   "deadline": "",
-   "deadlineAt": "",
-   "type": "Gegunde opdracht",
-   "kind": "award",
-   "cpv": [],
-   "link": "https://www.contractsfinder.service.gov.uk/Notice/05bd37c4-c33e-40ff-80ed-bcd368b25702",
-   "value": 847864,
-   "currency": "GBP",
-   "firstSeen": "2000-01-01T00:00:00.000Z",
-   "titleNl": "HET AANBIEDEN VAN EEN UITSLUITEND VIA INTERNET WERKINGDE NETWERKDIENST (WAN)",
-   "trEngine": "DeepL",
    "cats": [
     "other"
    ],
@@ -11349,30 +10383,6 @@
    "trEngine": "DeepL",
    "cats": [
     "microwave"
-   ],
-   "topic": "conn"
-  },
-  {
-   "pub": "313159-2026",
-   "source": "TED",
-   "title": "Spanje – Telecommunicatiesysteem – Suministro, instalación y puesta en marcha de infraestructura robótica y de comunicaciones para la protección de la población, los primeros intervinientes y las infraestructuras en escenarios extremos de desastre, dividido en seis lotes, en el marco de la ayuda EQC2024-007967-P, financiado por MCIU / AEI / 10.13039/501100011033 / UE, FEDER. 6 Lotes.",
-   "buyer": "Rectorado de la Universidad de Málaga",
-   "country": "ES",
-   "published": "2026-05-07",
-   "deadline": "",
-   "type": "Gegunde opdracht",
-   "kind": "award",
-   "cpv": [
-    "32524000",
-    "34221200",
-    "35613000"
-   ],
-   "link": "https://ted.europa.eu/nl/notice/-/detail/313159-2026",
-   "value": 766557.4,
-   "currency": "EUR",
-   "firstSeen": "2000-01-01T00:00:00.000Z",
-   "cats": [
-    "other"
    ],
    "topic": "conn"
   },
@@ -11750,32 +10760,6 @@
    "topic": "conn"
   },
   {
-   "pub": "295098-2026",
-   "source": "TED",
-   "title": "Polen – Communicatie-uitrusting – B3: Przygotowanie, konfiguracja i dostawa zestawów Sterowników Syreny, Zestawów Plug and Play, Kontrolerów Ostrzegania SOiA oraz bramek Gateway LoRa, LoRaWAN",
-   "buyer": "Komenda Główna Państwowej Straży Pożarnej",
-   "country": "PL",
-   "published": "2026-04-29",
-   "deadline": "2026-05-15",
-   "type": "Aankondiging opdracht",
-   "kind": "notice",
-   "cpv": [
-    "32570000",
-    "35121700",
-    "32344210",
-    "48000000",
-    "72000000"
-   ],
-   "link": "https://ted.europa.eu/nl/notice/-/detail/295098-2026",
-   "value": null,
-   "currency": "EUR",
-   "firstSeen": "2000-01-01T00:00:00.000Z",
-   "cats": [
-    "other"
-   ],
-   "topic": "conn"
-  },
-  {
    "pub": "CO-CO1.REQ.10394164",
    "source": "SECOP (Colombia)",
    "title": "Prestar servicios de conectividad de respaldo a través de internet satelital de alta velocidad para la sede administrativa (500 Gb) y las unidades de atención (50 Gb) de Piendamó, Morales, Cajibío y Silvia de la E.S.E. C",
@@ -11794,33 +10778,6 @@
    "trEngine": "DeepL",
    "cats": [
     "sat"
-   ],
-   "topic": "conn"
-  },
-  {
-   "pub": "290752-2026",
-   "source": "TED",
-   "title": "Zweden – Telecommunicatiesysteem – MCX-solution",
-   "buyer": "Myndigheten för Civilt Försvar",
-   "country": "SE",
-   "published": "2026-04-28",
-   "deadline": "2026-06-01",
-   "type": "Aankondiging opdracht",
-   "kind": "notice",
-   "cpv": [
-    "32524000",
-    "32000000",
-    "35700000",
-    "35711000",
-    "50330000",
-    "50334400"
-   ],
-   "link": "https://ted.europa.eu/nl/notice/-/detail/290752-2026",
-   "value": 1180000000,
-   "currency": "SEK",
-   "firstSeen": "2000-01-01T00:00:00.000Z",
-   "cats": [
-    "other"
    ],
    "topic": "conn"
   },
@@ -11870,42 +10827,6 @@
    "trEngine": "DeepL",
    "cats": [
     "microwave"
-   ],
-   "topic": "conn"
-  },
-  {
-   "pub": "285684-2026",
-   "source": "TED",
-   "title": "Noorwegen – Telecommunicatiediensten – Request for information (RFI) - New government joint agreement for telephony services.",
-   "buyer": "Statens innkjøpssenter v/DFØ",
-   "country": "NO",
-   "published": "2026-04-27",
-   "deadline": "",
-   "type": "Vooraankondiging",
-   "kind": "prior",
-   "cpv": [
-    "64200000",
-    "32500000",
-    "32542000",
-    "32543000",
-    "32550000",
-    "32551200",
-    "32552310",
-    "45314120",
-    "64210000",
-    "64212000",
-    "64214200",
-    "64215000",
-    "64220000",
-    "79510000",
-    "79511000"
-   ],
-   "link": "https://ted.europa.eu/nl/notice/-/detail/285684-2026",
-   "value": 400000000,
-   "currency": "NOK",
-   "firstSeen": "2000-01-01T00:00:00.000Z",
-   "cats": [
-    "other"
    ],
    "topic": "conn"
   },
@@ -12093,8 +11014,8 @@
    "topic": "conn"
   },
   {
-   "source": "SERCOP (Ecuador)",
    "pub": "EC-ocds-5wno2w-RE-CEP-CJ-2026-001-48787",
+   "source": "SERCOP (Ecuador)",
    "title": "CONTRATAR EL SERVICIO DE SD-WAN PARA EL CONSEJO DE LA JUDICATURA",
    "buyer": "Consejo de la Judicatura",
    "country": "EC",
@@ -12180,32 +11101,6 @@
     "leo"
    ],
    "topic": "leo"
-  },
-  {
-   "pub": "273587-2026",
-   "source": "TED",
-   "title": "Polen – Communicatie-uitrusting – B3: Przygotowanie, konfiguracja i dostawa zestawów Sterowników Syreny, Zestawów Plug and Play, Kontrolerów Ostrzegania SOiA oraz bramek Gateway LoRa, LoRaWAN",
-   "buyer": "Komenda Główna Państwowej Straży Pożarnej",
-   "country": "PL",
-   "published": "2026-04-22",
-   "deadline": "2026-05-05",
-   "type": "Aankondiging opdracht",
-   "kind": "notice",
-   "cpv": [
-    "32570000",
-    "35121700",
-    "32344210",
-    "48000000",
-    "72000000"
-   ],
-   "link": "https://ted.europa.eu/nl/notice/-/detail/273587-2026",
-   "value": null,
-   "currency": "EUR",
-   "firstSeen": "2000-01-01T00:00:00.000Z",
-   "cats": [
-    "other"
-   ],
-   "topic": "conn"
   },
   {
    "pub": "CO-CO1.REQ.10373892",
@@ -12369,30 +11264,6 @@
    "topic": "conn"
   },
   {
-   "pub": "266115-2026",
-   "source": "TED",
-   "title": "Spanje – Telecommunicatiesysteem – Suministro, instalación y puesta en marcha de infraestructura robótica y de comunicaciones para la protección de la población, los primeros intervinientes y las infraestructuras en escenarios extremos de desastre, dividido en seis lotes, en el marco de la ayuda EQC2024-007967-P, financiado por MCIU / AEI / 10.13039/501100011033 / UE, FEDER. 6 Lotes.",
-   "buyer": "Rectorado de la Universidad de Málaga",
-   "country": "ES",
-   "published": "2026-04-20",
-   "deadline": "",
-   "type": "Gegunde opdracht",
-   "kind": "award",
-   "cpv": [
-    "32524000",
-    "34221200",
-    "35613000"
-   ],
-   "link": "https://ted.europa.eu/nl/notice/-/detail/266115-2026",
-   "value": 283928,
-   "currency": "EUR",
-   "firstSeen": "2000-01-01T00:00:00.000Z",
-   "cats": [
-    "other"
-   ],
-   "topic": "conn"
-  },
-  {
    "pub": "267897-2026",
    "source": "TED",
    "title": "Frankrijk – Onderhoud van telecommunicatie-infrastructuur – MAINTIEN EN CONDITION OPERATIONNELLE DU RESEAU DE LIAISONS PAR FAISCEAUX HERTZIENS - FOURNITURE DE MATERIELS ET CREATION DE LIAISONS",
@@ -12529,27 +11400,6 @@
    "topic": "conn"
   },
   {
-   "pub": "NL-420701",
-   "source": "TenderNed",
-   "title": "Senior Netwerkbeheerder",
-   "buyer": "Kamer van Koophandel",
-   "country": "NL",
-   "published": "2026-04-16",
-   "deadline": "",
-   "deadlineAt": "",
-   "type": "Aankondiging gegunde opdracht - algemene richtlijn, standaardregeling",
-   "kind": "award",
-   "cpv": [],
-   "link": "https://www.tenderned.nl/aankondigingen/overzicht/420701",
-   "value": null,
-   "currency": "EUR",
-   "firstSeen": "2000-01-01T00:00:00.000Z",
-   "cats": [
-    "other"
-   ],
-   "topic": "conn"
-  },
-  {
    "pub": "257025-2026",
    "source": "TED",
    "title": "België – Telecommunicatiediensten – Provision of dark fibre links for audiovisual and data transmission between the European Parliament on one side, and the European Commission and the European Council on the other side",
@@ -12588,35 +11438,6 @@
     "72000000"
    ],
    "link": "https://ted.europa.eu/nl/notice/-/detail/257374-2026",
-   "value": null,
-   "currency": "EUR",
-   "firstSeen": "2000-01-01T00:00:00.000Z",
-   "cats": [
-    "other"
-   ],
-   "topic": "conn"
-  },
-  {
-   "pub": "254945-2026",
-   "source": "TED",
-   "title": "Polen – Servers – 30/PN/ZP/D/2026 – Dostawa sprzętu serwerowego, sieciowego, udzielenie licencji i wdrożenie usługi Disaster Recovery (DR) realizowana w ramach projektu „Rozwój usług cyfrowych w Uniwersyteckim Szpitalu Klinicznym nr 2 Uniwersytetu Medycznego w Łodzi”",
-   "buyer": "Samodzielny Publiczny Zakład Opieki Zdrowotnej Uniwersytecki Szpital Kliniczny nr 2 Uniwersytetu Medycznego w Łodzi",
-   "country": "PL",
-   "published": "2026-04-15",
-   "deadline": "",
-   "type": "Gegunde opdracht",
-   "kind": "award",
-   "cpv": [
-    "48820000",
-    "32420000",
-    "30233141",
-    "48710000",
-    "48000000",
-    "51610000",
-    "72311100",
-    "72253200"
-   ],
-   "link": "https://ted.europa.eu/nl/notice/-/detail/254945-2026",
    "value": null,
    "currency": "EUR",
    "firstSeen": "2000-01-01T00:00:00.000Z",
@@ -12713,30 +11534,6 @@
    "firstSeen": "2000-01-01T00:00:00.000Z",
    "cats": [
     "sat"
-   ],
-   "topic": "conn"
-  },
-  {
-   "pub": "250394-2026",
-   "source": "TED",
-   "title": "Spanje – Telecommunicatiesysteem – Suministro, instalación y puesta en marcha de infraestructura robótica y de comunicaciones para la protección de la población, los primeros intervinientes y las infraestructuras en escenarios extremos de desastre, dividido en seis lotes, en el marco de la ayuda EQC2024-007967-P, financiado por MCIU / AEI / 10.13039/501100011033 / UE, FEDER. 6 Lotes.",
-   "buyer": "Rectorado de la Universidad de Málaga",
-   "country": "ES",
-   "published": "2026-04-13",
-   "deadline": "",
-   "type": "Gegunde opdracht",
-   "kind": "award",
-   "cpv": [
-    "32524000",
-    "34221200",
-    "35613000"
-   ],
-   "link": "https://ted.europa.eu/nl/notice/-/detail/250394-2026",
-   "value": 257969,
-   "currency": "EUR",
-   "firstSeen": "2000-01-01T00:00:00.000Z",
-   "cats": [
-    "other"
    ],
    "topic": "conn"
   },
@@ -13256,28 +12053,6 @@
    "topic": "conn"
   },
   {
-   "pub": "232031-2026",
-   "source": "TED",
-   "title": "Duitsland – Internetnetwerk – Bereitstellung von Standleitungen und Internetanbindung",
-   "buyer": "Kreisausschuss des Landkreises Darmstadt-Dieburg für den Fachbereich 222 IT",
-   "country": "DE",
-   "published": "2026-04-03",
-   "deadline": "",
-   "type": "Gegunde opdracht",
-   "kind": "award",
-   "cpv": [
-    "32412110"
-   ],
-   "link": "https://ted.europa.eu/nl/notice/-/detail/232031-2026",
-   "value": null,
-   "currency": "EUR",
-   "firstSeen": "2000-01-01T00:00:00.000Z",
-   "cats": [
-    "fiber"
-   ],
-   "topic": "conn"
-  },
-  {
    "pub": "232399-2026",
    "source": "TED",
    "title": "Polen – WAN-diensten – \"Usługa połączenia CPD Centrali NFZ i Oddziałów Wojewódzkich NFZ siecią rozległą WAN oraz zapewnienie dostępu do Internetu wraz z ochroną anty DDoS”",
@@ -13746,32 +12521,6 @@
    "topic": "conn"
   },
   {
-   "pub": "205218-2026",
-   "source": "TED",
-   "title": "Polen – Communicatie-uitrusting – B3: Przygotowanie, konfiguracja i dostawa zestawów Sterowników Syreny, Zestawów Plug and Play, Kontrolerów Ostrzegania SOiA oraz bramek Gateway LoRa, LoRaWAN",
-   "buyer": "Komenda Główna Państwowej Straży Pożarnej",
-   "country": "PL",
-   "published": "2026-03-25",
-   "deadline": "2026-04-24",
-   "type": "Aankondiging opdracht",
-   "kind": "notice",
-   "cpv": [
-    "32570000",
-    "35121700",
-    "32344210",
-    "48000000",
-    "72000000"
-   ],
-   "link": "https://ted.europa.eu/nl/notice/-/detail/205218-2026",
-   "value": null,
-   "currency": "EUR",
-   "firstSeen": "2000-01-01T00:00:00.000Z",
-   "cats": [
-    "other"
-   ],
-   "topic": "conn"
-  },
-  {
    "pub": "203735-2026",
    "source": "TED",
    "title": "Nederland – Verhuur van satellietverbindingen – Lease UHF TACSAT Skynet UK 2024-2026",
@@ -14209,35 +12958,6 @@
    "topic": "conn"
   },
   {
-   "pub": "175246-2026",
-   "source": "TED",
-   "title": "Polen – Servers – 169/PN/ZP/D/2025 – Dostawa sprzętu serwerowego, sieciowego, udzielenie licencji i wdrożenie usługi Disaster Recovery (DR) realizowana w ramach projektu „Rozwój usług cyfrowych w Uniwersyteckim Szpitalu Klinicznym nr 2 Uniwersytetu Medycznego w Łodzi”",
-   "buyer": "Samodzielny Publiczny Zakład Opieki Zdrowotnej Uniwersytecki Szpital Kliniczny nr 2 Uniwersytetu Medycznego w Łodzi",
-   "country": "PL",
-   "published": "2026-03-13",
-   "deadline": "",
-   "type": "Gegunde opdracht",
-   "kind": "award",
-   "cpv": [
-    "48820000",
-    "32420000",
-    "30233141",
-    "48710000",
-    "48000000",
-    "51610000",
-    "72311100",
-    "72253200"
-   ],
-   "link": "https://ted.europa.eu/nl/notice/-/detail/175246-2026",
-   "value": null,
-   "currency": "EUR",
-   "firstSeen": "2000-01-01T00:00:00.000Z",
-   "cats": [
-    "other"
-   ],
-   "topic": "conn"
-  },
-  {
    "pub": "177017-2026",
    "source": "TED",
    "title": "Polen – WAN-diensten – Świadczenie usług operatora sieci rozległej SD-WAN-PP dla Poczty Polskiej S.A.",
@@ -14284,29 +13004,6 @@
    "topic": "leo"
   },
   {
-   "pub": "CF-b625f8c6-d7fb-45a6-92e6-10bfbba18eb3",
-   "source": "Contracts Finder",
-   "title": "NENC ICB Cisco Wireless Networking Enterprise Agreement",
-   "buyer": "NHS SOUTH, CENTRAL AND WEST COMMISSIONING SUPPORT UNIT",
-   "country": "GB",
-   "published": "2026-03-12",
-   "deadline": "",
-   "deadlineAt": "",
-   "type": "Gegunde opdracht",
-   "kind": "award",
-   "cpv": [],
-   "link": "https://www.contractsfinder.service.gov.uk/Notice/b625f8c6-d7fb-45a6-92e6-10bfbba18eb3",
-   "value": 125300,
-   "currency": "GBP",
-   "firstSeen": "2000-01-01T00:00:00.000Z",
-   "titleNl": "NENC ICB Cisco-overeenkomst voor draadloze bedrijfsnetwerken",
-   "trEngine": "DeepL",
-   "cats": [
-    "other"
-   ],
-   "topic": "conn"
-  },
-  {
    "pub": "167543-2026",
    "source": "TED",
    "title": "Nederland – Verhuur van satellietverbindingen – Lease UHF TACSAT Skynet UK 2026",
@@ -14326,51 +13023,6 @@
    "firstSeen": "2000-01-01T00:00:00.000Z",
    "cats": [
     "sat"
-   ],
-   "topic": "conn"
-  },
-  {
-   "pub": "165317-2026",
-   "source": "TED",
-   "title": "Polen – Netwerkinfrastructuur – Dostawa przełączników rdzeniowych",
-   "buyer": "Skarb Państwa - Generalna Dyrekcja Dróg Krajowych i Autostrad",
-   "country": "PL",
-   "published": "2026-03-10",
-   "deadline": "",
-   "type": "Gegunde opdracht",
-   "kind": "award",
-   "cpv": [
-    "32424000"
-   ],
-   "link": "https://ted.europa.eu/nl/notice/-/detail/165317-2026",
-   "value": 1444600,
-   "currency": "PLN",
-   "firstSeen": "2000-01-01T00:00:00.000Z",
-   "cats": [
-    "other"
-   ],
-   "topic": "conn"
-  },
-  {
-   "pub": "CF-dc76d6be-61b9-4da4-9667-9bff4f2ad17d",
-   "source": "Contracts Finder",
-   "title": "Bedford Leased Lines",
-   "buyer": "Money and Pensions Service",
-   "country": "GB",
-   "published": "2026-03-10",
-   "deadline": "",
-   "deadlineAt": "",
-   "type": "Gegunde opdracht",
-   "kind": "award",
-   "cpv": [],
-   "link": "https://www.contractsfinder.service.gov.uk/Notice/dc76d6be-61b9-4da4-9667-9bff4f2ad17d",
-   "value": 59910,
-   "currency": "GBP",
-   "firstSeen": "2000-01-01T00:00:00.000Z",
-   "titleNl": "Bedford vaste lijnen",
-   "trEngine": "DeepL",
-   "cats": [
-    "fiber"
    ],
    "topic": "conn"
   },
@@ -14750,35 +13402,6 @@
    "topic": "conn"
   },
   {
-   "pub": "139870-2026",
-   "source": "TED",
-   "title": "Polen – Servers – 30/PN/ZP/D/2026 – Dostawa sprzętu serwerowego, sieciowego, udzielenie licencji i wdrożenie usługi Disaster Recovery (DR) realizowana w ramach projektu „Rozwój usług cyfrowych w Uniwersyteckim Szpitalu Klinicznym nr 2 Uniwersytetu Medycznego w Łodzi”",
-   "buyer": "Samodzielny Publiczny Zakład Opieki Zdrowotnej Uniwersytecki Szpital Kliniczny nr 2 Uniwersytetu Medycznego w Łodzi",
-   "country": "PL",
-   "published": "2026-02-27",
-   "deadline": "2026-03-16",
-   "type": "Aankondiging opdracht",
-   "kind": "notice",
-   "cpv": [
-    "48820000",
-    "32420000",
-    "30233141",
-    "48710000",
-    "48000000",
-    "51610000",
-    "72311100",
-    "72253200"
-   ],
-   "link": "https://ted.europa.eu/nl/notice/-/detail/139870-2026",
-   "value": null,
-   "currency": "EUR",
-   "firstSeen": "2000-01-01T00:00:00.000Z",
-   "cats": [
-    "other"
-   ],
-   "topic": "conn"
-  },
-  {
    "pub": "136913-2026",
    "source": "TED",
    "title": "Polen – Netwerkrouters – Modernizacja sieci WAN PKP Polskie Linie Kolejowe S.A. do modelu SD WAN.",
@@ -15043,28 +13666,6 @@
    "trEngine": "DeepL",
    "cats": [
     "microwave"
-   ],
-   "topic": "conn"
-  },
-  {
-   "pub": "117436-2026",
-   "source": "TED",
-   "title": "Duitsland – Computernetwerkdiensten – Rahmenvertrag über Verkabelungsarbeiten und Unterstützungsleistungen im Bereich Netzwerk und IT-Infrastruktur für das Land Hessen (Passive Netzwerktechnik)",
-   "buyer": "Land Hessen, vertreten durch die Hessische Zentrale für Datenverarbeitung",
-   "country": "DE",
-   "published": "2026-02-19",
-   "deadline": "",
-   "type": "Gegunde opdracht",
-   "kind": "award",
-   "cpv": [
-    "72700000"
-   ],
-   "link": "https://ted.europa.eu/nl/notice/-/detail/117436-2026",
-   "value": 4000000,
-   "currency": "EUR",
-   "firstSeen": "2000-01-01T00:00:00.000Z",
-   "cats": [
-    "other"
    ],
    "topic": "conn"
   },
@@ -15687,35 +14288,6 @@
    "topic": "conn"
   },
   {
-   "pub": "86068-2026",
-   "source": "TED",
-   "title": "Polen – Servers – 169/PN/ZP/D/2025 – Dostawa sprzętu serwerowego, sieciowego, udzielenie licencji i wdrożenie usługi Disaster Recovery (DR) realizowana w ramach projektu „Rozwój usług cyfrowych w Uniwersyteckim Szpitalu Klinicznym nr 2 Uniwersytetu Medycznego w Łodzi”",
-   "buyer": "Samodzielny Publiczny Zakład Opieki Zdrowotnej Uniwersytecki Szpital Kliniczny nr 2 Uniwersytetu Medycznego w Łodzi",
-   "country": "PL",
-   "published": "2026-02-05",
-   "deadline": "2026-02-10",
-   "type": "Aankondiging opdracht",
-   "kind": "notice",
-   "cpv": [
-    "48820000",
-    "32420000",
-    "30233141",
-    "48710000",
-    "48000000",
-    "51610000",
-    "72311100",
-    "72253200"
-   ],
-   "link": "https://ted.europa.eu/nl/notice/-/detail/86068-2026",
-   "value": null,
-   "currency": "EUR",
-   "firstSeen": "2000-01-01T00:00:00.000Z",
-   "cats": [
-    "other"
-   ],
-   "topic": "conn"
-  },
-  {
    "pub": "CF-5160cc81-4e82-4354-aaf7-f74b3c1abf74",
    "source": "Contracts Finder",
    "title": "SD WAN NETWORK Upgrade",
@@ -15819,35 +14391,6 @@
     "72000000"
    ],
    "link": "https://ted.europa.eu/nl/notice/-/detail/78885-2026",
-   "value": null,
-   "currency": "EUR",
-   "firstSeen": "2000-01-01T00:00:00.000Z",
-   "cats": [
-    "other"
-   ],
-   "topic": "conn"
-  },
-  {
-   "pub": "78632-2026",
-   "source": "TED",
-   "title": "Polen – Servers – 169/PN/ZP/D/2025 – Dostawa sprzętu serwerowego, sieciowego, udzielenie licencji i wdrożenie usługi Disaster Recovery (DR) realizowana w ramach projektu „Rozwój usług cyfrowych w Uniwersyteckim Szpitalu Klinicznym nr 2 Uniwersytetu Medycznego w Łodzi”",
-   "buyer": "Samodzielny Publiczny Zakład Opieki Zdrowotnej Uniwersytecki Szpital Kliniczny nr 2 Uniwersytetu Medycznego w Łodzi",
-   "country": "PL",
-   "published": "2026-02-03",
-   "deadline": "2026-02-06",
-   "type": "Aankondiging opdracht",
-   "kind": "notice",
-   "cpv": [
-    "48820000",
-    "32420000",
-    "30233141",
-    "48710000",
-    "48000000",
-    "51610000",
-    "72311100",
-    "72253200"
-   ],
-   "link": "https://ted.europa.eu/nl/notice/-/detail/78632-2026",
    "value": null,
    "currency": "EUR",
    "firstSeen": "2000-01-01T00:00:00.000Z",
@@ -16187,28 +14730,6 @@
    "topic": "conn"
   },
   {
-   "pub": "67258-2026",
-   "source": "TED",
-   "title": "België – Communicatie-infrastructuur – Driemaandelijkse publicatie van gegunde deelopdrachten.",
-   "buyer": "BELNET",
-   "country": "BE",
-   "published": "2026-01-29",
-   "deadline": "",
-   "type": "Gegunde opdracht",
-   "kind": "award",
-   "cpv": [
-    "32571000"
-   ],
-   "link": "https://ted.europa.eu/nl/notice/-/detail/67258-2026",
-   "value": 27000000,
-   "currency": "EUR",
-   "firstSeen": "2000-01-01T00:00:00.000Z",
-   "cats": [
-    "other"
-   ],
-   "topic": "conn"
-  },
-  {
    "pub": "67080-2026",
    "source": "TED",
    "title": "Italië – Reparatie en onderhoud van telecommunicatielijnen – APC_Rete_Telemisura_2025",
@@ -16223,6 +14744,28 @@
    ],
    "link": "https://ted.europa.eu/nl/notice/-/detail/67080-2026",
    "value": 1666250,
+   "currency": "EUR",
+   "firstSeen": "2000-01-01T00:00:00.000Z",
+   "cats": [
+    "other"
+   ],
+   "topic": "conn"
+  },
+  {
+   "pub": "67258-2026",
+   "source": "TED",
+   "title": "België – Communicatie-infrastructuur – Driemaandelijkse publicatie van gegunde deelopdrachten.",
+   "buyer": "BELNET",
+   "country": "BE",
+   "published": "2026-01-29",
+   "deadline": "",
+   "type": "Gegunde opdracht",
+   "kind": "award",
+   "cpv": [
+    "32571000"
+   ],
+   "link": "https://ted.europa.eu/nl/notice/-/detail/67258-2026",
+   "value": 27000000,
    "currency": "EUR",
    "firstSeen": "2000-01-01T00:00:00.000Z",
    "cats": [
@@ -16635,35 +15178,6 @@
    "firstSeen": "2000-01-01T00:00:00.000Z",
    "cats": [
     "sat"
-   ],
-   "topic": "conn"
-  },
-  {
-   "pub": "46805-2026",
-   "source": "TED",
-   "title": "Polen – Servers – 169/PN/ZP/D/2025 – Dostawa sprzętu serwerowego, sieciowego, udzielenie licencji i wdrożenie usługi Disaster Recovery (DR) realizowana w ramach projektu „Rozwój usług cyfrowych w Uniwersyteckim Szpitalu Klinicznym nr 2 Uniwersytetu Medycznego w Łodzi”",
-   "buyer": "Samodzielny Publiczny Zakład Opieki Zdrowotnej Uniwersytecki Szpital Kliniczny nr 2 Uniwersytetu Medycznego w Łodzi",
-   "country": "PL",
-   "published": "2026-01-22",
-   "deadline": "2026-02-04",
-   "type": "Aankondiging opdracht",
-   "kind": "notice",
-   "cpv": [
-    "48820000",
-    "32420000",
-    "30233141",
-    "48710000",
-    "48000000",
-    "51610000",
-    "72311100",
-    "72253200"
-   ],
-   "link": "https://ted.europa.eu/nl/notice/-/detail/46805-2026",
-   "value": null,
-   "currency": "EUR",
-   "firstSeen": "2000-01-01T00:00:00.000Z",
-   "cats": [
-    "other"
    ],
    "topic": "conn"
   },
@@ -17258,8 +15772,8 @@
    "topic": "conn"
   },
   {
-   "source": "SERCOP (Ecuador)",
    "pub": "EC-ocds-5wno2w-SIE-ATV-2025-012-767154",
+   "source": "SERCOP (Ecuador)",
    "title": "SERVICIO PRINCIPAL DE INTERNET DE ALTA VELOCIDAD E INTERNET SATELITAL PARA LA EMPRESA PÚBLICA MUNICIPAL DE TRÁNSITO, MOVILIDAD Y VIGILANCIA CIUDADANA DE SAMBORONDÓN.",
    "buyer": "EMPRESA PUBLICA MUNICIPAL DE TRANSITO MOVILIDAD Y VIGILANCIA CIUDADANA DE SAMBORONDON",
    "country": "EC",
@@ -17439,28 +15953,6 @@
    "topic": "conn"
   },
   {
-   "pub": "870493-2025",
-   "source": "TED",
-   "title": "Polen – Netwerkinfrastructuur – Dostawa przełączników rdzeniowych",
-   "buyer": "Skarb Państwa - Generalna Dyrekcja Dróg Krajowych i Autostrad",
-   "country": "PL",
-   "published": "2025-12-31",
-   "deadline": "2026-02-02",
-   "type": "Aankondiging opdracht",
-   "kind": "notice",
-   "cpv": [
-    "32424000"
-   ],
-   "link": "https://ted.europa.eu/nl/notice/-/detail/870493-2025",
-   "value": null,
-   "currency": "EUR",
-   "firstSeen": "2000-01-01T00:00:00.000Z",
-   "cats": [
-    "other"
-   ],
-   "topic": "conn"
-  },
-  {
    "pub": "CO-CO1.REQ.9510550",
    "source": "SECOP (Colombia)",
    "title": "PRESTACIÓN DE SERVICIO DE INTERNET SATELITAL PARA LA REALIZACIÓN DE LAS ACTIVIDADES DE CONECTIVIDAD EN LA EJECUCIÓN DE LOS EQUIPOS BÁSICOS DE SALUD DEL HOSPITAL DEL SARARE E.S.E.",
@@ -17479,35 +15971,6 @@
    "trEngine": "DeepL",
    "cats": [
     "sat"
-   ],
-   "topic": "conn"
-  },
-  {
-   "pub": "867029-2025",
-   "source": "TED",
-   "title": "Polen – Servers – 169/PN/ZP/D/2025 – Dostawa sprzętu serwerowego, sieciowego, udzielenie licencji i wdrożenie usługi Disaster Recovery (DR) realizowana w ramach projektu „Rozwój usług cyfrowych w Uniwersyteckim Szpitalu Klinicznym nr 2 Uniwersytetu Medycznego w Łodzi”",
-   "buyer": "Samodzielny Publiczny Zakład Opieki Zdrowotnej Uniwersytecki Szpital Kliniczny nr 2 Uniwersytetu Medycznego w Łodzi",
-   "country": "PL",
-   "published": "2025-12-30",
-   "deadline": "2026-01-30",
-   "type": "Aankondiging opdracht",
-   "kind": "notice",
-   "cpv": [
-    "48820000",
-    "32420000",
-    "30233141",
-    "48710000",
-    "48000000",
-    "51610000",
-    "72311100",
-    "72253200"
-   ],
-   "link": "https://ted.europa.eu/nl/notice/-/detail/867029-2025",
-   "value": null,
-   "currency": "EUR",
-   "firstSeen": "2000-01-01T00:00:00.000Z",
-   "cats": [
-    "other"
    ],
    "topic": "conn"
   },
@@ -17675,38 +16138,6 @@
    "topic": "conn"
   },
   {
-   "pub": "859276-2025",
-   "source": "TED",
-   "title": "Noorwegen – IT-diensten: adviezen, softwareontwikkeling, internet en ondersteuning – Qualification for contracts for operation infrastructure for applications and networks (ADRIAN)",
-   "buyer": "Trondheim kommune",
-   "country": "NO",
-   "published": "2025-12-23",
-   "deadline": "2026-01-09",
-   "type": "Aankondiging opdracht",
-   "kind": "notice",
-   "cpv": [
-    "72000000",
-    "32400000",
-    "48000000",
-    "48200000",
-    "48210000",
-    "48821000",
-    "51300000",
-    "72315100",
-    "72315200",
-    "72510000",
-    "72514000"
-   ],
-   "link": "https://ted.europa.eu/nl/notice/-/detail/859276-2025",
-   "value": 250000000,
-   "currency": "NOK",
-   "firstSeen": "2000-01-01T00:00:00.000Z",
-   "cats": [
-    "other"
-   ],
-   "topic": "conn"
-  },
-  {
    "pub": "857504-2025",
    "source": "TED",
    "title": "Tsjechië – Netwerkuitrusting – Zabezpečení síťové infrastruktury",
@@ -17824,28 +16255,6 @@
    "topic": "conn"
   },
   {
-   "pub": "853160-2025",
-   "source": "TED",
-   "title": "Duitsland – Verhuur van communicatielijnen over land – Einrichtung und Betrieb eines Dynamischen Beschaffungssystems zur Beschaffung von dedizierten Punkt-zu-Punkt Verbindungen (Leased Lines) für Dataport",
-   "buyer": "Dataport AöR",
-   "country": "DE",
-   "published": "2025-12-22",
-   "deadline": "2026-01-22",
-   "type": "Aankondiging opdracht",
-   "kind": "notice",
-   "cpv": [
-    "64214400"
-   ],
-   "link": "https://ted.europa.eu/nl/notice/-/detail/853160-2025",
-   "value": null,
-   "currency": "EUR",
-   "firstSeen": "2000-01-01T00:00:00.000Z",
-   "cats": [
-    "fiber"
-   ],
-   "topic": "conn"
-  },
-  {
    "pub": "851953-2025",
    "source": "TED",
    "title": "Slovenië – Verhuur van satellietverbindingen – Inmarsat satelitske storitve",
@@ -17864,38 +16273,6 @@
    "firstSeen": "2000-01-01T00:00:00.000Z",
    "cats": [
     "sat"
-   ],
-   "topic": "conn"
-  },
-  {
-   "pub": "847924-2025",
-   "source": "TED",
-   "title": "Noorwegen – IT-diensten: adviezen, softwareontwikkeling, internet en ondersteuning – Qualification for contracts for operation infrastructure for applications and networks (ADRIAN)",
-   "buyer": "Trondheim kommune",
-   "country": "NO",
-   "published": "2025-12-19",
-   "deadline": "2026-01-09",
-   "type": "Aankondiging opdracht",
-   "kind": "notice",
-   "cpv": [
-    "72000000",
-    "32400000",
-    "48000000",
-    "48200000",
-    "48210000",
-    "48821000",
-    "51300000",
-    "72315100",
-    "72315200",
-    "72510000",
-    "72514000"
-   ],
-   "link": "https://ted.europa.eu/nl/notice/-/detail/847924-2025",
-   "value": 250000000,
-   "currency": "NOK",
-   "firstSeen": "2000-01-01T00:00:00.000Z",
-   "cats": [
-    "other"
    ],
    "topic": "conn"
   },
@@ -18064,31 +16441,6 @@
    "topic": "conn"
   },
   {
-   "pub": "838780-2025",
-   "source": "TED",
-   "title": "Nederland – Internetdiensten – Marktconsultatie Utility Connect Backhaul",
-   "buyer": "UtilityConnect B.V.",
-   "country": "NL",
-   "published": "2025-12-17",
-   "deadline": "",
-   "type": "Vooraankondiging",
-   "kind": "prior",
-   "cpv": [
-    "72400000",
-    "32400000",
-    "64200000",
-    "72000000"
-   ],
-   "link": "https://ted.europa.eu/nl/notice/-/detail/838780-2025",
-   "value": null,
-   "currency": "EUR",
-   "firstSeen": "2000-01-01T00:00:00.000Z",
-   "cats": [
-    "infra"
-   ],
-   "topic": "conn"
-  },
-  {
    "pub": "834483-2025",
    "source": "TED",
    "title": "Litouwen – Telecommunicatiediensten – Pirkimas preliminariosioms sutartims sudaryti dėl viešojo judriojo telefono ryšio paslaugų per vidaus reikalų sistemos centrinę perkančiąją organizaciją (PPR-1077)",
@@ -18132,28 +16484,6 @@
    "firstSeen": "2000-01-01T00:00:00.000Z",
    "cats": [
     "other"
-   ],
-   "topic": "conn"
-  },
-  {
-   "pub": "835464-2025",
-   "source": "TED",
-   "title": "Nederland – Radio-, televisie-, communicatie-, telecommunicatietoestellen en aanverwante apparatuur – Marktconsultatie Utility Connect Backhaul",
-   "buyer": "UtilityConnect B.V.",
-   "country": "NL",
-   "published": "2025-12-16",
-   "deadline": "",
-   "type": "Vooraankondiging",
-   "kind": "prior",
-   "cpv": [
-    "32000000"
-   ],
-   "link": "https://ted.europa.eu/nl/notice/-/detail/835464-2025",
-   "value": null,
-   "currency": "EUR",
-   "firstSeen": "2000-01-01T00:00:00.000Z",
-   "cats": [
-    "infra"
    ],
    "topic": "conn"
   },
@@ -18404,33 +16734,6 @@
    "topic": "leo"
   },
   {
-   "pub": "823929-2025",
-   "source": "TED",
-   "title": "Ierland – Computernetwerkdiensten – Provision of Network Services to the Rehab Group",
-   "buyer": "The Rehab Group",
-   "country": "IE",
-   "published": "2025-12-11",
-   "deadline": "",
-   "type": "Gegunde opdracht",
-   "kind": "award",
-   "cpv": [
-    "72700000",
-    "72710000",
-    "72720000",
-    "72315000",
-    "72315100",
-    "72315200"
-   ],
-   "link": "https://ted.europa.eu/nl/notice/-/detail/823929-2025",
-   "value": 4500000,
-   "currency": "EUR",
-   "firstSeen": "2000-01-01T00:00:00.000Z",
-   "cats": [
-    "other"
-   ],
-   "topic": "conn"
-  },
-  {
    "pub": "CO-CO1.REQ.9422607",
    "source": "SECOP (Colombia)",
    "title": "ADQUISICION DE SISTEMA DE ENERGIA SOLAR CON SUS RESPECTIVAS UNIDADES UPS (SISTEMA DE ALIMENTACION INTERRUMPIDA), SISTEMA DE INTERNET SATELITAL, PARA LA OPERACIÓN DE LAS SEDES RURALES Y LAS ESTRATEGIAS URBANAS DE LA E.S.E",
@@ -18453,8 +16756,8 @@
    "topic": "conn"
   },
   {
-   "source": "SERCOP (Ecuador)",
    "pub": "EC-ocds-5wno2w-SIE-DDS16D01-2025-0003-44928",
+   "source": "SERCOP (Ecuador)",
    "title": "CONTRATACION DE SERVICIO DE INTERNET SATELITAL PARA LAS UNIDADES DEL PRIMER NIVEL DE ATENCIÓN DE SALUD PRIORIZADAS POR EL PRESUPUESTO DE LA ESTRATEGIA NACIONAL ECUADOR CRECE SIN DESNUTRICIÓN DE LA DIRECCIÓN DISTRITAL 16D01 PASTAZA-MERA- SANTA CLARA-SALUD",
    "buyer": "DIRECCION DISTRITAL 16D01 - PASTAZA - MERA - SANTA CLARA - SALUD",
    "country": "EC",
@@ -18492,30 +16795,6 @@
    ],
    "link": "https://ted.europa.eu/nl/notice/-/detail/820143-2025",
    "value": 0.01,
-   "currency": "EUR",
-   "firstSeen": "2000-01-01T00:00:00.000Z",
-   "cats": [
-    "other"
-   ],
-   "topic": "conn"
-  },
-  {
-   "pub": "820868-2025",
-   "source": "TED",
-   "title": "Spanje – Telecommunicatiesysteem – Suministro, instalación y puesta en marcha de infraestructura robótica y de comunicaciones para la protección de la población, los primeros intervinientes y las infraestructuras en escenarios extremos de desastre, dividido en seis lotes, en el marco de la ayuda EQC2024-007967-P, financiado por MCIU / AEI / 10.13039/501100011033 / UE, FEDER. 6 Lotes.",
-   "buyer": "Rectorado de la Universidad de Málaga",
-   "country": "ES",
-   "published": "2025-12-10",
-   "deadline": "2025-12-17",
-   "type": "Aankondiging opdracht",
-   "kind": "notice",
-   "cpv": [
-    "32524000",
-    "34221200",
-    "35613000"
-   ],
-   "link": "https://ted.europa.eu/nl/notice/-/detail/820868-2025",
-   "value": 1649441.4,
    "currency": "EUR",
    "firstSeen": "2000-01-01T00:00:00.000Z",
    "cats": [
@@ -18777,31 +17056,6 @@
    "topic": "conn"
   },
   {
-   "pub": "809355-2025",
-   "source": "TED",
-   "title": "Noorwegen – IT-diensten: adviezen, softwareontwikkeling, internet en ondersteuning – Qualification for contracts for operation infrastructure for applications and networks (ADRIAN)",
-   "buyer": "Trondheim kommune",
-   "country": "NO",
-   "published": "2025-12-05",
-   "deadline": "2026-01-09",
-   "type": "Aankondiging opdracht",
-   "kind": "notice",
-   "cpv": [
-    "72000000",
-    "48000000",
-    "48200000",
-    "51300000"
-   ],
-   "link": "https://ted.europa.eu/nl/notice/-/detail/809355-2025",
-   "value": 250000000,
-   "currency": "NOK",
-   "firstSeen": "2000-01-01T00:00:00.000Z",
-   "cats": [
-    "other"
-   ],
-   "topic": "conn"
-  },
-  {
    "pub": "810407-2025",
    "source": "TED",
    "title": "Bulgarije – IT-diensten: adviezen, softwareontwikkeling, internet en ondersteuning – \"Доставка на оборудване за надграждане на SD-WAN на НОИ\".",
@@ -18892,28 +17146,6 @@
    ],
    "link": "https://ted.europa.eu/nl/notice/-/detail/805571-2025",
    "value": 1350000,
-   "currency": "EUR",
-   "firstSeen": "2000-01-01T00:00:00.000Z",
-   "cats": [
-    "other"
-   ],
-   "topic": "conn"
-  },
-  {
-   "pub": "806219-2025",
-   "source": "TED",
-   "title": "Duitsland – Internetnetwerk – Kreisverwaltung des Landkreises Darmstadt-Dieburg -IT an Schulen-",
-   "buyer": "Kreisausschuss des Landkreises Darmstadt-Dieburg, FB 222 IT an Schulen",
-   "country": "DE",
-   "published": "2025-12-04",
-   "deadline": "2026-01-12",
-   "type": "Aankondiging opdracht",
-   "kind": "notice",
-   "cpv": [
-    "32412110"
-   ],
-   "link": "https://ted.europa.eu/nl/notice/-/detail/806219-2025",
-   "value": 2197080,
    "currency": "EUR",
    "firstSeen": "2000-01-01T00:00:00.000Z",
    "cats": [
@@ -19238,29 +17470,6 @@
    "topic": "conn"
   },
   {
-   "pub": "796247-2025",
-   "source": "TED",
-   "title": "Duitsland – Diensten in verband met software – Service- und Liefervertrag für das Datenübertragungs- und SOA-System",
-   "buyer": "Die Autobahn GmbH des Bundes - NL Westfalen",
-   "country": "DE",
-   "published": "2025-12-01",
-   "deadline": "2025-12-30",
-   "type": "Aankondiging opdracht",
-   "kind": "notice",
-   "cpv": [
-    "72260000",
-    "32581000"
-   ],
-   "link": "https://ted.europa.eu/nl/notice/-/detail/796247-2025",
-   "value": null,
-   "currency": "EUR",
-   "firstSeen": "2000-01-01T00:00:00.000Z",
-   "cats": [
-    "other"
-   ],
-   "topic": "conn"
-  },
-  {
    "pub": "793355-2025",
    "source": "TED",
    "title": "Polen – Communicatie-uitrusting – Dostawa Systemu Bezpiecznej Awaryjnej Łączności RARS",
@@ -19275,6 +17484,29 @@
     "64214100"
    ],
    "link": "https://ted.europa.eu/nl/notice/-/detail/793355-2025",
+   "value": null,
+   "currency": "EUR",
+   "firstSeen": "2000-01-01T00:00:00.000Z",
+   "cats": [
+    "other"
+   ],
+   "topic": "conn"
+  },
+  {
+   "pub": "796247-2025",
+   "source": "TED",
+   "title": "Duitsland – Diensten in verband met software – Service- und Liefervertrag für das Datenübertragungs- und SOA-System",
+   "buyer": "Die Autobahn GmbH des Bundes - NL Westfalen",
+   "country": "DE",
+   "published": "2025-12-01",
+   "deadline": "2025-12-30",
+   "type": "Aankondiging opdracht",
+   "kind": "notice",
+   "cpv": [
+    "72260000",
+    "32581000"
+   ],
+   "link": "https://ted.europa.eu/nl/notice/-/detail/796247-2025",
    "value": null,
    "currency": "EUR",
    "firstSeen": "2000-01-01T00:00:00.000Z",
@@ -19379,28 +17611,6 @@
    ],
    "link": "https://ted.europa.eu/nl/notice/-/detail/790402-2025",
    "value": null,
-   "currency": "EUR",
-   "firstSeen": "2000-01-01T00:00:00.000Z",
-   "cats": [
-    "other"
-   ],
-   "topic": "conn"
-  },
-  {
-   "pub": "788093-2025",
-   "source": "TED",
-   "title": "Duitsland – Internetnetwerk – Kreisverwaltung des Landkreises Darmstadt-Dieburg -IT an Schulen-",
-   "buyer": "Kreisausschuss des Landkreises Darmstadt-Dieburg, FB 222 IT an Schulen",
-   "country": "DE",
-   "published": "2025-11-27",
-   "deadline": "2026-01-12",
-   "type": "Aankondiging opdracht",
-   "kind": "notice",
-   "cpv": [
-    "32412110"
-   ],
-   "link": "https://ted.europa.eu/nl/notice/-/detail/788093-2025",
-   "value": 2197080,
    "currency": "EUR",
    "firstSeen": "2000-01-01T00:00:00.000Z",
    "cats": [
@@ -19613,8 +17823,8 @@
    "topic": "conn"
   },
   {
-   "source": "SERCOP (Ecuador)",
    "pub": "EC-ocds-5wno2w-COTS-GADPPZ-2025-004-24084",
+   "source": "SERCOP (Ecuador)",
    "title": "SERVICIO INTERNET SATELITAL POR 365 DÍAS PARA LAS COMUNIDADES DE: SURAKA, MONTALVO, SARAYACU, SAN JOSÉ DE CURARAY, JAIME ROLDÓS, PAPARAWA, TOÑAMPARE, LOROCACHI, CHARAPACOCHA, WIRIRIMA, PINDOYACU, JATUN MOLINO, KAPAHUARI, PAKAYAKU, YANDANAENTSA, KAPIRNA, KEWERIONO, JESUS COCHA, MACAO, TANGUNTSA, JUYUINTSA Y LIPUNO 2025",
    "buyer": "GOBIERNO AUTONOMO DESCENTRALIZADO PROVINCIAL DE PASTAZA",
    "country": "EC",
@@ -19912,28 +18122,6 @@
    "firstSeen": "2000-01-01T00:00:00.000Z",
    "cats": [
     "sat"
-   ],
-   "topic": "conn"
-  },
-  {
-   "pub": "754382-2025",
-   "source": "TED",
-   "title": "Duitsland – Computernetwerkdiensten – Rahmenvertrag über Verkabelungsarbeiten und Unterstützungsleistungen im Bereich Netzwerk und IT-Infrastruktur für das Land Hessen (Passive Netzwerktechnik)",
-   "buyer": "Land Hessen, vertreten durch die Hessische Zentrale für Datenverarbeitung",
-   "country": "DE",
-   "published": "2025-11-13",
-   "deadline": "2025-12-15",
-   "type": "Aankondiging opdracht",
-   "kind": "notice",
-   "cpv": [
-    "72700000"
-   ],
-   "link": "https://ted.europa.eu/nl/notice/-/detail/754382-2025",
-   "value": 4000000,
-   "currency": "EUR",
-   "firstSeen": "2000-01-01T00:00:00.000Z",
-   "cats": [
-    "other"
    ],
    "topic": "conn"
   },
@@ -20381,28 +18569,6 @@
    "topic": "conn"
   },
   {
-   "pub": "735426-2025",
-   "source": "TED",
-   "title": "Duitsland – Informatiesystemen en servers – Rahmenvereinbarung über die Belieferung mit aktiven Komponenten des Herstellers Cisco sowie deren Zubehör",
-   "buyer": "Jade Hochschule Wilhelmshaven/Oldenburg/Elsfleth",
-   "country": "DE",
-   "published": "2025-11-06",
-   "deadline": "2025-11-12",
-   "type": "Aankondiging opdracht",
-   "kind": "notice",
-   "cpv": [
-    "48800000"
-   ],
-   "link": "https://ted.europa.eu/nl/notice/-/detail/735426-2025",
-   "value": 3200000,
-   "currency": "EUR",
-   "firstSeen": "2000-01-01T00:00:00.000Z",
-   "cats": [
-    "other"
-   ],
-   "topic": "conn"
-  },
-  {
    "pub": "736994-2025",
    "source": "TED",
    "title": "Bulgarije – Netwerkuitrusting – „Доставка на оборудване за надграждане на SD-WAN за нуждите на Национален осигурителен институт (НОИ)“",
@@ -20469,30 +18635,6 @@
    "topic": "conn"
   },
   {
-   "pub": "732006-2025",
-   "source": "TED",
-   "title": "Ierland – Internetproviders (ISP) – Provision of Leased Line Internet Connectivity Services – Eurofound Dublin Premises - ICT/7658",
-   "buyer": "European Foundation for the Improvement of Living and Working Conditions",
-   "country": "IE",
-   "published": "2025-11-05",
-   "deadline": "",
-   "type": "Gegunde opdracht",
-   "kind": "award",
-   "cpv": [
-    "72411000",
-    "32412110",
-    "72000000"
-   ],
-   "link": "https://ted.europa.eu/nl/notice/-/detail/732006-2025",
-   "value": 38000,
-   "currency": "EUR",
-   "firstSeen": "2000-01-01T00:00:00.000Z",
-   "cats": [
-    "fiber"
-   ],
-   "topic": "conn"
-  },
-  {
    "pub": "FR-25-123344",
    "source": "BOAMP",
    "title": "Marché de travaux télécom pour les réseaux radio de sécurité et les réseaux radio numérique faisceaux hertziens à Mayotte",
@@ -20539,29 +18681,6 @@
    "topic": "conn"
   },
   {
-   "pub": "725169-2025",
-   "source": "TED",
-   "title": "Polen – Netwerkuitrusting – Dostawa przełączników sieciowych wraz z asystą techniczną świadczoną przez Wykonawcę",
-   "buyer": "Województwo Lubelskie - Lubelskie Centrum Innowacji i Technologii",
-   "country": "PL",
-   "published": "2025-11-03",
-   "deadline": "",
-   "type": "Gegunde opdracht",
-   "kind": "award",
-   "cpv": [
-    "32420000",
-    "32424000"
-   ],
-   "link": "https://ted.europa.eu/nl/notice/-/detail/725169-2025",
-   "value": null,
-   "currency": "EUR",
-   "firstSeen": "2000-01-01T00:00:00.000Z",
-   "cats": [
-    "other"
-   ],
-   "topic": "conn"
-  },
-  {
    "pub": "725887-2025",
    "source": "TED",
    "title": "Ierland – Telecommunicatiediensten – 25/023 - Managed Bandwidth Services Provider and Outsourced Network Operations Centre",
@@ -20586,30 +18705,6 @@
    ],
    "link": "https://ted.europa.eu/nl/notice/-/detail/725887-2025",
    "value": 5000000,
-   "currency": "EUR",
-   "firstSeen": "2000-01-01T00:00:00.000Z",
-   "cats": [
-    "other"
-   ],
-   "topic": "conn"
-  },
-  {
-   "pub": "718872-2025",
-   "source": "TED",
-   "title": "Spanje – Telecommunicatiesysteem – Suministro, instalación y puesta en marcha de infraestructura robótica y de comunicaciones para la protección de la población, los primeros intervinientes y las infraestructuras en escenarios extremos de desastre, dividido en seis lotes, en el marco de la ayuda EQC2024-007967-P, financiado por MCIU / AEI / 10.13039/501100011033 / UE, FEDER. 6 Lotes.",
-   "buyer": "Rectorado de la Universidad de Málaga",
-   "country": "ES",
-   "published": "2025-10-30",
-   "deadline": "2025-12-01",
-   "type": "Aankondiging opdracht",
-   "kind": "notice",
-   "cpv": [
-    "32524000",
-    "34221200",
-    "35613000"
-   ],
-   "link": "https://ted.europa.eu/nl/notice/-/detail/718872-2025",
-   "value": 1649441.4,
    "currency": "EUR",
    "firstSeen": "2000-01-01T00:00:00.000Z",
    "cats": [
@@ -20795,28 +18890,6 @@
    "topic": "conn"
   },
   {
-   "pub": "705515-2025",
-   "source": "TED",
-   "title": "Duitsland – Netwerkinfrastructuur – WLAN Ausstattung Access Points (Hardware, Lizenzen, Wartung)",
-   "buyer": "medbo - KU",
-   "country": "DE",
-   "published": "2025-10-27",
-   "deadline": "",
-   "type": "Gegunde opdracht",
-   "kind": "award",
-   "cpv": [
-    "32424000"
-   ],
-   "link": "https://ted.europa.eu/nl/notice/-/detail/705515-2025",
-   "value": null,
-   "currency": "EUR",
-   "firstSeen": "2000-01-01T00:00:00.000Z",
-   "cats": [
-    "wifi"
-   ],
-   "topic": "conn"
-  },
-  {
    "pub": "705691-2025",
    "source": "TED",
    "title": "Spanje – Netwerkinfrastructuur – Realización de un piloto de migración a SD-WAN de varios centros de la Generalitat dependientes de la Dirección General de Tecnologías de la Información y las Comunicaciones",
@@ -20839,52 +18912,8 @@
    "topic": "conn"
   },
   {
-   "pub": "707711-2025",
-   "source": "TED",
-   "title": "Duitsland – Schakel- of routersoftware – Switche- Neubau KJP Weiden",
-   "buyer": "medbo - KU",
-   "country": "DE",
-   "published": "2025-10-27",
-   "deadline": "",
-   "type": "Gegunde opdracht",
-   "kind": "award",
-   "cpv": [
-    "48219500"
-   ],
-   "link": "https://ted.europa.eu/nl/notice/-/detail/707711-2025",
-   "value": null,
-   "currency": "EUR",
-   "firstSeen": "2000-01-01T00:00:00.000Z",
-   "cats": [
-    "other"
-   ],
-   "topic": "conn"
-  },
-  {
-   "pub": "708640-2025",
-   "source": "TED",
-   "title": "Duitsland – Internetdiensten – Internet-Zugang für die Schulen",
-   "buyer": "Landkreis Friesland",
-   "country": "DE",
-   "published": "2025-10-27",
-   "deadline": "",
-   "type": "Gegunde opdracht",
-   "kind": "award",
-   "cpv": [
-    "72400000"
-   ],
-   "link": "https://ted.europa.eu/nl/notice/-/detail/708640-2025",
-   "value": 400000,
-   "currency": "EUR",
-   "firstSeen": "2000-01-01T00:00:00.000Z",
-   "cats": [
-    "other"
-   ],
-   "topic": "conn"
-  },
-  {
-   "source": "SERCOP (Ecuador)",
    "pub": "EC-ocds-5wno2w-SIE-EMOVEP-2025-014-315805",
+   "source": "SERCOP (Ecuador)",
    "title": "CONTRATACION DEL SERVICIO DE CONECTIVIDAD SD-WAN Y DE DATA CENTER DE CONTINGENCIA PARA LA EMOV EP",
    "buyer": "EMPRESA PUBLICA DE MOVILIDAD TRANSITO Y TRANSPORTE DE CUENCA",
    "country": "EC",
@@ -21467,27 +19496,6 @@
    "topic": "leo"
   },
   {
-   "pub": "NL-393074",
-   "source": "TenderNed",
-   "title": "Connectiviteitsdiensten VRH",
-   "buyer": "Veiligheidsregio Haaglanden",
-   "country": "NL",
-   "published": "2025-09-18",
-   "deadline": "",
-   "deadlineAt": "",
-   "type": "Aankondiging gegunde opdracht - algemene richtlijn, standaardregeling",
-   "kind": "award",
-   "cpv": [],
-   "link": "https://www.tenderned.nl/aankondigingen/overzicht/393074",
-   "value": null,
-   "currency": "EUR",
-   "firstSeen": "2000-01-01T00:00:00.000Z",
-   "cats": [
-    "other"
-   ],
-   "topic": "conn"
-  },
-  {
    "pub": "NL-393301",
    "source": "TenderNed",
    "title": "Wide Area Network (WAN) en internetverbindingen",
@@ -21575,28 +19583,6 @@
     "leo"
    ],
    "topic": "leo"
-  },
-  {
-   "pub": "CA-SSC-22-00020507:T",
-   "source": "CanadaBuys",
-   "title": "Local Internet Access Services RFSA",
-   "buyer": "Shared Services Canada",
-   "country": "CA",
-   "published": "2022-10-21",
-   "deadline": "2065-04-27",
-   "type": "Tender notice",
-   "kind": "notice",
-   "cpv": [],
-   "link": "https://canadabuys.canada.ca/en/tender-opportunities",
-   "value": null,
-   "currency": "CAD",
-   "firstSeen": "2000-01-01T00:00:00.000Z",
-   "titleNl": "Aanbesteding voor lokale internettoegangsdiensten (RFSA)",
-   "trEngine": "DeepL",
-   "cats": [
-    "other"
-   ],
-   "topic": "conn"
   },
   {
    "pub": "UA-UA-2026-10-20-002716-a",
@@ -21692,6 +19678,30 @@
    "topic": "leo"
   },
   {
+   "pub": "UA-UA-2026-10-19-005252-a",
+   "source": "Prozorro",
+   "title": "Супутниковий модем Starlink Internet Satellite 3gen.",
+   "buyer": "Військова частина А3316",
+   "country": "UA",
+   "published": "",
+   "deadline": "2026-10-23",
+   "deadlineAt": "2026-10-23T11:50:00.000Z",
+   "type": "Aankondiging opdracht",
+   "kind": "notice",
+   "cpv": [],
+   "link": "https://prozorro.gov.ua/tender/UA-2026-10-19-005252-a",
+   "value": 504000,
+   "currency": "UAH",
+   "defense": true,
+   "firstSeen": "2000-01-01T00:00:00.000Z",
+   "titleNl": "Starlink Internet Satellite 3gen-satellietmodem.",
+   "trEngine": "DeepL",
+   "cats": [
+    "leo"
+   ],
+   "topic": "leo"
+  },
+  {
    "pub": "UA-UA-2026-10-14-011024-a",
    "source": "Prozorro",
    "title": "Супутниковий модем Starlink Internet Satellite 3gen ",
@@ -21764,29 +19774,6 @@
    "topic": "leo"
   },
   {
-   "pub": "UA-UA-2026-10-19-005189-a",
-   "source": "Prozorro",
-   "title": "Супутниковий модем Starlink Internet Satellite 3gen (для потреб ЗСУ)",
-   "buyer": "Виконавчий комітет Баштечківської сільської ради",
-   "country": "UA",
-   "published": "",
-   "deadline": "2026-10-22",
-   "deadlineAt": "2026-10-21T21:00:00.000Z",
-   "type": "Aankondiging opdracht",
-   "kind": "notice",
-   "cpv": [],
-   "link": "https://prozorro.gov.ua/tender/UA-2026-10-19-005189-a",
-   "value": 92000,
-   "currency": "UAH",
-   "firstSeen": "2026-10-19T10:44:34.562Z",
-   "titleNl": "Starlink Internet Satellite 3gen-satellietmodem (voor de Oekraïense strijdkrachten)",
-   "trEngine": "DeepL",
-   "cats": [
-    "leo"
-   ],
-   "topic": "leo"
-  },
-  {
    "pub": "UA-UA-2026-10-20-013768-a",
    "source": "Prozorro",
    "title": "32530000-7 - Телекомунікаційне супутникове обладнання (Супутниковий модем Starlink)",
@@ -21807,6 +19794,29 @@
    "cats": [
     "leo",
     "sat"
+   ],
+   "topic": "leo"
+  },
+  {
+   "pub": "UA-UA-2026-10-19-005189-a",
+   "source": "Prozorro",
+   "title": "Супутниковий модем Starlink Internet Satellite 3gen (для потреб ЗСУ)",
+   "buyer": "Виконавчий комітет Баштечківської сільської ради",
+   "country": "UA",
+   "published": "",
+   "deadline": "2026-10-22",
+   "deadlineAt": "2026-10-21T21:00:00.000Z",
+   "type": "Aankondiging opdracht",
+   "kind": "notice",
+   "cpv": [],
+   "link": "https://prozorro.gov.ua/tender/UA-2026-10-19-005189-a",
+   "value": 92000,
+   "currency": "UAH",
+   "firstSeen": "2026-10-19T10:44:34.562Z",
+   "titleNl": "Starlink Internet Satellite 3gen-satellietmodem (voor de Oekraïense strijdkrachten)",
+   "trEngine": "DeepL",
+   "cats": [
+    "leo"
    ],
    "topic": "leo"
   },
