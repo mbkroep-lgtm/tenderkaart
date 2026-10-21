@@ -1,18 +1,8 @@
-ungm_page: 148209B 0.7s
-bzp_day: 3000000B 3.2s
-ro_seap: 62625B 1.6s
-kenya: 70465B 4.7s
-kenya_all: 70209B 5.6s
-ecuador: FOUT HTTP Error 429: Too Many Requests
-dominicana: 7697B 0.4s
-za: 37535B 2.3s
-kz: 97786B 3.1s
-ebrd: 3000000B 2.2s
-uy: 192668B 2.1s
-doffin: 3362B 0.5s
-base: 1426B 0.7s
-israel: 691311B 1.7s
-slowakije: 96992B 1.7s
-nen: FOUT HTTP Error 503: Service Unavailable
-servicebund: 15076B 1.7s
-placsp: 3000000B 18.3s
+ungm_js: 40516B 0.5s
+ungm_bundle: 662893B 0.9s
+dominicana_p: 151219B 0.5s
+servicebund_rss: 1027B 1.1s
+ecuador: 1501B 2.3s
+kz2: FOUT <urlopen error [Errno -3] Temporary failure in name resolution>
+za_day: 250621B 4.7s
+kenya_p: FOUT HTTP Error 500: Internal Server Error
