@@ -1,84 +1,84 @@
 {
- "updated": "2026-10-21T07:30:08.895Z",
+ "updated": "2026-10-21T08:28:21.555Z",
  "queryVersion": "9aac67d149",
  "sources": {
   "TED": {
    "ok": true,
-   "at": "2026-10-21T07:30:08.895Z",
+   "at": "2026-10-21T08:28:21.555Z",
    "count": 41,
    "note": ""
   },
   "Wereldbank": {
    "ok": true,
-   "at": "2026-10-21T07:30:08.895Z",
+   "at": "2026-10-21T08:28:21.555Z",
    "count": 55,
    "note": "63 gevonden, 55 echt over LEO."
   },
   "Find a Tender": {
    "ok": true,
-   "at": "2026-10-21T07:30:08.895Z",
+   "at": "2026-10-21T08:28:21.555Z",
    "count": 0,
-   "note": "1 pagina's, 83 berichten bekeken, 0 over LEO.",
-   "since": "2026-10-21T05:30:08.895Z"
+   "note": "1 pagina's, 38 berichten bekeken, 0 over LEO.",
+   "since": "2026-10-21T06:28:21.555Z"
   },
   "Contracts Finder": {
    "ok": true,
-   "at": "2026-10-21T07:30:08.895Z",
+   "at": "2026-10-21T08:28:21.555Z",
    "count": 4,
    "note": "295 gevonden, 22 over LEO."
   },
   "TenderNed": {
    "ok": true,
-   "at": "2026-10-21T07:30:08.895Z",
+   "at": "2026-10-21T08:28:21.555Z",
    "count": 0,
    "note": "106 gevonden, 0 over LEO."
   },
   "Prozorro": {
    "ok": true,
-   "at": "2026-10-21T07:30:08.895Z",
+   "at": "2026-10-21T08:28:21.555Z",
    "count": 62,
    "note": "62 lopende procedures."
   },
   "BOAMP": {
    "ok": true,
-   "at": "2026-10-21T07:30:08.895Z",
+   "at": "2026-10-21T08:28:21.555Z",
    "count": 1,
    "note": "5 gevonden, 1 over LEO."
   },
   "SIMAP (Zwitserland)": {
    "ok": true,
-   "at": "2026-10-21T07:30:08.895Z",
+   "at": "2026-10-21T08:28:21.555Z",
    "count": 0,
    "note": "20 gevonden, 0 over LEO."
   },
   "SECOP (Colombia)": {
    "ok": true,
-   "at": "2026-10-21T07:30:08.895Z",
+   "at": "2026-10-21T08:28:21.555Z",
    "count": 67,
    "note": "67 gevonden, 67 over LEO."
   },
   "CanadaBuys": {
    "ok": true,
-   "at": "2026-10-21T07:30:08.895Z",
+   "at": "2026-10-21T08:28:21.555Z",
    "count": 1,
    "note": "899 open tenders bekeken, 1 over LEO."
   },
   "AusTender": {
    "ok": true,
-   "at": "2026-10-21T07:30:08.895Z",
-   "count": 1,
-   "note": "303 contracten bekeken, 1 over LEO.",
-   "since": "2026-10-21T05:30:08.895Z"
+   "at": "2026-10-21T08:28:21.555Z",
+   "count": 0,
+   "note": "3 contracten bekeken, 0 over LEO.",
+   "since": "2026-10-21T06:28:21.555Z"
   },
   "UNDP": {
    "ok": true,
-   "at": "2026-10-21T07:30:08.895Z",
+   "at": "2026-10-21T08:28:21.555Z",
    "count": 1,
    "note": "971 berichten bekeken, 1 over LEO."
   },
   "PCC (Taiwan)": {
    "ok": true,
-   "at": "2026-10-21T07:30:08.895Z",
+   "at": "2026-10-21T08:28:21.555Z",
    "count": 16,
    "note": "38 aanbestedingen over LEO."
   },
@@ -98,17 +98,17 @@
   },
   "Vertalen": {
    "ok": true,
-   "at": "2026-10-21T07:30:08.895Z",
-   "count": 8,
-   "note": "DeepL: 8 nieuw vertaald.",
+   "at": "2026-10-21T08:28:21.555Z",
+   "count": 0,
+   "note": "DeepL: 0 nieuw vertaald.",
    "engine": "DeepL"
   }
  },
  "count": 252,
  "tenders": [
   {
-   "pub": "AU-CN4283857",
    "source": "AusTender",
+   "pub": "AU-CN4283857",
    "title": "This is for the remaining balance of our Starlink contract w",
    "buyer": "Australian Radiation Protection and Nuclear Safety Agency",
    "country": "AU",
@@ -225,8 +225,8 @@
    "trEngine": "DeepL"
   },
   {
-   "pub": "BR-00299180000154-1-000116/2026",
    "source": "PNCP (Brazilië)",
+   "pub": "BR-00299180000154-1-000116/2026",
    "title": "[Portal de Compras Públicas] - CONTRATAÇÃO DE EMPRESA ESPECIALIZADA EM FORNECIMENTO DE SERVIÇOS DE INTERNET BANDA LARGA DE ALTA VELOCIDADE (STARLINK). KIT STARLINK LOCAÇÃO (Modelo Mini) (Fornecimento de Serviço mensal de acesso à internet via satélite de baixa órbita, com funcionamento automático em todo território do estado do Tocantins com velocidade média de download mínima de 200Mbps e de Upload médio, com internet de uso ilimitado e com fornecimento em regime de comodato). OBS: VALOR REFERÊNCIA DE R$ 14.393,88 E REFENTE A 12 MESES.",
    "buyer": "MUNICIPIO DE PARAISO DO TOCANTINS",
    "country": "BR",
@@ -244,8 +244,8 @@
    "trEngine": "DeepL"
   },
   {
-   "pub": "BR-18244376000107-1-000199/2026",
    "source": "PNCP (Brazilië)",
+   "pub": "BR-18244376000107-1-000199/2026",
    "title": "[Portal de Compras Públicas] - Aquisição de equipamentos de internet via satélite Starlink, incluindo antenas, roteadores e acessórios necessários, bem como a contratação do serviço de conectividade mensal.",
    "buyer": "MUNICIPIO DE LAVRAS",
    "country": "BR",
@@ -263,8 +263,8 @@
    "trEngine": "DeepL"
   },
   {
-   "pub": "BR-17955386000198-1-000223/2026",
    "source": "PNCP (Brazilië)",
+   "pub": "BR-17955386000198-1-000223/2026",
    "title": "Fornecimento, suporte e ativação de terminal fixo de acesso à internet via satélite de baixa órbita LEO com todos os equipamentos e acessórios necessários para o seu correto funcionamento e prestação de serviço de cone",
    "buyer": "MUNICIPIO DE CAMBUQUIRA",
    "country": "BR",
@@ -282,8 +282,8 @@
    "trEngine": "DeepL"
   },
   {
-   "pub": "BR-82892308000153-1-000211/2026",
    "source": "PNCP (Brazilië)",
+   "pub": "BR-82892308000153-1-000211/2026",
    "title": "Contratação  de empresa especializada no fornecimento de materiais, equipamentos e mão de obra necessários à instalação e configuração de sistema de internet via satélite Starlink em veículo pertencente ao município de Biguaçu.",
    "buyer": "MUNICIPIO DE BIGUACU",
    "country": "BR",
@@ -301,8 +301,8 @@
    "trEngine": "DeepL"
   },
   {
-   "pub": "BR-76416957000185-1-000100/2026",
    "source": "PNCP (Brazilië)",
+   "pub": "BR-76416957000185-1-000100/2026",
    "title": "Conjunto de Equipamentos fornecimento e configuração de terminal de acesso Starlink portátil em mochila, incluindo demais acessórios necessários para o funcionamento do serviço.",
    "buyer": "SECRETARIA DE ESTADO DA AGRICULTURA E DO ABASTECIMENTO",
    "country": "BR",
@@ -515,26 +515,6 @@
    "trEngine": "DeepL"
   },
   {
-   "pub": "UA-UA-2026-10-17-000166-a",
-   "source": "Prozorro",
-   "title": "Супутниковий модем Starlink Internet Satellite Mini",
-   "buyer": "ВІЙСЬКОВА ЧАСТИНА 3022 НАЦІОНАЛЬНОЇ ГВАРДІЇ УКРАЇНИ",
-   "country": "UA",
-   "published": "2026-10-17",
-   "deadline": "2026-10-27",
-   "deadlineAt": "2026-10-27T07:00:00.000Z",
-   "type": "Aankondiging opdracht",
-   "kind": "notice",
-   "cpv": [],
-   "link": "https://prozorro.gov.ua/tender/UA-2026-10-17-000166-a",
-   "value": 96250,
-   "currency": "UAH",
-   "defense": true,
-   "firstSeen": "2000-01-01T00:00:00.000Z",
-   "titleNl": "Starlink Internet Satellite Mini-satellietmodem",
-   "trEngine": "DeepL"
-  },
-  {
    "pub": "UA-UA-2026-10-17-000603-a",
    "source": "Prozorro",
    "title": "Термінал супутникового зв'язку (Starlink 4X/Gen3)",
@@ -552,6 +532,26 @@
    "defense": true,
    "firstSeen": "2026-10-17T19:55:56.797Z",
    "titleNl": "Satellietcommunicatieterminal (Starlink 4X/Gen3)",
+   "trEngine": "DeepL"
+  },
+  {
+   "pub": "UA-UA-2026-10-17-000166-a",
+   "source": "Prozorro",
+   "title": "Супутниковий модем Starlink Internet Satellite Mini",
+   "buyer": "ВІЙСЬКОВА ЧАСТИНА 3022 НАЦІОНАЛЬНОЇ ГВАРДІЇ УКРАЇНИ",
+   "country": "UA",
+   "published": "2026-10-17",
+   "deadline": "2026-10-27",
+   "deadlineAt": "2026-10-27T07:00:00.000Z",
+   "type": "Aankondiging opdracht",
+   "kind": "notice",
+   "cpv": [],
+   "link": "https://prozorro.gov.ua/tender/UA-2026-10-17-000166-a",
+   "value": 96250,
+   "currency": "UAH",
+   "defense": true,
+   "firstSeen": "2000-01-01T00:00:00.000Z",
+   "titleNl": "Starlink Internet Satellite Mini-satellietmodem",
    "trEngine": "DeepL"
   },
   {
