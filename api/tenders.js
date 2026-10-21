@@ -2,7 +2,7 @@
 // Door de beheerder verborgen tenders en uitsluitwoorden worden hier al weggefilterd.
 import { readFile } from 'node:fs/promises';
 import path from 'node:path';
-import { json, readSession, hasAccess, isAdmin, getHidden, getWords, getNoStar, getBids, applyAdminFilters, requireLogin, fail } from '../lib/core.js';
+import { json, readSession, hasAccess, isAdmin, getHidden, getWords, getNoStar, getBids, getBidBy, applyAdminFilters, requireLogin, fail } from '../lib/core.js';
 
 export async function GET(request) {
   try {
@@ -10,10 +10,12 @@ export async function GET(request) {
     if (requireLogin() && (!email || !(await hasAccess(email)))) return json({ error: 'Log in om de tenders te bekijken.' }, 401);
     const data = JSON.parse(await readFile(path.join(process.cwd(), 'data', 'tenders.json'), 'utf8'));
     // verborgen tenders en uitsluitwoorden; lukt de database even niet, dan toch de kaart tonen
-    let hidden = [], words = [], bids = {};
-    try { [hidden, words, bids] = await Promise.all([getHidden(), getWords(), getBids()]); } catch (e) { console.error(e); }
+    let hidden = [], words = [], bids = {}, bidBy = {};
+    try { [hidden, words, bids, bidBy] = await Promise.all([getHidden(), getWords(), getBids(), getBidBy()]); } catch (e) { console.error(e); }
     data.nostar = await getNoStar();
     data.bids = bids;
+    // namen alleen voor ingelogde medewerkers
+    data.bidBy = email ? bidBy : {};
     const all = data.tenders || [];
     data.tenders = applyAdminFilters(all, hidden, words);
     data.hiddenCount = all.length - data.tenders.length;

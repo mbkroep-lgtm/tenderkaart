@@ -639,10 +639,18 @@ const CHANGE_NL = c => c.what === "deadline" ? `sluitingsdatum ${fmt(c.from)} �
 const changedHtml = t => { if(!t.changedAt || Date.now() - Date.parse(t.changedAt) > 7 * 864e5) return "";
   const txt = (t.changes || []).slice(-3).map(c => `${new Date(c.at).toLocaleDateString("nl-NL", {day:"numeric", month:"short"})}: ${CHANGE_NL(c)}`).join("\n");
   return `<span class="deftag chg" title="${esc(txt || "Gewijzigd")}">Gewijzigd</span>`; };
+const who = pub => { const w = BIDBY[pub]; if(!w) return ""; const name = String(w.by || "").split("@")[0].replace(/[._-]+/g, " ").replace(/\b\w/g, c => c.toUpperCase());
+  return `${name} · ${new Date(w.at).toLocaleDateString("nl-NL", {day:"numeric", month:"short"})}`; };
+// status zetten via /api/bid (iedere ingelogde medewerker)
+function setBid(pub, status){
+  return fetch("/api/bid", {method:"POST", credentials:"same-origin", headers:{"Content-Type":"application/json"}, body:JSON.stringify({pub, status})})
+    .then(r => r.json().then(d => { if(!r.ok) throw new Error(d.error || "Opslaan lukte niet."); return d; }))
+    .then(d => { if(status){ BIDS[pub] = status; BIDBY[pub] = {by:d.by, at:d.at}; } else { delete BIDS[pub]; delete BIDBY[pub]; } });
+}
 const bidHtml = t => {
-  const st = BIDS[t.pub] || "";
-  if(window.isAdmin) return `<select class="bidsel ${st}" data-bid="${esc(t.pub)}" aria-label="Inschrijfstatus"><option value="">Status…</option>${Object.entries(BID_LABEL).map(([k, v]) => `<option value="${k}"${k === st ? " selected" : ""}>${v}</option>`).join("")}</select>`;
-  return st ? `<span class="deftag bid ${st}">${BID_LABEL[st]}</span>` : "";
+  const st = BIDS[t.pub] || "", w = who(t.pub);
+  if(window.userEmail) return `<select class="bidsel ${st}" data-bid="${esc(t.pub)}" aria-label="Inschrijfstatus" title="${esc(w ? "Gezet door " + w : "Zet de inschrijfstatus")}"><option value="">Status…</option>${Object.entries(BID_LABEL).map(([k, v]) => `<option value="${k}"${k === st ? " selected" : ""}>${v}</option>`).join("")}</select>`;
+  return st ? `<span class="deftag bid ${st}"${w ? ` title="Gezet door ${esc(w)}"` : ""}>${BID_LABEL[st]}</span>` : "";
 };
 
 // ---------- Categorieën en commerciële score ----------
@@ -652,7 +660,7 @@ const CAT_LABEL = { leo:"LEO / Starlink", sat:"Satelliet", mobile:"4G/5G", micro
 const CAT_PRIO = { leo:1, sat:1, mobile:1, microwave:1, managed:1, hybrid:1, temp:1, need:0.9, fiber:0.75, wifi:0.75, maritime:0.75, industrial:0.75, infra:0.75, haps:0.5, other:0.5 };
 // Landen waar Starlink (nog) niet beschikbaar is (medio 2026; zelfde lijst als scripts/terms.mjs)
 let STARLINK_BLOCKED = new Set(["CN","RU","IR","KP","BY","CU","SY","AF","ZA","TR","EG","PK","MM"]);   // wordt bijgewerkt uit Beheer
-let BIDS = {};   // inschrijfstatus per tender (uit Beheer)
+let BIDS = {}, BIDBY = {};   // inschrijfstatus per tender, en wie die zette
 const BID_LABEL = { ingeschreven:"Ingeschreven", gewonnen:"Gewonnen", verloren:"Verloren", geen:"Niet inschrijven" };
 const EUROPE = new Set("AL AD AT BE BA BG HR CY CZ DK EE FI FR DE GR HU IS IE IT XK LV LI LT LU MT MD MC ME NL MK NO PL PT RO SM RS SK SI ES SE CH UA GB VA".split(" "));
 // grove omrekening naar euro (alleen voor de score, niet voor weergave)
@@ -778,7 +786,7 @@ function openApply(pub){
       ${icsOf(t) ? `<button type="button" class="btn" id="adIcs">Deadline in agenda</button>` : ""}
       <a class="btn" href="${esc(mail)}">Mail naar verkoop</a>
       <button type="button" class="btn" id="adCopy">Kopieer conceptbrief</button>
-      ${window.isAdmin ? `<button type="button" class="btn" id="adMark">${BIDS[t.pub] === "ingeschreven" ? "✓ Ingeschreven" : "Markeer als ingeschreven"}</button>` : ""}
+      ${window.userEmail ? `<button type="button" class="btn" id="adMark">${BIDS[t.pub] === "ingeschreven" ? "✓ Ingeschreven" + (who(t.pub) ? " (" + esc(who(t.pub)) + ")" : "") : "Markeer als ingeschreven"}</button>` : ""}
     </div>
     <h3>Stappen</h3>
     <ul class="ad-steps">${steps.map(([k, txt]) => `<li><label><input type="checkbox" data-step="${k}"${done[k] ? " checked" : ""}> ${esc(txt)}</label></li>`).join("")}</ul>
@@ -794,8 +802,8 @@ function openApply(pub){
     const url = URL.createObjectURL(new Blob([icsOf(t)], {type:"text/calendar"})), el = document.createElement("a");
     el.href = url; el.download = `deadline-${t.pub.replace(/[^A-Za-z0-9-]/g, "")}.ics`; document.body.appendChild(el); el.click(); el.remove(); setTimeout(() => URL.revokeObjectURL(url), 5000);
   };
-  if($("adMark")) $("adMark").onclick = () => fetch("/api/admin", {method:"POST", credentials:"same-origin", headers:{"Content-Type":"application/json"}, body:JSON.stringify({action:"bid", pub:t.pub, status:"ingeschreven"})})
-    .then(r => { if(!r.ok) throw new Error(); BIDS[t.pub] = "ingeschreven"; $("adMark").textContent = "✓ Ingeschreven"; render(); }).catch(() => alert("Opslaan lukte niet."));
+  if($("adMark")) $("adMark").onclick = () => setBid(t.pub, "ingeschreven")
+    .then(() => { $("adMark").textContent = "✓ Ingeschreven (" + who(t.pub) + ")"; render(); }).catch(err => alert(err.message));
   if(dlg.showModal) dlg.showModal(); else dlg.setAttribute("open", "");
 }
 const applyBtn = t => (statusOf(t) === "closed" || statusOf(t) === "awarded") ? "" : `<button type="button" class="applybtn" data-apply="${esc(t.pub)}">Inschrijven →</button>`;
@@ -826,10 +834,10 @@ function downloadCsv(){
   const cell = v => { const s = v == null ? "" : String(v); return /[";\n\r]/.test(s) ? `"${s.replace(/"/g, '""')}"` : s; };
   const dec = n => n == null || n === "" ? "" : String(n).replace(".", ",");
   const tijd = t => t.deadlineAt ? new Date(t.deadlineAt).toLocaleTimeString("nl-NL", {hour:"2-digit", minute:"2-digit", timeZone:"Europe/Amsterdam"}) : "";
-  const head = ["Score","Status","Categorieën","Land","Titel (Nederlands)","Originele titel","Opdrachtgever","Bron","Soort","Defensie","Gepubliceerd","Sluitingsdatum","Sluitingstijd (NL)","Aantal","Waarde","Valuta","Kenmerk","Link","Waarde in euro (ca.)","Advies","Inschrijfstatus","Gewijzigd"];
+  const head = ["Score","Status","Categorieën","Land","Titel (Nederlands)","Originele titel","Opdrachtgever","Bron","Soort","Defensie","Gepubliceerd","Sluitingsdatum","Sluitingstijd (NL)","Aantal","Waarde","Valuta","Kenmerk","Link","Waarde in euro (ca.)","Advies","Inschrijfstatus","Status gezet door","Gewijzigd"];
   const rows = list.map(t => [scoreOf(t), STATUS_NL[statusOf(t)] || statusOf(t), (t.cats || [t.topic === "conn" ? "other" : "leo"]).map(c => CAT_LABEL[c] || c).join(", "), t.country ? cname(t.country) : (t.countryName || ""), t.titleNl || t.title, t.title, t.buyer,
     t.source || "TED", hwScope(t) === "hw" ? "Alleen hardware" : hwScope(t) === "svc" ? "Met dienst" : "", t.defense ? "Ja" : "", t.published || "", t.deadline || "", tijd(t),
-    t.qty || "", dec(t.value), t.value ? (t.currency || "") : "", t.pub, t.link, eurOf(t) ? Math.round(eurOf(t)) : "", adviceText(t), BID_LABEL[BIDS[t.pub]] || "",
+    t.qty || "", dec(t.value), t.value ? (t.currency || "") : "", t.pub, t.link, eurOf(t) ? Math.round(eurOf(t)) : "", adviceText(t), BID_LABEL[BIDS[t.pub]] || "", who(t.pub),
     t.changedAt ? (t.changes || []).map(CHANGE_NL).join("; ") : ""]);
   const csv = "\ufeff" + [head, ...rows].map(r => r.map(cell).join(";")).join("\r\n");
   const url = URL.createObjectURL(new Blob([csv], {type: "text/csv;charset=utf-8"}));
@@ -897,9 +905,8 @@ $("vTop").addEventListener("click", () => setView("top"));
 document.addEventListener("change", e => {
   const sel = e.target.closest && e.target.closest("select.bidsel"); if(!sel) return;
   const pub = sel.dataset.bid, status = sel.value;
-  fetch("/api/admin", {method:"POST", credentials:"same-origin", headers:{"Content-Type":"application/json"}, body:JSON.stringify({action:"bid", pub, status})})
-    .then(r => { if(!r.ok) throw new Error(); if(status) BIDS[pub] = status; else delete BIDS[pub]; sel.className = "bidsel " + status; tenders.forEach(t => { if(t.pub === pub) delete t._score; }); })
-    .catch(() => alert("Opslaan van de status lukte niet."));
+  setBid(pub, status).then(() => { sel.className = "bidsel " + status; sel.title = who(pub) ? "Gezet door " + who(pub) : "Zet de inschrijfstatus"; })
+    .catch(err => { alert(err.message); render(); });
 });
 $("fTopic").addEventListener("change", e => { state.topic = e.target.value; render(); });
 $("fLang").addEventListener("change", e => { showOriginal = e.target.value === "orig"; try { localStorage.setItem("tk-orig", showOriginal ? "1" : "0"); } catch(err) {} render(); });
@@ -982,6 +989,7 @@ function loadTenders(mode){   // mode: "start" (pagina geopend) of "check" (auto
       build = d.build || null;
       if(Array.isArray(d.nostar)) STARLINK_BLOCKED = new Set(d.nostar);
       BIDS = d.bids && typeof d.bids === "object" ? d.bids : {};
+      BIDBY = d.bidBy && typeof d.bidBy === "object" ? d.bidBy : {};
       tenders = Array.isArray(d.tenders) ? d.tenders : []; updated = d.updated; loaded = true; loadError = false; render(); if(TV) tvUpdate();
       const fresh = before ? tenders.filter(t => !before.has(t.pub) && isOpen(t)) : tenders.filter(t => isNew(t) && isOpen(t));
       const n = fresh.length, ms = TV ? 12000 : 6000;

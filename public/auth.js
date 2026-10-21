@@ -40,6 +40,7 @@ function openMode(){
 function showApp(who, admin){
   $("btnLogin").hidden = true; $("btnLogout").hidden = false;
   window.isAdmin = !!admin;
+  window.userEmail = who || "";
   document.body.classList.toggle("admin", !!admin);
   $("btnAdmin").hidden = !admin;
   $("authView").hidden = true;
