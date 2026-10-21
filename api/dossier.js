@@ -19,11 +19,11 @@ const RULES = `Harde regels:
 - Ontbreekt iets, schrijf dan precies: [ONTBREEKT: wat er nodig is]. Prijzen zonder bron in het bedrijfsdossier: [PRIJS INVULLEN].
 - Documenten die een handtekening vereisen: markeer met [HANDTEKENING NODIG].
 - Inschrijfdocumenten (offerte, technisch ontwerp, plan van aanpak, SLA, UEA) schrijf je in de taal van de aanbesteding; analyses en toelichtingen voor BroadbandEU in het Nederlands.
-- Antwoord uitsluitend met één geldig JSON-object volgens het gevraagde schema, zonder uitleg eromheen.`;
+- Lever je antwoord via de tool lever_onderdeel, als één JSON-object volgens het gevraagde schema. Houd teksten zakelijk en beknopt.`;
 
 const SECTIONS = '[{"kop": string, "tekst": string, "punten": [string]}]';
 const STEPS = {
-  analyse: { max: 8000, ask: `Analyseer de aanbesteding en beoordeel go/no-go voor BroadbandEU. Schema:
+  analyse: { max: 16000, ask: `Analyseer de aanbesteding en beoordeel go/no-go voor BroadbandEU. Schema:
 {"samenvatting": string, "opdrachtgever": string, "scope": string, "looptijd": string, "sluiting": string, "vragenDeadline": string, "taal": string,
  "gunningscriteria": [{"criterium": string, "weging": string}],
  "eisen": [{"id": string, "eis": string, "type": "knock-out"|"eis"|"wens", "bron": string}],
@@ -37,13 +37,13 @@ Behandel: uitgangssituatie, voorgestelde oplossing, architectuur, redundantie en
   aanpak: { max: 8000, ask: `Schrijf het plan van aanpak en de SLA- en supportbeschrijving. Schema:
 {"planVanAanpak": {"titel": string, "secties": ${SECTIONS}}, "sla": {"titel": string, "secties": ${SECTIONS}}}
 SLA-waarden (responstijden, beschikbaarheid) alleen uit het bedrijfsdossier of de eisen; anders [ONTBREEKT: …].` },
-  planning: { max: 8000, ask: `Maak de implementatieplanning, het prijzenblad en de commerciële offertebrief. Schema:
+  planning: { max: 12000, ask: `Maak de implementatieplanning, het prijzenblad en de commerciële offertebrief. Schema:
 {"planning": [{"fase": string, "activiteit": string, "startWeek": number, "duurWeken": number, "verantwoordelijke": string, "mijlpaal": string}],
  "prijzen": [{"post": string, "omschrijving": string, "eenheid": string, "aantal": number, "eenmalig": number|null, "maandelijks": number|null, "bron": string, "opmerking": string}],
  "aannames": [string], "contractwaardeSchatting": string, "margeToelichting": string,
  "offerteBrief": {"titel": string, "secties": ${SECTIONS}}}
 Prijzen alleen uit de prijslijst in het bedrijfsdossier (bron vermelden); onbekend = null met opmerking [PRIJS INVULLEN]. Altijd hardware mét abonnement.` },
-  compliance: { max: 10000, ask: `Maak de compliance-matrix: per eis uit de analyse of BroadbandEU voldoet. Schema:
+  compliance: { max: 16000, ask: `Maak de compliance-matrix: per eis uit de analyse of BroadbandEU voldoet. Schema:
 {"matrix": [{"id": string, "eis": string, "type": string, "voldoet": "ja"|"deels"|"nee"|"onbekend", "toelichting": string, "bewijs": string, "ontbreekt": string}],
  "referenties": [{"klant": string, "omschrijving": string, "jaar": string, "waarde": string, "contact": string, "bron": string}]}
 "bewijs" verwijst naar een document uit het bedrijfsdossier; zonder bewijs "ontbreekt" invullen. Referenties ALLEEN uit het bedrijfsdossier; geen gevonden = lege lijst.` },
@@ -75,7 +75,11 @@ async function claude(system, messages, maxTokens) {
   const r = await fetch('https://api.anthropic.com/v1/messages', {
     method: 'POST',
     headers: { 'x-api-key': k, 'anthropic-version': '2023-06-01', 'content-type': 'application/json' },
-    body: JSON.stringify({ model: MODEL(), max_tokens: maxTokens, system, messages, stream: true })
+    body: JSON.stringify({ model: MODEL(), max_tokens: maxTokens, system, messages, stream: true,
+      // het antwoord moet via deze tool: dan levert de AI altijd geldige, ontleedbare JSON
+      tools: [{ name: 'lever_onderdeel', description: 'Lever het gevraagde onderdeel van het inschrijfdossier aan als JSON-object volgens het schema in de opdracht.',
+        input_schema: { type: 'object', additionalProperties: true } }],
+      tool_choice: { type: 'tool', name: 'lever_onderdeel' } })
   });
   if (!r.ok) throw new Error('AI gaf een fout: ' + (await r.text()).slice(0, 300));
   // streamen: lange antwoorden lopen niet vast op een time-out
@@ -90,7 +94,8 @@ async function claude(system, messages, maxTokens) {
       const line = buf.slice(0, i).trim(); buf = buf.slice(i + 1);
       if (!line.startsWith('data:')) continue;
       let ev; try { ev = JSON.parse(line.slice(5)); } catch { continue; }
-      if (ev.type === 'content_block_delta' && ev.delta?.type === 'text_delta') text += ev.delta.text;
+      if (ev.type === 'content_block_delta' && ev.delta?.type === 'input_json_delta') text += ev.delta.partial_json || '';
+      else if (ev.type === 'content_block_delta' && ev.delta?.type === 'text_delta') text += ev.delta.text;
       else if (ev.type === 'message_start') usage = { ...usage, ...ev.message?.usage };
       else if (ev.type === 'message_delta') { usage = { ...usage, ...ev.usage }; stop = ev.delta?.stop_reason || stop; }
       else if (ev.type === 'error') throw new Error('AI gaf een fout: ' + (ev.error?.message || 'onbekend'));
@@ -99,10 +104,32 @@ async function claude(system, messages, maxTokens) {
   return { text, usage, stop };
 }
 function parseJson(text) {
-  let t = text.trim().replace(/^```(?:json)?\s*/i, '').replace(/```\s*$/, '');
-  const a = t.indexOf('{'), b = t.lastIndexOf('}');
-  if (a < 0 || b < a) throw new Error('De AI gaf geen bruikbaar antwoord. Probeer deze stap opnieuw.');
-  return JSON.parse(t.slice(a, b + 1));
+  let t = String(text || '').trim().replace(/^```(?:json)?\s*/i, '').replace(/```\s*$/, '');
+  const a = t.indexOf('{');
+  if (a < 0) throw new Error('De AI gaf geen bruikbaar antwoord. Probeer deze stap opnieuw.');
+  t = t.slice(a);
+  try { return JSON.parse(t); } catch {}
+  // reparatie: komma's voor sluithaken weg, en een afgekapt antwoord netjes afsluiten
+  let r = t.replace(/,\s*([}\]])/g, '$1');
+  try { return JSON.parse(r); } catch {}
+  const stack = []; let inStr = false, esc = false, lastSafe = 0;
+  for (let i = 0; i < r.length; i++) {
+    const c = r[i];
+    if (inStr) { if (esc) esc = false; else if (c === '\\') esc = true; else if (c === '"') inStr = false; continue; }
+    if (c === '"') inStr = true;
+    else if (c === '{' || c === '[') stack.push(c === '{' ? '}' : ']');
+    else if (c === '}' || c === ']') { stack.pop(); lastSafe = i + 1; }
+    else if (c === ',') lastSafe = i;
+  }
+  if (stack.length || inStr) {
+    // terug naar het laatste complete element en alles wat nog open staat sluiten
+    let cut = r.slice(0, lastSafe).replace(/,\s*$/, '');
+    const st = []; let s2 = false, e2 = false;
+    for (const c of cut) { if (s2) { if (e2) e2 = false; else if (c === '\\') e2 = true; else if (c === '"') s2 = false; continue; }
+      if (c === '"') s2 = true; else if (c === '{') st.push('}'); else if (c === '[') st.push(']'); else if (c === '}' || c === ']') st.pop(); }
+    try { const o = JSON.parse(cut + st.reverse().join('')); o._afgekapt = true; return o; } catch {}
+  }
+  throw new Error('Het antwoord van de AI was onvolledig. Klik op "Verder met de ontbrekende stappen" om het opnieuw te proberen.');
 }
 
 export async function GET(request) {

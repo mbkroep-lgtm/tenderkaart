@@ -863,7 +863,7 @@ function dosRender(){
     h += `<ol class="dos-steps"><li class="${dosState.read === "busy" ? "busy" : dosState.read === "ok" || has ? "ok" : ""}">Stukken lezen${dosState.readInfo ? ` <span class="ad-note">${esc(dosState.readInfo)}</span>` : ""}</li>` +
       DOS_STEPS.map(([k, label]) => { const st = dosState.busy === k ? "busy" : parts[k] ? "ok" : dosState.err[k] ? "err" : "";
         return `<li class="${st}">${esc(label)}${dosState.err[k] ? ` <span class="err">${esc(dosState.err[k])}</span>` : ""}</li>`; }).join("") + `</ol>`;
-    if(!running && has && done < DOS_STEPS.length && DOS_TEXT[t.pub]) h += `<button type="button" class="btn" id="dosResume">Verder met de ontbrekende stappen</button>`;
+    if(!running && done < DOS_STEPS.length && DOS_TEXT[t.pub]) h += `<button type="button" class="btn primary" id="dosResume">${has ? "Verder met de ontbrekende stappen" : "Opnieuw proberen"}</button>`;
     else if(!running && has && done < DOS_STEPS.length) h += `<p class="ad-note">Om de ontbrekende stappen te maken: kies "Opnieuw maken" en upload de stukken nog eens.</p>`;
   }
   box.innerHTML = h;
