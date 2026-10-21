@@ -18,7 +18,9 @@ const BRANDS = ['starlink', 'OneWeb', 'Project Kuiper', 'Amazon Leo']; // los "K
 const PHRASES = ['LEO satellite', 'LEO satellites', 'LEO satellite internet', 'LEO connectivity', 'LEO-satelliet', 'LEO-satellieten',
   'LEO-Satellit', 'LEO-Satelliten', 'satellite LEO', 'satellites LEO', 'satélite LEO', 'satélites LEO', 'satellite a bassa orbita',
   'satelliti LEO', 'satelity LEO', 'satélite de órbita baixa', 'satélites de órbita baixa', 'satélite de baixa órbita',
-  'satélites de baixa órbita', 'órbita terrestre baixa', 'low earth orbit satellite', 'low earth orbit satellites', 'low-earth orbit satellite'];
+  'satélites de baixa órbita', 'órbita terrestre baixa', 'satelital de órbita baja', 'satelitales de órbita baja', 'satélites de órbita baja',
+  'órbita terrestre baja', 'satelity niskoorbitowe', 'satelitarny LEO', 'niskiej orbicie okołoziemskiej', 'sateliți LEO', 'orbită joasă',
+  'LEO-Satellitenkommunikation', 'lavbane-satellitt', 'LEO-satellitt', 'low earth orbit satellite', 'low earth orbit satellites', 'low-earth orbit satellite'];
 const esc = s => s.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
 const LEO_RE = new RegExp('(^|[^\\p{L}])(' + [...BRANDS, ...PHRASES].map(t => esc(t).replace(/[ -]/g, '[ -]?')).join('|') + ')([^\\p{L}]|$)', 'iu');
 // Ruimtevaarthardware en andere zaken die niets met verbindingen voor klanten te maken hebben.
@@ -608,6 +610,347 @@ function dmy(s) { // "26-Oct-26" → 2026-10-26 (zonder tijdzoneverschuiving)
   const y = m[3].length === 2 ? 2000 + Number(m[3]) : Number(m[3]);
   return `${y}-${String(MON[m[2].toLowerCase()]).padStart(2, '0')}-${m[1].padStart(2, '0')}`;
 }
+// ================= Wereldwijde bronnen (oktober 2026) =================
+// Elke bron: zoekt zelf op Starlink/LEO, of loopt de nieuwe publicaties per dag door en filtert met LEO_RE.
+const stripTags = s => String(s || '').replace(/<[^>]+>/g, ' ').replace(/&nbsp;/g, ' ').replace(/&quot;/g, '"').replace(/&amp;/g, '&').replace(/&#39;/g, "'").replace(/\s+/g, ' ').trim();
+const dmyDash = s => { const m = String(s || '').match(/(\d{2})[-.\/](\d{2})[-.\/](\d{4})/); return m ? `${m[3]}-${m[2]}-${m[1]}` : ''; };
+const leo = (...parts) => LEO_RE.test(parts.filter(Boolean).join(' '));
+// per dag doorlopen: dagen vanaf de laatst afgeronde dag t/m gisteren, met een tijdslimiet
+const DONE = {};
+async function byDay(name, firstDays, budgetMin, fn) {
+  const t0 = Date.now(), yesterday = isoDay(+NOW - DAY);
+  let done = (!reset && old.sources[name]?.doneUntil) || '';
+  let day = done ? isoDay(Date.parse(done) + DAY) : isoDay(+NOW - firstDays * DAY);
+  const out = [];
+  while (day <= yesterday && Date.now() - t0 < budgetMin * 60e3) {
+    out.push(...await fn(day));
+    done = day; day = isoDay(Date.parse(day) + DAY);
+  }
+  DONE[name] = done;
+  return { out, behind: done < yesterday ? ` (nog bezig met inhalen, klaar t/m ${done || '-'})` : '' };
+}
+
+// Noorwegen: Doffin (zoekt zelf)
+async function fetchDoffin() {
+  const byId = new Map();
+  for (const term of ['starlink', 'oneweb', 'LEO satellitt', 'lavbane satellitt']) {
+    const r = await fetch('https://api.doffin.no/webclient/api/v2/search-api/search', {
+      method: 'POST', headers: { ...UA, 'Content-Type': 'application/json', Accept: 'application/json' }, signal: AbortSignal.timeout(60000),
+      body: JSON.stringify({ numHitsPerPage: 100, page: 1, searchString: term, sortBy: 'PUBLICATION_DATE_DESC', facets: {} })
+    });
+    if (!r.ok) throw new Error(`api.doffin.no gaf ${r.status}`);
+    for (const h of (await r.json()).hits || []) byId.set(h.id, h);
+  }
+  const out = [];
+  for (const h of byId.values()) {
+    if (!leo(h.heading, h.description)) continue;
+    const award = /AWARD|RESULT/i.test(h.type || ''), prior = /ADVISORY|PRIOR|PLANNING/i.test(h.type || '');
+    out.push({
+      pub: 'NO-' + h.id, source: 'Doffin (Noorwegen)', title: h.heading || '(uten tittel)', buyer: h.buyer?.[0]?.name || '', country: 'NO',
+      published: date(h.publicationDate || h.issueDate), deadline: award ? '' : date(h.deadline), deadlineAt: award ? '' : when(h.deadline),
+      type: h.type || 'Kunngjøring', kind: award ? 'award' : prior ? 'prior' : 'notice', cpv: [],
+      link: `https://doffin.no/notices/${h.id}`, value: num(h.estimatedValue?.amount), currency: h.estimatedValue?.currencyCode || 'NOK'
+    });
+  }
+  say('Doffin (Noorwegen)', `${byId.size} gevonden, ${out.length} over LEO.`);
+  return out.filter(isFresh);
+}
+
+// Portugal: BASE (zoekt zelf)
+async function fetchBase() {
+  const byId = new Map();
+  for (const term of ['starlink', 'oneweb', 'órbita baixa']) {
+    const r = await fetch('https://www.base.gov.pt/Base4/pt/resultados/', {
+      method: 'POST', headers: { ...UA, 'Content-Type': 'application/x-www-form-urlencoded' }, signal: AbortSignal.timeout(60000),
+      body: `type=search_anuncios&version=133.0&query=${encodeURIComponent('texto=' + term)}&sort=-drPublicationDate&page=0&size=100`
+    });
+    if (!r.ok) throw new Error(`base.gov.pt gaf ${r.status}`);
+    const d = JSON.parse((await r.text()).trim() || '{}');
+    for (const x of d.items || []) byId.set(x.id, x);
+  }
+  const out = [];
+  for (const x of byId.values()) {
+    if (!leo(x.contractDesignation)) continue;
+    const dl = dmyDash(x.proposalDeadline);
+    out.push({
+      pub: 'PT-' + x.id, source: 'BASE (Portugal)', title: x.contractDesignation || '(sem título)', buyer: x.contractingEntity || '', country: 'PT',
+      published: dmyDash(x.drPublicationDate), deadline: dl, type: x.contractingProcedureType || x.type || 'Anúncio', kind: 'notice', cpv: [],
+      link: `https://www.base.gov.pt/Base4/pt/detalhe/?type=anuncios&id=${x.id}`,
+      value: num(String(x.basePrice || '').replace(/\./g, '').replace(',', '.')), currency: 'EUR'
+    });
+  }
+  say('BASE (Portugal)', `${byId.size} gevonden, ${out.length} over LEO.`);
+  return out.filter(isFresh);
+}
+
+// Ecuador: SERCOP open data (zoekt zelf; strenge limiet, dus rustig aan)
+async function fetchEcuador() {
+  const byId = new Map(), y = NOW.getUTCFullYear();
+  for (const year of [y, y - 1]) for (const term of ['starlink', 'oneweb']) {
+    const d = await getJson(`https://datosabiertos.compraspublicas.gob.ec/PLATAFORMA/api/search_ocds?year=${year}&search=${encodeURIComponent(term)}`, { headers: UA }, 4);
+    for (const x of d.data || []) byId.set(x.ocid || x.id, x);
+    await sleep(4000);
+  }
+  const out = [];
+  for (const x of byId.values()) {
+    if (!leo(x.description, x.title)) continue;
+    out.push({
+      pub: 'EC-' + (x.ocid || x.id), source: 'SERCOP (Ecuador)', title: x.description || x.title || '(sin título)', buyer: x.buyer || '', country: 'EC',
+      published: date(x.date), deadline: '', type: x.internal_type || 'Proceso', kind: 'notice', cpv: [],
+      link: `https://datosabiertos.compraspublicas.gob.ec/PLATAFORMA/ocds/${encodeURIComponent(x.ocid || '')}`,
+      value: num(x.amount), currency: 'USD'
+    });
+  }
+  say('SERCOP (Ecuador)', `${byId.size} gevonden, ${out.length} over LEO. Eén keer per dag (strenge limiet).`);
+  return out.filter(isFresh);
+}
+
+// Polen: BZP (nationale aanbestedingen onder de EU-drempel), per dag
+async function fetchBzp() {
+  const { out, behind } = await byDay('BZP (Polen)', 14, 6, async day => {
+    const res = [];
+    for (let p = 1; p <= 20; p++) {
+      const d = await getJson(`https://ezamowienia.gov.pl/mo-board/api/v1/notice?NoticeType=ContractNotice&PublicationDateFrom=${day}&PublicationDateTo=${day}&PageSize=500&PageNumber=${p}`, { headers: UA });
+      const list = Array.isArray(d) ? d : [];
+      for (const x of list) {
+        if (!leo(x.orderObject)) continue;
+        res.push({
+          pub: 'PL-' + (x.bzpNumber || x.noticeNumber), source: 'BZP (Polen)', title: x.orderObject || '(bez tytułu)', buyer: x.organizationName || '', country: 'PL',
+          published: date(x.publicationDate), deadline: date(x.submittingOffersDate), deadlineAt: when(x.submittingOffersDate),
+          type: 'Ogłoszenie o zamówieniu', kind: 'notice', cpv: String(x.cpvCode || '').match(/\d{8}/g) || [],
+          link: x.tenderId ? `https://ezamowienia.gov.pl/mp-client/tenders/${x.tenderId}` : 'https://ezamowienia.gov.pl/mo-client-board/bzp/list',
+          value: null, currency: 'PLN'
+        });
+      }
+      if (list.length < 500) break;
+    }
+    return res;
+  });
+  say('BZP (Polen)', `${out.length} over LEO in de nieuwe publicaties${behind}.`);
+  return out;
+}
+
+// Roemenië: SEAP / e-licitatie (alle nieuwe aankondigingen sinds de vorige ronde)
+async function fetchSeap() {
+  const name = 'SEAP (Roemenië)';
+  const since = (!reset && old.sources[name]?.since) || new Date(NOW - 21 * DAY).toISOString();
+  const out = []; let scanned = 0;
+  for (let p = 0; p < 200; p++) {
+    const r = await fetch('https://www.e-licitatie.ro/api-pub/NoticeCommon/GetCNoticeList/', {
+      method: 'POST', signal: AbortSignal.timeout(60000),
+      headers: { ...UA, 'Content-Type': 'application/json;charset=UTF-8', Referer: 'https://www.e-licitatie.ro/pub/notices/contract-notices/list/0/0' },
+      body: JSON.stringify({ sysNoticeTypeIds: [], sortProperties: [], pageSize: 100, hasUnansweredQuestions: false, startPublicationDate: since, sysProcedureStateId: null, pageIndex: p })
+    });
+    if (!r.ok) throw new Error(`e-licitatie.ro gaf ${r.status}`);
+    const items = (await r.json()).items || [];
+    for (const x of items) {
+      scanned++;
+      if (!leo(x.contractTitle)) continue;
+      const dl = x.maxTenderReceiptDeadline || x.minTenderReceiptDeadline;
+      out.push({
+        pub: 'RO-' + (x.noticeNo || x.cNoticeId), source: name, title: x.contractTitle || '(fără titlu)',
+        buyer: String(x.contractingAuthorityNameAndFN || '').replace(/^\d+\s*-\s*/, ''), country: 'RO',
+        published: date(x.noticeStateDate), deadline: date(dl), deadlineAt: when(dl),
+        type: x.sysProcedureType?.text || 'Anunț de participare', kind: 'notice', cpv: String(x.cpvCodeAndName || '').match(/\d{8}/g) || [],
+        link: `https://www.e-licitatie.ro/pub/notices/c-notice/v2/view/${x.cNoticeId}`, value: num(x.estimatedValueRon), currency: 'RON'
+      });
+    }
+    if (items.length < 100) break;
+  }
+  say(name, `${scanned} nieuwe aankondigingen bekeken, ${out.length} over LEO.`);
+  return out;
+}
+
+// Duitsland: oeffentlichevergabe.de (alle Duitse aankondigingen, ook onder de EU-drempel), per dag als zip
+async function fetchDeVergabe() {
+  const { execFileSync } = await import('node:child_process');
+  const { writeFile: wf, mkdtemp, rm, readdir, readFile: rf } = await import('node:fs/promises');
+  const os = await import('node:os');
+  const { out, behind } = await byDay('oeffentlichevergabe.de', 10, 8, async day => {
+    const r = await fetch(`https://oeffentlichevergabe.de/api/notice-exports?pubDay=${day}&format=ocds.zip`, { headers: UA, signal: AbortSignal.timeout(120000) });
+    if (r.status === 404 || r.status === 204) return [];
+    if (!r.ok) throw new Error(`oeffentlichevergabe.de gaf ${r.status}`);
+    const dir = await mkdtemp(os.tmpdir() + '/dev-');
+    try {
+      await wf(dir + '/x.zip', Buffer.from(await r.arrayBuffer()));
+      execFileSync('unzip', ['-q', '-o', dir + '/x.zip', '-d', dir + '/x'], { stdio: 'ignore' });
+      const res = [];
+      for (const f of await readdir(dir + '/x')) {
+        let pkg; try { pkg = JSON.parse(await rf(`${dir}/x/${f}`, 'utf8')); } catch { continue; }
+        for (const rel of pkg.releases || []) {
+          const t = rel.tender || {};
+          const lots = t.lots || [];
+          if (!leo(t.title, t.description, ...lots.map(l => `${l.title || ''} ${l.description || ''}`))) continue;
+          const buyer = (rel.parties || []).find(p => (p.roles || []).includes('buyer'))?.name || t.procuringEntity?.name || '';
+          const end = t.tenderPeriod?.endDate || lots.map(l => l.tenderPeriod?.endDate).filter(Boolean).sort()[0] || '';
+          const award = (rel.tag || []).some(x => /award|contract/i.test(x));
+          res.push({
+            pub: 'DE-' + rel.id, source: 'oeffentlichevergabe.de', title: t.title || '(ohne Titel)', buyer, country: 'DE',
+            published: date(rel.date), deadline: award ? '' : date(end), deadlineAt: award ? '' : when(end),
+            type: award ? 'Vergebener Auftrag' : (t.procurementMethodDetails || 'Bekanntmachung'), kind: award ? 'award' : 'notice',
+            cpv: (t.items || []).map(i => i.classification?.id).filter(Boolean),
+            link: `https://oeffentlichevergabe.de/ui/de/search/details?noticeId=${rel.id}`,
+            value: num(t.value?.amount), currency: t.value?.currency || 'EUR'
+          });
+        }
+      }
+      return res;
+    } finally { await rm(dir, { recursive: true, force: true }); }
+  });
+  say('oeffentlichevergabe.de', `${out.length} over LEO in de nieuwe Duitse aankondigingen${behind}.`);
+  return out;
+}
+
+// Zuid-Afrika: eTenders (OCDS), per dag
+async function fetchZaTenders() {
+  const { out, behind } = await byDay('eTenders (Zuid-Afrika)', 21, 5, async day => {
+    const res = [];
+    for (let p = 1; p <= 10; p++) {
+      const d = await getJson(`https://ocds-api.etenders.gov.za/api/OCDSReleases?PageNumber=${p}&PageSize=1000&dateFrom=${day}&dateTo=${day}`, { headers: UA });
+      const rels = d.releases || [];
+      for (const rel of rels) {
+        const t = rel.tender || {};
+        if (!leo(t.title, t.description)) continue;
+        res.push({
+          pub: 'ZA-' + (t.id || rel.ocid), source: 'eTenders (Zuid-Afrika)', title: t.description || t.title || '(no title)',
+          buyer: rel.buyer?.name || t.procuringEntity?.name || '', country: 'ZA',
+          published: date(t.tenderPeriod?.startDate || rel.date), deadline: date(t.tenderPeriod?.endDate), deadlineAt: when(t.tenderPeriod?.endDate),
+          type: t.procurementMethodDetails || 'Tender', kind: 'notice', cpv: [],
+          link: t.documents?.[0]?.url || 'https://www.etenders.gov.za/Home/opportunities?id=1', value: num(t.value?.amount), currency: 'ZAR'
+        });
+      }
+      if (!d.links?.next || rels.length < 1000) break;
+    }
+    return res;
+  });
+  say('eTenders (Zuid-Afrika)', `${out.length} over LEO in de nieuwe aankondigingen${behind}.`);
+  return out;
+}
+
+// Kenia: PPIP (lijst met alle lopende tenders, ±45 pagina's)
+async function fetchKenya() {
+  const out = []; let scanned = 0, pages = 1;
+  for (let p = 1; p <= Math.min(pages, 120); p++) {
+    const d = await getJson(`https://tenders.go.ke/api/active-tenders?page=${p}`, { headers: UA }, 2);
+    pages = d.last_page || 1;
+    for (const x of d.data || []) {
+      scanned++;
+      if (!leo(x.title, x.description)) continue;
+      out.push({
+        pub: 'KE-' + x.id, source: 'PPIP (Kenia)', title: x.title || '(no title)', buyer: x.pe?.name || x.created_by?.pe?.name || '', country: 'KE',
+        published: date(x.published_at), deadline: date(x.close_at), deadlineAt: when(x.close_at ? x.close_at.replace(' ', 'T') + '+03:00' : ''),
+        type: 'Tender', kind: 'notice', cpv: [], link: `https://tenders.go.ke/tenders/${x.id}`, value: null, currency: 'KES'
+      });
+    }
+    await sleep(300);
+  }
+  say('PPIP (Kenia)', `${scanned} lopende tenders bekeken, ${out.length} over LEO. Eén keer per dag.`);
+  return out;
+}
+
+// Dominicaanse Republiek: DGCP open data (nieuwste eerst; tot de vorige ronde)
+async function fetchDgcp() {
+  const name = 'DGCP (Dominicaanse Rep.)';
+  const since = (!reset && old.sources[name]?.since) || new Date(NOW - 45 * DAY).toISOString();
+  const out = []; let scanned = 0;
+  for (let p = 1; p <= 60; p++) {
+    const d = await getJson(`https://datosabiertos.dgcp.gob.do/api-dgcp/v1/procesos?page=${p}&limit=100`, { headers: UA });
+    const list = d.payload?.content || [];
+    let older = 0;
+    for (const x of list) {
+      scanned++;
+      if ((x.fecha_publicacion || '') < since) older++;
+      if (!leo(x.titulo, x.descripcion)) continue;
+      out.push({
+        pub: 'DO-' + x.codigo_proceso, source: name, title: x.titulo || x.descripcion || '(sin título)', buyer: x.unidad_compra || '', country: 'DO',
+        published: date(x.fecha_publicacion), deadline: date(x.fecha_fin_recepcion_ofertas), deadlineAt: when(x.fecha_fin_recepcion_ofertas),
+        type: x.modalidad || 'Proceso', kind: /adjudicad/i.test(x.estado_proceso || '') ? 'award' : 'notice', cpv: [],
+        link: x.url || 'https://comunidad.comprasdominicana.gob.do/', value: num(x.monto_estimado), currency: x.divisa || 'DOP'
+      });
+    }
+    if (!list.length || older === list.length) break;
+  }
+  say(name, `${scanned} processen bekeken, ${out.length} over LEO.`);
+  return out;
+}
+
+// Kazachstan: goszakup (zoekt zelf, webpagina)
+async function fetchGoszakup() {
+  const byId = new Map();
+  for (const term of ['starlink', 'старлинк', 'oneweb']) {
+    const html = await getText(`https://goszakup.gov.kz/ru/search/lots?filter%5Bname%5D=${encodeURIComponent(term)}&count_record=200&page=1`);
+    const body = html.split('id="search-result"')[1] || '';
+    for (const row of body.split('<tr>').slice(2)) {
+      const cells = row.split(/<td[^>]*>/).slice(1);
+      const a = row.match(/href="\/ru\/announce\/index\/(\d+)"[^>]*>\s*<strong>([^<]+)<\/strong>/);
+      if (!a || cells.length < 6) continue;
+      const lotNo = stripTags(cells[0]);
+      byId.set(lotNo, {
+        lotNo, announce: a[1], title: stripTags(cells[2]).replace(/История$/, '').trim() || stripTags(a[2]),
+        buyer: (row.match(/<b>Заказчик:<\/b>\s*([^<]+)/) || [])[1] || '', amount: stripTags(cells[4]).replace(/\s/g, ''),
+        method: stripTags(cells[5]), status: stripTags(cells[6] || '')
+      });
+    }
+    await sleep(1000);
+  }
+  const out = [];
+  for (const x of byId.values()) {
+    if (!leo(x.title)) continue;
+    const closed = /не состоял|отмен|заверш|итоги/i.test(x.status);
+    const award = /итоги|заключен/i.test(x.status);
+    out.push({
+      pub: 'KZ-' + x.lotNo, source: 'Goszakup (Kazachstan)', title: x.title, buyer: x.buyer.trim(), country: 'KZ',
+      published: '', deadline: '', type: `${x.method} · ${x.status}`, kind: award ? 'award' : 'notice', cpv: [],
+      link: `https://goszakup.gov.kz/ru/announce/index/${x.announce}`, value: num(x.amount), currency: 'KZT',
+      ...(closed ? { closedByStatus: true } : {})
+    });
+  }
+  // geen datums in de zoekresultaten: open als de status nog "opgenomen" is, anders gesloten
+  for (const t of out) { const keepOpen = !t.closedByStatus; delete t.closedByStatus; t.deadline = keepOpen ? isoDay(+NOW + 7 * DAY) : isoDay(+NOW - DAY); }
+  say('Goszakup (Kazachstan)', `${byId.size} loten gevonden, ${out.length} over LEO. Zonder datums: status bepaalt open of gesloten.`);
+  return out;
+}
+
+// Spanje: Plataforma de Contratación del Sector Público (Atom-feed van alle wijzigingen)
+async function fetchPlacsp() {
+  const name = 'PLACSP (Spanje)';
+  const since = (!reset && old.sources[name]?.since) || new Date(NOW - 3 * DAY).toISOString();
+  let url = 'https://contrataciondelsectorpublico.gob.es/sindicacion/sindicacion_643/licitacionesPerfilesContratanteCompleto3.atom';
+  const byId = new Map(); let scanned = 0, pages = 0;
+  const tag = (s, re) => (s.match(re) || [])[1] || '';
+  while (url && pages < 30) {
+    pages++;
+    const xml = await getText(url);
+    const entries = xml.split('<entry>').slice(1);
+    let older = 0;
+    for (const e of entries) {
+      scanned++;
+      const updated = tag(e, /<updated>([^<]+)<\/updated>/);
+      if (updated && updated < since) older++;
+      const title = stripTags(tag(e, /<title>([\s\S]*?)<\/title>/));
+      const summary = stripTags(tag(e, /<summary[^>]*>([\s\S]*?)<\/summary>/));
+      if (!leo(title, summary)) continue;
+      const id = tag(e, /<id>([^<]+)<\/id>/);
+      const end = tag(e, /<cac:TenderSubmissionDeadlinePeriod>[\s\S]*?<cbc:EndDate>([^<]+)<\/cbc:EndDate>/);
+      const endTime = tag(e, /<cac:TenderSubmissionDeadlinePeriod>[\s\S]*?<cbc:EndTime>([^<]+)<\/cbc:EndTime>/);
+      const status = tag(e, /<cbc-place-ext:ContractFolderStatusCode[^>]*>([^<]+)</);
+      const award = /ADJ|RES/.test(status);
+      byId.set(id, {
+        pub: 'ES-' + id.split('/').pop(), source: name, title, buyer: stripTags(tag(e, /<cac-place-ext:LocatedContractingParty>[\s\S]*?<cbc:Name>([^<]+)<\/cbc:Name>/)), country: 'ES',
+        published: date(updated), deadline: award ? '' : end, deadlineAt: award || !end ? '' : when(`${end}T${endTime || '23:59:00'}+01:00`),
+        type: status ? `Estado ${status}` : 'Licitación', kind: award ? 'award' : status === 'PRE' ? 'prior' : 'notice',
+        cpv: [...e.matchAll(/<cbc:ItemClassificationCode[^>]*>(\d{8})</g)].map(m => m[1]),
+        link: tag(e, /<link href="([^"]+)"/) || 'https://contrataciondelsectorpublico.gob.es/',
+        value: num(tag(e, /<cbc:EstimatedOverallContractAmount[^>]*>([^<]+)</) || tag(e, /<cbc:TaxExclusiveAmount[^>]*>([^<]+)</)), currency: 'EUR'
+      });
+    }
+    if (older && older === entries.length) break;
+    url = tag(xml, /<link href="([^"]+)" rel="next"/);
+  }
+  say(name, `${scanned} wijzigingen bekeken (${pages} pagina's), ${byId.size} over LEO.`);
+  return [...byId.values()];
+}
+
 // UNDP: lijst met lopende inkoopberichten (webpagina)
 async function fetchUndp() {
   const html = await getText('https://procurement-notices.undp.org/search.cfm');
@@ -726,8 +1069,22 @@ const SOURCES = [
   ['CanadaBuys', () => fetchCanadaBuys()],
   ['AusTender', () => fetchAusTender(ausSince)],
   ['UNDP', () => fetchUndp()],
-  ['PCC (Taiwan)', () => fetchTaiwan()]
+  ['PCC (Taiwan)', () => fetchTaiwan()],
+  ['Doffin (Noorwegen)', () => fetchDoffin()],
+  ['BASE (Portugal)', () => fetchBase()],
+  ['BZP (Polen)', () => fetchBzp()],
+  ['SEAP (Roemenië)', () => fetchSeap()],
+  ['oeffentlichevergabe.de', () => fetchDeVergabe()],
+  ['PLACSP (Spanje)', () => fetchPlacsp()],
+  ['eTenders (Zuid-Afrika)', () => fetchZaTenders()],
+  ['DGCP (Dominicaanse Rep.)', () => fetchDgcp()],
+  ['Goszakup (Kazachstan)', () => fetchGoszakup()]
 ];
+// bronnen met een strenge limiet of veel pagina's: één keer per ~20 uur
+const dailyDue = name => { const o = old.sources[name] || {}; const last = Date.parse(o.okAt || (o.ok ? o.at : 0) || 0) || 0; return reset || !o.ok || NOW - last > 20 * 3600e3; };
+for (const [name, fn] of [['PPIP (Kenia)', () => fetchKenya()], ['SERCOP (Ecuador)', () => fetchEcuador()]]) {
+  if (dailyDue(name)) SOURCES.push([name, fn]); else console.log(`${name}: vandaag al opgehaald, overgeslagen.`);
+}
 const SAM_KEY = process.env.SAM_API_KEY || '';
 const samOld = old.sources['SAM.gov'] || {};
 const lastSamOk = Date.parse(samOld.okAt || (samOld.ok && !samOld.quotaUntil ? samOld.at : 0) || 0) || 0;
@@ -763,7 +1120,7 @@ for (const [name, fn] of SOURCES) {
     // bij een reset: berichten die al bekend waren, niet opnieuw als "nieuw" markeren
     if (reset) for (const t of fresh) { const p = prevById.get(t.pub); if (p?.firstSeen) t.firstSeen = p.firstSeen; }
     result.push(...fresh, ...carry);
-    sourceInfo[name] = { ok: true, at: nowIso, count: fresh.length, note: NOTES[name] || '', ...(['Find a Tender', 'AusTender'].includes(name) ? { since: new Date(NOW - 2 * 3600e3).toISOString() } : {}), ...(name === 'PNCP (Brazilië)' ? { doneUntil: pncpDone } : {}), ...(name === 'SAM.gov' ? { okAt: nowIso } : {}) };
+    sourceInfo[name] = { ok: true, at: nowIso, count: fresh.length, note: NOTES[name] || '', ...(['Find a Tender', 'AusTender', 'SEAP (Roemenië)', 'DGCP (Dominicaanse Rep.)', 'PLACSP (Spanje)'].includes(name) ? { since: new Date(NOW - 2 * 3600e3).toISOString() } : {}), ...(DONE[name] !== undefined ? { doneUntil: DONE[name] } : {}), ...(['PPIP (Kenia)', 'SERCOP (Ecuador)'].includes(name) ? { okAt: nowIso } : {}), ...(name === 'PNCP (Brazilië)' ? { doneUntil: pncpDone } : {}), ...(name === 'SAM.gov' ? { okAt: nowIso } : {}) };
   } catch (e) {
     console.error(`${name} mislukt, bestaande berichten blijven staan:`, e.message);
     result.push(...previous);
@@ -814,7 +1171,8 @@ function extractQty(text) {
 // Met DEEPL_API_KEY: DeepL (beste kwaliteit, gratis tot 500.000 tekens per maand).
 // Zonder sleutel: MyMemory (gratis, beperkt aantal tekens per dag; wat niet lukt, wordt de volgende ronde vertaald).
 const DUTCH_SOURCES = new Set(['TED', 'TenderNed']);
-const SRC_LANG = { 'Prozorro': 'uk', 'SECOP (Colombia)': 'es', 'PNCP (Brazilië)': 'pt', 'BOAMP': 'fr', 'SIMAP (Zwitserland)': 'de', 'PCC (Taiwan)': 'zh-TW',
+const SRC_LANG = { 'Doffin (Noorwegen)': 'no', 'BASE (Portugal)': 'pt', 'SERCOP (Ecuador)': 'es', 'BZP (Polen)': 'pl', 'SEAP (Roemenië)': 'ro',
+  'oeffentlichevergabe.de': 'de', 'PLACSP (Spanje)': 'es', 'DGCP (Dominicaanse Rep.)': 'es', 'Goszakup (Kazachstan)': 'ru', 'PPIP (Kenia)': 'en', 'eTenders (Zuid-Afrika)': 'en', 'Prozorro': 'uk', 'SECOP (Colombia)': 'es', 'PNCP (Brazilië)': 'pt', 'BOAMP': 'fr', 'SIMAP (Zwitserland)': 'de', 'PCC (Taiwan)': 'zh-TW',
   'Contracts Finder': 'en', 'Find a Tender': 'en', 'SAM.gov': 'en', 'CanadaBuys': 'en', 'AusTender': 'en' };
 // Met DeepL-sleutel: oudere MyMemory-vertalingen eenmalig opnieuw vertalen met DeepL (betere kwaliteit).
 const TR_ENGINE = process.env.DEEPL_API_KEY ? 'DeepL' : 'MyMemory';
