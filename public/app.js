@@ -42,6 +42,9 @@ function fmtMoney(n, cur){
 // ---------- Status ----------
 let tenders = [];
 let updated = null;
+let view = "all";
+try { if(localStorage.getItem("tk-view") === "top") view = "top"; } catch(e) {}
+function setView(v){ view = v; try { localStorage.setItem("tk-view", v); } catch(e) {} render(); }
 const state = { q:"", status:"open", country:"", sort:"deadline", minValue:0, source:"", def:"", hw:"", topic:"" };
 // Alleen hardware? Uit de (vertaalde) titel: apparatuur zonder abonnement, dienst, installatie of beheer.
 // Zonder duidelijke woorden beslist de CPV-code: 32… = apparatuur, 64…/72…/50… = diensten.
@@ -107,6 +110,7 @@ function filtered(ignoreCountry){
     if(effStatus() === "open" && !isOpen(t)) return false;
     if(state.status === "soon" && st !== "soon") return false;
     if(state.status === "new" && (!isNew(t) || !isOpen(t))) return false;
+    if(state.status === "changed" && !isRecent(t)) return false;
     if(state.status === "prior" && st !== "prior") return false;
     if(state.status === "awarded" && st !== "awarded") return false;
     if(state.minValue > 0 && !(t.value >= state.minValue)) return false;
@@ -613,7 +617,7 @@ function titleHtml(t){
 const hideBtn = t => window.isAdmin ? `<button type="button" class="hide-btn" data-hide="${esc(t.pub)}" title="Verbergen voor iedereen">Verberg</button>` : "";
 function card(t){
   return `<article class="t ${statusOf(t)}">${hideBtn(t)}<h3>${scoreHtml(t)}${newHtml(t)}${titleHtml(t)}</h3>
-    <div class="meta"><span class="src">${esc(t.source || "TED")}</span>${defHtml(t)}<span>${esc(t.country ? cname(t.country) : (t.countryName || "Onbekend land"))}</span>${t.buyer ? `<span>${esc(t.buyer)}</span>` : ""}</div>
+    <div class="meta"><span class="src">${esc(t.source || "TED")}</span>${defHtml(t)}${changedHtml(t)}${bidHtml(t)}<span>${esc(t.country ? cname(t.country) : (t.countryName || "Onbekend land"))}</span>${t.buyer ? `<span>${esc(t.buyer)}</span>` : ""}</div>
     <div class="meta"><span class="dl">${dlText(t)}</span>${valHtml(t)}<span class="mono">Gepubl. ${fmt(t.published)}</span><span class="mono">${esc(t.pub)}</span>${t.type ? `<span>${esc(t.type)}</span>` : ""}</div></article>`;
 }
 function panelCard(t){
@@ -628,13 +632,28 @@ const SORTERS = {
   country: (a,b) => cname(a.country).localeCompare(cname(b.country), "nl") || (a.deadline || "9999").localeCompare(b.deadline || "9999")
 };
 let loaded = false, loadError = false;
+// nieuw of gewijzigd in de laatste 24 uur
+const isRecent = t => { const dayAgo = new Date(Date.now() - 864e5).toISOString();
+  return (t.firstSeen && t.firstSeen > dayAgo && t.firstSeen > "2001") || (t.changedAt && t.changedAt > dayAgo); };
+const CHANGE_NL = c => c.what === "deadline" ? `sluitingsdatum ${fmt(c.from)} → ${fmt(c.to)}` : c.what === "value" ? `waarde ${c.from} → ${c.to}` : c.what === "award" ? "gegund" : c.what;
+const changedHtml = t => { if(!t.changedAt || Date.now() - Date.parse(t.changedAt) > 7 * 864e5) return "";
+  const txt = (t.changes || []).slice(-3).map(c => `${new Date(c.at).toLocaleDateString("nl-NL", {day:"numeric", month:"short"})}: ${CHANGE_NL(c)}`).join("\n");
+  return `<span class="deftag chg" title="${esc(txt || "Gewijzigd")}">Gewijzigd</span>`; };
+const bidHtml = t => {
+  const st = BIDS[t.pub] || "";
+  if(window.isAdmin) return `<select class="bidsel ${st}" data-bid="${esc(t.pub)}" aria-label="Inschrijfstatus"><option value="">Status…</option>${Object.entries(BID_LABEL).map(([k, v]) => `<option value="${k}"${k === st ? " selected" : ""}>${v}</option>`).join("")}</select>`;
+  return st ? `<span class="deftag bid ${st}">${BID_LABEL[st]}</span>` : "";
+};
+
 // ---------- Categorieën en commerciële score ----------
 const CAT_LABEL = { leo:"LEO / Starlink", sat:"Satelliet", mobile:"4G/5G", microwave:"Straalverbinding", fiber:"Glasvezel", wifi:"Wi-Fi",
   managed:"Managed / SD-WAN", hybrid:"Hybride / backup", temp:"Tijdelijk / nood", maritime:"Maritiem", industrial:"Industrieel / IoT", haps:"HAPS",
   infra:"Infrastructuur", need:"Behoefte", other:"In beschrijving" };
 const CAT_PRIO = { leo:1, sat:1, mobile:1, microwave:1, managed:1, hybrid:1, temp:1, need:0.9, fiber:0.75, wifi:0.75, maritime:0.75, industrial:0.75, infra:0.75, haps:0.5, other:0.5 };
 // Landen waar Starlink (nog) niet beschikbaar is (medio 2026; zelfde lijst als scripts/terms.mjs)
-const STARLINK_BLOCKED = new Set(["CN","RU","IR","KP","BY","CU","SY","AF","ZA","TR","EG","PK","MM"]);
+let STARLINK_BLOCKED = new Set(["CN","RU","IR","KP","BY","CU","SY","AF","ZA","TR","EG","PK","MM"]);   // wordt bijgewerkt uit Beheer
+let BIDS = {};   // inschrijfstatus per tender (uit Beheer)
+const BID_LABEL = { ingeschreven:"Ingeschreven", gewonnen:"Gewonnen", verloren:"Verloren", geen:"Niet inschrijven" };
 const EUROPE = new Set("AL AD AT BE BA BG HR CY CZ DK EE FI FR DE GR HU IS IE IT XK LV LI LT LU MT MD MC ME NL MK NO PL PT RO SM RS SK SI ES SE CH UA GB VA".split(" "));
 // grove omrekening naar euro (alleen voor de score, niet voor weergave)
 const EUR = { EUR:1, USD:0.92, GBP:1.17, CHF:1.05, NOK:0.085, SEK:0.087, DKK:0.134, PLN:0.23, CZK:0.04, HUF:0.0025, RON:0.2, BGN:0.51, UAH:0.022,
@@ -652,30 +671,71 @@ function scoreOf(t){
   if(t.defense) feas *= 0.6;
   return (t._score = Math.round(100 * (0.30 * tech + 0.20 * val + 0.20 * rec + 0.15 * geo + 0.15 * feas)));
 }
+const eurOf = t => t.value ? t.value * (EUR[(t.currency || "EUR").toUpperCase()] ?? 0) : 0;
+const fmtEur = v => v >= 1e6 ? `€ ${(v / 1e6).toLocaleString("nl-NL", {maximumFractionDigits:1})} mln` : `€ ${Math.round(v / 1000).toLocaleString("nl-NL")}k`;
+// kort advies uit de gegevens: wat te doen en waarom
+function adviceOf(t){
+  const sc = scoreOf(t), st = statusOf(t), dl = daysLeft(t.deadline), scope = hwScope(t), eur = eurOf(t), why = [];
+  let verdict;
+  if(st === "prior") verdict = "Voorbereiden";
+  else if(dl !== null && dl <= 3) verdict = "Snel beslissen";
+  else if(sc >= 70) verdict = "Inschrijven";
+  else if(sc >= 55) verdict = "Overwegen";
+  else verdict = "Bekijken";
+  if(st === "prior") why.push("vooraankondiging: nu contact leggen, inschrijven kan later");
+  else if(dl !== null) why.push(dl <= 0 ? "sluit vandaag" : `sluit over ${dl} dag${dl === 1 ? "" : "en"}`);
+  if(scope === "svc") why.push("dienst of abonnement: terugkerende omzet");
+  else if(scope === "hw") why.push("alleen hardware: alleen met een abonnement aanbieden");
+  else why.push("check in de stukken of er een dienst bij hoort");
+  if(eur) why.push(`waarde ≈ ${fmtEur(eur)}`); else why.push("waarde onbekend: stukken opvragen");
+  if(!EUROPE.has(t.country)) why.push("buiten Europa: lokale partner en vergunning nodig");
+  if(t.defense) why.push("defensie-opdrachtgever: voorwaarden goed lezen");
+  return { verdict, why };
+}
+const adviceText = t => { const a = adviceOf(t); return `${a.verdict}: ${a.why.join("; ")}`; };
+// Top 20: open tenders met de hoogste score, zonder blokkerende markering
+function topList(){
+  // alleen tenders waarvan de titel zelf al over connectiviteit gaat (niet alleen ergens in de beschrijving)
+  return tenders.filter(t => (isOpen(t) || statusOf(t) === "prior") && !STARLINK_BLOCKED.has(t.country) && hwScope(t) !== "hw"
+      && (t.cats || ["leo"]).some(c => c !== "other")
+      && !["verloren", "geen"].includes(BIDS[t.pub]))
+    .sort(SORTERS.score).slice(0, 20);
+}
+function topCard(t, i){
+  const a = adviceOf(t), eur = eurOf(t);
+  return `<article class="t top ${statusOf(t)}">${hideBtn(t)}<div class="rank">${i + 1}</div><h3>${scoreHtml(t)}${newHtml(t)}${titleHtml(t)}</h3>
+    <div class="meta"><span class="src">${esc(t.source || "TED")}</span>${defHtml(t)}${changedHtml(t)}${bidHtml(t)}<span>${esc(t.country ? cname(t.country) : (t.countryName || "Onbekend land"))}</span>${t.buyer ? `<span>${esc(t.buyer)}</span>` : ""}</div>
+    <div class="meta"><span class="dl">${dlText(t)}</span>${valHtml(t)}${eur && (t.currency || "EUR").toUpperCase() !== "EUR" ? `<span class="mono">≈ ${fmtEur(eur)}</span>` : ""}${t.link ? `<a class="golink" href="${esc(t.link)}" target="_blank" rel="noopener">Naar de inschrijving ↗</a>` : ""}</div>
+    <div class="advice"><b class="v-${a.verdict.replace(/\s/g, "").toLowerCase()}">${a.verdict}</b> ${esc(a.why.join(" · "))}</div></article>`;
+}
 const scoreHtml = t => { const v = scoreOf(t), c = v >= 70 ? "hi" : v >= 50 ? "mid" : "lo";
   return `<span class="score ${c}" title="Commerciële score: techniek 30% · waarde 20% · terugkerende omzet 20% · geografie 15% · uitvoerbaarheid 15%">${v}</span>`; };
 
 // CSV-export van de lijst zoals hij nu gefilterd en gesorteerd is (puntkomma's en een BOM, zodat Excel hem goed opent)
 const STATUS_NL = { open:"Open", soon:"Sluit binnenkort", closed:"Gesloten", awarded:"Gegund", prior:"Vooraankondiging" };
 function downloadCsv(){
-  const list = filtered(false).sort(SORTERS[state.sort] || SORTERS.deadline);
+  const list = view === "top" ? topList() : filtered(false).sort(SORTERS[state.sort] || SORTERS.deadline);
   const cell = v => { const s = v == null ? "" : String(v); return /[";\n\r]/.test(s) ? `"${s.replace(/"/g, '""')}"` : s; };
   const dec = n => n == null || n === "" ? "" : String(n).replace(".", ",");
   const tijd = t => t.deadlineAt ? new Date(t.deadlineAt).toLocaleTimeString("nl-NL", {hour:"2-digit", minute:"2-digit", timeZone:"Europe/Amsterdam"}) : "";
-  const head = ["Score","Status","Categorieën","Land","Titel (Nederlands)","Originele titel","Opdrachtgever","Bron","Soort","Defensie","Gepubliceerd","Sluitingsdatum","Sluitingstijd (NL)","Aantal","Waarde","Valuta","Kenmerk","Link"];
+  const head = ["Score","Status","Categorieën","Land","Titel (Nederlands)","Originele titel","Opdrachtgever","Bron","Soort","Defensie","Gepubliceerd","Sluitingsdatum","Sluitingstijd (NL)","Aantal","Waarde","Valuta","Kenmerk","Link","Waarde in euro (ca.)","Advies","Inschrijfstatus","Gewijzigd"];
   const rows = list.map(t => [scoreOf(t), STATUS_NL[statusOf(t)] || statusOf(t), (t.cats || [t.topic === "conn" ? "other" : "leo"]).map(c => CAT_LABEL[c] || c).join(", "), t.country ? cname(t.country) : (t.countryName || ""), t.titleNl || t.title, t.title, t.buyer,
     t.source || "TED", hwScope(t) === "hw" ? "Alleen hardware" : hwScope(t) === "svc" ? "Met dienst" : "", t.defense ? "Ja" : "", t.published || "", t.deadline || "", tijd(t),
-    t.qty || "", dec(t.value), t.value ? (t.currency || "") : "", t.pub, t.link]);
+    t.qty || "", dec(t.value), t.value ? (t.currency || "") : "", t.pub, t.link, eurOf(t) ? Math.round(eurOf(t)) : "", adviceText(t), BID_LABEL[BIDS[t.pub]] || "",
+    t.changedAt ? (t.changes || []).map(CHANGE_NL).join("; ") : ""]);
   const csv = "\ufeff" + [head, ...rows].map(r => r.map(cell).join(";")).join("\r\n");
   const url = URL.createObjectURL(new Blob([csv], {type: "text/csv;charset=utf-8"}));
   const a = document.createElement("a");
-  a.href = url; a.download = `starlink-tenders-${new Date().toISOString().slice(0, 10)}.csv`;
+  a.href = url; a.download = `${view === "top" ? "top20" : "tenders"}-broadbandeu-${new Date().toISOString().slice(0, 10)}.csv`;
   document.body.appendChild(a); a.click(); a.remove();
   setTimeout(() => URL.revokeObjectURL(url), 5000);
 }
 document.getElementById("csvBtn").addEventListener("click", downloadCsv);
 function render(){
-  const list = filtered(false).sort(SORTERS[state.sort] || SORTERS.deadline);
+  const top = view === "top";
+  const list = top ? topList() : filtered(false).sort(SORTERS[state.sort] || SORTERS.deadline);
+  $("vAll").classList.toggle("on", !top); $("vTop").classList.toggle("on", top);
+  $("vAll").setAttribute("aria-selected", String(!top)); $("vTop").setAttribute("aria-selected", String(top));
   if(loaded){
     $("sOpen").textContent = tenders.filter(isOpen).length;
     $("sNew").textContent = tenders.filter(t => isNew(t) && isOpen(t)).length;
@@ -683,7 +743,7 @@ function render(){
     $("sCountries").textContent = new Set(tenders.filter(t => isOpen(t) && t.country).map(t => t.country)).size;
     $("sUpdated").textContent = updated ? new Date(updated).toLocaleString("nl-NL", {day:"numeric", month:"short", hour:"2-digit", minute:"2-digit"}) : "nog niet";
   }
-  $("listCount").textContent = loaded ? `${list.length} tender${list.length === 1 ? "" : "s"}` : "Laden…";
+  $("listCount").textContent = !loaded ? "Laden…" : top ? `Top ${list.length} · hoogste score, filters gelden hier niet` : `${list.length} tender${list.length === 1 ? "" : "s"}`;
   const note = $("autoAll"); if(note) note.hidden = !(loaded && state.status === "open" && effStatus() === "all");
   $("selChip").innerHTML = state.country ? `<span class="chip">${esc(cname(state.country))}<button type="button" id="clrC" aria-label="Landfilter wissen">×</button></span>` : "";
   if(state.country) $("clrC").onclick = () => { state.country = ""; render(); };
@@ -701,6 +761,7 @@ function render(){
   else if(!tenders.length) box.innerHTML = `<div class="empty"><h2>Nog geen tenders</h2>De tenders worden elke werkdag automatisch opgehaald bij TED. Kijk straks nog eens.</div>`;
   else if(!list.length && state.status === "open" && !state.country && !state.q && !state.source && !state.minValue) box.innerHTML = `<div class="empty"><h2>Op dit moment geen open LEO-tenders</h2>Nieuwe tenders verschijnen hier vanzelf zodra ze gepubliceerd worden; de bronnen worden elke werkdag gecontroleerd. Kies bij Status "Gegunde opdrachten" om te zien wie er recent LEO heeft ingekocht.</div>`;
   else if(!list.length) box.innerHTML = `<div class="empty">Geen tenders die bij deze filters passen. Kies bij Status "Alles" of wis het landfilter.</div>`;
+  else if(top) box.innerHTML = list.length ? list.map(topCard).join("") : `<div class="empty">Op dit moment geen open tenders voor de Top 20.</div>`;
   else box.innerHTML = list.map(card).join("");
   paintMap();
   renderPanel(list);
@@ -723,6 +784,15 @@ $("fStatus").addEventListener("change", e => { state.status = e.target.value; sa
 $("fSource").addEventListener("change", e => { state.source = e.target.value; render(); });
 $("fDef").addEventListener("change", e => { state.def = e.target.value; render(); });
 $("fHw").addEventListener("change", e => { state.hw = e.target.value; render(); });
+$("vAll").addEventListener("click", () => setView("all"));
+$("vTop").addEventListener("click", () => setView("top"));
+document.addEventListener("change", e => {
+  const sel = e.target.closest && e.target.closest("select.bidsel"); if(!sel) return;
+  const pub = sel.dataset.bid, status = sel.value;
+  fetch("/api/admin", {method:"POST", credentials:"same-origin", headers:{"Content-Type":"application/json"}, body:JSON.stringify({action:"bid", pub, status})})
+    .then(r => { if(!r.ok) throw new Error(); if(status) BIDS[pub] = status; else delete BIDS[pub]; sel.className = "bidsel " + status; tenders.forEach(t => { if(t.pub === pub) delete t._score; }); })
+    .catch(() => alert("Opslaan van de status lukte niet."));
+});
 $("fTopic").addEventListener("change", e => { state.topic = e.target.value; render(); });
 $("fLang").addEventListener("change", e => { showOriginal = e.target.value === "orig"; try { localStorage.setItem("tk-orig", showOriginal ? "1" : "0"); } catch(err) {} render(); });
 $("fLang").value = showOriginal ? "orig" : "nl";
@@ -802,6 +872,8 @@ function loadTenders(mode){   // mode: "start" (pagina geopend) of "check" (auto
         return;
       }
       build = d.build || null;
+      if(Array.isArray(d.nostar)) STARLINK_BLOCKED = new Set(d.nostar);
+      BIDS = d.bids && typeof d.bids === "object" ? d.bids : {};
       tenders = Array.isArray(d.tenders) ? d.tenders : []; updated = d.updated; loaded = true; loadError = false; render(); if(TV) tvUpdate();
       const fresh = before ? tenders.filter(t => !before.has(t.pub) && isOpen(t)) : tenders.filter(t => isNew(t) && isOpen(t));
       const n = fresh.length, ms = TV ? 12000 : 6000;

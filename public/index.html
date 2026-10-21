@@ -3,9 +3,9 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-<title>Starlink Tenderkaart · BroadbandEU</title>
-<meta property="og:title" content="Starlink Tenderkaart · BroadbandEU">
-<meta property="og:description" content="Alle aanbestedingen voor Starlink en LEO-satellietinternet in Europa en wereldwijd, elke werkdag bijgewerkt.">
+<title>BroadbandEU Global Connectivity Tender Monitor</title>
+<meta property="og:title" content="BroadbandEU Global Connectivity Tender Monitor">
+<meta property="og:description" content="Aanbestedingen voor Starlink, satelliet en zakelijke connectiviteit in Europa en wereldwijd, met commerciële score en Top 20.">
 <meta property="og:image" content="https://tenderkaart.vercel.app/og-image.png">
 <meta property="og:type" content="website">
 <meta name="twitter:card" content="summary_large_image">
@@ -18,7 +18,7 @@
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-<meta name="apple-mobile-web-app-title" content="Tenderkaart">
+<meta name="apple-mobile-web-app-title" content="Tender Monitor">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@500;600&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
 <link rel="stylesheet" href="style.css">
@@ -28,7 +28,7 @@
   <div class="auth-card">
     <a class="brand" href="https://www.broadbandeu.com" target="_blank" rel="noopener" aria-label="BroadbandEU"><img src="/broadbandeu-logo.svg" alt="BroadbandEU" width="236" height="32"></a>
     <p class="eyebrow">Aanbestedingen wereldwijd · alleen voor BroadbandEU</p>
-    <h1>Starlink <span>Tenderkaart</span></h1>
+    <h1>Global Connectivity <span>Tender Monitor</span></h1>
     <p class="auth-lead">Aanbestedingen voor Starlink, satelliet en zakelijke connectiviteit wereldwijd op één kaart. Meerdere keren per dag bijgewerkt.</p>
 
     <form id="stepEmail" class="auth-step" novalidate>
@@ -59,8 +59,8 @@
   <header>
     <div>
       <div class="brandbar"><a class="brand" href="https://www.broadbandeu.com" target="_blank" rel="noopener" aria-label="BroadbandEU"><img src="/broadbandeu-logo.svg" alt="BroadbandEU" width="236" height="32"></a><span class="tagline">Leading Europe in Starlink Solutions</span></div>
-      <p class="eyebrow">LEO-tenders · Europa en wereldwijd</p>
-      <h1>Starlink <span>Tenderkaart</span> <small class="byline">made by Merijn</small></h1>
+      <p class="eyebrow">BroadbandEU · connectiviteitstenders in Europa en wereldwijd</p>
+      <h1>Global Connectivity <span>Tender Monitor</span> <small class="byline">made by Merijn</small></h1>
       <p class="sub">Aanbestedingen voor LEO-satellietinternet (Starlink, OneWeb, Amazon Leo) en zakelijke connectiviteit (SD-WAN, satellietverbindingen, straalverbindingen, 4G/5G-backup, tijdelijke netwerken) in Europa en wereldwijd. Klik op een land om de opdrachten te zien.</p>
     </div>
     <div class="account"><span id="whoami"></span><a class="btn" id="btnAdmin" href="/admin.html" hidden>Beheer</a><button type="button" id="btnLogout">Uitloggen</button><button type="button" id="btnInstall" class="link" hidden>Als app installeren</button><button type="button" id="btnLogin" class="link" hidden>Inloggen</button></div>
@@ -84,6 +84,7 @@
         <option value="open">Nog open</option>
         <option value="soon">Sluit binnen 14 dagen</option>
         <option value="new">Alleen nieuw</option>
+        <option value="changed">Nieuw of gewijzigd (24 uur)</option>
         <option value="prior">Vooraankondigingen</option>
         <option value="awarded">Gegunde opdrachten</option>
         <option value="all">Alles (ook gesloten en gegund)</option>
@@ -178,6 +179,7 @@
     </div>
 
     <div class="side">
+      <div class="viewtabs" role="tablist"><button type="button" role="tab" data-view="all" id="vAll">Alle tenders</button><button type="button" role="tab" data-view="top" id="vTop">Top 20</button></div>
       <div class="listhead"><span id="listCount">Laden…</span><span class="lh-right"><span id="selChip"></span><button type="button" id="csvBtn" class="csvbtn" title="De tenders in deze lijst (met de gekozen filters) downloaden als CSV, te openen in Excel">CSV ↓</button></span></div>
       <div class="list" id="list"><div class="loading">Tenders laden…</div></div>
       <p class="internal"><img src="/broadbandeu-logo.svg" alt="BroadbandEU" width="236" height="32"><span>Intern hulpmiddel van BroadbandEU</span></p>
@@ -198,7 +200,7 @@
 <script src="app.js"></script>
 <script src="auth.js"></script>
 <div class="install-tip" id="installTip" hidden role="dialog" aria-label="Installeren">
-  <p><b>Tenderkaart op je beginscherm zetten</b></p>
+  <p><b>Tender Monitor op je beginscherm zetten</b></p>
   <p id="installText"></p>
   <button type="button" id="installClose">Sluiten</button>
 </div>

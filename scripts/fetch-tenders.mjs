@@ -1135,6 +1135,17 @@ for (const [name, fn] of SOURCES) {
     for (const t of fresh) {
       const p = prevById.get(t.pub);
       t.firstSeen = p?.firstSeen || (old.updated && !reset ? nowIso : '2000-01-01T00:00:00.000Z');
+      // wijzigingen bijhouden: verschoven sluitingsdatum, andere waarde, gegund
+      if (p) {
+        const ch = [];
+        if ((p.deadline || '') !== (t.deadline || '') && p.deadline && t.deadline) ch.push({ what: 'deadline', from: p.deadline, to: t.deadline });
+        if (p.value && t.value && Math.abs(p.value - t.value) > 1) ch.push({ what: 'value', from: p.value, to: t.value });
+        if (p.kind !== 'award' && t.kind === 'award') ch.push({ what: 'award' });
+        t.changes = [...(p.changes || []), ...ch.map(c => ({ ...c, at: nowIso }))].slice(-5);
+        if (!t.changes.length) delete t.changes;
+        t.changedAt = ch.length ? nowIso : p.changedAt;
+        if (!t.changedAt) delete t.changedAt;
+      }
       if (t.value == null && p?.value != null) { t.value = p.value; t.currency = p.currency; }
     }
     // bij een reset: berichten die al bekend waren, niet opnieuw als "nieuw" markeren

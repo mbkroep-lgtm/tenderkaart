@@ -3,7 +3,7 @@
 // POST → { action, ... } om iets te wijzigen
 import { readFile } from 'node:fs/promises';
 import path from 'node:path';
-import { json, readSession, isAdmin, allowedDomains, redis, getHidden, getWords, normEmail, validEmail, env, readJson, fail } from '../lib/core.js';
+import { json, readSession, isAdmin, allowedDomains, getNoStar, NOSTAR_DEFAULT, redis, getHidden, getWords, normEmail, validEmail, env, readJson, fail } from '../lib/core.js';
 
 async function guard(request) {
   const email = readSession(request);
@@ -56,8 +56,8 @@ export async function GET(request) {
     if (!me) return json({ error: 'Alleen voor beheerders.' }, 403);
     if (new URL(request.url).searchParams.get('runs')) return await latestRun();
     const data = JSON.parse(await readFile(path.join(process.cwd(), 'data', 'tenders.json'), 'utf8'));
-    const [hidden, words, freeEmails, freeDomains, cust, blocked] = await Promise.all([
-      getHidden(), getWords(), redis('SMEMBERS', 'free:emails'), redis('SMEMBERS', 'free:domains'), customers(), redis('SMEMBERS', 'blocked')
+    const [hidden, words, freeEmails, freeDomains, cust, blocked, nostar] = await Promise.all([
+      getHidden(), getWords(), redis('SMEMBERS', 'free:emails'), redis('SMEMBERS', 'free:domains'), customers(), redis('SMEMBERS', 'blocked'), getNoStar()
     ]);
     return json({
       me,
@@ -66,7 +66,7 @@ export async function GET(request) {
       hidden, words,
       free: { emails: freeEmails || [], domains: freeDomains || [], envDomains: env('FREE_DOMAINS'), envEmails: env('FREE_EMAILS') },
       customers: cust,
-      blocked: (blocked || []).sort(), staffDomains: allowedDomains(),
+      blocked: (blocked || []).sort(), staffDomains: allowedDomains(), nostar, nostarDefault: NOSTAR_DEFAULT,
       canRefresh: !!env('GITHUB_TOKEN')
     });
   } catch (e) { return fail(e); }
@@ -87,6 +87,18 @@ export async function POST(request) {
       case 'words': {
         const words = [...new Set((Array.isArray(b.words) ? b.words : []).map(w => String(w).trim()).filter(w => w.length >= 2 && w.length <= 60))].slice(0, 200);
         await redis('SET', 'exclude:words', JSON.stringify(words)); return json({ ok: true, words });
+      }
+      case 'nostar': {   // lijst landen zonder Starlink (ISO-codes van 2 letters)
+        const list = [...new Set((Array.isArray(b.list) ? b.list : []).map(c => String(c).trim().toUpperCase()).filter(c => /^[A-Z]{2}$/.test(c)))].sort();
+        await redis('SET', 'nostar', JSON.stringify(list)); return json({ ok: true, nostar: list });
+      }
+      case 'bid': {   // inschrijfstatus van een tender
+        const pub = String(b.pub || '').slice(0, 120), st = String(b.status || '');
+        if (!pub) return json({ error: 'Geen tender opgegeven.' }, 400);
+        if (!st) await redis('HDEL', 'bids', pub);
+        else if (['ingeschreven', 'gewonnen', 'verloren', 'geen'].includes(st)) await redis('HSET', 'bids', pub, st);
+        else return json({ error: 'Onbekende status.' }, 400);
+        return json({ ok: true });
       }
       case 'block-add': case 'block-remove': {   // medewerker de toegang ontzeggen of teruggeven
         const v = normEmail(b.value);

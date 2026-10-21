@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-<title>Beheer · Starlink Tenderkaart</title>
+<title>Beheer · BroadbandEU Tender Monitor</title>
 <meta name="robots" content="noindex">
 <link rel="icon" type="image/svg+xml" href="/favicon.svg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -16,7 +16,7 @@
   <header>
     <div>
       <a class="brand" href="https://www.broadbandeu.com" target="_blank" rel="noopener" aria-label="BroadbandEU"><img src="/broadbandeu-logo.svg" alt="BroadbandEU" width="236" height="32"></a>
-      <p class="eyebrow">Starlink Tenderkaart · beheer</p>
+      <p class="eyebrow">Global Connectivity Tender Monitor · beheer</p>
       <h1>Beheer</h1>
       <p class="sub" id="who">Laden…</p>
     </div>
@@ -44,6 +44,13 @@
     <p class="note">Tenders met een van deze woorden in de titel of bij de opdrachtgever worden voor iedereen verborgen. Hoofdletters maken niet uit.</p>
     <div class="chips" id="words"></div>
     <form class="row" id="wordForm"><input id="wordInput" placeholder="bijv. telescope" maxlength="60"><button type="submit">Toevoegen</button></form>
+  </section>
+
+  <section class="card">
+    <div class="card-head"><h2>Landen zonder Starlink</h2></div>
+    <p class="note">Tenders uit deze landen krijgen het label <b>Geen Starlink</b>, scoren 0 op geografie en staan niet in de Top 20. Landcodes van 2 letters, gescheiden door komma's.</p>
+    <div class="chips" id="nostar"></div>
+    <form class="row" id="nostarForm"><input id="nostarInput" placeholder="bijv. IN, TH"><button type="submit">Toevoegen</button><button type="button" id="nostarReset" class="link">Standaardlijst terugzetten</button></form>
   </section>
 
   <section class="card">
