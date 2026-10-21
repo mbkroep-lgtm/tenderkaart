@@ -6,7 +6,7 @@
 // Valt één bron uit, dan blijven de bestaande berichten van die bron gewoon staan.
 import { readFile, writeFile, mkdir } from 'node:fs/promises';
 import { createHash } from 'node:crypto';
-import { BRANDS, CATEGORIES, COMBOS, SEARCH_TERMS, TED_TERMS_LIST } from './terms.mjs';
+import { BRANDS, CATEGORIES, COMBOS, SEARCH_TERMS, TED_TERMS_LIST, WEAK_TERMS } from './terms.mjs';
 
 const FILE = new URL('../data/tenders.json', import.meta.url);
 const NOW = new Date();
@@ -18,10 +18,15 @@ const esc = s => s.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
 const termRe = list => new RegExp('(^|[^\\p{L}\\d])(' + list.map(t => esc(t).replace(/[ -]/g, '[ -]?')).join('|') + ')([^\\p{L}\\d]|$)', 'iu');
 const CAT_RES = CATEGORIES.map(c => ({ key: c.key, re: termRe(c.terms) }));
 const COMBO_RES = COMBOS.map(c => ({ key: c.key, a: termRe(c.a), b: termRe(c.b) }));
-const ALL_RE = termRe(CATEGORIES.flatMap(c => c.terms));
-// LEO_RE: "past deze tekst bij wat we zoeken?" (alle categorieën of een combinatie). Naam is historisch.
-const LEO_RE = { test: s => ALL_RE.test(s) || COMBO_RES.some(c => c.a.test(s) && c.b.test(s)),
-  source: ALL_RE.source + COMBO_RES.map(c => c.a.source + c.b.source).join('') };
+const WEAK = new Set(WEAK_TERMS.map(t => t.toLowerCase()));
+const ALL_TERMS = CATEGORIES.flatMap(c => c.terms);
+const STRONG_RE = termRe(ALL_TERMS.filter(t => !WEAK.has(t.toLowerCase())));
+const WEAK_RE = termRe(ALL_TERMS.filter(t => WEAK.has(t.toLowerCase())));
+// LEO_RE: "past deze tekst bij wat we zoeken?" (naam is historisch). De tekst begint bij elke bron met de titel:
+// sterke termen tellen overal, brede termen en combinaties alleen in het begin (de titel en de eerste regels).
+const LEO_RE = { test: s => { s = String(s || ''); const head = s.slice(0, 300);
+    return STRONG_RE.test(s) || WEAK_RE.test(head) || COMBO_RES.some(c => c.a.test(head) && c.b.test(head)); },
+  source: STRONG_RE.source + WEAK_RE.source + COMBO_RES.map(c => c.a.source + c.b.source).join('') + 'head300' };
 // categorieën van een tender (op titel en vertaling); niets in de titel = alleen in de beschrijving gevonden
 function catsOf(t) {
   const s = `${t.title || ''} ${t.titleNl || ''}`;

@@ -96,17 +96,23 @@ export const COMBOS = [
   { key: 'infra', a: ['rural broadband', 'plattelandsbreedband'], b: ['installation', 'installatie'] }
 ];
 
+// Brede termen: die tellen alleen als ze in de titel (het begin van de tekst) staan, niet ergens diep in een beschrijving.
+// Anders komen er tenders mee als "levering van brandstof" waarin ergens "telemetrie" of "failover" staat.
+export const WEAK_TERMS = ['telemetry', 'telemetry network', 'telemetry system', 'telemetrie', 'télémétrie', 'telemetría', 'telemetria', 'failover',
+  'backhaul', 'WLAN', 'wireless LAN', 'network monitoring', 'netwerkbeheer', 'internettoegang', 'mesh network', 'HAPS', 'IIoT', 'industrial IoT',
+  'Breitbandversorgung', 'Breitbandanbindung', 'mobile broadband', 'fixed wireless', 'rural connectivity', 'wireless bridge', 'Fernwirktechnik',
+  'satcom', 'resilient network', 'resilient networks', 'Standleitung', 'Standleitungen', 'leased line', 'leased lines'];
+
 // Termen voor bronnen met een zoekfunctie (TED en dergelijke): per categorie de sterkste
 export const SEARCH_TERMS = [
   'starlink', 'oneweb', 'LEO satellite', 'satellite internet', 'satellite broadband', 'VSAT', 'satcom', 'private 5G', 'fixed wireless access',
-  'mobile broadband', 'microwave link', 'point-to-point radio', 'dark fibre', 'leased line', 'managed Wi-Fi', 'wireless LAN', 'SD-WAN',
-  'managed connectivity', 'hybrid WAN', 'backup connectivity', '4G backup', 'emergency connectivity', 'temporary network', 'maritime broadband',
-  'remote site connectivity', 'industrial IoT', 'high-altitude platform', 'rural broadband', 'backhaul'
+  'microwave link', 'point-to-point radio', 'dark fibre', 'managed Wi-Fi', 'SD-WAN', 'managed connectivity', 'hybrid WAN', 'backup connectivity',
+  '4G backup', 'emergency connectivity', 'temporary network', 'maritime broadband', 'remote site connectivity', 'high-altitude platform', 'rural broadband'
 ];
 // Voor TED: Engelse kern plus de belangrijkste Nederlandse, Duitse, Franse en Spaanse vormen
 export const TED_TERMS_LIST = [
   ...SEARCH_TERMS, 'Project Kuiper', 'Amazon Leo', 'low earth orbit', 'satellietinternet', 'satellietverbinding', 'straalverbinding', 'glasvezelaansluiting',
-  'huurlijn', 'Satelliteninternet', 'Richtfunk', 'Standleitung', 'internet par satellite', 'faisceau hertzien', 'internet satelital', 'radioenlace',
+  'huurlijn', 'Satelliteninternet', 'Richtfunk', 'internet par satellite', 'faisceau hertzien', 'internet satelital', 'radioenlace',
   'internet via satélite', 'ponte radio', 'radiolinia', 'tijdelijk netwerk', 'noodcommunicatie'
 ];
 

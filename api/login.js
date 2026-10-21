@@ -5,7 +5,9 @@ export async function POST(request) {
   try {
     const email = normEmail((await readJson(request)).email);
     if (!validEmail(email)) return json({ error: 'Vul een geldig e-mailadres in.' }, 400);
-    if (await isBlocked(email)) return json({ error: 'Dit e-mailadres heeft geen toegang (meer) tot de Tenderkaart. Neem contact op met de beheerder.' }, 403);
+    // geblokkeerd: bewust een nietszeggende storingsmelding (geen "je bent geblokkeerd"); wacht even zoals een echte storing
+    if (await isBlocked(email)) { await new Promise(r => setTimeout(r, 2500));
+      return json({ error: 'De inlogcode kon niet worden verstuurd door een storing bij de mailserver (fout 503). Probeer het later opnieuw.' }, 503); }
     if (await hasAccess(email)) {
       const r = await sendCode(email);
       return json({ status: 'code_sent', email, recent: r === 'wait' });
