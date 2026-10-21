@@ -42,7 +42,23 @@ function fmtMoney(n, cur){
 // ---------- Status ----------
 let tenders = [];
 let updated = null;
-const state = { q:"", status:"open", country:"", sort:"deadline", minValue:0, source:"", def:"" };
+const state = { q:"", status:"open", country:"", sort:"deadline", minValue:0, source:"", def:"", hw:"" };
+// Alleen hardware? Uit de (vertaalde) titel: apparatuur zonder abonnement, dienst, installatie of beheer.
+// Zonder duidelijke woorden beslist de CPV-code: 32… = apparatuur, 64…/72…/50… = diensten.
+const HW_RE = /(modem|terminal|\bkits?\b|antenne|antenna|schotel|\bdish|router|apparatuur|equipment|uitrusting|kabel|behuizing|station|\bsets?\b|hardware|systeem|systemen|pakket|houder|voeding|adapter|montage|обладнання|термінал|комплект)/i;
+const SVC_RE = /(abonnement|dienst|service|servicio|serviç|usług|послуг|connectivit|verbinding|aansluiting|toegang|activering|beheer|ondersteuning|onderhoud|installatie|contract|oplossing|verhuur|per maand|maanden|airtime|data ?bundel|tegoed)/i;
+function hwScope(t){
+  if(t._hw !== undefined) return t._hw;
+  // alleen het begin: lange titels bevatten soms een hele specificatie ("ondersteuning van Wi-Fi 6" is geen dienst)
+  const text = `${(t.titleNl || "").slice(0, 180)} ${(t.title || "").slice(0, 180)}`;
+  const cpv = (t.cpv && t.cpv[0]) || "";
+  let r = "";
+  if(SVC_RE.test(text)) r = "svc";
+  else if(HW_RE.test(text)) r = "hw";
+  else if(/^32/.test(cpv)) r = "hw";
+  else if(/^(64|72|50)/.test(cpv)) r = "svc";
+  return (t._hw = r);
+}
 try { Object.assign(state, JSON.parse(localStorage.getItem("tk-filters") || "{}")); state.country = ""; state.q = ""; } catch(e) {}
 function saveFilters(){ try { localStorage.setItem("tk-filters", JSON.stringify({status:state.status, sort:state.sort, minValue:state.minValue})); } catch(e) {} }
 
@@ -85,6 +101,8 @@ function filtered(ignoreCountry){
     if(state.source && (t.source || "TED") !== state.source) return false;
     if(state.def === "no" && t.defense) return false;
     if(state.def === "only" && !t.defense) return false;
+    if(state.hw === "only" && hwScope(t) !== "hw") return false;
+    if(state.hw === "no" && hwScope(t) === "hw") return false;
     if(effStatus() === "open" && !isOpen(t)) return false;
     if(state.status === "soon" && st !== "soon") return false;
     if(state.status === "new" && (!isNew(t) || !isOpen(t))) return false;
@@ -571,7 +589,8 @@ function drawOffices(){
 
 // ---------- Lijst ----------
 const dlText = t => { const st = statusOf(t); return (st === "awarded" || st === "prior") ? leftText(t) : `Sluit ${fmt(t.deadline)} · ${leftText(t)}`; };
-const defHtml = t => t.defense ? `<span class="deftag" title="Opdrachtgever is een defensie-organisatie">Defensie</span>` : "";
+const defHtml = t => (t.defense ? `<span class="deftag" title="Opdrachtgever is een defensie-organisatie">Defensie</span>` : "")
+  + (hwScope(t) === "hw" ? `<span class="deftag hw" title="Alleen apparatuur, zonder abonnement of dienst (afgeleid uit de titel)">Alleen hardware</span>` : "");
 const valHtml = t => (t.qty ? `<span class="qty" title="Aantal uit de titel gehaald">${t.qty}×</span>` : "") + (t.value ? `<span class="val">${esc(fmtMoney(t.value, t.currency))}</span>` : "");
 const newHtml = t => isNew(t) ? `<span class="newtag">NIEUW</span>` : "";
 function leftText(t){ const st = statusOf(t);
@@ -653,6 +672,7 @@ $("q").addEventListener("input", e => { state.q = e.target.value; render(); });
 $("fStatus").addEventListener("change", e => { state.status = e.target.value; saveFilters(); render(); });
 $("fSource").addEventListener("change", e => { state.source = e.target.value; render(); });
 $("fDef").addEventListener("change", e => { state.def = e.target.value; render(); });
+$("fHw").addEventListener("change", e => { state.hw = e.target.value; render(); });
 $("fLang").addEventListener("change", e => { showOriginal = e.target.value === "orig"; try { localStorage.setItem("tk-orig", showOriginal ? "1" : "0"); } catch(err) {} render(); });
 $("fLang").value = showOriginal ? "orig" : "nl";
 $("fSort").addEventListener("change", e => { state.sort = e.target.value; saveFilters(); render(); });
@@ -705,7 +725,7 @@ function loadTenders(){
 let tvPausedUntil = 0;
 function startTv(){
   document.body.classList.add("tv");
-  state.status = "open"; state.country = ""; state.q = ""; state.source = ""; state.def = ""; state.minValue = 0;
+  state.status = "open"; state.country = ""; state.q = ""; state.source = ""; state.def = ""; state.hw = ""; state.minValue = 0;
   // alleen even pauzeren als iemand zelf de bol draait of zoomt (niet bij knoppen)
   const pause = () => { tvPausedUntil = Date.now() + 8000; };
   const svg = $("map");

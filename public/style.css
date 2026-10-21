@@ -301,3 +301,4 @@ body.tv .tvticker{flex:none}
 .satinfo{position:absolute;top:42px;left:14px;font:500 11px var(--f-mono);color:var(--muted);background:rgba(7,13,26,.7);padding:3px 8px;border-radius:6px;pointer-events:none;z-index:1}
 .satinfo b{color:#d6efff;font-weight:600}
 @media (max-width:600px){.satinfo{top:34px}}
+.deftag.hw{color:#a9c8f0;border-color:rgba(124,196,255,.45);background:rgba(124,196,255,.08)}
