@@ -47,9 +47,10 @@
   async function xlsxText(z){
     const ss = await z.get("xl/sharedStrings.xml"), strings = [];
     if(ss){ const x = dec.decode(ss); for(const m of x.matchAll(/<si>([\s\S]*?)<\/si>/g)) strings.push(xmlText(m[1])); }
-    let out = "";
-    for(const name of z.names.filter(n => /^xl\/worksheets\/sheet\d+\.xml$/.test(n)).sort()){
-      const x = dec.decode(await z.get(name)); out += `\n[${name.split("/").pop()}]\n`;
+    let out = ""; const wb = await z.get("xl/workbook.xml"), titles = wb ? [...dec.decode(wb).matchAll(/<sheet [^>]*name="([^"]*)"/g)].map(m => xmlText(m[1])) : [];
+    const sheets = z.names.filter(n => /^xl\/worksheets\/sheet\d+\.xml$/.test(n)).sort((a, b) => parseInt(a.match(/\d+/)) - parseInt(b.match(/\d+/)));
+    for(const name of sheets){
+      const x = dec.decode(await z.get(name)), nr = parseInt(name.match(/sheet(\d+)/)[1]); out += `\n[Tabblad: ${titles[nr - 1] || name.split("/").pop()}]\n`;
       for(const row of x.matchAll(/<row[^>]*>([\s\S]*?)<\/row>/g)){
         const cells = [...row[1].matchAll(/<c([^>]*)>([\s\S]*?)<\/c>/g)].map(c => {
           const v = (c[2].match(/<v>([\s\S]*?)<\/v>/) || [])[1], isS = /t="s"/.test(c[1]);
