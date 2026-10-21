@@ -803,6 +803,8 @@ function openApply(pub){
       <button type="button" class="btn" id="adCopy">Kopieer conceptbrief</button>
       ${window.userEmail ? `<button type="button" class="btn" id="adMark">${BIDS[t.pub] === "ingeschreven" ? "✓ Ingeschreven" + (who(t.pub) ? " (" + esc(who(t.pub)) + ")" : "") : "Markeer als ingeschreven"}</button>` : ""}
     </div>
+    <h3>AI-inschrijfdossier</h3>
+    <div id="dosBox" class="dosbox"><p class="ad-note">Laden…</p></div>
     <h3>Stappen</h3>
     <ul class="ad-steps">${steps.map(([k, txt]) => `<li><label><input type="checkbox" data-step="${k}"${done[k] ? " checked" : ""}> ${esc(txt)}</label></li>`).join("")}</ul>
     <h3>Conceptbrief ${isNlBuyer(t) ? "(Nederlands)" : "(Engels)"}</h3>
@@ -820,6 +822,93 @@ function openApply(pub){
   if($("adMark")) $("adMark").onclick = () => setBid(t.pub, "ingeschreven")
     .then(() => { $("adMark").textContent = "✓ Ingeschreven (" + who(t.pub) + ")"; render(); }).catch(err => alert(err.message));
   if(dlg.showModal) dlg.showModal(); else dlg.setAttribute("open", "");
+  dossierInit(t);
+}
+
+// ---------- AI Tender Bid Assistant ----------
+const DOS_STEPS = [["analyse","Analyse en go/no-go"],["ontwerp","Technisch ontwerp"],["aanpak","Plan van aanpak en SLA"],["planning","Planning, prijzen en offertebrief"],["compliance","Compliance-matrix en referenties"],["espd","UEA/ESPD, checklist en eindcontrole"]];
+const DOS_TEXT = {};   // uitgelezen tekst per tender (alleen in deze browser, voor opnieuw proberen)
+let dosState = null;
+const dlBlob = (blob, name) => { const url = URL.createObjectURL(blob), a = document.createElement("a"); a.href = url; a.download = name; document.body.appendChild(a); a.click(); a.remove(); setTimeout(() => URL.revokeObjectURL(url), 8000); };
+const fileSafe = s => String(s).replace(/[^A-Za-z0-9._-]+/g, "_").slice(0, 60);
+async function dossierInit(t){
+  const box = $("dosBox"); if(!box) return;
+  if(!window.userEmail){ box.innerHTML = `<p class="ad-note">Log in om met AI een compleet inschrijfdossier te laten voorbereiden.</p>`; return; }
+  try {
+    const r = await fetch("/api/dossier?pub=" + encodeURIComponent(t.pub), {credentials:"same-origin", cache:"no-store"});
+    const d = await r.json(); if(!r.ok) throw new Error(d.error);
+    dosState = { t, parts: d.parts || {}, meta: d.meta || null, running: false, err: {} };
+  } catch(e) { dosState = { t, parts: {}, meta: null, running: false, err: {} }; }
+  dosRender();
+}
+function dosRender(){
+  const box = $("dosBox"); if(!box || !dosState) return;
+  const { t, parts, meta, running } = dosState, A = parts.analyse, has = Object.keys(parts).length > 0;
+  const done = DOS_STEPS.filter(([k]) => parts[k]).length;
+  const go = A && A.goNoGo ? A.goNoGo.advies : "";
+  let h = "";
+  if(has){
+    h += `<div class="dos-sum"><span class="gng ${esc(go)}">${go === "go" ? "GO" : go === "no-go" ? "NO-GO" : go ? "TWIJFEL" : "…"}</span>
+      <div><b>${done} van ${DOS_STEPS.length} onderdelen klaar</b>${meta ? ` · gemaakt door ${esc(String(meta.by || "").split("@")[0])} op ${new Date(meta.at).toLocaleString("nl-NL", {day:"numeric", month:"short", hour:"2-digit", minute:"2-digit"})}` : ""}
+      ${A ? `<br><span class="ad-note">${esc((A.goNoGo?.redenen || []).slice(0, 2).join(" · "))}${A.eisen ? ` · ${A.eisen.length} eisen gevonden` : ""}</span>` : ""}</div></div>
+      <div class="ad-actions"><button type="button" class="btn primary" id="dosZip"${running ? " disabled" : ""}>Download dossier (ZIP)</button><button type="button" class="btn" id="dosFiles">Losse bestanden</button><button type="button" class="btn" id="dosAgain"${running ? " disabled" : ""}>Opnieuw maken</button></div>
+      <div id="dosFileList" class="dos-files" hidden></div>`;
+  }
+  const showUpload = !has || dosState.again;
+  if(showUpload) h += `<div class="dos-up"><p class="ad-note">Upload de aanbestedingsstukken (bestek, programma van eisen, contractvoorwaarden, bijlagen) als PDF, Word, Excel of ZIP. De AI leest ze, beoordeelt go/no-go en maakt offerte, technisch ontwerp, plan van aanpak, planning, SLA, UEA, compliance-matrix, prijzenblad en checklist. Er wordt niets verzonnen: ontbrekende gegevens staan geel gemarkeerd.</p>
+      <label class="dos-drop" id="dosDrop"><input type="file" id="dosInput" multiple accept=".pdf,.docx,.xlsx,.zip,.txt,.csv,.pptx,.odt,.ods,.html"><span>Sleep bestanden hierheen of <u>kies bestanden</u></span></label>
+      <div id="dosChosen" class="ad-note"></div>
+      <button type="button" class="btn primary" id="dosGo" disabled>Dossier maken</button></div>`;
+  if(running || Object.keys(dosState.err).length || (has && done < DOS_STEPS.length)){
+    h += `<ol class="dos-steps"><li class="${dosState.read === "busy" ? "busy" : dosState.read === "ok" || has ? "ok" : ""}">Stukken lezen${dosState.readInfo ? ` <span class="ad-note">${esc(dosState.readInfo)}</span>` : ""}</li>` +
+      DOS_STEPS.map(([k, label]) => { const st = dosState.busy === k ? "busy" : parts[k] ? "ok" : dosState.err[k] ? "err" : "";
+        return `<li class="${st}">${esc(label)}${dosState.err[k] ? ` <span class="err">${esc(dosState.err[k])}</span>` : ""}</li>`; }).join("") + `</ol>`;
+    if(!running && has && done < DOS_STEPS.length && DOS_TEXT[t.pub]) h += `<button type="button" class="btn" id="dosResume">Verder met de ontbrekende stappen</button>`;
+    else if(!running && has && done < DOS_STEPS.length) h += `<p class="ad-note">Om de ontbrekende stappen te maken: kies "Opnieuw maken" en upload de stukken nog eens.</p>`;
+  }
+  box.innerHTML = h;
+  if($("dosZip")) $("dosZip").onclick = async () => { const files = await Dossier.buildFiles(t, parts); dlBlob(await Dossier.zipFiles(files), `Inschrijfdossier_${fileSafe(t.pub)}.zip`); };
+  if($("dosFiles")) $("dosFiles").onclick = async () => { const el = $("dosFileList"), files = await Dossier.buildFiles(t, parts);
+    el.innerHTML = files.map((f, i) => `<button type="button" class="link" data-dosf="${i}">${esc(f.name)}</button>`).join(""); el.hidden = false;
+    el.onclick = e => { const b = e.target.closest("button[data-dosf]"); if(b){ const f = files[+b.dataset.dosf]; dlBlob(f.blob, f.name); } }; };
+  if($("dosAgain")) $("dosAgain").onclick = () => { dosState.again = true; dosRender(); };
+  if($("dosResume")) $("dosResume").onclick = () => dosRun(null);
+  const inp = $("dosInput");
+  if(inp){
+    const drop = $("dosDrop"), chosen = [];
+    const show = () => { $("dosChosen").textContent = chosen.length ? chosen.map(f => f.name).join(", ") : ""; $("dosGo").disabled = !chosen.length; };
+    inp.onchange = () => { chosen.push(...inp.files); show(); };
+    drop.ondragover = e => { e.preventDefault(); drop.classList.add("over"); };
+    drop.ondragleave = () => drop.classList.remove("over");
+    drop.ondrop = e => { e.preventDefault(); drop.classList.remove("over"); chosen.push(...e.dataTransfer.files); show(); };
+    $("dosGo").onclick = () => dosRun(chosen);
+  }
+}
+async function dosRun(files){
+  const t = dosState.t;
+  dosState.running = true; dosState.err = {}; dosState.again = false;
+  try {
+    if(files){
+      dosState.read = "busy"; dosState.parts = {}; dosRender();
+      const r = await Dossier.readFiles(files, name => { dosState.readInfo = "bezig met " + name; dosRender(); });
+      if(r.text.length < 200) throw Object.assign(new Error("Er kon (bijna) geen tekst uit de bestanden gehaald worden" + (r.skipped.length ? ": " + r.skipped.join(", ") : ".")), {step:"read"});
+      DOS_TEXT[t.pub] = { text: r.text, names: r.names };
+      dosState.read = "ok"; dosState.readInfo = `${r.names.length} bestand${r.names.length === 1 ? "" : "en"}, ${Math.round(r.text.length / 1000)}k tekens` + (r.skipped.length ? ` · overgeslagen: ${r.skipped.join(", ")}` : "");
+    }
+    const src = DOS_TEXT[t.pub];
+    for(const [k] of DOS_STEPS){
+      if(dosState.parts[k]) continue;
+      dosState.busy = k; dosRender();
+      const r = await fetch("/api/dossier", {method:"POST", credentials:"same-origin", headers:{"Content-Type":"application/json"},
+        body: JSON.stringify({action:"step", step:k, pub:t.pub, tenderText:src.text, files:src.names,
+          tender:{title:t.title, buyer:t.buyer, country:t.country ? cname(t.country) : (t.countryName || ""), deadline:t.deadlineAt || t.deadline, link:t.link}})});
+      let d = {}; try { d = await r.json(); } catch(e) {}
+      if(!r.ok){ dosState.err[k] = d.error || (r.status === 504 ? "duurde te lang, probeer opnieuw" : "mislukt (" + r.status + ")"); break; }
+      dosState.parts[k] = d.data;
+      if(k === "analyse") dosState.meta = { by: window.userEmail, at: new Date().toISOString() };
+    }
+  } catch(e) { dosState.err[e.step || "analyse"] = e.message; dosState.read = e.step === "read" ? "" : dosState.read; if(e.step === "read") dosState.readInfo = e.message; }
+  dosState.busy = null; dosState.running = false; dosRender();
 }
 const applyBtn = t => (statusOf(t) === "closed" || statusOf(t) === "awarded") ? "" : `<button type="button" class="applybtn" data-apply="${esc(t.pub)}">Inschrijven →</button>`;
 document.addEventListener("click", e => { const b = e.target.closest && e.target.closest("button[data-apply]"); if(b) openApply(b.dataset.apply); });

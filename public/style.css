@@ -363,3 +363,20 @@ body.tv .viewtabs{display:none}
 body.tv .applybtn{display:none}
 #map .dot.small{pointer-events:auto;cursor:pointer;stroke:#ffd59a;stroke-width:1.5px}
 #map .dot.small:hover{stroke:#fff}
+/* AI-inschrijfdossier */
+.dosbox{border:1px solid var(--line);border-radius:10px;padding:12px 14px;background:rgba(124,196,255,.04)}
+.dos-sum{display:flex;gap:12px;align-items:flex-start;margin-bottom:10px;font-size:13px}
+.gng{font:700 13px var(--f-mono);padding:6px 10px;border-radius:8px;border:1px solid var(--line);color:var(--muted)}
+.gng.go{color:#9ff0c4;border-color:rgba(120,220,170,.6);background:rgba(120,220,170,.1)}
+.gng.no-go{color:#ffb3b3;border-color:rgba(255,120,120,.6);background:rgba(255,120,120,.1)}
+.gng.twijfel{color:#ffd59a;border-color:rgba(255,190,90,.6);background:rgba(255,190,90,.1)}
+.dos-files{display:flex;flex-wrap:wrap;gap:6px 14px;margin:4px 0 8px;font-size:12px}
+.dos-drop{display:block;border:1px dashed var(--line);border-radius:10px;padding:18px;text-align:center;cursor:pointer;color:var(--muted);font-size:13px;margin:6px 0}
+.dos-drop.over,.dos-drop:hover{border-color:var(--beam);color:var(--ink)}
+.dos-drop input{display:none}
+.dos-steps{margin:10px 0 6px;padding-left:22px;font-size:13px;display:grid;gap:4px}
+.dos-steps li{color:var(--muted)}
+.dos-steps li.ok{color:var(--ink)}.dos-steps li.ok::marker{content:"✓  ";color:#9ff0c4}
+.dos-steps li.busy{color:var(--ink)}.dos-steps li.busy::after{content:" · bezig…";color:var(--beam)}
+.dos-steps li.err{color:#ffb3b3}.dos-steps .err{display:block;font-size:12px}
+.btn[disabled]{opacity:.5;cursor:default}

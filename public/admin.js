@@ -192,3 +192,37 @@ $("btnRefresh").addEventListener("click", async () => {
 });
 load().then(() => { if(D && D.canRefresh) poll(); });
 })();
+
+// ---------- Bedrijfsdossier (voor de AI Tender Bid Assistant) ----------
+async function kbLoad(){
+  try {
+    const r = await fetch("/api/dossier?kb=1", {credentials:"same-origin", cache:"no-store"}); const d = await r.json(); if(!r.ok) throw new Error(d.error);
+    $("kbRows").innerHTML = d.kb.length ? d.kb.map(k => `<tr><td>${esc(k.name)}</td><td>${k.chars.toLocaleString("nl-NL")}</td><td>${when(k.at)} · ${esc(String(k.by || "").split("@")[0])}</td><td><button type="button" class="danger" data-kbdel="${esc(k.id)}">Verwijderen</button></td></tr>`).join("")
+      : `<tr><td colspan="4" class="note">Nog geen documenten. Begin met de prijslijst en een overzicht van referentieprojecten.</td></tr>`;
+  } catch(e) { $("kbRows").innerHTML = `<tr><td colspan="4" class="note">${esc(e.message)}</td></tr>`; }
+}
+async function kbAdd(files){
+  const st = $("kbStatus"); let ok = 0; const bad = [];
+  for(const f of files){
+    st.textContent = `Bezig met ${f.name}…`;
+    try {
+      const r = await Dossier.readFiles([f]);
+      if(!r.text || r.text.length < 20){ bad.push(`${f.name}: geen tekst (scan?)`); continue; }
+      const res = await fetch("/api/dossier", {method:"POST", credentials:"same-origin", headers:{"Content-Type":"application/json"}, body:JSON.stringify({action:"kb-add", name:f.name, text:r.text})});
+      const d = await res.json(); if(!res.ok) throw new Error(d.error); ok++;
+    } catch(e) { bad.push(`${f.name}: ${e.message}`); }
+  }
+  st.textContent = `${ok} document${ok === 1 ? "" : "en"} toegevoegd.` + (bad.length ? " Niet gelukt: " + bad.join("; ") : "");
+  kbLoad();
+}
+$("kbInput").addEventListener("change", e => kbAdd([...e.target.files]));
+$("kbDrop").addEventListener("dragover", e => { e.preventDefault(); $("kbDrop").classList.add("over"); });
+$("kbDrop").addEventListener("dragleave", () => $("kbDrop").classList.remove("over"));
+$("kbDrop").addEventListener("drop", e => { e.preventDefault(); $("kbDrop").classList.remove("over"); kbAdd([...e.dataTransfer.files]); });
+document.addEventListener("click", async e => {
+  const b = e.target.closest && e.target.closest("button[data-kbdel]"); if(!b) return;
+  if(!confirm("Dit document uit het bedrijfsdossier verwijderen?")) return;
+  await fetch("/api/dossier", {method:"POST", credentials:"same-origin", headers:{"Content-Type":"application/json"}, body:JSON.stringify({action:"kb-delete", id:b.dataset.kbdel})});
+  kbLoad();
+});
+kbLoad();

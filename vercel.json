@@ -9,6 +9,9 @@
     },
     "api/cron.js": {
       "includeFiles": "data/**"
+    },
+    "api/dossier.js": {
+      "maxDuration": 300
     }
   },
   "headers": [

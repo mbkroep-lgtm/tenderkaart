@@ -47,6 +47,14 @@
   </section>
 
   <section class="card">
+    <div class="card-head"><h2>Bedrijfsdossier voor de AI</h2></div>
+    <p class="note">De AI Tender Bid Assistant gebruikt alleen wat hier staat voor bedrijfsgegevens: prijslijsten, referentieprojecten, SLA en voorwaarden, Starlink-resellervoorwaarden, certificaten, KvK, verzekeringen, omzetcijfers en UEA-gegevens. Wat ontbreekt, markeert hij als [ONTBREEKT]. PDF, Word, Excel of ZIP; scans zonder tekst worden niet gelezen.</p>
+    <label class="kb-drop" id="kbDrop"><input type="file" id="kbInput" multiple accept=".pdf,.docx,.xlsx,.zip,.txt,.csv,.pptx,.odt,.ods"><span>Sleep documenten hierheen of <u>kies bestanden</u></span></label>
+    <p class="note" id="kbStatus"></p>
+    <div class="tablewrap"><table><thead><tr><th>Document</th><th>Tekens</th><th>Toegevoegd</th><th></th></tr></thead><tbody id="kbRows"><tr><td colspan="4" class="note">Laden…</td></tr></tbody></table></div>
+  </section>
+
+  <section class="card">
     <div class="card-head"><h2>Landen zonder Starlink</h2></div>
     <p class="note">Tenders uit deze landen krijgen het label <b>Geen Starlink</b>, scoren 0 op geografie en staan niet in de Top 20. Landcodes van 2 letters, gescheiden door komma's.</p>
     <div class="chips" id="nostar"></div>
@@ -79,6 +87,7 @@
     <p class="note" id="envFree"></p>
   </section>
 </div>
+<script src="dossier.js"></script>
 <script src="admin.js"></script>
 </body>
 </html>

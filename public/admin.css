@@ -40,3 +40,6 @@ button[disabled]{opacity:.45;cursor:not-allowed}
 .steps li.bad{color:#ffc2c2}.steps li.bad::before{border-color:#ff8a8a;background:#ff8a8a}
 @keyframes pulse{50%{opacity:.4}}
 @media (prefers-reduced-motion:reduce){.steps li.active::before{animation:none}.bar i{transition:none}}
+.kb-drop{display:block;border:1px dashed #33496f;border-radius:10px;padding:18px;text-align:center;cursor:pointer;color:#9fb0cc;margin:8px 0}
+.kb-drop.over,.kb-drop:hover{border-color:#7cc4ff;color:#fff}
+.kb-drop input{display:none}
