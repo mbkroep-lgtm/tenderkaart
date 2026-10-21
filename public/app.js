@@ -1117,15 +1117,19 @@ setInterval(() => { if(document.visibilityState === "visible") checkStatus(); },
 document.addEventListener("visibilitychange", () => {   // terug naar het tabblad na een tijdje weg: meteen even kijken
   if(document.visibilityState === "visible") checkStatus();
 });
-function showMaintenance(message){
+function showMaintenance(message, loginLink){
   maintShown = true;
   let el = document.getElementById("maintOverlay");
   if(!el){ el = document.createElement("div"); el.id = "maintOverlay"; el.className = "maint"; el.setAttribute("role", "alertdialog"); el.setAttribute("aria-live", "assertive"); document.body.appendChild(el); }
   el.innerHTML = `<div class="maint-card"><img src="/broadbandeu-logo.svg" alt="BroadbandEU" width="236" height="32">
     <h2>Tijdelijk offline</h2><p>In verband met onderhoud is de Global Connectivity Tender Monitor even niet beschikbaar.</p>
-    ${message ? `<p class="maint-msg">${esc(message)}</p>` : ""}<p class="maint-sub"><i class="spin"></i>We kijken elke minuut of de site weer online is; deze pagina ververst dan vanzelf.</p></div>`;
+    ${message ? `<p class="maint-msg">${esc(message)}</p>` : ""}<p class="maint-sub"><i class="spin"></i>We kijken elke minuut of de site weer online is; deze pagina ververst dan vanzelf.</p>
+    ${loginLink && !window.userEmail ? `<button type="button" class="link maint-admin" id="maintAdmin">Beheerder? Inloggen</button>` : ""}</div>`;
   document.body.classList.add("maint-on");
+  const btn = document.getElementById("maintAdmin");
+  if(btn) btn.onclick = () => { el.remove(); document.body.classList.remove("maint-on"); };
 }
+window.showMaintenance = showMaintenance;
 function adminMaintBanner(on){
   let el = document.getElementById("maintBanner");
   if(!on){ if(el) el.remove(); return; }

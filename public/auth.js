@@ -105,6 +105,12 @@ $("btnLogout").addEventListener("click", async () => {
   if(paid || cancelled) history.replaceState(null, "", "/");
 
 
+  // onderhoud: meteen de melding tonen, nog vóór het inlogscherm (beheerders kunnen via een linkje toch inloggen)
+  try {
+    const st = await (await fetch("/api/status", {credentials:"same-origin", cache:"no-store"})).json();
+    if(st.maintenance && !st.maintenance.admin && window.showMaintenance) window.showMaintenance(st.maintenance.message, true);
+  } catch(e) {}
+
   let me = {requireLogin:false};
   try {
     const r = await fetch("/api/me", {credentials:"same-origin", cache:"no-store"});
