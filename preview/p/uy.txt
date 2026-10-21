@@ -1,0 +1,3509 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0">
+    <channel>
+        <title>Consulta de releases OCDS</title>
+        <link>http://www.comprasestatales.gub.uy/ocds/rss</link>
+        <pubDate>Wed, 21 Oct 2026 02:20:08</pubDate>
+        <generator>Agencia Reguladora de Compras Estatales</generator>
+                    <item>
+                <title>id_compra:1380986,release_id:adjudicacion-1380986</title>
+                <pubDate>Wed, 21 Oct 2026 02:20:08</pubDate>
+                <link>http://www.comprasestatales.gub.uy/ocds/release/adjudicacion-1380986</link>
+                <guid>adjudicacion-1380986</guid>
+                <category>award</category>
+            </item>
+                    <item>
+                <title>id_compra:1380986,release_id:llamado-1380986</title>
+                <pubDate>Wed, 21 Oct 2026 02:15:08</pubDate>
+                <link>http://www.comprasestatales.gub.uy/ocds/release/llamado-1380986</link>
+                <guid>llamado-1380986</guid>
+                <category>tender</category>
+            </item>
+                    <item>
+                <title>id_compra:1380985,release_id:llamado-1380985</title>
+                <pubDate>Wed, 21 Oct 2026 01:50:08</pubDate>
+                <link>http://www.comprasestatales.gub.uy/ocds/release/llamado-1380985</link>
+                <guid>llamado-1380985</guid>
+                <category>tender</category>
+            </item>
+                    <item>
+                <title>id_compra:1380984,release_id:llamado-1380984</title>
+                <pubDate>Wed, 21 Oct 2026 01:45:09</pubDate>
+                <link>http://www.comprasestatales.gub.uy/ocds/release/llamado-1380984</link>
+                <guid>llamado-1380984</guid>
+                <category>tender</category>
+            </item>
+                    <item>
+                <title>id_compra:1378806,release_id:aclar_llamado-1378806-0</title>
+                <pubDate>Wed, 21 Oct 2026 00:38:01</pubDate>
+                <link>http://www.comprasestatales.gub.uy/ocds/release/aclar_llamado-1378806-0</link>
+                <guid>aclar_llamado-1378806-0</guid>
+                <category>tenderUpdate</category>
+            </item>
+                    <item>
+                <title>id_compra:1356306,release_id:adjudicacion-1356306</title>
+                <pubDate>Wed, 21 Oct 2026 00:25:10</pubDate>
+                <link>http://www.comprasestatales.gub.uy/ocds/release/adjudicacion-1356306</link>
+                <guid>adjudicacion-1356306</guid>
+                <category>award</category>
+            </item>
+                    <item>
+                <title>id_compra:1359171,release_id:adjudicacion-1359171</title>
+                <pubDate>Wed, 21 Oct 2026 00:25:09</pubDate>
+                <link>http://www.comprasestatales.gub.uy/ocds/release/adjudicacion-1359171</link>
+                <guid>adjudicacion-1359171</guid>
+                <category>award</category>
+            </item>
+                    <item>
+                <title>id_compra:1374433,release_id:adjudicacion-1374433</title>
+                <pubDate>Wed, 21 Oct 2026 00:20:11</pubDate>
+                <link>http://www.comprasestatales.gub.uy/ocds/release/adjudicacion-1374433</link>
+                <guid>adjudicacion-1374433</guid>
+                <category>award</category>
+            </item>
+                    <item>
+                <title>id_compra:1377598,release_id:adjudicacion-1377598</title>
+                <pubDate>Wed, 21 Oct 2026 00:20:10</pubDate>
+                <link>http://www.comprasestatales.gub.uy/ocds/release/adjudicacion-1377598</link>
+                <guid>adjudicacion-1377598</guid>
+                <category>award</category>
+            </item>
+                    <item>
+                <title>id_compra:1368226,release_id:adjudicacion-1368226</title>
+                <pubDate>Wed, 21 Oct 2026 00:20:09</pubDate>
+                <link>http://www.comprasestatales.gub.uy/ocds/release/adjudicacion-1368226</link>
+                <guid>adjudicacion-1368226</guid>
+                <category>award</category>
+            </item>
+                    <item>
+                <title>id_compra:1365307,release_id:adjudicacion-1365307</title>
+                <pubDate>Wed, 21 Oct 2026 00:20:09</pubDate>
+                <link>http://www.comprasestatales.gub.uy/ocds/release/adjudicacion-1365307</link>
+                <guid>adjudicacion-1365307</guid>
+                <category>award</category>
+            </item>
+                    <item>
+                <title>id_compra:1374181,release_id:adjudicacion-1374181</title>
+                <pubDate>Wed, 21 Oct 2026 00:05:08</pubDate>
+                <link>http://www.comprasestatales.gub.uy/ocds/release/adjudicacion-1374181</link>
+                <guid>adjudicacion-1374181</guid>
+                <category>award</category>
+            </item>
+                    <item>
+                <title>id_compra:1380983,release_id:adjudicacion-1380983</title>
+                <pubDate>Tue, 20 Oct 2026 20:05:08</pubDate>
+                <link>http://www.comprasestatales.gub.uy/ocds/release/adjudicacion-1380983</link>
+                <guid>adjudicacion-1380983</guid>
+                <category>award</category>
+            </item>
+                    <item>
+                <title>id_compra:1370330,release_id:ajuste_llamado-48797</title>
+                <pubDate>Tue, 20 Oct 2026 18:50:08</pubDate>
+                <link>http://www.comprasestatales.gub.uy/ocds/release/ajuste_llamado-48797</link>
+                <guid>ajuste_llamado-48797</guid>
+                <category>tenderAmendment</category>
+            </item>
+                    <item>
+                <title>id_compra:1370330,release_id:aclar_llamado-1370330-3</title>
+                <pubDate>Tue, 20 Oct 2026 18:45:00</pubDate>
+                <link>http://www.comprasestatales.gub.uy/ocds/release/aclar_llamado-1370330-3</link>
+                <guid>aclar_llamado-1370330-3</guid>
+                <category>tenderUpdate</category>
+            </item>
+                    <item>
+                <title>id_compra:1372216,release_id:aclar_llamado-1372216-0</title>
+                <pubDate>Tue, 20 Oct 2026 18:27:00</pubDate>
+                <link>http://www.comprasestatales.gub.uy/ocds/release/aclar_llamado-1372216-0</link>
+                <guid>aclar_llamado-1372216-0</guid>
+                <category>tenderUpdate</category>
+            </item>
+                    <item>
+                <title>id_compra:1380952,release_id:adjudicacion-1380952</title>
+                <pubDate>Tue, 20 Oct 2026 18:20:07</pubDate>
+                <link>http://www.comprasestatales.gub.uy/ocds/release/adjudicacion-1380952</link>
+                <guid>adjudicacion-1380952</guid>
+                <category>award</category>
+            </item>
+                    <item>
+                <title>id_compra:1380951,release_id:adjudicacion-1380951</title>
+                <pubDate>Tue, 20 Oct 2026 18:15:07</pubDate>
+                <link>http://www.comprasestatales.gub.uy/ocds/release/adjudicacion-1380951</link>
+                <guid>adjudicacion-1380951</guid>
+                <category>award</category>
+            </item>
+                    <item>
+                <title>id_compra:1380950,release_id:llamado-1380950</title>
+                <pubDate>Tue, 20 Oct 2026 18:05:09</pubDate>
+                <link>http://www.comprasestatales.gub.uy/ocds/release/llamado-1380950</link>
+                <guid>llamado-1380950</guid>
+                <category>tender</category>
+            </item>
+                    <item>
+                <title>id_compra:1376883,release_id:aclar_llamado-1376883-0</title>
+                <pubDate>Tue, 20 Oct 2026 17:57:00</pubDate>
+                <link>http://www.comprasestatales.gub.uy/ocds/release/aclar_llamado-1376883-0</link>
+                <guid>aclar_llamado-1376883-0</guid>
+                <category>tenderUpdate</category>
+            </item>
+                    <item>
+                <title>id_compra:1380948,release_id:llamado-1380948</title>
+                <pubDate>Tue, 20 Oct 2026 17:55:09</pubDate>
+                <link>http://www.comprasestatales.gub.uy/ocds/release/llamado-1380948</link>
+                <guid>llamado-1380948</guid>
+                <category>tender</category>
+            </item>
+                    <item>
+                <title>id_compra:1380949,release_id:adjudicacion-1380949</title>
+                <pubDate>Tue, 20 Oct 2026 17:55:08</pubDate>
+                <link>http://www.comprasestatales.gub.uy/ocds/release/adjudicacion-1380949</link>
+                <guid>adjudicacion-1380949</guid>
+                <category>award</category>
+            </item>
+                    <item>
+                <title>id_compra:1372216,release_id:ajuste_llamado-48796</title>
+                <pubDate>Tue, 20 Oct 2026 17:40:09</pubDate>
+                <link>http://www.comprasestatales.gub.uy/ocds/release/ajuste_llamado-48796</link>
+                <guid>ajuste_llamado-48796</guid>
+                <category>tenderAmendment</category>
+            </item>
+                    <item>
+                <title>id_compra:1380947,release_id:adjudicacion-1380947</title>
+                <pubDate>Tue, 20 Oct 2026 17:40:08</pubDate>
+                <link>http://www.comprasestatales.gub.uy/ocds/release/adjudicacion-1380947</link>
+                <guid>adjudicacion-1380947</guid>
+                <category>award</category>
+            </item>
+                    <item>
+                <title>id_compra:1375514,release_id:adjudicacion-1375514</title>
+                <pubDate>Tue, 20 Oct 2026 17:35:09</pubDate>
+                <link>http://www.comprasestatales.gub.uy/ocds/release/adjudicacion-1375514</link>
+                <guid>adjudicacion-1375514</guid>
+                <category>award</category>
+            </item>
+                    <item>
+                <title>id_compra:1380946,release_id:adjudicacion-1380946</title>
+                <pubDate>Tue, 20 Oct 2026 17:30:08</pubDate>
+                <link>http://www.comprasestatales.gub.uy/ocds/release/adjudicacion-1380946</link>
+                <guid>adjudicacion-1380946</guid>
+                <category>award</category>
+            </item>
+                    <item>
+                <title>id_compra:1379377,release_id:adjudicacion-1379377</title>
+                <pubDate>Tue, 20 Oct 2026 17:20:09</pubDate>
+                <link>http://www.comprasestatales.gub.uy/ocds/release/adjudicacion-1379377</link>
+                <guid>adjudicacion-1379377</guid>
+                <category>award</category>
+            </item>
+                    <item>
+                <title>id_compra:1380513,release_id:adjudicacion-1380513</title>
+                <pubDate>Tue, 20 Oct 2026 17:20:08</pubDate>
+                <link>http://www.comprasestatales.gub.uy/ocds/release/adjudicacion-1380513</link>
+                <guid>adjudicacion-1380513</guid>
+                <category>award</category>
+            </item>
+                    <item>
+                <title>id_compra:1322869,release_id:aclar_llamado-1322869-0</title>
+                <pubDate>Tue, 20 Oct 2026 17:18:00</pubDate>
+                <link>http://www.comprasestatales.gub.uy/ocds/release/aclar_llamado-1322869-0</link>
+                <guid>aclar_llamado-1322869-0</guid>
+                <category>tenderUpdate</category>
+            </item>
+                    <item>
+                <title>id_compra:1380945,release_id:adjudicacion-1380945</title>
+                <pubDate>Tue, 20 Oct 2026 17:15:07</pubDate>
+                <link>http://www.comprasestatales.gub.uy/ocds/release/adjudicacion-1380945</link>
+                <guid>adjudicacion-1380945</guid>
+                <category>award</category>
+            </item>
+                    <item>
+                <title>id_compra:1380934,release_id:adjudicacion-1380934</title>
+                <pubDate>Tue, 20 Oct 2026 17:10:08</pubDate>
+                <link>http://www.comprasestatales.gub.uy/ocds/release/adjudicacion-1380934</link>
+                <guid>adjudicacion-1380934</guid>
+                <category>award</category>
+            </item>
+                    <item>
+                <title>id_compra:1380921,release_id:adjudicacion-1380921</title>
+                <pubDate>Tue, 20 Oct 2026 17:10:08</pubDate>
+                <link>http://www.comprasestatales.gub.uy/ocds/release/adjudicacion-1380921</link>
+                <guid>adjudicacion-1380921</guid>
+                <category>award</category>
+            </item>
+                    <item>
+                <title>id_compra:1380899,release_id:adjudicacion-1380899</title>
+                <pubDate>Tue, 20 Oct 2026 17:00:16</pubDate>
+                <link>http://www.comprasestatales.gub.uy/ocds/release/adjudicacion-1380899</link>
+                <guid>adjudicacion-1380899</guid>
+                <category>award</category>
+            </item>
+                    <item>
+                <title>id_compra:1380943,release_id:llamado-1380943</title>
+                <pubDate>Tue, 20 Oct 2026 17:00:15</pubDate>
+                <link>http://www.comprasestatales.gub.uy/ocds/release/llamado-1380943</link>
+                <guid>llamado-1380943</guid>
+                <category>tender</category>
+            </item>
+                    <item>
+                <title>id_compra:1350647,release_id:aclar_llamado-1350647-16</title>
+                <pubDate>Tue, 20 Oct 2026 16:56:00</pubDate>
+                <link>http://www.comprasestatales.gub.uy/ocds/release/aclar_llamado-1350647-16</link>
+                <guid>aclar_llamado-1350647-16</guid>
+                <category>tenderUpdate</category>
+            </item>
+                    <item>
+                <title>id_compra:1350647,release_id:ajuste_llamado-48795</title>
+                <pubDate>Tue, 20 Oct 2026 16:55:08</pubDate>
+                <link>http://www.comprasestatales.gub.uy/ocds/release/ajuste_llamado-48795</link>
+                <guid>ajuste_llamado-48795</guid>
+                <category>tenderAmendment</category>
+            </item>
+                    <item>
+                <title>id_compra:1380942,release_id:llamado-1380942</title>
+                <pubDate>Tue, 20 Oct 2026 16:55:07</pubDate>
+                <link>http://www.comprasestatales.gub.uy/ocds/release/llamado-1380942</link>
+                <guid>llamado-1380942</guid>
+                <category>tender</category>
+            </item>
+                    <item>
+                <title>id_compra:1380937,release_id:adjudicacion-1380937</title>
+                <pubDate>Tue, 20 Oct 2026 16:55:07</pubDate>
+                <link>http://www.comprasestatales.gub.uy/ocds/release/adjudicacion-1380937</link>
+                <guid>adjudicacion-1380937</guid>
+                <category>award</category>
+            </item>
+                    <item>
+                <title>id_compra:1350647,release_id:aclar_llamado-1350647-15</title>
+                <pubDate>Tue, 20 Oct 2026 16:55:00</pubDate>
+                <link>http://www.comprasestatales.gub.uy/ocds/release/aclar_llamado-1350647-15</link>
+                <guid>aclar_llamado-1350647-15</guid>
+                <category>tenderUpdate</category>
+            </item>
+                    <item>
+                <title>id_compra:1363165,release_id:adjudicacion-1363165</title>
+                <pubDate>Tue, 20 Oct 2026 16:50:08</pubDate>
+                <link>http://www.comprasestatales.gub.uy/ocds/release/adjudicacion-1363165</link>
+                <guid>adjudicacion-1363165</guid>
+                <category>award</category>
+            </item>
+                    <item>
+                <title>id_compra:1380784,release_id:adjudicacion-1380784</title>
+                <pubDate>Tue, 20 Oct 2026 16:45:09</pubDate>
+                <link>http://www.comprasestatales.gub.uy/ocds/release/adjudicacion-1380784</link>
+                <guid>adjudicacion-1380784</guid>
+                <category>award</category>
+            </item>
+                    <item>
+                <title>id_compra:1380928,release_id:adjudicacion-1380928</title>
+                <pubDate>Tue, 20 Oct 2026 16:45:09</pubDate>
+                <link>http://www.comprasestatales.gub.uy/ocds/release/adjudicacion-1380928</link>
+                <guid>adjudicacion-1380928</guid>
+                <category>award</category>
+            </item>
+                    <item>
+                <title>id_compra:1380940,release_id:adjudicacion-1380940</title>
+                <pubDate>Tue, 20 Oct 2026 16:45:08</pubDate>
+                <link>http://www.comprasestatales.gub.uy/ocds/release/adjudicacion-1380940</link>
+                <guid>adjudicacion-1380940</guid>
+                <category>award</category>
+            </item>
+                    <item>
+                <title>id_compra:1380939,release_id:llamado-1380939</title>
+                <pubDate>Tue, 20 Oct 2026 16:40:08</pubDate>
+                <link>http://www.comprasestatales.gub.uy/ocds/release/llamado-1380939</link>
+                <guid>llamado-1380939</guid>
+                <category>tender</category>
+            </item>
+                    <item>
+                <title>id_compra:1380779,release_id:adjudicacion-1380779</title>
+                <pubDate>Tue, 20 Oct 2026 16:40:07</pubDate>
+                <link>http://www.comprasestatales.gub.uy/ocds/release/adjudicacion-1380779</link>
+                <guid>adjudicacion-1380779</guid>
+                <category>award</category>
+            </item>
+                    <item>
+                <title>id_compra:1333600,release_id:ajuste_adjudicacion-31120</title>
+                <pubDate>Tue, 20 Oct 2026 16:35:09</pubDate>
+                <link>http://www.comprasestatales.gub.uy/ocds/release/ajuste_adjudicacion-31120</link>
+                <guid>ajuste_adjudicacion-31120</guid>
+                <category>awardUpdate</category>
+            </item>
+                    <item>
+                <title>id_compra:1380938,release_id:adjudicacion-1380938</title>
+                <pubDate>Tue, 20 Oct 2026 16:35:07</pubDate>
+                <link>http://www.comprasestatales.gub.uy/ocds/release/adjudicacion-1380938</link>
+                <guid>adjudicacion-1380938</guid>
+                <category>award</category>
+            </item>
+                    <item>
+                <title>id_compra:1380771,release_id:adjudicacion-1380771</title>
+                <pubDate>Tue, 20 Oct 2026 16:30:12</pubDate>
+                <link>http://www.comprasestatales.gub.uy/ocds/release/adjudicacion-1380771</link>
+                <guid>adjudicacion-1380771</guid>
+                <category>award</category>
+            </item>
+                    <item>
+                <title>id_compra:1380936,release_id:adjudicacion-1380936</title>
+                <pubDate>Tue, 20 Oct 2026 16:30:11</pubDate>
+                <link>http://www.comprasestatales.gub.uy/ocds/release/adjudicacion-1380936</link>
+                <guid>adjudicacion-1380936</guid>
+                <category>award</category>
+            </item>
+                    <item>
+                <title>id_compra:1380935,release_id:adjudicacion-1380935</title>
+                <pubDate>Tue, 20 Oct 2026 16:30:11</pubDate>
+                <link>http://www.comprasestatales.gub.uy/ocds/release/adjudicacion-1380935</link>
+                <guid>adjudicacion-1380935</guid>
+                <category>award</category>
+            </item>
+                    <item>
+                <title>id_compra:1380843,release_id:adjudicacion-1380843</title>
+                <pubDate>Tue, 20 Oct 2026 16:30:11</pubDate>
+                <link>http://www.comprasestatales.gub.uy/ocds/release/adjudicacion-1380843</link>
+                <guid>adjudicacion-1380843</guid>
+                <category>award</category>
+            </item>
+                    <item>
+                <title>id_compra:1380922,release_id:adjudicacion-1380922</title>
+                <pubDate>Tue, 20 Oct 2026 16:25:08</pubDate>
+                <link>http://www.comprasestatales.gub.uy/ocds/release/adjudicacion-1380922</link>
+                <guid>adjudicacion-1380922</guid>
+                <category>award</category>
+            </item>
+                    <item>
+                <title>id_compra:1376191,release_id:ajuste_llamado-48793</title>
+                <pubDate>Tue, 20 Oct 2026 16:20:10</pubDate>
+                <link>http://www.comprasestatales.gub.uy/ocds/release/ajuste_llamado-48793</link>
+                <guid>ajuste_llamado-48793</guid>
+                <category>tenderAmendment</category>
+            </item>
+                    <item>
+                <title>id_compra:1356532,release_id:adjudicacion-1356532</title>
+                <pubDate>Tue, 20 Oct 2026 16:20:09</pubDate>
+                <link>http://www.comprasestatales.gub.uy/ocds/release/adjudicacion-1356532</link>
+                <guid>adjudicacion-1356532</guid>
+                <category>award</category>
+            </item>
+                    <item>
+                <title>id_compra:1379050,release_id:llamado-1379050</title>
+                <pubDate>Tue, 20 Oct 2026 16:20:08</pubDate>
+                <link>http://www.comprasestatales.gub.uy/ocds/release/llamado-1379050</link>
+                <guid>llamado-1379050</guid>
+                <category>tender</category>
+            </item>
+                    <item>
+                <title>id_compra:1380277,release_id:adjudicacion-1380277</title>
+                <pubDate>Tue, 20 Oct 2026 16:10:08</pubDate>
+                <link>http://www.comprasestatales.gub.uy/ocds/release/adjudicacion-1380277</link>
+                <guid>adjudicacion-1380277</guid>
+                <category>award</category>
+            </item>
+                    <item>
+                <title>id_compra:1378703,release_id:aclar_llamado-1378703-2</title>
+                <pubDate>Tue, 20 Oct 2026 16:09:00</pubDate>
+                <link>http://www.comprasestatales.gub.uy/ocds/release/aclar_llamado-1378703-2</link>
+                <guid>aclar_llamado-1378703-2</guid>
+                <category>tenderUpdate</category>
+            </item>
+                    <item>
+                <title>id_compra:1380550,release_id:ajuste_llamado-48792</title>
+                <pubDate>Tue, 20 Oct 2026 16:05:10</pubDate>
+                <link>http://www.comprasestatales.gub.uy/ocds/release/ajuste_llamado-48792</link>
+                <guid>ajuste_llamado-48792</guid>
+                <category>tenderAmendment</category>
+            </item>
+                    <item>
+                <title>id_compra:1380931,release_id:llamado-1380931</title>
+                <pubDate>Tue, 20 Oct 2026 16:05:08</pubDate>
+                <link>http://www.comprasestatales.gub.uy/ocds/release/llamado-1380931</link>
+                <guid>llamado-1380931</guid>
+                <category>tender</category>
+            </item>
+                    <item>
+                <title>id_compra:1378158,release_id:aclar_llamado-1378158-9</title>
+                <pubDate>Tue, 20 Oct 2026 15:59:00</pubDate>
+                <link>http://www.comprasestatales.gub.uy/ocds/release/aclar_llamado-1378158-9</link>
+                <guid>aclar_llamado-1378158-9</guid>
+                <category>tenderUpdate</category>
+            </item>
+                    <item>
+                <title>id_compra:1380863,release_id:adjudicacion-1380863</title>
+                <pubDate>Tue, 20 Oct 2026 15:50:07</pubDate>
+                <link>http://www.comprasestatales.gub.uy/ocds/release/adjudicacion-1380863</link>
+                <guid>adjudicacion-1380863</guid>
+                <category>award</category>
+            </item>
+                    <item>
+                <title>id_compra:1378158,release_id:aclar_llamado-1378158-8</title>
+                <pubDate>Tue, 20 Oct 2026 15:48:00</pubDate>
+                <link>http://www.comprasestatales.gub.uy/ocds/release/aclar_llamado-1378158-8</link>
+                <guid>aclar_llamado-1378158-8</guid>
+                <category>tenderUpdate</category>
+            </item>
+                    <item>
+                <title>id_compra:1380920,release_id:adjudicacion-1380920</title>
+                <pubDate>Tue, 20 Oct 2026 15:40:09</pubDate>
+                <link>http://www.comprasestatales.gub.uy/ocds/release/adjudicacion-1380920</link>
+                <guid>adjudicacion-1380920</guid>
+                <category>award</category>
+            </item>
+                    <item>
+                <title>id_compra:1372016,release_id:ajuste_llamado-48791</title>
+                <pubDate>Tue, 20 Oct 2026 15:35:09</pubDate>
+                <link>http://www.comprasestatales.gub.uy/ocds/release/ajuste_llamado-48791</link>
+                <guid>ajuste_llamado-48791</guid>
+                <category>tenderAmendment</category>
+            </item>
+                    <item>
+                <title>id_compra:1372016,release_id:aclar_llamado-1372016-1</title>
+                <pubDate>Tue, 20 Oct 2026 15:33:00</pubDate>
+                <link>http://www.comprasestatales.gub.uy/ocds/release/aclar_llamado-1372016-1</link>
+                <guid>aclar_llamado-1372016-1</guid>
+                <category>tenderUpdate</category>
+            </item>
+                    <item>
+                <title>id_compra:1379609,release_id:aclar_llamado-1379609-0</title>
+                <pubDate>Tue, 20 Oct 2026 15:31:00</pubDate>
+                <link>http://www.comprasestatales.gub.uy/ocds/release/aclar_llamado-1379609-0</link>
+                <guid>aclar_llamado-1379609-0</guid>
+                <category>tenderUpdate</category>
+            </item>
+                    <item>
+                <title>id_compra:1380918,release_id:adjudicacion-1380918</title>
+                <pubDate>Tue, 20 Oct 2026 15:25:08</pubDate>
+                <link>http://www.comprasestatales.gub.uy/ocds/release/adjudicacion-1380918</link>
+                <guid>adjudicacion-1380918</guid>
+                <category>award</category>
+            </item>
+                    <item>
+                <title>id_compra:1380916,release_id:adjudicacion-1380916</title>
+                <pubDate>Tue, 20 Oct 2026 15:20:09</pubDate>
+                <link>http://www.comprasestatales.gub.uy/ocds/release/adjudicacion-1380916</link>
+                <guid>adjudicacion-1380916</guid>
+                <category>award</category>
+            </item>
+                    <item>
+                <title>id_compra:1380915,release_id:adjudicacion-1380915</title>
+                <pubDate>Tue, 20 Oct 2026 15:20:09</pubDate>
+                <link>http://www.comprasestatales.gub.uy/ocds/release/adjudicacion-1380915</link>
+                <guid>adjudicacion-1380915</guid>
+                <category>award</category>
+            </item>
+                    <item>
+                <title>id_compra:1380917,release_id:llamado-1380917</title>
+                <pubDate>Tue, 20 Oct 2026 15:20:08</pubDate>
+                <link>http://www.comprasestatales.gub.uy/ocds/release/llamado-1380917</link>
+                <guid>llamado-1380917</guid>
+                <category>tender</category>
+            </item>
+                    <item>
+                <title>id_compra:1378754,release_id:ajuste_llamado-48790</title>
+                <pubDate>Tue, 20 Oct 2026 15:15:13</pubDate>
+                <link>http://www.comprasestatales.gub.uy/ocds/release/ajuste_llamado-48790</link>
+                <guid>ajuste_llamado-48790</guid>
+                <category>tenderAmendment</category>
+            </item>
+                    <item>
+                <title>id_compra:1378753,release_id:ajuste_llamado-48789</title>
+                <pubDate>Tue, 20 Oct 2026 15:15:13</pubDate>
+                <link>http://www.comprasestatales.gub.uy/ocds/release/ajuste_llamado-48789</link>
+                <guid>ajuste_llamado-48789</guid>
+                <category>tenderAmendment</category>
+            </item>
+                    <item>
+                <title>id_compra:1380841,release_id:adjudicacion-1380841</title>
+                <pubDate>Tue, 20 Oct 2026 15:15:12</pubDate>
+                <link>http://www.comprasestatales.gub.uy/ocds/release/adjudicacion-1380841</link>
+                <guid>adjudicacion-1380841</guid>
+                <category>award</category>
+            </item>
+                    <item>
+                <title>id_compra:1379478,release_id:adjudicacion-1379478</title>
+                <pubDate>Tue, 20 Oct 2026 15:15:12</pubDate>
+                <link>http://www.comprasestatales.gub.uy/ocds/release/adjudicacion-1379478</link>
+                <guid>adjudicacion-1379478</guid>
+                <category>award</category>
+            </item>
+                    <item>
+                <title>id_compra:1380903,release_id:llamado-1380903</title>
+                <pubDate>Tue, 20 Oct 2026 15:15:11</pubDate>
+                <link>http://www.comprasestatales.gub.uy/ocds/release/llamado-1380903</link>
+                <guid>llamado-1380903</guid>
+                <category>tender</category>
+            </item>
+                    <item>
+                <title>id_compra:1380901,release_id:adjudicacion-1380901</title>
+                <pubDate>Tue, 20 Oct 2026 15:15:10</pubDate>
+                <link>http://www.comprasestatales.gub.uy/ocds/release/adjudicacion-1380901</link>
+                <guid>adjudicacion-1380901</guid>
+                <category>award</category>
+            </item>
+                    <item>
+                <title>id_compra:1380913,release_id:adjudicacion-1380913</title>
+                <pubDate>Tue, 20 Oct 2026 15:15:10</pubDate>
+                <link>http://www.comprasestatales.gub.uy/ocds/release/adjudicacion-1380913</link>
+                <guid>adjudicacion-1380913</guid>
+                <category>award</category>
+            </item>
+                    <item>
+                <title>id_compra:1380911,release_id:llamado-1380911</title>
+                <pubDate>Tue, 20 Oct 2026 15:15:09</pubDate>
+                <link>http://www.comprasestatales.gub.uy/ocds/release/llamado-1380911</link>
+                <guid>llamado-1380911</guid>
+                <category>tender</category>
+            </item>
+                    <item>
+                <title>id_compra:1379055,release_id:aclar_llamado-1379055-3</title>
+                <pubDate>Tue, 20 Oct 2026 15:14:00</pubDate>
+                <link>http://www.comprasestatales.gub.uy/ocds/release/aclar_llamado-1379055-3</link>
+                <guid>aclar_llamado-1379055-3</guid>
+                <category>tenderUpdate</category>
+            </item>
+                    <item>
+                <title>id_compra:1379055,release_id:aclar_llamado-1379055-2</title>
+                <pubDate>Tue, 20 Oct 2026 15:14:00</pubDate>
+                <link>http://www.comprasestatales.gub.uy/ocds/release/aclar_llamado-1379055-2</link>
+                <guid>aclar_llamado-1379055-2</guid>
+                <category>tenderUpdate</category>
+            </item>
+                    <item>
+                <title>id_compra:1378753,release_id:aclar_llamado-1378753-1</title>
+                <pubDate>Tue, 20 Oct 2026 15:12:01</pubDate>
+                <link>http://www.comprasestatales.gub.uy/ocds/release/aclar_llamado-1378753-1</link>
+                <guid>aclar_llamado-1378753-1</guid>
+                <category>tenderUpdate</category>
+            </item>
+                    <item>
+                <title>id_compra:1378754,release_id:aclar_llamado-1378754-1</title>
+                <pubDate>Tue, 20 Oct 2026 15:12:00</pubDate>
+                <link>http://www.comprasestatales.gub.uy/ocds/release/aclar_llamado-1378754-1</link>
+                <guid>aclar_llamado-1378754-1</guid>
+                <category>tenderUpdate</category>
+            </item>
+                    <item>
+                <title>id_compra:1378752,release_id:aclar_llamado-1378752-1</title>
+                <pubDate>Tue, 20 Oct 2026 15:12:00</pubDate>
+                <link>http://www.comprasestatales.gub.uy/ocds/release/aclar_llamado-1378752-1</link>
+                <guid>aclar_llamado-1378752-1</guid>
+                <category>tenderUpdate</category>
+            </item>
+                    <item>
+                <title>id_compra:1369841,release_id:aclar_llamado-1369841-10</title>
+                <pubDate>Tue, 20 Oct 2026 15:11:01</pubDate>
+                <link>http://www.comprasestatales.gub.uy/ocds/release/aclar_llamado-1369841-10</link>
+                <guid>aclar_llamado-1369841-10</guid>
+                <category>tenderUpdate</category>
+            </item>
+                    <item>
+                <title>id_compra:1371748,release_id:aclar_llamado-1371748-5</title>
+                <pubDate>Tue, 20 Oct 2026 15:11:01</pubDate>
+                <link>http://www.comprasestatales.gub.uy/ocds/release/aclar_llamado-1371748-5</link>
+                <guid>aclar_llamado-1371748-5</guid>
+                <category>tenderUpdate</category>
+            </item>
+                    <item>
+                <title>id_compra:1379055,release_id:aclar_llamado-1379055-1</title>
+                <pubDate>Tue, 20 Oct 2026 15:11:00</pubDate>
+                <link>http://www.comprasestatales.gub.uy/ocds/release/aclar_llamado-1379055-1</link>
+                <guid>aclar_llamado-1379055-1</guid>
+                <category>tenderUpdate</category>
+            </item>
+                    <item>
+                <title>id_compra:1379055,release_id:aclar_llamado-1379055-0</title>
+                <pubDate>Tue, 20 Oct 2026 15:11:00</pubDate>
+                <link>http://www.comprasestatales.gub.uy/ocds/release/aclar_llamado-1379055-0</link>
+                <guid>aclar_llamado-1379055-0</guid>
+                <category>tenderUpdate</category>
+            </item>
+                    <item>
+                <title>id_compra:1379461,release_id:adjudicacion-1379461</title>
+                <pubDate>Tue, 20 Oct 2026 15:10:10</pubDate>
+                <link>http://www.comprasestatales.gub.uy/ocds/release/adjudicacion-1379461</link>
+                <guid>adjudicacion-1379461</guid>
+                <category>award</category>
+            </item>
+                    <item>
+                <title>id_compra:1380902,release_id:adjudicacion-1380902</title>
+                <pubDate>Tue, 20 Oct 2026 15:10:10</pubDate>
+                <link>http://www.comprasestatales.gub.uy/ocds/release/adjudicacion-1380902</link>
+                <guid>adjudicacion-1380902</guid>
+                <category>award</category>
+            </item>
+                    <item>
+                <title>id_compra:1379055,release_id:llamado-1379055</title>
+                <pubDate>Tue, 20 Oct 2026 15:10:09</pubDate>
+                <link>http://www.comprasestatales.gub.uy/ocds/release/llamado-1379055</link>
+                <guid>llamado-1379055</guid>
+                <category>tender</category>
+            </item>
+                    <item>
+                <title>id_compra:1379467,release_id:adjudicacion-1379467</title>
+                <pubDate>Tue, 20 Oct 2026 15:10:09</pubDate>
+                <link>http://www.comprasestatales.gub.uy/ocds/release/adjudicacion-1379467</link>
+                <guid>adjudicacion-1379467</guid>
+                <category>award</category>
+            </item>
+                    <item>
+                <title>id_compra:1380908,release_id:llamado-1380908</title>
+                <pubDate>Tue, 20 Oct 2026 15:10:08</pubDate>
+                <link>http://www.comprasestatales.gub.uy/ocds/release/llamado-1380908</link>
+                <guid>llamado-1380908</guid>
+                <category>tender</category>
+            </item>
+                    <item>
+                <title>id_compra:1380907,release_id:adjudicacion-1380907</title>
+                <pubDate>Tue, 20 Oct 2026 15:05:14</pubDate>
+                <link>http://www.comprasestatales.gub.uy/ocds/release/adjudicacion-1380907</link>
+                <guid>adjudicacion-1380907</guid>
+                <category>award</category>
+            </item>
+                    <item>
+                <title>id_compra:1380906,release_id:llamado-1380906</title>
+                <pubDate>Tue, 20 Oct 2026 15:05:13</pubDate>
+                <link>http://www.comprasestatales.gub.uy/ocds/release/llamado-1380906</link>
+                <guid>llamado-1380906</guid>
+                <category>tender</category>
+            </item>
+                    <item>
+                <title>id_compra:1380905,release_id:llamado-1380905</title>
+                <pubDate>Tue, 20 Oct 2026 15:05:12</pubDate>
+                <link>http://www.comprasestatales.gub.uy/ocds/release/llamado-1380905</link>
+                <guid>llamado-1380905</guid>
+                <category>tender</category>
+            </item>
+                    <item>
+                <title>id_compra:1380309,release_id:adjudicacion-1380309</title>
+                <pubDate>Tue, 20 Oct 2026 15:05:12</pubDate>
+                <link>http://www.comprasestatales.gub.uy/ocds/release/adjudicacion-1380309</link>
+                <guid>adjudicacion-1380309</guid>
+                <category>award</category>
+            </item>
+                    <item>
+                <title>id_compra:1373726,release_id:aclar_llamado-1373726-3</title>
+                <pubDate>Tue, 20 Oct 2026 15:01:00</pubDate>
+                <link>http://www.comprasestatales.gub.uy/ocds/release/aclar_llamado-1373726-3</link>
+                <guid>aclar_llamado-1373726-3</guid>
+                <category>tenderUpdate</category>
+            </item>
+                    <item>
+                <title>id_compra:1354352,release_id:ajuste_llamado-48788</title>
+                <pubDate>Tue, 20 Oct 2026 15:00:13</pubDate>
+                <link>http://www.comprasestatales.gub.uy/ocds/release/ajuste_llamado-48788</link>
+                <guid>ajuste_llamado-48788</guid>
+                <category>tenderAmendment</category>
+            </item>
+                    <item>
+                <title>id_compra:1379684,release_id:adjudicacion-1379684</title>
+                <pubDate>Tue, 20 Oct 2026 15:00:12</pubDate>
+                <link>http://www.comprasestatales.gub.uy/ocds/release/adjudicacion-1379684</link>
+                <guid>adjudicacion-1379684</guid>
+                <category>award</category>
+            </item>
+                    <item>
+                <title>id_compra:1379920,release_id:llamado-1379920</title>
+                <pubDate>Tue, 20 Oct 2026 15:00:11</pubDate>
+                <link>http://www.comprasestatales.gub.uy/ocds/release/llamado-1379920</link>
+                <guid>llamado-1379920</guid>
+                <category>tender</category>
+            </item>
+                    <item>
+                <title>id_compra:1380897,release_id:adjudicacion-1380897</title>
+                <pubDate>Tue, 20 Oct 2026 15:00:11</pubDate>
+                <link>http://www.comprasestatales.gub.uy/ocds/release/adjudicacion-1380897</link>
+                <guid>adjudicacion-1380897</guid>
+                <category>award</category>
+            </item>
+                    <item>
+                <title>id_compra:1380873,release_id:adjudicacion-1380873</title>
+                <pubDate>Tue, 20 Oct 2026 14:55:08</pubDate>
+                <link>http://www.comprasestatales.gub.uy/ocds/release/adjudicacion-1380873</link>
+                <guid>adjudicacion-1380873</guid>
+                <category>award</category>
+            </item>
+                    <item>
+                <title>id_compra:1369299,release_id:aclar_llamado-1369299-6</title>
+                <pubDate>Tue, 20 Oct 2026 14:55:00</pubDate>
+                <link>http://www.comprasestatales.gub.uy/ocds/release/aclar_llamado-1369299-6</link>
+                <guid>aclar_llamado-1369299-6</guid>
+                <category>tenderUpdate</category>
+            </item>
+                    <item>
+                <title>id_compra:1379442,release_id:adjudicacion-1379442</title>
+                <pubDate>Tue, 20 Oct 2026 14:50:12</pubDate>
+                <link>http://www.comprasestatales.gub.uy/ocds/release/adjudicacion-1379442</link>
+                <guid>adjudicacion-1379442</guid>
+                <category>award</category>
+            </item>
+                    <item>
+                <title>id_compra:1380895,release_id:llamado-1380895</title>
+                <pubDate>Tue, 20 Oct 2026 14:50:11</pubDate>
+                <link>http://www.comprasestatales.gub.uy/ocds/release/llamado-1380895</link>
+                <guid>llamado-1380895</guid>
+                <category>tender</category>
+            </item>
+                    <item>
+                <title>id_compra:1380887,release_id:adjudicacion-1380887</title>
+                <pubDate>Tue, 20 Oct 2026 14:50:11</pubDate>
+                <link>http://www.comprasestatales.gub.uy/ocds/release/adjudicacion-1380887</link>
+                <guid>adjudicacion-1380887</guid>
+                <category>award</category>
+            </item>
+                    <item>
+                <title>id_compra:1380598,release_id:llamado-1380598</title>
+                <pubDate>Tue, 20 Oct 2026 14:50:09</pubDate>
+                <link>http://www.comprasestatales.gub.uy/ocds/release/llamado-1380598</link>
+                <guid>llamado-1380598</guid>
+                <category>tender</category>
+            </item>
+                    <item>
+                <title>id_compra:1380837,release_id:adjudicacion-1380837</title>
+                <pubDate>Tue, 20 Oct 2026 14:50:09</pubDate>
+                <link>http://www.comprasestatales.gub.uy/ocds/release/adjudicacion-1380837</link>
+                <guid>adjudicacion-1380837</guid>
+                <category>award</category>
+            </item>
+                    <item>
+                <title>id_compra:1380889,release_id:llamado-1380889</title>
+                <pubDate>Tue, 20 Oct 2026 14:50:08</pubDate>
+                <link>http://www.comprasestatales.gub.uy/ocds/release/llamado-1380889</link>
+                <guid>llamado-1380889</guid>
+                <category>tender</category>
+            </item>
+                    <item>
+                <title>id_compra:1380891,release_id:llamado-1380891</title>
+                <pubDate>Tue, 20 Oct 2026 14:45:09</pubDate>
+                <link>http://www.comprasestatales.gub.uy/ocds/release/llamado-1380891</link>
+                <guid>llamado-1380891</guid>
+                <category>tender</category>
+            </item>
+                    <item>
+                <title>id_compra:1380877,release_id:aclar_llamado-1380877-10</title>
+                <pubDate>Tue, 20 Oct 2026 14:43:59</pubDate>
+                <link>http://www.comprasestatales.gub.uy/ocds/release/aclar_llamado-1380877-10</link>
+                <guid>aclar_llamado-1380877-10</guid>
+                <category>tenderUpdate</category>
+            </item>
+                    <item>
+                <title>id_compra:1380877,release_id:aclar_llamado-1380877-7</title>
+                <pubDate>Tue, 20 Oct 2026 14:43:01</pubDate>
+                <link>http://www.comprasestatales.gub.uy/ocds/release/aclar_llamado-1380877-7</link>
+                <guid>aclar_llamado-1380877-7</guid>
+                <category>tenderUpdate</category>
+            </item>
+                    <item>
+                <title>id_compra:1380877,release_id:aclar_llamado-1380877-9</title>
+                <pubDate>Tue, 20 Oct 2026 14:43:01</pubDate>
+                <link>http://www.comprasestatales.gub.uy/ocds/release/aclar_llamado-1380877-9</link>
+                <guid>aclar_llamado-1380877-9</guid>
+                <category>tenderUpdate</category>
+            </item>
+                    <item>
+                <title>id_compra:1380877,release_id:aclar_llamado-1380877-8</title>
+                <pubDate>Tue, 20 Oct 2026 14:43:00</pubDate>
+                <link>http://www.comprasestatales.gub.uy/ocds/release/aclar_llamado-1380877-8</link>
+                <guid>aclar_llamado-1380877-8</guid>
+                <category>tenderUpdate</category>
+            </item>
+                    <item>
+                <title>id_compra:1380877,release_id:aclar_llamado-1380877-6</title>
+                <pubDate>Tue, 20 Oct 2026 14:42:01</pubDate>
+                <link>http://www.comprasestatales.gub.uy/ocds/release/aclar_llamado-1380877-6</link>
+                <guid>aclar_llamado-1380877-6</guid>
+                <category>tenderUpdate</category>
+            </item>
+                    <item>
+                <title>id_compra:1380877,release_id:aclar_llamado-1380877-5</title>
+                <pubDate>Tue, 20 Oct 2026 14:42:00</pubDate>
+                <link>http://www.comprasestatales.gub.uy/ocds/release/aclar_llamado-1380877-5</link>
+                <guid>aclar_llamado-1380877-5</guid>
+                <category>tenderUpdate</category>
+            </item>
+                    <item>
+                <title>id_compra:1380877,release_id:aclar_llamado-1380877-4</title>
+                <pubDate>Tue, 20 Oct 2026 14:42:00</pubDate>
+                <link>http://www.comprasestatales.gub.uy/ocds/release/aclar_llamado-1380877-4</link>
+                <guid>aclar_llamado-1380877-4</guid>
+                <category>tenderUpdate</category>
+            </item>
+                    <item>
+                <title>id_compra:1380877,release_id:aclar_llamado-1380877-1</title>
+                <pubDate>Tue, 20 Oct 2026 14:41:01</pubDate>
+                <link>http://www.comprasestatales.gub.uy/ocds/release/aclar_llamado-1380877-1</link>
+                <guid>aclar_llamado-1380877-1</guid>
+                <category>tenderUpdate</category>
+            </item>
+                    <item>
+                <title>id_compra:1380877,release_id:aclar_llamado-1380877-2</title>
+                <pubDate>Tue, 20 Oct 2026 14:41:01</pubDate>
+                <link>http://www.comprasestatales.gub.uy/ocds/release/aclar_llamado-1380877-2</link>
+                <guid>aclar_llamado-1380877-2</guid>
+                <category>tenderUpdate</category>
+            </item>
+                    <item>
+                <title>id_compra:1380877,release_id:aclar_llamado-1380877-3</title>
+                <pubDate>Tue, 20 Oct 2026 14:41:00</pubDate>
+                <link>http://www.comprasestatales.gub.uy/ocds/release/aclar_llamado-1380877-3</link>
+                <guid>aclar_llamado-1380877-3</guid>
+                <category>tenderUpdate</category>
+            </item>
+                    <item>
+                <title>id_compra:1380877,release_id:aclar_llamado-1380877-0</title>
+                <pubDate>Tue, 20 Oct 2026 14:41:00</pubDate>
+                <link>http://www.comprasestatales.gub.uy/ocds/release/aclar_llamado-1380877-0</link>
+                <guid>aclar_llamado-1380877-0</guid>
+                <category>tenderUpdate</category>
+            </item>
+                    <item>
+                <title>id_compra:1380321,release_id:llamado-1380321</title>
+                <pubDate>Tue, 20 Oct 2026 14:40:10</pubDate>
+                <link>http://www.comprasestatales.gub.uy/ocds/release/llamado-1380321</link>
+                <guid>llamado-1380321</guid>
+                <category>tender</category>
+            </item>
+                    <item>
+                <title>id_compra:1380845,release_id:adjudicacion-1380845</title>
+                <pubDate>Tue, 20 Oct 2026 14:40:09</pubDate>
+                <link>http://www.comprasestatales.gub.uy/ocds/release/adjudicacion-1380845</link>
+                <guid>adjudicacion-1380845</guid>
+                <category>award</category>
+            </item>
+                    <item>
+                <title>id_compra:1380882,release_id:adjudicacion-1380882</title>
+                <pubDate>Tue, 20 Oct 2026 14:40:09</pubDate>
+                <link>http://www.comprasestatales.gub.uy/ocds/release/adjudicacion-1380882</link>
+                <guid>adjudicacion-1380882</guid>
+                <category>award</category>
+            </item>
+                    <item>
+                <title>id_compra:1380877,release_id:llamado-1380877</title>
+                <pubDate>Tue, 20 Oct 2026 14:40:08</pubDate>
+                <link>http://www.comprasestatales.gub.uy/ocds/release/llamado-1380877</link>
+                <guid>llamado-1380877</guid>
+                <category>tender</category>
+            </item>
+                    <item>
+                <title>id_compra:1354352,release_id:aclar_llamado-1354352-6</title>
+                <pubDate>Tue, 20 Oct 2026 14:38:59</pubDate>
+                <link>http://www.comprasestatales.gub.uy/ocds/release/aclar_llamado-1354352-6</link>
+                <guid>aclar_llamado-1354352-6</guid>
+                <category>tenderUpdate</category>
+            </item>
+                    <item>
+                <title>id_compra:1376093,release_id:aclar_llamado-1376093-5</title>
+                <pubDate>Tue, 20 Oct 2026 14:37:00</pubDate>
+                <link>http://www.comprasestatales.gub.uy/ocds/release/aclar_llamado-1376093-5</link>
+                <guid>aclar_llamado-1376093-5</guid>
+                <category>tenderUpdate</category>
+            </item>
+                    <item>
+                <title>id_compra:1377228,release_id:aclar_llamado-1377228-1</title>
+                <pubDate>Tue, 20 Oct 2026 14:36:00</pubDate>
+                <link>http://www.comprasestatales.gub.uy/ocds/release/aclar_llamado-1377228-1</link>
+                <guid>aclar_llamado-1377228-1</guid>
+                <category>tenderUpdate</category>
+            </item>
+                    <item>
+                <title>id_compra:1379900,release_id:adjudicacion-1379900</title>
+                <pubDate>Tue, 20 Oct 2026 14:35:09</pubDate>
+                <link>http://www.comprasestatales.gub.uy/ocds/release/adjudicacion-1379900</link>
+                <guid>adjudicacion-1379900</guid>
+                <category>award</category>
+            </item>
+                    <item>
+                <title>id_compra:1380654,release_id:llamado-1380654</title>
+                <pubDate>Tue, 20 Oct 2026 14:35:08</pubDate>
+                <link>http://www.comprasestatales.gub.uy/ocds/release/llamado-1380654</link>
+                <guid>llamado-1380654</guid>
+                <category>tender</category>
+            </item>
+                    <item>
+                <title>id_compra:1380536,release_id:aclar_llamado-1380536-1</title>
+                <pubDate>Tue, 20 Oct 2026 14:31:00</pubDate>
+                <link>http://www.comprasestatales.gub.uy/ocds/release/aclar_llamado-1380536-1</link>
+                <guid>aclar_llamado-1380536-1</guid>
+                <category>tenderUpdate</category>
+            </item>
+                    <item>
+                <title>id_compra:1380878,release_id:llamado-1380878</title>
+                <pubDate>Tue, 20 Oct 2026 14:30:11</pubDate>
+                <link>http://www.comprasestatales.gub.uy/ocds/release/llamado-1380878</link>
+                <guid>llamado-1380878</guid>
+                <category>tender</category>
+            </item>
+                    <item>
+                <title>id_compra:1374571,release_id:adjudicacion-1374571</title>
+                <pubDate>Tue, 20 Oct 2026 14:30:10</pubDate>
+                <link>http://www.comprasestatales.gub.uy/ocds/release/adjudicacion-1374571</link>
+                <guid>adjudicacion-1374571</guid>
+                <category>award</category>
+            </item>
+                    <item>
+                <title>id_compra:1380867,release_id:llamado-1380867</title>
+                <pubDate>Tue, 20 Oct 2026 14:30:09</pubDate>
+                <link>http://www.comprasestatales.gub.uy/ocds/release/llamado-1380867</link>
+                <guid>llamado-1380867</guid>
+                <category>tender</category>
+            </item>
+                    <item>
+                <title>id_compra:1380874,release_id:adjudicacion-1380874</title>
+                <pubDate>Tue, 20 Oct 2026 14:30:09</pubDate>
+                <link>http://www.comprasestatales.gub.uy/ocds/release/adjudicacion-1380874</link>
+                <guid>adjudicacion-1380874</guid>
+                <category>award</category>
+            </item>
+                    <item>
+                <title>id_compra:1380866,release_id:adjudicacion-1380866</title>
+                <pubDate>Tue, 20 Oct 2026 14:25:08</pubDate>
+                <link>http://www.comprasestatales.gub.uy/ocds/release/adjudicacion-1380866</link>
+                <guid>adjudicacion-1380866</guid>
+                <category>award</category>
+            </item>
+                    <item>
+                <title>id_compra:1380535,release_id:adjudicacion-1380535</title>
+                <pubDate>Tue, 20 Oct 2026 14:25:08</pubDate>
+                <link>http://www.comprasestatales.gub.uy/ocds/release/adjudicacion-1380535</link>
+                <guid>adjudicacion-1380535</guid>
+                <category>award</category>
+            </item>
+                    <item>
+                <title>id_compra:1357431,release_id:adjudicacion-1357431</title>
+                <pubDate>Tue, 20 Oct 2026 14:20:10</pubDate>
+                <link>http://www.comprasestatales.gub.uy/ocds/release/adjudicacion-1357431</link>
+                <guid>adjudicacion-1357431</guid>
+                <category>award</category>
+            </item>
+                    <item>
+                <title>id_compra:1380511,release_id:adjudicacion-1380511</title>
+                <pubDate>Tue, 20 Oct 2026 14:20:10</pubDate>
+                <link>http://www.comprasestatales.gub.uy/ocds/release/adjudicacion-1380511</link>
+                <guid>adjudicacion-1380511</guid>
+                <category>award</category>
+            </item>
+                    <item>
+                <title>id_compra:1376055,release_id:ajuste_llamado-48787</title>
+                <pubDate>Tue, 20 Oct 2026 14:15:09</pubDate>
+                <link>http://www.comprasestatales.gub.uy/ocds/release/ajuste_llamado-48787</link>
+                <guid>ajuste_llamado-48787</guid>
+                <category>tenderAmendment</category>
+            </item>
+                    <item>
+                <title>id_compra:1378261,release_id:adjudicacion-1378261</title>
+                <pubDate>Tue, 20 Oct 2026 14:15:08</pubDate>
+                <link>http://www.comprasestatales.gub.uy/ocds/release/adjudicacion-1378261</link>
+                <guid>adjudicacion-1378261</guid>
+                <category>award</category>
+            </item>
+                    <item>
+                <title>id_compra:1376055,release_id:aclar_llamado-1376055-1</title>
+                <pubDate>Tue, 20 Oct 2026 14:13:00</pubDate>
+                <link>http://www.comprasestatales.gub.uy/ocds/release/aclar_llamado-1376055-1</link>
+                <guid>aclar_llamado-1376055-1</guid>
+                <category>tenderUpdate</category>
+            </item>
+                    <item>
+                <title>id_compra:1376055,release_id:aclar_llamado-1376055-0</title>
+                <pubDate>Tue, 20 Oct 2026 14:10:00</pubDate>
+                <link>http://www.comprasestatales.gub.uy/ocds/release/aclar_llamado-1376055-0</link>
+                <guid>aclar_llamado-1376055-0</guid>
+                <category>tenderUpdate</category>
+            </item>
+                    <item>
+                <title>id_compra:1377548,release_id:adjudicacion-1377548</title>
+                <pubDate>Tue, 20 Oct 2026 14:05:09</pubDate>
+                <link>http://www.comprasestatales.gub.uy/ocds/release/adjudicacion-1377548</link>
+                <guid>adjudicacion-1377548</guid>
+                <category>award</category>
+            </item>
+                    <item>
+                <title>id_compra:1380864,release_id:llamado-1380864</title>
+                <pubDate>Tue, 20 Oct 2026 14:05:09</pubDate>
+                <link>http://www.comprasestatales.gub.uy/ocds/release/llamado-1380864</link>
+                <guid>llamado-1380864</guid>
+                <category>tender</category>
+            </item>
+                    <item>
+                <title>id_compra:1378438,release_id:aclar_llamado-1378438-0</title>
+                <pubDate>Tue, 20 Oct 2026 14:01:01</pubDate>
+                <link>http://www.comprasestatales.gub.uy/ocds/release/aclar_llamado-1378438-0</link>
+                <guid>aclar_llamado-1378438-0</guid>
+                <category>tenderUpdate</category>
+            </item>
+                    <item>
+                <title>id_compra:1379802,release_id:aclar_llamado-1379802-0</title>
+                <pubDate>Tue, 20 Oct 2026 14:01:01</pubDate>
+                <link>http://www.comprasestatales.gub.uy/ocds/release/aclar_llamado-1379802-0</link>
+                <guid>aclar_llamado-1379802-0</guid>
+                <category>tenderUpdate</category>
+            </item>
+                    <item>
+                <title>id_compra:1376874,release_id:aclar_llamado-1376874-3</title>
+                <pubDate>Tue, 20 Oct 2026 14:01:00</pubDate>
+                <link>http://www.comprasestatales.gub.uy/ocds/release/aclar_llamado-1376874-3</link>
+                <guid>aclar_llamado-1376874-3</guid>
+                <category>tenderUpdate</category>
+            </item>
+                    <item>
+                <title>id_compra:1380305,release_id:adjudicacion-1380305</title>
+                <pubDate>Tue, 20 Oct 2026 14:00:15</pubDate>
+                <link>http://www.comprasestatales.gub.uy/ocds/release/adjudicacion-1380305</link>
+                <guid>adjudicacion-1380305</guid>
+                <category>award</category>
+            </item>
+                    <item>
+                <title>id_compra:1380850,release_id:llamado-1380850</title>
+                <pubDate>Tue, 20 Oct 2026 14:00:14</pubDate>
+                <link>http://www.comprasestatales.gub.uy/ocds/release/llamado-1380850</link>
+                <guid>llamado-1380850</guid>
+                <category>tender</category>
+            </item>
+                    <item>
+                <title>id_compra:1380631,release_id:llamado-1380631</title>
+                <pubDate>Tue, 20 Oct 2026 14:00:13</pubDate>
+                <link>http://www.comprasestatales.gub.uy/ocds/release/llamado-1380631</link>
+                <guid>llamado-1380631</guid>
+                <category>tender</category>
+            </item>
+                    <item>
+                <title>id_compra:1380862,release_id:llamado-1380862</title>
+                <pubDate>Tue, 20 Oct 2026 13:55:09</pubDate>
+                <link>http://www.comprasestatales.gub.uy/ocds/release/llamado-1380862</link>
+                <guid>llamado-1380862</guid>
+                <category>tender</category>
+            </item>
+                    <item>
+                <title>id_compra:1380646,release_id:adjudicacion-1380646</title>
+                <pubDate>Tue, 20 Oct 2026 13:55:09</pubDate>
+                <link>http://www.comprasestatales.gub.uy/ocds/release/adjudicacion-1380646</link>
+                <guid>adjudicacion-1380646</guid>
+                <category>award</category>
+            </item>
+                    <item>
+                <title>id_compra:1380860,release_id:llamado-1380860</title>
+                <pubDate>Tue, 20 Oct 2026 13:55:08</pubDate>
+                <link>http://www.comprasestatales.gub.uy/ocds/release/llamado-1380860</link>
+                <guid>llamado-1380860</guid>
+                <category>tender</category>
+            </item>
+                    <item>
+                <title>id_compra:1380616,release_id:aclar_llamado-1380616-2</title>
+                <pubDate>Tue, 20 Oct 2026 13:53:00</pubDate>
+                <link>http://www.comprasestatales.gub.uy/ocds/release/aclar_llamado-1380616-2</link>
+                <guid>aclar_llamado-1380616-2</guid>
+                <category>tenderUpdate</category>
+            </item>
+                    <item>
+                <title>id_compra:1380616,release_id:aclar_llamado-1380616-1</title>
+                <pubDate>Tue, 20 Oct 2026 13:53:00</pubDate>
+                <link>http://www.comprasestatales.gub.uy/ocds/release/aclar_llamado-1380616-1</link>
+                <guid>aclar_llamado-1380616-1</guid>
+                <category>tenderUpdate</category>
+            </item>
+                    <item>
+                <title>id_compra:1380616,release_id:aclar_llamado-1380616-0</title>
+                <pubDate>Tue, 20 Oct 2026 13:51:01</pubDate>
+                <link>http://www.comprasestatales.gub.uy/ocds/release/aclar_llamado-1380616-0</link>
+                <guid>aclar_llamado-1380616-0</guid>
+                <category>tenderUpdate</category>
+            </item>
+                    <item>
+                <title>id_compra:1374824,release_id:aclar_llamado-1374824-1</title>
+                <pubDate>Tue, 20 Oct 2026 13:51:00</pubDate>
+                <link>http://www.comprasestatales.gub.uy/ocds/release/aclar_llamado-1374824-1</link>
+                <guid>aclar_llamado-1374824-1</guid>
+                <category>tenderUpdate</category>
+            </item>
+                    <item>
+                <title>id_compra:1380609,release_id:llamado-1380609</title>
+                <pubDate>Tue, 20 Oct 2026 13:50:09</pubDate>
+                <link>http://www.comprasestatales.gub.uy/ocds/release/llamado-1380609</link>
+                <guid>llamado-1380609</guid>
+                <category>tender</category>
+            </item>
+                    <item>
+                <title>id_compra:1377981,release_id:adjudicacion-1377981</title>
+                <pubDate>Tue, 20 Oct 2026 13:50:09</pubDate>
+                <link>http://www.comprasestatales.gub.uy/ocds/release/adjudicacion-1377981</link>
+                <guid>adjudicacion-1377981</guid>
+                <category>award</category>
+            </item>
+                    <item>
+                <title>id_compra:1380852,release_id:aclar_llamado-1380852-0</title>
+                <pubDate>Tue, 20 Oct 2026 13:46:00</pubDate>
+                <link>http://www.comprasestatales.gub.uy/ocds/release/aclar_llamado-1380852-0</link>
+                <guid>aclar_llamado-1380852-0</guid>
+                <category>tenderUpdate</category>
+            </item>
+                    <item>
+                <title>id_compra:1380855,release_id:llamado-1380855</title>
+                <pubDate>Tue, 20 Oct 2026 13:45:13</pubDate>
+                <link>http://www.comprasestatales.gub.uy/ocds/release/llamado-1380855</link>
+                <guid>llamado-1380855</guid>
+                <category>tender</category>
+            </item>
+                    <item>
+                <title>id_compra:1380616,release_id:llamado-1380616</title>
+                <pubDate>Tue, 20 Oct 2026 13:45:13</pubDate>
+                <link>http://www.comprasestatales.gub.uy/ocds/release/llamado-1380616</link>
+                <guid>llamado-1380616</guid>
+                <category>tender</category>
+            </item>
+                    <item>
+                <title>id_compra:1380852,release_id:llamado-1380852</title>
+                <pubDate>Tue, 20 Oct 2026 13:45:12</pubDate>
+                <link>http://www.comprasestatales.gub.uy/ocds/release/llamado-1380852</link>
+                <guid>llamado-1380852</guid>
+                <category>tender</category>
+            </item>
+                    <item>
+                <title>id_compra:1377016,release_id:adjudicacion-1377016</title>
+                <pubDate>Tue, 20 Oct 2026 13:45:11</pubDate>
+                <link>http://www.comprasestatales.gub.uy/ocds/release/adjudicacion-1377016</link>
+                <guid>adjudicacion-1377016</guid>
+                <category>award</category>
+            </item>
+                    <item>
+                <title>id_compra:1375035,release_id:adjudicacion-1375035</title>
+                <pubDate>Tue, 20 Oct 2026 13:45:10</pubDate>
+                <link>http://www.comprasestatales.gub.uy/ocds/release/adjudicacion-1375035</link>
+                <guid>adjudicacion-1375035</guid>
+                <category>award</category>
+            </item>
+                    <item>
+                <title>id_compra:1380849,release_id:adjudicacion-1380849</title>
+                <pubDate>Tue, 20 Oct 2026 13:40:09</pubDate>
+                <link>http://www.comprasestatales.gub.uy/ocds/release/adjudicacion-1380849</link>
+                <guid>adjudicacion-1380849</guid>
+                <category>award</category>
+            </item>
+                    <item>
+                <title>id_compra:1372506,release_id:adjudicacion-1372506</title>
+                <pubDate>Tue, 20 Oct 2026 13:40:08</pubDate>
+                <link>http://www.comprasestatales.gub.uy/ocds/release/adjudicacion-1372506</link>
+                <guid>adjudicacion-1372506</guid>
+                <category>award</category>
+            </item>
+                    <item>
+                <title>id_compra:1380177,release_id:aclar_llamado-1380177-0</title>
+                <pubDate>Tue, 20 Oct 2026 13:31:01</pubDate>
+                <link>http://www.comprasestatales.gub.uy/ocds/release/aclar_llamado-1380177-0</link>
+                <guid>aclar_llamado-1380177-0</guid>
+                <category>tenderUpdate</category>
+            </item>
+                    <item>
+                <title>id_compra:1377148,release_id:aclar_llamado-1377148-0</title>
+                <pubDate>Tue, 20 Oct 2026 13:31:01</pubDate>
+                <link>http://www.comprasestatales.gub.uy/ocds/release/aclar_llamado-1377148-0</link>
+                <guid>aclar_llamado-1377148-0</guid>
+                <category>tenderUpdate</category>
+            </item>
+                    <item>
+                <title>id_compra:1379506,release_id:aclar_llamado-1379506-0</title>
+                <pubDate>Tue, 20 Oct 2026 13:31:00</pubDate>
+                <link>http://www.comprasestatales.gub.uy/ocds/release/aclar_llamado-1379506-0</link>
+                <guid>aclar_llamado-1379506-0</guid>
+                <category>tenderUpdate</category>
+            </item>
+                    <item>
+                <title>id_compra:1380848,release_id:llamado-1380848</title>
+                <pubDate>Tue, 20 Oct 2026 13:30:14</pubDate>
+                <link>http://www.comprasestatales.gub.uy/ocds/release/llamado-1380848</link>
+                <guid>llamado-1380848</guid>
+                <category>tender</category>
+            </item>
+                    <item>
+                <title>id_compra:1380842,release_id:adjudicacion-1380842</title>
+                <pubDate>Tue, 20 Oct 2026 13:30:13</pubDate>
+                <link>http://www.comprasestatales.gub.uy/ocds/release/adjudicacion-1380842</link>
+                <guid>adjudicacion-1380842</guid>
+                <category>award</category>
+            </item>
+                    <item>
+                <title>id_compra:1380847,release_id:llamado-1380847</title>
+                <pubDate>Tue, 20 Oct 2026 13:30:12</pubDate>
+                <link>http://www.comprasestatales.gub.uy/ocds/release/llamado-1380847</link>
+                <guid>llamado-1380847</guid>
+                <category>tender</category>
+            </item>
+                    <item>
+                <title>id_compra:1380163,release_id:adjudicacion-1380163</title>
+                <pubDate>Tue, 20 Oct 2026 13:25:14</pubDate>
+                <link>http://www.comprasestatales.gub.uy/ocds/release/adjudicacion-1380163</link>
+                <guid>adjudicacion-1380163</guid>
+                <category>award</category>
+            </item>
+                    <item>
+                <title>id_compra:1380839,release_id:adjudicacion-1380839</title>
+                <pubDate>Tue, 20 Oct 2026 13:25:13</pubDate>
+                <link>http://www.comprasestatales.gub.uy/ocds/release/adjudicacion-1380839</link>
+                <guid>adjudicacion-1380839</guid>
+                <category>award</category>
+            </item>
+                    <item>
+                <title>id_compra:1380840,release_id:llamado-1380840</title>
+                <pubDate>Tue, 20 Oct 2026 13:20:10</pubDate>
+                <link>http://www.comprasestatales.gub.uy/ocds/release/llamado-1380840</link>
+                <guid>llamado-1380840</guid>
+                <category>tender</category>
+            </item>
+                    <item>
+                <title>id_compra:1380838,release_id:adjudicacion-1380838</title>
+                <pubDate>Tue, 20 Oct 2026 13:20:10</pubDate>
+                <link>http://www.comprasestatales.gub.uy/ocds/release/adjudicacion-1380838</link>
+                <guid>adjudicacion-1380838</guid>
+                <category>award</category>
+            </item>
+                    <item>
+                <title>id_compra:1380836,release_id:adjudicacion-1380836</title>
+                <pubDate>Tue, 20 Oct 2026 13:20:09</pubDate>
+                <link>http://www.comprasestatales.gub.uy/ocds/release/adjudicacion-1380836</link>
+                <guid>adjudicacion-1380836</guid>
+                <category>award</category>
+            </item>
+                    <item>
+                <title>id_compra:1377532,release_id:aclar_llamado-1377532-0</title>
+                <pubDate>Tue, 20 Oct 2026 13:19:00</pubDate>
+                <link>http://www.comprasestatales.gub.uy/ocds/release/aclar_llamado-1377532-0</link>
+                <guid>aclar_llamado-1377532-0</guid>
+                <category>tenderUpdate</category>
+            </item>
+                    <item>
+                <title>id_compra:1380515,release_id:adjudicacion-1380515</title>
+                <pubDate>Tue, 20 Oct 2026 13:05:09</pubDate>
+                <link>http://www.comprasestatales.gub.uy/ocds/release/adjudicacion-1380515</link>
+                <guid>adjudicacion-1380515</guid>
+                <category>award</category>
+            </item>
+                    <item>
+                <title>id_compra:1380733,release_id:llamado-1380733</title>
+                <pubDate>Tue, 20 Oct 2026 13:05:09</pubDate>
+                <link>http://www.comprasestatales.gub.uy/ocds/release/llamado-1380733</link>
+                <guid>llamado-1380733</guid>
+                <category>tender</category>
+            </item>
+                    <item>
+                <title>id_compra:1377511,release_id:aclar_llamado-1377511-1</title>
+                <pubDate>Tue, 20 Oct 2026 13:01:01</pubDate>
+                <link>http://www.comprasestatales.gub.uy/ocds/release/aclar_llamado-1377511-1</link>
+                <guid>aclar_llamado-1377511-1</guid>
+                <category>tenderUpdate</category>
+            </item>
+                    <item>
+                <title>id_compra:1380814,release_id:adjudicacion-1380814</title>
+                <pubDate>Tue, 20 Oct 2026 13:00:13</pubDate>
+                <link>http://www.comprasestatales.gub.uy/ocds/release/adjudicacion-1380814</link>
+                <guid>adjudicacion-1380814</guid>
+                <category>award</category>
+            </item>
+                    <item>
+                <title>id_compra:1380034,release_id:llamado-1380034</title>
+                <pubDate>Tue, 20 Oct 2026 13:00:11</pubDate>
+                <link>http://www.comprasestatales.gub.uy/ocds/release/llamado-1380034</link>
+                <guid>llamado-1380034</guid>
+                <category>tender</category>
+            </item>
+                    <item>
+                <title>id_compra:1380831,release_id:llamado-1380831</title>
+                <pubDate>Tue, 20 Oct 2026 13:00:10</pubDate>
+                <link>http://www.comprasestatales.gub.uy/ocds/release/llamado-1380831</link>
+                <guid>llamado-1380831</guid>
+                <category>tender</category>
+            </item>
+                    <item>
+                <title>id_compra:1380830,release_id:llamado-1380830</title>
+                <pubDate>Tue, 20 Oct 2026 12:55:12</pubDate>
+                <link>http://www.comprasestatales.gub.uy/ocds/release/llamado-1380830</link>
+                <guid>llamado-1380830</guid>
+                <category>tender</category>
+            </item>
+                    <item>
+                <title>id_compra:1380518,release_id:llamado-1380518</title>
+                <pubDate>Tue, 20 Oct 2026 12:40:15</pubDate>
+                <link>http://www.comprasestatales.gub.uy/ocds/release/llamado-1380518</link>
+                <guid>llamado-1380518</guid>
+                <category>tender</category>
+            </item>
+                    <item>
+                <title>id_compra:1380807,release_id:llamado-1380807</title>
+                <pubDate>Tue, 20 Oct 2026 12:40:12</pubDate>
+                <link>http://www.comprasestatales.gub.uy/ocds/release/llamado-1380807</link>
+                <guid>llamado-1380807</guid>
+                <category>tender</category>
+            </item>
+                    <item>
+                <title>id_compra:1380527,release_id:llamado-1380527</title>
+                <pubDate>Tue, 20 Oct 2026 12:40:11</pubDate>
+                <link>http://www.comprasestatales.gub.uy/ocds/release/llamado-1380527</link>
+                <guid>llamado-1380527</guid>
+                <category>tender</category>
+            </item>
+                    <item>
+                <title>id_compra:1380799,release_id:adjudicacion-1380799</title>
+                <pubDate>Tue, 20 Oct 2026 12:40:11</pubDate>
+                <link>http://www.comprasestatales.gub.uy/ocds/release/adjudicacion-1380799</link>
+                <guid>adjudicacion-1380799</guid>
+                <category>award</category>
+            </item>
+                    <item>
+                <title>id_compra:1380792,release_id:adjudicacion-1380792</title>
+                <pubDate>Tue, 20 Oct 2026 12:35:09</pubDate>
+                <link>http://www.comprasestatales.gub.uy/ocds/release/adjudicacion-1380792</link>
+                <guid>adjudicacion-1380792</guid>
+                <category>award</category>
+            </item>
+                    <item>
+                <title>id_compra:1379323,release_id:adjudicacion-1379323</title>
+                <pubDate>Tue, 20 Oct 2026 12:35:08</pubDate>
+                <link>http://www.comprasestatales.gub.uy/ocds/release/adjudicacion-1379323</link>
+                <guid>adjudicacion-1379323</guid>
+                <category>award</category>
+            </item>
+                    <item>
+                <title>id_compra:1380793,release_id:adjudicacion-1380793</title>
+                <pubDate>Tue, 20 Oct 2026 12:35:08</pubDate>
+                <link>http://www.comprasestatales.gub.uy/ocds/release/adjudicacion-1380793</link>
+                <guid>adjudicacion-1380793</guid>
+                <category>award</category>
+            </item>
+                    <item>
+                <title>id_compra:1379314,release_id:adjudicacion-1379314</title>
+                <pubDate>Tue, 20 Oct 2026 12:35:08</pubDate>
+                <link>http://www.comprasestatales.gub.uy/ocds/release/adjudicacion-1379314</link>
+                <guid>adjudicacion-1379314</guid>
+                <category>award</category>
+            </item>
+                    <item>
+                <title>id_compra:1377894,release_id:adjudicacion-1377894</title>
+                <pubDate>Tue, 20 Oct 2026 12:25:08</pubDate>
+                <link>http://www.comprasestatales.gub.uy/ocds/release/adjudicacion-1377894</link>
+                <guid>adjudicacion-1377894</guid>
+                <category>award</category>
+            </item>
+                    <item>
+                <title>id_compra:1378770,release_id:adjudicacion-1378770</title>
+                <pubDate>Tue, 20 Oct 2026 12:20:12</pubDate>
+                <link>http://www.comprasestatales.gub.uy/ocds/release/adjudicacion-1378770</link>
+                <guid>adjudicacion-1378770</guid>
+                <category>award</category>
+            </item>
+                    <item>
+                <title>id_compra:1379959,release_id:llamado-1379959</title>
+                <pubDate>Tue, 20 Oct 2026 12:20:11</pubDate>
+                <link>http://www.comprasestatales.gub.uy/ocds/release/llamado-1379959</link>
+                <guid>llamado-1379959</guid>
+                <category>tender</category>
+            </item>
+                    <item>
+                <title>id_compra:1363426,release_id:adjudicacion-1363426</title>
+                <pubDate>Tue, 20 Oct 2026 12:20:10</pubDate>
+                <link>http://www.comprasestatales.gub.uy/ocds/release/adjudicacion-1363426</link>
+                <guid>adjudicacion-1363426</guid>
+                <category>award</category>
+            </item>
+                    <item>
+                <title>id_compra:1378319,release_id:aclar_llamado-1378319-1</title>
+                <pubDate>Tue, 20 Oct 2026 12:17:00</pubDate>
+                <link>http://www.comprasestatales.gub.uy/ocds/release/aclar_llamado-1378319-1</link>
+                <guid>aclar_llamado-1378319-1</guid>
+                <category>tenderUpdate</category>
+            </item>
+                    <item>
+                <title>id_compra:1366489,release_id:adjudicacion-1366489</title>
+                <pubDate>Tue, 20 Oct 2026 12:15:10</pubDate>
+                <link>http://www.comprasestatales.gub.uy/ocds/release/adjudicacion-1366489</link>
+                <guid>adjudicacion-1366489</guid>
+                <category>award</category>
+            </item>
+                    <item>
+                <title>id_compra:1377214,release_id:aclar_llamado-1377214-1</title>
+                <pubDate>Tue, 20 Oct 2026 12:13:00</pubDate>
+                <link>http://www.comprasestatales.gub.uy/ocds/release/aclar_llamado-1377214-1</link>
+                <guid>aclar_llamado-1377214-1</guid>
+                <category>tenderUpdate</category>
+            </item>
+                    <item>
+                <title>id_compra:1378003,release_id:aclar_llamado-1378003-0</title>
+                <pubDate>Tue, 20 Oct 2026 12:11:00</pubDate>
+                <link>http://www.comprasestatales.gub.uy/ocds/release/aclar_llamado-1378003-0</link>
+                <guid>aclar_llamado-1378003-0</guid>
+                <category>tenderUpdate</category>
+            </item>
+                    <item>
+                <title>id_compra:1380737,release_id:adjudicacion-1380737</title>
+                <pubDate>Tue, 20 Oct 2026 12:10:12</pubDate>
+                <link>http://www.comprasestatales.gub.uy/ocds/release/adjudicacion-1380737</link>
+                <guid>adjudicacion-1380737</guid>
+                <category>award</category>
+            </item>
+                    <item>
+                <title>id_compra:1380767,release_id:llamado-1380767</title>
+                <pubDate>Tue, 20 Oct 2026 12:10:11</pubDate>
+                <link>http://www.comprasestatales.gub.uy/ocds/release/llamado-1380767</link>
+                <guid>llamado-1380767</guid>
+                <category>tender</category>
+            </item>
+                    <item>
+                <title>id_compra:1380773,release_id:adjudicacion-1380773</title>
+                <pubDate>Tue, 20 Oct 2026 12:10:11</pubDate>
+                <link>http://www.comprasestatales.gub.uy/ocds/release/adjudicacion-1380773</link>
+                <guid>adjudicacion-1380773</guid>
+                <category>award</category>
+            </item>
+                    <item>
+                <title>id_compra:1368755,release_id:adjudicacion-1368755</title>
+                <pubDate>Tue, 20 Oct 2026 12:10:10</pubDate>
+                <link>http://www.comprasestatales.gub.uy/ocds/release/adjudicacion-1368755</link>
+                <guid>adjudicacion-1368755</guid>
+                <category>award</category>
+            </item>
+                    <item>
+                <title>id_compra:1380747,release_id:adjudicacion-1380747</title>
+                <pubDate>Tue, 20 Oct 2026 12:10:09</pubDate>
+                <link>http://www.comprasestatales.gub.uy/ocds/release/adjudicacion-1380747</link>
+                <guid>adjudicacion-1380747</guid>
+                <category>award</category>
+            </item>
+                    <item>
+                <title>id_compra:1380777,release_id:adjudicacion-1380777</title>
+                <pubDate>Tue, 20 Oct 2026 12:05:20</pubDate>
+                <link>http://www.comprasestatales.gub.uy/ocds/release/adjudicacion-1380777</link>
+                <guid>adjudicacion-1380777</guid>
+                <category>award</category>
+            </item>
+                    <item>
+                <title>id_compra:1377567,release_id:adjudicacion-1377567</title>
+                <pubDate>Tue, 20 Oct 2026 12:05:19</pubDate>
+                <link>http://www.comprasestatales.gub.uy/ocds/release/adjudicacion-1377567</link>
+                <guid>adjudicacion-1377567</guid>
+                <category>award</category>
+            </item>
+                    <item>
+                <title>id_compra:1380775,release_id:adjudicacion-1380775</title>
+                <pubDate>Tue, 20 Oct 2026 12:05:18</pubDate>
+                <link>http://www.comprasestatales.gub.uy/ocds/release/adjudicacion-1380775</link>
+                <guid>adjudicacion-1380775</guid>
+                <category>award</category>
+            </item>
+                    <item>
+                <title>id_compra:1271660,release_id:adjudicacion-1271660</title>
+                <pubDate>Tue, 20 Oct 2026 12:05:18</pubDate>
+                <link>http://www.comprasestatales.gub.uy/ocds/release/adjudicacion-1271660</link>
+                <guid>adjudicacion-1271660</guid>
+                <category>award</category>
+            </item>
+                    <item>
+                <title>id_compra:1380743,release_id:adjudicacion-1380743</title>
+                <pubDate>Tue, 20 Oct 2026 12:05:17</pubDate>
+                <link>http://www.comprasestatales.gub.uy/ocds/release/adjudicacion-1380743</link>
+                <guid>adjudicacion-1380743</guid>
+                <category>award</category>
+            </item>
+                    <item>
+                <title>id_compra:1380742,release_id:adjudicacion-1380742</title>
+                <pubDate>Tue, 20 Oct 2026 12:05:16</pubDate>
+                <link>http://www.comprasestatales.gub.uy/ocds/release/adjudicacion-1380742</link>
+                <guid>adjudicacion-1380742</guid>
+                <category>award</category>
+            </item>
+                    <item>
+                <title>id_compra:1380740,release_id:adjudicacion-1380740</title>
+                <pubDate>Tue, 20 Oct 2026 12:05:15</pubDate>
+                <link>http://www.comprasestatales.gub.uy/ocds/release/adjudicacion-1380740</link>
+                <guid>adjudicacion-1380740</guid>
+                <category>award</category>
+            </item>
+                    <item>
+                <title>id_compra:1380738,release_id:adjudicacion-1380738</title>
+                <pubDate>Tue, 20 Oct 2026 12:05:14</pubDate>
+                <link>http://www.comprasestatales.gub.uy/ocds/release/adjudicacion-1380738</link>
+                <guid>adjudicacion-1380738</guid>
+                <category>award</category>
+            </item>
+                    <item>
+                <title>id_compra:1379507,release_id:aclar_llamado-1379507-0</title>
+                <pubDate>Tue, 20 Oct 2026 12:01:02</pubDate>
+                <link>http://www.comprasestatales.gub.uy/ocds/release/aclar_llamado-1379507-0</link>
+                <guid>aclar_llamado-1379507-0</guid>
+                <category>tenderUpdate</category>
+            </item>
+                    <item>
+                <title>id_compra:1379438,release_id:aclar_llamado-1379438-0</title>
+                <pubDate>Tue, 20 Oct 2026 12:01:01</pubDate>
+                <link>http://www.comprasestatales.gub.uy/ocds/release/aclar_llamado-1379438-0</link>
+                <guid>aclar_llamado-1379438-0</guid>
+                <category>tenderUpdate</category>
+            </item>
+                    <item>
+                <title>id_compra:1378548,release_id:aclar_llamado-1378548-2</title>
+                <pubDate>Tue, 20 Oct 2026 12:01:01</pubDate>
+                <link>http://www.comprasestatales.gub.uy/ocds/release/aclar_llamado-1378548-2</link>
+                <guid>aclar_llamado-1378548-2</guid>
+                <category>tenderUpdate</category>
+            </item>
+                    <item>
+                <title>id_compra:1380124,release_id:aclar_llamado-1380124-0</title>
+                <pubDate>Tue, 20 Oct 2026 12:01:00</pubDate>
+                <link>http://www.comprasestatales.gub.uy/ocds/release/aclar_llamado-1380124-0</link>
+                <guid>aclar_llamado-1380124-0</guid>
+                <category>tenderUpdate</category>
+            </item>
+                    <item>
+                <title>id_compra:1380739,release_id:adjudicacion-1380739</title>
+                <pubDate>Tue, 20 Oct 2026 12:00:16</pubDate>
+                <link>http://www.comprasestatales.gub.uy/ocds/release/adjudicacion-1380739</link>
+                <guid>adjudicacion-1380739</guid>
+                <category>award</category>
+            </item>
+                    <item>
+                <title>id_compra:1380736,release_id:adjudicacion-1380736</title>
+                <pubDate>Tue, 20 Oct 2026 12:00:16</pubDate>
+                <link>http://www.comprasestatales.gub.uy/ocds/release/adjudicacion-1380736</link>
+                <guid>adjudicacion-1380736</guid>
+                <category>award</category>
+            </item>
+                    <item>
+                <title>id_compra:1380610,release_id:adjudicacion-1380610</title>
+                <pubDate>Tue, 20 Oct 2026 12:00:15</pubDate>
+                <link>http://www.comprasestatales.gub.uy/ocds/release/adjudicacion-1380610</link>
+                <guid>adjudicacion-1380610</guid>
+                <category>award</category>
+            </item>
+                    <item>
+                <title>id_compra:1375643,release_id:adjudicacion-1375643</title>
+                <pubDate>Tue, 20 Oct 2026 12:00:14</pubDate>
+                <link>http://www.comprasestatales.gub.uy/ocds/release/adjudicacion-1375643</link>
+                <guid>adjudicacion-1375643</guid>
+                <category>award</category>
+            </item>
+                    <item>
+                <title>id_compra:1380109,release_id:adjudicacion-1380109</title>
+                <pubDate>Tue, 20 Oct 2026 11:55:11</pubDate>
+                <link>http://www.comprasestatales.gub.uy/ocds/release/adjudicacion-1380109</link>
+                <guid>adjudicacion-1380109</guid>
+                <category>award</category>
+            </item>
+                    <item>
+                <title>id_compra:1380769,release_id:llamado-1380769</title>
+                <pubDate>Tue, 20 Oct 2026 11:55:10</pubDate>
+                <link>http://www.comprasestatales.gub.uy/ocds/release/llamado-1380769</link>
+                <guid>llamado-1380769</guid>
+                <category>tender</category>
+            </item>
+                    <item>
+                <title>id_compra:1380753,release_id:adjudicacion-1380753</title>
+                <pubDate>Tue, 20 Oct 2026 11:50:14</pubDate>
+                <link>http://www.comprasestatales.gub.uy/ocds/release/adjudicacion-1380753</link>
+                <guid>adjudicacion-1380753</guid>
+                <category>award</category>
+            </item>
+                    <item>
+                <title>id_compra:1379962,release_id:adjudicacion-1379962</title>
+                <pubDate>Tue, 20 Oct 2026 11:50:13</pubDate>
+                <link>http://www.comprasestatales.gub.uy/ocds/release/adjudicacion-1379962</link>
+                <guid>adjudicacion-1379962</guid>
+                <category>award</category>
+            </item>
+                    <item>
+                <title>id_compra:1372281,release_id:aclar_llamado-1372281-0</title>
+                <pubDate>Tue, 20 Oct 2026 11:46:00</pubDate>
+                <link>http://www.comprasestatales.gub.uy/ocds/release/aclar_llamado-1372281-0</link>
+                <guid>aclar_llamado-1372281-0</guid>
+                <category>tenderUpdate</category>
+            </item>
+                    <item>
+                <title>id_compra:1372026,release_id:aclar_llamado-1372026-2</title>
+                <pubDate>Tue, 20 Oct 2026 11:46:00</pubDate>
+                <link>http://www.comprasestatales.gub.uy/ocds/release/aclar_llamado-1372026-2</link>
+                <guid>aclar_llamado-1372026-2</guid>
+                <category>tenderUpdate</category>
+            </item>
+                    <item>
+                <title>id_compra:1380008,release_id:ajuste_adjudicacion-31119</title>
+                <pubDate>Tue, 20 Oct 2026 11:45:13</pubDate>
+                <link>http://www.comprasestatales.gub.uy/ocds/release/ajuste_adjudicacion-31119</link>
+                <guid>ajuste_adjudicacion-31119</guid>
+                <category>awardUpdate</category>
+            </item>
+                    <item>
+                <title>id_compra:1378751,release_id:ajuste_llamado-48786</title>
+                <pubDate>Tue, 20 Oct 2026 11:45:13</pubDate>
+                <link>http://www.comprasestatales.gub.uy/ocds/release/ajuste_llamado-48786</link>
+                <guid>ajuste_llamado-48786</guid>
+                <category>tenderAmendment</category>
+            </item>
+                    <item>
+                <title>id_compra:1380727,release_id:adjudicacion-1380727</title>
+                <pubDate>Tue, 20 Oct 2026 11:45:12</pubDate>
+                <link>http://www.comprasestatales.gub.uy/ocds/release/adjudicacion-1380727</link>
+                <guid>adjudicacion-1380727</guid>
+                <category>award</category>
+            </item>
+                    <item>
+                <title>id_compra:1372281,release_id:llamado-1372281</title>
+                <pubDate>Tue, 20 Oct 2026 11:45:11</pubDate>
+                <link>http://www.comprasestatales.gub.uy/ocds/release/llamado-1372281</link>
+                <guid>llamado-1372281</guid>
+                <category>tender</category>
+            </item>
+                    <item>
+                <title>id_compra:1377033,release_id:aclar_llamado-1377033-1</title>
+                <pubDate>Tue, 20 Oct 2026 11:43:01</pubDate>
+                <link>http://www.comprasestatales.gub.uy/ocds/release/aclar_llamado-1377033-1</link>
+                <guid>aclar_llamado-1377033-1</guid>
+                <category>tenderUpdate</category>
+            </item>
+                    <item>
+                <title>id_compra:1371748,release_id:aclar_llamado-1371748-4</title>
+                <pubDate>Tue, 20 Oct 2026 11:42:01</pubDate>
+                <link>http://www.comprasestatales.gub.uy/ocds/release/aclar_llamado-1371748-4</link>
+                <guid>aclar_llamado-1371748-4</guid>
+                <category>tenderUpdate</category>
+            </item>
+                    <item>
+                <title>id_compra:1380756,release_id:aclar_llamado-1380756-0</title>
+                <pubDate>Tue, 20 Oct 2026 11:42:00</pubDate>
+                <link>http://www.comprasestatales.gub.uy/ocds/release/aclar_llamado-1380756-0</link>
+                <guid>aclar_llamado-1380756-0</guid>
+                <category>tenderUpdate</category>
+            </item>
+                    <item>
+                <title>id_compra:1380439,release_id:aclar_llamado-1380439-0</title>
+                <pubDate>Tue, 20 Oct 2026 11:42:00</pubDate>
+                <link>http://www.comprasestatales.gub.uy/ocds/release/aclar_llamado-1380439-0</link>
+                <guid>aclar_llamado-1380439-0</guid>
+                <category>tenderUpdate</category>
+            </item>
+                    <item>
+                <title>id_compra:1366869,release_id:adjudicacion-1366869</title>
+                <pubDate>Tue, 20 Oct 2026 11:40:10</pubDate>
+                <link>http://www.comprasestatales.gub.uy/ocds/release/adjudicacion-1366869</link>
+                <guid>adjudicacion-1366869</guid>
+                <category>award</category>
+            </item>
+                    <item>
+                <title>id_compra:1371177,release_id:adjudicacion-1371177</title>
+                <pubDate>Tue, 20 Oct 2026 11:40:09</pubDate>
+                <link>http://www.comprasestatales.gub.uy/ocds/release/adjudicacion-1371177</link>
+                <guid>adjudicacion-1371177</guid>
+                <category>award</category>
+            </item>
+                    <item>
+                <title>id_compra:1380730,release_id:adjudicacion-1380730</title>
+                <pubDate>Tue, 20 Oct 2026 11:40:09</pubDate>
+                <link>http://www.comprasestatales.gub.uy/ocds/release/adjudicacion-1380730</link>
+                <guid>adjudicacion-1380730</guid>
+                <category>award</category>
+            </item>
+                    <item>
+                <title>id_compra:1345559,release_id:adjudicacion-1345559</title>
+                <pubDate>Tue, 20 Oct 2026 11:40:08</pubDate>
+                <link>http://www.comprasestatales.gub.uy/ocds/release/adjudicacion-1345559</link>
+                <guid>adjudicacion-1345559</guid>
+                <category>award</category>
+            </item>
+                    <item>
+                <title>id_compra:1380751,release_id:llamado-1380751</title>
+                <pubDate>Tue, 20 Oct 2026 11:35:10</pubDate>
+                <link>http://www.comprasestatales.gub.uy/ocds/release/llamado-1380751</link>
+                <guid>llamado-1380751</guid>
+                <category>tender</category>
+            </item>
+                    <item>
+                <title>id_compra:1380757,release_id:llamado-1380757</title>
+                <pubDate>Tue, 20 Oct 2026 11:35:09</pubDate>
+                <link>http://www.comprasestatales.gub.uy/ocds/release/llamado-1380757</link>
+                <guid>llamado-1380757</guid>
+                <category>tender</category>
+            </item>
+                    <item>
+                <title>id_compra:1380756,release_id:llamado-1380756</title>
+                <pubDate>Tue, 20 Oct 2026 11:35:08</pubDate>
+                <link>http://www.comprasestatales.gub.uy/ocds/release/llamado-1380756</link>
+                <guid>llamado-1380756</guid>
+                <category>tender</category>
+            </item>
+                    <item>
+                <title>id_compra:1378123,release_id:adjudicacion-1378123</title>
+                <pubDate>Tue, 20 Oct 2026 11:35:07</pubDate>
+                <link>http://www.comprasestatales.gub.uy/ocds/release/adjudicacion-1378123</link>
+                <guid>adjudicacion-1378123</guid>
+                <category>award</category>
+            </item>
+                    <item>
+                <title>id_compra:1378773,release_id:aclar_llamado-1378773-1</title>
+                <pubDate>Tue, 20 Oct 2026 11:33:00</pubDate>
+                <link>http://www.comprasestatales.gub.uy/ocds/release/aclar_llamado-1378773-1</link>
+                <guid>aclar_llamado-1378773-1</guid>
+                <category>tenderUpdate</category>
+            </item>
+                    <item>
+                <title>id_compra:1379008,release_id:aclar_llamado-1379008-0</title>
+                <pubDate>Tue, 20 Oct 2026 11:29:00</pubDate>
+                <link>http://www.comprasestatales.gub.uy/ocds/release/aclar_llamado-1379008-0</link>
+                <guid>aclar_llamado-1379008-0</guid>
+                <category>tenderUpdate</category>
+            </item>
+                    <item>
+                <title>id_compra:1380746,release_id:adjudicacion-1380746</title>
+                <pubDate>Tue, 20 Oct 2026 11:25:08</pubDate>
+                <link>http://www.comprasestatales.gub.uy/ocds/release/adjudicacion-1380746</link>
+                <guid>adjudicacion-1380746</guid>
+                <category>award</category>
+            </item>
+                    <item>
+                <title>id_compra:1354843,release_id:adjudicacion-1354843</title>
+                <pubDate>Tue, 20 Oct 2026 11:20:11</pubDate>
+                <link>http://www.comprasestatales.gub.uy/ocds/release/adjudicacion-1354843</link>
+                <guid>adjudicacion-1354843</guid>
+                <category>award</category>
+            </item>
+                    <item>
+                <title>id_compra:1375043,release_id:adjudicacion-1375043</title>
+                <pubDate>Tue, 20 Oct 2026 11:20:11</pubDate>
+                <link>http://www.comprasestatales.gub.uy/ocds/release/adjudicacion-1375043</link>
+                <guid>adjudicacion-1375043</guid>
+                <category>award</category>
+            </item>
+                    <item>
+                <title>id_compra:1380735,release_id:llamado-1380735</title>
+                <pubDate>Tue, 20 Oct 2026 11:15:12</pubDate>
+                <link>http://www.comprasestatales.gub.uy/ocds/release/llamado-1380735</link>
+                <guid>llamado-1380735</guid>
+                <category>tender</category>
+            </item>
+                    <item>
+                <title>id_compra:1380503,release_id:llamado-1380503</title>
+                <pubDate>Tue, 20 Oct 2026 11:15:12</pubDate>
+                <link>http://www.comprasestatales.gub.uy/ocds/release/llamado-1380503</link>
+                <guid>llamado-1380503</guid>
+                <category>tender</category>
+            </item>
+                    <item>
+                <title>id_compra:1380734,release_id:adjudicacion-1380734</title>
+                <pubDate>Tue, 20 Oct 2026 11:10:09</pubDate>
+                <link>http://www.comprasestatales.gub.uy/ocds/release/adjudicacion-1380734</link>
+                <guid>adjudicacion-1380734</guid>
+                <category>award</category>
+            </item>
+                    <item>
+                <title>id_compra:1378495,release_id:aclar_llamado-1378495-0</title>
+                <pubDate>Tue, 20 Oct 2026 11:07:00</pubDate>
+                <link>http://www.comprasestatales.gub.uy/ocds/release/aclar_llamado-1378495-0</link>
+                <guid>aclar_llamado-1378495-0</guid>
+                <category>tenderUpdate</category>
+            </item>
+                    <item>
+                <title>id_compra:1379736,release_id:adjudicacion-1379736</title>
+                <pubDate>Tue, 20 Oct 2026 11:05:09</pubDate>
+                <link>http://www.comprasestatales.gub.uy/ocds/release/adjudicacion-1379736</link>
+                <guid>adjudicacion-1379736</guid>
+                <category>award</category>
+            </item>
+                    <item>
+                <title>id_compra:1369218,release_id:adjudicacion-1369218</title>
+                <pubDate>Tue, 20 Oct 2026 11:05:08</pubDate>
+                <link>http://www.comprasestatales.gub.uy/ocds/release/adjudicacion-1369218</link>
+                <guid>adjudicacion-1369218</guid>
+                <category>award</category>
+            </item>
+                    <item>
+                <title>id_compra:1379503,release_id:aclar_llamado-1379503-0</title>
+                <pubDate>Tue, 20 Oct 2026 11:01:02</pubDate>
+                <link>http://www.comprasestatales.gub.uy/ocds/release/aclar_llamado-1379503-0</link>
+                <guid>aclar_llamado-1379503-0</guid>
+                <category>tenderUpdate</category>
+            </item>
+                    <item>
+                <title>id_compra:1379082,release_id:aclar_llamado-1379082-0</title>
+                <pubDate>Tue, 20 Oct 2026 11:01:01</pubDate>
+                <link>http://www.comprasestatales.gub.uy/ocds/release/aclar_llamado-1379082-0</link>
+                <guid>aclar_llamado-1379082-0</guid>
+                <category>tenderUpdate</category>
+            </item>
+                    <item>
+                <title>id_compra:1379754,release_id:aclar_llamado-1379754-0</title>
+                <pubDate>Tue, 20 Oct 2026 11:01:01</pubDate>
+                <link>http://www.comprasestatales.gub.uy/ocds/release/aclar_llamado-1379754-0</link>
+                <guid>aclar_llamado-1379754-0</guid>
+                <category>tenderUpdate</category>
+            </item>
+                    <item>
+                <title>id_compra:1376825,release_id:aclar_llamado-1376825-2</title>
+                <pubDate>Tue, 20 Oct 2026 11:01:01</pubDate>
+                <link>http://www.comprasestatales.gub.uy/ocds/release/aclar_llamado-1376825-2</link>
+                <guid>aclar_llamado-1376825-2</guid>
+                <category>tenderUpdate</category>
+            </item>
+                    <item>
+                <title>id_compra:1376497,release_id:aclar_llamado-1376497-1</title>
+                <pubDate>Tue, 20 Oct 2026 11:01:00</pubDate>
+                <link>http://www.comprasestatales.gub.uy/ocds/release/aclar_llamado-1376497-1</link>
+                <guid>aclar_llamado-1376497-1</guid>
+                <category>tenderUpdate</category>
+            </item>
+                    <item>
+                <title>id_compra:1380726,release_id:adjudicacion-1380726</title>
+                <pubDate>Tue, 20 Oct 2026 11:00:13</pubDate>
+                <link>http://www.comprasestatales.gub.uy/ocds/release/adjudicacion-1380726</link>
+                <guid>adjudicacion-1380726</guid>
+                <category>award</category>
+            </item>
+                    <item>
+                <title>id_compra:1380715,release_id:adjudicacion-1380715</title>
+                <pubDate>Tue, 20 Oct 2026 11:00:12</pubDate>
+                <link>http://www.comprasestatales.gub.uy/ocds/release/adjudicacion-1380715</link>
+                <guid>adjudicacion-1380715</guid>
+                <category>award</category>
+            </item>
+                    <item>
+                <title>id_compra:1380714,release_id:aclar_llamado-1380714-10</title>
+                <pubDate>Tue, 20 Oct 2026 10:58:01</pubDate>
+                <link>http://www.comprasestatales.gub.uy/ocds/release/aclar_llamado-1380714-10</link>
+                <guid>aclar_llamado-1380714-10</guid>
+                <category>tenderUpdate</category>
+            </item>
+                    <item>
+                <title>id_compra:1380714,release_id:aclar_llamado-1380714-9</title>
+                <pubDate>Tue, 20 Oct 2026 10:58:00</pubDate>
+                <link>http://www.comprasestatales.gub.uy/ocds/release/aclar_llamado-1380714-9</link>
+                <guid>aclar_llamado-1380714-9</guid>
+                <category>tenderUpdate</category>
+            </item>
+                    <item>
+                <title>id_compra:1380714,release_id:aclar_llamado-1380714-8</title>
+                <pubDate>Tue, 20 Oct 2026 10:57:00</pubDate>
+                <link>http://www.comprasestatales.gub.uy/ocds/release/aclar_llamado-1380714-8</link>
+                <guid>aclar_llamado-1380714-8</guid>
+                <category>tenderUpdate</category>
+            </item>
+                    <item>
+                <title>id_compra:1380714,release_id:aclar_llamado-1380714-7</title>
+                <pubDate>Tue, 20 Oct 2026 10:57:00</pubDate>
+                <link>http://www.comprasestatales.gub.uy/ocds/release/aclar_llamado-1380714-7</link>
+                <guid>aclar_llamado-1380714-7</guid>
+                <category>tenderUpdate</category>
+            </item>
+                    <item>
+                <title>id_compra:1380714,release_id:aclar_llamado-1380714-6</title>
+                <pubDate>Tue, 20 Oct 2026 10:56:00</pubDate>
+                <link>http://www.comprasestatales.gub.uy/ocds/release/aclar_llamado-1380714-6</link>
+                <guid>aclar_llamado-1380714-6</guid>
+                <category>tenderUpdate</category>
+            </item>
+                    <item>
+                <title>id_compra:1380720,release_id:adjudicacion-1380720</title>
+                <pubDate>Tue, 20 Oct 2026 10:55:09</pubDate>
+                <link>http://www.comprasestatales.gub.uy/ocds/release/adjudicacion-1380720</link>
+                <guid>adjudicacion-1380720</guid>
+                <category>award</category>
+            </item>
+                    <item>
+                <title>id_compra:1380516,release_id:adjudicacion-1380516</title>
+                <pubDate>Tue, 20 Oct 2026 10:55:08</pubDate>
+                <link>http://www.comprasestatales.gub.uy/ocds/release/adjudicacion-1380516</link>
+                <guid>adjudicacion-1380516</guid>
+                <category>award</category>
+            </item>
+                    <item>
+                <title>id_compra:1380718,release_id:adjudicacion-1380718</title>
+                <pubDate>Tue, 20 Oct 2026 10:55:08</pubDate>
+                <link>http://www.comprasestatales.gub.uy/ocds/release/adjudicacion-1380718</link>
+                <guid>adjudicacion-1380718</guid>
+                <category>award</category>
+            </item>
+                    <item>
+                <title>id_compra:1380714,release_id:aclar_llamado-1380714-5</title>
+                <pubDate>Tue, 20 Oct 2026 10:54:00</pubDate>
+                <link>http://www.comprasestatales.gub.uy/ocds/release/aclar_llamado-1380714-5</link>
+                <guid>aclar_llamado-1380714-5</guid>
+                <category>tenderUpdate</category>
+            </item>
+                    <item>
+                <title>id_compra:1368865,release_id:aclar_llamado-1368865-7</title>
+                <pubDate>Tue, 20 Oct 2026 10:53:01</pubDate>
+                <link>http://www.comprasestatales.gub.uy/ocds/release/aclar_llamado-1368865-7</link>
+                <guid>aclar_llamado-1368865-7</guid>
+                <category>tenderUpdate</category>
+            </item>
+                    <item>
+                <title>id_compra:1380714,release_id:aclar_llamado-1380714-4</title>
+                <pubDate>Tue, 20 Oct 2026 10:52:00</pubDate>
+                <link>http://www.comprasestatales.gub.uy/ocds/release/aclar_llamado-1380714-4</link>
+                <guid>aclar_llamado-1380714-4</guid>
+                <category>tenderUpdate</category>
+            </item>
+                    <item>
+                <title>id_compra:1380714,release_id:aclar_llamado-1380714-1</title>
+                <pubDate>Tue, 20 Oct 2026 10:51:02</pubDate>
+                <link>http://www.comprasestatales.gub.uy/ocds/release/aclar_llamado-1380714-1</link>
+                <guid>aclar_llamado-1380714-1</guid>
+                <category>tenderUpdate</category>
+            </item>
+                    <item>
+                <title>id_compra:1380714,release_id:aclar_llamado-1380714-0</title>
+                <pubDate>Tue, 20 Oct 2026 10:51:01</pubDate>
+                <link>http://www.comprasestatales.gub.uy/ocds/release/aclar_llamado-1380714-0</link>
+                <guid>aclar_llamado-1380714-0</guid>
+                <category>tenderUpdate</category>
+            </item>
+                    <item>
+                <title>id_compra:1380714,release_id:aclar_llamado-1380714-2</title>
+                <pubDate>Tue, 20 Oct 2026 10:51:01</pubDate>
+                <link>http://www.comprasestatales.gub.uy/ocds/release/aclar_llamado-1380714-2</link>
+                <guid>aclar_llamado-1380714-2</guid>
+                <category>tenderUpdate</category>
+            </item>
+                    <item>
+                <title>id_compra:1380714,release_id:aclar_llamado-1380714-3</title>
+                <pubDate>Tue, 20 Oct 2026 10:51:00</pubDate>
+                <link>http://www.comprasestatales.gub.uy/ocds/release/aclar_llamado-1380714-3</link>
+                <guid>aclar_llamado-1380714-3</guid>
+                <category>tenderUpdate</category>
+            </item>
+                    <item>
+                <title>id_compra:1380712,release_id:adjudicacion-1380712</title>
+                <pubDate>Tue, 20 Oct 2026 10:50:12</pubDate>
+                <link>http://www.comprasestatales.gub.uy/ocds/release/adjudicacion-1380712</link>
+                <guid>adjudicacion-1380712</guid>
+                <category>award</category>
+            </item>
+                    <item>
+                <title>id_compra:1380714,release_id:llamado-1380714</title>
+                <pubDate>Tue, 20 Oct 2026 10:50:11</pubDate>
+                <link>http://www.comprasestatales.gub.uy/ocds/release/llamado-1380714</link>
+                <guid>llamado-1380714</guid>
+                <category>tender</category>
+            </item>
+                    <item>
+                <title>id_compra:1380683,release_id:llamado-1380683</title>
+                <pubDate>Tue, 20 Oct 2026 10:50:10</pubDate>
+                <link>http://www.comprasestatales.gub.uy/ocds/release/llamado-1380683</link>
+                <guid>llamado-1380683</guid>
+                <category>tender</category>
+            </item>
+                    <item>
+                <title>id_compra:1380708,release_id:adjudicacion-1380708</title>
+                <pubDate>Tue, 20 Oct 2026 10:50:09</pubDate>
+                <link>http://www.comprasestatales.gub.uy/ocds/release/adjudicacion-1380708</link>
+                <guid>adjudicacion-1380708</guid>
+                <category>award</category>
+            </item>
+                    <item>
+                <title>id_compra:1379297,release_id:adjudicacion-1379297</title>
+                <pubDate>Tue, 20 Oct 2026 10:45:10</pubDate>
+                <link>http://www.comprasestatales.gub.uy/ocds/release/adjudicacion-1379297</link>
+                <guid>adjudicacion-1379297</guid>
+                <category>award</category>
+            </item>
+                    <item>
+                <title>id_compra:1380506,release_id:adjudicacion-1380506</title>
+                <pubDate>Tue, 20 Oct 2026 10:45:09</pubDate>
+                <link>http://www.comprasestatales.gub.uy/ocds/release/adjudicacion-1380506</link>
+                <guid>adjudicacion-1380506</guid>
+                <category>award</category>
+            </item>
+                    <item>
+                <title>id_compra:1380012,release_id:adjudicacion-1380012</title>
+                <pubDate>Tue, 20 Oct 2026 10:40:12</pubDate>
+                <link>http://www.comprasestatales.gub.uy/ocds/release/adjudicacion-1380012</link>
+                <guid>adjudicacion-1380012</guid>
+                <category>award</category>
+            </item>
+                    <item>
+                <title>id_compra:1374742,release_id:adjudicacion-1374742</title>
+                <pubDate>Tue, 20 Oct 2026 10:40:12</pubDate>
+                <link>http://www.comprasestatales.gub.uy/ocds/release/adjudicacion-1374742</link>
+                <guid>adjudicacion-1374742</guid>
+                <category>award</category>
+            </item>
+                    <item>
+                <title>id_compra:1380682,release_id:adjudicacion-1380682</title>
+                <pubDate>Tue, 20 Oct 2026 10:40:11</pubDate>
+                <link>http://www.comprasestatales.gub.uy/ocds/release/adjudicacion-1380682</link>
+                <guid>adjudicacion-1380682</guid>
+                <category>award</category>
+            </item>
+                    <item>
+                <title>id_compra:1380704,release_id:adjudicacion-1380704</title>
+                <pubDate>Tue, 20 Oct 2026 10:40:11</pubDate>
+                <link>http://www.comprasestatales.gub.uy/ocds/release/adjudicacion-1380704</link>
+                <guid>adjudicacion-1380704</guid>
+                <category>award</category>
+            </item>
+                    <item>
+                <title>id_compra:1371732,release_id:adjudicacion-1371732</title>
+                <pubDate>Tue, 20 Oct 2026 10:40:10</pubDate>
+                <link>http://www.comprasestatales.gub.uy/ocds/release/adjudicacion-1371732</link>
+                <guid>adjudicacion-1371732</guid>
+                <category>award</category>
+            </item>
+                    <item>
+                <title>id_compra:1380690,release_id:llamado-1380690</title>
+                <pubDate>Tue, 20 Oct 2026 10:40:09</pubDate>
+                <link>http://www.comprasestatales.gub.uy/ocds/release/llamado-1380690</link>
+                <guid>llamado-1380690</guid>
+                <category>tender</category>
+            </item>
+                    <item>
+                <title>id_compra:1350352,release_id:adjudicacion-1350352</title>
+                <pubDate>Tue, 20 Oct 2026 10:40:08</pubDate>
+                <link>http://www.comprasestatales.gub.uy/ocds/release/adjudicacion-1350352</link>
+                <guid>adjudicacion-1350352</guid>
+                <category>award</category>
+            </item>
+                    <item>
+                <title>id_compra:1380161,release_id:aclar_llamado-1380161-1</title>
+                <pubDate>Tue, 20 Oct 2026 10:39:00</pubDate>
+                <link>http://www.comprasestatales.gub.uy/ocds/release/aclar_llamado-1380161-1</link>
+                <guid>aclar_llamado-1380161-1</guid>
+                <category>tenderUpdate</category>
+            </item>
+                    <item>
+                <title>id_compra:1380703,release_id:llamado-1380703</title>
+                <pubDate>Tue, 20 Oct 2026 10:35:12</pubDate>
+                <link>http://www.comprasestatales.gub.uy/ocds/release/llamado-1380703</link>
+                <guid>llamado-1380703</guid>
+                <category>tender</category>
+            </item>
+                    <item>
+                <title>id_compra:1379359,release_id:adjudicacion-1379359</title>
+                <pubDate>Tue, 20 Oct 2026 10:35:11</pubDate>
+                <link>http://www.comprasestatales.gub.uy/ocds/release/adjudicacion-1379359</link>
+                <guid>adjudicacion-1379359</guid>
+                <category>award</category>
+            </item>
+                    <item>
+                <title>id_compra:1364521,release_id:adjudicacion-1364521</title>
+                <pubDate>Tue, 20 Oct 2026 10:35:10</pubDate>
+                <link>http://www.comprasestatales.gub.uy/ocds/release/adjudicacion-1364521</link>
+                <guid>adjudicacion-1364521</guid>
+                <category>award</category>
+            </item>
+                    <item>
+                <title>id_compra:1361893,release_id:adjudicacion-1361893</title>
+                <pubDate>Tue, 20 Oct 2026 10:35:09</pubDate>
+                <link>http://www.comprasestatales.gub.uy/ocds/release/adjudicacion-1361893</link>
+                <guid>adjudicacion-1361893</guid>
+                <category>award</category>
+            </item>
+                    <item>
+                <title>id_compra:1376868,release_id:ajuste_llamado-48785</title>
+                <pubDate>Tue, 20 Oct 2026 10:30:14</pubDate>
+                <link>http://www.comprasestatales.gub.uy/ocds/release/ajuste_llamado-48785</link>
+                <guid>ajuste_llamado-48785</guid>
+                <category>tenderAmendment</category>
+            </item>
+                    <item>
+                <title>id_compra:1372381,release_id:adjudicacion-1372381</title>
+                <pubDate>Tue, 20 Oct 2026 10:30:13</pubDate>
+                <link>http://www.comprasestatales.gub.uy/ocds/release/adjudicacion-1372381</link>
+                <guid>adjudicacion-1372381</guid>
+                <category>award</category>
+            </item>
+                    <item>
+                <title>id_compra:1379696,release_id:adjudicacion-1379696</title>
+                <pubDate>Tue, 20 Oct 2026 10:30:12</pubDate>
+                <link>http://www.comprasestatales.gub.uy/ocds/release/adjudicacion-1379696</link>
+                <guid>adjudicacion-1379696</guid>
+                <category>award</category>
+            </item>
+                    <item>
+                <title>id_compra:1379664,release_id:adjudicacion-1379664</title>
+                <pubDate>Tue, 20 Oct 2026 10:30:11</pubDate>
+                <link>http://www.comprasestatales.gub.uy/ocds/release/adjudicacion-1379664</link>
+                <guid>adjudicacion-1379664</guid>
+                <category>award</category>
+            </item>
+                    <item>
+                <title>id_compra:1379290,release_id:adjudicacion-1379290</title>
+                <pubDate>Tue, 20 Oct 2026 10:30:11</pubDate>
+                <link>http://www.comprasestatales.gub.uy/ocds/release/adjudicacion-1379290</link>
+                <guid>adjudicacion-1379290</guid>
+                <category>award</category>
+            </item>
+                    <item>
+                <title>id_compra:1379691,release_id:aclar_llamado-1379691-0</title>
+                <pubDate>Tue, 20 Oct 2026 10:28:00</pubDate>
+                <link>http://www.comprasestatales.gub.uy/ocds/release/aclar_llamado-1379691-0</link>
+                <guid>aclar_llamado-1379691-0</guid>
+                <category>tenderUpdate</category>
+            </item>
+                    <item>
+                <title>id_compra:1380642,release_id:aclar_llamado-1380642-1</title>
+                <pubDate>Tue, 20 Oct 2026 10:26:01</pubDate>
+                <link>http://www.comprasestatales.gub.uy/ocds/release/aclar_llamado-1380642-1</link>
+                <guid>aclar_llamado-1380642-1</guid>
+                <category>tenderUpdate</category>
+            </item>
+                    <item>
+                <title>id_compra:1380642,release_id:aclar_llamado-1380642-0</title>
+                <pubDate>Tue, 20 Oct 2026 10:26:00</pubDate>
+                <link>http://www.comprasestatales.gub.uy/ocds/release/aclar_llamado-1380642-0</link>
+                <guid>aclar_llamado-1380642-0</guid>
+                <category>tenderUpdate</category>
+            </item>
+                    <item>
+                <title>id_compra:1377476,release_id:ajuste_llamado-48784</title>
+                <pubDate>Tue, 20 Oct 2026 10:25:16</pubDate>
+                <link>http://www.comprasestatales.gub.uy/ocds/release/ajuste_llamado-48784</link>
+                <guid>ajuste_llamado-48784</guid>
+                <category>tenderAmendment</category>
+            </item>
+                    <item>
+                <title>id_compra:1379673,release_id:adjudicacion-1379673</title>
+                <pubDate>Tue, 20 Oct 2026 10:25:14</pubDate>
+                <link>http://www.comprasestatales.gub.uy/ocds/release/adjudicacion-1379673</link>
+                <guid>adjudicacion-1379673</guid>
+                <category>award</category>
+            </item>
+                    <item>
+                <title>id_compra:1380686,release_id:adjudicacion-1380686</title>
+                <pubDate>Tue, 20 Oct 2026 10:25:14</pubDate>
+                <link>http://www.comprasestatales.gub.uy/ocds/release/adjudicacion-1380686</link>
+                <guid>adjudicacion-1380686</guid>
+                <category>award</category>
+            </item>
+                    <item>
+                <title>id_compra:1372028,release_id:adjudicacion-1372028</title>
+                <pubDate>Tue, 20 Oct 2026 10:25:13</pubDate>
+                <link>http://www.comprasestatales.gub.uy/ocds/release/adjudicacion-1372028</link>
+                <guid>adjudicacion-1372028</guid>
+                <category>award</category>
+            </item>
+                    <item>
+                <title>id_compra:1380675,release_id:adjudicacion-1380675</title>
+                <pubDate>Tue, 20 Oct 2026 10:25:12</pubDate>
+                <link>http://www.comprasestatales.gub.uy/ocds/release/adjudicacion-1380675</link>
+                <guid>adjudicacion-1380675</guid>
+                <category>award</category>
+            </item>
+                    <item>
+                <title>id_compra:1380677,release_id:adjudicacion-1380677</title>
+                <pubDate>Tue, 20 Oct 2026 10:25:12</pubDate>
+                <link>http://www.comprasestatales.gub.uy/ocds/release/adjudicacion-1380677</link>
+                <guid>adjudicacion-1380677</guid>
+                <category>award</category>
+            </item>
+                    <item>
+                <title>id_compra:1379520,release_id:adjudicacion-1379520</title>
+                <pubDate>Tue, 20 Oct 2026 10:20:10</pubDate>
+                <link>http://www.comprasestatales.gub.uy/ocds/release/adjudicacion-1379520</link>
+                <guid>adjudicacion-1379520</guid>
+                <category>award</category>
+            </item>
+                    <item>
+                <title>id_compra:1379707,release_id:adjudicacion-1379707</title>
+                <pubDate>Tue, 20 Oct 2026 10:20:09</pubDate>
+                <link>http://www.comprasestatales.gub.uy/ocds/release/adjudicacion-1379707</link>
+                <guid>adjudicacion-1379707</guid>
+                <category>award</category>
+            </item>
+                    <item>
+                <title>id_compra:1379265,release_id:adjudicacion-1379265</title>
+                <pubDate>Tue, 20 Oct 2026 10:20:09</pubDate>
+                <link>http://www.comprasestatales.gub.uy/ocds/release/adjudicacion-1379265</link>
+                <guid>adjudicacion-1379265</guid>
+                <category>award</category>
+            </item>
+                    <item>
+                <title>id_compra:1380680,release_id:adjudicacion-1380680</title>
+                <pubDate>Tue, 20 Oct 2026 10:15:10</pubDate>
+                <link>http://www.comprasestatales.gub.uy/ocds/release/adjudicacion-1380680</link>
+                <guid>adjudicacion-1380680</guid>
+                <category>award</category>
+            </item>
+                    <item>
+                <title>id_compra:1377491,release_id:adjudicacion-1377491</title>
+                <pubDate>Tue, 20 Oct 2026 10:15:10</pubDate>
+                <link>http://www.comprasestatales.gub.uy/ocds/release/adjudicacion-1377491</link>
+                <guid>adjudicacion-1377491</guid>
+                <category>award</category>
+            </item>
+                    <item>
+                <title>id_compra:1380675,release_id:llamado-1380675</title>
+                <pubDate>Tue, 20 Oct 2026 10:15:10</pubDate>
+                <link>http://www.comprasestatales.gub.uy/ocds/release/llamado-1380675</link>
+                <guid>llamado-1380675</guid>
+                <category>tender</category>
+            </item>
+                    <item>
+                <title>id_compra:1380497,release_id:aclar_llamado-1380497-0</title>
+                <pubDate>Tue, 20 Oct 2026 10:13:00</pubDate>
+                <link>http://www.comprasestatales.gub.uy/ocds/release/aclar_llamado-1380497-0</link>
+                <guid>aclar_llamado-1380497-0</guid>
+                <category>tenderUpdate</category>
+            </item>
+                    <item>
+                <title>id_compra:1359254,release_id:adjudicacion-1359254</title>
+                <pubDate>Tue, 20 Oct 2026 10:10:13</pubDate>
+                <link>http://www.comprasestatales.gub.uy/ocds/release/adjudicacion-1359254</link>
+                <guid>adjudicacion-1359254</guid>
+                <category>award</category>
+            </item>
+                    <item>
+                <title>id_compra:1380659,release_id:adjudicacion-1380659</title>
+                <pubDate>Tue, 20 Oct 2026 10:10:11</pubDate>
+                <link>http://www.comprasestatales.gub.uy/ocds/release/adjudicacion-1380659</link>
+                <guid>adjudicacion-1380659</guid>
+                <category>award</category>
+            </item>
+                    <item>
+                <title>id_compra:1380665,release_id:adjudicacion-1380665</title>
+                <pubDate>Tue, 20 Oct 2026 10:10:11</pubDate>
+                <link>http://www.comprasestatales.gub.uy/ocds/release/adjudicacion-1380665</link>
+                <guid>adjudicacion-1380665</guid>
+                <category>award</category>
+            </item>
+                    <item>
+                <title>id_compra:1329263,release_id:adjudicacion-1329263</title>
+                <pubDate>Tue, 20 Oct 2026 10:10:10</pubDate>
+                <link>http://www.comprasestatales.gub.uy/ocds/release/adjudicacion-1329263</link>
+                <guid>adjudicacion-1329263</guid>
+                <category>award</category>
+            </item>
+                    <item>
+                <title>id_compra:1379856,release_id:adjudicacion-1379856</title>
+                <pubDate>Tue, 20 Oct 2026 10:10:10</pubDate>
+                <link>http://www.comprasestatales.gub.uy/ocds/release/adjudicacion-1379856</link>
+                <guid>adjudicacion-1379856</guid>
+                <category>award</category>
+            </item>
+                    <item>
+                <title>id_compra:1380131,release_id:aclar_llamado-1380131-0</title>
+                <pubDate>Tue, 20 Oct 2026 10:10:01</pubDate>
+                <link>http://www.comprasestatales.gub.uy/ocds/release/aclar_llamado-1380131-0</link>
+                <guid>aclar_llamado-1380131-0</guid>
+                <category>tenderUpdate</category>
+            </item>
+                    <item>
+                <title>id_compra:1380666,release_id:aclar_llamado-1380666-0</title>
+                <pubDate>Tue, 20 Oct 2026 10:06:00</pubDate>
+                <link>http://www.comprasestatales.gub.uy/ocds/release/aclar_llamado-1380666-0</link>
+                <guid>aclar_llamado-1380666-0</guid>
+                <category>tenderUpdate</category>
+            </item>
+                    <item>
+                <title>id_compra:1364513,release_id:adjudicacion-1364513</title>
+                <pubDate>Tue, 20 Oct 2026 10:05:09</pubDate>
+                <link>http://www.comprasestatales.gub.uy/ocds/release/adjudicacion-1364513</link>
+                <guid>adjudicacion-1364513</guid>
+                <category>award</category>
+            </item>
+                    <item>
+                <title>id_compra:1380666,release_id:llamado-1380666</title>
+                <pubDate>Tue, 20 Oct 2026 10:05:08</pubDate>
+                <link>http://www.comprasestatales.gub.uy/ocds/release/llamado-1380666</link>
+                <guid>llamado-1380666</guid>
+                <category>tender</category>
+            </item>
+                    <item>
+                <title>id_compra:1379587,release_id:aclar_llamado-1379587-1</title>
+                <pubDate>Tue, 20 Oct 2026 10:02:00</pubDate>
+                <link>http://www.comprasestatales.gub.uy/ocds/release/aclar_llamado-1379587-1</link>
+                <guid>aclar_llamado-1379587-1</guid>
+                <category>tenderUpdate</category>
+            </item>
+                    <item>
+                <title>id_compra:1380128,release_id:aclar_llamado-1380128-0</title>
+                <pubDate>Tue, 20 Oct 2026 10:02:00</pubDate>
+                <link>http://www.comprasestatales.gub.uy/ocds/release/aclar_llamado-1380128-0</link>
+                <guid>aclar_llamado-1380128-0</guid>
+                <category>tenderUpdate</category>
+            </item>
+                    <item>
+                <title>id_compra:1379508,release_id:aclar_llamado-1379508-0</title>
+                <pubDate>Tue, 20 Oct 2026 10:01:05</pubDate>
+                <link>http://www.comprasestatales.gub.uy/ocds/release/aclar_llamado-1379508-0</link>
+                <guid>aclar_llamado-1379508-0</guid>
+                <category>tenderUpdate</category>
+            </item>
+                    <item>
+                <title>id_compra:1378674,release_id:aclar_llamado-1378674-1</title>
+                <pubDate>Tue, 20 Oct 2026 10:01:05</pubDate>
+                <link>http://www.comprasestatales.gub.uy/ocds/release/aclar_llamado-1378674-1</link>
+                <guid>aclar_llamado-1378674-1</guid>
+                <category>tenderUpdate</category>
+            </item>
+                    <item>
+                <title>id_compra:1379860,release_id:aclar_llamado-1379860-0</title>
+                <pubDate>Tue, 20 Oct 2026 10:01:04</pubDate>
+                <link>http://www.comprasestatales.gub.uy/ocds/release/aclar_llamado-1379860-0</link>
+                <guid>aclar_llamado-1379860-0</guid>
+                <category>tenderUpdate</category>
+            </item>
+                    <item>
+                <title>id_compra:1379978,release_id:aclar_llamado-1379978-0</title>
+                <pubDate>Tue, 20 Oct 2026 10:01:04</pubDate>
+                <link>http://www.comprasestatales.gub.uy/ocds/release/aclar_llamado-1379978-0</link>
+                <guid>aclar_llamado-1379978-0</guid>
+                <category>tenderUpdate</category>
+            </item>
+                    <item>
+                <title>id_compra:1379681,release_id:aclar_llamado-1379681-4</title>
+                <pubDate>Tue, 20 Oct 2026 10:01:03</pubDate>
+                <link>http://www.comprasestatales.gub.uy/ocds/release/aclar_llamado-1379681-4</link>
+                <guid>aclar_llamado-1379681-4</guid>
+                <category>tenderUpdate</category>
+            </item>
+                    <item>
+                <title>id_compra:1376118,release_id:aclar_llamado-1376118-0</title>
+                <pubDate>Tue, 20 Oct 2026 10:01:03</pubDate>
+                <link>http://www.comprasestatales.gub.uy/ocds/release/aclar_llamado-1376118-0</link>
+                <guid>aclar_llamado-1376118-0</guid>
+                <category>tenderUpdate</category>
+            </item>
+                    <item>
+                <title>id_compra:1376236,release_id:aclar_llamado-1376236-0</title>
+                <pubDate>Tue, 20 Oct 2026 10:01:02</pubDate>
+                <link>http://www.comprasestatales.gub.uy/ocds/release/aclar_llamado-1376236-0</link>
+                <guid>aclar_llamado-1376236-0</guid>
+                <category>tenderUpdate</category>
+            </item>
+                    <item>
+                <title>id_compra:1375423,release_id:aclar_llamado-1375423-0</title>
+                <pubDate>Tue, 20 Oct 2026 10:01:02</pubDate>
+                <link>http://www.comprasestatales.gub.uy/ocds/release/aclar_llamado-1375423-0</link>
+                <guid>aclar_llamado-1375423-0</guid>
+                <category>tenderUpdate</category>
+            </item>
+                    <item>
+                <title>id_compra:1373358,release_id:aclar_llamado-1373358-0</title>
+                <pubDate>Tue, 20 Oct 2026 10:01:01</pubDate>
+                <link>http://www.comprasestatales.gub.uy/ocds/release/aclar_llamado-1373358-0</link>
+                <guid>aclar_llamado-1373358-0</guid>
+                <category>tenderUpdate</category>
+            </item>
+                    <item>
+                <title>id_compra:1366454,release_id:aclar_llamado-1366454-3</title>
+                <pubDate>Tue, 20 Oct 2026 10:01:00</pubDate>
+                <link>http://www.comprasestatales.gub.uy/ocds/release/aclar_llamado-1366454-3</link>
+                <guid>aclar_llamado-1366454-3</guid>
+                <category>tenderUpdate</category>
+            </item>
+                    <item>
+                <title>id_compra:1380664,release_id:adjudicacion-1380664</title>
+                <pubDate>Tue, 20 Oct 2026 10:00:10</pubDate>
+                <link>http://www.comprasestatales.gub.uy/ocds/release/adjudicacion-1380664</link>
+                <guid>adjudicacion-1380664</guid>
+                <category>award</category>
+            </item>
+                    <item>
+                <title>id_compra:1380660,release_id:adjudicacion-1380660</title>
+                <pubDate>Tue, 20 Oct 2026 10:00:09</pubDate>
+                <link>http://www.comprasestatales.gub.uy/ocds/release/adjudicacion-1380660</link>
+                <guid>adjudicacion-1380660</guid>
+                <category>award</category>
+            </item>
+                    <item>
+                <title>id_compra:1380662,release_id:llamado-1380662</title>
+                <pubDate>Tue, 20 Oct 2026 09:55:08</pubDate>
+                <link>http://www.comprasestatales.gub.uy/ocds/release/llamado-1380662</link>
+                <guid>llamado-1380662</guid>
+                <category>tender</category>
+            </item>
+                    <item>
+                <title>id_compra:1370165,release_id:adjudicacion-1370165</title>
+                <pubDate>Tue, 20 Oct 2026 09:55:08</pubDate>
+                <link>http://www.comprasestatales.gub.uy/ocds/release/adjudicacion-1370165</link>
+                <guid>adjudicacion-1370165</guid>
+                <category>award</category>
+            </item>
+                    <item>
+                <title>id_compra:1373347,release_id:adjudicacion-1373347</title>
+                <pubDate>Tue, 20 Oct 2026 09:50:12</pubDate>
+                <link>http://www.comprasestatales.gub.uy/ocds/release/adjudicacion-1373347</link>
+                <guid>adjudicacion-1373347</guid>
+                <category>award</category>
+            </item>
+                    <item>
+                <title>id_compra:1367578,release_id:adjudicacion-1367578</title>
+                <pubDate>Tue, 20 Oct 2026 09:50:11</pubDate>
+                <link>http://www.comprasestatales.gub.uy/ocds/release/adjudicacion-1367578</link>
+                <guid>adjudicacion-1367578</guid>
+                <category>award</category>
+            </item>
+                    <item>
+                <title>id_compra:1380661,release_id:adjudicacion-1380661</title>
+                <pubDate>Tue, 20 Oct 2026 09:50:10</pubDate>
+                <link>http://www.comprasestatales.gub.uy/ocds/release/adjudicacion-1380661</link>
+                <guid>adjudicacion-1380661</guid>
+                <category>award</category>
+            </item>
+                    <item>
+                <title>id_compra:1364115,release_id:adjudicacion-1364115</title>
+                <pubDate>Tue, 20 Oct 2026 09:50:09</pubDate>
+                <link>http://www.comprasestatales.gub.uy/ocds/release/adjudicacion-1364115</link>
+                <guid>adjudicacion-1364115</guid>
+                <category>award</category>
+            </item>
+                    <item>
+                <title>id_compra:1373815,release_id:adjudicacion-1373815</title>
+                <pubDate>Tue, 20 Oct 2026 09:50:09</pubDate>
+                <link>http://www.comprasestatales.gub.uy/ocds/release/adjudicacion-1373815</link>
+                <guid>adjudicacion-1373815</guid>
+                <category>award</category>
+            </item>
+                    <item>
+                <title>id_compra:1380658,release_id:adjudicacion-1380658</title>
+                <pubDate>Tue, 20 Oct 2026 09:45:11</pubDate>
+                <link>http://www.comprasestatales.gub.uy/ocds/release/adjudicacion-1380658</link>
+                <guid>adjudicacion-1380658</guid>
+                <category>award</category>
+            </item>
+                    <item>
+                <title>id_compra:1378977,release_id:aclar_llamado-1378977-0</title>
+                <pubDate>Tue, 20 Oct 2026 09:41:00</pubDate>
+                <link>http://www.comprasestatales.gub.uy/ocds/release/aclar_llamado-1378977-0</link>
+                <guid>aclar_llamado-1378977-0</guid>
+                <category>tenderUpdate</category>
+            </item>
+                    <item>
+                <title>id_compra:1376112,release_id:adjudicacion-1376112</title>
+                <pubDate>Tue, 20 Oct 2026 09:40:11</pubDate>
+                <link>http://www.comprasestatales.gub.uy/ocds/release/adjudicacion-1376112</link>
+                <guid>adjudicacion-1376112</guid>
+                <category>award</category>
+            </item>
+                    <item>
+                <title>id_compra:1380657,release_id:adjudicacion-1380657</title>
+                <pubDate>Tue, 20 Oct 2026 09:40:10</pubDate>
+                <link>http://www.comprasestatales.gub.uy/ocds/release/adjudicacion-1380657</link>
+                <guid>adjudicacion-1380657</guid>
+                <category>award</category>
+            </item>
+                    <item>
+                <title>id_compra:1380649,release_id:adjudicacion-1380649</title>
+                <pubDate>Tue, 20 Oct 2026 09:40:10</pubDate>
+                <link>http://www.comprasestatales.gub.uy/ocds/release/adjudicacion-1380649</link>
+                <guid>adjudicacion-1380649</guid>
+                <category>award</category>
+            </item>
+                    <item>
+                <title>id_compra:1380652,release_id:adjudicacion-1380652</title>
+                <pubDate>Tue, 20 Oct 2026 09:35:11</pubDate>
+                <link>http://www.comprasestatales.gub.uy/ocds/release/adjudicacion-1380652</link>
+                <guid>adjudicacion-1380652</guid>
+                <category>award</category>
+            </item>
+                    <item>
+                <title>id_compra:1380634,release_id:adjudicacion-1380634</title>
+                <pubDate>Tue, 20 Oct 2026 09:35:10</pubDate>
+                <link>http://www.comprasestatales.gub.uy/ocds/release/adjudicacion-1380634</link>
+                <guid>adjudicacion-1380634</guid>
+                <category>award</category>
+            </item>
+                    <item>
+                <title>id_compra:1380651,release_id:adjudicacion-1380651</title>
+                <pubDate>Tue, 20 Oct 2026 09:35:10</pubDate>
+                <link>http://www.comprasestatales.gub.uy/ocds/release/adjudicacion-1380651</link>
+                <guid>adjudicacion-1380651</guid>
+                <category>award</category>
+            </item>
+                    <item>
+                <title>id_compra:1380629,release_id:llamado-1380629</title>
+                <pubDate>Tue, 20 Oct 2026 09:35:10</pubDate>
+                <link>http://www.comprasestatales.gub.uy/ocds/release/llamado-1380629</link>
+                <guid>llamado-1380629</guid>
+                <category>tender</category>
+            </item>
+                    <item>
+                <title>id_compra:1374427,release_id:adjudicacion-1374427</title>
+                <pubDate>Tue, 20 Oct 2026 09:30:11</pubDate>
+                <link>http://www.comprasestatales.gub.uy/ocds/release/adjudicacion-1374427</link>
+                <guid>adjudicacion-1374427</guid>
+                <category>award</category>
+            </item>
+                    <item>
+                <title>id_compra:1378192,release_id:adjudicacion-1378192</title>
+                <pubDate>Tue, 20 Oct 2026 09:30:10</pubDate>
+                <link>http://www.comprasestatales.gub.uy/ocds/release/adjudicacion-1378192</link>
+                <guid>adjudicacion-1378192</guid>
+                <category>award</category>
+            </item>
+                    <item>
+                <title>id_compra:1376734,release_id:adjudicacion-1376734</title>
+                <pubDate>Tue, 20 Oct 2026 09:30:09</pubDate>
+                <link>http://www.comprasestatales.gub.uy/ocds/release/adjudicacion-1376734</link>
+                <guid>adjudicacion-1376734</guid>
+                <category>award</category>
+            </item>
+                    <item>
+                <title>id_compra:1372026,release_id:aclar_llamado-1372026-1</title>
+                <pubDate>Tue, 20 Oct 2026 09:27:01</pubDate>
+                <link>http://www.comprasestatales.gub.uy/ocds/release/aclar_llamado-1372026-1</link>
+                <guid>aclar_llamado-1372026-1</guid>
+                <category>tenderUpdate</category>
+            </item>
+                    <item>
+                <title>id_compra:1372026,release_id:aclar_llamado-1372026-0</title>
+                <pubDate>Tue, 20 Oct 2026 09:27:01</pubDate>
+                <link>http://www.comprasestatales.gub.uy/ocds/release/aclar_llamado-1372026-0</link>
+                <guid>aclar_llamado-1372026-0</guid>
+                <category>tenderUpdate</category>
+            </item>
+                    <item>
+                <title>id_compra:1379365,release_id:adjudicacion-1379365</title>
+                <pubDate>Tue, 20 Oct 2026 09:25:10</pubDate>
+                <link>http://www.comprasestatales.gub.uy/ocds/release/adjudicacion-1379365</link>
+                <guid>adjudicacion-1379365</guid>
+                <category>award</category>
+            </item>
+                    <item>
+                <title>id_compra:1372026,release_id:llamado-1372026</title>
+                <pubDate>Tue, 20 Oct 2026 09:25:10</pubDate>
+                <link>http://www.comprasestatales.gub.uy/ocds/release/llamado-1372026</link>
+                <guid>llamado-1372026</guid>
+                <category>tender</category>
+            </item>
+                    <item>
+                <title>id_compra:1380645,release_id:llamado-1380645</title>
+                <pubDate>Tue, 20 Oct 2026 09:20:10</pubDate>
+                <link>http://www.comprasestatales.gub.uy/ocds/release/llamado-1380645</link>
+                <guid>llamado-1380645</guid>
+                <category>tender</category>
+            </item>
+                    <item>
+                <title>id_compra:1380642,release_id:llamado-1380642</title>
+                <pubDate>Tue, 20 Oct 2026 09:10:09</pubDate>
+                <link>http://www.comprasestatales.gub.uy/ocds/release/llamado-1380642</link>
+                <guid>llamado-1380642</guid>
+                <category>tender</category>
+            </item>
+                    <item>
+                <title>id_compra:1375781,release_id:aclar_llamado-1375781-4</title>
+                <pubDate>Tue, 20 Oct 2026 09:06:01</pubDate>
+                <link>http://www.comprasestatales.gub.uy/ocds/release/aclar_llamado-1375781-4</link>
+                <guid>aclar_llamado-1375781-4</guid>
+                <category>tenderUpdate</category>
+            </item>
+                    <item>
+                <title>id_compra:1380635,release_id:llamado-1380635</title>
+                <pubDate>Tue, 20 Oct 2026 09:00:13</pubDate>
+                <link>http://www.comprasestatales.gub.uy/ocds/release/llamado-1380635</link>
+                <guid>llamado-1380635</guid>
+                <category>tender</category>
+            </item>
+                    <item>
+                <title>id_compra:1378298,release_id:llamado-1378298</title>
+                <pubDate>Tue, 20 Oct 2026 08:55:08</pubDate>
+                <link>http://www.comprasestatales.gub.uy/ocds/release/llamado-1378298</link>
+                <guid>llamado-1378298</guid>
+                <category>tender</category>
+            </item>
+                    <item>
+                <title>id_compra:1372033,release_id:adjudicacion-1372033</title>
+                <pubDate>Tue, 20 Oct 2026 08:50:09</pubDate>
+                <link>http://www.comprasestatales.gub.uy/ocds/release/adjudicacion-1372033</link>
+                <guid>adjudicacion-1372033</guid>
+                <category>award</category>
+            </item>
+                    <item>
+                <title>id_compra:1369354,release_id:adjudicacion-1369354</title>
+                <pubDate>Tue, 20 Oct 2026 08:45:09</pubDate>
+                <link>http://www.comprasestatales.gub.uy/ocds/release/adjudicacion-1369354</link>
+                <guid>adjudicacion-1369354</guid>
+                <category>award</category>
+            </item>
+                    <item>
+                <title>id_compra:1359910,release_id:adjudicacion-1359910</title>
+                <pubDate>Tue, 20 Oct 2026 08:40:09</pubDate>
+                <link>http://www.comprasestatales.gub.uy/ocds/release/adjudicacion-1359910</link>
+                <guid>adjudicacion-1359910</guid>
+                <category>award</category>
+            </item>
+                    <item>
+                <title>id_compra:1380630,release_id:adjudicacion-1380630</title>
+                <pubDate>Tue, 20 Oct 2026 08:40:08</pubDate>
+                <link>http://www.comprasestatales.gub.uy/ocds/release/adjudicacion-1380630</link>
+                <guid>adjudicacion-1380630</guid>
+                <category>award</category>
+            </item>
+                    <item>
+                <title>id_compra:1380549,release_id:adjudicacion-1380549</title>
+                <pubDate>Tue, 20 Oct 2026 08:20:08</pubDate>
+                <link>http://www.comprasestatales.gub.uy/ocds/release/adjudicacion-1380549</link>
+                <guid>adjudicacion-1380549</guid>
+                <category>award</category>
+            </item>
+                    <item>
+                <title>id_compra:1380018,release_id:adjudicacion-1380018</title>
+                <pubDate>Tue, 20 Oct 2026 08:00:15</pubDate>
+                <link>http://www.comprasestatales.gub.uy/ocds/release/adjudicacion-1380018</link>
+                <guid>adjudicacion-1380018</guid>
+                <category>award</category>
+            </item>
+                    <item>
+                <title>id_compra:1360020,release_id:adjudicacion-1360020</title>
+                <pubDate>Tue, 20 Oct 2026 07:55:08</pubDate>
+                <link>http://www.comprasestatales.gub.uy/ocds/release/adjudicacion-1360020</link>
+                <guid>adjudicacion-1360020</guid>
+                <category>award</category>
+            </item>
+                    <item>
+                <title>id_compra:1376225,release_id:adjudicacion-1376225</title>
+                <pubDate>Tue, 20 Oct 2026 07:40:09</pubDate>
+                <link>http://www.comprasestatales.gub.uy/ocds/release/adjudicacion-1376225</link>
+                <guid>adjudicacion-1376225</guid>
+                <category>award</category>
+            </item>
+                    <item>
+                <title>id_compra:1377867,release_id:adjudicacion-1377867</title>
+                <pubDate>Tue, 20 Oct 2026 07:00:09</pubDate>
+                <link>http://www.comprasestatales.gub.uy/ocds/release/adjudicacion-1377867</link>
+                <guid>adjudicacion-1377867</guid>
+                <category>award</category>
+            </item>
+                    <item>
+                <title>id_compra:1369841,release_id:aclar_llamado-1369841-8</title>
+                <pubDate>Tue, 20 Oct 2026 00:41:01</pubDate>
+                <link>http://www.comprasestatales.gub.uy/ocds/release/aclar_llamado-1369841-8</link>
+                <guid>aclar_llamado-1369841-8</guid>
+                <category>tenderUpdate</category>
+            </item>
+                    <item>
+                <title>id_compra:1380440,release_id:aclar_llamado-1380440-0</title>
+                <pubDate>Tue, 20 Oct 2026 00:41:01</pubDate>
+                <link>http://www.comprasestatales.gub.uy/ocds/release/aclar_llamado-1380440-0</link>
+                <guid>aclar_llamado-1380440-0</guid>
+                <category>tenderUpdate</category>
+            </item>
+                    <item>
+                <title>id_compra:1369841,release_id:aclar_llamado-1369841-9</title>
+                <pubDate>Tue, 20 Oct 2026 00:41:00</pubDate>
+                <link>http://www.comprasestatales.gub.uy/ocds/release/aclar_llamado-1369841-9</link>
+                <guid>aclar_llamado-1369841-9</guid>
+                <category>tenderUpdate</category>
+            </item>
+                    <item>
+                <title>id_compra:1380574,release_id:adjudicacion-1380574</title>
+                <pubDate>Tue, 20 Oct 2026 00:25:08</pubDate>
+                <link>http://www.comprasestatales.gub.uy/ocds/release/adjudicacion-1380574</link>
+                <guid>adjudicacion-1380574</guid>
+                <category>award</category>
+            </item>
+                    <item>
+                <title>id_compra:1375071,release_id:adjudicacion-1375071</title>
+                <pubDate>Tue, 20 Oct 2026 00:15:09</pubDate>
+                <link>http://www.comprasestatales.gub.uy/ocds/release/adjudicacion-1375071</link>
+                <guid>adjudicacion-1375071</guid>
+                <category>award</category>
+            </item>
+                    <item>
+                <title>id_compra:1326663,release_id:adjudicacion-1326663</title>
+                <pubDate>Tue, 20 Oct 2026 00:10:12</pubDate>
+                <link>http://www.comprasestatales.gub.uy/ocds/release/adjudicacion-1326663</link>
+                <guid>adjudicacion-1326663</guid>
+                <category>award</category>
+            </item>
+                    <item>
+                <title>id_compra:1376996,release_id:adjudicacion-1376996</title>
+                <pubDate>Tue, 20 Oct 2026 00:10:11</pubDate>
+                <link>http://www.comprasestatales.gub.uy/ocds/release/adjudicacion-1376996</link>
+                <guid>adjudicacion-1376996</guid>
+                <category>award</category>
+            </item>
+                    <item>
+                <title>id_compra:1374569,release_id:adjudicacion-1374569</title>
+                <pubDate>Tue, 20 Oct 2026 00:10:10</pubDate>
+                <link>http://www.comprasestatales.gub.uy/ocds/release/adjudicacion-1374569</link>
+                <guid>adjudicacion-1374569</guid>
+                <category>award</category>
+            </item>
+                    <item>
+                <title>id_compra:1374568,release_id:adjudicacion-1374568</title>
+                <pubDate>Tue, 20 Oct 2026 00:10:09</pubDate>
+                <link>http://www.comprasestatales.gub.uy/ocds/release/adjudicacion-1374568</link>
+                <guid>adjudicacion-1374568</guid>
+                <category>award</category>
+            </item>
+                    <item>
+                <title>id_compra:1350860,release_id:adjudicacion-1350860</title>
+                <pubDate>Mon, 19 Oct 2026 19:45:09</pubDate>
+                <link>http://www.comprasestatales.gub.uy/ocds/release/adjudicacion-1350860</link>
+                <guid>adjudicacion-1350860</guid>
+                <category>award</category>
+            </item>
+                    <item>
+                <title>id_compra:1379575,release_id:adjudicacion-1379575</title>
+                <pubDate>Mon, 19 Oct 2026 18:30:10</pubDate>
+                <link>http://www.comprasestatales.gub.uy/ocds/release/adjudicacion-1379575</link>
+                <guid>adjudicacion-1379575</guid>
+                <category>award</category>
+            </item>
+                    <item>
+                <title>id_compra:1380621,release_id:aclar_llamado-1380621-65</title>
+                <pubDate>Mon, 19 Oct 2026 18:22:01</pubDate>
+                <link>http://www.comprasestatales.gub.uy/ocds/release/aclar_llamado-1380621-65</link>
+                <guid>aclar_llamado-1380621-65</guid>
+                <category>tenderUpdate</category>
+            </item>
+                    <item>
+                <title>id_compra:1380621,release_id:aclar_llamado-1380621-64</title>
+                <pubDate>Mon, 19 Oct 2026 18:22:00</pubDate>
+                <link>http://www.comprasestatales.gub.uy/ocds/release/aclar_llamado-1380621-64</link>
+                <guid>aclar_llamado-1380621-64</guid>
+                <category>tenderUpdate</category>
+            </item>
+                    <item>
+                <title>id_compra:1380621,release_id:aclar_llamado-1380621-63</title>
+                <pubDate>Mon, 19 Oct 2026 18:21:01</pubDate>
+                <link>http://www.comprasestatales.gub.uy/ocds/release/aclar_llamado-1380621-63</link>
+                <guid>aclar_llamado-1380621-63</guid>
+                <category>tenderUpdate</category>
+            </item>
+                    <item>
+                <title>id_compra:1380621,release_id:aclar_llamado-1380621-61</title>
+                <pubDate>Mon, 19 Oct 2026 18:21:01</pubDate>
+                <link>http://www.comprasestatales.gub.uy/ocds/release/aclar_llamado-1380621-61</link>
+                <guid>aclar_llamado-1380621-61</guid>
+                <category>tenderUpdate</category>
+            </item>
+                    <item>
+                <title>id_compra:1380621,release_id:aclar_llamado-1380621-62</title>
+                <pubDate>Mon, 19 Oct 2026 18:21:01</pubDate>
+                <link>http://www.comprasestatales.gub.uy/ocds/release/aclar_llamado-1380621-62</link>
+                <guid>aclar_llamado-1380621-62</guid>
+                <category>tenderUpdate</category>
+            </item>
+                    <item>
+                <title>id_compra:1278805,release_id:adjudicacion-1278805</title>
+                <pubDate>Mon, 19 Oct 2026 18:20:08</pubDate>
+                <link>http://www.comprasestatales.gub.uy/ocds/release/adjudicacion-1278805</link>
+                <guid>adjudicacion-1278805</guid>
+                <category>award</category>
+            </item>
+                    <item>
+                <title>id_compra:1380621,release_id:aclar_llamado-1380621-60</title>
+                <pubDate>Mon, 19 Oct 2026 18:20:02</pubDate>
+                <link>http://www.comprasestatales.gub.uy/ocds/release/aclar_llamado-1380621-60</link>
+                <guid>aclar_llamado-1380621-60</guid>
+                <category>tenderUpdate</category>
+            </item>
+                    <item>
+                <title>id_compra:1380621,release_id:aclar_llamado-1380621-59</title>
+                <pubDate>Mon, 19 Oct 2026 18:20:01</pubDate>
+                <link>http://www.comprasestatales.gub.uy/ocds/release/aclar_llamado-1380621-59</link>
+                <guid>aclar_llamado-1380621-59</guid>
+                <category>tenderUpdate</category>
+            </item>
+                    <item>
+                <title>id_compra:1380621,release_id:aclar_llamado-1380621-58</title>
+                <pubDate>Mon, 19 Oct 2026 18:20:01</pubDate>
+                <link>http://www.comprasestatales.gub.uy/ocds/release/aclar_llamado-1380621-58</link>
+                <guid>aclar_llamado-1380621-58</guid>
+                <category>tenderUpdate</category>
+            </item>
+                    <item>
+                <title>id_compra:1380621,release_id:aclar_llamado-1380621-56</title>
+                <pubDate>Mon, 19 Oct 2026 18:19:02</pubDate>
+                <link>http://www.comprasestatales.gub.uy/ocds/release/aclar_llamado-1380621-56</link>
+                <guid>aclar_llamado-1380621-56</guid>
+                <category>tenderUpdate</category>
+            </item>
+                    <item>
+                <title>id_compra:1380621,release_id:aclar_llamado-1380621-57</title>
+                <pubDate>Mon, 19 Oct 2026 18:19:01</pubDate>
+                <link>http://www.comprasestatales.gub.uy/ocds/release/aclar_llamado-1380621-57</link>
+                <guid>aclar_llamado-1380621-57</guid>
+                <category>tenderUpdate</category>
+            </item>
+                    <item>
+                <title>id_compra:1380621,release_id:aclar_llamado-1380621-55</title>
+                <pubDate>Mon, 19 Oct 2026 18:18:01</pubDate>
+                <link>http://www.comprasestatales.gub.uy/ocds/release/aclar_llamado-1380621-55</link>
+                <guid>aclar_llamado-1380621-55</guid>
+                <category>tenderUpdate</category>
+            </item>
+                    <item>
+                <title>id_compra:1380621,release_id:aclar_llamado-1380621-54</title>
+                <pubDate>Mon, 19 Oct 2026 18:18:00</pubDate>
+                <link>http://www.comprasestatales.gub.uy/ocds/release/aclar_llamado-1380621-54</link>
+                <guid>aclar_llamado-1380621-54</guid>
+                <category>tenderUpdate</category>
+            </item>
+                    <item>
+                <title>id_compra:1380621,release_id:aclar_llamado-1380621-53</title>
+                <pubDate>Mon, 19 Oct 2026 18:17:01</pubDate>
+                <link>http://www.comprasestatales.gub.uy/ocds/release/aclar_llamado-1380621-53</link>
+                <guid>aclar_llamado-1380621-53</guid>
+                <category>tenderUpdate</category>
+            </item>
+                    <item>
+                <title>id_compra:1380621,release_id:aclar_llamado-1380621-52</title>
+                <pubDate>Mon, 19 Oct 2026 18:17:01</pubDate>
+                <link>http://www.comprasestatales.gub.uy/ocds/release/aclar_llamado-1380621-52</link>
+                <guid>aclar_llamado-1380621-52</guid>
+                <category>tenderUpdate</category>
+            </item>
+                    <item>
+                <title>id_compra:1380621,release_id:aclar_llamado-1380621-51</title>
+                <pubDate>Mon, 19 Oct 2026 18:17:00</pubDate>
+                <link>http://www.comprasestatales.gub.uy/ocds/release/aclar_llamado-1380621-51</link>
+                <guid>aclar_llamado-1380621-51</guid>
+                <category>tenderUpdate</category>
+            </item>
+                    <item>
+                <title>id_compra:1380621,release_id:aclar_llamado-1380621-50</title>
+                <pubDate>Mon, 19 Oct 2026 18:16:02</pubDate>
+                <link>http://www.comprasestatales.gub.uy/ocds/release/aclar_llamado-1380621-50</link>
+                <guid>aclar_llamado-1380621-50</guid>
+                <category>tenderUpdate</category>
+            </item>
+                    <item>
+                <title>id_compra:1380621,release_id:aclar_llamado-1380621-49</title>
+                <pubDate>Mon, 19 Oct 2026 18:16:01</pubDate>
+                <link>http://www.comprasestatales.gub.uy/ocds/release/aclar_llamado-1380621-49</link>
+                <guid>aclar_llamado-1380621-49</guid>
+                <category>tenderUpdate</category>
+            </item>
+                    <item>
+                <title>id_compra:1380621,release_id:aclar_llamado-1380621-48</title>
+                <pubDate>Mon, 19 Oct 2026 18:15:01</pubDate>
+                <link>http://www.comprasestatales.gub.uy/ocds/release/aclar_llamado-1380621-48</link>
+                <guid>aclar_llamado-1380621-48</guid>
+                <category>tenderUpdate</category>
+            </item>
+                    <item>
+                <title>id_compra:1380621,release_id:aclar_llamado-1380621-47</title>
+                <pubDate>Mon, 19 Oct 2026 18:15:01</pubDate>
+                <link>http://www.comprasestatales.gub.uy/ocds/release/aclar_llamado-1380621-47</link>
+                <guid>aclar_llamado-1380621-47</guid>
+                <category>tenderUpdate</category>
+            </item>
+                    <item>
+                <title>id_compra:1380621,release_id:aclar_llamado-1380621-46</title>
+                <pubDate>Mon, 19 Oct 2026 18:14:01</pubDate>
+                <link>http://www.comprasestatales.gub.uy/ocds/release/aclar_llamado-1380621-46</link>
+                <guid>aclar_llamado-1380621-46</guid>
+                <category>tenderUpdate</category>
+            </item>
+                    <item>
+                <title>id_compra:1380621,release_id:aclar_llamado-1380621-45</title>
+                <pubDate>Mon, 19 Oct 2026 18:14:01</pubDate>
+                <link>http://www.comprasestatales.gub.uy/ocds/release/aclar_llamado-1380621-45</link>
+                <guid>aclar_llamado-1380621-45</guid>
+                <category>tenderUpdate</category>
+            </item>
+                    <item>
+                <title>id_compra:1380621,release_id:aclar_llamado-1380621-44</title>
+                <pubDate>Mon, 19 Oct 2026 18:13:00</pubDate>
+                <link>http://www.comprasestatales.gub.uy/ocds/release/aclar_llamado-1380621-44</link>
+                <guid>aclar_llamado-1380621-44</guid>
+                <category>tenderUpdate</category>
+            </item>
+                    <item>
+                <title>id_compra:1380621,release_id:aclar_llamado-1380621-43</title>
+                <pubDate>Mon, 19 Oct 2026 18:12:00</pubDate>
+                <link>http://www.comprasestatales.gub.uy/ocds/release/aclar_llamado-1380621-43</link>
+                <guid>aclar_llamado-1380621-43</guid>
+                <category>tenderUpdate</category>
+            </item>
+                    <item>
+                <title>id_compra:1380621,release_id:aclar_llamado-1380621-42</title>
+                <pubDate>Mon, 19 Oct 2026 18:11:01</pubDate>
+                <link>http://www.comprasestatales.gub.uy/ocds/release/aclar_llamado-1380621-42</link>
+                <guid>aclar_llamado-1380621-42</guid>
+                <category>tenderUpdate</category>
+            </item>
+                    <item>
+                <title>id_compra:1380621,release_id:aclar_llamado-1380621-41</title>
+                <pubDate>Mon, 19 Oct 2026 18:11:01</pubDate>
+                <link>http://www.comprasestatales.gub.uy/ocds/release/aclar_llamado-1380621-41</link>
+                <guid>aclar_llamado-1380621-41</guid>
+                <category>tenderUpdate</category>
+            </item>
+                    <item>
+                <title>id_compra:1380621,release_id:aclar_llamado-1380621-39</title>
+                <pubDate>Mon, 19 Oct 2026 18:10:02</pubDate>
+                <link>http://www.comprasestatales.gub.uy/ocds/release/aclar_llamado-1380621-39</link>
+                <guid>aclar_llamado-1380621-39</guid>
+                <category>tenderUpdate</category>
+            </item>
+                    <item>
+                <title>id_compra:1380621,release_id:aclar_llamado-1380621-38</title>
+                <pubDate>Mon, 19 Oct 2026 18:10:01</pubDate>
+                <link>http://www.comprasestatales.gub.uy/ocds/release/aclar_llamado-1380621-38</link>
+                <guid>aclar_llamado-1380621-38</guid>
+                <category>tenderUpdate</category>
+            </item>
+                    <item>
+                <title>id_compra:1380621,release_id:aclar_llamado-1380621-40</title>
+                <pubDate>Mon, 19 Oct 2026 18:10:01</pubDate>
+                <link>http://www.comprasestatales.gub.uy/ocds/release/aclar_llamado-1380621-40</link>
+                <guid>aclar_llamado-1380621-40</guid>
+                <category>tenderUpdate</category>
+            </item>
+                    <item>
+                <title>id_compra:1380621,release_id:aclar_llamado-1380621-37</title>
+                <pubDate>Mon, 19 Oct 2026 18:08:01</pubDate>
+                <link>http://www.comprasestatales.gub.uy/ocds/release/aclar_llamado-1380621-37</link>
+                <guid>aclar_llamado-1380621-37</guid>
+                <category>tenderUpdate</category>
+            </item>
+                    <item>
+                <title>id_compra:1380621,release_id:aclar_llamado-1380621-36</title>
+                <pubDate>Mon, 19 Oct 2026 18:08:00</pubDate>
+                <link>http://www.comprasestatales.gub.uy/ocds/release/aclar_llamado-1380621-36</link>
+                <guid>aclar_llamado-1380621-36</guid>
+                <category>tenderUpdate</category>
+            </item>
+                    <item>
+                <title>id_compra:1380621,release_id:aclar_llamado-1380621-35</title>
+                <pubDate>Mon, 19 Oct 2026 18:07:01</pubDate>
+                <link>http://www.comprasestatales.gub.uy/ocds/release/aclar_llamado-1380621-35</link>
+                <guid>aclar_llamado-1380621-35</guid>
+                <category>tenderUpdate</category>
+            </item>
+                    <item>
+                <title>id_compra:1380621,release_id:aclar_llamado-1380621-33</title>
+                <pubDate>Mon, 19 Oct 2026 18:06:02</pubDate>
+                <link>http://www.comprasestatales.gub.uy/ocds/release/aclar_llamado-1380621-33</link>
+                <guid>aclar_llamado-1380621-33</guid>
+                <category>tenderUpdate</category>
+            </item>
+                    <item>
+                <title>id_compra:1380621,release_id:aclar_llamado-1380621-34</title>
+                <pubDate>Mon, 19 Oct 2026 18:06:02</pubDate>
+                <link>http://www.comprasestatales.gub.uy/ocds/release/aclar_llamado-1380621-34</link>
+                <guid>aclar_llamado-1380621-34</guid>
+                <category>tenderUpdate</category>
+            </item>
+                    <item>
+                <title>id_compra:1380621,release_id:aclar_llamado-1380621-32</title>
+                <pubDate>Mon, 19 Oct 2026 18:06:01</pubDate>
+                <link>http://www.comprasestatales.gub.uy/ocds/release/aclar_llamado-1380621-32</link>
+                <guid>aclar_llamado-1380621-32</guid>
+                <category>tenderUpdate</category>
+            </item>
+                    <item>
+                <title>id_compra:1380621,release_id:aclar_llamado-1380621-31</title>
+                <pubDate>Mon, 19 Oct 2026 18:06:01</pubDate>
+                <link>http://www.comprasestatales.gub.uy/ocds/release/aclar_llamado-1380621-31</link>
+                <guid>aclar_llamado-1380621-31</guid>
+                <category>tenderUpdate</category>
+            </item>
+                    <item>
+                <title>id_compra:1380621,release_id:aclar_llamado-1380621-30</title>
+                <pubDate>Mon, 19 Oct 2026 18:05:01</pubDate>
+                <link>http://www.comprasestatales.gub.uy/ocds/release/aclar_llamado-1380621-30</link>
+                <guid>aclar_llamado-1380621-30</guid>
+                <category>tenderUpdate</category>
+            </item>
+                    <item>
+                <title>id_compra:1380621,release_id:aclar_llamado-1380621-29</title>
+                <pubDate>Mon, 19 Oct 2026 18:05:01</pubDate>
+                <link>http://www.comprasestatales.gub.uy/ocds/release/aclar_llamado-1380621-29</link>
+                <guid>aclar_llamado-1380621-29</guid>
+                <category>tenderUpdate</category>
+            </item>
+                    <item>
+                <title>id_compra:1380621,release_id:aclar_llamado-1380621-28</title>
+                <pubDate>Mon, 19 Oct 2026 18:04:01</pubDate>
+                <link>http://www.comprasestatales.gub.uy/ocds/release/aclar_llamado-1380621-28</link>
+                <guid>aclar_llamado-1380621-28</guid>
+                <category>tenderUpdate</category>
+            </item>
+                    <item>
+                <title>id_compra:1380621,release_id:aclar_llamado-1380621-27</title>
+                <pubDate>Mon, 19 Oct 2026 18:04:01</pubDate>
+                <link>http://www.comprasestatales.gub.uy/ocds/release/aclar_llamado-1380621-27</link>
+                <guid>aclar_llamado-1380621-27</guid>
+                <category>tenderUpdate</category>
+            </item>
+                    <item>
+                <title>id_compra:1380621,release_id:aclar_llamado-1380621-26</title>
+                <pubDate>Mon, 19 Oct 2026 18:04:00</pubDate>
+                <link>http://www.comprasestatales.gub.uy/ocds/release/aclar_llamado-1380621-26</link>
+                <guid>aclar_llamado-1380621-26</guid>
+                <category>tenderUpdate</category>
+            </item>
+                    <item>
+                <title>id_compra:1380621,release_id:aclar_llamado-1380621-23</title>
+                <pubDate>Mon, 19 Oct 2026 18:03:01</pubDate>
+                <link>http://www.comprasestatales.gub.uy/ocds/release/aclar_llamado-1380621-23</link>
+                <guid>aclar_llamado-1380621-23</guid>
+                <category>tenderUpdate</category>
+            </item>
+                    <item>
+                <title>id_compra:1380621,release_id:aclar_llamado-1380621-25</title>
+                <pubDate>Mon, 19 Oct 2026 18:03:01</pubDate>
+                <link>http://www.comprasestatales.gub.uy/ocds/release/aclar_llamado-1380621-25</link>
+                <guid>aclar_llamado-1380621-25</guid>
+                <category>tenderUpdate</category>
+            </item>
+                    <item>
+                <title>id_compra:1380621,release_id:aclar_llamado-1380621-24</title>
+                <pubDate>Mon, 19 Oct 2026 18:03:00</pubDate>
+                <link>http://www.comprasestatales.gub.uy/ocds/release/aclar_llamado-1380621-24</link>
+                <guid>aclar_llamado-1380621-24</guid>
+                <category>tenderUpdate</category>
+            </item>
+                    <item>
+                <title>id_compra:1380621,release_id:aclar_llamado-1380621-22</title>
+                <pubDate>Mon, 19 Oct 2026 18:02:01</pubDate>
+                <link>http://www.comprasestatales.gub.uy/ocds/release/aclar_llamado-1380621-22</link>
+                <guid>aclar_llamado-1380621-22</guid>
+                <category>tenderUpdate</category>
+            </item>
+                    <item>
+                <title>id_compra:1380621,release_id:aclar_llamado-1380621-21</title>
+                <pubDate>Mon, 19 Oct 2026 18:02:01</pubDate>
+                <link>http://www.comprasestatales.gub.uy/ocds/release/aclar_llamado-1380621-21</link>
+                <guid>aclar_llamado-1380621-21</guid>
+                <category>tenderUpdate</category>
+            </item>
+                    <item>
+                <title>id_compra:1380621,release_id:aclar_llamado-1380621-20</title>
+                <pubDate>Mon, 19 Oct 2026 18:02:00</pubDate>
+                <link>http://www.comprasestatales.gub.uy/ocds/release/aclar_llamado-1380621-20</link>
+                <guid>aclar_llamado-1380621-20</guid>
+                <category>tenderUpdate</category>
+            </item>
+                    <item>
+                <title>id_compra:1380621,release_id:aclar_llamado-1380621-19</title>
+                <pubDate>Mon, 19 Oct 2026 18:01:01</pubDate>
+                <link>http://www.comprasestatales.gub.uy/ocds/release/aclar_llamado-1380621-19</link>
+                <guid>aclar_llamado-1380621-19</guid>
+                <category>tenderUpdate</category>
+            </item>
+                    <item>
+                <title>id_compra:1380621,release_id:aclar_llamado-1380621-18</title>
+                <pubDate>Mon, 19 Oct 2026 18:01:00</pubDate>
+                <link>http://www.comprasestatales.gub.uy/ocds/release/aclar_llamado-1380621-18</link>
+                <guid>aclar_llamado-1380621-18</guid>
+                <category>tenderUpdate</category>
+            </item>
+                    <item>
+                <title>id_compra:1380621,release_id:aclar_llamado-1380621-16</title>
+                <pubDate>Mon, 19 Oct 2026 18:00:03</pubDate>
+                <link>http://www.comprasestatales.gub.uy/ocds/release/aclar_llamado-1380621-16</link>
+                <guid>aclar_llamado-1380621-16</guid>
+                <category>tenderUpdate</category>
+            </item>
+                    <item>
+                <title>id_compra:1380621,release_id:aclar_llamado-1380621-15</title>
+                <pubDate>Mon, 19 Oct 2026 18:00:03</pubDate>
+                <link>http://www.comprasestatales.gub.uy/ocds/release/aclar_llamado-1380621-15</link>
+                <guid>aclar_llamado-1380621-15</guid>
+                <category>tenderUpdate</category>
+            </item>
+                    <item>
+                <title>id_compra:1380621,release_id:aclar_llamado-1380621-17</title>
+                <pubDate>Mon, 19 Oct 2026 18:00:02</pubDate>
+                <link>http://www.comprasestatales.gub.uy/ocds/release/aclar_llamado-1380621-17</link>
+                <guid>aclar_llamado-1380621-17</guid>
+                <category>tenderUpdate</category>
+            </item>
+                    <item>
+                <title>id_compra:1380621,release_id:aclar_llamado-1380621-14</title>
+                <pubDate>Mon, 19 Oct 2026 17:59:01</pubDate>
+                <link>http://www.comprasestatales.gub.uy/ocds/release/aclar_llamado-1380621-14</link>
+                <guid>aclar_llamado-1380621-14</guid>
+                <category>tenderUpdate</category>
+            </item>
+                    <item>
+                <title>id_compra:1380621,release_id:aclar_llamado-1380621-13</title>
+                <pubDate>Mon, 19 Oct 2026 17:59:01</pubDate>
+                <link>http://www.comprasestatales.gub.uy/ocds/release/aclar_llamado-1380621-13</link>
+                <guid>aclar_llamado-1380621-13</guid>
+                <category>tenderUpdate</category>
+            </item>
+                    <item>
+                <title>id_compra:1380621,release_id:aclar_llamado-1380621-12</title>
+                <pubDate>Mon, 19 Oct 2026 17:58:01</pubDate>
+                <link>http://www.comprasestatales.gub.uy/ocds/release/aclar_llamado-1380621-12</link>
+                <guid>aclar_llamado-1380621-12</guid>
+                <category>tenderUpdate</category>
+            </item>
+                    <item>
+                <title>id_compra:1380621,release_id:aclar_llamado-1380621-11</title>
+                <pubDate>Mon, 19 Oct 2026 17:58:01</pubDate>
+                <link>http://www.comprasestatales.gub.uy/ocds/release/aclar_llamado-1380621-11</link>
+                <guid>aclar_llamado-1380621-11</guid>
+                <category>tenderUpdate</category>
+            </item>
+                    <item>
+                <title>id_compra:1380621,release_id:aclar_llamado-1380621-10</title>
+                <pubDate>Mon, 19 Oct 2026 17:58:00</pubDate>
+                <link>http://www.comprasestatales.gub.uy/ocds/release/aclar_llamado-1380621-10</link>
+                <guid>aclar_llamado-1380621-10</guid>
+                <category>tenderUpdate</category>
+            </item>
+                    <item>
+                <title>id_compra:1380621,release_id:aclar_llamado-1380621-9</title>
+                <pubDate>Mon, 19 Oct 2026 17:57:01</pubDate>
+                <link>http://www.comprasestatales.gub.uy/ocds/release/aclar_llamado-1380621-9</link>
+                <guid>aclar_llamado-1380621-9</guid>
+                <category>tenderUpdate</category>
+            </item>
+                    <item>
+                <title>id_compra:1380621,release_id:aclar_llamado-1380621-8</title>
+                <pubDate>Mon, 19 Oct 2026 17:57:01</pubDate>
+                <link>http://www.comprasestatales.gub.uy/ocds/release/aclar_llamado-1380621-8</link>
+                <guid>aclar_llamado-1380621-8</guid>
+                <category>tenderUpdate</category>
+            </item>
+                    <item>
+                <title>id_compra:1380621,release_id:aclar_llamado-1380621-3</title>
+                <pubDate>Mon, 19 Oct 2026 17:56:06</pubDate>
+                <link>http://www.comprasestatales.gub.uy/ocds/release/aclar_llamado-1380621-3</link>
+                <guid>aclar_llamado-1380621-3</guid>
+                <category>tenderUpdate</category>
+            </item>
+                    <item>
+                <title>id_compra:1380621,release_id:aclar_llamado-1380621-1</title>
+                <pubDate>Mon, 19 Oct 2026 17:56:06</pubDate>
+                <link>http://www.comprasestatales.gub.uy/ocds/release/aclar_llamado-1380621-1</link>
+                <guid>aclar_llamado-1380621-1</guid>
+                <category>tenderUpdate</category>
+            </item>
+                    <item>
+                <title>id_compra:1380621,release_id:aclar_llamado-1380621-0</title>
+                <pubDate>Mon, 19 Oct 2026 17:56:05</pubDate>
+                <link>http://www.comprasestatales.gub.uy/ocds/release/aclar_llamado-1380621-0</link>
+                <guid>aclar_llamado-1380621-0</guid>
+                <category>tenderUpdate</category>
+            </item>
+                    <item>
+                <title>id_compra:1380621,release_id:aclar_llamado-1380621-6</title>
+                <pubDate>Mon, 19 Oct 2026 17:56:05</pubDate>
+                <link>http://www.comprasestatales.gub.uy/ocds/release/aclar_llamado-1380621-6</link>
+                <guid>aclar_llamado-1380621-6</guid>
+                <category>tenderUpdate</category>
+            </item>
+                    <item>
+                <title>id_compra:1380621,release_id:aclar_llamado-1380621-7</title>
+                <pubDate>Mon, 19 Oct 2026 17:56:04</pubDate>
+                <link>http://www.comprasestatales.gub.uy/ocds/release/aclar_llamado-1380621-7</link>
+                <guid>aclar_llamado-1380621-7</guid>
+                <category>tenderUpdate</category>
+            </item>
+                    <item>
+                <title>id_compra:1380621,release_id:aclar_llamado-1380621-5</title>
+                <pubDate>Mon, 19 Oct 2026 17:56:03</pubDate>
+                <link>http://www.comprasestatales.gub.uy/ocds/release/aclar_llamado-1380621-5</link>
+                <guid>aclar_llamado-1380621-5</guid>
+                <category>tenderUpdate</category>
+            </item>
+                    <item>
+                <title>id_compra:1380621,release_id:aclar_llamado-1380621-4</title>
+                <pubDate>Mon, 19 Oct 2026 17:56:01</pubDate>
+                <link>http://www.comprasestatales.gub.uy/ocds/release/aclar_llamado-1380621-4</link>
+                <guid>aclar_llamado-1380621-4</guid>
+                <category>tenderUpdate</category>
+            </item>
+                    <item>
+                <title>id_compra:1380621,release_id:aclar_llamado-1380621-2</title>
+                <pubDate>Mon, 19 Oct 2026 17:56:01</pubDate>
+                <link>http://www.comprasestatales.gub.uy/ocds/release/aclar_llamado-1380621-2</link>
+                <guid>aclar_llamado-1380621-2</guid>
+                <category>tenderUpdate</category>
+            </item>
+                    <item>
+                <title>id_compra:1380621,release_id:llamado-1380621</title>
+                <pubDate>Mon, 19 Oct 2026 17:55:08</pubDate>
+                <link>http://www.comprasestatales.gub.uy/ocds/release/llamado-1380621</link>
+                <guid>llamado-1380621</guid>
+                <category>tender</category>
+            </item>
+                    <item>
+                <title>id_compra:1379138,release_id:adjudicacion-1379138</title>
+                <pubDate>Mon, 19 Oct 2026 17:50:08</pubDate>
+                <link>http://www.comprasestatales.gub.uy/ocds/release/adjudicacion-1379138</link>
+                <guid>adjudicacion-1379138</guid>
+                <category>award</category>
+            </item>
+                    <item>
+                <title>id_compra:1380622,release_id:adjudicacion-1380622</title>
+                <pubDate>Mon, 19 Oct 2026 17:45:09</pubDate>
+                <link>http://www.comprasestatales.gub.uy/ocds/release/adjudicacion-1380622</link>
+                <guid>adjudicacion-1380622</guid>
+                <category>award</category>
+            </item>
+                    <item>
+                <title>id_compra:1380620,release_id:adjudicacion-1380620</title>
+                <pubDate>Mon, 19 Oct 2026 17:35:09</pubDate>
+                <link>http://www.comprasestatales.gub.uy/ocds/release/adjudicacion-1380620</link>
+                <guid>adjudicacion-1380620</guid>
+                <category>award</category>
+            </item>
+                    <item>
+                <title>id_compra:1380544,release_id:adjudicacion-1380544</title>
+                <pubDate>Mon, 19 Oct 2026 17:30:12</pubDate>
+                <link>http://www.comprasestatales.gub.uy/ocds/release/adjudicacion-1380544</link>
+                <guid>adjudicacion-1380544</guid>
+                <category>award</category>
+            </item>
+                    <item>
+                <title>id_compra:1380619,release_id:llamado-1380619</title>
+                <pubDate>Mon, 19 Oct 2026 17:30:10</pubDate>
+                <link>http://www.comprasestatales.gub.uy/ocds/release/llamado-1380619</link>
+                <guid>llamado-1380619</guid>
+                <category>tender</category>
+            </item>
+                    <item>
+                <title>id_compra:1374097,release_id:adjudicacion-1374097</title>
+                <pubDate>Mon, 19 Oct 2026 17:10:09</pubDate>
+                <link>http://www.comprasestatales.gub.uy/ocds/release/adjudicacion-1374097</link>
+                <guid>adjudicacion-1374097</guid>
+                <category>award</category>
+            </item>
+                    <item>
+                <title>id_compra:1322869,release_id:llamado-1322869</title>
+                <pubDate>Mon, 19 Oct 2026 17:05:12</pubDate>
+                <link>http://www.comprasestatales.gub.uy/ocds/release/llamado-1322869</link>
+                <guid>llamado-1322869</guid>
+                <category>tender</category>
+            </item>
+                    <item>
+                <title>id_compra:1378527,release_id:adjudicacion-1378527</title>
+                <pubDate>Mon, 19 Oct 2026 17:05:10</pubDate>
+                <link>http://www.comprasestatales.gub.uy/ocds/release/adjudicacion-1378527</link>
+                <guid>adjudicacion-1378527</guid>
+                <category>award</category>
+            </item>
+                    <item>
+                <title>id_compra:1378802,release_id:adjudicacion-1378802</title>
+                <pubDate>Mon, 19 Oct 2026 17:05:09</pubDate>
+                <link>http://www.comprasestatales.gub.uy/ocds/release/adjudicacion-1378802</link>
+                <guid>adjudicacion-1378802</guid>
+                <category>award</category>
+            </item>
+                    <item>
+                <title>id_compra:1378628,release_id:aclar_llamado-1378628-0</title>
+                <pubDate>Mon, 19 Oct 2026 17:01:01</pubDate>
+                <link>http://www.comprasestatales.gub.uy/ocds/release/aclar_llamado-1378628-0</link>
+                <guid>aclar_llamado-1378628-0</guid>
+                <category>tenderUpdate</category>
+            </item>
+                    <item>
+                <title>id_compra:1380617,release_id:llamado-1380617</title>
+                <pubDate>Mon, 19 Oct 2026 17:00:13</pubDate>
+                <link>http://www.comprasestatales.gub.uy/ocds/release/llamado-1380617</link>
+                <guid>llamado-1380617</guid>
+                <category>tender</category>
+            </item>
+                    <item>
+                <title>id_compra:1380618,release_id:adjudicacion-1380618</title>
+                <pubDate>Mon, 19 Oct 2026 16:55:11</pubDate>
+                <link>http://www.comprasestatales.gub.uy/ocds/release/adjudicacion-1380618</link>
+                <guid>adjudicacion-1380618</guid>
+                <category>award</category>
+            </item>
+                    <item>
+                <title>id_compra:1378064,release_id:adjudicacion-1378064</title>
+                <pubDate>Mon, 19 Oct 2026 16:55:11</pubDate>
+                <link>http://www.comprasestatales.gub.uy/ocds/release/adjudicacion-1378064</link>
+                <guid>adjudicacion-1378064</guid>
+                <category>award</category>
+            </item>
+                    <item>
+                <title>id_compra:1378778,release_id:llamado-1378778</title>
+                <pubDate>Mon, 19 Oct 2026 16:55:10</pubDate>
+                <link>http://www.comprasestatales.gub.uy/ocds/release/llamado-1378778</link>
+                <guid>llamado-1378778</guid>
+                <category>tender</category>
+            </item>
+                    <item>
+                <title>id_compra:1378029,release_id:adjudicacion-1378029</title>
+                <pubDate>Mon, 19 Oct 2026 16:55:09</pubDate>
+                <link>http://www.comprasestatales.gub.uy/ocds/release/adjudicacion-1378029</link>
+                <guid>adjudicacion-1378029</guid>
+                <category>award</category>
+            </item>
+                    <item>
+                <title>id_compra:1375781,release_id:aclar_llamado-1375781-3</title>
+                <pubDate>Mon, 19 Oct 2026 16:55:01</pubDate>
+                <link>http://www.comprasestatales.gub.uy/ocds/release/aclar_llamado-1375781-3</link>
+                <guid>aclar_llamado-1375781-3</guid>
+                <category>tenderUpdate</category>
+            </item>
+                    <item>
+                <title>id_compra:1378420,release_id:aclar_llamado-1378420-3</title>
+                <pubDate>Mon, 19 Oct 2026 16:53:01</pubDate>
+                <link>http://www.comprasestatales.gub.uy/ocds/release/aclar_llamado-1378420-3</link>
+                <guid>aclar_llamado-1378420-3</guid>
+                <category>tenderUpdate</category>
+            </item>
+                    <item>
+                <title>id_compra:1378553,release_id:adjudicacion-1378553</title>
+                <pubDate>Mon, 19 Oct 2026 16:50:09</pubDate>
+                <link>http://www.comprasestatales.gub.uy/ocds/release/adjudicacion-1378553</link>
+                <guid>adjudicacion-1378553</guid>
+                <category>award</category>
+            </item>
+                    <item>
+                <title>id_compra:1380611,release_id:adjudicacion-1380611</title>
+                <pubDate>Mon, 19 Oct 2026 16:50:08</pubDate>
+                <link>http://www.comprasestatales.gub.uy/ocds/release/adjudicacion-1380611</link>
+                <guid>adjudicacion-1380611</guid>
+                <category>award</category>
+            </item>
+                    <item>
+                <title>id_compra:1377986,release_id:ajuste_adjudicacion-31115</title>
+                <pubDate>Mon, 19 Oct 2026 16:45:12</pubDate>
+                <link>http://www.comprasestatales.gub.uy/ocds/release/ajuste_adjudicacion-31115</link>
+                <guid>ajuste_adjudicacion-31115</guid>
+                <category>awardUpdate</category>
+            </item>
+                    <item>
+                <title>id_compra:1380601,release_id:adjudicacion-1380601</title>
+                <pubDate>Mon, 19 Oct 2026 16:45:11</pubDate>
+                <link>http://www.comprasestatales.gub.uy/ocds/release/adjudicacion-1380601</link>
+                <guid>adjudicacion-1380601</guid>
+                <category>award</category>
+            </item>
+                    <item>
+                <title>id_compra:1380504,release_id:llamado-1380504</title>
+                <pubDate>Mon, 19 Oct 2026 16:45:11</pubDate>
+                <link>http://www.comprasestatales.gub.uy/ocds/release/llamado-1380504</link>
+                <guid>llamado-1380504</guid>
+                <category>tender</category>
+            </item>
+                    <item>
+                <title>id_compra:1380612,release_id:llamado-1380612</title>
+                <pubDate>Mon, 19 Oct 2026 16:45:10</pubDate>
+                <link>http://www.comprasestatales.gub.uy/ocds/release/llamado-1380612</link>
+                <guid>llamado-1380612</guid>
+                <category>tender</category>
+            </item>
+                    <item>
+                <title>id_compra:1380613,release_id:adjudicacion-1380613</title>
+                <pubDate>Mon, 19 Oct 2026 16:45:09</pubDate>
+                <link>http://www.comprasestatales.gub.uy/ocds/release/adjudicacion-1380613</link>
+                <guid>adjudicacion-1380613</guid>
+                <category>award</category>
+            </item>
+                    <item>
+                <title>id_compra:1380605,release_id:llamado-1380605</title>
+                <pubDate>Mon, 19 Oct 2026 16:40:08</pubDate>
+                <link>http://www.comprasestatales.gub.uy/ocds/release/llamado-1380605</link>
+                <guid>llamado-1380605</guid>
+                <category>tender</category>
+            </item>
+                    <item>
+                <title>id_compra:1376386,release_id:aclar_llamado-1376386-1</title>
+                <pubDate>Mon, 19 Oct 2026 16:36:01</pubDate>
+                <link>http://www.comprasestatales.gub.uy/ocds/release/aclar_llamado-1376386-1</link>
+                <guid>aclar_llamado-1376386-1</guid>
+                <category>tenderUpdate</category>
+            </item>
+                    <item>
+                <title>id_compra:1376386,release_id:ajuste_llamado-48783</title>
+                <pubDate>Mon, 19 Oct 2026 16:35:13</pubDate>
+                <link>http://www.comprasestatales.gub.uy/ocds/release/ajuste_llamado-48783</link>
+                <guid>ajuste_llamado-48783</guid>
+                <category>tenderAmendment</category>
+            </item>
+                    <item>
+                <title>id_compra:1379576,release_id:adjudicacion-1379576</title>
+                <pubDate>Mon, 19 Oct 2026 16:35:10</pubDate>
+                <link>http://www.comprasestatales.gub.uy/ocds/release/adjudicacion-1379576</link>
+                <guid>adjudicacion-1379576</guid>
+                <category>award</category>
+            </item>
+                    <item>
+                <title>id_compra:1379529,release_id:aclar_llamado-1379529-1</title>
+                <pubDate>Mon, 19 Oct 2026 16:32:02</pubDate>
+                <link>http://www.comprasestatales.gub.uy/ocds/release/aclar_llamado-1379529-1</link>
+                <guid>aclar_llamado-1379529-1</guid>
+                <category>tenderUpdate</category>
+            </item>
+                    <item>
+                <title>id_compra:1378420,release_id:aclar_llamado-1378420-2</title>
+                <pubDate>Mon, 19 Oct 2026 16:32:01</pubDate>
+                <link>http://www.comprasestatales.gub.uy/ocds/release/aclar_llamado-1378420-2</link>
+                <guid>aclar_llamado-1378420-2</guid>
+                <category>tenderUpdate</category>
+            </item>
+                    <item>
+                <title>id_compra:1379371,release_id:adjudicacion-1379371</title>
+                <pubDate>Mon, 19 Oct 2026 16:30:09</pubDate>
+                <link>http://www.comprasestatales.gub.uy/ocds/release/adjudicacion-1379371</link>
+                <guid>adjudicacion-1379371</guid>
+                <category>award</category>
+            </item>
+                    <item>
+                <title>id_compra:1374472,release_id:aclar_llamado-1374472-0</title>
+                <pubDate>Mon, 19 Oct 2026 16:26:01</pubDate>
+                <link>http://www.comprasestatales.gub.uy/ocds/release/aclar_llamado-1374472-0</link>
+                <guid>aclar_llamado-1374472-0</guid>
+                <category>tenderUpdate</category>
+            </item>
+                    <item>
+                <title>id_compra:1379539,release_id:adjudicacion-1379539</title>
+                <pubDate>Mon, 19 Oct 2026 16:25:09</pubDate>
+                <link>http://www.comprasestatales.gub.uy/ocds/release/adjudicacion-1379539</link>
+                <guid>adjudicacion-1379539</guid>
+                <category>award</category>
+            </item>
+                    <item>
+                <title>id_compra:1380327,release_id:adjudicacion-1380327</title>
+                <pubDate>Mon, 19 Oct 2026 16:25:08</pubDate>
+                <link>http://www.comprasestatales.gub.uy/ocds/release/adjudicacion-1380327</link>
+                <guid>adjudicacion-1380327</guid>
+                <category>award</category>
+            </item>
+                    <item>
+                <title>id_compra:1370330,release_id:ajuste_llamado-48781</title>
+                <pubDate>Mon, 19 Oct 2026 16:20:10</pubDate>
+                <link>http://www.comprasestatales.gub.uy/ocds/release/ajuste_llamado-48781</link>
+                <guid>ajuste_llamado-48781</guid>
+                <category>tenderAmendment</category>
+            </item>
+                    <item>
+                <title>id_compra:1380607,release_id:llamado-1380607</title>
+                <pubDate>Mon, 19 Oct 2026 16:20:09</pubDate>
+                <link>http://www.comprasestatales.gub.uy/ocds/release/llamado-1380607</link>
+                <guid>llamado-1380607</guid>
+                <category>tender</category>
+            </item>
+                    <item>
+                <title>id_compra:1380123,release_id:adjudicacion-1380123</title>
+                <pubDate>Mon, 19 Oct 2026 16:15:10</pubDate>
+                <link>http://www.comprasestatales.gub.uy/ocds/release/adjudicacion-1380123</link>
+                <guid>adjudicacion-1380123</guid>
+                <category>award</category>
+            </item>
+                    <item>
+                <title>id_compra:1378420,release_id:aclar_llamado-1378420-1</title>
+                <pubDate>Mon, 19 Oct 2026 16:14:00</pubDate>
+                <link>http://www.comprasestatales.gub.uy/ocds/release/aclar_llamado-1378420-1</link>
+                <guid>aclar_llamado-1378420-1</guid>
+                <category>tenderUpdate</category>
+            </item>
+                    <item>
+                <title>id_compra:1368865,release_id:aclar_llamado-1368865-6</title>
+                <pubDate>Mon, 19 Oct 2026 16:01:02</pubDate>
+                <link>http://www.comprasestatales.gub.uy/ocds/release/aclar_llamado-1368865-6</link>
+                <guid>aclar_llamado-1368865-6</guid>
+                <category>tenderUpdate</category>
+            </item>
+                    <item>
+                <title>id_compra:1371790,release_id:aclar_llamado-1371790-3</title>
+                <pubDate>Mon, 19 Oct 2026 16:01:01</pubDate>
+                <link>http://www.comprasestatales.gub.uy/ocds/release/aclar_llamado-1371790-3</link>
+                <guid>aclar_llamado-1371790-3</guid>
+                <category>tenderUpdate</category>
+            </item>
+                    <item>
+                <title>id_compra:1375085,release_id:adjudicacion-1375085</title>
+                <pubDate>Mon, 19 Oct 2026 16:00:13</pubDate>
+                <link>http://www.comprasestatales.gub.uy/ocds/release/adjudicacion-1375085</link>
+                <guid>adjudicacion-1375085</guid>
+                <category>award</category>
+            </item>
+                    <item>
+                <title>id_compra:1378018,release_id:adjudicacion-1378018</title>
+                <pubDate>Mon, 19 Oct 2026 16:00:12</pubDate>
+                <link>http://www.comprasestatales.gub.uy/ocds/release/adjudicacion-1378018</link>
+                <guid>adjudicacion-1378018</guid>
+                <category>award</category>
+            </item>
+                    <item>
+                <title>id_compra:1377499,release_id:adjudicacion-1377499</title>
+                <pubDate>Mon, 19 Oct 2026 16:00:12</pubDate>
+                <link>http://www.comprasestatales.gub.uy/ocds/release/adjudicacion-1377499</link>
+                <guid>adjudicacion-1377499</guid>
+                <category>award</category>
+            </item>
+            </channel>
+</rss>

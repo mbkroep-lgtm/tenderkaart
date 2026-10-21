@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html xml:lang="de" lang="de" class="no-js">
+<head>
+ <base href="/"/>
+ <meta charset="utf-8">
+ <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+ <meta name="viewport" content="initial-scale=1" />
+<meta name="generator" content="Government Site Builder (GSB/CM)"/>
+<meta name="google-site-verification" content="sE0j3Tn-5n7HrW3gNGlzW2Rq_Uvpfz8DEWf7rgzCqmU" />
+<meta name="msapplication-config" content="none"/>
+<meta name="referrer" content="origin-when-crossorigin" />
+<title>SERVICE.BUND.DE  -  Aktuelle Ausschreibungen der öffentlichen Verwaltung Deutschlands (Bund, Länder, Städte und Kommunen)</title>
+<link rel="shortcut icon" type="image/ico" href="/Content/Globals/Layout/StyleBundles/Bilder/favicon.ico;jsessionid=98AD9EF00BB2362C1E446FF13F7FF7E7.internet622?__blob=normal&amp;v=3" />
+<link rel="apple-touch-icon" href="/Content/Globals/Layout/StyleBundles/Bilder/apple-touch-icon.png;jsessionid=98AD9EF00BB2362C1E446FF13F7FF7E7.internet622?__blob=normal&amp;v=3"/>
+<link rel="apple-touch-icon-precomposed" href="/Content/Globals/Layout/StyleBundles/Bilder/apple-touch-icon.png;jsessionid=98AD9EF00BB2362C1E446FF13F7FF7E7.internet622?__blob=normal&amp;v=3"/>
+
+<link rel="stylesheet"  href="Content/Globals/Layout/StyleBundles/CSS/screen/leaflet.css;jsessionid=98AD9EF00BB2362C1E446FF13F7FF7E7.internet622?v=2" type="text/css" media ="projection, screen"  />
+<link rel="stylesheet"  href="Content/Globals/Layout/StyleBundles/CSS/screen/styles.css;jsessionid=98AD9EF00BB2362C1E446FF13F7FF7E7.internet622?v=21" type="text/css" media ="projection, screen"  />
+<!--[if IE 8]><link rel="stylesheet" href="Content/Globals/Layout/StyleBundles/CSS/screen/ie8.css;jsessionid=98AD9EF00BB2362C1E446FF13F7FF7E7.internet622?v=4" media="screen, projection"/><![endif]-->
+<!--[if lte IE 7]><link rel="stylesheet" href="Content/Globals/Layout/StyleBundles/CSS/screen/ie6-7.css;jsessionid=98AD9EF00BB2362C1E446FF13F7FF7E7.internet622?v=2" media="screen, projection"/><![endif]-->
+<link rel="stylesheet"  href="Content/Globals/Layout/StyleBundles/CSS/screen/additional.css;jsessionid=98AD9EF00BB2362C1E446FF13F7FF7E7.internet622?v=7" type="text/css" media ="projection, screen"  />
+<link rel="stylesheet" href="Content/Globals/Layout/StyleBundles/CSS/print/print.css;jsessionid=98AD9EF00BB2362C1E446FF13F7FF7E7.internet622?v=1" type="text/css" media="print" />
+<link rel="stylesheet"  href="SiteGlobals/StyleBundles/CSS/screen/addon_forms.css;jsessionid=98AD9EF00BB2362C1E446FF13F7FF7E7.internet622?v=1" type="text/css" media ="projection, screen"  />
+
+ <script src="Content/Globals/Functions/JavaScript/_basic.js;jsessionid=98AD9EF00BB2362C1E446FF13F7FF7E7.internet622?v=2"></script>
+ <script src="Content/Globals/Functions/JavaScript/_base.js;jsessionid=98AD9EF00BB2362C1E446FF13F7FF7E7.internet622?v=2"></script>
+ <script src="Content/Globals/Functions/JavaScript/_enhanced.js;jsessionid=98AD9EF00BB2362C1E446FF13F7FF7E7.internet622?v=9"></script> 
+
+
+
+</head>
+
+<body class="js-off ">
+<a id="Start" name="Start"></a>
+
+
+
+<header role="banner">
+  <div class="box-inner">
+   <h1 class="logo">
+    <a title="Zur Startseite service.bund.de" href="Content/DE/Home/homepage_node.html;jsessionid=98AD9EF00BB2362C1E446FF13F7FF7E7.internet622">
+     <strong>bund.de</strong>
+    
+     <span></span>
+    </a>
+   </h1>
+   <div class="toggler">
+    <a href="#nav-global" class="nav-toggle toggle" data-default-text="Navigation anzeigen" data-new-text="Navigation ausblenden">Navigation anzeigen</a>
+    <a href="#filter" class="filter-toggle toggle" data-default-text="Filter anzeigen" data-new-text="Filter ausblenden">Filter anzeigen</a>
+   </div>
+   <nav id="nav" role="navigation">
+    <h1>Navigation</h1>
+    <section id="nav-global">
+     <h2>Haupt-Navigations-<em>Menü</em></h2>
+     
+
+<ul>
+
+<li class=""><a href="Content/DE/Stellen/Suche/Formular.html;jsessionid=98AD9EF00BB2362C1E446FF13F7FF7E7.internet622?view=processForm&amp;nn=4641482" title="Stellenangebote, Ausbildungsplätze und Studiengänge der öffentlichen Verwaltung Deutschlands (Bund, Länder, Städte und Kommunen)">Stellenangebote</a></li>
+                  
+<li class="current"><strong>Ausschreibungen</strong></li>
+                  
+<li class=""><a href="Content/DE/Behoerden/Suche/Formular.html;jsessionid=98AD9EF00BB2362C1E446FF13F7FF7E7.internet622?view=processForm&amp;nn=4641482" title="Behörden und Institutionen des Bundes">Behörden</a></li>
+                  
+<li class=""><a href="Content/DE/Leistungen_neu/leistungen_node.html;jsessionid=98AD9EF00BB2362C1E446FF13F7FF7E7.internet622" title="Leistungsangebote der Bundesbehörden und -institutionen" ><span>Leistungen</span></a></li>
+                  </ul>
+    </section>
+    <section class="nav-meta">
+     <h2>Meta-Navigation</h2>
+     <ul>
+      <li class="lang-e"><a href="Content/DE/Service/LeichteSprache/leichtesprache_node.html;jsessionid=98AD9EF00BB2362C1E446FF13F7FF7E7.internet622">LEICHTE SPRACHE</a></li>
+      <li class="lang-s"><a href="Content/DE/Service/Gebaerdensprache/gebaerdensprache_node.html;jsessionid=98AD9EF00BB2362C1E446FF13F7FF7E7.internet622">GEBÄRDENSPRACHE</a></li>
+      <li class="privacy"><a href="Content/DE/Service/Datenschutz/Datenschutz_node.html;jsessionid=98AD9EF00BB2362C1E446FF13F7FF7E7.internet622">DATENSCHUTZ</a></li>
+      <li class="english"><a href="Content/DE/Service/Ueber-service-bundde/ueber-service-bundde_node.html;jsessionid=98AD9EF00BB2362C1E446FF13F7FF7E7.internet622">ÜBER SERVICE.BUND.DE</a></li>
+      <li class="english"><a href="Content/EN/Home/homepage_node.html;jsessionid=98AD9EF00BB2362C1E446FF13F7FF7E7.internet622">ENGLISH</a></li>
+     </ul>
+    </section>
+   </nav>
+  </div>
+ </header>
+<div class="stage col-3">
+  <div class="box-inner">
+   <div class="ico-box ico-chart "></div>
+  </div>
+ </div><!-- stage -->
+ <div id="wrapper">
+<div class="results" id="main">
+ <aside id="filter" data-swipe="left">
+
+
+
+<h1>Zusätzliche Filter</h1>
+<div class="filter c-form-facets" data-form-id="form-4641464">
+    
+</div>
+<h1>Ausschreibungen abonnieren:</h1>
+<ul class="service">
+  <li class="newsletter"><a href="Content/DE/Service/Newsletter/AusschreibungenNewsletter/newsletter_node.html;jsessionid=98AD9EF00BB2362C1E446FF13F7FF7E7.internet622?templateQueryString=starlink">Newsletter nach Kategorie</a></li>
+  <li class="newsletter"><a href="Content/DE/Service/Newsletter/AusschreibungenArt/newsletter_node.html;jsessionid=98AD9EF00BB2362C1E446FF13F7FF7E7.internet622?templateQueryString=starlink">Newsletter nach Art</a></li>
+  <li class="rss"><a target="_new" href="Content/DE/Ausschreibungen/Suche/Formular.html;jsessionid=98AD9EF00BB2362C1E446FF13F7FF7E7.internet622?nn=4641482&amp;resultsPerPage=100&amp;templateQueryString=starlink&amp;sortOrder=dateOfIssue_dt+desc&amp;jobsrss=true">RSS-Feed</a></li>
+</ul>
+     </ul>
+    <h1>Weitere Informationen:</h1>
+    <ul class="service">
+     <li class="edit"><a href="https://www.govdata.de/daten/-/details/anschriftenverzeichnis-des-bundes" target="_blank" title="öffnet neues Fenster">Zum Download Anschriftenverzeichnis</a></li>
+     <li class="edit"><a href="https://www.govdata.de/daten/-/details/abkurzungsverzeichnis-des-bundes" target="_blank" title="öffnet neues Fenster">Zum Download Abkürzungsverzeichnis</a></li>
+     <li class="edit"><a href="Content/DE/Service/Redaktionssystem/Redaktionssystem_node.html;jsessionid=98AD9EF00BB2362C1E446FF13F7FF7E7.internet622">Ausschreibungen auf service.bund.de veröffentlichen</a></li>
+   </ul>
+ </aside>
+<div class="content js-search-form">
+    <div class="content-box">
+
+
+
+
+
+
+
+  
+  
+<section class="search">
+<form id="form-4641464" name="ServicebereichSuche" action="Content/DE/Ausschreibungen/Suche/Formular.html;jsessionid=98AD9EF00BB2362C1E446FF13F7FF7E7.internet622" method="get" enctype="application/x-www-form-urlencoded">
+  <input type="hidden" name="nn" value="4641482"/>
+  <input type="hidden" name="resourceId" value="4641464" />
+  <input type="hidden" name="input_" value="4641482" />
+  <input type="hidden" name="pageLocale" value="de" />
+    <fieldset>
+<div class="form-row navigation">
+  <div class="form-item item-s">   
+      
+<span class="formField">
+<span><input class="radio" type="radio" id="f4641464g4642112d4642120" name="type" value="0" title="Ausschreibungen" checked="checked"/> <label for="f4641464g4642112d4642120">Ausschreibungen</label></span></span>
+  </div>
+<div class="form-item item-s">   
+      
+<span class="formField">
+<span><input class="radio" type="radio" id="f4641464g4642114d4642130" name="type" value="1" title="Vergebene Aufträge" /> <label for="f4641464g4642114d4642130">Vergebene Aufträge</label></span></span>
+  </div>
+<div class="form-item item-s">   
+      
+<span class="formField">
+<span><input class="radio" type="radio" id="f4641464g4642116d4642132" name="type" value="2" title="Vergebene Aufträge: evergabe-online.de" /> <label for="f4641464g4642116d4642132">Vergebene Aufträge: evergabe-online.de</label></span></span>
+  </div>
+</div>
+<div class="form-row">
+  <div class="form-item item-l">
+    
+<div class="form-item item-l">
+  <label for="f4641464d4642144">Was?</label>
+
+  <input id="f4641464d4642144" name="templateQueryString" value="starlink" type="text" size="26" maxlength="255"/></div>   
+  </div>
+</div>
+
+
+<div class="form-row">
+  <div class="form-item item-m">
+ 
+<div class="form-item item-l">
+  <label for="f4641464d4642148">Wo?</label>
+
+  <input id="f4641464d4642148" name="city_zipcode" value="" type="text" size="26" maxlength="100"/></div> 
+<div class="form-item item-l">
+
+  <input id="f4641464d14142810" name="solr_opengeo_id" value="" type="hidden"/>
+<input type="hidden" name="solr_opengeo_id.HASH" value="a104dzPfOVEB30R4wbNMTGThc5d92x8=" /></div>   </div>
+  <div class="form-item item-xm  js-fancy-selects">
+<label for="sel-1">Umkreis</label>
+
+  <select id="sel-1" name="ambit_distance" size="1" >
+    <option title="10 km" value="10" >10 km</option>
+    <option title="20 km" value="20" >20 km</option>
+    <option title="30 km" value="30" >30 km</option>
+    <option title="50 km" value="50" >50 km</option>
+    <option title="75 km" value="75" >75 km</option>
+    <option title="90 km" value="90" >90 km</option>
+  </select> </div>
+
+  <div class="form-item button-wrapper  item-xxs   ">
+    
+<input type="submit" name="submit" value="Finden" class="submit"/>
+  </div>
+</div>
+</fieldset>
+ 
+    <p class="contact-text" style="display:none;">
+        
+<label for="f4641464d4245366">E-Mail-Text:</label>
+<input id="f4641464d4245366" name="emailText" value="" title="E-Mail-Text" type="text" size="60" maxlength="60" />
+    </p>
+  </form>
+</section>
+
+
+               
+
+<section class="result">
+              <p>Keine Treffer</p>
+</section><!--#result-->
+  
+
+</div><!-- #content -->
+</div><!-- #content-box -->
+
+</div>
+</div><!-- wrapper -->
+
+
+<footer class="module site-index">
+  <div class="box-inner" role="navigation">
+   <h1>Inhaltsverzeichnis</h1>
+   <section>
+    <h2>STELLENANGEBOTE</h2>
+    <div class="panel">
+     <ul>
+      <li><a href="Content/DE/Stellen/Suche/Formular.html;jsessionid=98AD9EF00BB2362C1E446FF13F7FF7E7.internet622?nn=4641482&amp;type=0">Angestellte und Beamte</a></li>
+      <li><a href="Content/DE/Stellen/Suche/Formular.html;jsessionid=98AD9EF00BB2362C1E446FF13F7FF7E7.internet622?nn=4641482&amp;type=1">Ausbildung und Studium</a></li>
+      <li><a href="Content/DE/Service/Stelleninfos/stelleninfos_node.html;jsessionid=98AD9EF00BB2362C1E446FF13F7FF7E7.internet622">Informationen zu Stellenangeboten</a></li>
+      <li><a href="Content/DE/Service/Studiengaenge/Studiengaenge_node.html;jsessionid=98AD9EF00BB2362C1E446FF13F7FF7E7.internet622">Informationen zu Studiengängen</a></li>
+      <li><a href="Content/DE/Service/Suchtipps/Stellenangebote/Suche_Stellen_node.html;jsessionid=98AD9EF00BB2362C1E446FF13F7FF7E7.internet622">Suchtipps für Stellenangebote</a></li>
+     </ul>
+    </div>
+   </section>
+   <section>
+    <h2>AUSSCHREIBUNGEN</h2>
+    <div class="panel">
+     <ul>
+      <li><a href="Content/DE/Ausschreibungen/Suche/Formular.html;jsessionid=98AD9EF00BB2362C1E446FF13F7FF7E7.internet622?nn=4641482&amp;type=0">Ausschreibungen</a></li>
+      <li><a href="Content/DE/Ausschreibungen/Suche/Formular.html;jsessionid=98AD9EF00BB2362C1E446FF13F7FF7E7.internet622?nn=4641482&amp;type=1">Vergebene Aufträge</a></li>
+      <li><a href="Content/DE/Service/Ausschreibungsinfos/ausschreibungsinfos_node.html;jsessionid=98AD9EF00BB2362C1E446FF13F7FF7E7.internet622">Informationen zu Ausschreibungen</a></li>
+      <li><a href="Content/DE/Service/Suchtipps/Ausschreibungen/Suche_Ausschreibungen_node.html;jsessionid=98AD9EF00BB2362C1E446FF13F7FF7E7.internet622">Suchtipps für Ausschreibungen</a></li>
+     </ul>
+    </div>
+   </section>
+   <section>
+    <h2>SERVICE</h2>
+    <div class="panel">
+     <ul>
+      <li><a href="Content/DE/Service/Impressum/impressum_node.html;jsessionid=98AD9EF00BB2362C1E446FF13F7FF7E7.internet622">Impressum</a></li>
+      <li><a href="Content/DE/Service/Datenschutz/Datenschutz_node.html;jsessionid=98AD9EF00BB2362C1E446FF13F7FF7E7.internet622">Datenschutz</a></li>
+      <li><a href="Content/DE/Service/Kontakt/kontakt_node.html;jsessionid=98AD9EF00BB2362C1E446FF13F7FF7E7.internet622">Kontakt</a></li>
+      <li><a href="Content/DE/Service/Newsletter/newsletter_node.html;jsessionid=98AD9EF00BB2362C1E446FF13F7FF7E7.internet622">Newsletter</a></li>
+      <li><a href="Content/DE/Service/OpenData/opendata_node.html;jsessionid=98AD9EF00BB2362C1E446FF13F7FF7E7.internet622">Open Data</a></li>
+      <li><a href="Content/DE/Service/RSS/rss_node.html;jsessionid=98AD9EF00BB2362C1E446FF13F7FF7E7.internet622">RSS-Feeds</a></li>
+      <li><a href="Content/DE/Service/Redaktionssystem/Redaktionssystem_node.html;jsessionid=98AD9EF00BB2362C1E446FF13F7FF7E7.internet622">Stellenangebote und Ausschreibungen veröffentlichen</a></li>
+      <li><a href="Content/DE/Service/Ueber-service-bundde/ueber-service-bundde_node.html;jsessionid=98AD9EF00BB2362C1E446FF13F7FF7E7.internet622">Über service.bund.de</a></li>
+      <li><a href="Content/DE/Service/Barrierefreiheit/barrierefreiheit_node.html;jsessionid=98AD9EF00BB2362C1E446FF13F7FF7E7.internet622">Erklärung zur Barrierefreiheit</a></li>
+      <li><a href="mailto:redaktion-buergeranfragen@bva.bund.de?subject=Barriere melden" target="_blank" title="öffnet neues Fenster">Barriere melden</a></li>
+      
+     </ul>
+    </div>
+   </section>
+  </div><!-- box-inner -->
+<section class="nav-meta">
+   <h2>Meta-Navigation</h2>
+   <div>
+    <ul>
+     <li class="lang-e"><a href="#">Leichte Sprache</a></li>
+     <li class="lang-s"><a href="#">Gebärdensprache</a></li>
+    </ul>
+   </div>
+  </section>
+ </footer>
+
+<script src="Content/DE/Ausschreibungen/Suche/jquery_autosuggest.js;jsessionid=98AD9EF00BB2362C1E446FF13F7FF7E7.internet622?v=4" type="text/javascript" ></script>  <script type="text/javascript" src="SiteGlobals/Frontend/JavaScript/init/global.js;jsessionid=98AD9EF00BB2362C1E446FF13F7FF7E7.internet622?v=9"></script>
+</body>
+</html>
