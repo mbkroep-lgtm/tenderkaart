@@ -318,3 +318,4 @@ body.tv .refreshnote.show{transform:translate(-50%,0)}
 .lh-right{display:flex;gap:8px;align-items:center}
 .csvbtn{font:600 11px var(--f-mono);letter-spacing:.06em;padding:3px 9px;border-radius:6px;background:transparent;border:1px solid var(--line);color:var(--beam);cursor:pointer}
 .csvbtn:hover{border-color:var(--beam)}
+.deftag.conn{color:#b9f0d0;border-color:rgba(120,220,170,.45);background:rgba(120,220,170,.08)}

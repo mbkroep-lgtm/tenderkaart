@@ -42,7 +42,7 @@ function fmtMoney(n, cur){
 // ---------- Status ----------
 let tenders = [];
 let updated = null;
-const state = { q:"", status:"open", country:"", sort:"deadline", minValue:0, source:"", def:"", hw:"" };
+const state = { q:"", status:"open", country:"", sort:"deadline", minValue:0, source:"", def:"", hw:"", topic:"" };
 // Alleen hardware? Uit de (vertaalde) titel: apparatuur zonder abonnement, dienst, installatie of beheer.
 // Zonder duidelijke woorden beslist de CPV-code: 32… = apparatuur, 64…/72…/50… = diensten.
 const HW_RE = /(modem|terminal|\bkits?\b|antenne|antenna|schotel|\bdish|router|apparatuur|equipment|uitrusting|kabel|behuizing|station|\bsets?\b|hardware|systeem|systemen|pakket|houder|voeding|adapter|montage|обладнання|термінал|комплект)/i;
@@ -101,6 +101,7 @@ function filtered(ignoreCountry){
     if(state.source && (t.source || "TED") !== state.source) return false;
     if(state.def === "no" && t.defense) return false;
     if(state.def === "only" && !t.defense) return false;
+    if(state.topic && (t.topic || "leo") !== state.topic) return false;
     if(state.hw === "only" && hwScope(t) !== "hw") return false;
     if(state.hw === "no" && hwScope(t) === "hw") return false;
     if(effStatus() === "open" && !isOpen(t)) return false;
@@ -590,6 +591,7 @@ function drawOffices(){
 // ---------- Lijst ----------
 const dlText = t => { const st = statusOf(t); return (st === "awarded" || st === "prior") ? leftText(t) : `Sluit ${fmt(t.deadline)} · ${leftText(t)}`; };
 const defHtml = t => (t.defense ? `<span class="deftag" title="Opdrachtgever is een defensie-organisatie">Defensie</span>` : "")
+  + (t.topic === "conn" ? `<span class="deftag conn" title="Bredere connectiviteit: managed connectivity, satellietverbindingen, SD-WAN, tijdelijke netwerken of 4G/5G-backup">Connectiviteit</span>` : "")
   + (hwScope(t) === "hw" ? `<span class="deftag hw" title="Alleen apparatuur, zonder abonnement of dienst (afgeleid uit de titel)">Alleen hardware</span>` : "");
 const valHtml = t => (t.qty ? `<span class="qty" title="Aantal uit de titel gehaald">${t.qty}×</span>` : "") + (t.value ? `<span class="val">${esc(fmtMoney(t.value, t.currency))}</span>` : "");
 const newHtml = t => isNew(t) ? `<span class="newtag">NIEUW</span>` : "";
@@ -631,8 +633,8 @@ function downloadCsv(){
   const cell = v => { const s = v == null ? "" : String(v); return /[";\n\r]/.test(s) ? `"${s.replace(/"/g, '""')}"` : s; };
   const dec = n => n == null || n === "" ? "" : String(n).replace(".", ",");
   const tijd = t => t.deadlineAt ? new Date(t.deadlineAt).toLocaleTimeString("nl-NL", {hour:"2-digit", minute:"2-digit", timeZone:"Europe/Amsterdam"}) : "";
-  const head = ["Status","Land","Titel (Nederlands)","Originele titel","Opdrachtgever","Bron","Soort","Defensie","Gepubliceerd","Sluitingsdatum","Sluitingstijd (NL)","Aantal","Waarde","Valuta","Kenmerk","Link"];
-  const rows = list.map(t => [STATUS_NL[statusOf(t)] || statusOf(t), t.country ? cname(t.country) : (t.countryName || ""), t.titleNl || t.title, t.title, t.buyer,
+  const head = ["Status","Onderwerp","Land","Titel (Nederlands)","Originele titel","Opdrachtgever","Bron","Soort","Defensie","Gepubliceerd","Sluitingsdatum","Sluitingstijd (NL)","Aantal","Waarde","Valuta","Kenmerk","Link"];
+  const rows = list.map(t => [STATUS_NL[statusOf(t)] || statusOf(t), t.topic === "conn" ? "Connectiviteit" : "LEO / Starlink", t.country ? cname(t.country) : (t.countryName || ""), t.titleNl || t.title, t.title, t.buyer,
     t.source || "TED", hwScope(t) === "hw" ? "Alleen hardware" : hwScope(t) === "svc" ? "Met dienst" : "", t.defense ? "Ja" : "", t.published || "", t.deadline || "", tijd(t),
     t.qty || "", dec(t.value), t.value ? (t.currency || "") : "", t.pub, t.link]);
   const csv = "\ufeff" + [head, ...rows].map(r => r.map(cell).join(";")).join("\r\n");
@@ -692,6 +694,7 @@ $("fStatus").addEventListener("change", e => { state.status = e.target.value; sa
 $("fSource").addEventListener("change", e => { state.source = e.target.value; render(); });
 $("fDef").addEventListener("change", e => { state.def = e.target.value; render(); });
 $("fHw").addEventListener("change", e => { state.hw = e.target.value; render(); });
+$("fTopic").addEventListener("change", e => { state.topic = e.target.value; render(); });
 $("fLang").addEventListener("change", e => { showOriginal = e.target.value === "orig"; try { localStorage.setItem("tk-orig", showOriginal ? "1" : "0"); } catch(err) {} render(); });
 $("fLang").value = showOriginal ? "orig" : "nl";
 $("fSort").addEventListener("change", e => { state.sort = e.target.value; saveFilters(); render(); });
@@ -789,7 +792,7 @@ document.addEventListener("visibilitychange", () => {   // terug naar het tabbla
 let tvPausedUntil = 0;
 function startTv(){
   document.body.classList.add("tv");
-  state.status = "open"; state.country = ""; state.q = ""; state.source = ""; state.def = ""; state.hw = ""; state.minValue = 0;
+  state.status = "open"; state.country = ""; state.q = ""; state.source = ""; state.def = ""; state.hw = ""; state.topic = ""; state.minValue = 0;
   // alleen even pauzeren als iemand zelf de bol draait of zoomt (niet bij knoppen)
   const pause = () => { tvPausedUntil = Date.now() + 8000; };
   const svg = $("map");

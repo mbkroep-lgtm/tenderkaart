@@ -22,11 +22,33 @@ const PHRASES = ['LEO satellite', 'LEO satellites', 'LEO satellite internet', 'L
   'órbita terrestre baja', 'satelity niskoorbitowe', 'satelitarny LEO', 'niskiej orbicie okołoziemskiej', 'sateliți LEO', 'orbită joasă',
   'LEO-Satellitenkommunikation', 'lavbane-satellitt', 'LEO-satellitt', 'low earth orbit satellite', 'low earth orbit satellites', 'low-earth orbit satellite'];
 const esc = s => s.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
-const LEO_RE = new RegExp('(^|[^\\p{L}])(' + [...BRANDS, ...PHRASES].map(t => esc(t).replace(/[ -]/g, '[ -]?')).join('|') + ')([^\\p{L}]|$)', 'iu');
+const termRe = list => new RegExp('(^|[^\\p{L}\\d])(' + list.map(t => esc(t).replace(/[ -]/g, '[ -]?')).join('|') + ')([^\\p{L}\\d]|$)', 'iu');
+const LEO_ONLY_RE = termRe([...BRANDS, ...PHRASES]);
+// Bredere connectiviteit (op verzoek, okt 2026): managed connectivity, zakelijke satellietverbindingen, SD-WAN,
+// tijdelijke netwerken en 4G/5G-backup. Deze tenders krijgen onderwerp "conn", LEO/Starlink krijgt "leo".
+const CONN_TERMS = [
+  'managed connectivity', 'connectivity as a service', 'beheerde connectiviteit', 'managed WAN', 'managed network services',
+  'SD-WAN', 'SDWAN',
+  'satellite internet', 'satellite broadband', 'satellite connectivity', 'business satellite', 'satellietinternet', 'satellietverbinding',
+  'satellietverbindingen', 'internet via satelliet', 'Satelliteninternet', 'Satellitenverbindung', 'Satelliten-Internet', 'internet par satellite',
+  'internet satellitaire', 'connexion satellitaire', 'connexion par satellite', 'internet via satélite', 'internet por satélite', 'internet satelital',
+  'internet satélite', 'servicio de internet satelital', 'internet satellitare', 'connettività satellitare', 'internet satelitarny',
+  'internet przez satelitę', 'internet prin satelit', 'satellittinternett', 'satellittbredbånd', 'супутниковий інтернет', 'супутникового інтернету',
+  'спутниковый интернет', 'спутникового интернета',
+  'temporary network', 'temporary networks', 'temporary connectivity', 'temporary internet', 'event connectivity', 'tijdelijk netwerk',
+  'tijdelijke netwerken', 'tijdelijke internetverbinding', 'tijdelijke verbinding', 'temporäres Netzwerk', 'temporäre Netzwerke',
+  'temporäre Internetanbindung', 'réseau temporaire', 'réseaux temporaires', 'red temporal', 'rete temporanea',
+  '4G backup', '5G backup', 'LTE backup', '4G/5G backup', '4G back-up', '5G back-up', '4G failover', '5G failover', 'LTE failover',
+  'backup 4G', 'backup 5G', 'mobile backup', 'mobiele backup', 'mobiele back-up', 'secours 4G', 'secours 5G', 'Mobilfunk-Backup', 'LTE-Backup'
+];
+const CONN_RE = termRe(CONN_TERMS);
+// LEO_RE = alles wat we zoeken (LEO én de bredere connectiviteit); de onderwerp-markering scheidt ze weer
+const LEO_RE = termRe([...BRANDS, ...PHRASES, ...CONN_TERMS]);
+const topicOf = t => LEO_ONLY_RE.test(`${t.title || ''} ${t.titleNl || ''}`) || !CONN_RE.test(`${t.title || ''} ${t.titleNl || ''}`) ? 'leo' : 'conn';
 // Ruimtevaarthardware en andere zaken die niets met verbindingen voor klanten te maken hebben.
 const EXCLUDE_RE = /(inter-?satellite|intersatellit|launch service|trägerrakete|lanceerdienst|telescope|teleskop|flight[- ]model|raumfahrzeug|spacecraft|missile|space station|destination contract|ruimtestation)/i;
 // Telecom: hoofdcategorie (eerste CPV-code) apparatuur (32…) of diensten (64…). Zonder CPV: laten staan.
-const isTelecom = t => !t.cpv?.length || /^(32|64)/.test(t.cpv[0]);
+const isTelecom = t => !t.cpv?.length || /^(32|64|72|48|50|51)/.test(t.cpv[0]);   // + IT-diensten/software/onderhoud (SD-WAN)
 const keep = t => isTelecom(t) && !EXCLUDE_RE.test(t.title || '');
 
 // Bewaar berichten tot ruim een jaar na publicatie, of zolang de sluitingsdatum nog komt.
@@ -116,7 +138,10 @@ const TED_TYPES = {
 };
 // TED ondersteunt geen ("a" OR "b") binnen één FT ~ (dat geeft 0 resultaten): elke term los.
 const ftAny = list => list.map(t => `FT ~ "${t}"`).join(' OR ');
-const TED_TERMS = `(${ftAny(BRANDS)} OR ${ftAny(PHRASES)})`;
+const TED_CONN = ['managed connectivity', 'SD-WAN', 'satellite internet', 'satellite connectivity', 'satellietinternet', 'satellietverbinding',
+  'Satelliteninternet', 'internet par satellite', 'internet satelital', 'internet via satélite', 'temporary network', 'tijdelijk netwerk',
+  '4G backup', '5G backup', 'LTE backup'];
+const TED_TERMS = `(${ftAny(BRANDS)} OR ${ftAny(PHRASES)} OR ${ftAny(TED_CONN)})`;
 const TED_BASE = ['publication-number', 'notice-title', 'buyer-name', 'buyer-country', 'publication-date', 'deadline-receipt-tender-date-lot', 'notice-type'];
 const TED_OPTIONAL = [['estimated-value-proc', 'estimated-value-cur-proc', 'estimated-value-lot', 'estimated-value-cur-lot'], ['deadline-receipt-request-date-lot'], ['classification-cpv']];
 
@@ -182,7 +207,7 @@ function wbDate(s) { // "13-Oct-2026" of ISO
   return Number.isFinite(d) ? isoDay(d) : date(s);
 }
 async function fetchWorldBank() {
-  const terms = ['starlink', 'oneweb', '"project kuiper"', '"amazon leo"', '"leo satellite"', '"low earth orbit"'];
+  const terms = ['starlink', 'oneweb', '"project kuiper"', '"amazon leo"', '"leo satellite"', '"low earth orbit"', '"sd-wan"', '"satellite internet"', '"managed connectivity"', '"satellite connectivity"'];
   const byId = new Map();
   for (const q of terms) {
     for (let os = 0; os < 1000; os += 100) {
@@ -277,7 +302,7 @@ const SAM_API = 'https://api.sam.gov/opportunities/v2/search';
 const SAM_TYPES = { 'Award Notice': 'award', 'Presolicitation': 'prior', 'Sources Sought': 'prior', 'Special Notice': 'prior' };
 const usDate = d => { const x = new Date(d); return `${String(x.getUTCMonth() + 1).padStart(2, '0')}/${String(x.getUTCDate()).padStart(2, '0')}/${x.getUTCFullYear()}`; };
 async function fetchSam(key) {
-  const terms = ['starlink', 'oneweb', 'LEO satellite', 'Kuiper'];
+  const terms = ['starlink', 'oneweb', 'LEO satellite', 'Kuiper', 'SD-WAN', 'satellite internet'];
   const byId = new Map();
   for (const term of terms) {
     const url = `${SAM_API}?api_key=${encodeURIComponent(key)}&limit=1000&offset=0&postedFrom=${usDate(NOW - 364 * DAY)}&postedTo=${usDate(NOW)}&title=${encodeURIComponent(term)}`;
@@ -316,7 +341,7 @@ async function fetchSam(key) {
 const NOTES = {};
 const say = (name, msg) => { NOTES[name] = msg; console.log(`${name}: ${msg}`); };
 const UA = { 'User-Agent': 'Mozilla/5.0 (tendermap; +https://tenderkaart.vercel.app)' };
-const CORE_TERMS = ['starlink', 'oneweb', 'LEO satellite', 'Project Kuiper', 'Amazon Leo'];
+const CORE_TERMS = ['starlink', 'oneweb', 'LEO satellite', 'Project Kuiper', 'Amazon Leo', 'SD-WAN', 'managed connectivity', 'satellite internet', 'satellite connectivity', '4G backup', '5G backup', 'temporary network'];
 const postJson = (url, body) => getJson(url, { method: 'POST', headers: { 'Content-Type': 'application/json', ...UA }, body: JSON.stringify(body) }, 2);
 const getText = async url => {
   const r = await fetch(url, { headers: UA, signal: AbortSignal.timeout(120000) });
@@ -355,7 +380,7 @@ async function fetchContractsFinder() {
 async function fetchProzorro() {
   const statuses = ['active.enquiries', 'active.tendering', 'active.pre-qualification', 'active.pre-qualification.stand-still', 'active.auction', 'active.qualification'];
   const byId = new Map();
-  for (const text of ['starlink', 'oneweb']) {
+  for (const text of ['starlink', 'oneweb', 'SD-WAN', 'супутниковий інтернет']) {
     for (let page = 1; page <= 15; page++) {
       const d = await postJson('https://prozorro.gov.ua/api/search/tenders', { text, status: statuses, page });
       for (const x of d.data || []) if (x.tenderID) byId.set(x.tenderID, x);
@@ -382,7 +407,7 @@ async function fetchProzorro() {
 // TenderNed (NL)
 async function fetchTenderNed() {
   const byId = new Map();
-  for (const term of ['starlink', 'oneweb', 'LEO satelliet', 'satellietinternet', 'satellietverbinding']) {
+  for (const term of ['starlink', 'oneweb', 'LEO satelliet', 'satellietinternet', 'satellietverbinding', 'SD-WAN', 'managed connectivity', 'beheerde connectiviteit', '4G backup', 'tijdelijk netwerk']) {
     const d = await getJson(`https://www.tenderned.nl/papi/tenderned-rs-tns/v2/publicaties?page=0&size=100&search=${encodeURIComponent(term)}`, { headers: UA });
     for (const x of d.content || []) if (x.publicatieId) byId.set(x.publicatieId, x);
   }
@@ -405,7 +430,7 @@ async function fetchTenderNed() {
 // BOAMP (Frankrijk, ook onder de EU-drempel)
 async function fetchBoamp() {
   const byId = new Map();
-  for (const term of ['starlink', 'oneweb', 'Kuiper', 'satellite LEO', 'satellites LEO']) {
+  for (const term of ['starlink', 'oneweb', 'Kuiper', 'satellite LEO', 'satellites LEO', 'SD-WAN', 'internet par satellite', 'secours 4G']) {
     const where = encodeURIComponent(`search("${term}") AND dateparution >= date'${histCutoff}'`);
     const d = await getJson(`https://boamp-datadila.opendatasoft.com/api/explore/v2.1/catalog/datasets/boamp/records?where=${where}&limit=100&select=idweb,objet,dateparution,datelimitereponse,nomacheteur,nature,nature_libelle,url_avis`, { headers: UA });
     for (const x of d.results || []) if (x.idweb) byId.set(x.idweb, x);
@@ -427,7 +452,7 @@ async function fetchBoamp() {
 // Colombia (SECOP II, open data)
 async function fetchSecop() {
   const byId = new Map();
-  for (const term of ['starlink', 'oneweb']) {
+  for (const term of ['starlink', 'oneweb', 'SD-WAN', 'internet satelital']) {
     const d = await getJson(`https://www.datos.gov.co/resource/p6dx-8zbt.json?$q=${encodeURIComponent(term)}&$limit=500&$where=${encodeURIComponent(`fecha_de_publicacion_del >= '${histCutoff}T00:00:00'`)}`, { headers: UA });
     for (const x of d || []) if (x.id_del_proceso) byId.set(x.id_del_proceso, x);
   }
@@ -514,7 +539,7 @@ async function fetchPncp(doneUntil) {
 // SIMAP (Zwitserland)
 async function fetchSimap() {
   const byId = new Map();
-  for (const term of ['starlink', 'oneweb', 'LEO Satellit']) {
+  for (const term of ['starlink', 'oneweb', 'LEO Satellit', 'SD-WAN', 'Satelliteninternet']) {
     const d = await getJson(`https://www.simap.ch/api/publications/v2/project/project-search?search=${encodeURIComponent(term)}&lang=de`, { headers: UA });
     for (const x of d.projects || []) if (x.id) byId.set(x.id, x);
   }
@@ -633,7 +658,7 @@ async function byDay(name, firstDays, budgetMin, fn) {
 // Noorwegen: Doffin (zoekt zelf)
 async function fetchDoffin() {
   const byId = new Map();
-  for (const term of ['starlink', 'oneweb', 'LEO satellitt', 'lavbane satellitt']) {
+  for (const term of ['starlink', 'oneweb', 'LEO satellitt', 'lavbane satellitt', 'SD-WAN', 'satellittinternett', '4G backup']) {
     const r = await fetch('https://api.doffin.no/webclient/api/v2/search-api/search', {
       method: 'POST', headers: { ...UA, 'Content-Type': 'application/json', Accept: 'application/json' }, signal: AbortSignal.timeout(60000),
       body: JSON.stringify({ numHitsPerPage: 100, page: 1, searchString: term, sortBy: 'PUBLICATION_DATE_DESC', facets: {} })
@@ -659,7 +684,7 @@ async function fetchDoffin() {
 // Portugal: BASE (zoekt zelf)
 async function fetchBase() {
   const byId = new Map();
-  for (const term of ['starlink', 'oneweb', 'órbita baixa']) {
+  for (const term of ['starlink', 'oneweb', 'órbita baixa', 'SD-WAN', 'internet via satélite']) {
     const r = await fetch('https://www.base.gov.pt/Base4/pt/resultados/', {
       method: 'POST', headers: { ...UA, 'Content-Type': 'application/x-www-form-urlencoded' }, signal: AbortSignal.timeout(60000),
       body: `type=search_anuncios&version=133.0&query=${encodeURIComponent('texto=' + term)}&sort=-drPublicationDate&page=0&size=100`
@@ -686,7 +711,7 @@ async function fetchBase() {
 // Ecuador: SERCOP open data (zoekt zelf; strenge limiet, dus rustig aan)
 async function fetchEcuador() {
   const byId = new Map(), y = NOW.getUTCFullYear();
-  for (const year of [y, y - 1]) for (const term of ['starlink', 'oneweb']) {
+  for (const year of [y, y - 1]) for (const term of ['starlink', 'oneweb', 'internet satelital', 'SD-WAN']) {
     const d = await getJson(`https://datosabiertos.compraspublicas.gob.ec/PLATAFORMA/api/search_ocds?year=${year}&search=${encodeURIComponent(term)}`, { headers: UA }, 4);
     for (const x of d.data || []) byId.set(x.ocid || x.id, x);
     await sleep(4000);
@@ -877,7 +902,7 @@ async function fetchDgcp() {
 // Kazachstan: goszakup (zoekt zelf, webpagina)
 async function fetchGoszakup() {
   const byId = new Map();
-  for (const term of ['starlink', 'старлинк', 'oneweb']) {
+  for (const term of ['starlink', 'старлинк', 'oneweb', 'SD-WAN', 'спутниковый интернет']) {
     const html = await getText(`https://goszakup.gov.kz/ru/search/lots?filter%5Bname%5D=${encodeURIComponent(term)}&count_record=200&page=1`);
     const body = html.split('id="search-result"')[1] || '';
     for (const row of body.split('<tr>').slice(2)) {
@@ -1234,6 +1259,7 @@ const tenders = result
 
 let trInfo;
 try { trInfo = await translateAll(tenders); } catch (e) { trInfo = { ok: false, at: nowIso, error: e.message }; }
+for (const t of tenders) t.topic = topicOf(t);   // leo of conn (bredere connectiviteit)
 sourceInfo['Vertalen'] = trInfo;
 for (const t of tenders) { const q = extractQty(t.title) ?? extractQty(t.titleNl); if (q) t.qty = q; else delete t.qty; }
 await mkdir(new URL('../data/', import.meta.url), { recursive: true });
