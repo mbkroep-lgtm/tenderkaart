@@ -361,3 +361,5 @@ body.tv .viewtabs{display:none}
 #adLetter{width:100%;box-sizing:border-box;font:13px/1.5 var(--f-body);background:var(--night);color:var(--ink);border:1px solid var(--line);border-radius:8px;padding:10px;resize:vertical}
 .ad-foot{font-size:12px;color:var(--muted);margin:10px 0 0}
 body.tv .applybtn{display:none}
+#map .dot.small{pointer-events:auto;cursor:pointer;stroke:#ffd59a;stroke-width:1.5px}
+#map .dot.small:hover{stroke:#fff}

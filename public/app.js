@@ -514,7 +514,8 @@ function setShift(open){
 // bij klik op een land in de lijst: daarheen draaien
 function focusCountry(c){
   const x = (featureByKey && featureByKey.get(c)) || features.find(f => f.key === c);
-  if(x && x.centroid) flyTo([-x.centroid[0], -x.centroid[1], 0], Math.max(zoom, 2.2));
+  const at = x && x.centroid ? x.centroid : SMALL_AT[c];
+  if(at) flyTo([-at[0], -at[1], 0], Math.max(zoom, x && x.centroid ? 2.2 : 3.5));
 }
 
 // weinig tenders = licht blauw, veel tenders = donkerder blauw
@@ -535,6 +536,15 @@ function paintMap(){
 // bolletjes met aantallen: elementen hergebruiken in plaats van elke keer opnieuw maken (scheelt veel op tv's)
 const labelPool = new Map();   // land -> {ci, tx, ring}
 let featureByKey = null;
+// kleine landen zonder vorm op de kaart: een bolletje op de hoofdstad
+const SMALL_AT = { FM:[158.2,6.9], WS:[-171.8,-13.8], TV:[179.2,-8.5], KI:[173.0,1.4], MH:[171.2,7.1], NR:[166.9,-0.5], PW:[134.5,7.5],
+  TO:[-175.2,-21.1], MV:[73.5,4.2], MT:[14.5,35.9], SG:[103.8,1.35], BH:[50.6,26.0], AD:[1.5,42.5], LI:[9.55,47.15], MC:[7.42,43.74],
+  SM:[12.45,43.94], VA:[12.45,41.9], SC:[55.45,-4.6], MU:[57.5,-20.2], KM:[43.3,-11.7], CV:[-23.5,15.1], ST:[6.7,0.3], AG:[-61.8,17.1],
+  DM:[-61.4,15.4], GD:[-61.7,12.1], KN:[-62.7,17.3], LC:[-61.0,13.9], VC:[-61.2,13.2], BB:[-59.6,13.1], BS:[-77.4,25.0], CK:[-159.8,-21.2],
+  NU:[-169.9,-19.05], HK:[114.2,22.3], MO:[113.5,22.2], LU:[6.13,49.61], CY:[33.4,35.1], BN:[114.9,4.9], TL:[125.6,-8.6], FJ:[178.4,-18.1],
+  VU:[168.3,-17.7], SB:[159.9,-9.4], KY:[-81.4,19.3], AW:[-70.0,12.5], CW:[-68.9,12.1], BM:[-64.8,32.3], GU:[144.8,13.4], PF:[-149.6,-17.5],
+  NC:[166.4,-22.3], RE:[55.5,-21.1], GP:[-61.5,16.2], MQ:[-61.0,14.6], GF:[-52.3,4.9], YT:[45.2,-12.8], FO:[-6.8,62.0], GI:[-5.35,36.14],
+  JE:[-2.1,49.2], GG:[-2.55,49.45], IM:[-4.5,54.2], PS:[35.2,31.9] };
 function drawLabels(){
   if(!labels || !proj) return;
   if(!featureByKey){ featureByKey = new Map(); for(const f of features) featureByKey.set(f.key, f); }
@@ -542,19 +552,22 @@ function drawLabels(){
   const s = proj.scale();
   const seen = new Set();
   for(const [c, n] of Object.entries(counts)){
-    const x = featureByKey.get(c); if(!x || !x.centroid) continue;
-    if(d3.geoDistance(x.centroid, centre) > Math.PI/2 - 0.05) continue;   // achterkant van de bol
-    const p = proj(x.centroid); if(!p) continue;
+    const x = featureByKey.get(c);
+    const at = x && x.centroid ? x.centroid : SMALL_AT[c], small = !(x && x.centroid);
+    if(!at) continue;
+    if(d3.geoDistance(at, centre) > Math.PI/2 - 0.05) continue;   // achterkant van de bol
+    const p = proj(at); if(!p) continue;
     seen.add(c);
     let L = labelPool.get(c);
     if(!L){
-      const ci = document.createElementNS(ns,"circle"); ci.setAttribute("class","dot");
+      const ci = document.createElementNS(ns,"circle"); ci.setAttribute("class", small ? "dot small" : "dot");
+      if(small){ ci.dataset.c = c; ci.setAttribute("tabindex", "0"); ci.setAttribute("aria-label", cname(c)); }
       const tx = document.createElementNS(ns,"text"); tx.setAttribute("class","cnt");
       labels.appendChild(ci); labels.appendChild(tx);
       L = {ci, tx, ring:null, n:-1, r:-1}; labelPool.set(c, L);
     }
     // bolletje schaalt mee met de grootte van het land op het scherm
-    const r = Math.round(Math.max(5, Math.min(16, Math.sqrt(x.area) * s * 0.28)) * 2) / 2;
+    const r = small ? Math.round(Math.max(6, Math.min(11, 5 + zoom)) * 2) / 2 : Math.round(Math.max(5, Math.min(16, Math.sqrt(x.area) * s * 0.28)) * 2) / 2;
     const px = p[0].toFixed(1), py = p[1].toFixed(1);
     L.ci.setAttribute("cx", px); L.ci.setAttribute("cy", py);
     L.tx.setAttribute("x", px); L.tx.setAttribute("y", py);
