@@ -618,7 +618,7 @@ const hideBtn = t => window.isAdmin ? `<button type="button" class="hide-btn" da
 function card(t){
   return `<article class="t ${statusOf(t)}">${hideBtn(t)}<h3>${scoreHtml(t)}${newHtml(t)}${titleHtml(t)}</h3>
     <div class="meta"><span class="src">${esc(t.source || "TED")}</span>${defHtml(t)}${changedHtml(t)}${bidHtml(t)}<span>${esc(t.country ? cname(t.country) : (t.countryName || "Onbekend land"))}</span>${t.buyer ? `<span>${esc(t.buyer)}</span>` : ""}</div>
-    <div class="meta"><span class="dl">${dlText(t)}</span>${valHtml(t)}<span class="mono">Gepubl. ${fmt(t.published)}</span><span class="mono">${esc(t.pub)}</span>${t.type ? `<span>${esc(t.type)}</span>` : ""}</div></article>`;
+    <div class="meta"><span class="dl">${dlText(t)}</span>${valHtml(t)}<span class="mono">Gepubl. ${fmt(t.published)}</span><span class="mono">${esc(t.pub)}</span>${t.type ? `<span>${esc(t.type)}</span>` : ""}${applyBtn(t)}</div></article>`;
 }
 function panelCard(t){
   return `<article class="t ${statusOf(t)}">${hideBtn(t)}<h3>${scoreHtml(t)}${newHtml(t)}${titleHtml(t)}</h3><div class="meta"><span class="src">${esc(t.source || "TED")}</span>${defHtml(t)}${t.buyer ? `<span>${esc(t.buyer)}</span>` : ""}</div><div class="meta"><span class="dl">${dlText(t)}</span>${valHtml(t)}</div></article>`;
@@ -693,6 +693,114 @@ function adviceOf(t){
   return { verdict, why };
 }
 const adviceText = t => { const a = adviceOf(t); return `${a.verdict}: ${a.why.join("; ")}`; };
+// ---------- Knop Inschrijven: alles klaarzetten (indienen zelf gebeurt altijd op het portaal) ----------
+const PORTAL_HINT = {
+  "TED": "Registreer op het e-tenderplatform van de opdrachtgever (link staat in de aankondiging onder 'Inschrijving').",
+  "TenderNed": "Inloggen op TenderNed met eHerkenning (niveau EH3).",
+  "Find a Tender": "Registreer als leverancier op Find a Tender en op het portaal van de opdrachtgever.",
+  "Contracts Finder": "Registreer als leverancier op Contracts Finder en op het portaal van de opdrachtgever.",
+  "Prozorro": "Inschrijven loopt via een geaccrediteerd platform (bijv. Zakupivli.pro of SmartTender) met een Oekraïense of EU-handtekening.",
+  "SAM.gov": "Nodig: een SAM.gov-registratie met UEI-nummer.",
+  "PNCP (Brazilië)": "Inschrijven via Compras.gov.br of het portaal van de opdrachtgever; meestal een Braziliaanse vestiging of partner nodig.",
+  "BOAMP": "Inschrijven via het 'profil acheteur' van de opdrachtgever (link in de aankondiging).",
+  "Wereldbank": "Inschrijven volgens de instructies in de aankondiging; vaak via het portaal van het uitvoerend ministerie.",
+  "UNDP": "Inschrijven via het UNDP Quantum-portaal.",
+  "Doffin (Noorwegen)": "Registreer op het tenderplatform van de opdrachtgever (link in Doffin).",
+  "BASE (Portugal)": "Inschrijven via het e-platform dat in de aankondiging staat (bijv. Vortal of acinGov).",
+  "SEAP (Roemenië)": "Registratie op e-licitatie.ro (SEAP) nodig.",
+  "oeffentlichevergabe.de": "Inschrijven via het Vergabeplattform dat in de aankondiging staat.",
+  "PLACSP (Spanje)": "Registreer op de Plataforma de Contratación del Sector Público."
+};
+const isNlBuyer = t => ["NL","BE"].includes(t.country);
+function letterOf(t){
+  const ref = t.pub, title = t.title, buyer = t.buyer || (isNlBuyer(t) ? "de aanbestedende dienst" : "the contracting authority");
+  if(isNlBuyer(t)) return `Geachte heer/mevrouw,
+
+Met belangstelling hebben wij de aanbesteding "${title}" (kenmerk ${ref}) van ${buyer} gelezen. BroadbandEU schrijft hier graag op in.
+
+BroadbandEU levert zakelijke connectiviteit als complete dienst: Starlink LEO-satellietinternet, 4G/5G, straalverbindingen en SD-WAN, altijd inclusief abonnement, installatie, monitoring en support vanuit Nederland. Wij leveren aan overheden, hulpdiensten en bedrijven in heel Europa.
+
+Wij ontvangen graag de volledige aanbestedingsstukken en stellen onze vragen binnen de gestelde termijn.
+
+Met vriendelijke groet,
+
+BroadbandEU
+Handelsweg 16B, 9482 WE Tynaarlo
++31 850 666 152 · sales@broadbandeu.com`;
+  return `Dear Sir or Madam,
+
+We have read the tender "${title}" (reference ${ref}) issued by ${buyer} with great interest. BroadbandEU would like to submit a bid.
+
+BroadbandEU delivers business connectivity as a complete managed service: Starlink LEO satellite internet, 4G/5G, microwave links and SD-WAN, always including subscription, installation, monitoring and support. We serve governments, emergency services and companies across Europe and beyond.
+
+We would appreciate receiving the full tender documents and will submit any clarification questions within the stated deadline.
+
+Kind regards,
+
+BroadbandEU
+Handelsweg 16B, 9482 WE Tynaarlo, the Netherlands
++31 850 666 152 · sales@broadbandeu.com`;
+}
+function icsOf(t){
+  const end = t.deadlineAt ? new Date(t.deadlineAt) : t.deadline ? new Date(t.deadline + "T09:00:00") : null;
+  if(!end) return null;
+  const remind = new Date(end.getTime() - 3 * 864e5), z = d => d.toISOString().replace(/[-:]/g, "").replace(/\.\d{3}/, "");
+  const txt = s => String(s || "").replace(/[,;\\]/g, m => "\\" + m).replace(/\n/g, "\\n");
+  return ["BEGIN:VCALENDAR","VERSION:2.0","PRODID:-//BroadbandEU//Tender Monitor//NL","BEGIN:VEVENT",
+    `UID:${t.pub.replace(/[^A-Za-z0-9-]/g, "")}@tendermonitor`, `DTSTAMP:${z(new Date())}`, `DTSTART:${z(end)}`, `DTEND:${z(new Date(end.getTime() + 15 * 6e4))}`,
+    `SUMMARY:${txt("Deadline tender: " + shownTitle(t).slice(0, 120))}`, `DESCRIPTION:${txt(`${t.buyer || ""}\n${t.link || ""}`)}`, `URL:${t.link || ""}`,
+    "BEGIN:VALARM", "ACTION:DISPLAY", "DESCRIPTION:Tender sluit over 3 dagen", `TRIGGER;VALUE=DATE-TIME:${z(remind)}`, "END:VALARM",
+    "END:VEVENT","END:VCALENDAR"].join("\r\n");
+}
+const checkKey = t => "tk-check-" + t.pub;
+function openApply(pub){
+  const t = tenders.find(x => x.pub === pub); if(!t) return;
+  let done = {}; try { done = JSON.parse(localStorage.getItem(checkKey(t)) || "{}"); } catch(e) {}
+  const eu = EUROPE.has(t.country);
+  const steps = [
+    ["reg", PORTAL_HINT[t.source] || "Registreer op het portaal waar de opdrachtgever de stukken publiceert."],
+    ["docs", "Aanbestedingsstukken downloaden en lezen (eisen, gunningscriteria, contractvoorwaarden)."],
+    ["q", "Vragen indienen vóór de vragendeadline (staat in de stukken)."],
+    ...(eu ? [["espd", "Uniform Europees Aanbestedingsdocument (UEA/ESPD) invullen."]] : []),
+    ["offer", "Offerte en prijzen opstellen: altijd hardware met BroadbandEU-abonnement, installatie en support."],
+    ["sign", `Indienen vóór ${t.deadlineAt ? new Date(t.deadlineAt).toLocaleString("nl-NL", {day:"numeric", month:"long", hour:"2-digit", minute:"2-digit"}) : fmt(t.deadline) || "de sluitingsdatum"}, met handtekening van een bevoegd persoon.`]
+  ];
+  const a = adviceOf(t), eur = eurOf(t);
+  const mail = `mailto:sales@broadbandeu.com?subject=${encodeURIComponent("Tender: " + shownTitle(t).slice(0, 120))}&body=${encodeURIComponent(
+    `Tender: ${shownTitle(t)}\nOpdrachtgever: ${t.buyer || "-"} (${t.country ? cname(t.country) : "-"})\nSluit: ${t.deadlineAt ? new Date(t.deadlineAt).toLocaleString("nl-NL") : fmt(t.deadline) || "-"}\nWaarde: ${t.value ? fmtMoney(t.value, t.currency) : "onbekend"}\nScore: ${scoreOf(t)} · ${a.verdict}\nLink: ${t.link || "-"}\n\nAdvies: ${a.why.join("; ")}`)}`;
+  $("applyBody").innerHTML = `
+    <div class="ad-head"><div><p class="eyebrow">Inschrijving voorbereiden</p><h2 id="applyTitle">${esc(shownTitle(t))}</h2>
+      <p class="ad-sub">${esc(t.buyer || "")}${t.country ? " · " + esc(cname(t.country)) : ""} · ${esc(dlText(t))}${t.value ? " · " + esc(fmtMoney(t.value, t.currency)) : ""}${eur && (t.currency || "EUR").toUpperCase() !== "EUR" ? " (≈ " + fmtEur(eur) + ")" : ""}</p></div>
+      <button type="button" class="ad-close" id="applyClose" aria-label="Sluiten">×</button></div>
+    <p class="ad-note">Indienen gebeurt altijd zelf op het portaal van de opdrachtgever (inloggen, handtekening, prijzen). Hieronder staat alles klaar om dat snel te doen.</p>
+    <div class="ad-actions">
+      ${t.link ? `<a class="btn primary" href="${esc(t.link)}" target="_blank" rel="noopener">Open de tender ↗</a>` : ""}
+      ${icsOf(t) ? `<button type="button" class="btn" id="adIcs">Deadline in agenda</button>` : ""}
+      <a class="btn" href="${esc(mail)}">Mail naar verkoop</a>
+      <button type="button" class="btn" id="adCopy">Kopieer conceptbrief</button>
+      ${window.isAdmin ? `<button type="button" class="btn" id="adMark">${BIDS[t.pub] === "ingeschreven" ? "✓ Ingeschreven" : "Markeer als ingeschreven"}</button>` : ""}
+    </div>
+    <h3>Stappen</h3>
+    <ul class="ad-steps">${steps.map(([k, txt]) => `<li><label><input type="checkbox" data-step="${k}"${done[k] ? " checked" : ""}> ${esc(txt)}</label></li>`).join("")}</ul>
+    <h3>Conceptbrief ${isNlBuyer(t) ? "(Nederlands)" : "(Engels)"}</h3>
+    <textarea id="adLetter" rows="12">${esc(letterOf(t))}</textarea>
+    <p class="ad-foot">Advies: <b>${esc(a.verdict)}</b> · ${esc(a.why.join(" · "))}</p>`;
+  const dlg = $("applyDlg");
+  $("applyClose").onclick = () => dlg.close();
+  dlg.onclick = e => { if(e.target === dlg) dlg.close(); };
+  dlg.querySelectorAll("input[data-step]").forEach(cb => cb.onchange = () => { done[cb.dataset.step] = cb.checked; try { localStorage.setItem(checkKey(t), JSON.stringify(done)); } catch(e) {} });
+  $("adCopy").onclick = () => { const ta = $("adLetter"); ta.select(); (navigator.clipboard ? navigator.clipboard.writeText(ta.value) : Promise.reject()).then(() => { $("adCopy").textContent = "Gekopieerd ✓"; }).catch(() => { document.execCommand("copy"); $("adCopy").textContent = "Gekopieerd ✓"; }); };
+  if($("adIcs")) $("adIcs").onclick = () => {
+    const url = URL.createObjectURL(new Blob([icsOf(t)], {type:"text/calendar"})), el = document.createElement("a");
+    el.href = url; el.download = `deadline-${t.pub.replace(/[^A-Za-z0-9-]/g, "")}.ics`; document.body.appendChild(el); el.click(); el.remove(); setTimeout(() => URL.revokeObjectURL(url), 5000);
+  };
+  if($("adMark")) $("adMark").onclick = () => fetch("/api/admin", {method:"POST", credentials:"same-origin", headers:{"Content-Type":"application/json"}, body:JSON.stringify({action:"bid", pub:t.pub, status:"ingeschreven"})})
+    .then(r => { if(!r.ok) throw new Error(); BIDS[t.pub] = "ingeschreven"; $("adMark").textContent = "✓ Ingeschreven"; render(); }).catch(() => alert("Opslaan lukte niet."));
+  if(dlg.showModal) dlg.showModal(); else dlg.setAttribute("open", "");
+}
+const applyBtn = t => (statusOf(t) === "closed" || statusOf(t) === "awarded") ? "" : `<button type="button" class="applybtn" data-apply="${esc(t.pub)}">Inschrijven →</button>`;
+document.addEventListener("click", e => { const b = e.target.closest && e.target.closest("button[data-apply]"); if(b) openApply(b.dataset.apply); });
+
 // Top 20: open tenders met de hoogste score, zonder blokkerende markering
 function topList(){
   // alleen tenders waarvan de titel zelf al over connectiviteit gaat (niet alleen ergens in de beschrijving)
@@ -705,7 +813,7 @@ function topCard(t, i){
   const a = adviceOf(t), eur = eurOf(t);
   return `<article class="t top ${statusOf(t)}">${hideBtn(t)}<div class="rank">${i + 1}</div><h3>${scoreHtml(t)}${newHtml(t)}${titleHtml(t)}</h3>
     <div class="meta"><span class="src">${esc(t.source || "TED")}</span>${defHtml(t)}${changedHtml(t)}${bidHtml(t)}<span>${esc(t.country ? cname(t.country) : (t.countryName || "Onbekend land"))}</span>${t.buyer ? `<span>${esc(t.buyer)}</span>` : ""}</div>
-    <div class="meta"><span class="dl">${dlText(t)}</span>${valHtml(t)}${eur && (t.currency || "EUR").toUpperCase() !== "EUR" ? `<span class="mono">≈ ${fmtEur(eur)}</span>` : ""}${t.link ? `<a class="golink" href="${esc(t.link)}" target="_blank" rel="noopener">Naar de inschrijving ↗</a>` : ""}</div>
+    <div class="meta"><span class="dl">${dlText(t)}</span>${valHtml(t)}${eur && (t.currency || "EUR").toUpperCase() !== "EUR" ? `<span class="mono">≈ ${fmtEur(eur)}</span>` : ""}${t.link ? `<a class="golink" href="${esc(t.link)}" target="_blank" rel="noopener">Naar de tender ↗</a>` : ""}${applyBtn(t)}</div>
     <div class="advice"><b class="v-${a.verdict.replace(/\s/g, "").toLowerCase()}">${a.verdict}</b> ${esc(a.why.join(" · "))}</div></article>`;
 }
 const scoreHtml = t => { const v = scoreOf(t), c = v >= 70 ? "hi" : v >= 50 ? "mid" : "lo";
