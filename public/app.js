@@ -167,6 +167,9 @@ function setSats(on){
 }
 // eigen tekenlaag (canvas) boven de bol: tienduizend punten zijn daar veel sneller dan in de kaart zelf
 let satCanvas = null, satCtx = null, satK = 1, satDpr = 1, satOx = 0, satOy = 0;
+// tv-modus: de bol zelf ook op een canvas (onder de bolletjes met aantallen). Honderden landvormen per beeldje
+// opnieuw opbouwen als svg is te zwaar voor een tv; op een canvas tekenen gaat vele malen sneller.
+let landCanvas = null, landCtx = null, landPath = null, landStyle = null;
 function sizeSatCanvas(){
   const svg = $("map"); if(!satCanvas || !svg) return;
   const r = svg.getBoundingClientRect(), pr = satCanvas.parentElement.getBoundingClientRect(), pb = satCanvas.parentElement;
@@ -177,7 +180,83 @@ function sizeSatCanvas(){
   // de bol past in het vak zoals een svg dat doet (passend en gecentreerd)
   const kc = Math.min(w / W, h / H);
   satK = kc * dpr; satDpr = dpr; satOx = (w - W * kc) / 2 * dpr; satOy = (h - H * kc) / 2 * dpr;
+  if(landCanvas){
+    landCanvas.style.cssText = satCanvas.style.cssText;
+    landCanvas.width = satCanvas.width; landCanvas.height = satCanvas.height;
+  }
 }
+// landen één keer omzetten naar punten op een bol (x, y, z); daarna is draaien alleen nog wat vermenigvuldigen
+let landMesh = null;
+function buildLandMesh(){
+  const D = Math.PI / 180;
+  const toXYZ = ring => { const a = new Float32Array(ring.length * 3);
+    ring.forEach(([lon, lat], i) => { const la = lat * D, lo = lon * D, c = Math.cos(la); a[3*i] = c * Math.cos(lo); a[3*i+1] = c * Math.sin(lo); a[3*i+2] = Math.sin(la); });
+    return a; };
+  landMesh = features.map(x => {
+    const g = (x.fl || x.f || {}).geometry; if(!g) return { x, polys: [] };
+    const polys = g.type === "Polygon" ? [g.coordinates] : g.type === "MultiPolygon" ? g.coordinates : [];
+    return { x, polys: polys.map(rs => ({ rings: rs.map(toXYZ), geo: {type:"Polygon", coordinates: rs} })) };
+  });
+}
+function drawLand(){
+  const c = landCtx, k = satK;
+  if(!landStyle){
+    const cs = el => getComputedStyle(el), plain = features.find(x => !x.el.style.fill) || features[0];
+    landStyle = { land: cs(plain.el).fill, edge: cs(plain.el).stroke, grat: cs(gratEl).stroke, rim: cs(sphereEl).stroke,
+      night: cs(nightEl).fill, twilight: cs(twilightEl).fill };
+  }
+  if(!landMesh) buildLandMesh();
+  const st = landStyle, [tx, ty] = proj.translate(), sc = proj.scale(), px = 1 / k;   // 1 schermpixel
+  c.setTransform(1, 0, 0, 1, 0, 0); c.clearRect(0, 0, landCanvas.width, landCanvas.height);
+  c.setTransform(k, 0, 0, k, satOx, satOy);
+  c.lineJoin = "round";
+  // gloed rond de bol (in de gewone kaart de .halo-cirkel)
+  const hg = c.createRadialGradient(tx, ty, 0, tx, ty, sc * 1.08);
+  hg.addColorStop(0.88, "rgba(90,160,255,.28)"); hg.addColorStop(1, "rgba(90,160,255,0)");
+  c.beginPath(); c.arc(tx, ty, sc * 1.08, 0, 2 * Math.PI); c.fillStyle = hg; c.fill();
+  // oceaan met dezelfde gloed als de gewone kaart
+  const g = c.createRadialGradient(tx - sc * 0.16, ty - sc * 0.24, 0, tx - sc * 0.16, ty - sc * 0.24, sc * 1.3);
+  g.addColorStop(0, "#16305a"); g.addColorStop(0.7, "#0c1a33"); g.addColorStop(1, "#081224");
+  c.beginPath(); c.arc(tx, ty, sc, 0, 2 * Math.PI); c.fillStyle = g; c.fill();
+  c.save(); c.beginPath(); c.arc(tx, ty, sc, 0, 2 * Math.PI); c.clip();
+  // draaiing als matrix (zelfde volgorde als d3); punten achter de bol schuiven naar de rand (net als bijsnijden)
+  const D = Math.PI / 180, [r0, r1, r2] = proj.rotate();
+  const cl = Math.cos(r0*D), sl = Math.sin(r0*D), cp = Math.cos(r1*D), sp = Math.sin(r1*D), cg = Math.cos(r2*D), sg = Math.sin(r2*D);
+  const depth = (x, y, z) => (x * cl - y * sl) * cp - z * sp;   // > 0 = voorkant
+  const ring = a => {
+    const n = a.length / 3;
+    for(let i = 0; i < n; i++){
+      const x = a[3*i], y = a[3*i+1], z = a[3*i+2];
+      const x1 = x * cl - y * sl, y1 = x * sl + y * cl;
+      const z2 = z * cp + x1 * sp;
+      const sx = tx + sc * (y1 * cg - z2 * sg), sy = ty - sc * (y1 * sg + z2 * cg);
+      if(i === 0) c.moveTo(sx, sy); else c.lineTo(sx, sy);
+    }
+    c.closePath();
+  };
+  // helemaal aan de voorkant: zelf snel tekenen. Helemaal achter: overslaan. Over de rand: d3 snijdt netjes bij.
+  const shape = m => {
+    for(const pg of m.polys){
+      let front = 0, back = 0;
+      for(const a of pg.rings){ for(let i = 0; i < a.length; i += 3){ if(depth(a[i], a[i+1], a[i+2]) > 0) front++; else back++; } }
+      if(!front) continue;
+      if(!back) pg.rings.forEach(ring); else landPath(pg.geo);
+    }
+  };
+  c.beginPath(); landPath(gratGeo); c.strokeStyle = st.grat; c.lineWidth = 0.5 * px; c.stroke();
+  // gewone landen in één keer, gekleurde (met tenders) apart
+  c.beginPath();
+  for(const m of landMesh) if(!m.x.el.style.fill) shape(m);
+  c.fillStyle = st.land; c.fill("evenodd"); c.strokeStyle = st.edge; c.lineWidth = 0.6 * px; c.stroke();
+  for(const m of landMesh) if(m.x.el.style.fill){ c.beginPath(); shape(m); c.fillStyle = m.x.el.style.fill; c.fill("evenodd"); c.stroke(); }
+  if(nightGeo){
+    c.beginPath(); landPath(twilightGeo); c.fillStyle = st.twilight; c.fill();
+    c.beginPath(); landPath(nightGeo); c.fillStyle = st.night; c.fill();
+  }
+  c.restore();
+  c.beginPath(); c.arc(tx, ty, sc, 0, 2 * Math.PI); c.strokeStyle = st.rim; c.lineWidth = px; c.stroke();
+}
+
 function drawSats(){
   if(!satCtx) return;
   satCtx.setTransform(1, 0, 0, 1, 0, 0);
@@ -261,7 +340,13 @@ async function buildMap(){
   nightEl = document.createElementNS(ns, "path"); nightEl.setAttribute("class","night"); svg.appendChild(nightEl);
   updateNight(); setInterval(() => { updateNight(); redraw(); }, 60000);
   satCanvas = document.createElement("canvas"); satCanvas.className = "satlayer"; satCanvas.setAttribute("aria-hidden", "true");
-  svg.after(satCanvas); satCtx = satCanvas.getContext("2d"); sizeSatCanvas();
+  svg.after(satCanvas); satCtx = satCanvas.getContext("2d");
+  if(TV && !new URLSearchParams(location.search).has("svg")){   // ?svg=1: de oude manier, om te vergelijken
+    landCanvas = document.createElement("canvas"); landCanvas.className = "landlayer"; landCanvas.setAttribute("aria-hidden", "true");
+    svg.before(landCanvas); landCtx = landCanvas.getContext("2d", {alpha: true}); landPath = d3.geoPath(proj, landCtx);
+    svg.classList.add("overlay");
+  }
+  sizeSatCanvas();
   if(window.ResizeObserver) new ResizeObserver(() => { sizeSatCanvas(); drawSats(); }).observe(svg);
   else addEventListener("resize", () => { sizeSatCanvas(); drawSats(); });
 
@@ -309,17 +394,20 @@ function redraw(){
   if(!proj) return;
   const s = proj.scale();
   const low = quality === "low";
-  proj.precision(low ? (TV ? 2.5 : 1.5) : 0.4);
+  proj.precision(low ? (TV ? 0 : 1.5) : 0.4);
   const halo = $("map").querySelector(".halo");
   const [tx, ty] = proj.translate();
   if(halo){ halo.setAttribute("cx", tx); halo.setAttribute("cy", ty); halo.setAttribute("r", s * 1.08); }
-  sphereEl.setAttribute("d", gpath({type:"Sphere"}));
-  gratEl.setAttribute("d", gpath(gratGeo) || "");
-  for(const x of features){
-    const f = low ? x.fl : x.f;          // tijdens draaien: lichte kaart (kleine eilanden even weg)
-    x.el.setAttribute("d", f ? (gpath(f) || "") : "");
+  if(landCtx) drawLand();
+  else {
+    sphereEl.setAttribute("d", gpath({type:"Sphere"}));
+    gratEl.setAttribute("d", gpath(gratGeo) || "");
+    for(const x of features){
+      const f = low ? x.fl : x.f;          // tijdens draaien: lichte kaart (kleine eilanden even weg)
+      x.el.setAttribute("d", f ? (gpath(f) || "") : "");
+    }
+    if(nightGeo){ nightEl.setAttribute("d", gpath(nightGeo) || ""); twilightEl.setAttribute("d", gpath(twilightGeo) || ""); }
   }
-  if(nightGeo){ nightEl.setAttribute("d", gpath(nightGeo) || ""); twilightEl.setAttribute("d", gpath(twilightGeo) || ""); }
   drawSats();
   drawOffices();
   if(low && !TV) hideLabels(); else drawLabels();
@@ -629,7 +717,7 @@ function startTv(){
   // langzaam draaien (ongeveer 3 minuten per rondje); een fout mag het draaien nooit stoppen.
   // Tv's hebben een trage processor: niet elk beeldje tekenen, maar hooguit ~20 keer per seconde,
   // en vanzelf minder vaak als het tekenen langzaam gaat. Het draaien blijft even snel (gaat op tijd, niet op beeldjes).
-  let last = performance.now(), lastFrame = Date.now(), lastDraw = 0, avgCost = 0, gap = 50;
+  let last = performance.now(), lastFrame = Date.now(), lastDraw = 0, avgCost = 0, gap = 30;
   const spin = now => {
     lastFrame = Date.now();
     try {
@@ -642,7 +730,7 @@ function startTv(){
           quality = "low"; redraw();
           const cost = performance.now() - t0;
           avgCost = avgCost ? avgCost * 0.9 + cost * 0.1 : cost;
-          gap = Math.max(50, Math.min(200, avgCost * 2.5));   // 20 tot 5 beeldjes per seconde, afhankelijk van het scherm
+          gap = Math.max(30, Math.min(100, avgCost * 1.6));   // gelijkmatig, hooguit ~30 beeldjes per seconde (rustiger voor een tv-processor)
         }
       }
     } catch(e) { console.error(e); }
@@ -658,7 +746,11 @@ function startTv(){
   keepAwake();
   setInterval(loadTenders, 10 * 60 * 1000);          // elke 10 minuten nieuwe gegevens
   setTimeout(() => location.reload(), 6 * 3600 * 1000); // elke 6 uur de hele pagina (nieuwe versie van de site)
+  const showFps = new URLSearchParams(location.search).has("fps");   // ?fps=1: snelheid op het scherm (om te testen)
   const clock = () => { const el = $("tvClock"); if(el) el.textContent = new Date().toLocaleString("nl-NL", {weekday:"long", day:"numeric", month:"long", hour:"2-digit", minute:"2-digit"}); };
+  if(showFps){ let n = 0, t0 = performance.now(); const el = document.createElement("span"); el.style.cssText = "color:#ffb547"; $("tvClock").after(el);
+    const f = () => { n++; const now = performance.now(); if(now - t0 > 2000){ el.textContent = `${Math.round(n * 1000 / (now - t0))} b/s · ${avgCost.toFixed(0)} ms`; n = 0; t0 = now; } requestAnimationFrame(f); };
+    requestAnimationFrame(f); }
   clock(); setInterval(clock, 15000);
   $("tvFull").addEventListener("click", () => { document.documentElement.requestFullscreen && document.documentElement.requestFullscreen().catch(() => {}); });
 }

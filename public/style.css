@@ -278,7 +278,7 @@ body.tv .tvbar{display:flex;gap:14px;align-items:center;justify-content:flex-end
 body.tv .tvbar a,body.tv .tvbar button{font-size:12px;color:var(--muted)}
 body.tv .wrap{position:relative}
 body.tv .tvticker{display:block;overflow:hidden;white-space:nowrap;border:1px solid var(--line);border-radius:10px;background:var(--panel);padding:10px 0;font-size:clamp(14px,1.2vw,20px)}
-.tk-track{display:inline-block;animation:ticker 120s linear infinite}
+.tk-track{display:inline-block;animation:ticker 120s linear infinite;will-change:transform}
 .tk-item{display:inline-block;margin-right:48px;color:var(--ink)}
 .tk-item b{color:var(--beam);margin-right:6px}.tk-item i{font-style:normal;color:var(--soon);margin-left:6px;font-family:var(--f-mono);font-size:.85em}
 @keyframes ticker{from{transform:translateX(0)}to{transform:translateX(-50%)}}
@@ -292,7 +292,10 @@ body.tv .stat.updated b{font-size:clamp(16px,1.5vw,26px);padding-top:10px}
 body.tv .stats{flex:none}
 body.tv .tvticker{flex:none}
 /* Starlink-satellieten */
-.satlayer{position:absolute;pointer-events:none}
+.satlayer{position:absolute;pointer-events:none;z-index:2}
+.landlayer{position:absolute;pointer-events:none;z-index:0}
+#map.overlay{position:relative;z-index:1}
+#map.overlay .halo{display:none}
 .zoom button.sat{display:grid;place-items:center;color:var(--muted)}
 .zoom button.sat.on{color:#d6efff;border-color:var(--beam);box-shadow:0 0 10px rgba(124,196,255,.35)}
 .satinfo{position:absolute;top:42px;left:14px;font:500 11px var(--f-mono);color:var(--muted);background:rgba(7,13,26,.7);padding:3px 8px;border-radius:6px;pointer-events:none;z-index:1}
