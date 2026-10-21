@@ -809,7 +809,8 @@ function openApply(pub){
     <ul class="ad-steps">${steps.map(([k, txt]) => `<li><label><input type="checkbox" data-step="${k}"${done[k] ? " checked" : ""}> ${esc(txt)}</label></li>`).join("")}</ul>
     <h3>Conceptbrief ${isNlBuyer(t) ? "(Nederlands)" : "(Engels)"}</h3>
     <textarea id="adLetter" rows="12">${esc(letterOf(t))}</textarea>
-    <p class="ad-foot">Advies: <b>${esc(a.verdict)}</b> · ${esc(a.why.join(" · "))}</p>`;
+    <p class="ad-foot">Advies: <b>${esc(a.verdict)}</b> · ${esc(a.why.join(" · "))}</p>
+    <p class="ad-foot by">made by Merijn</p>`;
   const dlg = $("applyDlg");
   $("applyClose").onclick = () => dlg.close();
   dlg.onclick = e => { if(e.target === dlg) dlg.close(); };
@@ -1124,7 +1125,7 @@ function showMaintenance(message, loginLink){
   el.innerHTML = `<div class="maint-card"><img src="/broadbandeu-logo.svg" alt="BroadbandEU" width="236" height="32">
     <h2>Tijdelijk offline</h2><p>In verband met onderhoud is de Global Connectivity Tender Monitor even niet beschikbaar.</p>
     ${message ? `<p class="maint-msg">${esc(message)}</p>` : ""}<p class="maint-sub"><i class="spin"></i>We kijken elke minuut of de site weer online is; deze pagina ververst dan vanzelf.</p>
-    ${loginLink && !window.userEmail ? `<button type="button" class="link maint-admin" id="maintAdmin">Beheerder? Inloggen</button>` : ""}</div>`;
+    ${loginLink && !window.userEmail ? `<button type="button" class="link maint-admin" id="maintAdmin">Beheerder? Inloggen</button>` : ""}<p class="maint-by">made by Merijn</p></div>`;
   document.body.classList.add("maint-on");
   const btn = document.getElementById("maintAdmin");
   if(btn) btn.onclick = () => { el.remove(); document.body.classList.remove("maint-on"); };

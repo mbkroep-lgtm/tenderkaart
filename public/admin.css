@@ -46,3 +46,4 @@ button[disabled]{opacity:.45;cursor:not-allowed}
 .pill{font:700 11px ui-monospace,monospace;letter-spacing:.06em;padding:3px 9px;border-radius:999px;border:1px solid #33496f;color:#9fb0cc}
 .pill.ok{color:#9ff0c4;border-color:rgba(120,220,170,.6)}
 .pill.bad{color:#1a1200;background:#ffb547;border-color:#ffb547}
+h1 .byline{font:500 12px ui-monospace,monospace;letter-spacing:.06em;color:#7f8fa8;margin-left:8px;vertical-align:middle}
