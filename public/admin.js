@@ -191,7 +191,6 @@ $("btnRefresh").addEventListener("click", async () => {
   catch(e) { msg(e.message, true); b.disabled = !D.canRefresh; }
 });
 load().then(() => { if(D && D.canRefresh) poll(); });
-})();
 
 // ---------- Bedrijfsdossier (voor de AI Tender Bid Assistant) ----------
 async function kbLoad(){
@@ -226,3 +225,4 @@ document.addEventListener("click", async e => {
   kbLoad();
 });
 kbLoad();
+})();
