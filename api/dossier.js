@@ -79,12 +79,12 @@ async function claude(system, messages, maxTokens) {
       // het antwoord moet via deze tool: dan levert de AI altijd geldige, ontleedbare JSON
       tools: [{ name: 'lever_onderdeel', description: 'Lever het gevraagde onderdeel van het inschrijfdossier aan als JSON-object volgens het schema in de opdracht.',
         input_schema: { type: 'object', additionalProperties: true } }],
-      tool_choice: { type: 'tool', name: 'lever_onderdeel' } })
+      tool_choice: { type: 'auto' } })
   });
   if (!r.ok) throw new Error('AI gaf een fout: ' + (await r.text()).slice(0, 300));
   // streamen: lange antwoorden lopen niet vast op een time-out
   const reader = r.body.getReader(), dec = new TextDecoder();
-  let buf = '', text = '', usage = {}, stop = '';
+  let buf = '', text = '', toolJson = '', usage = {}, stop = '';
   for (;;) {
     const { done, value } = await reader.read();
     if (done) break;
@@ -94,14 +94,15 @@ async function claude(system, messages, maxTokens) {
       const line = buf.slice(0, i).trim(); buf = buf.slice(i + 1);
       if (!line.startsWith('data:')) continue;
       let ev; try { ev = JSON.parse(line.slice(5)); } catch { continue; }
-      if (ev.type === 'content_block_delta' && ev.delta?.type === 'input_json_delta') text += ev.delta.partial_json || '';
+      if (ev.type === 'content_block_delta' && ev.delta?.type === 'input_json_delta') toolJson += ev.delta.partial_json || '';
       else if (ev.type === 'content_block_delta' && ev.delta?.type === 'text_delta') text += ev.delta.text;
       else if (ev.type === 'message_start') usage = { ...usage, ...ev.message?.usage };
       else if (ev.type === 'message_delta') { usage = { ...usage, ...ev.usage }; stop = ev.delta?.stop_reason || stop; }
       else if (ev.type === 'error') throw new Error('AI gaf een fout: ' + (ev.error?.message || 'onbekend'));
     }
   }
-  return { text, usage, stop };
+  // voorkeur: het antwoord via de tool (altijd geldige JSON); anders de gewone tekst
+  return { text: toolJson.trim() ? toolJson : text, usage, stop };
 }
 function parseJson(text) {
   let t = String(text || '').trim().replace(/^```(?:json)?\s*/i, '').replace(/```\s*$/, '');
