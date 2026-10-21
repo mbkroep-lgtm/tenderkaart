@@ -302,3 +302,16 @@ body.tv .tvticker{flex:none}
 .satinfo b{color:#d6efff;font-weight:600}
 @media (max-width:600px){.satinfo{top:34px}}
 .deftag.hw{color:#a9c8f0;border-color:rgba(124,196,255,.45);background:rgba(124,196,255,.08)}
+/* melding bij verversen */
+.refreshnote{position:fixed;top:calc(14px + env(safe-area-inset-top,0px));left:50%;transform:translate(-50%,-140%);z-index:60;display:flex;gap:10px;align-items:center;
+  background:var(--panel-2);border:1px solid var(--line);border-radius:999px;padding:9px 18px;box-shadow:0 10px 30px rgba(0,0,0,.5);font-size:13px;color:var(--ink);
+  max-width:calc(100% - 32px);transition:transform .35s ease;pointer-events:none}
+.refreshnote.show{transform:translate(-50%,0)}
+.refreshnote.new{border-color:var(--beam);box-shadow:0 0 0 1px var(--beam),0 10px 30px rgba(0,0,0,.5)}
+.refreshnote.new b{color:var(--beam)}
+.refreshnote.err{border-color:rgba(255,180,84,.6)}
+.refreshnote .spin{width:12px;height:12px;border-radius:50%;border:2px solid rgba(124,196,255,.3);border-top-color:var(--beam);animation:rn-spin .8s linear infinite;flex:none}
+@keyframes rn-spin{to{transform:rotate(360deg)}}
+body.tv .refreshnote{font-size:clamp(16px,1.4vw,24px);padding:12px 26px;top:auto;bottom:90px;transform:translate(-50%,200%)}
+body.tv .refreshnote.show{transform:translate(-50%,0)}
+@media (prefers-reduced-motion:reduce){.refreshnote{transition:none}.refreshnote .spin{animation:none}}

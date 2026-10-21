@@ -711,15 +711,46 @@ window.startTenderApp = function(){
   if(started) return; started = true;
   render();
   buildMap();
-  loadTenders();
+  loadTenders("start");
   if(TV) startTv();
 };
-function loadTenders(){
+// Melding bovenin: de site haalt (nieuwe) tenders op. Bij openen/verversen van de pagina altijd,
+// daarna elke 5 minuten stil controleren; alleen als er echt nieuwe gegevens zijn, komt de melding weer in beeld.
+let noteTimer = 0;
+function refreshNote(html, kind, ms){
+  let el = document.getElementById("refreshNote");
+  if(!el){ el = document.createElement("div"); el.id = "refreshNote"; el.setAttribute("role", "status"); el.setAttribute("aria-live", "polite"); document.body.appendChild(el); }
+  el.className = "refreshnote " + (kind || "");
+  el.innerHTML = html;
+  requestAnimationFrame(() => el.classList.add("show"));
+  clearTimeout(noteTimer);
+  if(ms) noteTimer = setTimeout(() => el.classList.remove("show"), ms);
+}
+function loadTenders(mode){   // mode: "start" (pagina geopend) of "check" (automatisch)
+  const before = loaded ? new Set(tenders.map(t => t.pub)) : null, t0 = Date.now();
+  const later = f => setTimeout(f, Math.max(0, 1500 - (Date.now() - t0)));   // "wordt ververst" even leesbaar laten staan
+  if(mode === "start") refreshNote(`<i class="spin"></i>Site wordt ververst · even kijken of er nieuwe tenders zijn…`, "busy");
   return fetch("/api/tenders", {cache:"no-store", credentials:"same-origin"})
     .then(r => { if(r.status === 401){ location.reload(); throw new Error("uitgelogd"); } if(!r.ok) throw new Error(r.status); return r.json(); })
-    .then(d => { tenders = Array.isArray(d.tenders) ? d.tenders : []; updated = d.updated; loaded = true; loadError = false; render(); if(TV) tvUpdate(); })
-    .catch(() => { if(!loaded){ loaded = true; loadError = true; render(); } });
+    .then(d => {
+      if(mode === "check" && d.updated === updated) return;   // niets veranderd: geen melding
+      if(mode === "check") refreshNote(`<i class="spin"></i>Nieuwe gegevens binnen · de site wordt ververst…`, "busy");
+      const apply = () => {
+        tenders = Array.isArray(d.tenders) ? d.tenders : []; updated = d.updated; loaded = true; loadError = false; render(); if(TV) tvUpdate();
+        const fresh = before ? tenders.filter(t => !before.has(t.pub) && isOpen(t)) : tenders.filter(t => isNew(t) && isOpen(t));
+        const n = fresh.length, ms = TV ? 12000 : 6000;
+        later(() => { if(n) refreshNote(`<b>${n} nieuwe tender${n === 1 ? "" : "s"}</b> · ${esc([...new Set(fresh.map(t => t.country ? cname(t.country) : (t.countryName || "")).filter(Boolean))].slice(0, 4).join(", "))}`, "new", ms + 4000);
+        else refreshNote(`Bijgewerkt · geen nieuwe tenders${before ? "" : " sinds je vorige bezoek"}`, "ok", ms / 2); });
+      };
+      // bij automatisch verversen de melding eerst even laten zien
+      if(mode === "check") setTimeout(apply, 2500); else apply();
+    })
+    .catch(() => { if(!loaded){ loaded = true; loadError = true; render(); } if(mode === "start") refreshNote("Ophalen lukte even niet · de site probeert het straks opnieuw", "err", 6000); });
 }
+setInterval(() => { if(loaded && document.visibilityState === "visible") loadTenders("check"); }, 5 * 60 * 1000);
+document.addEventListener("visibilitychange", () => {   // terug naar het tabblad na een tijdje weg: meteen even kijken
+  if(document.visibilityState === "visible" && loaded) loadTenders("check");
+});
 
 // ---------- Tv-modus (/?tv=1): schermvullend, draaiende bol, ververst zichzelf ----------
 let tvPausedUntil = 0;
@@ -764,7 +795,6 @@ function startTv(){
   // voorkomen dat het scherm in slaapstand gaat (waar de browser dat toestaat)
   const keepAwake = () => { try { navigator.wakeLock && navigator.wakeLock.request("screen").catch(() => {}); } catch(e) {} };
   keepAwake();
-  setInterval(loadTenders, 10 * 60 * 1000);          // elke 10 minuten nieuwe gegevens
   setTimeout(() => location.reload(), 6 * 3600 * 1000); // elke 6 uur de hele pagina (nieuwe versie van de site)
   const showFps = new URLSearchParams(location.search).has("fps");   // ?fps=1: snelheid op het scherm (om te testen)
   const clock = () => { const el = $("tvClock"); if(el) el.textContent = new Date().toLocaleString("nl-NL", {weekday:"long", day:"numeric", month:"long", hour:"2-digit", minute:"2-digit"}); };
