@@ -591,7 +591,7 @@ function drawOffices(){
 // ---------- Lijst ----------
 const dlText = t => { const st = statusOf(t); return (st === "awarded" || st === "prior") ? leftText(t) : `Sluit ${fmt(t.deadline)} · ${leftText(t)}`; };
 const defHtml = t => (t.defense ? `<span class="deftag" title="Opdrachtgever is een defensie-organisatie">Defensie</span>` : "")
-  + (t.topic === "conn" ? `<span class="deftag conn" title="Bredere connectiviteit: managed connectivity, satellietverbindingen, SD-WAN, tijdelijke netwerken of 4G/5G-backup">Connectiviteit</span>` : "")
+  + (t.topic === "conn" ? `<span class="deftag conn" title="Bredere connectiviteit: managed connectivity, satellietverbindingen, SD-WAN, straalverbindingen, tijdelijke netwerken of 4G/5G-backup">Connectiviteit</span>` : "")
   + (hwScope(t) === "hw" ? `<span class="deftag hw" title="Alleen apparatuur, zonder abonnement of dienst (afgeleid uit de titel)">Alleen hardware</span>` : "");
 const valHtml = t => (t.qty ? `<span class="qty" title="Aantal uit de titel gehaald">${t.qty}×</span>` : "") + (t.value ? `<span class="val">${esc(fmtMoney(t.value, t.currency))}</span>` : "");
 const newHtml = t => isNew(t) ? `<span class="newtag">NIEUW</span>` : "";
