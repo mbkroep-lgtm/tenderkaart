@@ -1,62 +1,74 @@
-== 2 tegelijk, 30 pagina's in 117s
-160:13.3s n=50
-161:10.0s n=50
-162:8.6s n=50
-163:10.4s n=50
-164:8.4s n=50
-165:6.5s n=50
-166:12.1s n=50
-167:8.6s n=50
-168:7.2s n=50
-169:7.1s n=50
-170:8.5s n=50
-171:7.7s n=50
-172:7.1s n=50
-173:8.2s n=50
-174:4.1s n=50
-175:7.2s n=50
-176:3.1s n=50
-177:4.9s n=50
-178:5.0s n=50
-179:6.4s n=50
-180:11.3s n=50
-181:6.7s n=50
-182:7.1s n=50
-183:4.8s n=50
-184:5.3s n=50
-185:5.1s n=50
-186:5.5s n=50
-187:7.9s n=50
-188:4.8s n=50
-189:10.6s n=50
-== 4 tegelijk, 30 pagina's in 11s
-220:9.7s n=50
-221:8.6s n=50
-222:6.1s n=50
-223:3.1s n=50
-224:4.9s n=50
-225:FOUT 0.5s HTTP Error 429: Too Many Requests
-226:FOUT 0.5s HTTP Error 429: Too Many Requests
-227:FOUT 0.5s HTTP Error 429: Too Many Requests
-228:FOUT 0.5s HTTP Error 429: Too Many Requests
-229:FOUT 0.5s HTTP Error 429: Too Many Requests
-230:FOUT 0.5s HTTP Error 429: Too Many Requests
-231:FOUT 0.5s HTTP Error 429: Too Many Requests
-232:FOUT 0.5s HTTP Error 429: Too Many Requests
-233:FOUT 0.5s HTTP Error 429: Too Many Requests
-234:FOUT 0.5s HTTP Error 429: Too Many Requests
-235:FOUT 0.5s HTTP Error 429: Too Many Requests
-236:FOUT 0.5s HTTP Error 429: Too Many Requests
-237:FOUT 0.5s HTTP Error 429: Too Many Requests
-238:FOUT 0.5s HTTP Error 429: Too Many Requests
-239:FOUT 0.5s HTTP Error 429: Too Many Requests
-240:FOUT 0.5s HTTP Error 429: Too Many Requests
-241:FOUT 0.5s HTTP Error 429: Too Many Requests
-242:FOUT 0.5s HTTP Error 429: Too Many Requests
-243:FOUT 0.5s HTTP Error 429: Too Many Requests
-244:FOUT 0.5s HTTP Error 429: Too Many Requests
-245:FOUT 0.5s HTTP Error 429: Too Many Requests
-246:FOUT 0.5s HTTP Error 429: Too Many Requests
-247:FOUT 0.5s HTTP Error 429: Too Many Requests
-248:FOUT 0.5s HTTP Error 429: Too Many Requests
-249:FOUT 0.5s HTTP Error 429: Too Many Requests
+UNGM zoek: HTTP 400 :: b'Bad Request'
+Polen BZP: 200 application/json; charset=utf-8 14337B 0.8s starlink=0 :: '[{"clientType":"1.1.2","orderType":"Delivery","tenderType":"1.1.1","noticeType":"ContractNotice","noticeTypeTed":null,"noticeTypeDisplayName":null,"noticeNumber'
+Polen BZP2: 200 application/json; charset=utf-8 305577B 1.3s starlink=0 :: '[{"clientType":"1.4","orderType":"Delivery","tenderType":"1.1.1","noticeType":"ContractNotice","noticeNumber":"2026/BZP 00464963/01","bzpNumber":"2026/BZP 00464'
+Ecuador SERCOP: HTTP 429 :: b'{\n    "message": "Too Many Attempts.",\n    "exception": "Illuminate\\\\Http\\\\Exceptions\\\\ThrottleRequestsException",\n    "file": "/var/www/html/vendor/laravel/fra'
+Zuid-Afrika eTenders: 200 application/json; charset=utf-8 86001B 3.0s starlink=0 :: '{"uri":"https://ocds-api.etenders.gov.za/api/OCDSReleases?PageNumber=1&PageSize=50&dateFrom=2026-10-01&dateTo=2026-10-20","version":"1.1","publishedDate":"2026-'
+Moldavië MTender: 200 application/json;charset=UTF-8 396B 10.7s starlink=0 :: '{"data":[{"ocid":"ocds-b3wdp1-MD-1639639376417","date":"1970-01-19T23:36:18Z"},{"ocid":"ocds-b3wdp1-MD-1539840280133","date":"2018-10-18T05:24:39Z"},{"ocid":"oc'
+Duitsland oeffentlichevergabe: 200  400000B 1.6s starlink=0 :: 'PK\x03\x04\x14\x00\x08\x08\x08\x00�zO]\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00,\x00\x00\x00aa246223-61c2-4ec7-8254-736c26ff10c5-01.json�X�n�F\x10~\x15B�^"���h h,�I��X���P\x05�r9��!w��R�\x1c�Yz�\x13��S�b�%EY���I�"\x05\x02\x18��;;���7�;��*%k\x1d��J͊\x03'
+Duitsland service.bund: 200 text/html;charset=utf-8 15076B 0.9s starlink=4 :: '<!DOCTYPE html>\n<html xml:lang="de" lang="de" class="no-js">\n<head>\n <base href="/"/>\n <meta charset="utf-8">\n <meta http-equiv="X-UA-Compatible" content="IE=ed'
+Portugal BASE: 200  0B 0.8s starlink=0 :: ''
+Portugal BASE POST: 200 text/plain; charset=utf-8 1426B 0.8s starlink=4 :: '\t\t\t\t\t{ "total": 4, "items": [{"contractingProcedureType":"Concurso público","drPublicationDate":"17-06-2026","contractDesignation":"4026014784/DA/A0206/2026-Aqu'
+Roemenië SEAP: 200 application/json; charset=utf-8 6275B 1.7s starlink=0 :: '{"total":1520,"items":[{"cNoticeId":100246243,"noticeId":101410588,"procedureId":100334534,"noticeNo":"SCN1181247","sysNoticeTypeId":17,"sysNoticeState":{"id":2'
+Noorwegen Doffin: 200 application/json; charset=UTF-8 3362B 0.7s starlink=4 :: '{"numHitsTotal":2,"numHitsAccessible":2,"hits":[{"id":"2024-101886","buyer":[{"id":"48fef673dfb057c6a61804e1f20e5ec3","organizationId":"976390512","name":"Norsk'
+Finland Hilma: 200 text/html 1809B 0.3s starlink=0 :: '<!doctype html>\n<html lang="en">\n  <head>\n    <meta charset="UTF-8" />\n    <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16-CpvZKFCJ.'
+Estland: HTTP 500 :: b'{"actionId":"7820","errorStack":"-"}'
+Slowakije UVO: 200 text/html; charset=utf-8 96992B 13.4s starlink=2 :: '<!DOCTYPE html>\n<html dir="ltr" lang="sk-sk">\n<head>\n\n<meta charset="utf-8">\n<!-- \n\tThis website is powered by TYPO3 - inspiring people to share!\n\tTYPO3 is a fr'
+Tsjechië NEN: 200 text/html; charset=utf-8 294830B 4.0s starlink=1 :: '\r\n\r\n<!DOCTYPE html>\r\n<html lang=\'cs\'>\r\n<head>\r\n    <meta charset="utf-8">\r\n    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit'
+Spanje PLACSP: 200 application/atom+xml 400000B 2.8s starlink=0 :: '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>\n<feed xmlns="http://www.w3.org/2005/Atom" xmlns:cbc="urn:dgpe:names:draft:codice:schema:xsd:CommonBasicC'
+Italië ANAC: HTTP 403 :: b'<html><head><title>Error Page</title></head>\n<body>The requested URL was rejected. Please consult with your administrator.<br/><br/>\nYour support ID is 61c873ab'
+Uruguay ARCE: 200 application/atom+xml 192668B 2.2s starlink=0 :: '<?xml version="1.0" encoding="UTF-8" ?>\n<rss version="2.0">\n    <channel>\n        <title>Consulta de releases OCDS</title>\n        <link>http://www.comprasestat'
+Uruguay ARCE2: 200 text/html;charset=ISO-8859-1 4847B 1.1s starlink=0 :: '<html>\r\n    <head>\r\n        <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">\r\n        <meta http-equiv="content-language" content="es">\r'
+Paraguay DNCP: HTTP 404 :: b'{"message": "No encontrado", "status": 404}\n'
+Peru OECE: HTTP 403 :: b'{"code":"403","message":"Forbidden","RequestId":"9cf6b6f4f6226dbde5fa794174f8f7c7"}'
+Dominicaanse Rep.: 200 application/json 150656B 0.4s starlink=0 :: '{"code":200,"hasError":false,"payload":{"content":[{"codigo_proceso":"GOBOG-DAF-CD-2026-0062","codigo_unidad_compra":137,"unidad_compra":"GOBERNACION OFICINA GU'
+Honduras: FOUT <urlopen error timed out>
+Chili MercadoPublico: 200 application/json; charset=utf-8 400000B 1.1s starlink=0 :: '{"Cantidad":4665,"FechaCreacion":"2026-10-21T08:34:19.1403242Z","Version":"v1","Listado":[{"CodigoExterno":"1002584-14-LP26","Nombre":"SERVICIOS PROFESIONALES P'
+Mexico ComprasMX: 200 text/html 7000B 0.4s starlink=0 :: '<!doctype html>\n<html lang="en" data-critters-container>\n\n<head>\n  <!-- Google tag (gtag.js) -->\n  <script async src="https://www.googletagmanager.com/gtag/js?i'
+Argentina COMPR.AR: 200 text/html; charset=utf-8 165135B 7.4s starlink=0 :: '\r\n\r\n<!DOCTYPE html>\r\n<!--[if lt IE 7]><html lang="es" class="lt-ie10 lt-ie9 lt-ie8 lt-ie7"><![endif]-->\r\n<!--[if IE 7]><html lang="es" class="lt-ie10 lt-ie9 lt-'
+Kenia PPIP: 200 application/json 70465B 4.4s starlink=16 :: '{"current_page":1,"data":[{"id":307754,"ocid":"ocds-5whusi-307754-TTTC\\/2026-2027\\/001","pe_id":6879,"status_id":1,"procurement_method_id":1,"procurement_catego'
+Nigeria NOCOPO: FOUT <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: certificate has expired (_ssl.c:1000)>
+Filipijnen PhilGEPS: 200 text/html; charset=utf-8 107820B 1.2s starlink=0 :: '<SCRIPT LANGUAGE="JavaScript">\rvar WinObj =null;\rvar o=window.open;\rwindow.open=launchCenter;\rfunction launchCenter(url,name,features)\r{\rfeatures=features+\',\';\r'
+Indonesië INAPROC: HTTP 403 :: b'<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">\n<html><head>\n<title>403 Forbidden</title>\n</head><body>\n<h1>Forbidden</h1>\n<p>You don\'t have permission to ac'
+India CPPP: 200 text/html; charset=UTF-8 113935B 3.4s starlink=0 :: '<!DOCTYPE html>\n<html lang="en" dir="ltr" prefix="content: http://purl.org/rss/1.0/modules/content/  dc: http://purl.org/dc/terms/  foaf: http://xmlns.com/foaf/'
+India GeM: FOUT <urlopen error [Errno 111] Connection refused>
+Zuid-Korea KONEPS: HTTP 401 :: b'{\n  "OpenAPI_ServiceResponse": {\n    "cmmMsgHeader": {\n      "errMsg": "SERVICE_KEY_IS_NULL",\n      "returnAuthMsg": "\xec\x84\x9c\xeb\xb9\x84\xec\x8a\xa4 \xec\xa0\x91\xea\xb7\xbc\xea\xb1\xb0\xeb\xb6\x80",\n      "returnReas'
+Japan JETRO: 200 text/html 172806B 0.7s starlink=0 :: '<!DOCTYPE html>\n<html  lang="ja">\n<head>\n<meta charset="UTF-8">\n<link rel="canonical" href="https://www.jetro.go.jp/gov_procurement/">\n\n\n<link rel="stylesheet" '
+Nieuw-Zeeland GETS: 200 text/html; charset=utf-8 48617B 1.2s starlink=0 :: '        \n<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">\n<html>\n<head>\n<meta name="robots" content="noarchive">\n<meta'
+Australië NSW: FOUT <urlopen error [Errno -2] Name or service not known>
+Kazachstan goszakup: 200 text/html; charset=UTF-8 97786B 3.7s starlink=7 :: '<!DOCTYPE html>\n<html lang="ru">\n<head>\n    <!--meta-->\n    <meta content="width=device-width, initial-scale=1" name="viewport">\n    <meta charset="UTF-8">\n    '
+Georgië: 200 text/html; charset=UTF-8 68242B 4.6s starlink=0 :: '<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">\n<html>\n\n    <head>\n        <meta http-equiv="Content-Type" content="t'
+Kirgizië: 200 text/html;charset=UTF-8 78746B 4.6s starlink=0 :: '<html xmlns="http://www.w3.org/1999/xhtml" lang="ru"><head id="j_idt2"><link type="text/css" rel="stylesheet" href="/popp/javax.faces.resource/theme.css.xhtml?l'
+Armenië: 200 text/html;charset=utf-8 28156B 2.2s starlink=0 :: '<!DOCTYPE html>\n<html lang="en">\n  <head>\n    <meta charset="utf-8">\n    <meta http-equiv="X-UA-Compatible" content="IE=edge">\n    <meta name="viewport" content'
+ADB: HTTP 403 :: b'<!DOCTYPE html><html lang="en-US"><head><title>Just a moment...</title><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><meta http-equiv="X-UA'
+AfDB: HTTP 403 :: b'<!DOCTYPE html><html lang="en-US"><head><title>Just a moment...</title><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><meta http-equiv="X-UA'
+EBRD ECEPP: 200 text/html;charset=utf-8 400000B 1.8s starlink=5 :: '\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\t\r\n\r\n\r\n\r\n\r\n\r\n\t\r\n\t\r\n\t\r\n\t\r\n\t\r\n\t\r\n\t\r\n\t<!doctype html>  \r\n<html lang="en_GB">\r\n\t<head>\r\n\t \t<meta name="viewport" content="widt'
+IDB: HTTP 526 :: b'{"type":"https://developers.cloudflare.com/support/troubleshooting/http-status-codes/cloudflare-5xx-errors/error-526/","title":"Error 526: Invalid SSL certifica'
+NATO NSPA: FOUT <urlopen error timed out>
+UNICEF: HTTP 404 :: b'<!DOCTYPE html>\n<html lang="en" dir="ltr" prefix="og: https://ogp.me/ns#">\n  <head>\n    <meta charset="utf-8">\n<link rel="shortlink" href="https://www.unicef.or'
+UNHCR: HTTP 403 :: b'<!doctype html>\n<html lang="en">\n\n<head>\n    <meta charset="utf-8" />\n    <meta name="viewport" content="width=device-width, initial-scale=1" />\n    <meta name='
+WFP: 200 text/html; charset=utf-8 81714B 0.6s starlink=0 :: '\n\n<!DOCTYPE html>\n<html lang="en" dir="ltr" prefix="og: https://ogp.me/ns#">\n<head>\n    \n        <!-- Google Tag Manager -->\n    <script>(function(w,d,s,l,i){w['
+OCP registry: 200 text/html; charset=utf-8 400000B 1.1s starlink=0 :: '\n\n\n\n\n<!DOCTYPE html>\n<html lang="en">\n<head>\n    <meta charset="utf-8">\n    <title>Search for and download OCDS data | OCP Data Registry</title>\n    <meta name='
+Oostenrijk: HTTP 404 :: b'<!DOCTYPE html>\n<html lang="en">\n  <head>\n    <meta charset="utf-8">\n    <meta http-equiv="X-UA-Compatible" content="IE=edge">\n    <meta name="viewport" content'
+België e-Proc: HTTP 400 :: b''
+Griekenland KIMDIS: HTTP 500 :: b'{"message":"An unexpected error occurred. Please try again later.","status":500}'
+Bulgarije CAIS: 200 text/html 7500B 0.7s starlink=0 :: '<!doctype html>\r\n<html data-critters-container>\r\n\r\n<head>\r\n    <meta charset="utf-8">\r\n    <title>ЦАИС ЕОП</title>\r\n    <base href="/">\r\n\r\n    <meta http-equiv='
+Kroatië EOJN: 200 text/html; charset=utf-8 86732B 1.3s starlink=0 :: '\r\n\r\n<!DOCTYPE html>\r\n\r\n<html lang="hr" xmlns:asp="http://www.w3.org/1999/html">\r\n<head><title>\r\n\tEOJN RH\r\n</title>\r\n    <script async src="https://www.googletag'
+Litouwen CVP: 200 text/html; charset=utf-8 61214B 1.5s starlink=0 :: '\r\n<!DOCTYPE html>\r\n<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->\r\n<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![e'
+Letland EIS: FOUT <urlopen error timed out>
+Ierland eTenders: 200 text/html; charset=UTF-8 0B 0.9s starlink=0 :: ''
+Denemarken udbud: 200 text/html 908B 0.7s starlink=0 :: '<!DOCTYPE html>\n<html lang="da">\n  <head>\n    <meta charset="utf-8" />\n    <meta http-equiv="X-UA-Compatible" content="IE=edge" />\n    <base href="/" />\n    <me'
+Zweden: 200 application/json 41698B 0.2s starlink=0 :: '{"content":{"introBlock":{"heading":"Välkommen ","preamble":"– här hittar du kunskap, stöd och statistik om offentliga affärer","hasSearch":true,"searchPageUrl"'
+Turkije EKAP: 200 text/html 2835B 1.5s starlink=0 :: '\ufeff<!DOCTYPE html>\r\n<html>\r\n<head>\r\n    <meta charset=utf-8>\r\n    <meta http-equiv=X-UA-Compatible content="IE=edge,chrome=1">\r\n    <meta name=viewport content="w'
+Israël: 200 text/html;charset=UTF-8 400000B 3.4s starlink=1 :: '<!DOCTYPE html>\n<html lang="en">\n<head>\n<title>Search results | 22166 results have been found in  tenders</title>\n\n<meta http-equiv="X-UA-Compatible" content="I'
+Saudi Etimad: 200 text/html; charset=utf-8 348890B 3.9s starlink=0 :: '\r\n\r\n<!DOCTYPE html>\r\n<html lang="ar" dir="rtl">\r\n<head>\r\n<script type="text/javascript">\r\n(function(){\r\nwindow["loaderConfig"] = "/TSPD/?type=20";\r\n})();\r\n\r\n</s'
+VAE: FOUT <urlopen error [Errno -2] Name or service not known>
+Vietnam: 200 text/html; charset=UTF-8 400000B 5.3s starlink=0 :: '\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\t\n\t\t\n\t\t\t<!DOCTYPE html>\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r'
+Thailand: FOUT Remote end closed connection without response
+Maleisië: HTTP 403 :: b'<!DOCTYPE html> <html class="aui ltr" dir="ltr" lang="en-MY"><html>\n<head>\n<title>ePerolehan</title>\n<link rel="preconnect" href="https://fonts.googleapis.com">'
+Bangladesh e-GP: 200 text/html;charset=UTF-8 66702B 1.9s starlink=0 :: '\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">\r\n\r\n\r\n\r\n\r\n\r\n\r'
+Pakistan PPRA: 200 text/html; charset=UTF-8 115973B 4.3s starlink=0 :: '<!doctype html>\n<html class="no-js" lang="en">\n\n<head>\n    <title>Home | PPRA :: Public Procurement Regulatory Authority</title>\n    <meta charset="utf-8">\n    '
+Ghana: 200 text/html;charset=utf-8 23054B 3.1s starlink=0 :: '\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n    \r\n        <!-- ceproc.ok -->\r\n    \r\n    <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"'
+Zambia ZPPA: 200 text/html;charset=UTF-8 400000B 5.2s starlink=0 :: '<script>var _0x3c3f18=_0x34d6;function _0x34d6(b,c){var a=_0x2c7a();return _0x34d6=function(f,e){f=f-477;var d=a[f];return d},_0x34d6(b,c)}(function(f,b){var a='
+Rwanda Umucyo: FOUT <urlopen error [Errno -3] Temporary failure in name resolution>
+Tanzania NeST: 200 text/html 74694B 1.9s starlink=0 :: '<!DOCTYPE html>\n<html lang="en" data-critters-container>\n\t<head>\n\t\t<meta charset="utf-8">\n\t\t<title>NeST - National e-Procurement System of Tanzania</title>\n\t\t<b'
+Uganda EGP: 200 text/html; charset=UTF-8 74929B 1.5s starlink=0 :: '<!DOCTYPE html>\n<html lang="en">\n<head>\n    <meta charset="utf-8">\n    <meta http-equiv="X-UA-Compatible" content="IE=edge">\n    <meta name="viewport" content="'
