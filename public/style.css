@@ -315,3 +315,6 @@ body.tv .tvticker{flex:none}
 body.tv .refreshnote{font-size:clamp(16px,1.4vw,24px);padding:12px 26px;top:auto;bottom:90px;transform:translate(-50%,200%)}
 body.tv .refreshnote.show{transform:translate(-50%,0)}
 @media (prefers-reduced-motion:reduce){.refreshnote{transition:none}.refreshnote .spin{animation:none}}
+.lh-right{display:flex;gap:8px;align-items:center}
+.csvbtn{font:600 11px var(--f-mono);letter-spacing:.06em;padding:3px 9px;border-radius:6px;background:transparent;border:1px solid var(--line);color:var(--beam);cursor:pointer}
+.csvbtn:hover{border-color:var(--beam)}

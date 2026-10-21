@@ -624,6 +624,25 @@ const SORTERS = {
   country: (a,b) => cname(a.country).localeCompare(cname(b.country), "nl") || (a.deadline || "9999").localeCompare(b.deadline || "9999")
 };
 let loaded = false, loadError = false;
+// CSV-export van de lijst zoals hij nu gefilterd en gesorteerd is (puntkomma's en een BOM, zodat Excel hem goed opent)
+const STATUS_NL = { open:"Open", soon:"Sluit binnenkort", closed:"Gesloten", awarded:"Gegund", prior:"Vooraankondiging" };
+function downloadCsv(){
+  const list = filtered(false).sort(SORTERS[state.sort] || SORTERS.deadline);
+  const cell = v => { const s = v == null ? "" : String(v); return /[";\n\r]/.test(s) ? `"${s.replace(/"/g, '""')}"` : s; };
+  const dec = n => n == null || n === "" ? "" : String(n).replace(".", ",");
+  const tijd = t => t.deadlineAt ? new Date(t.deadlineAt).toLocaleTimeString("nl-NL", {hour:"2-digit", minute:"2-digit", timeZone:"Europe/Amsterdam"}) : "";
+  const head = ["Status","Land","Titel (Nederlands)","Originele titel","Opdrachtgever","Bron","Soort","Defensie","Gepubliceerd","Sluitingsdatum","Sluitingstijd (NL)","Aantal","Waarde","Valuta","Kenmerk","Link"];
+  const rows = list.map(t => [STATUS_NL[statusOf(t)] || statusOf(t), t.country ? cname(t.country) : (t.countryName || ""), t.titleNl || t.title, t.title, t.buyer,
+    t.source || "TED", hwScope(t) === "hw" ? "Alleen hardware" : hwScope(t) === "svc" ? "Met dienst" : "", t.defense ? "Ja" : "", t.published || "", t.deadline || "", tijd(t),
+    t.qty || "", dec(t.value), t.value ? (t.currency || "") : "", t.pub, t.link]);
+  const csv = "\ufeff" + [head, ...rows].map(r => r.map(cell).join(";")).join("\r\n");
+  const url = URL.createObjectURL(new Blob([csv], {type: "text/csv;charset=utf-8"}));
+  const a = document.createElement("a");
+  a.href = url; a.download = `starlink-tenders-${new Date().toISOString().slice(0, 10)}.csv`;
+  document.body.appendChild(a); a.click(); a.remove();
+  setTimeout(() => URL.revokeObjectURL(url), 5000);
+}
+document.getElementById("csvBtn").addEventListener("click", downloadCsv);
 function render(){
   const list = filtered(false).sort(SORTERS[state.sort] || SORTERS.deadline);
   if(loaded){
