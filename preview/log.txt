@@ -1,8 +1,6 @@
-ungm_js: 40516B 0.5s
-ungm_bundle: 662893B 0.9s
-dominicana_p: 151219B 0.5s
-servicebund_rss: 1027B 1.1s
-ecuador: 1501B 2.3s
-kz2: FOUT <urlopen error [Errno -3] Temporary failure in name resolution>
-za_day: 250621B 4.7s
-kenya_p: FOUT HTTP Error 500: Internal Server Error
+ungm: FOUT HTTP Error 400: Bad Request
+kz2: 97786B
+kenya_p1: 60771B
+kenya_p2: FOUT HTTP Error 500: Internal Server Error
+de zip 1731543B, 1038 bestanden
+de_one: 4820B
