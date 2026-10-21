@@ -61,6 +61,12 @@ function renderCustomers(){
   $("custRows").innerHTML = D.customers.length
     ? D.customers.map(c => `<tr><td>${esc(c.email)}</td><td>${when(c.at)}</td><td>${c.manual ? "handmatig" : "betaald via Stripe"}</td><td><button type="button" class="danger" data-revoke="${esc(c.email)}">Intrekken</button></td></tr>`).join("")
     : `<tr><td colspan="4" class="note">Nog geen klanten.</td></tr>`;
+  const M = D.maintenance || {};
+  $("maintState").textContent = M.on ? "OFFLINE (onderhoud)" : "Online";
+  $("maintState").className = "pill " + (M.on ? "bad" : "ok");
+  $("maintBtn").textContent = M.on ? "Weer online zetten" : "Tijdelijk offline zetten";
+  $("maintBtn").className = M.on ? "" : "danger";
+  if(M.on && document.activeElement !== $("maintMsg")) $("maintMsg").value = M.message || "";
   const ns = D.nostar || [];
   let dn = null; try { dn = new Intl.DisplayNames(["nl"], {type:"region"}); } catch(e) {}
   $("nostar").innerHTML = ns.length
@@ -105,6 +111,9 @@ document.addEventListener("click", e => {
 });
 $("wordForm").addEventListener("submit", e => { e.preventDefault(); const w = $("wordInput").value.trim(); if(w.length < 2) return msg("Een uitsluitwoord moet minstens 2 tekens hebben.", true); $("wordInput").value = ""; act({action:"words", words:[...D.words, w]}, `"${w}" toegevoegd.`); });
 $("grantForm").addEventListener("submit", e => { e.preventDefault(); const v = $("grantInput").value.trim(); $("grantInput").value = ""; act({action:"grant", value:v}, `Toegang gegeven aan ${v}.`); });
+$("maintForm").addEventListener("submit", e => { e.preventDefault(); const on = !(D.maintenance && D.maintenance.on);
+  if(on && !confirm("De site offline zetten voor iedereen behalve beheerders?")) return;
+  act({action:"maintenance", on, message:$("maintMsg").value.trim()}, on ? "De site staat offline. Bezoekers zien binnen een minuut de onderhoudsmelding." : "De site is weer online. Open pagina's verversen binnen een minuut vanzelf."); });
 $("nostarForm").addEventListener("submit", e => { e.preventDefault(); const add = $("nostarInput").value.split(/[,\s;]+/).map(c => c.trim().toUpperCase()).filter(Boolean); $("nostarInput").value = "";
   if(!add.length) return; act({action:"nostar", list:[...(D.nostar || []), ...add]}, `Toegevoegd: ${add.join(", ")}.`); });
 $("blockForm").addEventListener("submit", e => { e.preventDefault(); const v = $("blockInput").value.trim(); if(!v) return; $("blockInput").value = ""; act({action:"block-add", value:v}, `${v} heeft geen toegang meer.`); });

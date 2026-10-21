@@ -1084,12 +1084,10 @@ function loadTenders(mode){   // mode: "start" (pagina geopend) of "check" (auto
   const later = f => setTimeout(f, Math.max(0, 1500 - (Date.now() - t0)));   // "wordt ververst" even leesbaar laten staan
   if(mode === "start") refreshNote(`<i class="spin"></i>Site wordt ververst · even kijken of er nieuwe tenders zijn…`, "busy");
   return fetch("/api/tenders", {cache:"no-store", credentials:"same-origin"})
-    .then(r => { if(r.status === 401){ location.reload(); throw new Error("uitgelogd"); } if(!r.ok) throw new Error(r.status); return r.json(); })
+    .then(async r => { if(r.status === 401){ location.reload(); throw new Error("uitgelogd"); }
+      if(r.status === 503){ const d = await r.json().catch(() => ({})); if(d.maintenance){ showMaintenance(d.message); throw Object.assign(new Error("onderhoud"), {maint:true}); } }
+      if(!r.ok) throw new Error(r.status); return r.json(); })
     .then(d => {
-      if(mode === "check"){
-        if(d.updated !== updated || (build && d.build && d.build !== build)) reloadSoon();
-        return;
-      }
       build = d.build || null;
       if(Array.isArray(d.nostar)) STARLINK_BLOCKED = new Set(d.nostar);
       BIDS = d.bids && typeof d.bids === "object" ? d.bids : {};
@@ -1102,12 +1100,37 @@ function loadTenders(mode){   // mode: "start" (pagina geopend) of "check" (auto
         else refreshNote(`Bijgewerkt · geen nieuwe tenders${before ? "" : " sinds je vorige bezoek"}`, "ok", ms / 2);
       });
     })
-    .catch(() => { if(!loaded){ loaded = true; loadError = true; render(); } if(mode === "start") refreshNote("Ophalen lukte even niet · de site probeert het straks opnieuw", "err", 6000); });
+    .catch(e => { if(e && e.maint) return; if(!loaded){ loaded = true; loadError = true; render(); } if(mode === "start") refreshNote("Ophalen lukte even niet · de site probeert het straks opnieuw", "err", 6000); });
 }
-setInterval(() => { if(loaded && document.visibilityState === "visible") loadTenders("check"); }, 5 * 60 * 1000);
+// Elke minuut een lichte controle (/api/status): onderhoud, nieuwe gegevens of een nieuwe versie van de site
+let maintShown = false;
+function checkStatus(){
+  return fetch("/api/status", {cache:"no-store", credentials:"same-origin"}).then(r => r.json()).then(d => {
+    const m = d.maintenance;
+    if(m && !m.admin){ showMaintenance(m.message); return; }
+    if(maintShown){ location.reload(); return; }            // onderhoud voorbij: opnieuw laden
+    adminMaintBanner(m && m.admin);
+    if(loaded && (d.updated !== updated || (build && d.build && d.build !== build))) reloadSoon();
+  }).catch(() => {});
+}
+setInterval(() => { if(document.visibilityState === "visible") checkStatus(); }, 60 * 1000);
 document.addEventListener("visibilitychange", () => {   // terug naar het tabblad na een tijdje weg: meteen even kijken
-  if(document.visibilityState === "visible" && loaded) loadTenders("check");
+  if(document.visibilityState === "visible") checkStatus();
 });
+function showMaintenance(message){
+  maintShown = true;
+  let el = document.getElementById("maintOverlay");
+  if(!el){ el = document.createElement("div"); el.id = "maintOverlay"; el.className = "maint"; el.setAttribute("role", "alertdialog"); el.setAttribute("aria-live", "assertive"); document.body.appendChild(el); }
+  el.innerHTML = `<div class="maint-card"><img src="/broadbandeu-logo.svg" alt="BroadbandEU" width="236" height="32">
+    <h2>Tijdelijk offline</h2><p>In verband met onderhoud is de Global Connectivity Tender Monitor even niet beschikbaar.</p>
+    ${message ? `<p class="maint-msg">${esc(message)}</p>` : ""}<p class="maint-sub"><i class="spin"></i>We kijken elke minuut of de site weer online is; deze pagina ververst dan vanzelf.</p></div>`;
+  document.body.classList.add("maint-on");
+}
+function adminMaintBanner(on){
+  let el = document.getElementById("maintBanner");
+  if(!on){ if(el) el.remove(); return; }
+  if(!el){ el = document.createElement("div"); el.id = "maintBanner"; el.className = "maint-banner"; el.innerHTML = `Onderhoudsmodus staat aan: alleen beheerders zien de site. <a href="/admin.html">Weer online zetten</a>`; document.body.prepend(el); }
+}
 
 // ---------- Tv-modus (/?tv=1): schermvullend, draaiende bol, ververst zichzelf ----------
 let tvPausedUntil = 0;

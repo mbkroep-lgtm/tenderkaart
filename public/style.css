@@ -380,3 +380,15 @@ body.tv .applybtn{display:none}
 .dos-steps li.busy{color:var(--ink)}.dos-steps li.busy::after{content:" · bezig…";color:var(--beam)}
 .dos-steps li.err{color:#ffb3b3}.dos-steps .err{display:block;font-size:12px}
 .btn[disabled]{opacity:.5;cursor:default}
+/* onderhoud */
+.maint{position:fixed;inset:0;z-index:200;display:grid;place-items:center;padding:20px;background:radial-gradient(ellipse at 50% 40%,#0c1830 0%,#04080f 80%)}
+.maint-card{max-width:520px;text-align:center;background:var(--panel);border:1px solid var(--line);border-radius:16px;padding:32px 28px;box-shadow:0 30px 80px rgba(0,0,0,.6)}
+.maint-card img{height:28px;width:auto;margin-bottom:18px}
+.maint-card h2{margin:0 0 10px;font-size:26px;color:var(--ink)}
+.maint-card p{color:var(--muted);margin:8px 0;line-height:1.5}
+.maint-card .maint-msg{color:var(--ink);background:rgba(124,196,255,.08);border:1px solid var(--line);border-radius:10px;padding:10px 12px}
+.maint-card .maint-sub{font-size:12px;display:flex;gap:8px;align-items:center;justify-content:center}
+.maint-card .spin{width:12px;height:12px;border-radius:50%;border:2px solid rgba(124,196,255,.3);border-top-color:var(--beam);animation:rn-spin .8s linear infinite;display:inline-block}
+body.maint-on{overflow:hidden}
+.maint-banner{position:sticky;top:0;z-index:60;background:#ffb547;color:#1a1200;font:600 13px var(--f-body);text-align:center;padding:8px 12px}
+.maint-banner a{color:#1a1200;text-decoration:underline;margin-left:6px}

@@ -46,6 +46,12 @@
     <form class="row" id="wordForm"><input id="wordInput" placeholder="bijv. telescope" maxlength="60"><button type="submit">Toevoegen</button></form>
   </section>
 
+  <section class="card" id="maintCard">
+    <div class="card-head"><h2>Onderhoud</h2><span class="pill" id="maintState">…</span></div>
+    <p class="note">Zet de site tijdelijk offline. Iedereen (ook de tv) krijgt dan binnen een minuut de melding <b>"Tijdelijk offline · in verband met onderhoud"</b>. Beheerders kunnen de site gewoon blijven gebruiken.</p>
+    <form class="row" id="maintForm"><input id="maintMsg" maxlength="300" placeholder="Optionele toelichting, bijv. 'We zijn rond 16:00 weer online.'"><button type="submit" id="maintBtn" class="danger">Tijdelijk offline zetten</button></form>
+  </section>
+
   <section class="card">
     <div class="card-head"><h2>Bedrijfsdossier voor de AI</h2></div>
     <p class="note">De AI Tender Bid Assistant gebruikt alleen wat hier staat voor bedrijfsgegevens: prijslijsten, referentieprojecten, SLA en voorwaarden, Starlink-resellervoorwaarden, certificaten, KvK, verzekeringen, omzetcijfers en UEA-gegevens. Wat ontbreekt, markeert hij als [ONTBREEKT]. PDF, Word, Excel of ZIP; scans zonder tekst worden niet gelezen.</p>

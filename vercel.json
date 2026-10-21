@@ -12,6 +12,9 @@
     },
     "api/dossier.js": {
       "maxDuration": 300
+    },
+    "api/status.js": {
+      "includeFiles": "data/**"
     }
   },
   "headers": [
