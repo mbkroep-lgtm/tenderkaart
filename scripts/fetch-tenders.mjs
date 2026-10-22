@@ -931,6 +931,7 @@ async function fetchGoszakup() {
   return out;
 }
 
+const PARTIAL = new Set();   // bronnen die maar deels gelukt zijn: dan het startpunt niet opschuiven
 // Spanje: Plataforma de Contratación del Sector Público (Atom-feed van alle wijzigingen)
 async function fetchPlacsp() {
   const name = 'PLACSP (Spanje)';
@@ -940,7 +941,12 @@ async function fetchPlacsp() {
   const tag = (s, re) => (s.match(re) || [])[1] || '';
   while (url && pages < 30) {
     pages++;
-    const xml = await getText(url);
+    let xml = '';
+    for (let i = 0; i < 3 && !xml; i++) {   // de Spaanse server is soms traag: opnieuw proberen
+      try { xml = await getText(url); }
+      catch (e) { if (i === 2) { if (pages === 1) throw e; PARTIAL.add(name); say(name, `pagina ${pages} lukte niet (${e.message}); de rest volgt de volgende keer.`); } else await sleep(10000 * (i + 1)); }
+    }
+    if (!xml) break;
     const entries = xml.split('<entry>').slice(1);
     let older = 0;
     for (const e of entries) {
@@ -1151,7 +1157,7 @@ for (const [name, fn] of SOURCES) {
     // bij een reset: berichten die al bekend waren, niet opnieuw als "nieuw" markeren
     if (reset) for (const t of fresh) { const p = prevById.get(t.pub); if (p?.firstSeen) t.firstSeen = p.firstSeen; }
     result.push(...fresh, ...carry);
-    sourceInfo[name] = { ok: true, at: nowIso, count: fresh.length, note: NOTES[name] || '', ...(['Find a Tender', 'AusTender', 'SEAP (Roemenië)', 'DGCP (Dominicaanse Rep.)', 'PLACSP (Spanje)'].includes(name) ? { since: new Date(NOW - 2 * 3600e3).toISOString() } : {}), ...(DONE[name] !== undefined ? { doneUntil: DONE[name] } : {}), ...(['PPIP (Kenia)', 'SERCOP (Ecuador)'].includes(name) ? { okAt: nowIso } : {}), ...(name === 'PNCP (Brazilië)' ? { doneUntil: pncpDone } : {}), ...(name === 'SAM.gov' ? { okAt: nowIso } : {}) };
+    sourceInfo[name] = { ok: true, at: nowIso, count: fresh.length, note: NOTES[name] || '', ...(['Find a Tender', 'AusTender', 'SEAP (Roemenië)', 'DGCP (Dominicaanse Rep.)', 'PLACSP (Spanje)'].includes(name) ? { since: PARTIAL.has(name) ? (old.sources[name]?.since || new Date(NOW - 3 * DAY).toISOString()) : new Date(NOW - 2 * 3600e3).toISOString() } : {}), ...(DONE[name] !== undefined ? { doneUntil: DONE[name] } : {}), ...(['PPIP (Kenia)', 'SERCOP (Ecuador)'].includes(name) ? { okAt: nowIso } : {}), ...(name === 'PNCP (Brazilië)' ? { doneUntil: pncpDone } : {}), ...(name === 'SAM.gov' ? { okAt: nowIso } : {}) };
   } catch (e) {
     console.error(`${name} mislukt, bestaande berichten blijven staan:`, e.message);
     result.push(...previous);
