@@ -1,143 +1,143 @@
 {
- "updated": "2026-10-22T14:40:07.056Z",
+ "updated": "2026-10-22T18:02:37.664Z",
  "queryVersion": "ec27e2fd8f",
  "sources": {
   "TED": {
    "ok": true,
-   "at": "2026-10-22T14:40:07.056Z",
+   "at": "2026-10-22T18:02:37.664Z",
    "count": 383,
    "note": ""
   },
   "Wereldbank": {
    "ok": true,
-   "at": "2026-10-22T14:40:07.056Z",
+   "at": "2026-10-22T18:02:37.664Z",
    "count": 78,
    "note": "94 gevonden, 78 echt over LEO."
   },
   "Find a Tender": {
    "ok": true,
-   "at": "2026-10-22T14:40:07.056Z",
-   "count": 1,
-   "note": "3 pagina's, 269 berichten bekeken, 1 over LEO.",
-   "since": "2026-10-22T12:40:07.056Z"
+   "at": "2026-10-22T18:02:37.664Z",
+   "count": 0,
+   "note": "3 pagina's, 244 berichten bekeken, 0 over LEO.",
+   "since": "2026-10-22T16:02:37.664Z"
   },
   "Contracts Finder": {
    "ok": true,
-   "at": "2026-10-22T14:40:07.056Z",
+   "at": "2026-10-22T18:02:37.664Z",
    "count": 25,
-   "note": "1793 gevonden, 276 over LEO."
+   "note": "1792 gevonden, 275 over LEO."
   },
   "TenderNed": {
    "ok": true,
-   "at": "2026-10-22T14:40:07.056Z",
+   "at": "2026-10-22T18:02:37.664Z",
    "count": 20,
    "note": "584 gevonden, 77 over LEO."
   },
   "Prozorro": {
    "ok": true,
-   "at": "2026-10-22T14:40:07.056Z",
+   "at": "2026-10-22T18:02:37.664Z",
    "count": 72,
    "note": "72 lopende procedures."
   },
   "BOAMP": {
    "ok": true,
-   "at": "2026-10-22T14:40:07.056Z",
+   "at": "2026-10-22T18:02:37.664Z",
    "count": 9,
    "note": "92 gevonden, 9 over LEO."
   },
   "SIMAP (Zwitserland)": {
    "ok": true,
-   "at": "2026-10-22T14:40:07.056Z",
+   "at": "2026-10-22T18:02:37.664Z",
    "count": 0,
    "note": "24 gevonden, 0 over LEO."
   },
   "SECOP (Colombia)": {
    "ok": true,
-   "at": "2026-10-22T14:40:07.056Z",
+   "at": "2026-10-22T18:02:37.664Z",
    "count": 199,
    "note": "251 gevonden, 199 over LEO."
   },
   "CanadaBuys": {
    "ok": true,
-   "at": "2026-10-22T14:40:07.056Z",
+   "at": "2026-10-22T18:02:37.664Z",
    "count": 5,
    "note": "897 open tenders bekeken, 5 over LEO."
   },
   "AusTender": {
    "ok": true,
-   "at": "2026-10-22T14:40:07.056Z",
+   "at": "2026-10-22T18:02:37.664Z",
    "count": 0,
    "note": "0 contracten bekeken, 0 over LEO.",
-   "since": "2026-10-22T12:40:07.056Z"
+   "since": "2026-10-22T16:02:37.664Z"
   },
   "UNDP": {
    "ok": true,
-   "at": "2026-10-22T14:40:07.056Z",
+   "at": "2026-10-22T18:02:37.664Z",
    "count": 2,
    "note": "970 berichten bekeken, 2 over LEO."
   },
   "PCC (Taiwan)": {
    "ok": true,
-   "at": "2026-10-22T14:40:07.056Z",
+   "at": "2026-10-22T18:02:37.664Z",
    "count": 16,
    "note": "38 aanbestedingen over LEO."
   },
   "Doffin (Noorwegen)": {
    "ok": true,
-   "at": "2026-10-22T14:40:07.056Z",
+   "at": "2026-10-22T18:02:37.664Z",
    "count": 2,
    "note": "43 gevonden, 27 over LEO."
   },
   "BASE (Portugal)": {
    "ok": false,
-   "at": "2026-10-22T14:40:07.056Z",
+   "at": "2026-10-22T18:02:37.664Z",
    "count": 3,
    "note": "10 gevonden, 9 over LEO.",
    "error": "fetch failed"
   },
   "BZP (Polen)": {
    "ok": true,
-   "at": "2026-10-22T14:40:07.056Z",
+   "at": "2026-10-22T18:02:37.664Z",
    "count": 0,
    "note": "0 over LEO in de nieuwe publicaties.",
    "doneUntil": "2026-10-21"
   },
   "SEAP (Roemenië)": {
    "ok": true,
-   "at": "2026-10-22T14:40:07.056Z",
+   "at": "2026-10-22T18:02:37.664Z",
    "count": 0,
-   "note": "90 nieuwe aankondigingen bekeken, 0 over LEO.",
-   "since": "2026-10-22T12:40:07.056Z"
+   "note": "96 nieuwe aankondigingen bekeken, 0 over LEO.",
+   "since": "2026-10-22T16:02:37.664Z"
   },
   "oeffentlichevergabe.de": {
    "ok": true,
-   "at": "2026-10-22T14:40:07.056Z",
+   "at": "2026-10-22T18:02:37.664Z",
    "count": 0,
    "note": "0 over LEO in de nieuwe Duitse aankondigingen.",
    "doneUntil": "2026-10-21"
   },
   "PLACSP (Spanje)": {
    "ok": true,
-   "at": "2026-10-22T14:40:07.056Z",
+   "at": "2026-10-22T18:02:37.664Z",
    "count": 1,
    "note": "481 wijzigingen bekeken (1 pagina's), 1 over LEO.",
-   "since": "2026-10-22T12:40:07.056Z"
+   "since": "2026-10-22T16:02:37.664Z"
   },
   "eTenders (Zuid-Afrika)": {
    "ok": false,
    "error": "ocds-api.etenders.gov.za gaf 500: ",
-   "at": "2026-10-22T14:40:07.056Z"
+   "at": "2026-10-22T18:02:37.664Z"
   },
   "DGCP (Dominicaanse Rep.)": {
    "ok": true,
-   "at": "2026-10-22T14:40:07.056Z",
+   "at": "2026-10-22T18:02:37.664Z",
    "count": 0,
    "note": "100 processen bekeken, 0 over LEO.",
-   "since": "2026-10-22T12:40:07.056Z"
+   "since": "2026-10-22T16:02:37.664Z"
   },
   "Goszakup (Kazachstan)": {
    "ok": true,
-   "at": "2026-10-22T14:40:07.056Z",
+   "at": "2026-10-22T18:02:37.664Z",
    "count": 3,
    "note": "7 loten gevonden, 3 over LEO. Zonder datums: status bepaalt open of gesloten."
   },
@@ -171,9 +171,9 @@
   },
   "Vertalen": {
    "ok": true,
-   "at": "2026-10-22T14:40:07.056Z",
-   "count": 8,
-   "note": "DeepL: 8 nieuw vertaald.",
+   "at": "2026-10-22T18:02:37.664Z",
+   "count": 0,
+   "note": "DeepL: 0 nieuw vertaald.",
    "engine": "DeepL"
   }
  },
@@ -250,8 +250,8 @@
    "topic": "conn"
   },
   {
-   "pub": "UK-ocds-h6vhtk-078dc7",
    "source": "Find a Tender",
+   "pub": "UK-ocds-h6vhtk-078dc7",
    "title": "Preliminary Market Engagement – Sellafield Limited: Network Services",
    "buyer": "Sellafield Limited",
    "country": "GB",
@@ -9834,32 +9834,6 @@
    "qty": 3
   },
   {
-   "pub": "WB-OP00449676",
-   "source": "Wereldbank",
-   "title": "Acquisition, installation et maintenance de 191 kits Starlink et composants d’extension réseau pour les 3 nouvelles DREN, les 9 Ecoles Normales et 179 inspections prioritaires dotées de tablettes",
-   "buyer": "Niger Learning Improvement for Results in Education Project",
-   "country": "NE",
-   "countryName": "Niger",
-   "published": "2026-06-08",
-   "deadline": "",
-   "type": "Contract Award",
-   "kind": "award",
-   "cpv": [],
-   "wbGroup": "GO",
-   "wbMethod": "RFQ",
-   "link": "https://projects.worldbank.org/en/projects-operations/procurement-detail/OP00449676",
-   "value": null,
-   "currency": "USD",
-   "firstSeen": "2000-01-01T00:00:00.000Z",
-   "titleNl": "Aankoop, installatie en onderhoud van 191 Starlink-sets en onderdelen voor netwerkuitbreiding voor de 3 nieuwe DREN’s, de 9 lerarenopleidingen en 179 prioritaire inspectiediensten die zijn uitgerust met tablets",
-   "trEngine": "DeepL",
-   "cats": [
-    "leo"
-   ],
-   "topic": "leo",
-   "qty": 191
-  },
-  {
    "pub": "WB-OP00449674",
    "source": "Wereldbank",
    "title": "Acquisition, installation et maintenance de 191 kits Starlink et composants d’extension réseau pour les 3 nouvelles DREN, les 9 Ecoles Normales et 179 inspections prioritaires dotées de tablettes",
@@ -9874,6 +9848,32 @@
    "wbGroup": "GO",
    "wbMethod": "RFQ",
    "link": "https://projects.worldbank.org/en/projects-operations/procurement-detail/OP00449674",
+   "value": null,
+   "currency": "USD",
+   "firstSeen": "2000-01-01T00:00:00.000Z",
+   "titleNl": "Aankoop, installatie en onderhoud van 191 Starlink-sets en onderdelen voor netwerkuitbreiding voor de 3 nieuwe DREN’s, de 9 lerarenopleidingen en 179 prioritaire inspectiediensten die zijn uitgerust met tablets",
+   "trEngine": "DeepL",
+   "cats": [
+    "leo"
+   ],
+   "topic": "leo",
+   "qty": 191
+  },
+  {
+   "pub": "WB-OP00449676",
+   "source": "Wereldbank",
+   "title": "Acquisition, installation et maintenance de 191 kits Starlink et composants d’extension réseau pour les 3 nouvelles DREN, les 9 Ecoles Normales et 179 inspections prioritaires dotées de tablettes",
+   "buyer": "Niger Learning Improvement for Results in Education Project",
+   "country": "NE",
+   "countryName": "Niger",
+   "published": "2026-06-08",
+   "deadline": "",
+   "type": "Contract Award",
+   "kind": "award",
+   "cpv": [],
+   "wbGroup": "GO",
+   "wbMethod": "RFQ",
+   "link": "https://projects.worldbank.org/en/projects-operations/procurement-detail/OP00449676",
    "value": null,
    "currency": "USD",
    "firstSeen": "2000-01-01T00:00:00.000Z",
