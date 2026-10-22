@@ -1,146 +1,145 @@
 {
- "updated": "2026-10-22T08:42:39.269Z",
+ "updated": "2026-10-22T10:09:08.369Z",
  "queryVersion": "ec27e2fd8f",
  "sources": {
   "TED": {
    "ok": true,
-   "at": "2026-10-22T08:42:39.269Z",
+   "at": "2026-10-22T10:09:08.369Z",
    "count": 383,
    "note": ""
   },
   "Wereldbank": {
    "ok": true,
-   "at": "2026-10-22T08:42:39.269Z",
+   "at": "2026-10-22T10:09:08.369Z",
    "count": 78,
    "note": "94 gevonden, 78 echt over LEO."
   },
   "Find a Tender": {
    "ok": true,
-   "at": "2026-10-22T08:42:39.269Z",
+   "at": "2026-10-22T10:09:08.369Z",
    "count": 0,
-   "note": "1 pagina's, 42 berichten bekeken, 0 over LEO.",
-   "since": "2026-10-22T06:42:39.269Z"
+   "note": "2 pagina's, 130 berichten bekeken, 0 over LEO.",
+   "since": "2026-10-22T08:09:08.369Z"
   },
   "Contracts Finder": {
    "ok": true,
-   "at": "2026-10-22T08:42:39.269Z",
+   "at": "2026-10-22T10:09:08.369Z",
    "count": 25,
    "note": "1793 gevonden, 276 over LEO."
   },
   "TenderNed": {
    "ok": true,
-   "at": "2026-10-22T08:42:39.269Z",
+   "at": "2026-10-22T10:09:08.369Z",
    "count": 20,
    "note": "584 gevonden, 77 over LEO."
   },
   "Prozorro": {
    "ok": true,
-   "at": "2026-10-22T08:42:39.269Z",
-   "count": 65,
-   "note": "65 lopende procedures."
+   "at": "2026-10-22T10:09:08.369Z",
+   "count": 63,
+   "note": "63 lopende procedures."
   },
   "BOAMP": {
    "ok": true,
-   "at": "2026-10-22T08:42:39.269Z",
+   "at": "2026-10-22T10:09:08.369Z",
    "count": 9,
    "note": "92 gevonden, 9 over LEO."
   },
   "SIMAP (Zwitserland)": {
    "ok": true,
-   "at": "2026-10-22T08:42:39.269Z",
+   "at": "2026-10-22T10:09:08.369Z",
    "count": 0,
    "note": "24 gevonden, 0 over LEO."
   },
   "SECOP (Colombia)": {
    "ok": true,
-   "at": "2026-10-22T08:42:39.269Z",
+   "at": "2026-10-22T10:09:08.369Z",
    "count": 199,
    "note": "251 gevonden, 199 over LEO."
   },
   "CanadaBuys": {
    "ok": true,
-   "at": "2026-10-22T08:42:39.269Z",
+   "at": "2026-10-22T10:09:08.369Z",
    "count": 5,
    "note": "897 open tenders bekeken, 5 over LEO."
   },
   "AusTender": {
    "ok": true,
-   "at": "2026-10-22T08:42:39.269Z",
+   "at": "2026-10-22T10:09:08.369Z",
    "count": 0,
    "note": "0 contracten bekeken, 0 over LEO.",
-   "since": "2026-10-22T06:42:39.269Z"
+   "since": "2026-10-22T08:09:08.369Z"
   },
   "UNDP": {
    "ok": true,
-   "at": "2026-10-22T08:42:39.269Z",
+   "at": "2026-10-22T10:09:08.369Z",
    "count": 2,
    "note": "970 berichten bekeken, 2 over LEO."
   },
   "PCC (Taiwan)": {
    "ok": true,
-   "at": "2026-10-22T08:42:39.269Z",
+   "at": "2026-10-22T10:09:08.369Z",
    "count": 16,
    "note": "38 aanbestedingen over LEO."
   },
   "Doffin (Noorwegen)": {
    "ok": true,
-   "at": "2026-10-22T08:42:39.269Z",
+   "at": "2026-10-22T10:09:08.369Z",
    "count": 2,
    "note": "43 gevonden, 27 over LEO."
   },
   "BASE (Portugal)": {
    "ok": false,
-   "at": "2026-10-22T08:42:39.269Z",
+   "at": "2026-10-22T10:09:08.369Z",
    "count": 3,
    "note": "10 gevonden, 9 over LEO.",
    "error": "fetch failed"
   },
   "BZP (Polen)": {
    "ok": true,
-   "at": "2026-10-22T08:42:39.269Z",
+   "at": "2026-10-22T10:09:08.369Z",
    "count": 0,
    "note": "0 over LEO in de nieuwe publicaties.",
    "doneUntil": "2026-10-21"
   },
   "SEAP (Roemenië)": {
    "ok": true,
-   "at": "2026-10-22T08:42:39.269Z",
+   "at": "2026-10-22T10:09:08.369Z",
    "count": 0,
-   "note": "74 nieuwe aankondigingen bekeken, 0 over LEO.",
-   "since": "2026-10-22T06:42:39.269Z"
+   "note": "78 nieuwe aankondigingen bekeken, 0 over LEO.",
+   "since": "2026-10-22T08:09:08.369Z"
   },
   "oeffentlichevergabe.de": {
    "ok": true,
-   "at": "2026-10-22T08:42:39.269Z",
+   "at": "2026-10-22T10:09:08.369Z",
    "count": 0,
    "note": "0 over LEO in de nieuwe Duitse aankondigingen.",
    "doneUntil": "2026-10-21"
   },
   "PLACSP (Spanje)": {
    "ok": true,
-   "at": "2026-10-22T08:42:39.269Z",
+   "at": "2026-10-22T10:09:08.369Z",
    "count": 1,
-   "note": "981 wijzigingen bekeken (2 pagina's), 1 over LEO.",
-   "since": "2026-10-22T06:42:39.269Z"
+   "note": "481 wijzigingen bekeken (1 pagina's), 1 over LEO.",
+   "since": "2026-10-22T08:09:08.369Z"
   },
   "eTenders (Zuid-Afrika)": {
    "ok": false,
    "error": "ocds-api.etenders.gov.za gaf 500: ",
-   "at": "2026-10-22T08:42:39.269Z"
+   "at": "2026-10-22T10:09:08.369Z"
   },
   "DGCP (Dominicaanse Rep.)": {
    "ok": true,
-   "at": "2026-10-22T08:42:39.269Z",
+   "at": "2026-10-22T10:09:08.369Z",
    "count": 0,
    "note": "100 processen bekeken, 0 over LEO.",
-   "since": "2026-10-22T06:42:39.269Z"
+   "since": "2026-10-22T08:09:08.369Z"
   },
   "Goszakup (Kazachstan)": {
-   "ok": false,
-   "at": "2026-10-22T08:42:39.269Z",
+   "ok": true,
+   "at": "2026-10-22T10:09:08.369Z",
    "count": 3,
-   "note": "7 loten gevonden, 3 over LEO. Zonder datums: status bepaalt open of gesloten.",
-   "error": "fetch failed"
+   "note": "7 loten gevonden, 3 over LEO. Zonder datums: status bepaalt open of gesloten."
   },
   "PPIP (Kenia)": {
    "ok": true,
@@ -172,13 +171,13 @@
   },
   "Vertalen": {
    "ok": true,
-   "at": "2026-10-22T08:42:39.269Z",
+   "at": "2026-10-22T10:09:08.369Z",
    "count": 1,
    "note": "DeepL: 1 nieuw vertaald.",
    "engine": "DeepL"
   }
  },
- "count": 868,
+ "count": 866,
  "tenders": [
   {
    "source": "PPIP (Kenia)",
@@ -245,6 +244,30 @@
    "value": 1,
    "currency": "EUR",
    "firstSeen": "2026-10-22T07:30:08.785Z",
+   "cats": [
+    "other"
+   ],
+   "topic": "conn"
+  },
+  {
+   "pub": "UA-UA-2026-10-22-006981-a",
+   "source": "Prozorro",
+   "title": "32530000-7 – Телекомунікаційне супутникове обладнання",
+   "buyer": "Військова частина А4007",
+   "country": "UA",
+   "published": "2026-10-22",
+   "deadline": "2026-11-02",
+   "deadlineAt": "2026-11-01T22:00:00.000Z",
+   "type": "Aankondiging opdracht",
+   "kind": "notice",
+   "cpv": [],
+   "link": "https://prozorro.gov.ua/tender/UA-2026-10-22-006981-a",
+   "value": 1560000,
+   "currency": "UAH",
+   "defense": true,
+   "firstSeen": "2026-10-22T10:09:08.369Z",
+   "titleNl": "32530000-7 – Telecommunicatieapparatuur voor satellietgebruik",
+   "trEngine": "DeepL",
    "cats": [
     "other"
    ],
@@ -1614,30 +1637,6 @@
    "defense": true,
    "firstSeen": "2026-10-17T19:55:56.797Z",
    "titleNl": "Satellietcommunicatieterminal (Starlink 4X/Gen3)",
-   "trEngine": "DeepL",
-   "cats": [
-    "leo"
-   ],
-   "topic": "leo"
-  },
-  {
-   "pub": "UA-UA-2026-10-17-000166-a",
-   "source": "Prozorro",
-   "title": "Супутниковий модем Starlink Internet Satellite Mini",
-   "buyer": "ВІЙСЬКОВА ЧАСТИНА 3022 НАЦІОНАЛЬНОЇ ГВАРДІЇ УКРАЇНИ",
-   "country": "UA",
-   "published": "2026-10-17",
-   "deadline": "2026-10-27",
-   "deadlineAt": "2026-10-27T07:00:00.000Z",
-   "type": "Aankondiging opdracht",
-   "kind": "notice",
-   "cpv": [],
-   "link": "https://prozorro.gov.ua/tender/UA-2026-10-17-000166-a",
-   "value": 96250,
-   "currency": "UAH",
-   "defense": true,
-   "firstSeen": "2000-01-01T00:00:00.000Z",
-   "titleNl": "Starlink Internet Satellite Mini-satellietmodem",
    "trEngine": "DeepL",
    "cats": [
     "leo"
@@ -3573,29 +3572,6 @@
     "sat"
    ],
    "topic": "leo"
-  },
-  {
-   "pub": "UA-UA-2026-10-08-005360-a",
-   "source": "Prozorro",
-   "title": "Комплект супутникового обладнання",
-   "buyer": "Департамент патрульної поліції",
-   "country": "UA",
-   "published": "2026-10-08",
-   "deadline": "2026-10-27",
-   "deadlineAt": "2026-10-26T22:01:00.000Z",
-   "type": "Aankondiging opdracht",
-   "kind": "notice",
-   "cpv": [],
-   "link": "https://prozorro.gov.ua/tender/UA-2026-10-08-005360-a",
-   "value": 350566.67,
-   "currency": "UAH",
-   "firstSeen": "2026-10-22T08:26:28.751Z",
-   "titleNl": "Set satellietapparatuur",
-   "trEngine": "DeepL",
-   "cats": [
-    "other"
-   ],
-   "topic": "conn"
   },
   {
    "pub": "CO-CO1.REQ.11182644",
@@ -20192,29 +20168,6 @@
    "defense": true,
    "firstSeen": "2026-10-22T08:15:40.698Z",
    "titleNl": "Starlink Internet Satellite 3gen-satellietmodem",
-   "trEngine": "DeepL",
-   "cats": [
-    "leo"
-   ],
-   "topic": "leo"
-  },
-  {
-   "pub": "UA-UA-2026-10-20-010603-a",
-   "source": "Prozorro",
-   "title": "Супутниковий модем Starlink Internet Satellite Mini",
-   "buyer": "Рогатинська міська рада",
-   "country": "UA",
-   "published": "",
-   "deadline": "2026-10-23",
-   "deadlineAt": "2026-10-22T21:00:00.000Z",
-   "type": "Aankondiging opdracht",
-   "kind": "notice",
-   "cpv": [],
-   "link": "https://prozorro.gov.ua/tender/UA-2026-10-20-010603-a",
-   "value": 495000,
-   "currency": "UAH",
-   "firstSeen": "2026-10-22T08:15:40.698Z",
-   "titleNl": "Starlink Internet Satellite Mini-satellietmodem",
    "trEngine": "DeepL",
    "cats": [
     "leo"
