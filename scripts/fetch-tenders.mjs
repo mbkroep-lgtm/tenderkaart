@@ -338,8 +338,8 @@ const say = (name, msg) => { NOTES[name] = msg; console.log(`${name}: ${msg}`); 
 const UA = { 'User-Agent': 'Mozilla/5.0 (tendermap; +https://tenderkaart.vercel.app)' };
 const CORE_TERMS = [...SEARCH_TERMS, 'Project Kuiper', 'Amazon Leo'];
 const postJson = (url, body) => getJson(url, { method: 'POST', headers: { 'Content-Type': 'application/json', ...UA }, body: JSON.stringify(body) }, 2);
-const getText = async url => {
-  const r = await fetch(url, { headers: UA, signal: AbortSignal.timeout(120000) });
+const getText = async (url, ms = 120000) => {
+  const r = await fetch(url, { headers: UA, signal: AbortSignal.timeout(ms) });
   if (!r.ok) throw new Error(`${new URL(url).host} gaf ${r.status}`);
   return r.text();
 };
@@ -943,7 +943,7 @@ async function fetchPlacsp() {
     pages++;
     let xml = '';
     for (let i = 0; i < 3 && !xml; i++) {   // de Spaanse server is soms traag: opnieuw proberen
-      try { xml = await getText(url); }
+      try { xml = await getText(url, 240000); }   // grote pagina's, trage server: ruim de tijd
       catch (e) { if (i === 2) { if (pages === 1) throw e; PARTIAL.add(name); say(name, `pagina ${pages} lukte niet (${e.message}); de rest volgt de volgende keer.`); } else await sleep(10000 * (i + 1)); }
     }
     if (!xml) break;
