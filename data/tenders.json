@@ -1,124 +1,124 @@
 {
- "updated": "2026-10-22T08:15:40.698Z",
+ "updated": "2026-10-22T08:26:28.751Z",
  "queryVersion": "ec27e2fd8f",
  "sources": {
   "TED": {
    "ok": true,
-   "at": "2026-10-22T08:15:40.698Z",
+   "at": "2026-10-22T08:26:28.751Z",
    "count": 383,
    "note": ""
   },
   "Wereldbank": {
    "ok": true,
-   "at": "2026-10-22T08:15:40.698Z",
+   "at": "2026-10-22T08:26:28.751Z",
    "count": 78,
    "note": "94 gevonden, 78 echt over LEO."
   },
   "Find a Tender": {
    "ok": true,
-   "at": "2026-10-22T08:15:40.698Z",
+   "at": "2026-10-22T08:26:28.751Z",
    "count": 0,
-   "note": "1 pagina's, 35 berichten bekeken, 0 over LEO.",
-   "since": "2026-10-22T06:15:40.698Z"
+   "note": "1 pagina's, 40 berichten bekeken, 0 over LEO.",
+   "since": "2026-10-22T06:26:28.751Z"
   },
   "Contracts Finder": {
    "ok": true,
-   "at": "2026-10-22T08:15:40.698Z",
+   "at": "2026-10-22T08:26:28.751Z",
    "count": 25,
    "note": "1793 gevonden, 276 over LEO."
   },
   "TenderNed": {
    "ok": true,
-   "at": "2026-10-22T08:15:40.698Z",
+   "at": "2026-10-22T08:26:28.751Z",
    "count": 20,
    "note": "584 gevonden, 77 over LEO."
   },
   "Prozorro": {
    "ok": true,
-   "at": "2026-10-22T08:15:40.698Z",
-   "count": 63,
-   "note": "63 lopende procedures."
+   "at": "2026-10-22T08:26:28.751Z",
+   "count": 65,
+   "note": "65 lopende procedures."
   },
   "BOAMP": {
    "ok": true,
-   "at": "2026-10-22T08:15:40.698Z",
+   "at": "2026-10-22T08:26:28.751Z",
    "count": 9,
    "note": "92 gevonden, 9 over LEO."
   },
   "SIMAP (Zwitserland)": {
    "ok": true,
-   "at": "2026-10-22T08:15:40.698Z",
+   "at": "2026-10-22T08:26:28.751Z",
    "count": 0,
    "note": "24 gevonden, 0 over LEO."
   },
   "SECOP (Colombia)": {
    "ok": true,
-   "at": "2026-10-22T08:15:40.698Z",
+   "at": "2026-10-22T08:26:28.751Z",
    "count": 199,
    "note": "251 gevonden, 199 over LEO."
   },
   "CanadaBuys": {
    "ok": true,
-   "at": "2026-10-22T08:15:40.698Z",
+   "at": "2026-10-22T08:26:28.751Z",
    "count": 5,
    "note": "897 open tenders bekeken, 5 over LEO."
   },
   "AusTender": {
    "ok": true,
-   "at": "2026-10-22T08:15:40.698Z",
+   "at": "2026-10-22T08:26:28.751Z",
    "count": 0,
    "note": "0 contracten bekeken, 0 over LEO.",
-   "since": "2026-10-22T06:15:40.698Z"
+   "since": "2026-10-22T06:26:28.751Z"
   },
   "UNDP": {
    "ok": true,
-   "at": "2026-10-22T08:15:40.698Z",
+   "at": "2026-10-22T08:26:28.751Z",
    "count": 2,
    "note": "970 berichten bekeken, 2 over LEO."
   },
   "PCC (Taiwan)": {
    "ok": true,
-   "at": "2026-10-22T08:15:40.698Z",
+   "at": "2026-10-22T08:26:28.751Z",
    "count": 16,
    "note": "38 aanbestedingen over LEO."
   },
   "Doffin (Noorwegen)": {
    "ok": true,
-   "at": "2026-10-22T08:15:40.698Z",
+   "at": "2026-10-22T08:26:28.751Z",
    "count": 2,
    "note": "43 gevonden, 27 over LEO."
   },
   "BASE (Portugal)": {
    "ok": false,
-   "at": "2026-10-22T08:15:40.698Z",
+   "at": "2026-10-22T08:26:28.751Z",
    "count": 3,
    "note": "10 gevonden, 9 over LEO.",
    "error": "fetch failed"
   },
   "BZP (Polen)": {
    "ok": true,
-   "at": "2026-10-22T08:15:40.698Z",
+   "at": "2026-10-22T08:26:28.751Z",
    "count": 0,
    "note": "0 over LEO in de nieuwe publicaties.",
    "doneUntil": "2026-10-21"
   },
   "SEAP (Roemenië)": {
    "ok": true,
-   "at": "2026-10-22T08:15:40.698Z",
+   "at": "2026-10-22T08:26:28.751Z",
    "count": 0,
-   "note": "72 nieuwe aankondigingen bekeken, 0 over LEO.",
-   "since": "2026-10-22T06:15:40.698Z"
+   "note": "73 nieuwe aankondigingen bekeken, 0 over LEO.",
+   "since": "2026-10-22T06:26:28.751Z"
   },
   "oeffentlichevergabe.de": {
    "ok": true,
-   "at": "2026-10-22T08:15:40.698Z",
+   "at": "2026-10-22T08:26:28.751Z",
    "count": 0,
    "note": "0 over LEO in de nieuwe Duitse aankondigingen.",
    "doneUntil": "2026-10-21"
   },
   "PLACSP (Spanje)": {
    "ok": false,
-   "at": "2026-10-22T08:15:40.698Z",
+   "at": "2026-10-22T08:26:28.751Z",
    "count": 0,
    "note": "111 wijzigingen bekeken (1 pagina's), 0 over LEO.",
    "since": "2026-10-21T16:07:25.016Z",
@@ -127,18 +127,18 @@
   "eTenders (Zuid-Afrika)": {
    "ok": false,
    "error": "ocds-api.etenders.gov.za gaf 500: ",
-   "at": "2026-10-22T08:15:40.698Z"
+   "at": "2026-10-22T08:26:28.751Z"
   },
   "DGCP (Dominicaanse Rep.)": {
    "ok": true,
-   "at": "2026-10-22T08:15:40.698Z",
+   "at": "2026-10-22T08:26:28.751Z",
    "count": 0,
    "note": "100 processen bekeken, 0 over LEO.",
-   "since": "2026-10-22T06:15:40.698Z"
+   "since": "2026-10-22T06:26:28.751Z"
   },
   "Goszakup (Kazachstan)": {
    "ok": true,
-   "at": "2026-10-22T08:15:40.698Z",
+   "at": "2026-10-22T08:26:28.751Z",
    "count": 3,
    "note": "7 loten gevonden, 3 over LEO. Zonder datums: status bepaalt open of gesloten."
   },
@@ -172,13 +172,13 @@
   },
   "Vertalen": {
    "ok": true,
-   "at": "2026-10-22T08:15:40.698Z",
-   "count": 1,
-   "note": "DeepL: 1 nieuw vertaald.",
+   "at": "2026-10-22T08:26:28.751Z",
+   "count": 2,
+   "note": "DeepL: 2 nieuw vertaald.",
    "engine": "DeepL"
   }
  },
- "count": 866,
+ "count": 867,
  "tenders": [
   {
    "source": "PPIP (Kenia)",
@@ -249,6 +249,30 @@
     "other"
    ],
    "topic": "conn"
+  },
+  {
+   "pub": "UA-UA-2026-10-21-006750-a",
+   "source": "Prozorro",
+   "title": "Комплекти станції супутникового зв'язку Starlink mini",
+   "buyer": "ВІЙСЬКОВА ЧАСТИНА А4507",
+   "country": "UA",
+   "published": "2026-10-21",
+   "deadline": "2026-10-30",
+   "deadlineAt": "2026-10-30T10:49:00.000Z",
+   "type": "Aankondiging opdracht",
+   "kind": "notice",
+   "cpv": [],
+   "link": "https://prozorro.gov.ua/tender/UA-2026-10-21-006750-a",
+   "value": 192500,
+   "currency": "UAH",
+   "defense": true,
+   "firstSeen": "2026-10-22T08:26:28.751Z",
+   "titleNl": "Starlink mini-satellietcommunicatiestationsets",
+   "trEngine": "DeepL",
+   "cats": [
+    "leo"
+   ],
+   "topic": "leo"
   },
   {
    "source": "AusTender",
@@ -1548,30 +1572,6 @@
    "topic": "leo"
   },
   {
-   "pub": "UA-UA-2026-10-17-000166-a",
-   "source": "Prozorro",
-   "title": "Супутниковий модем Starlink Internet Satellite Mini",
-   "buyer": "ВІЙСЬКОВА ЧАСТИНА 3022 НАЦІОНАЛЬНОЇ ГВАРДІЇ УКРАЇНИ",
-   "country": "UA",
-   "published": "2026-10-17",
-   "deadline": "2026-10-27",
-   "deadlineAt": "2026-10-27T07:00:00.000Z",
-   "type": "Aankondiging opdracht",
-   "kind": "notice",
-   "cpv": [],
-   "link": "https://prozorro.gov.ua/tender/UA-2026-10-17-000166-a",
-   "value": 96250,
-   "currency": "UAH",
-   "defense": true,
-   "firstSeen": "2000-01-01T00:00:00.000Z",
-   "titleNl": "Starlink Internet Satellite Mini-satellietmodem",
-   "trEngine": "DeepL",
-   "cats": [
-    "leo"
-   ],
-   "topic": "leo"
-  },
-  {
    "pub": "UA-UA-2026-10-17-000603-a",
    "source": "Prozorro",
    "title": "Термінал супутникового зв'язку (Starlink 4X/Gen3)",
@@ -1589,6 +1589,30 @@
    "defense": true,
    "firstSeen": "2026-10-17T19:55:56.797Z",
    "titleNl": "Satellietcommunicatieterminal (Starlink 4X/Gen3)",
+   "trEngine": "DeepL",
+   "cats": [
+    "leo"
+   ],
+   "topic": "leo"
+  },
+  {
+   "pub": "UA-UA-2026-10-17-000166-a",
+   "source": "Prozorro",
+   "title": "Супутниковий модем Starlink Internet Satellite Mini",
+   "buyer": "ВІЙСЬКОВА ЧАСТИНА 3022 НАЦІОНАЛЬНОЇ ГВАРДІЇ УКРАЇНИ",
+   "country": "UA",
+   "published": "2026-10-17",
+   "deadline": "2026-10-27",
+   "deadlineAt": "2026-10-27T07:00:00.000Z",
+   "type": "Aankondiging opdracht",
+   "kind": "notice",
+   "cpv": [],
+   "link": "https://prozorro.gov.ua/tender/UA-2026-10-17-000166-a",
+   "value": 96250,
+   "currency": "UAH",
+   "defense": true,
+   "firstSeen": "2000-01-01T00:00:00.000Z",
+   "titleNl": "Starlink Internet Satellite Mini-satellietmodem",
    "trEngine": "DeepL",
    "cats": [
     "leo"
@@ -3502,30 +3526,6 @@
    "topic": "leo"
   },
   {
-   "pub": "UA-UA-2026-10-08-007976-a",
-   "source": "Prozorro",
-   "title": "Супутникові модеми",
-   "buyer": "військова частина А0409",
-   "country": "UA",
-   "published": "2026-10-08",
-   "deadline": "2026-10-19",
-   "deadlineAt": "2026-10-18T21:00:00.000Z",
-   "type": "In beoordeling",
-   "kind": "award",
-   "cpv": [],
-   "link": "https://prozorro.gov.ua/tender/UA-2026-10-08-007976-a",
-   "value": 507129.18,
-   "currency": "UAH",
-   "defense": true,
-   "firstSeen": "2026-10-15T13:42:58.648Z",
-   "titleNl": "Satellietmodems",
-   "trEngine": "DeepL",
-   "cats": [
-    "other"
-   ],
-   "topic": "conn"
-  },
-  {
    "pub": "UA-UA-2026-10-08-012086-a",
    "source": "Prozorro",
    "title": "Супутникові термінали Starlink Mini з адаптацією на автомобіль або еквівалент (код 32530000-7 «Телекомунікаційне супутникове обладнання» національного класифікатора України за ДК 021:2015 «Єдиний закупівельний словник»)",
@@ -3548,6 +3548,29 @@
     "sat"
    ],
    "topic": "leo"
+  },
+  {
+   "pub": "UA-UA-2026-10-08-005360-a",
+   "source": "Prozorro",
+   "title": "Комплект супутникового обладнання",
+   "buyer": "Департамент патрульної поліції",
+   "country": "UA",
+   "published": "2026-10-08",
+   "deadline": "2026-10-27",
+   "deadlineAt": "2026-10-26T22:01:00.000Z",
+   "type": "Aankondiging opdracht",
+   "kind": "notice",
+   "cpv": [],
+   "link": "https://prozorro.gov.ua/tender/UA-2026-10-08-005360-a",
+   "value": 350566.67,
+   "currency": "UAH",
+   "firstSeen": "2026-10-22T08:26:28.751Z",
+   "titleNl": "Set satellietapparatuur",
+   "trEngine": "DeepL",
+   "cats": [
+    "other"
+   ],
+   "topic": "conn"
   },
   {
    "pub": "CO-CO1.REQ.11182644",
@@ -4582,6 +4605,28 @@
    "topic": "conn"
   },
   {
+   "pub": "653731-2026",
+   "source": "TED",
+   "title": "Polen – Technische computerondersteuningsdiensten – Usługa wsparcia technicznego dla posiadanego przez Zamawiającego sprzętu informatycznego FortiGate SD-WAN przez okres 36 miesięcy",
+   "buyer": "Krajowy Ośrodek Wsparcia Rolnictwa",
+   "country": "PL",
+   "published": "2026-09-23",
+   "deadline": "",
+   "type": "Gegunde opdracht",
+   "kind": "award",
+   "cpv": [
+    "72611000"
+   ],
+   "link": "https://ted.europa.eu/nl/notice/-/detail/653731-2026",
+   "value": null,
+   "currency": "EUR",
+   "firstSeen": "2000-01-01T00:00:00.000Z",
+   "cats": [
+    "managed"
+   ],
+   "topic": "conn"
+  },
+  {
    "pub": "655377-2026",
    "source": "TED",
    "title": "Duitsland – Telefoon- en datatransmissiediensten – Innerstädtische Verbindungen der Kommunen und Internetaccess mit DDoS Absicherung",
@@ -4603,28 +4648,6 @@
    "firstSeen": "2000-01-01T00:00:00.000Z",
    "cats": [
     "other"
-   ],
-   "topic": "conn"
-  },
-  {
-   "pub": "653731-2026",
-   "source": "TED",
-   "title": "Polen – Technische computerondersteuningsdiensten – Usługa wsparcia technicznego dla posiadanego przez Zamawiającego sprzętu informatycznego FortiGate SD-WAN przez okres 36 miesięcy",
-   "buyer": "Krajowy Ośrodek Wsparcia Rolnictwa",
-   "country": "PL",
-   "published": "2026-09-23",
-   "deadline": "",
-   "type": "Gegunde opdracht",
-   "kind": "award",
-   "cpv": [
-    "72611000"
-   ],
-   "link": "https://ted.europa.eu/nl/notice/-/detail/653731-2026",
-   "value": null,
-   "currency": "EUR",
-   "firstSeen": "2000-01-01T00:00:00.000Z",
-   "cats": [
-    "managed"
    ],
    "topic": "conn"
   },
@@ -5291,28 +5314,6 @@
    "topic": "conn"
   },
   {
-   "pub": "628091-2026",
-   "source": "TED",
-   "title": "Italië – Reparatie en onderhoud van elektrische uitrusting in gebouwen – gara a procedura aperta per l' affidamento della manutenzione di I e II livello degli impianti elettrici e speciali del Minimetrò",
-   "buyer": "Busitalia Sita Nord Srl società con socio unico Ferrovie dello Stato Italiane SpA, soggetta alla direzione e coordinamento di Trenitalia S.p.A.",
-   "country": "IT",
-   "published": "2026-09-11",
-   "deadline": "2026-10-15",
-   "type": "Aankondiging opdracht",
-   "kind": "notice",
-   "cpv": [
-    "50711000"
-   ],
-   "link": "https://ted.europa.eu/nl/notice/-/detail/628091-2026",
-   "value": 1657992.87,
-   "currency": "EUR",
-   "firstSeen": "2000-01-01T00:00:00.000Z",
-   "cats": [
-    "other"
-   ],
-   "topic": "conn"
-  },
-  {
    "pub": "627167-2026",
    "source": "TED",
    "title": "Frankrijk – Radio-, televisie-, communicatie-, telecommunicatietoestellen en aanverwante apparatuur – Fourniture de matériels d'équipements radioélectrique et de vidéo-protection pour les services relevant du SGAMI Ile de France et les services du ministère de l’Intérieur associés.",
@@ -5327,6 +5328,28 @@
    ],
    "link": "https://ted.europa.eu/nl/notice/-/detail/627167-2026",
    "value": null,
+   "currency": "EUR",
+   "firstSeen": "2000-01-01T00:00:00.000Z",
+   "cats": [
+    "other"
+   ],
+   "topic": "conn"
+  },
+  {
+   "pub": "628091-2026",
+   "source": "TED",
+   "title": "Italië – Reparatie en onderhoud van elektrische uitrusting in gebouwen – gara a procedura aperta per l' affidamento della manutenzione di I e II livello degli impianti elettrici e speciali del Minimetrò",
+   "buyer": "Busitalia Sita Nord Srl società con socio unico Ferrovie dello Stato Italiane SpA, soggetta alla direzione e coordinamento di Trenitalia S.p.A.",
+   "country": "IT",
+   "published": "2026-09-11",
+   "deadline": "2026-10-15",
+   "type": "Aankondiging opdracht",
+   "kind": "notice",
+   "cpv": [
+    "50711000"
+   ],
+   "link": "https://ted.europa.eu/nl/notice/-/detail/628091-2026",
+   "value": 1657992.87,
    "currency": "EUR",
    "firstSeen": "2000-01-01T00:00:00.000Z",
    "cats": [
