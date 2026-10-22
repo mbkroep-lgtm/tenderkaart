@@ -1,146 +1,146 @@
 {
- "updated": "2026-10-22T08:26:28.751Z",
+ "updated": "2026-10-22T08:42:39.269Z",
  "queryVersion": "ec27e2fd8f",
  "sources": {
   "TED": {
    "ok": true,
-   "at": "2026-10-22T08:26:28.751Z",
+   "at": "2026-10-22T08:42:39.269Z",
    "count": 383,
    "note": ""
   },
   "Wereldbank": {
    "ok": true,
-   "at": "2026-10-22T08:26:28.751Z",
+   "at": "2026-10-22T08:42:39.269Z",
    "count": 78,
    "note": "94 gevonden, 78 echt over LEO."
   },
   "Find a Tender": {
    "ok": true,
-   "at": "2026-10-22T08:26:28.751Z",
+   "at": "2026-10-22T08:42:39.269Z",
    "count": 0,
-   "note": "1 pagina's, 40 berichten bekeken, 0 over LEO.",
-   "since": "2026-10-22T06:26:28.751Z"
+   "note": "1 pagina's, 42 berichten bekeken, 0 over LEO.",
+   "since": "2026-10-22T06:42:39.269Z"
   },
   "Contracts Finder": {
    "ok": true,
-   "at": "2026-10-22T08:26:28.751Z",
+   "at": "2026-10-22T08:42:39.269Z",
    "count": 25,
    "note": "1793 gevonden, 276 over LEO."
   },
   "TenderNed": {
    "ok": true,
-   "at": "2026-10-22T08:26:28.751Z",
+   "at": "2026-10-22T08:42:39.269Z",
    "count": 20,
    "note": "584 gevonden, 77 over LEO."
   },
   "Prozorro": {
    "ok": true,
-   "at": "2026-10-22T08:26:28.751Z",
+   "at": "2026-10-22T08:42:39.269Z",
    "count": 65,
    "note": "65 lopende procedures."
   },
   "BOAMP": {
    "ok": true,
-   "at": "2026-10-22T08:26:28.751Z",
+   "at": "2026-10-22T08:42:39.269Z",
    "count": 9,
    "note": "92 gevonden, 9 over LEO."
   },
   "SIMAP (Zwitserland)": {
    "ok": true,
-   "at": "2026-10-22T08:26:28.751Z",
+   "at": "2026-10-22T08:42:39.269Z",
    "count": 0,
    "note": "24 gevonden, 0 over LEO."
   },
   "SECOP (Colombia)": {
    "ok": true,
-   "at": "2026-10-22T08:26:28.751Z",
+   "at": "2026-10-22T08:42:39.269Z",
    "count": 199,
    "note": "251 gevonden, 199 over LEO."
   },
   "CanadaBuys": {
    "ok": true,
-   "at": "2026-10-22T08:26:28.751Z",
+   "at": "2026-10-22T08:42:39.269Z",
    "count": 5,
    "note": "897 open tenders bekeken, 5 over LEO."
   },
   "AusTender": {
    "ok": true,
-   "at": "2026-10-22T08:26:28.751Z",
+   "at": "2026-10-22T08:42:39.269Z",
    "count": 0,
    "note": "0 contracten bekeken, 0 over LEO.",
-   "since": "2026-10-22T06:26:28.751Z"
+   "since": "2026-10-22T06:42:39.269Z"
   },
   "UNDP": {
    "ok": true,
-   "at": "2026-10-22T08:26:28.751Z",
+   "at": "2026-10-22T08:42:39.269Z",
    "count": 2,
    "note": "970 berichten bekeken, 2 over LEO."
   },
   "PCC (Taiwan)": {
    "ok": true,
-   "at": "2026-10-22T08:26:28.751Z",
+   "at": "2026-10-22T08:42:39.269Z",
    "count": 16,
    "note": "38 aanbestedingen over LEO."
   },
   "Doffin (Noorwegen)": {
    "ok": true,
-   "at": "2026-10-22T08:26:28.751Z",
+   "at": "2026-10-22T08:42:39.269Z",
    "count": 2,
    "note": "43 gevonden, 27 over LEO."
   },
   "BASE (Portugal)": {
    "ok": false,
-   "at": "2026-10-22T08:26:28.751Z",
+   "at": "2026-10-22T08:42:39.269Z",
    "count": 3,
    "note": "10 gevonden, 9 over LEO.",
    "error": "fetch failed"
   },
   "BZP (Polen)": {
    "ok": true,
-   "at": "2026-10-22T08:26:28.751Z",
+   "at": "2026-10-22T08:42:39.269Z",
    "count": 0,
    "note": "0 over LEO in de nieuwe publicaties.",
    "doneUntil": "2026-10-21"
   },
   "SEAP (Roemenië)": {
    "ok": true,
-   "at": "2026-10-22T08:26:28.751Z",
+   "at": "2026-10-22T08:42:39.269Z",
    "count": 0,
-   "note": "73 nieuwe aankondigingen bekeken, 0 over LEO.",
-   "since": "2026-10-22T06:26:28.751Z"
+   "note": "74 nieuwe aankondigingen bekeken, 0 over LEO.",
+   "since": "2026-10-22T06:42:39.269Z"
   },
   "oeffentlichevergabe.de": {
    "ok": true,
-   "at": "2026-10-22T08:26:28.751Z",
+   "at": "2026-10-22T08:42:39.269Z",
    "count": 0,
    "note": "0 over LEO in de nieuwe Duitse aankondigingen.",
    "doneUntil": "2026-10-21"
   },
   "PLACSP (Spanje)": {
-   "ok": false,
-   "at": "2026-10-22T08:26:28.751Z",
-   "count": 0,
-   "note": "111 wijzigingen bekeken (1 pagina's), 0 over LEO.",
-   "since": "2026-10-21T16:07:25.016Z",
-   "error": "The operation was aborted due to timeout"
+   "ok": true,
+   "at": "2026-10-22T08:42:39.269Z",
+   "count": 1,
+   "note": "981 wijzigingen bekeken (2 pagina's), 1 over LEO.",
+   "since": "2026-10-22T06:42:39.269Z"
   },
   "eTenders (Zuid-Afrika)": {
    "ok": false,
    "error": "ocds-api.etenders.gov.za gaf 500: ",
-   "at": "2026-10-22T08:26:28.751Z"
+   "at": "2026-10-22T08:42:39.269Z"
   },
   "DGCP (Dominicaanse Rep.)": {
    "ok": true,
-   "at": "2026-10-22T08:26:28.751Z",
+   "at": "2026-10-22T08:42:39.269Z",
    "count": 0,
    "note": "100 processen bekeken, 0 over LEO.",
-   "since": "2026-10-22T06:26:28.751Z"
+   "since": "2026-10-22T06:42:39.269Z"
   },
   "Goszakup (Kazachstan)": {
-   "ok": true,
-   "at": "2026-10-22T08:26:28.751Z",
+   "ok": false,
+   "at": "2026-10-22T08:42:39.269Z",
    "count": 3,
-   "note": "7 loten gevonden, 3 over LEO. Zonder datums: status bepaalt open of gesloten."
+   "note": "7 loten gevonden, 3 over LEO. Zonder datums: status bepaalt open of gesloten.",
+   "error": "fetch failed"
   },
   "PPIP (Kenia)": {
    "ok": true,
@@ -172,13 +172,13 @@
   },
   "Vertalen": {
    "ok": true,
-   "at": "2026-10-22T08:26:28.751Z",
-   "count": 2,
-   "note": "DeepL: 2 nieuw vertaald.",
+   "at": "2026-10-22T08:42:39.269Z",
+   "count": 1,
+   "note": "DeepL: 1 nieuw vertaald.",
    "engine": "DeepL"
   }
  },
- "count": 867,
+ "count": 868,
  "tenders": [
   {
    "source": "PPIP (Kenia)",
@@ -319,6 +319,31 @@
    "trEngine": "DeepL",
    "cats": [
     "wifi"
+   ],
+   "topic": "conn"
+  },
+  {
+   "pub": "ES-20447284",
+   "source": "PLACSP (Spanje)",
+   "title": "Suministro de Dos Petacas para la central de Telemetría de la Unidad de Rehabilitación Cardíaca del Centro Asistencial de Ibermutua sito en Madrid (C/Ramírez De Arellano, 27)",
+   "buyer": "Dirección General de IBERMUTUA, Mutua Colaboradora con la Seguridad Social nº 274",
+   "country": "ES",
+   "published": "2026-10-21",
+   "deadline": "",
+   "deadlineAt": "",
+   "type": "Estado ADJ",
+   "kind": "award",
+   "cpv": [
+    "32441000"
+   ],
+   "link": "https://contrataciondelestado.es/wps/poc?uri=deeplink:detalle_licitacion&amp;idEvl=YTGiOi3EabW5HQrHoP3G5A%3D%3D",
+   "value": 7200,
+   "currency": "EUR",
+   "firstSeen": "2026-10-22T08:42:39.269Z",
+   "titleNl": "Levering van twee opbergkisten voor het telemetriecentrum van de afdeling hartrevalidatie van het zorgcentrum van Ibermutua in Madrid (C/Ramírez De Arellano, 27)",
+   "trEngine": "DeepL",
+   "cats": [
+    "industrial"
    ],
    "topic": "conn"
   },
@@ -4327,6 +4352,28 @@
    "topic": "conn"
   },
   {
+   "pub": "668493-2026",
+   "source": "TED",
+   "title": "Polen – WAN-diensten – Zakup usług telekomunikacyjnych sieci WAN",
+   "buyer": "Państwowe Gospodarstwo Wodne Wody Polskie",
+   "country": "PL",
+   "published": "2026-09-29",
+   "deadline": "2026-10-16",
+   "type": "Aankondiging opdracht",
+   "kind": "notice",
+   "cpv": [
+    "72720000"
+   ],
+   "link": "https://ted.europa.eu/nl/notice/-/detail/668493-2026",
+   "value": null,
+   "currency": "EUR",
+   "firstSeen": "2000-01-01T00:00:00.000Z",
+   "cats": [
+    "other"
+   ],
+   "topic": "conn"
+  },
+  {
    "pub": "670068-2026",
    "source": "TED",
    "title": "Duitsland – Interconnectiediensten – Dark Fiber",
@@ -4347,28 +4394,6 @@
    "firstSeen": "2000-01-01T00:00:00.000Z",
    "cats": [
     "fiber"
-   ],
-   "topic": "conn"
-  },
-  {
-   "pub": "668493-2026",
-   "source": "TED",
-   "title": "Polen – WAN-diensten – Zakup usług telekomunikacyjnych sieci WAN",
-   "buyer": "Państwowe Gospodarstwo Wodne Wody Polskie",
-   "country": "PL",
-   "published": "2026-09-29",
-   "deadline": "2026-10-16",
-   "type": "Aankondiging opdracht",
-   "kind": "notice",
-   "cpv": [
-    "72720000"
-   ],
-   "link": "https://ted.europa.eu/nl/notice/-/detail/668493-2026",
-   "value": null,
-   "currency": "EUR",
-   "firstSeen": "2000-01-01T00:00:00.000Z",
-   "cats": [
-    "other"
    ],
    "topic": "conn"
   },
@@ -4605,28 +4630,6 @@
    "topic": "conn"
   },
   {
-   "pub": "653731-2026",
-   "source": "TED",
-   "title": "Polen – Technische computerondersteuningsdiensten – Usługa wsparcia technicznego dla posiadanego przez Zamawiającego sprzętu informatycznego FortiGate SD-WAN przez okres 36 miesięcy",
-   "buyer": "Krajowy Ośrodek Wsparcia Rolnictwa",
-   "country": "PL",
-   "published": "2026-09-23",
-   "deadline": "",
-   "type": "Gegunde opdracht",
-   "kind": "award",
-   "cpv": [
-    "72611000"
-   ],
-   "link": "https://ted.europa.eu/nl/notice/-/detail/653731-2026",
-   "value": null,
-   "currency": "EUR",
-   "firstSeen": "2000-01-01T00:00:00.000Z",
-   "cats": [
-    "managed"
-   ],
-   "topic": "conn"
-  },
-  {
    "pub": "655377-2026",
    "source": "TED",
    "title": "Duitsland – Telefoon- en datatransmissiediensten – Innerstädtische Verbindungen der Kommunen und Internetaccess mit DDoS Absicherung",
@@ -4652,19 +4655,19 @@
    "topic": "conn"
   },
   {
-   "pub": "656516-2026",
+   "pub": "653731-2026",
    "source": "TED",
-   "title": "Polen – Netwerkuitrusting – Dostawa i wdrożenie urządzeń brzegowych typu Next Generation Firewall niezbędne do podłączenia Akademii Pożarniczej do sieci SD-WAN Państwowej Straży Pożarnej",
-   "buyer": "Akademia Pożarnicza",
+   "title": "Polen – Technische computerondersteuningsdiensten – Usługa wsparcia technicznego dla posiadanego przez Zamawiającego sprzętu informatycznego FortiGate SD-WAN przez okres 36 miesięcy",
+   "buyer": "Krajowy Ośrodek Wsparcia Rolnictwa",
    "country": "PL",
    "published": "2026-09-23",
    "deadline": "",
    "type": "Gegunde opdracht",
    "kind": "award",
    "cpv": [
-    "32420000"
+    "72611000"
    ],
-   "link": "https://ted.europa.eu/nl/notice/-/detail/656516-2026",
+   "link": "https://ted.europa.eu/nl/notice/-/detail/653731-2026",
    "value": null,
    "currency": "EUR",
    "firstSeen": "2000-01-01T00:00:00.000Z",
@@ -4687,6 +4690,28 @@
     "32420000"
    ],
    "link": "https://ted.europa.eu/nl/notice/-/detail/656419-2026",
+   "value": null,
+   "currency": "EUR",
+   "firstSeen": "2000-01-01T00:00:00.000Z",
+   "cats": [
+    "managed"
+   ],
+   "topic": "conn"
+  },
+  {
+   "pub": "656516-2026",
+   "source": "TED",
+   "title": "Polen – Netwerkuitrusting – Dostawa i wdrożenie urządzeń brzegowych typu Next Generation Firewall niezbędne do podłączenia Akademii Pożarniczej do sieci SD-WAN Państwowej Straży Pożarnej",
+   "buyer": "Akademia Pożarnicza",
+   "country": "PL",
+   "published": "2026-09-23",
+   "deadline": "",
+   "type": "Gegunde opdracht",
+   "kind": "award",
+   "cpv": [
+    "32420000"
+   ],
+   "link": "https://ted.europa.eu/nl/notice/-/detail/656516-2026",
    "value": null,
    "currency": "EUR",
    "firstSeen": "2000-01-01T00:00:00.000Z",
