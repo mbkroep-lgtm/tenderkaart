@@ -1,143 +1,143 @@
 {
- "updated": "2026-10-22T10:09:08.369Z",
+ "updated": "2026-10-22T14:40:07.056Z",
  "queryVersion": "ec27e2fd8f",
  "sources": {
   "TED": {
    "ok": true,
-   "at": "2026-10-22T10:09:08.369Z",
+   "at": "2026-10-22T14:40:07.056Z",
    "count": 383,
    "note": ""
   },
   "Wereldbank": {
    "ok": true,
-   "at": "2026-10-22T10:09:08.369Z",
+   "at": "2026-10-22T14:40:07.056Z",
    "count": 78,
    "note": "94 gevonden, 78 echt over LEO."
   },
   "Find a Tender": {
    "ok": true,
-   "at": "2026-10-22T10:09:08.369Z",
-   "count": 0,
-   "note": "2 pagina's, 130 berichten bekeken, 0 over LEO.",
-   "since": "2026-10-22T08:09:08.369Z"
+   "at": "2026-10-22T14:40:07.056Z",
+   "count": 1,
+   "note": "3 pagina's, 269 berichten bekeken, 1 over LEO.",
+   "since": "2026-10-22T12:40:07.056Z"
   },
   "Contracts Finder": {
    "ok": true,
-   "at": "2026-10-22T10:09:08.369Z",
+   "at": "2026-10-22T14:40:07.056Z",
    "count": 25,
    "note": "1793 gevonden, 276 over LEO."
   },
   "TenderNed": {
    "ok": true,
-   "at": "2026-10-22T10:09:08.369Z",
+   "at": "2026-10-22T14:40:07.056Z",
    "count": 20,
    "note": "584 gevonden, 77 over LEO."
   },
   "Prozorro": {
    "ok": true,
-   "at": "2026-10-22T10:09:08.369Z",
-   "count": 63,
-   "note": "63 lopende procedures."
+   "at": "2026-10-22T14:40:07.056Z",
+   "count": 72,
+   "note": "72 lopende procedures."
   },
   "BOAMP": {
    "ok": true,
-   "at": "2026-10-22T10:09:08.369Z",
+   "at": "2026-10-22T14:40:07.056Z",
    "count": 9,
    "note": "92 gevonden, 9 over LEO."
   },
   "SIMAP (Zwitserland)": {
    "ok": true,
-   "at": "2026-10-22T10:09:08.369Z",
+   "at": "2026-10-22T14:40:07.056Z",
    "count": 0,
    "note": "24 gevonden, 0 over LEO."
   },
   "SECOP (Colombia)": {
    "ok": true,
-   "at": "2026-10-22T10:09:08.369Z",
+   "at": "2026-10-22T14:40:07.056Z",
    "count": 199,
    "note": "251 gevonden, 199 over LEO."
   },
   "CanadaBuys": {
    "ok": true,
-   "at": "2026-10-22T10:09:08.369Z",
+   "at": "2026-10-22T14:40:07.056Z",
    "count": 5,
    "note": "897 open tenders bekeken, 5 over LEO."
   },
   "AusTender": {
    "ok": true,
-   "at": "2026-10-22T10:09:08.369Z",
+   "at": "2026-10-22T14:40:07.056Z",
    "count": 0,
    "note": "0 contracten bekeken, 0 over LEO.",
-   "since": "2026-10-22T08:09:08.369Z"
+   "since": "2026-10-22T12:40:07.056Z"
   },
   "UNDP": {
    "ok": true,
-   "at": "2026-10-22T10:09:08.369Z",
+   "at": "2026-10-22T14:40:07.056Z",
    "count": 2,
    "note": "970 berichten bekeken, 2 over LEO."
   },
   "PCC (Taiwan)": {
    "ok": true,
-   "at": "2026-10-22T10:09:08.369Z",
+   "at": "2026-10-22T14:40:07.056Z",
    "count": 16,
    "note": "38 aanbestedingen over LEO."
   },
   "Doffin (Noorwegen)": {
    "ok": true,
-   "at": "2026-10-22T10:09:08.369Z",
+   "at": "2026-10-22T14:40:07.056Z",
    "count": 2,
    "note": "43 gevonden, 27 over LEO."
   },
   "BASE (Portugal)": {
    "ok": false,
-   "at": "2026-10-22T10:09:08.369Z",
+   "at": "2026-10-22T14:40:07.056Z",
    "count": 3,
    "note": "10 gevonden, 9 over LEO.",
    "error": "fetch failed"
   },
   "BZP (Polen)": {
    "ok": true,
-   "at": "2026-10-22T10:09:08.369Z",
+   "at": "2026-10-22T14:40:07.056Z",
    "count": 0,
    "note": "0 over LEO in de nieuwe publicaties.",
    "doneUntil": "2026-10-21"
   },
   "SEAP (Roemenië)": {
    "ok": true,
-   "at": "2026-10-22T10:09:08.369Z",
+   "at": "2026-10-22T14:40:07.056Z",
    "count": 0,
-   "note": "78 nieuwe aankondigingen bekeken, 0 over LEO.",
-   "since": "2026-10-22T08:09:08.369Z"
+   "note": "90 nieuwe aankondigingen bekeken, 0 over LEO.",
+   "since": "2026-10-22T12:40:07.056Z"
   },
   "oeffentlichevergabe.de": {
    "ok": true,
-   "at": "2026-10-22T10:09:08.369Z",
+   "at": "2026-10-22T14:40:07.056Z",
    "count": 0,
    "note": "0 over LEO in de nieuwe Duitse aankondigingen.",
    "doneUntil": "2026-10-21"
   },
   "PLACSP (Spanje)": {
    "ok": true,
-   "at": "2026-10-22T10:09:08.369Z",
+   "at": "2026-10-22T14:40:07.056Z",
    "count": 1,
    "note": "481 wijzigingen bekeken (1 pagina's), 1 over LEO.",
-   "since": "2026-10-22T08:09:08.369Z"
+   "since": "2026-10-22T12:40:07.056Z"
   },
   "eTenders (Zuid-Afrika)": {
    "ok": false,
    "error": "ocds-api.etenders.gov.za gaf 500: ",
-   "at": "2026-10-22T10:09:08.369Z"
+   "at": "2026-10-22T14:40:07.056Z"
   },
   "DGCP (Dominicaanse Rep.)": {
    "ok": true,
-   "at": "2026-10-22T10:09:08.369Z",
+   "at": "2026-10-22T14:40:07.056Z",
    "count": 0,
    "note": "100 processen bekeken, 0 over LEO.",
-   "since": "2026-10-22T08:09:08.369Z"
+   "since": "2026-10-22T12:40:07.056Z"
   },
   "Goszakup (Kazachstan)": {
    "ok": true,
-   "at": "2026-10-22T10:09:08.369Z",
+   "at": "2026-10-22T14:40:07.056Z",
    "count": 3,
    "note": "7 loten gevonden, 3 over LEO. Zonder datums: status bepaalt open of gesloten."
   },
@@ -171,13 +171,13 @@
   },
   "Vertalen": {
    "ok": true,
-   "at": "2026-10-22T10:09:08.369Z",
-   "count": 1,
-   "note": "DeepL: 1 nieuw vertaald.",
+   "at": "2026-10-22T14:40:07.056Z",
+   "count": 8,
+   "note": "DeepL: 8 nieuw vertaald.",
    "engine": "DeepL"
   }
  },
- "count": 866,
+ "count": 874,
  "tenders": [
   {
    "source": "PPIP (Kenia)",
@@ -248,6 +248,101 @@
     "other"
    ],
    "topic": "conn"
+  },
+  {
+   "pub": "UK-ocds-h6vhtk-078dc7",
+   "source": "Find a Tender",
+   "title": "Preliminary Market Engagement – Sellafield Limited: Network Services",
+   "buyer": "Sellafield Limited",
+   "country": "GB",
+   "published": "2026-10-22",
+   "deadline": "",
+   "deadlineAt": "",
+   "type": "Vooraankondiging",
+   "kind": "prior",
+   "cpv": [],
+   "link": "https://www.find-tender.service.gov.uk/Notice/099945-2026",
+   "value": 75000000,
+   "currency": "GBP",
+   "firstSeen": "2026-10-22T14:40:07.056Z",
+   "titleNl": "Voorlopige marktconsultatie – Sellafield Limited: Netwerkdiensten",
+   "trEngine": "DeepL",
+   "cats": [
+    "other"
+   ],
+   "topic": "conn"
+  },
+  {
+   "pub": "UA-UA-2026-10-22-014240-a",
+   "source": "Prozorro",
+   "title": "Супутниковий модем Starlink",
+   "buyer": "ВІЙСЬКОВА ЧАСТИНА 3024 НАЦІОНАЛЬНОЇ ГВАРДІЇ УКРАЇНИ",
+   "country": "UA",
+   "published": "2026-10-22",
+   "deadline": "2026-10-31",
+   "deadlineAt": "2026-10-30T22:00:00.000Z",
+   "type": "Aankondiging opdracht",
+   "kind": "notice",
+   "cpv": [],
+   "link": "https://prozorro.gov.ua/tender/UA-2026-10-22-014240-a",
+   "value": 249969,
+   "currency": "UAH",
+   "defense": true,
+   "firstSeen": "2026-10-22T14:40:07.056Z",
+   "titleNl": "Starlink-satellietmodem",
+   "trEngine": "DeepL",
+   "cats": [
+    "leo"
+   ],
+   "topic": "leo"
+  },
+  {
+   "pub": "UA-UA-2026-10-22-013944-a",
+   "source": "Prozorro",
+   "title": "Супутникова система Starlink Gen3 V4",
+   "buyer": "ЦЕНТР СПЕЦІАЛЬНОГО ПРИЗНАЧЕННЯ \"ОМЕГА\" НАЦІОНАЛЬНОЇ ГВАРДІЇ УКРАЇНИ (ВІЙСЬКОВА ЧАСТИНА 3073)",
+   "country": "UA",
+   "published": "2026-10-22",
+   "deadline": "2026-11-02",
+   "deadlineAt": "2026-11-02T07:00:00.000Z",
+   "type": "Aankondiging opdracht",
+   "kind": "notice",
+   "cpv": [],
+   "link": "https://prozorro.gov.ua/tender/UA-2026-10-22-013944-a",
+   "value": 381195,
+   "currency": "UAH",
+   "defense": true,
+   "firstSeen": "2026-10-22T14:40:07.056Z",
+   "titleNl": "Het Starlink Gen3 V4-satellietsysteem",
+   "trEngine": "DeepL",
+   "cats": [
+    "leo"
+   ],
+   "topic": "leo"
+  },
+  {
+   "pub": "UA-UA-2026-10-22-013810-a",
+   "source": "Prozorro",
+   "title": "Супутниковий модем Starlink Internet Satellite 3gen",
+   "buyer": "ВІЙСЬКОВА ЧАСТИНА 3018 НАЦІОНАЛЬНОЇ ГВАРДІЇ УКРАЇНИ",
+   "country": "UA",
+   "published": "2026-10-22",
+   "deadline": "2026-11-02",
+   "deadlineAt": "2026-11-01T22:00:00.000Z",
+   "type": "Aankondiging opdracht",
+   "kind": "notice",
+   "cpv": [],
+   "link": "https://prozorro.gov.ua/tender/UA-2026-10-22-013810-a",
+   "value": 813606.6,
+   "currency": "UAH",
+   "defense": true,
+   "firstSeen": "2026-10-22T14:40:07.056Z",
+   "titleNl": "Starlink Internet Satellite 3gen-satellietmodem",
+   "trEngine": "DeepL",
+   "cats": [
+    "leo"
+   ],
+   "topic": "leo"
   },
   {
    "pub": "UA-UA-2026-10-22-006981-a",
@@ -1620,6 +1715,30 @@
    "topic": "leo"
   },
   {
+   "pub": "UA-UA-2026-10-17-000166-a",
+   "source": "Prozorro",
+   "title": "Супутниковий модем Starlink Internet Satellite Mini",
+   "buyer": "ВІЙСЬКОВА ЧАСТИНА 3022 НАЦІОНАЛЬНОЇ ГВАРДІЇ УКРАЇНИ",
+   "country": "UA",
+   "published": "2026-10-17",
+   "deadline": "2026-10-27",
+   "deadlineAt": "2026-10-27T07:00:00.000Z",
+   "type": "Aankondiging opdracht",
+   "kind": "notice",
+   "cpv": [],
+   "link": "https://prozorro.gov.ua/tender/UA-2026-10-17-000166-a",
+   "value": 96250,
+   "currency": "UAH",
+   "defense": true,
+   "firstSeen": "2026-10-22T14:40:07.056Z",
+   "titleNl": "Starlink Internet Satellite Mini-satellietmodem",
+   "trEngine": "DeepL",
+   "cats": [
+    "leo"
+   ],
+   "topic": "leo"
+  },
+  {
    "pub": "UA-UA-2026-10-17-000603-a",
    "source": "Prozorro",
    "title": "Термінал супутникового зв'язку (Starlink 4X/Gen3)",
@@ -1858,30 +1977,6 @@
    "topic": "leo"
   },
   {
-   "pub": "UA-UA-2026-10-16-002773-a",
-   "source": "Prozorro",
-   "title": "Супутникові модеми",
-   "buyer": "ВІЙСЬКОВА ЧАСТИНА 3043 НАЦІОНАЛЬНОЇ ГВАРДІЇ УКРАЇНИ",
-   "country": "UA",
-   "published": "2026-10-16",
-   "deadline": "2026-10-27",
-   "deadlineAt": "2026-10-27T08:00:00.000Z",
-   "type": "Aankondiging opdracht",
-   "kind": "notice",
-   "cpv": [],
-   "link": "https://prozorro.gov.ua/tender/UA-2026-10-16-002773-a",
-   "value": 1400200,
-   "currency": "UAH",
-   "defense": true,
-   "firstSeen": "2026-10-16T09:19:17.508Z",
-   "titleNl": "Satellietmodems",
-   "trEngine": "DeepL",
-   "cats": [
-    "other"
-   ],
-   "topic": "conn"
-  },
-  {
    "pub": "UA-UA-2026-10-16-008506-a",
    "source": "Prozorro",
    "title": "Телекомунікаційне супутникове обладнання",
@@ -1902,6 +1997,30 @@
    "trEngine": "DeepL",
    "cats": [
     "sat"
+   ],
+   "topic": "conn"
+  },
+  {
+   "pub": "UA-UA-2026-10-16-002773-a",
+   "source": "Prozorro",
+   "title": "Супутникові модеми",
+   "buyer": "ВІЙСЬКОВА ЧАСТИНА 3043 НАЦІОНАЛЬНОЇ ГВАРДІЇ УКРАЇНИ",
+   "country": "UA",
+   "published": "2026-10-16",
+   "deadline": "2026-10-27",
+   "deadlineAt": "2026-10-27T08:00:00.000Z",
+   "type": "Aankondiging opdracht",
+   "kind": "notice",
+   "cpv": [],
+   "link": "https://prozorro.gov.ua/tender/UA-2026-10-16-002773-a",
+   "value": 1400200,
+   "currency": "UAH",
+   "defense": true,
+   "firstSeen": "2026-10-16T09:19:17.508Z",
+   "titleNl": "Satellietmodems",
+   "trEngine": "DeepL",
+   "cats": [
+    "other"
    ],
    "topic": "conn"
   },
@@ -3316,30 +3435,6 @@
    "topic": "leo"
   },
   {
-   "pub": "UA-UA-2026-10-09-000650-a",
-   "source": "Prozorro",
-   "title": "Термінал Starlink Gen2",
-   "buyer": "Військова частина А3814",
-   "country": "UA",
-   "published": "2026-10-09",
-   "deadline": "2026-10-20",
-   "deadlineAt": "2026-10-20T05:00:00.000Z",
-   "type": "In beoordeling",
-   "kind": "award",
-   "cpv": [],
-   "link": "https://prozorro.gov.ua/tender/UA-2026-10-09-000650-a",
-   "value": 47288,
-   "currency": "UAH",
-   "defense": true,
-   "firstSeen": "2026-10-15T13:42:58.648Z",
-   "titleNl": "Starlink Gen2-terminal",
-   "trEngine": "DeepL",
-   "cats": [
-    "leo"
-   ],
-   "topic": "leo"
-  },
-  {
    "pub": "UA-UA-2026-10-09-000243-a",
    "source": "Prozorro",
    "title": "Термінал супутникового зв’язку (мобільний)",
@@ -3572,6 +3667,29 @@
     "sat"
    ],
    "topic": "leo"
+  },
+  {
+   "pub": "UA-UA-2026-10-08-005360-a",
+   "source": "Prozorro",
+   "title": "Комплект супутникового обладнання",
+   "buyer": "Департамент патрульної поліції",
+   "country": "UA",
+   "published": "2026-10-08",
+   "deadline": "2026-10-27",
+   "deadlineAt": "2026-10-26T22:01:00.000Z",
+   "type": "Aankondiging opdracht",
+   "kind": "notice",
+   "cpv": [],
+   "link": "https://prozorro.gov.ua/tender/UA-2026-10-08-005360-a",
+   "value": 350566.67,
+   "currency": "UAH",
+   "firstSeen": "2026-10-22T14:40:07.056Z",
+   "titleNl": "Set satellietapparatuur",
+   "trEngine": "DeepL",
+   "cats": [
+    "other"
+   ],
+   "topic": "conn"
   },
   {
    "pub": "CO-CO1.REQ.11182644",
@@ -20082,6 +20200,30 @@
    "topic": "leo"
   },
   {
+   "pub": "UA-UA-2026-10-22-013109-a",
+   "source": "Prozorro",
+   "title": "Супутниковий модем Starlink Internet Satellite 3gen. Супутниковий модем Starlink Internet Satellite Mini.",
+   "buyer": "ВІЙСЬКОВА ЧАСТИНА 3028 НАЦІОНАЛЬНОЇ ГВАРДІЇ УКРАЇНИ",
+   "country": "UA",
+   "published": "",
+   "deadline": "2026-10-27",
+   "deadlineAt": "2026-10-27T05:00:00.000Z",
+   "type": "Aankondiging opdracht",
+   "kind": "notice",
+   "cpv": [],
+   "link": "https://prozorro.gov.ua/tender/UA-2026-10-22-013109-a",
+   "value": 798000,
+   "currency": "UAH",
+   "defense": true,
+   "firstSeen": "2026-10-22T14:40:07.056Z",
+   "titleNl": "Starlink Internet Satellite 3gen-satellietmodem. Starlink Internet Satellite Mini-satellietmodem.",
+   "trEngine": "DeepL",
+   "cats": [
+    "leo"
+   ],
+   "topic": "leo"
+  },
+  {
    "pub": "UA-UA-2026-10-21-010795-a",
    "source": "Prozorro",
    "title": "Супутниковий модем Starlink Standard 4X",
@@ -20168,6 +20310,29 @@
    "defense": true,
    "firstSeen": "2026-10-22T08:15:40.698Z",
    "titleNl": "Starlink Internet Satellite 3gen-satellietmodem",
+   "trEngine": "DeepL",
+   "cats": [
+    "leo"
+   ],
+   "topic": "leo"
+  },
+  {
+   "pub": "UA-UA-2026-10-20-010603-a",
+   "source": "Prozorro",
+   "title": "Супутниковий модем Starlink Internet Satellite Mini",
+   "buyer": "Рогатинська міська рада",
+   "country": "UA",
+   "published": "",
+   "deadline": "2026-10-23",
+   "deadlineAt": "2026-10-22T21:00:00.000Z",
+   "type": "Aankondiging opdracht",
+   "kind": "notice",
+   "cpv": [],
+   "link": "https://prozorro.gov.ua/tender/UA-2026-10-20-010603-a",
+   "value": 495000,
+   "currency": "UAH",
+   "firstSeen": "2026-10-22T14:40:07.056Z",
+   "titleNl": "Starlink Internet Satellite Mini-satellietmodem",
    "trEngine": "DeepL",
    "cats": [
     "leo"
@@ -20263,6 +20428,31 @@
    "currency": "UAH",
    "firstSeen": "2026-10-20T18:01:22.997Z",
    "titleNl": "32530000-7 - Telecommunicatieapparatuur voor satellietcommunicatie (Starlink-satellietmodem)",
+   "trEngine": "DeepL",
+   "cats": [
+    "leo",
+    "sat"
+   ],
+   "topic": "leo"
+  },
+  {
+   "pub": "UA-UA-2026-10-22-008152-a",
+   "source": "Prozorro",
+   "title": "32530000-7 — Телекомунікаційне супутникове обладнання (Супутниковий модем Starlink Mini).",
+   "buyer": "ВІЙСЬКОВА ЧАСТИНА А7051",
+   "country": "UA",
+   "published": "",
+   "deadline": "2026-10-27",
+   "deadlineAt": "2026-10-26T22:00:00.000Z",
+   "type": "Aankondiging opdracht",
+   "kind": "notice",
+   "cpv": [],
+   "link": "https://prozorro.gov.ua/tender/UA-2026-10-22-008152-a",
+   "value": 486770,
+   "currency": "UAH",
+   "defense": true,
+   "firstSeen": "2026-10-22T14:40:07.056Z",
+   "titleNl": "32530000-7 — Telecommunicatieapparatuur voor satellietcommunicatie (Starlink Mini-satellietmodem).",
    "trEngine": "DeepL",
    "cats": [
     "leo",
