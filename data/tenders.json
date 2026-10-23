@@ -1,146 +1,147 @@
 {
- "updated": "2026-10-23T11:27:11.714Z",
+ "updated": "2026-10-23T14:26:57.439Z",
  "queryVersion": "ec27e2fd8f",
  "sources": {
   "TED": {
    "ok": true,
-   "at": "2026-10-23T11:27:11.714Z",
-   "count": 407,
+   "at": "2026-10-23T14:26:57.439Z",
+   "count": 383,
    "note": ""
   },
   "Wereldbank": {
    "ok": true,
-   "at": "2026-10-23T11:27:11.714Z",
+   "at": "2026-10-23T14:26:57.439Z",
    "count": 78,
    "note": "94 gevonden, 78 echt over LEO."
   },
   "Find a Tender": {
    "ok": true,
-   "at": "2026-10-23T11:27:11.714Z",
+   "at": "2026-10-23T14:26:57.439Z",
    "count": 1,
-   "note": "2 pagina's, 169 berichten bekeken, 1 over LEO.",
-   "since": "2026-10-23T09:27:11.714Z"
+   "note": "4 pagina's, 378 berichten bekeken, 1 over LEO.",
+   "since": "2026-10-23T12:26:57.439Z"
   },
   "Contracts Finder": {
    "ok": true,
-   "at": "2026-10-23T11:27:11.714Z",
+   "at": "2026-10-23T14:26:57.439Z",
    "count": 25,
    "note": "1792 gevonden, 275 over LEO."
   },
   "TenderNed": {
    "ok": true,
-   "at": "2026-10-23T11:27:11.714Z",
+   "at": "2026-10-23T14:26:57.439Z",
    "count": 20,
    "note": "584 gevonden, 77 over LEO."
   },
   "Prozorro": {
    "ok": true,
-   "at": "2026-10-23T11:27:11.714Z",
-   "count": 68,
-   "note": "68 lopende procedures."
+   "at": "2026-10-23T14:26:57.439Z",
+   "count": 74,
+   "note": "74 lopende procedures."
   },
   "BOAMP": {
    "ok": true,
-   "at": "2026-10-23T11:27:11.714Z",
+   "at": "2026-10-23T14:26:57.439Z",
    "count": 9,
    "note": "93 gevonden, 9 over LEO."
   },
   "SIMAP (Zwitserland)": {
    "ok": true,
-   "at": "2026-10-23T11:27:11.714Z",
+   "at": "2026-10-23T14:26:57.439Z",
    "count": 0,
    "note": "24 gevonden, 0 over LEO."
   },
   "SECOP (Colombia)": {
    "ok": true,
-   "at": "2026-10-23T11:27:11.714Z",
+   "at": "2026-10-23T14:26:57.439Z",
    "count": 199,
    "note": "251 gevonden, 199 over LEO."
   },
   "CanadaBuys": {
    "ok": true,
-   "at": "2026-10-23T11:27:11.714Z",
+   "at": "2026-10-23T14:26:57.439Z",
    "count": 5,
    "note": "899 open tenders bekeken, 5 over LEO."
   },
   "AusTender": {
    "ok": true,
-   "at": "2026-10-23T11:27:11.714Z",
+   "at": "2026-10-23T14:26:57.439Z",
    "count": 0,
    "note": "0 contracten bekeken, 0 over LEO.",
-   "since": "2026-10-23T09:27:11.714Z"
+   "since": "2026-10-23T12:26:57.439Z"
   },
   "UNDP": {
    "ok": true,
-   "at": "2026-10-23T11:27:11.714Z",
+   "at": "2026-10-23T14:26:57.439Z",
    "count": 2,
    "note": "971 berichten bekeken, 2 over LEO."
   },
   "PCC (Taiwan)": {
    "ok": true,
-   "at": "2026-10-23T11:27:11.714Z",
+   "at": "2026-10-23T14:26:57.439Z",
    "count": 16,
    "note": "38 aanbestedingen over LEO."
   },
   "Doffin (Noorwegen)": {
    "ok": true,
-   "at": "2026-10-23T11:27:11.714Z",
+   "at": "2026-10-23T14:26:57.439Z",
    "count": 2,
    "note": "43 gevonden, 27 over LEO."
   },
   "BASE (Portugal)": {
    "ok": true,
-   "at": "2026-10-23T11:27:11.714Z",
+   "at": "2026-10-23T14:26:57.439Z",
    "count": 3,
    "note": "10 gevonden, 9 over LEO."
   },
   "BZP (Polen)": {
    "ok": true,
-   "at": "2026-10-23T11:27:11.714Z",
+   "at": "2026-10-23T14:26:57.439Z",
    "count": 0,
    "note": "0 over LEO in de nieuwe publicaties.",
    "doneUntil": "2026-10-22"
   },
   "SEAP (Roemenië)": {
    "ok": true,
-   "at": "2026-10-23T11:27:11.714Z",
+   "at": "2026-10-23T14:26:57.439Z",
    "count": 0,
-   "note": "78 nieuwe aankondigingen bekeken, 0 over LEO.",
-   "since": "2026-10-23T09:27:11.714Z"
+   "note": "90 nieuwe aankondigingen bekeken, 0 over LEO.",
+   "since": "2026-10-23T12:26:57.439Z"
   },
   "oeffentlichevergabe.de": {
    "ok": true,
-   "at": "2026-10-23T11:27:11.714Z",
+   "at": "2026-10-23T14:26:57.439Z",
    "count": 0,
    "note": "0 over LEO in de nieuwe Duitse aankondigingen.",
    "doneUntil": "2026-10-22"
   },
   "PLACSP (Spanje)": {
    "ok": true,
-   "at": "2026-10-23T11:27:11.714Z",
+   "at": "2026-10-23T14:26:57.439Z",
    "count": 0,
    "note": "442 wijzigingen bekeken (1 pagina's), 0 over LEO.",
-   "since": "2026-10-23T09:27:11.714Z"
+   "since": "2026-10-23T12:26:57.439Z"
   },
   "eTenders (Zuid-Afrika)": {
    "ok": true,
-   "at": "2026-10-23T11:27:11.714Z",
-   "count": 7,
-   "note": "7 over LEO in de nieuwe aankondigingen. 27 pagina('s) overgeslagen door een fout bij hun server.",
+   "at": "2026-10-23T14:26:57.439Z",
+   "count": 0,
+   "note": "0 over LEO in de nieuwe aankondigingen.",
    "doneUntil": "2026-10-22"
   },
   "DGCP (Dominicaanse Rep.)": {
    "ok": true,
-   "at": "2026-10-23T11:27:11.714Z",
+   "at": "2026-10-23T14:26:57.439Z",
    "count": 0,
    "note": "100 processen bekeken, 0 over LEO.",
-   "since": "2026-10-23T09:27:11.714Z"
+   "since": "2026-10-23T12:26:57.439Z"
   },
   "Goszakup (Kazachstan)": {
-   "ok": true,
-   "at": "2026-10-23T11:27:11.714Z",
+   "ok": false,
+   "at": "2026-10-23T14:26:57.439Z",
    "count": 3,
-   "note": "7 loten gevonden, 3 over LEO. Zonder datums: status bepaalt open of gesloten."
+   "note": "7 loten gevonden, 3 over LEO. Zonder datums: status bepaalt open of gesloten.",
+   "error": "fetch failed"
   },
   "PPIP (Kenia)": {
    "ok": true,
@@ -172,13 +173,13 @@
   },
   "Vertalen": {
    "ok": true,
-   "at": "2026-10-23T11:27:11.714Z",
-   "count": 8,
-   "note": "DeepL: 8 nieuw vertaald.",
+   "at": "2026-10-23T14:26:57.439Z",
+   "count": 6,
+   "note": "DeepL: 6 nieuw vertaald.",
    "engine": "DeepL"
   }
  },
- "count": 917,
+ "count": 923,
  "tenders": [
   {
    "source": "PPIP (Kenia)",
@@ -255,6 +256,30 @@
    "topic": "conn"
   },
   {
+   "pub": "UA-UA-2026-10-23-013876-a",
+   "source": "Prozorro",
+   "title": "Супутниковий модем Starlink: Internet Satellite Mini; Starlink Standard 4X",
+   "buyer": "20 БРИГАДА ОПЕРАТИВНОГО ПРИЗНАЧЕННЯ НАЦІОНАЛЬНОЇ ГВАРДІЇ УКРАЇНИ (ВІЙСЬКОВА ЧАСТИНА 3009)",
+   "country": "UA",
+   "published": "2026-10-23",
+   "deadline": "2026-11-03",
+   "deadlineAt": "2026-11-02T22:00:00.000Z",
+   "type": "Aankondiging opdracht",
+   "kind": "notice",
+   "cpv": [],
+   "link": "https://prozorro.gov.ua/tender/UA-2026-10-23-013876-a",
+   "value": 597671.65,
+   "currency": "UAH",
+   "defense": true,
+   "firstSeen": "2026-10-23T14:26:57.439Z",
+   "titleNl": "Starlink-satellietmodem: Internet Satellite Mini; Starlink Standard 4X",
+   "trEngine": "DeepL",
+   "cats": [
+    "leo"
+   ],
+   "topic": "leo"
+  },
+  {
    "pub": "UA-UA-2026-10-23-006215-a",
    "source": "Prozorro",
    "title": "Супутниковий модем Starlink Internet Satellite Міnі",
@@ -303,6 +328,53 @@
    "topic": "leo"
   },
   {
+   "pub": "UA-UA-2026-10-23-013131-a",
+   "source": "Prozorro",
+   "title": "«Телекомунікаційне супутникове обладнання» (код 32530000-7 за ДК 021:2015) (Супутниковий термінал Starlink Mini)   ",
+   "buyer": "АКЦІОНЕРНЕ ТОВАРИСТВО \"УКРТРАНСНАФТА\"",
+   "country": "UA",
+   "published": "2026-10-23",
+   "deadline": "2026-11-09",
+   "deadlineAt": "2026-11-09T09:00:00.000Z",
+   "type": "Aankondiging opdracht",
+   "kind": "notice",
+   "cpv": [],
+   "link": "https://prozorro.gov.ua/tender/UA-2026-10-23-013131-a",
+   "value": 237499.95,
+   "currency": "UAH",
+   "firstSeen": "2026-10-23T14:26:57.439Z",
+   "titleNl": "„Telecommunicatieapparatuur voor satellietgebruik“ (code 32530000-7 volgens DK 021:2015) (Starlink Mini-satellietterminal)   ",
+   "trEngine": "DeepL",
+   "cats": [
+    "leo"
+   ],
+   "topic": "leo"
+  },
+  {
+   "pub": "UA-UA-2026-10-23-011597-a",
+   "source": "Prozorro",
+   "title": "Термінал супутникового зв’язку Starlink Mini («або еквівалент»), (класифікація згідно ДК 021:2015 код 32530000-7 Телекомунікаційне супутникове обладнання)",
+   "buyer": "ДЕПАРТАМЕНТ З ПИТАНЬ ОБОРОННОЇ РОБОТИ, ЦИВІЛЬНОГО ЗАХИСТУ ТА ВЗАЄМОДІЇ З ПРАВООХОРОННИМИ ОРГАНАМИ ПОЛТАВСЬКОЇ ОБЛАСНОЇ ДЕРЖАВНОЇ АДМІНІСТРАЦІЇ",
+   "country": "UA",
+   "published": "2026-10-23",
+   "deadline": "2026-11-08",
+   "deadlineAt": "2026-11-07T22:00:00.000Z",
+   "type": "Aankondiging opdracht",
+   "kind": "notice",
+   "cpv": [],
+   "link": "https://prozorro.gov.ua/tender/UA-2026-10-23-011597-a",
+   "value": 916666.67,
+   "currency": "UAH",
+   "firstSeen": "2026-10-23T14:26:57.439Z",
+   "titleNl": "Starlink Mini-satellietcommunicatieterminal („of een gelijkwaardig product“), (classificatie volgens DK 021:2015, code 32530000-7: telecommunicatieapparatuur voor satellietcommunicatie)",
+   "trEngine": "DeepL",
+   "cats": [
+    "leo",
+    "sat"
+   ],
+   "topic": "leo"
+  },
+  {
    "pub": "732645-2026",
    "source": "TED",
    "title": "België – Telecommunicatiediensten – Service FWC for the Provision of Satellite Communication, related Services and Supplies (26.ISE.JP.001)",
@@ -312,7 +384,9 @@
    "deadline": "2027-01-22",
    "type": "Aankondiging opdracht",
    "kind": "notice",
-   "cpv": [],
+   "cpv": [
+    "64200000"
+   ],
    "link": "https://ted.europa.eu/nl/notice/-/detail/732645-2026",
    "value": 450000000,
    "currency": "EUR",
@@ -412,6 +486,30 @@
    "defense": true,
    "firstSeen": "2026-10-22T14:40:07.056Z",
    "titleNl": "Het Starlink Gen3 V4-satellietsysteem",
+   "trEngine": "DeepL",
+   "cats": [
+    "leo"
+   ],
+   "topic": "leo"
+  },
+  {
+   "pub": "UA-UA-2026-10-22-013810-a",
+   "source": "Prozorro",
+   "title": "Супутниковий модем Starlink Internet Satellite 3gen",
+   "buyer": "ВІЙСЬКОВА ЧАСТИНА 3018 НАЦІОНАЛЬНОЇ ГВАРДІЇ УКРАЇНИ",
+   "country": "UA",
+   "published": "2026-10-22",
+   "deadline": "2026-11-02",
+   "deadlineAt": "2026-11-01T22:00:00.000Z",
+   "type": "Aankondiging opdracht",
+   "kind": "notice",
+   "cpv": [],
+   "link": "https://prozorro.gov.ua/tender/UA-2026-10-22-013810-a",
+   "value": 813606.6,
+   "currency": "UAH",
+   "defense": true,
+   "firstSeen": "2026-10-23T14:26:57.439Z",
+   "titleNl": "Starlink Internet Satellite 3gen-satellietmodem",
    "trEngine": "DeepL",
    "cats": [
     "leo"
@@ -540,8 +638,8 @@
    "topic": "conn"
   },
   {
-   "pub": "ZA-175198",
    "source": "eTenders (Zuid-Afrika)",
+   "pub": "ZA-175198",
    "title": "THE COMPETITION COMMISSION REQUIRES THE IMPLEMENTATION OF A FULLY INDEPENDENT NETWORK INFRASTRUCTURE AND SEPARATION FROM DTIC-MANAGED NETWORK SERVICES",
    "buyer": "Competition Commission",
    "country": "ZA",
@@ -914,8 +1012,8 @@
    "topic": "conn"
   },
   {
-   "pub": "ZA-175052",
    "source": "eTenders (Zuid-Afrika)",
+   "pub": "ZA-175052",
    "title": "NETWORK INFRASTRUCTURE, STRUCTURED CABLING, FIREWALL AND SD-WAN, AND INTEGRATION WITH EXISTING NETWORK",
    "buyer": "Iziko Museums of Cape Town",
    "country": "ZA",
@@ -937,8 +1035,8 @@
    "topic": "conn"
   },
   {
-   "pub": "ZA-175103",
    "source": "eTenders (Zuid-Afrika)",
+   "pub": "ZA-175103",
    "title": "Repair of Ffennell Road Round Building (including Telemetry Wing) Roof",
    "buyer": "Johannesburg Water",
    "country": "ZA",
@@ -1707,7 +1805,9 @@
    "deadline": "2026-11-16",
    "type": "Aankondiging opdracht",
    "kind": "notice",
-   "cpv": [],
+   "cpv": [
+    "64210000"
+   ],
    "link": "https://ted.europa.eu/nl/notice/-/detail/721677-2026",
    "value": null,
    "currency": "EUR",
@@ -2015,8 +2115,8 @@
    "topic": "conn"
   },
   {
-   "pub": "ZA-174630",
    "source": "eTenders (Zuid-Afrika)",
+   "pub": "ZA-174630",
    "title": "MN12/2026-27: PROVISION OF 150 MBPS MICROWAVE/ FIBER/ LTE BUSINESS INTERNET & BACKUP LINK FOR A PERIOD OF 24 MONTHS",
    "buyer": "Emadlangeni Local Municipality",
    "country": "ZA",
@@ -2230,30 +2330,6 @@
    "topic": "leo"
   },
   {
-   "pub": "UA-UA-2026-10-17-000603-a",
-   "source": "Prozorro",
-   "title": "Термінал супутникового зв'язку (Starlink 4X/Gen3)",
-   "buyer": "Військова частина Т0760",
-   "country": "UA",
-   "published": "2026-10-17",
-   "deadline": "2026-10-28",
-   "deadlineAt": "2026-10-27T22:00:00.000Z",
-   "type": "Aankondiging opdracht",
-   "kind": "notice",
-   "cpv": [],
-   "link": "https://prozorro.gov.ua/tender/UA-2026-10-17-000603-a",
-   "value": 283458,
-   "currency": "UAH",
-   "defense": true,
-   "firstSeen": "2026-10-17T19:55:56.797Z",
-   "titleNl": "Satellietcommunicatieterminal (Starlink 4X/Gen3)",
-   "trEngine": "DeepL",
-   "cats": [
-    "leo"
-   ],
-   "topic": "leo"
-  },
-  {
    "pub": "UA-UA-2026-10-17-000166-a",
    "source": "Prozorro",
    "title": "Супутниковий модем Starlink Internet Satellite Mini",
@@ -2271,6 +2347,30 @@
    "defense": true,
    "firstSeen": "2026-10-22T14:40:07.056Z",
    "titleNl": "Starlink Internet Satellite Mini-satellietmodem",
+   "trEngine": "DeepL",
+   "cats": [
+    "leo"
+   ],
+   "topic": "leo"
+  },
+  {
+   "pub": "UA-UA-2026-10-17-000603-a",
+   "source": "Prozorro",
+   "title": "Термінал супутникового зв'язку (Starlink 4X/Gen3)",
+   "buyer": "Військова частина Т0760",
+   "country": "UA",
+   "published": "2026-10-17",
+   "deadline": "2026-10-28",
+   "deadlineAt": "2026-10-27T22:00:00.000Z",
+   "type": "Aankondiging opdracht",
+   "kind": "notice",
+   "cpv": [],
+   "link": "https://prozorro.gov.ua/tender/UA-2026-10-17-000603-a",
+   "value": 283458,
+   "currency": "UAH",
+   "defense": true,
+   "firstSeen": "2026-10-17T19:55:56.797Z",
+   "titleNl": "Satellietcommunicatieterminal (Starlink 4X/Gen3)",
    "trEngine": "DeepL",
    "cats": [
     "leo"
@@ -2302,30 +2402,6 @@
    "topic": "leo"
   },
   {
-   "pub": "UA-UA-2026-10-17-000104-a",
-   "source": "Prozorro",
-   "title": "Супутниковий модем Starlink Internet Satellite Mini, 32530000-7 «Телекомунікаційне супутникове обладнання» за ДК 021:2015 Єдиного закупівельного словника.",
-   "buyer": "ВІЙСЬКОВА ЧАСТИНА 9951",
-   "country": "UA",
-   "published": "2026-10-17",
-   "deadline": "2026-11-02",
-   "deadlineAt": "2026-11-02T09:00:00.000Z",
-   "type": "Aankondiging opdracht",
-   "kind": "notice",
-   "cpv": [],
-   "link": "https://prozorro.gov.ua/tender/UA-2026-10-17-000104-a",
-   "value": 1092500,
-   "currency": "UAH",
-   "defense": true,
-   "firstSeen": "2026-10-17T07:02:21.206Z",
-   "titleNl": "Starlink Internet Satellite Mini-satellietmodem, 32530000-7 „Telecommunicatieapparatuur voor satellietgebruik“ volgens DK 021:2015 van het Uniforme Aankoopwoordenboek.",
-   "trEngine": "DeepL",
-   "cats": [
-    "leo"
-   ],
-   "topic": "leo"
-  },
-  {
    "pub": "UA-UA-2026-10-17-000120-a",
    "source": "Prozorro",
    "title": "Супутниковий модем Starlink Internet Satellite Mini, 32530000-7 «Телекомунікаційне супутникове обладнання» за ДК 021:2015 Єдиного закупівельного словника.",
@@ -2342,6 +2418,30 @@
    "currency": "UAH",
    "defense": true,
    "firstSeen": "2000-01-01T00:00:00.000Z",
+   "titleNl": "Starlink Internet Satellite Mini-satellietmodem, 32530000-7 „Telecommunicatieapparatuur voor satellietgebruik“ volgens DK 021:2015 van het Uniforme Aankoopwoordenboek.",
+   "trEngine": "DeepL",
+   "cats": [
+    "leo"
+   ],
+   "topic": "leo"
+  },
+  {
+   "pub": "UA-UA-2026-10-17-000104-a",
+   "source": "Prozorro",
+   "title": "Супутниковий модем Starlink Internet Satellite Mini, 32530000-7 «Телекомунікаційне супутникове обладнання» за ДК 021:2015 Єдиного закупівельного словника.",
+   "buyer": "ВІЙСЬКОВА ЧАСТИНА 9951",
+   "country": "UA",
+   "published": "2026-10-17",
+   "deadline": "2026-11-02",
+   "deadlineAt": "2026-11-02T09:00:00.000Z",
+   "type": "Aankondiging opdracht",
+   "kind": "notice",
+   "cpv": [],
+   "link": "https://prozorro.gov.ua/tender/UA-2026-10-17-000104-a",
+   "value": 1092500,
+   "currency": "UAH",
+   "defense": true,
+   "firstSeen": "2026-10-17T07:02:21.206Z",
    "titleNl": "Starlink Internet Satellite Mini-satellietmodem, 32530000-7 „Telecommunicatieapparatuur voor satellietgebruik“ volgens DK 021:2015 van het Uniforme Aankoopwoordenboek.",
    "trEngine": "DeepL",
    "cats": [
@@ -2384,7 +2484,9 @@
    "deadline": "2026-11-16",
    "type": "Aankondiging opdracht",
    "kind": "notice",
-   "cpv": [],
+   "cpv": [
+    "32418000"
+   ],
    "link": "https://ted.europa.eu/nl/notice/-/detail/715078-2026",
    "value": null,
    "currency": "EUR",
@@ -3027,7 +3129,9 @@
    "deadline": "",
    "type": "Gegunde opdracht",
    "kind": "award",
-   "cpv": [],
+   "cpv": [
+    "32530000"
+   ],
    "link": "https://ted.europa.eu/nl/notice/-/detail/709399-2026",
    "value": null,
    "currency": "EUR",
@@ -3047,7 +3151,9 @@
    "deadline": "2026-11-16",
    "type": "Aankondiging opdracht",
    "kind": "notice",
-   "cpv": [],
+   "cpv": [
+    "72416000"
+   ],
    "link": "https://ted.europa.eu/nl/notice/-/detail/709660-2026",
    "value": 700000,
    "currency": "EUR",
@@ -3234,8 +3340,8 @@
    "topic": "conn"
   },
   {
-   "pub": "ZA-174054",
    "source": "eTenders (Zuid-Afrika)",
+   "pub": "ZA-174054",
    "title": "APPOINTMENT OF A SERVICE PROVIDER TO DESIGN, IMPLEMENT, AND MAINTAIN SOFTWARE-DEFINED WIDE AREA NETWORK (SD-WAN) SOLUTIONS AND WI-FI SERVICES FOR A PERIOD OF THREE YEARS ACROSS THE HEAD OFFICE AND NATURE RESERVES",
    "buyer": "Mpumalanga - Mpumalanga Tourism and Parks Agency (MTPA)",
    "country": "ZA",
@@ -3655,8 +3761,8 @@
    "topic": "leo"
   },
   {
-   "pub": "ZA-173765",
    "source": "eTenders (Zuid-Afrika)",
+   "pub": "ZA-173765",
    "title": "The appointment of a panel of Service Providers for the installation and maintenance of local and international leased lines and services; on an as and when required basis, for a period of five (5) years.",
    "buyer": "Sentech Limited",
    "country": "ZA",
@@ -3774,7 +3880,11 @@
    "deadline": "",
    "type": "Gegunde opdracht",
    "kind": "award",
-   "cpv": [],
+   "cpv": [
+    "48813100",
+    "45310000",
+    "71300000"
+   ],
    "link": "https://ted.europa.eu/nl/notice/-/detail/698465-2026",
    "value": 4692955.76,
    "currency": "EUR",
@@ -4000,8 +4110,8 @@
    "qty": 24
   },
   {
-   "pub": "ZA-173555",
    "source": "eTenders (Zuid-Afrika)",
+   "pub": "ZA-173555",
    "title": "SERVICE AND REPAIR OF ALL ELECTRICAL, MECHANICAL AND TELEMETRY EQUIPMENT IN THE LANGEBERG MUNICIPALITY, FOR A PERIOD OF THREE (3) YEARS",
    "buyer": "Langeberg Municipality",
    "country": "ZA",
@@ -4414,7 +4524,9 @@
    "deadline": "",
    "type": "Gegunde opdracht",
    "kind": "award",
-   "cpv": [],
+   "cpv": [
+    "72200000"
+   ],
    "link": "https://ted.europa.eu/nl/notice/-/detail/686686-2026",
    "value": null,
    "currency": "EUR",
@@ -4872,6 +4984,29 @@
    "topic": "conn"
   },
   {
+   "pub": "UA-UA-2026-09-30-009694-a",
+   "source": "Prozorro",
+   "title": "Послуги з обслуговування акаунту супутникового комплекту Starlink",
+   "buyer": "ФІЛІЯ «ВІДОКРЕМЛЕНИЙ ПІДРОЗДІЛ «НАУКОВО-ТЕХНІЧНИЙ ЦЕНТР» АКЦІОНЕРНОГО ТОВАРИСТВА «НАЦІОНАЛЬНА АТОМНА ЕНЕРГОГЕНЕРУЮЧА КОМПАНІЯ «ЕНЕРГОАТОМ»",
+   "country": "UA",
+   "published": "2026-09-30",
+   "deadline": "2026-10-19",
+   "deadlineAt": "2026-10-19T07:00:00.000Z",
+   "type": "In beoordeling",
+   "kind": "award",
+   "cpv": [],
+   "link": "https://prozorro.gov.ua/tender/UA-2026-09-30-009694-a",
+   "value": 102772.43,
+   "currency": "UAH",
+   "firstSeen": "2026-10-23T14:26:57.439Z",
+   "titleNl": "Diensten voor het beheer van een Starlink-satellietpakketaccount",
+   "trEngine": "DeepL",
+   "cats": [
+    "leo"
+   ],
+   "topic": "leo"
+  },
+  {
    "pub": "CO-CO1.REQ.11132031",
    "source": "SECOP (Colombia)",
    "title": "Contratar el alquiler temporal de infraestructura de laboratorio de radiocomunicaciones, incluyendo cámara anecoica de alta frecuencia, equipo de generación de señales vectoriales de radiofrecuencia, antenas, accesorios ",
@@ -5099,7 +5234,11 @@
    "deadline": "",
    "type": "Wijziging opdracht",
    "kind": "award",
-   "cpv": [],
+   "cpv": [
+    "64210000",
+    "64220000",
+    "64227000"
+   ],
    "link": "https://ted.europa.eu/nl/notice/-/detail/658438-2026",
    "value": null,
    "currency": "EUR",
@@ -5695,27 +5834,6 @@
    "topic": "conn"
   },
   {
-   "pub": "638067-2026",
-   "source": "TED",
-   "title": "Portugal – Mobiele containers voor bijzondere doeleinden – 3026007659 / Fornecimento de Equipamentos Missões Militares Trator Mar",
-   "buyer": "Ministério da Defesa Nacional - Marinha",
-   "country": "PT",
-   "published": "2026-09-16",
-   "deadline": "2026-10-14",
-   "type": "Aankondiging opdracht",
-   "kind": "notice",
-   "cpv": [],
-   "link": "https://ted.europa.eu/nl/notice/-/detail/638067-2026",
-   "value": 325903.97,
-   "currency": "EUR",
-   "defense": true,
-   "firstSeen": "2026-10-23T11:27:11.714Z",
-   "cats": [
-    "other"
-   ],
-   "topic": "conn"
-  },
-  {
    "pub": "637103-2026",
    "source": "TED",
    "title": "België – Netwerkrouters – MOBIELE BONDING SD-WAN DATA-ROUTERS VOOR NIEUWS EN EVENEMENTEN",
@@ -5734,6 +5852,27 @@
    "firstSeen": "2000-01-01T00:00:00.000Z",
    "cats": [
     "managed"
+   ],
+   "topic": "conn"
+  },
+  {
+   "source": "TED",
+   "pub": "638067-2026",
+   "title": "Portugal – Mobiele containers voor bijzondere doeleinden – 3026007659 / Fornecimento de Equipamentos Missões Militares Trator Mar",
+   "buyer": "Ministério da Defesa Nacional - Marinha",
+   "country": "PT",
+   "published": "2026-09-16",
+   "deadline": "2026-10-14",
+   "type": "Aankondiging opdracht",
+   "kind": "notice",
+   "cpv": [],
+   "link": "https://ted.europa.eu/nl/notice/-/detail/638067-2026",
+   "value": 325903.97,
+   "currency": "EUR",
+   "defense": true,
+   "firstSeen": "2026-10-23T11:27:11.714Z",
+   "cats": [
+    "other"
    ],
    "topic": "conn"
   },
@@ -5815,7 +5954,9 @@
    "deadline": "2026-09-28",
    "type": "Aankondiging opdracht",
    "kind": "notice",
-   "cpv": [],
+   "cpv": [
+    "32530000"
+   ],
    "link": "https://ted.europa.eu/nl/notice/-/detail/633843-2026",
    "value": null,
    "currency": "EUR",
@@ -6288,7 +6429,9 @@
    "deadline": "",
    "type": "Gegunde opdracht",
    "kind": "award",
-   "cpv": [],
+   "cpv": [
+    "32570000"
+   ],
    "link": "https://ted.europa.eu/nl/notice/-/detail/603409-2026",
    "value": 520736,
    "currency": "EUR",
@@ -6378,7 +6521,11 @@
    "deadline": "2026-09-29",
    "type": "Aankondiging opdracht",
    "kind": "notice",
-   "cpv": [],
+   "cpv": [
+    "48813100",
+    "45310000",
+    "71300000"
+   ],
    "link": "https://ted.europa.eu/nl/notice/-/detail/597077-2026",
    "value": 4692955.76,
    "currency": "EUR",
@@ -6422,7 +6569,12 @@
    "deadline": "",
    "type": "Vooraankondiging",
    "kind": "prior",
-   "cpv": [],
+   "cpv": [
+    "72000000",
+    "72710000",
+    "32412000",
+    "32571000"
+   ],
    "link": "https://ted.europa.eu/nl/notice/-/detail/593654-2026",
    "value": null,
    "currency": "EUR",
@@ -6512,7 +6664,9 @@
    "deadline": "2026-09-28",
    "type": "Aankondiging opdracht",
    "kind": "notice",
-   "cpv": [],
+   "cpv": [
+    "32530000"
+   ],
    "link": "https://ted.europa.eu/nl/notice/-/detail/590883-2026",
    "value": null,
    "currency": "EUR",
@@ -6532,7 +6686,17 @@
    "deadline": "2026-09-08",
    "type": "Aankondiging opdracht",
    "kind": "notice",
-   "cpv": [],
+   "cpv": [
+    "64200000",
+    "32531000",
+    "64210000",
+    "64212000",
+    "64213000",
+    "64214000",
+    "64215000",
+    "64216000",
+    "64226000"
+   ],
    "link": "https://ted.europa.eu/nl/notice/-/detail/592004-2026",
    "value": 150000000,
    "currency": "NOK",
@@ -6798,7 +6962,9 @@
    "deadline": "",
    "type": "Gegunde opdracht",
    "kind": "award",
-   "cpv": [],
+   "cpv": [
+    "32500000"
+   ],
    "link": "https://ted.europa.eu/nl/notice/-/detail/580834-2026",
    "value": 11748.4,
    "currency": "EUR",
@@ -6866,7 +7032,9 @@
    "deadline": "2026-09-29",
    "type": "Aankondiging opdracht",
    "kind": "notice",
-   "cpv": [],
+   "cpv": [
+    "64210000"
+   ],
    "link": "https://ted.europa.eu/nl/notice/-/detail/576737-2026",
    "value": 295000,
    "currency": "EUR",
@@ -7006,7 +7174,9 @@
    "deadline": "2026-09-28",
    "type": "Aankondiging opdracht",
    "kind": "notice",
-   "cpv": [],
+   "cpv": [
+    "32232000"
+   ],
    "link": "https://ted.europa.eu/nl/notice/-/detail/573764-2026",
    "value": null,
    "currency": "EUR",
@@ -7048,7 +7218,9 @@
    "deadline": "",
    "type": "Gegunde opdracht",
    "kind": "award",
-   "cpv": [],
+   "cpv": [
+    "32500000"
+   ],
    "link": "https://ted.europa.eu/nl/notice/-/detail/571696-2026",
    "value": null,
    "currency": "EUR",
@@ -7091,7 +7263,9 @@
    "deadline": "",
    "type": "Gegunde opdracht",
    "kind": "award",
-   "cpv": [],
+   "cpv": [
+    "32500000"
+   ],
    "link": "https://ted.europa.eu/nl/notice/-/detail/568301-2026",
    "value": null,
    "currency": "EUR",
@@ -7111,7 +7285,9 @@
    "deadline": "",
    "type": "Gegunde opdracht",
    "kind": "award",
-   "cpv": [],
+   "cpv": [
+    "32500000"
+   ],
    "link": "https://ted.europa.eu/nl/notice/-/detail/568320-2026",
    "value": null,
    "currency": "EUR",
@@ -7131,7 +7307,9 @@
    "deadline": "",
    "type": "Gegunde opdracht",
    "kind": "award",
-   "cpv": [],
+   "cpv": [
+    "32500000"
+   ],
    "link": "https://ted.europa.eu/nl/notice/-/detail/568435-2026",
    "value": null,
    "currency": "EUR",
@@ -7327,7 +7505,11 @@
    "deadline": "2026-09-14",
    "type": "Aankondiging opdracht",
    "kind": "notice",
-   "cpv": [],
+   "cpv": [
+    "48813100",
+    "45310000",
+    "71300000"
+   ],
    "link": "https://ted.europa.eu/nl/notice/-/detail/561414-2026",
    "value": 4692955.76,
    "currency": "EUR",
@@ -7621,7 +7803,9 @@
    "deadline": "",
    "type": "Gegunde opdracht",
    "kind": "award",
-   "cpv": [],
+   "cpv": [
+    "32570000"
+   ],
    "link": "https://ted.europa.eu/nl/notice/-/detail/547530-2026",
    "value": 520736,
    "currency": "EUR",
@@ -7677,26 +7861,6 @@
    "topic": "conn"
   },
   {
-   "pub": "545525-2026",
-   "source": "TED",
-   "title": "Roemenië – Bermpaaltjes – Achizitie de balize in cadrul Proiectului „Îmbunătățirea nivelului de semnalizare, protecție și monitorizare a stării de conservare a habitatelor și speciilor din zonele de maxim interes (zone strict protejate și colonii) din RBDD” SMIS 320666 finanțat prin Programul Dezvoltare.",
-   "buyer": "ADMINISTRATIA REZERVATIEI BIOSFEREI DELTA DUNARII",
-   "country": "RO",
-   "published": "2026-08-06",
-   "deadline": "",
-   "type": "Gegunde opdracht",
-   "kind": "award",
-   "cpv": [],
-   "link": "https://ted.europa.eu/nl/notice/-/detail/545525-2026",
-   "value": 26320972.32,
-   "currency": "RON",
-   "firstSeen": "2026-10-23T11:27:11.714Z",
-   "cats": [
-    "other"
-   ],
-   "topic": "conn"
-  },
-  {
    "pub": "544502-2026",
    "source": "TED",
    "title": "Polen – WAN-diensten – Świadczenie usług operatora sieci rozległej SD-WAN-PP dla Poczty Polskiej S.A.",
@@ -7736,6 +7900,26 @@
    "value": 10000000,
    "currency": "EUR",
    "firstSeen": "2000-01-01T00:00:00.000Z",
+   "cats": [
+    "other"
+   ],
+   "topic": "conn"
+  },
+  {
+   "source": "TED",
+   "pub": "545525-2026",
+   "title": "Roemenië – Bermpaaltjes – Achizitie de balize in cadrul Proiectului „Îmbunătățirea nivelului de semnalizare, protecție și monitorizare a stării de conservare a habitatelor și speciilor din zonele de maxim interes (zone strict protejate și colonii) din RBDD” SMIS 320666 finanțat prin Programul Dezvoltare.",
+   "buyer": "ADMINISTRATIA REZERVATIEI BIOSFEREI DELTA DUNARII",
+   "country": "RO",
+   "published": "2026-08-06",
+   "deadline": "",
+   "type": "Gegunde opdracht",
+   "kind": "award",
+   "cpv": [],
+   "link": "https://ted.europa.eu/nl/notice/-/detail/545525-2026",
+   "value": 26320972.32,
+   "currency": "RON",
+   "firstSeen": "2026-10-23T11:27:11.714Z",
    "cats": [
     "other"
    ],
@@ -7909,7 +8093,9 @@
    "deadline": "",
    "type": "Gegunde opdracht",
    "kind": "award",
-   "cpv": [],
+   "cpv": [
+    "32570000"
+   ],
    "link": "https://ted.europa.eu/nl/notice/-/detail/536819-2026",
    "value": 520736,
    "currency": "EUR",
@@ -8150,8 +8336,8 @@
    "topic": "conn"
   },
   {
-   "pub": "525247-2026",
    "source": "TED",
+   "pub": "525247-2026",
    "title": "België, Tsjechië – Zakelijke dienstverlening: juridisch, marketing, consulting, drukkerij en beveiliging – FWC Legal and management support on the implementation of components of the European Space Programme",
    "buyer": "European Commission, DG DEFIS - Defence Industry and Space",
    "country": "BE",
@@ -8215,27 +8401,6 @@
    "topic": "leo"
   },
   {
-   "pub": "518781-2026",
-   "source": "TED",
-   "title": "Italië – Militaire uniformen – Fornitura di equipaggiamento",
-   "buyer": "AERONAUTICA MILITARE UCRA",
-   "country": "IT",
-   "published": "2026-07-27",
-   "deadline": "",
-   "type": "Gegunde opdracht",
-   "kind": "award",
-   "cpv": [],
-   "link": "https://ted.europa.eu/nl/notice/-/detail/518781-2026",
-   "value": 187500,
-   "currency": "EUR",
-   "defense": true,
-   "firstSeen": "2026-10-23T11:27:11.714Z",
-   "cats": [
-    "other"
-   ],
-   "topic": "conn"
-  },
-  {
    "pub": "517176-2026",
    "source": "TED",
    "title": "Slovenië – Post- en telecommunicatiediensten – Zagotavljanje sekundarnega podatkovnega centra",
@@ -8275,6 +8440,27 @@
    "value": 842400,
    "currency": "PLN",
    "firstSeen": "2000-01-01T00:00:00.000Z",
+   "cats": [
+    "other"
+   ],
+   "topic": "conn"
+  },
+  {
+   "source": "TED",
+   "pub": "518781-2026",
+   "title": "Italië – Militaire uniformen – Fornitura di equipaggiamento",
+   "buyer": "AERONAUTICA MILITARE UCRA",
+   "country": "IT",
+   "published": "2026-07-27",
+   "deadline": "",
+   "type": "Gegunde opdracht",
+   "kind": "award",
+   "cpv": [],
+   "link": "https://ted.europa.eu/nl/notice/-/detail/518781-2026",
+   "value": 187500,
+   "currency": "EUR",
+   "defense": true,
+   "firstSeen": "2026-10-23T11:27:11.714Z",
    "cats": [
     "other"
    ],
@@ -8373,8 +8559,8 @@
    "topic": "conn"
   },
   {
-   "pub": "511326-2026",
    "source": "TED",
+   "pub": "511326-2026",
    "title": "België, Tsjechië – Zakelijke dienstverlening: juridisch, marketing, consulting, drukkerij en beveiliging – FWC Legal and management support on the implementation of components of the European Space Programme",
    "buyer": "European Commission, DG DEFIS - Defence Industry and Space",
    "country": "BE",
@@ -8425,7 +8611,9 @@
    "deadline": "",
    "type": "Gegunde opdracht",
    "kind": "award",
-   "cpv": [],
+   "cpv": [
+    "64225000"
+   ],
    "link": "https://ted.europa.eu/nl/notice/-/detail/506731-2026",
    "value": 18000000,
    "currency": "EUR",
@@ -8517,7 +8705,9 @@
    "deadline": "2026-08-26",
    "type": "Aankondiging opdracht",
    "kind": "notice",
-   "cpv": [],
+   "cpv": [
+    "72200000"
+   ],
    "link": "https://ted.europa.eu/nl/notice/-/detail/503044-2026",
    "value": null,
    "currency": "EUR",
@@ -8609,7 +8799,9 @@
    "deadline": "",
    "type": "Gegunde opdracht",
    "kind": "award",
-   "cpv": [],
+   "cpv": [
+    "32420000"
+   ],
    "link": "https://ted.europa.eu/nl/notice/-/detail/494813-2026",
    "value": 495867,
    "currency": "CZK",
@@ -8861,7 +9053,9 @@
    "deadline": "2026-02-26",
    "type": "Aankondiging opdracht",
    "kind": "notice",
-   "cpv": [],
+   "cpv": [
+    "32533000"
+   ],
    "link": "https://ted.europa.eu/nl/notice/-/detail/472815-2026",
    "value": null,
    "currency": "EUR",
@@ -8882,7 +9076,9 @@
    "deadline": "2026-08-31",
    "type": "Aankondiging opdracht",
    "kind": "notice",
-   "cpv": [],
+   "cpv": [
+    "64210000"
+   ],
    "link": "https://ted.europa.eu/nl/notice/-/detail/473908-2026",
    "value": 295000,
    "currency": "EUR",
@@ -9142,26 +9338,6 @@
    "topic": "leo"
   },
   {
-   "pub": "462584-2026",
-   "source": "TED",
-   "title": "Polen – Luchtvaart- en aanverwante diensten – Frontex-bewakingsdiensten voor luchtvaartuigen voor land- en maritieme grensbewaking met bemande luchtvaartuigen met vaste vleugels",
-   "buyer": "European Border and Coast Guard Agency (FRONTEX)",
-   "country": "PL",
-   "published": "2026-07-06",
-   "deadline": "",
-   "type": "Wijziging opdracht",
-   "kind": "award",
-   "cpv": [],
-   "link": "https://ted.europa.eu/nl/notice/-/detail/462584-2026",
-   "value": null,
-   "currency": "EUR",
-   "firstSeen": "2026-10-23T11:27:11.714Z",
-   "cats": [
-    "other"
-   ],
-   "topic": "conn"
-  },
-  {
    "pub": "463454-2026",
    "source": "TED",
    "title": "België – Telecommunicatiediensten – TELCO DPS Competition 0007 – TESTA-EIRIS backbone services",
@@ -9178,6 +9354,26 @@
    "value": null,
    "currency": "EUR",
    "firstSeen": "2000-01-01T00:00:00.000Z",
+   "cats": [
+    "other"
+   ],
+   "topic": "conn"
+  },
+  {
+   "source": "TED",
+   "pub": "462584-2026",
+   "title": "Polen – Luchtvaart- en aanverwante diensten – Frontex-bewakingsdiensten voor luchtvaartuigen voor land- en maritieme grensbewaking met bemande luchtvaartuigen met vaste vleugels",
+   "buyer": "European Border and Coast Guard Agency (FRONTEX)",
+   "country": "PL",
+   "published": "2026-07-06",
+   "deadline": "",
+   "type": "Wijziging opdracht",
+   "kind": "award",
+   "cpv": [],
+   "link": "https://ted.europa.eu/nl/notice/-/detail/462584-2026",
+   "value": null,
+   "currency": "EUR",
+   "firstSeen": "2026-10-23T11:27:11.714Z",
    "cats": [
     "other"
    ],
@@ -9275,26 +9471,6 @@
    "topic": "conn"
   },
   {
-   "pub": "450081-2026",
-   "source": "TED",
-   "title": "Litouwen – Vertaaldiensten – Vertimo paslaugos žodžiu ir raštu VSAT Pagėgių pasienio rinktinės veikimo teritorijoje",
-   "buyer": "Valstybės sienos apsaugos tarnyba prie Lietuvos Respublikos vidaus reikalų ministerijos",
-   "country": "LT",
-   "published": "2026-07-01",
-   "deadline": "",
-   "type": "Gegunde opdracht",
-   "kind": "award",
-   "cpv": [],
-   "link": "https://ted.europa.eu/nl/notice/-/detail/450081-2026",
-   "value": 82644.63,
-   "currency": "EUR",
-   "firstSeen": "2026-10-23T11:27:11.714Z",
-   "cats": [
-    "sat"
-   ],
-   "topic": "conn"
-  },
-  {
    "pub": "451096-2026",
    "source": "TED",
    "title": "Frankrijk – IT-diensten: adviezen, softwareontwikkeling, internet en ondersteuning – Délégation de tâches du service DTN/TSA/AP relative au support d’activités sur la plateforme MT-STAR .",
@@ -9304,7 +9480,9 @@
    "deadline": "2026-08-31",
    "type": "Aankondiging opdracht",
    "kind": "notice",
-   "cpv": [],
+   "cpv": [
+    "72000000"
+   ],
    "link": "https://ted.europa.eu/nl/notice/-/detail/451096-2026",
    "value": null,
    "currency": "EUR",
@@ -9333,6 +9511,26 @@
    "firstSeen": "2000-01-01T00:00:00.000Z",
    "cats": [
     "other"
+   ],
+   "topic": "conn"
+  },
+  {
+   "source": "TED",
+   "pub": "450081-2026",
+   "title": "Litouwen – Vertaaldiensten – Vertimo paslaugos žodžiu ir raštu VSAT Pagėgių pasienio rinktinės veikimo teritorijoje",
+   "buyer": "Valstybės sienos apsaugos tarnyba prie Lietuvos Respublikos vidaus reikalų ministerijos",
+   "country": "LT",
+   "published": "2026-07-01",
+   "deadline": "",
+   "type": "Gegunde opdracht",
+   "kind": "award",
+   "cpv": [],
+   "link": "https://ted.europa.eu/nl/notice/-/detail/450081-2026",
+   "value": 82644.63,
+   "currency": "EUR",
+   "firstSeen": "2026-10-23T11:27:11.714Z",
+   "cats": [
+    "sat"
    ],
    "topic": "conn"
   },
@@ -9686,27 +9884,6 @@
    "topic": "leo"
   },
   {
-   "pub": "432792-2026",
-   "source": "TED",
-   "title": "België, Tsjechië – Zakelijke dienstverlening: juridisch, marketing, consulting, drukkerij en beveiliging – FWC Legal and management support on the implementation of components of the European Space Programme",
-   "buyer": "European Commission, DG DEFIS - Defence Industry and Space",
-   "country": "BE",
-   "published": "2026-06-25",
-   "deadline": "",
-   "type": "Vooraankondiging",
-   "kind": "prior",
-   "cpv": [],
-   "link": "https://ted.europa.eu/nl/notice/-/detail/432792-2026",
-   "value": 60000000,
-   "currency": "EUR",
-   "defense": true,
-   "firstSeen": "2026-10-23T11:27:11.714Z",
-   "cats": [
-    "other"
-   ],
-   "topic": "conn"
-  },
-  {
    "pub": "436759-2026",
    "source": "TED",
    "title": "Polen – Satellietcommunicatie-uitrusting – Dostawa oraz integracja elementów systemu łączności satelitarnej (przenośnych terminali satelitarnych VSAT)",
@@ -9716,7 +9893,9 @@
    "deadline": "",
    "type": "Gegunde opdracht",
    "kind": "award",
-   "cpv": [],
+   "cpv": [
+    "32531000"
+   ],
    "link": "https://ted.europa.eu/nl/notice/-/detail/436759-2026",
    "value": null,
    "currency": "EUR",
@@ -9770,6 +9949,27 @@
    "value": 99058.82,
    "currency": "EUR",
    "firstSeen": "2000-01-01T00:00:00.000Z",
+   "cats": [
+    "other"
+   ],
+   "topic": "conn"
+  },
+  {
+   "source": "TED",
+   "pub": "432792-2026",
+   "title": "België, Tsjechië – Zakelijke dienstverlening: juridisch, marketing, consulting, drukkerij en beveiliging – FWC Legal and management support on the implementation of components of the European Space Programme",
+   "buyer": "European Commission, DG DEFIS - Defence Industry and Space",
+   "country": "BE",
+   "published": "2026-06-25",
+   "deadline": "",
+   "type": "Vooraankondiging",
+   "kind": "prior",
+   "cpv": [],
+   "link": "https://ted.europa.eu/nl/notice/-/detail/432792-2026",
+   "value": 60000000,
+   "currency": "EUR",
+   "defense": true,
+   "firstSeen": "2026-10-23T11:27:11.714Z",
    "cats": [
     "other"
    ],
@@ -9885,7 +10085,9 @@
    "deadline": "",
    "type": "Gegunde opdracht",
    "kind": "award",
-   "cpv": [],
+   "cpv": [
+    "32531000"
+   ],
    "link": "https://ted.europa.eu/nl/notice/-/detail/424646-2026",
    "value": 221275000,
    "currency": "RON",
@@ -10020,7 +10222,9 @@
    "deadline": "2026-07-15",
    "type": "Aankondiging opdracht",
    "kind": "notice",
-   "cpv": [],
+   "cpv": [
+    "48218000"
+   ],
    "link": "https://ted.europa.eu/nl/notice/-/detail/414195-2026",
    "value": 425278,
    "currency": "EUR",
@@ -10360,8 +10564,8 @@
    "topic": "conn"
   },
   {
-   "pub": "395466-2026",
    "source": "TED",
+   "pub": "395466-2026",
    "title": "Litouwen – Vertaaldiensten – Vertimo paslaugos žodžiu ir raštu VSAT Vilniaus pasienio rinktinės veikimo teritorijoje",
    "buyer": "Valstybės sienos apsaugos tarnyba prie Lietuvos Respublikos vidaus reikalų ministerijos",
    "country": "LT",
@@ -10428,32 +10632,6 @@
    "qty": 3
   },
   {
-   "pub": "WB-OP00449676",
-   "source": "Wereldbank",
-   "title": "Acquisition, installation et maintenance de 191 kits Starlink et composants d’extension réseau pour les 3 nouvelles DREN, les 9 Ecoles Normales et 179 inspections prioritaires dotées de tablettes",
-   "buyer": "Niger Learning Improvement for Results in Education Project",
-   "country": "NE",
-   "countryName": "Niger",
-   "published": "2026-06-08",
-   "deadline": "",
-   "type": "Contract Award",
-   "kind": "award",
-   "cpv": [],
-   "wbGroup": "GO",
-   "wbMethod": "RFQ",
-   "link": "https://projects.worldbank.org/en/projects-operations/procurement-detail/OP00449676",
-   "value": null,
-   "currency": "USD",
-   "firstSeen": "2000-01-01T00:00:00.000Z",
-   "titleNl": "Aankoop, installatie en onderhoud van 191 Starlink-sets en onderdelen voor netwerkuitbreiding voor de 3 nieuwe DREN’s, de 9 lerarenopleidingen en 179 prioritaire inspectiediensten die zijn uitgerust met tablets",
-   "trEngine": "DeepL",
-   "cats": [
-    "leo"
-   ],
-   "topic": "leo",
-   "qty": 191
-  },
-  {
    "pub": "WB-OP00449674",
    "source": "Wereldbank",
    "title": "Acquisition, installation et maintenance de 191 kits Starlink et composants d’extension réseau pour les 3 nouvelles DREN, les 9 Ecoles Normales et 179 inspections prioritaires dotées de tablettes",
@@ -10468,6 +10646,32 @@
    "wbGroup": "GO",
    "wbMethod": "RFQ",
    "link": "https://projects.worldbank.org/en/projects-operations/procurement-detail/OP00449674",
+   "value": null,
+   "currency": "USD",
+   "firstSeen": "2000-01-01T00:00:00.000Z",
+   "titleNl": "Aankoop, installatie en onderhoud van 191 Starlink-sets en onderdelen voor netwerkuitbreiding voor de 3 nieuwe DREN’s, de 9 lerarenopleidingen en 179 prioritaire inspectiediensten die zijn uitgerust met tablets",
+   "trEngine": "DeepL",
+   "cats": [
+    "leo"
+   ],
+   "topic": "leo",
+   "qty": 191
+  },
+  {
+   "pub": "WB-OP00449676",
+   "source": "Wereldbank",
+   "title": "Acquisition, installation et maintenance de 191 kits Starlink et composants d’extension réseau pour les 3 nouvelles DREN, les 9 Ecoles Normales et 179 inspections prioritaires dotées de tablettes",
+   "buyer": "Niger Learning Improvement for Results in Education Project",
+   "country": "NE",
+   "countryName": "Niger",
+   "published": "2026-06-08",
+   "deadline": "",
+   "type": "Contract Award",
+   "kind": "award",
+   "cpv": [],
+   "wbGroup": "GO",
+   "wbMethod": "RFQ",
+   "link": "https://projects.worldbank.org/en/projects-operations/procurement-detail/OP00449676",
    "value": null,
    "currency": "USD",
    "firstSeen": "2000-01-01T00:00:00.000Z",
@@ -10689,7 +10893,9 @@
    "deadline": "2026-07-02",
    "type": "Aankondiging opdracht",
    "kind": "notice",
-   "cpv": [],
+   "cpv": [
+    "32500000"
+   ],
    "link": "https://ted.europa.eu/nl/notice/-/detail/376719-2026",
    "value": 1413011.82,
    "currency": "EUR",
@@ -11177,7 +11383,9 @@
    "deadline": "",
    "type": "Gegunde opdracht",
    "kind": "award",
-   "cpv": [],
+   "cpv": [
+    "64200000"
+   ],
    "link": "https://ted.europa.eu/nl/notice/-/detail/340450-2026",
    "value": 3475453.82,
    "currency": "RON",
@@ -11253,26 +11461,6 @@
    "topic": "conn"
   },
   {
-   "pub": "335608-2026",
-   "source": "TED",
-   "title": "Italië – Diverse technische dienstverlening – PROCEDURA APERTA EX ART. 71 D.LGS. N. 36/2023 PER L’AFFIDAMENTO DEI SERVIZI DI VERIFICA TECNICO ECONOMICA DI IMPIANTI IN FIBRA OTTICA E FIXED WIRELESS ACCESS (FWA) SUL TERRITORIO ITALIANO in 8 LOTTI PIANO NAZIONALE PER GLI INVESTIMENTI COMPLEMENTARI AL PIANO NAZIONALE DI RIPRESA E RESILIENZA (PNC)",
-   "buyer": "Infratel Italia s.p.a.",
-   "country": "IT",
-   "published": "2026-05-18",
-   "deadline": "2026-05-29",
-   "type": "Aankondiging opdracht",
-   "kind": "notice",
-   "cpv": [],
-   "link": "https://ted.europa.eu/nl/notice/-/detail/335608-2026",
-   "value": 4549064,
-   "currency": "EUR",
-   "firstSeen": "2026-10-23T11:27:11.714Z",
-   "cats": [
-    "mobile"
-   ],
-   "topic": "conn"
-  },
-  {
    "pub": "337195-2026",
    "source": "TED",
    "title": "Polen – WAN-diensten – Świadczenie usług operatora sieci rozległej SD-WAN-PP dla Poczty Polskiej S.A.",
@@ -11317,6 +11505,26 @@
    "topic": "conn"
   },
   {
+   "source": "TED",
+   "pub": "335608-2026",
+   "title": "Italië – Diverse technische dienstverlening – PROCEDURA APERTA EX ART. 71 D.LGS. N. 36/2023 PER L’AFFIDAMENTO DEI SERVIZI DI VERIFICA TECNICO ECONOMICA DI IMPIANTI IN FIBRA OTTICA E FIXED WIRELESS ACCESS (FWA) SUL TERRITORIO ITALIANO in 8 LOTTI PIANO NAZIONALE PER GLI INVESTIMENTI COMPLEMENTARI AL PIANO NAZIONALE DI RIPRESA E RESILIENZA (PNC)",
+   "buyer": "Infratel Italia s.p.a.",
+   "country": "IT",
+   "published": "2026-05-18",
+   "deadline": "2026-05-29",
+   "type": "Aankondiging opdracht",
+   "kind": "notice",
+   "cpv": [],
+   "link": "https://ted.europa.eu/nl/notice/-/detail/335608-2026",
+   "value": 4549064,
+   "currency": "EUR",
+   "firstSeen": "2026-10-23T11:27:11.714Z",
+   "cats": [
+    "mobile"
+   ],
+   "topic": "conn"
+  },
+  {
    "pub": "CF-348cf507-f40e-4bae-a0ca-f8a5e8b6fc23",
    "source": "Contracts Finder",
    "title": "Provision of Managed Network and Voice Services",
@@ -11340,8 +11548,33 @@
    "topic": "conn"
   },
   {
-   "pub": "332943-2026",
+   "pub": "331380-2026",
    "source": "TED",
+   "title": "Spanje – Telecommunicatiesysteem – SUMINISTRO E INSTALACIÓN DE SOLUCIONES DE COMUNICACIÓN SATELITAL",
+   "buyer": "Metro de Madrid, S.A.",
+   "country": "ES",
+   "published": "2026-05-15",
+   "deadline": "2026-06-16",
+   "type": "Aankondiging opdracht",
+   "kind": "notice",
+   "cpv": [
+    "32524000",
+    "64200000",
+    "64210000",
+    "51300000"
+   ],
+   "link": "https://ted.europa.eu/nl/notice/-/detail/331380-2026",
+   "value": 1214041.24,
+   "currency": "EUR",
+   "firstSeen": "2000-01-01T00:00:00.000Z",
+   "cats": [
+    "other"
+   ],
+   "topic": "conn"
+  },
+  {
+   "source": "TED",
+   "pub": "332943-2026",
    "title": "Portugal – Diverse goederen – 3026004282 - Aquisição de material diverso no âmbito do projeto Trator do Mar",
    "buyer": "Ministério da Defesa Nacional - Marinha",
    "country": "PT",
@@ -11355,26 +11588,6 @@
    "currency": "EUR",
    "defense": true,
    "firstSeen": "2026-10-23T11:27:11.714Z",
-   "cats": [
-    "other"
-   ],
-   "topic": "conn"
-  },
-  {
-   "pub": "331380-2026",
-   "source": "TED",
-   "title": "Spanje – Telecommunicatiesysteem – SUMINISTRO E INSTALACIÓN DE SOLUCIONES DE COMUNICACIÓN SATELITAL",
-   "buyer": "Metro de Madrid, S.A.",
-   "country": "ES",
-   "published": "2026-05-15",
-   "deadline": "2026-06-16",
-   "type": "Aankondiging opdracht",
-   "kind": "notice",
-   "cpv": [],
-   "link": "https://ted.europa.eu/nl/notice/-/detail/331380-2026",
-   "value": 1214041.24,
-   "currency": "EUR",
-   "firstSeen": "2000-01-01T00:00:00.000Z",
    "cats": [
     "other"
    ],
@@ -11985,7 +12198,9 @@
    "deadline": "",
    "type": "Gegunde opdracht",
    "kind": "award",
-   "cpv": [],
+   "cpv": [
+    "64215000"
+   ],
    "link": "https://ted.europa.eu/nl/notice/-/detail/295573-2026",
    "value": null,
    "currency": "EUR",
@@ -12579,33 +12794,15 @@
    "deadline": "",
    "type": "Gegunde opdracht",
    "kind": "award",
-   "cpv": [],
+   "cpv": [
+    "50000000"
+   ],
    "link": "https://ted.europa.eu/nl/notice/-/detail/261571-2026",
    "value": null,
    "currency": "EUR",
    "firstSeen": "2000-01-01T00:00:00.000Z",
    "cats": [
     "other"
-   ],
-   "topic": "conn"
-  },
-  {
-   "pub": "259345-2026",
-   "source": "TED",
-   "title": "Italië – Diverse technische dienstverlening – PROCEDURA APERTA EX ART. 71 D.LGS. N. 36/2023 PER L’AFFIDAMENTO DEI SERVIZI DI VERIFICA TECNICO ECONOMICA DI IMPIANTI IN FIBRA OTTICA E FIXED WIRELESS ACCESS (FWA) SUL TERRITORIO ITALIANO in 8 LOTTI PIANO NAZIONALE PER GLI INVESTIMENTI COMPLEMENTARI AL PIANO NAZIONALE DI RIPRESA E RESILIENZA (PNC)",
-   "buyer": "Infratel Italia s.p.a.",
-   "country": "IT",
-   "published": "2026-04-16",
-   "deadline": "2026-05-19",
-   "type": "Aankondiging opdracht",
-   "kind": "notice",
-   "cpv": [],
-   "link": "https://ted.europa.eu/nl/notice/-/detail/259345-2026",
-   "value": 4549064,
-   "currency": "EUR",
-   "firstSeen": "2026-10-23T11:27:11.714Z",
-   "cats": [
-    "mobile"
    ],
    "topic": "conn"
   },
@@ -12679,22 +12876,22 @@
    "topic": "conn"
   },
   {
-   "pub": "254766-2026",
    "source": "TED",
-   "title": "Frankrijk – Op afstand bestuurde luchtvaartuigen – Acquisition D’une cAPaciTé initiale de drone d’appui dans la profondeur, de Maintien en Condition Opérationnelle (MCO) et de prestations associées (ADAPT)",
-   "buyer": "Direction Générale de l’Armement / DOMN / Service des achats d'armement",
-   "country": "FR",
-   "published": "2026-04-15",
-   "deadline": "2026-05-15",
+   "pub": "259345-2026",
+   "title": "Italië – Diverse technische dienstverlening – PROCEDURA APERTA EX ART. 71 D.LGS. N. 36/2023 PER L’AFFIDAMENTO DEI SERVIZI DI VERIFICA TECNICO ECONOMICA DI IMPIANTI IN FIBRA OTTICA E FIXED WIRELESS ACCESS (FWA) SUL TERRITORIO ITALIANO in 8 LOTTI PIANO NAZIONALE PER GLI INVESTIMENTI COMPLEMENTARI AL PIANO NAZIONALE DI RIPRESA E RESILIENZA (PNC)",
+   "buyer": "Infratel Italia s.p.a.",
+   "country": "IT",
+   "published": "2026-04-16",
+   "deadline": "2026-05-19",
    "type": "Aankondiging opdracht",
    "kind": "notice",
    "cpv": [],
-   "link": "https://ted.europa.eu/nl/notice/-/detail/254766-2026",
-   "value": null,
+   "link": "https://ted.europa.eu/nl/notice/-/detail/259345-2026",
+   "value": 4549064,
    "currency": "EUR",
    "firstSeen": "2026-10-23T11:27:11.714Z",
    "cats": [
-    "other"
+    "mobile"
    ],
    "topic": "conn"
   },
@@ -12793,6 +12990,26 @@
    "topic": "conn"
   },
   {
+   "source": "TED",
+   "pub": "254766-2026",
+   "title": "Frankrijk – Op afstand bestuurde luchtvaartuigen – Acquisition D’une cAPaciTé initiale de drone d’appui dans la profondeur, de Maintien en Condition Opérationnelle (MCO) et de prestations associées (ADAPT)",
+   "buyer": "Direction Générale de l’Armement / DOMN / Service des achats d'armement",
+   "country": "FR",
+   "published": "2026-04-15",
+   "deadline": "2026-05-15",
+   "type": "Aankondiging opdracht",
+   "kind": "notice",
+   "cpv": [],
+   "link": "https://ted.europa.eu/nl/notice/-/detail/254766-2026",
+   "value": null,
+   "currency": "EUR",
+   "firstSeen": "2026-10-23T11:27:11.714Z",
+   "cats": [
+    "other"
+   ],
+   "topic": "conn"
+  },
+  {
    "pub": "254201-2026",
    "source": "TED",
    "title": "Tsjechië – Netwerkuitrusting – Modernizace a zabezpečení komunikační infrastruktury - 5G modem",
@@ -12802,7 +13019,9 @@
    "deadline": "2026-05-18",
    "type": "Aankondiging opdracht",
    "kind": "notice",
-   "cpv": [],
+   "cpv": [
+    "32420000"
+   ],
    "link": "https://ted.europa.eu/nl/notice/-/detail/254201-2026",
    "value": 495867,
    "currency": "CZK",
@@ -12813,8 +13032,8 @@
    "topic": "conn"
   },
   {
-   "pub": "253197-2026",
    "source": "TED",
+   "pub": "253197-2026",
    "title": "Litouwen – Dieselbrandstof – Dyzelino ir A-95 markės variklio benzino iš Tiekėjų degalinių pirkimas tarnybinėms transporto priemonėms, priskirtoms VSAT prie LR VRM Pakrančių apsaugos pasienio rinktinės Neringos pasienio užkardai",
    "buyer": "Valstybės sienos apsaugos tarnyba prie Lietuvos Respublikos vidaus reikalų ministerijos",
    "country": "LT",
@@ -13032,7 +13251,9 @@
    "deadline": "",
    "type": "Wijziging opdracht",
    "kind": "award",
-   "cpv": [],
+   "cpv": [
+    "64200000"
+   ],
    "link": "https://ted.europa.eu/nl/notice/-/detail/238973-2026",
    "value": null,
    "currency": "EUR",
@@ -13052,7 +13273,10 @@
    "deadline": "",
    "type": "Gegunde opdracht",
    "kind": "award",
-   "cpv": [],
+   "cpv": [
+    "50100000",
+    "34300000"
+   ],
    "link": "https://ted.europa.eu/nl/notice/-/detail/237650-2026",
    "value": 74380.17,
    "currency": "EUR",
@@ -13072,7 +13296,10 @@
    "deadline": "",
    "type": "Gegunde opdracht",
    "kind": "award",
-   "cpv": [],
+   "cpv": [
+    "50100000",
+    "34300000"
+   ],
    "link": "https://ted.europa.eu/nl/notice/-/detail/238030-2026",
    "value": 74380.17,
    "currency": "EUR",
@@ -13550,26 +13777,6 @@
    "topic": "leo"
   },
   {
-   "pub": "222303-2026",
-   "source": "TED",
-   "title": "Litouwen – Vertaaldiensten – Vertimo paslaugos žodžiu ir raštu VSAT Vilniaus pasienio rinktinės veikimo teritorijoje",
-   "buyer": "Valstybės sienos apsaugos tarnyba prie Lietuvos Respublikos vidaus reikalų ministerijos",
-   "country": "LT",
-   "published": "2026-03-31",
-   "deadline": "2026-05-07",
-   "type": "Aankondiging opdracht",
-   "kind": "notice",
-   "cpv": [],
-   "link": "https://ted.europa.eu/nl/notice/-/detail/222303-2026",
-   "value": 206611.57,
-   "currency": "EUR",
-   "firstSeen": "2026-10-23T11:27:11.714Z",
-   "cats": [
-    "sat"
-   ],
-   "topic": "conn"
-  },
-  {
    "pub": "219678-2026",
    "source": "TED",
    "title": "Polen – Verhuur van satellietverbindingen – Usługi łączności satelitarnej – system Starlink (Projekt Ukraiński)",
@@ -13593,8 +13800,28 @@
    "topic": "leo"
   },
   {
-   "pub": "221087-2026",
    "source": "TED",
+   "pub": "222303-2026",
+   "title": "Litouwen – Vertaaldiensten – Vertimo paslaugos žodžiu ir raštu VSAT Vilniaus pasienio rinktinės veikimo teritorijoje",
+   "buyer": "Valstybės sienos apsaugos tarnyba prie Lietuvos Respublikos vidaus reikalų ministerijos",
+   "country": "LT",
+   "published": "2026-03-31",
+   "deadline": "2026-05-07",
+   "type": "Aankondiging opdracht",
+   "kind": "notice",
+   "cpv": [],
+   "link": "https://ted.europa.eu/nl/notice/-/detail/222303-2026",
+   "value": 206611.57,
+   "currency": "EUR",
+   "firstSeen": "2026-10-23T11:27:11.714Z",
+   "cats": [
+    "sat"
+   ],
+   "topic": "conn"
+  },
+  {
+   "source": "TED",
+   "pub": "221087-2026",
    "title": "Litouwen – Vertaaldiensten – Vertimo paslaugos žodžiu ir raštu VSAT Pagėgių pasienio rinktinės veikimo teritorijoje",
    "buyer": "Valstybės sienos apsaugos tarnyba prie Lietuvos Respublikos vidaus reikalų ministerijos",
    "country": "LT",
@@ -13972,7 +14199,11 @@
    "deadline": "2026-04-20",
    "type": "Aankondiging opdracht",
    "kind": "notice",
-   "cpv": [],
+   "cpv": [
+    "64000000",
+    "64221000",
+    "64225000"
+   ],
    "link": "https://ted.europa.eu/nl/notice/-/detail/191062-2026",
    "value": 450000000,
    "currency": "NOK",
@@ -14132,7 +14363,9 @@
    "deadline": "2026-04-27",
    "type": "Aankondiging opdracht",
    "kind": "notice",
-   "cpv": [],
+   "cpv": [
+    "32530000"
+   ],
    "link": "https://ted.europa.eu/nl/notice/-/detail/185262-2026",
    "value": null,
    "currency": "EUR",
@@ -14287,7 +14520,10 @@
    "deadline": "2026-04-09",
    "type": "Aankondiging opdracht",
    "kind": "notice",
-   "cpv": [],
+   "cpv": [
+    "32324310",
+    "64200000"
+   ],
    "link": "https://ted.europa.eu/nl/notice/-/detail/175808-2026",
    "value": 14472000,
    "currency": "EUR",
@@ -14467,27 +14703,6 @@
    "topic": "leo"
   },
   {
-   "pub": "157448-2026",
-   "source": "TED",
-   "title": "Duitsland – Commando-, controle- en communicatiesystemen – SATCOM Schiffe - Anpassung Fernmelde- und Führungsanlagen seegehender Einheiten",
-   "buyer": "Bundesamt für Ausrüstung, Informationstechnik und Nutzung der Bundeswehr",
-   "country": "DE",
-   "published": "2026-03-06",
-   "deadline": "",
-   "type": "Gegunde opdracht",
-   "kind": "award",
-   "cpv": [],
-   "link": "https://ted.europa.eu/nl/notice/-/detail/157448-2026",
-   "value": null,
-   "currency": "EUR",
-   "defense": true,
-   "firstSeen": "2026-10-23T11:27:11.714Z",
-   "cats": [
-    "sat"
-   ],
-   "topic": "conn"
-  },
-  {
    "pub": "157940-2026",
    "source": "TED",
    "title": "Spanje – Telecommunicatiediensten – Renovación del servicio de telefonía fija y móvil, así como voz, datos y acceso a Internet para ambos tipos de telefonía, para todas las delegaciones y personal de Unión de Mutuas, MCSS nº 267 (Dos lotes)",
@@ -14506,6 +14721,27 @@
    "firstSeen": "2000-01-01T00:00:00.000Z",
    "cats": [
     "other"
+   ],
+   "topic": "conn"
+  },
+  {
+   "source": "TED",
+   "pub": "157448-2026",
+   "title": "Duitsland – Commando-, controle- en communicatiesystemen – SATCOM Schiffe - Anpassung Fernmelde- und Führungsanlagen seegehender Einheiten",
+   "buyer": "Bundesamt für Ausrüstung, Informationstechnik und Nutzung der Bundeswehr",
+   "country": "DE",
+   "published": "2026-03-06",
+   "deadline": "",
+   "type": "Gegunde opdracht",
+   "kind": "award",
+   "cpv": [],
+   "link": "https://ted.europa.eu/nl/notice/-/detail/157448-2026",
+   "value": null,
+   "currency": "EUR",
+   "defense": true,
+   "firstSeen": "2026-10-23T11:27:11.714Z",
+   "cats": [
+    "sat"
    ],
    "topic": "conn"
   },
@@ -14727,7 +14963,10 @@
    "deadline": "",
    "type": "Gegunde opdracht",
    "kind": "award",
-   "cpv": [],
+   "cpv": [
+    "64200000",
+    "32500000"
+   ],
    "link": "https://ted.europa.eu/nl/notice/-/detail/138600-2026",
    "value": null,
    "currency": "EUR",
@@ -14947,7 +15186,9 @@
    "deadline": "2026-03-24",
    "type": "Aankondiging opdracht",
    "kind": "notice",
-   "cpv": [],
+   "cpv": [
+    "32570000"
+   ],
    "link": "https://ted.europa.eu/nl/notice/-/detail/122966-2026",
    "value": 520736,
    "currency": "EUR",
@@ -15026,8 +15267,30 @@
    "topic": "conn"
   },
   {
-   "pub": "119898-2026",
+   "pub": "118642-2026",
    "source": "TED",
+   "title": "Roemenië – Verhuur van satellietverbindingen – Servicii de distributie prin satelit pentru difuzarea programelor SRTV, pentru o perioada de 48 luni",
+   "buyer": "SOCIETATEA ROMÂNA DE TELEVIZIUNE",
+   "country": "RO",
+   "published": "2026-02-19",
+   "deadline": "",
+   "type": "Gegunde opdracht",
+   "kind": "award",
+   "cpv": [
+    "64214100"
+   ],
+   "link": "https://ted.europa.eu/nl/notice/-/detail/118642-2026",
+   "value": null,
+   "currency": "EUR",
+   "firstSeen": "2000-01-01T00:00:00.000Z",
+   "cats": [
+    "sat"
+   ],
+   "topic": "conn"
+  },
+  {
+   "source": "TED",
+   "pub": "119898-2026",
    "title": "Duitsland – Onderzoek en ontwikkeling, en aanverwante adviezen – Copernicus CAMS2_64 Development of the Global Fire Assimilation System (GFAS)",
    "buyer": "European Centre for Medium-Range Weather Forecasts (ECMWF)",
    "country": "DE",
@@ -15046,8 +15309,8 @@
    "topic": "conn"
   },
   {
-   "pub": "117291-2026",
    "source": "TED",
+   "pub": "117291-2026",
    "title": "Litouwen – Dieselbrandstof – Dyzelino ir A-95 markės variklio benzino iš Tiekėjų degalinių pirkimas tarnybinėms transporto priemonėms, priskirtoms VSAT prie LR VRM Pakrančių apsaugos pasienio rinktinės Neringos pasienio užkardai",
    "buyer": "Valstybės sienos apsaugos tarnyba prie Lietuvos Respublikos vidaus reikalų ministerijos",
    "country": "LT",
@@ -15060,28 +15323,6 @@
    "value": 100000,
    "currency": "EUR",
    "firstSeen": "2026-10-23T11:27:11.714Z",
-   "cats": [
-    "sat"
-   ],
-   "topic": "conn"
-  },
-  {
-   "pub": "118642-2026",
-   "source": "TED",
-   "title": "Roemenië – Verhuur van satellietverbindingen – Servicii de distributie prin satelit pentru difuzarea programelor SRTV, pentru o perioada de 48 luni",
-   "buyer": "SOCIETATEA ROMÂNA DE TELEVIZIUNE",
-   "country": "RO",
-   "published": "2026-02-19",
-   "deadline": "",
-   "type": "Gegunde opdracht",
-   "kind": "award",
-   "cpv": [
-    "64214100"
-   ],
-   "link": "https://ted.europa.eu/nl/notice/-/detail/118642-2026",
-   "value": null,
-   "currency": "EUR",
-   "firstSeen": "2000-01-01T00:00:00.000Z",
    "cats": [
     "sat"
    ],
@@ -15255,7 +15496,9 @@
    "deadline": "",
    "type": "Gegunde opdracht",
    "kind": "award",
-   "cpv": [],
+   "cpv": [
+    "32000000"
+   ],
    "link": "https://ted.europa.eu/nl/notice/-/detail/103888-2026",
    "value": null,
    "currency": "EUR",
@@ -15669,7 +15912,9 @@
    "deadline": "2026-03-13",
    "type": "Aankondiging opdracht",
    "kind": "notice",
-   "cpv": [],
+   "cpv": [
+    "64200000"
+   ],
    "link": "https://ted.europa.eu/nl/notice/-/detail/85467-2026",
    "value": 3475453.82,
    "currency": "RON",
@@ -15778,7 +16023,10 @@
    "deadline": "",
    "type": "Vrijwillige transparantie",
    "kind": "award",
-   "cpv": [],
+   "cpv": [
+    "72318000",
+    "72000000"
+   ],
    "link": "https://ted.europa.eu/nl/notice/-/detail/78885-2026",
    "value": null,
    "currency": "EUR",
@@ -16097,26 +16345,6 @@
    "topic": "conn"
   },
   {
-   "pub": "66314-2026",
-   "source": "TED",
-   "title": "Roemenië – Bermpaaltjes – Achizitie de balize in cadrul Proiectului „Îmbunătățirea nivelului de semnalizare, protecție și monitorizare a stării de conservare a habitatelor și speciilor din zonele de maxim interes (zone strict protejate și colonii) din RBDD” SMIS 320666 finanțat prin Programul Dezvoltare.",
-   "buyer": "ADMINISTRATIA REZERVATIEI BIOSFEREI DELTA DUNARII",
-   "country": "RO",
-   "published": "2026-01-29",
-   "deadline": "2026-02-04",
-   "type": "Aankondiging opdracht",
-   "kind": "notice",
-   "cpv": [],
-   "link": "https://ted.europa.eu/nl/notice/-/detail/66314-2026",
-   "value": 26320972.32,
-   "currency": "RON",
-   "firstSeen": "2026-10-23T11:27:11.714Z",
-   "cats": [
-    "other"
-   ],
-   "topic": "conn"
-  },
-  {
    "pub": "65568-2026",
    "source": "TED",
    "title": "België – Verhuur van satellietverbindingen – Connectiviteit FIFA WK 2026",
@@ -16177,6 +16405,26 @@
    "value": 27000000,
    "currency": "EUR",
    "firstSeen": "2000-01-01T00:00:00.000Z",
+   "cats": [
+    "other"
+   ],
+   "topic": "conn"
+  },
+  {
+   "source": "TED",
+   "pub": "66314-2026",
+   "title": "Roemenië – Bermpaaltjes – Achizitie de balize in cadrul Proiectului „Îmbunătățirea nivelului de semnalizare, protecție și monitorizare a stării de conservare a habitatelor și speciilor din zonele de maxim interes (zone strict protejate și colonii) din RBDD” SMIS 320666 finanțat prin Programul Dezvoltare.",
+   "buyer": "ADMINISTRATIA REZERVATIEI BIOSFEREI DELTA DUNARII",
+   "country": "RO",
+   "published": "2026-01-29",
+   "deadline": "2026-02-04",
+   "type": "Aankondiging opdracht",
+   "kind": "notice",
+   "cpv": [],
+   "link": "https://ted.europa.eu/nl/notice/-/detail/66314-2026",
+   "value": 26320972.32,
+   "currency": "RON",
+   "firstSeen": "2026-10-23T11:27:11.714Z",
    "cats": [
     "other"
    ],
@@ -16577,7 +16825,9 @@
    "deadline": "",
    "type": "Gegunde opdracht",
    "kind": "award",
-   "cpv": [],
+   "cpv": [
+    "32530000"
+   ],
    "link": "https://ted.europa.eu/nl/notice/-/detail/46297-2026",
    "value": 3000000,
    "currency": "EUR",
@@ -16712,7 +16962,9 @@
    "deadline": "2026-02-26",
    "type": "Aankondiging opdracht",
    "kind": "notice",
-   "cpv": [],
+   "cpv": [
+    "32533000"
+   ],
    "link": "https://ted.europa.eu/nl/notice/-/detail/42457-2026",
    "value": null,
    "currency": "EUR",
@@ -16958,7 +17210,9 @@
    "deadline": "",
    "type": "Gegunde opdracht",
    "kind": "award",
-   "cpv": [],
+   "cpv": [
+    "32531000"
+   ],
    "link": "https://ted.europa.eu/nl/notice/-/detail/21425-2026",
    "value": null,
    "currency": "EUR",
@@ -16979,7 +17233,9 @@
    "deadline": "",
    "type": "Gegunde opdracht",
    "kind": "award",
-   "cpv": [],
+   "cpv": [
+    "72220000"
+   ],
    "link": "https://ted.europa.eu/nl/notice/-/detail/19078-2026",
    "value": null,
    "currency": "EUR",
@@ -17204,7 +17460,9 @@
    "deadline": "2026-01-14",
    "type": "Aankondiging opdracht",
    "kind": "notice",
-   "cpv": [],
+   "cpv": [
+    "32000000"
+   ],
    "link": "https://ted.europa.eu/nl/notice/-/detail/6883-2026",
    "value": null,
    "currency": "EUR",
@@ -17537,8 +17795,8 @@
    "topic": "conn"
   },
   {
-   "pub": "860570-2025",
    "source": "TED",
+   "pub": "860570-2025",
    "title": "Portugal – Brandbluswagens – Aquisição de uma Viatura Florestal de Combate a Incêndios (VFCI) para a Associação Humanitária de Bombeiros Voluntários de Viatodos",
    "buyer": "Associação Humanitária dos Bombeiros Voluntários de Viatodos",
    "country": "PT",
@@ -17638,7 +17896,9 @@
    "deadline": "2026-01-26",
    "type": "Aankondiging opdracht",
    "kind": "notice",
-   "cpv": [],
+   "cpv": [
+    "50000000"
+   ],
    "link": "https://ted.europa.eu/nl/notice/-/detail/851167-2025",
    "value": null,
    "currency": "EUR",
@@ -17658,7 +17918,10 @@
    "deadline": "",
    "type": "Gegunde opdracht",
    "kind": "award",
-   "cpv": [],
+   "cpv": [
+    "50100000",
+    "34300000"
+   ],
    "link": "https://ted.europa.eu/nl/notice/-/detail/853365-2025",
    "value": 153150,
    "currency": "EUR",
@@ -17745,7 +18008,9 @@
    "deadline": "2025-12-30",
    "type": "Aankondiging opdracht",
    "kind": "notice",
-   "cpv": [],
+   "cpv": [
+    "32000000"
+   ],
    "link": "https://ted.europa.eu/nl/notice/-/detail/841084-2025",
    "value": null,
    "currency": "EUR",
@@ -17814,7 +18079,9 @@
    "deadline": "",
    "type": "Gegunde opdracht",
    "kind": "award",
-   "cpv": [],
+   "cpv": [
+    "32000000"
+   ],
    "link": "https://ted.europa.eu/nl/notice/-/detail/836850-2025",
    "value": null,
    "currency": "EUR",
@@ -17860,7 +18127,9 @@
    "deadline": "",
    "type": "Gegunde opdracht",
    "kind": "award",
-   "cpv": [],
+   "cpv": [
+    "64200000"
+   ],
    "link": "https://ted.europa.eu/nl/notice/-/detail/834483-2025",
    "value": 579384,
    "currency": "EUR",
@@ -17973,7 +18242,9 @@
    "deadline": "2026-01-12",
    "type": "Aankondiging opdracht",
    "kind": "notice",
-   "cpv": [],
+   "cpv": [
+    "32000000"
+   ],
    "link": "https://ted.europa.eu/nl/notice/-/detail/827161-2025",
    "value": null,
    "currency": "EUR",
@@ -18306,7 +18577,9 @@
    "deadline": "",
    "type": "Gegunde opdracht",
    "kind": "award",
-   "cpv": [],
+   "cpv": [
+    "72000000"
+   ],
    "link": "https://ted.europa.eu/nl/notice/-/detail/815500-2025",
    "value": 1800000,
    "currency": "SEK",
@@ -18326,7 +18599,10 @@
    "deadline": "",
    "type": "Gegunde opdracht",
    "kind": "award",
-   "cpv": [],
+   "cpv": [
+    "64200000",
+    "32531000"
+   ],
    "link": "https://ted.europa.eu/nl/notice/-/detail/815921-2025",
    "value": 76414226,
    "currency": "CZK",
@@ -18346,7 +18622,9 @@
    "deadline": "",
    "type": "Gegunde opdracht",
    "kind": "award",
-   "cpv": [],
+   "cpv": [
+    "50300000"
+   ],
    "link": "https://ted.europa.eu/nl/notice/-/detail/817196-2025",
    "value": null,
    "currency": "EUR",
@@ -18455,26 +18733,6 @@
    "topic": "conn"
   },
   {
-   "pub": "807667-2025",
-   "source": "TED",
-   "title": "Roemenië – Bermpaaltjes – Achizitie de balize in cadrul Proiectului „Îmbunătățirea nivelului de semnalizare, protecție și monitorizare a stării de conservare a habitatelor și speciilor din zonele de maxim interes (zone strict protejate și colonii) din RBDD” SMIS 320666 finanțat prin Programul Dezvoltare.",
-   "buyer": "ADMINISTRATIA REZERVATIEI BIOSFEREI DELTA DUNARII",
-   "country": "RO",
-   "published": "2025-12-05",
-   "deadline": "2026-01-29",
-   "type": "Aankondiging opdracht",
-   "kind": "notice",
-   "cpv": [],
-   "link": "https://ted.europa.eu/nl/notice/-/detail/807667-2025",
-   "value": 26320972.32,
-   "currency": "RON",
-   "firstSeen": "2026-10-23T11:27:11.714Z",
-   "cats": [
-    "other"
-   ],
-   "topic": "conn"
-  },
-  {
    "pub": "810407-2025",
    "source": "TED",
    "title": "Bulgarije – IT-diensten: adviezen, softwareontwikkeling, internet en ondersteuning – \"Доставка на оборудване за надграждане на SD-WAN на НОИ\".",
@@ -18493,6 +18751,26 @@
    "firstSeen": "2000-01-01T00:00:00.000Z",
    "cats": [
     "managed"
+   ],
+   "topic": "conn"
+  },
+  {
+   "source": "TED",
+   "pub": "807667-2025",
+   "title": "Roemenië – Bermpaaltjes – Achizitie de balize in cadrul Proiectului „Îmbunătățirea nivelului de semnalizare, protecție și monitorizare a stării de conservare a habitatelor și speciilor din zonele de maxim interes (zone strict protejate și colonii) din RBDD” SMIS 320666 finanțat prin Programul Dezvoltare.",
+   "buyer": "ADMINISTRATIA REZERVATIEI BIOSFEREI DELTA DUNARII",
+   "country": "RO",
+   "published": "2025-12-05",
+   "deadline": "2026-01-29",
+   "type": "Aankondiging opdracht",
+   "kind": "notice",
+   "cpv": [],
+   "link": "https://ted.europa.eu/nl/notice/-/detail/807667-2025",
+   "value": 26320972.32,
+   "currency": "RON",
+   "firstSeen": "2026-10-23T11:27:11.714Z",
+   "cats": [
+    "other"
    ],
    "topic": "conn"
   },
@@ -18807,7 +19085,9 @@
    "deadline": "",
    "type": "Vrijwillige transparantie",
    "kind": "award",
-   "cpv": [],
+   "cpv": [
+    "32323500"
+   ],
    "link": "https://ted.europa.eu/nl/notice/-/detail/793672-2025",
    "value": null,
    "currency": "EUR",
@@ -19317,7 +19597,9 @@
    "deadline": "",
    "type": "Gegunde opdracht",
    "kind": "award",
-   "cpv": [],
+   "cpv": [
+    "64200000"
+   ],
    "link": "https://ted.europa.eu/nl/notice/-/detail/770810-2025",
    "value": 300000,
    "currency": "EUR",
@@ -19526,7 +19808,10 @@
    "deadline": "",
    "type": "Gegunde opdracht",
    "kind": "award",
-   "cpv": [],
+   "cpv": [
+    "50330000",
+    "50000000"
+   ],
    "link": "https://ted.europa.eu/nl/notice/-/detail/753818-2025",
    "value": null,
    "currency": "EUR",
@@ -19890,7 +20175,9 @@
    "deadline": "2025-12-04",
    "type": "Aankondiging opdracht",
    "kind": "notice",
-   "cpv": [],
+   "cpv": [
+    "64215000"
+   ],
    "link": "https://ted.europa.eu/nl/notice/-/detail/738555-2025",
    "value": null,
    "currency": "EUR",
@@ -20023,8 +20310,30 @@
    "topic": "conn"
   },
   {
-   "pub": "730479-2025",
+   "pub": "733908-2025",
    "source": "TED",
+   "title": "Duitsland – IP-telefoondiensten – Breitband-Satelliten-Internetanbindung für BLE-Flotte",
+   "buyer": "Bundesanstalt für Landwirtschaft und Ernährung",
+   "country": "DE",
+   "published": "2025-11-05",
+   "deadline": "2025-12-04",
+   "type": "Aankondiging opdracht",
+   "kind": "notice",
+   "cpv": [
+    "64215000"
+   ],
+   "link": "https://ted.europa.eu/nl/notice/-/detail/733908-2025",
+   "value": null,
+   "currency": "EUR",
+   "firstSeen": "2000-01-01T00:00:00.000Z",
+   "cats": [
+    "other"
+   ],
+   "topic": "conn"
+  },
+  {
+   "source": "TED",
+   "pub": "730479-2025",
    "title": "Polen – Advies inzake ontwikkeling – Ogłoszenie o wstępnych konsultacjach rynkowych",
    "buyer": "Zarząd Morskiego Portu Gdynia S.A.",
    "country": "PL",
@@ -20037,26 +20346,6 @@
    "value": null,
    "currency": "EUR",
    "firstSeen": "2026-10-23T11:27:11.714Z",
-   "cats": [
-    "other"
-   ],
-   "topic": "conn"
-  },
-  {
-   "pub": "733908-2025",
-   "source": "TED",
-   "title": "Duitsland – IP-telefoondiensten – Breitband-Satelliten-Internetanbindung für BLE-Flotte",
-   "buyer": "Bundesanstalt für Landwirtschaft und Ernährung",
-   "country": "DE",
-   "published": "2025-11-05",
-   "deadline": "2025-12-04",
-   "type": "Aankondiging opdracht",
-   "kind": "notice",
-   "cpv": [],
-   "link": "https://ted.europa.eu/nl/notice/-/detail/733908-2025",
-   "value": null,
-   "currency": "EUR",
-   "firstSeen": "2000-01-01T00:00:00.000Z",
    "cats": [
     "other"
    ],
@@ -20095,7 +20384,9 @@
    "deadline": "",
    "type": "Gegunde opdracht",
    "kind": "award",
-   "cpv": [],
+   "cpv": [
+    "32531000"
+   ],
    "link": "https://ted.europa.eu/nl/notice/-/detail/725535-2025",
    "value": null,
    "currency": "EUR",
@@ -20206,26 +20497,6 @@
    "topic": "conn"
   },
   {
-   "pub": "709909-2025",
-   "source": "TED",
-   "title": "Egypte – Luchthavenuitrusting – Supplying, Installing and Commissioning of a Satellite Earth Stations and Microwave Network, Consisting of a 2 HUB Stations and 30 Remote Stations",
-   "buyer": "National Air Navigation Services Company (NANSC)",
-   "country": "",
-   "published": "2025-10-28",
-   "deadline": "2025-12-28",
-   "type": "Aankondiging opdracht",
-   "kind": "notice",
-   "cpv": [],
-   "link": "https://ted.europa.eu/nl/notice/-/detail/709909-2025",
-   "value": null,
-   "currency": "EUR",
-   "firstSeen": "2026-10-23T11:27:11.714Z",
-   "cats": [
-    "other"
-   ],
-   "topic": "conn"
-  },
-  {
    "pub": "710762-2025",
    "source": "TED",
    "title": "Polen – Satellietantennes – DOSTAWA WYPOSAŻENIA SŁUŻBY ŁĄCZNOŚCI DLA WOT NR SPRAWY: TECH/219/MD/2025",
@@ -20235,7 +20506,9 @@
    "deadline": "",
    "type": "Gegunde opdracht",
    "kind": "award",
-   "cpv": [],
+   "cpv": [
+    "32324310"
+   ],
    "link": "https://ted.europa.eu/nl/notice/-/detail/710762-2025",
    "value": 850000,
    "currency": "PLN",
@@ -20286,6 +20559,26 @@
    "firstSeen": "2000-01-01T00:00:00.000Z",
    "cats": [
     "sat"
+   ],
+   "topic": "conn"
+  },
+  {
+   "source": "TED",
+   "pub": "709909-2025",
+   "title": "Egypte – Luchthavenuitrusting – Supplying, Installing and Commissioning of a Satellite Earth Stations and Microwave Network, Consisting of a 2 HUB Stations and 30 Remote Stations",
+   "buyer": "National Air Navigation Services Company (NANSC)",
+   "country": "",
+   "published": "2025-10-28",
+   "deadline": "2025-12-28",
+   "type": "Aankondiging opdracht",
+   "kind": "notice",
+   "cpv": [],
+   "link": "https://ted.europa.eu/nl/notice/-/detail/709909-2025",
+   "value": null,
+   "currency": "EUR",
+   "firstSeen": "2026-10-23T11:27:11.714Z",
+   "cats": [
+    "other"
    ],
    "topic": "conn"
   },
@@ -21100,30 +21393,6 @@
    "topic": "leo"
   },
   {
-   "pub": "UA-UA-2026-10-19-005252-a",
-   "source": "Prozorro",
-   "title": "Супутниковий модем Starlink Internet Satellite 3gen.",
-   "buyer": "Військова частина А3316",
-   "country": "UA",
-   "published": "",
-   "deadline": "2026-10-23",
-   "deadlineAt": "2026-10-23T11:50:00.000Z",
-   "type": "Aankondiging opdracht",
-   "kind": "notice",
-   "cpv": [],
-   "link": "https://prozorro.gov.ua/tender/UA-2026-10-19-005252-a",
-   "value": 504000,
-   "currency": "UAH",
-   "defense": true,
-   "firstSeen": "2000-01-01T00:00:00.000Z",
-   "titleNl": "Starlink Internet Satellite 3gen-satellietmodem.",
-   "trEngine": "DeepL",
-   "cats": [
-    "leo"
-   ],
-   "topic": "leo"
-  },
-  {
    "pub": "UA-UA-2026-10-20-001643-a",
    "source": "Prozorro",
    "title": "Супутниковий модем Starlink Internet Satellite Mini - 1791/27125-в",
@@ -21251,6 +21520,52 @@
    "defense": true,
    "firstSeen": "2026-10-23T10:01:52.359Z",
    "titleNl": "Starlink mini (32530000-7 – telecommunicatieapparatuur voor satellietgebruik, code volgens DK 021:2015 van het Gemeenschappelijk Woordenboek voor Overheidsopdrachten)",
+   "trEngine": "DeepL",
+   "cats": [
+    "leo"
+   ],
+   "topic": "leo"
+  },
+  {
+   "pub": "UA-UA-2026-10-23-013787-a",
+   "source": "Prozorro",
+   "title": "код ДК 021:2015 - 32530000-7 Телекомунікаційне супутникове обладнання (супутникові модеми Starlink Internet Satellite 3gen)",
+   "buyer": "ЦЕНТРАЛЬНИЙ ВІДДІЛ ОСВІТИ ДЕПАРТАМЕНТУ ОСВІТИ І НАУКИ ЗАПОРІЗЬКОЇ МІСЬКОЇ РАДИ",
+   "country": "UA",
+   "published": "",
+   "deadline": "2026-10-28",
+   "deadlineAt": "2026-10-27T23:00:00.000Z",
+   "type": "Aankondiging opdracht",
+   "kind": "notice",
+   "cpv": [],
+   "link": "https://prozorro.gov.ua/tender/UA-2026-10-23-013787-a",
+   "value": 111000,
+   "currency": "UAH",
+   "firstSeen": "2026-10-23T14:26:57.439Z",
+   "titleNl": "DK 021:2015-code - 32530000-7 Telecommunicatieapparatuur voor satellietgebruik (Starlink Internet Satellite 3gen-satellietmodems)",
+   "trEngine": "DeepL",
+   "cats": [
+    "leo"
+   ],
+   "topic": "leo"
+  },
+  {
+   "pub": "UA-UA-2026-10-23-014159-a",
+   "source": "Prozorro",
+   "title": "код ДК 021:2015: 32530000-7 - Телекомунікаційне супутникове обладнання (Супутникові модеми Starlink Internet Satellite 3gen)",
+   "buyer": "Правобережний відділ освіти департаменту освіти і науки Запорізької міської ради",
+   "country": "UA",
+   "published": "",
+   "deadline": "2026-10-28",
+   "deadlineAt": "2026-10-27T23:00:00.000Z",
+   "type": "Aankondiging opdracht",
+   "kind": "notice",
+   "cpv": [],
+   "link": "https://prozorro.gov.ua/tender/UA-2026-10-23-014159-a",
+   "value": 111000,
+   "currency": "UAH",
+   "firstSeen": "2026-10-23T14:26:57.439Z",
+   "titleNl": "DK 021:2015-code: 32530000-7 - Telecommunicatieapparatuur voor satellietgebruik (Starlink Internet Satellite 3gen-satellietmodems)",
    "trEngine": "DeepL",
    "cats": [
     "leo"
