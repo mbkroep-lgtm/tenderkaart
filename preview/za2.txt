@@ -1,0 +1,24 @@
+?PageNumber=1&PageSize=50&dateFrom=2026-10-02&dateTo=2026-10-03 #0 -> 500 
+?PageNumber=1&PageSize=50&dateFrom=2026-10-02&dateTo=2026-10-03 #1 -> 500 
+?PageNumber=1&PageSize=50&dateFrom=2026-10-09&dateTo=2026-10-10 #0 -> 200 rel=50 next=/api/OCDSReleases?PageNumber=2&PageSize=50&dateFrom=2026-10-09&dateTo=2026-10-10
+?PageNumber=1&PageSize=50&dateFrom=2026-10-09&dateTo=2026-10-10 #1 -> 200 rel=50 next=/api/OCDSReleases?PageNumber=2&PageSize=50&dateFrom=2026-10-09&dateTo=2026-10-10
+?PageNumber=1&PageSize=50&dateFrom=2026-10-15&dateTo=2026-10-16 #0 -> 200 rel=50 next=/api/OCDSReleases?PageNumber=2&PageSize=50&dateFrom=2026-10-15&dateTo=2026-10-16
+?PageNumber=1&PageSize=50&dateFrom=2026-10-15&dateTo=2026-10-16 #1 -> 200 rel=50 next=/api/OCDSReleases?PageNumber=2&PageSize=50&dateFrom=2026-10-15&dateTo=2026-10-16
+?PageNumber=1&PageSize=50&dateFrom=2026-10-19&dateTo=2026-10-20 #0 -> 200 rel=50 next=/api/OCDSReleases?PageNumber=2&PageSize=50&dateFrom=2026-10-19&dateTo=2026-10-20
+?PageNumber=1&PageSize=50&dateFrom=2026-10-19&dateTo=2026-10-20 #1 -> 200 rel=50 next=/api/OCDSReleases?PageNumber=2&PageSize=50&dateFrom=2026-10-19&dateTo=2026-10-20
+?PageNumber=1&PageSize=50&dateFrom=2026-10-20&dateTo=2026-10-21 #0 -> 200 rel=50 next=/api/OCDSReleases?PageNumber=2&PageSize=50&dateFrom=2026-10-20&dateTo=2026-10-21
+?PageNumber=1&PageSize=50&dateFrom=2026-10-20&dateTo=2026-10-21 #1 -> 200 rel=50 next=/api/OCDSReleases?PageNumber=2&PageSize=50&dateFrom=2026-10-20&dateTo=2026-10-21
+?PageNumber=1&PageSize=50&dateFrom=2026-10-21&dateTo=2026-10-22 #0 -> 200 rel=50 next=/api/OCDSReleases?PageNumber=2&PageSize=50&dateFrom=2026-10-21&dateTo=2026-10-22
+?PageNumber=1&PageSize=50&dateFrom=2026-10-21&dateTo=2026-10-22 #1 -> 200 rel=50 next=/api/OCDSReleases?PageNumber=2&PageSize=50&dateFrom=2026-10-21&dateTo=2026-10-22
+?PageNumber=1&PageSize=50&dateFrom=2026-10-22&dateTo=2026-10-23 #0 -> 200 rel=50 next=/api/OCDSReleases?PageNumber=2&PageSize=50&dateFrom=2026-10-22&dateTo=2026-10-23
+?PageNumber=1&PageSize=50&dateFrom=2026-10-22&dateTo=2026-10-23 #1 -> 200 rel=50 next=/api/OCDSReleases?PageNumber=2&PageSize=50&dateFrom=2026-10-22&dateTo=2026-10-23
+?PageNumber=1&PageSize=50&dateFrom=2026-10-23&dateTo=2026-10-24 #0 -> 200 rel=50 next=/api/OCDSReleases?PageNumber=2&PageSize=50&dateFrom=2026-10-23&dateTo=2026-10-24
+?PageNumber=1&PageSize=50&dateFrom=2026-10-23&dateTo=2026-10-24 #1 -> 200 rel=50 next=/api/OCDSReleases?PageNumber=2&PageSize=50&dateFrom=2026-10-23&dateTo=2026-10-24
+?PageNumber=2&PageSize=50&dateFrom=2026-10-20&dateTo=2026-10-21 #0 -> 200 rel=50 next=/api/OCDSReleases?PageNumber=3&PageSize=50&dateFrom=2026-10-20&dateTo=2026-10-21
+?PageNumber=2&PageSize=50&dateFrom=2026-10-20&dateTo=2026-10-21 #1 -> 200 rel=50 next=/api/OCDSReleases?PageNumber=3&PageSize=50&dateFrom=2026-10-20&dateTo=2026-10-21
+?PageNumber=5&PageSize=50&dateFrom=2026-10-20&dateTo=2026-10-21 #0 -> 200 rel=36 next=
+?PageNumber=5&PageSize=50&dateFrom=2026-10-20&dateTo=2026-10-21 #1 -> 200 rel=36 next=
+?PageNumber=1&PageSize=200&dateFrom=2026-10-20&dateTo=2026-10-21 #0 -> 500 
+?PageNumber=1&PageSize=200&dateFrom=2026-10-20&dateTo=2026-10-21 #1 -> 500 
+?PageNumber=1&PageSize=50&dateFrom=2026-10-20&dateTo=2026-10-22 #0 -> 200 rel=50 next=/api/OCDSReleases?PageNumber=2&PageSize=50&dateFrom=2026-10-20&dateTo=2026-10-22
+?PageNumber=1&PageSize=50&dateFrom=2026-10-20&dateTo=2026-10-22 #1 -> 200 rel=50 next=/api/OCDSReleases?PageNumber=2&PageSize=50&dateFrom=2026-10-20&dateTo=2026-10-22
