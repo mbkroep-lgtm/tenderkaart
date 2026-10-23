@@ -832,11 +832,13 @@ async function fetchZaTenders() {
     const res = [];
     // de API geeft een 500 als dateFrom gelijk is aan dateTo, of bij grote pagina's: daarom tot de volgende dag, 50 per pagina
     const next = new Date(Date.parse(day + 'T00:00:00Z') + DAY).toISOString().slice(0, 10);
+    let dayFails = 0;   // twee kapotte pagina's achter elkaar: de rest van die dag laten zitten
     for (let p = 1; p <= 40; p++) {
       let d;
       // sommige dagen bevatten een bericht waar hun server op vastloopt (altijd 500): die pagina overslaan, de rest gewoon ophalen
       try { d = await getJson(`https://ocds-api.etenders.gov.za/api/OCDSReleases?PageNumber=${p}&PageSize=50&dateFrom=${day}&dateTo=${next}`, { headers: UA }, 1); }
-      catch (e) { if (!/gaf 5\d\d/.test(e.message)) throw e; zaSkipped.push(`${day} p${p}`); if (++zaFails > 25) throw e; continue; }
+      catch (e) { if (!/gaf 5\d\d/.test(e.message)) throw e; zaSkipped.push(`${day} p${p}`); if (++zaFails > 80) throw e; if (++dayFails >= 2) break; continue; }
+      dayFails = 0;
       const rels = d.releases || [];
       for (const rel of rels) {
         const t = rel.tender || {};
