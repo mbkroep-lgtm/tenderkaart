@@ -1,16 +1,19 @@
 import { writeFile } from 'node:fs/promises';
+const base = 'https://ocds-api.etenders.gov.za/api/OCDSReleases';
+const days = ['2026-10-02','2026-10-09','2026-10-15','2026-10-19','2026-10-20','2026-10-21','2026-10-22','2026-10-23'];
+const next = d => new Date(Date.parse(d + 'T00:00:00Z') + 864e5).toISOString().slice(0, 10);
+const tries = [];
+for (const d of days) tries.push(`?PageNumber=1&PageSize=50&dateFrom=${d}&dateTo=${next(d)}`);
+tries.push('?PageNumber=2&PageSize=50&dateFrom=2026-10-20&dateTo=2026-10-21', '?PageNumber=5&PageSize=50&dateFrom=2026-10-20&dateTo=2026-10-21',
+  '?PageNumber=1&PageSize=200&dateFrom=2026-10-20&dateTo=2026-10-21', '?PageNumber=1&PageSize=50&dateFrom=2026-10-20&dateTo=2026-10-22');
 let log = '';
-const body = `type=search_anuncios&version=133.0&query=${encodeURIComponent('texto=starlink')}&sort=-drPublicationDate&page=0&size=100`;
-for (const [u, opt] of [
-  ['https://www.base.gov.pt/Base4/pt/resultados/', { method: 'POST', headers: { 'User-Agent': 'Mozilla/5.0 (tendermap)', 'Content-Type': 'application/x-www-form-urlencoded' }, body }],
-  ['https://www.base.gov.pt/Base4/pt/resultados/', { method: 'POST', headers: { 'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0 Safari/537.36', 'Content-Type': 'application/x-www-form-urlencoded', Origin: 'https://www.base.gov.pt', Referer: 'https://www.base.gov.pt/Base4/pt/pesquisa/' }, body }],
-  ['https://www.base.gov.pt/', {}],
-  ['https://base.gov.pt/', {}],
-  ['http://www.base.gov.pt/', {}],
-]) {
-  try { const t0 = Date.now(); const r = await fetch(u, { ...opt, signal: AbortSignal.timeout(60000) }); const b = await r.text(); log += `${opt.method || 'GET'} ${u} -> ${r.status} ${Date.now() - t0}ms ${b.slice(0, 200).replace(/\s+/g, ' ')}\n`; }
-  catch (e) { log += `${opt.method || 'GET'} ${u} -> ERR ${e.name} ${e.message} cause=${e.cause?.code || ''} ${e.cause?.message || ''}\n`; }
+for (const q of tries) {
+  for (let k = 0; k < 2; k++) {
+    try {
+      const r = await fetch(base + q, { headers: { 'User-Agent': 'Mozilla/5.0 (tendermap)', Accept: 'application/json' }, signal: AbortSignal.timeout(90000) });
+      const b = await r.text(); let n = ''; try { const d = JSON.parse(b); n = `rel=${(d.releases || []).length} next=${(d.links?.next||'').slice(-80)}`; } catch {}
+      log += `${q} #${k} -> ${r.status} ${n || b.slice(0, 150).replace(/\s+/g, ' ')}\n`;
+    } catch (e) { log += `${q} -> ERR ${e.message}\n`; }
+  }
 }
-const dns = await import('node:dns/promises');
-try { log += 'dns ' + JSON.stringify(await dns.lookup('www.base.gov.pt', { all: true })) + '\n'; } catch (e) { log += 'dns ERR ' + e.message + '\n'; }
-await writeFile('preview/pt.txt', log);
+await writeFile('preview/za2.txt', log);
