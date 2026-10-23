@@ -1,0 +1,6 @@
+POST https://www.base.gov.pt/Base4/pt/resultados/ -> ERR TypeError fetch failed cause=UNABLE_TO_VERIFY_LEAF_SIGNATURE unable to verify the first certificate
+POST https://www.base.gov.pt/Base4/pt/resultados/ -> ERR TypeError fetch failed cause=UNABLE_TO_VERIFY_LEAF_SIGNATURE unable to verify the first certificate
+GET https://www.base.gov.pt/ -> ERR TypeError fetch failed cause=UNABLE_TO_VERIFY_LEAF_SIGNATURE unable to verify the first certificate
+GET https://base.gov.pt/ -> ERR TypeError fetch failed cause=UNABLE_TO_VERIFY_LEAF_SIGNATURE unable to verify the first certificate
+GET http://www.base.gov.pt/ -> ERR TypeError fetch failed cause=UNABLE_TO_VERIFY_LEAF_SIGNATURE unable to verify the first certificate
+dns [{"address":"195.225.181.119","family":4}]
