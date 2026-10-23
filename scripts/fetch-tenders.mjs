@@ -826,13 +826,17 @@ async function fetchDeVergabe() {
 }
 
 // Zuid-Afrika: eTenders (OCDS), per dag
+let zaSkipped = [], zaFails = 0;
 async function fetchZaTenders() {
   const { out, behind } = await byDay('eTenders (Zuid-Afrika)', 21, 5, async day => {
     const res = [];
     // de API geeft een 500 als dateFrom gelijk is aan dateTo, of bij grote pagina's: daarom tot de volgende dag, 50 per pagina
     const next = new Date(Date.parse(day + 'T00:00:00Z') + DAY).toISOString().slice(0, 10);
     for (let p = 1; p <= 40; p++) {
-      const d = await getJson(`https://ocds-api.etenders.gov.za/api/OCDSReleases?PageNumber=${p}&PageSize=50&dateFrom=${day}&dateTo=${next}`, { headers: UA });
+      let d;
+      // sommige dagen bevatten een bericht waar hun server op vastloopt (altijd 500): die pagina overslaan, de rest gewoon ophalen
+      try { d = await getJson(`https://ocds-api.etenders.gov.za/api/OCDSReleases?PageNumber=${p}&PageSize=50&dateFrom=${day}&dateTo=${next}`, { headers: UA }, 1); }
+      catch (e) { if (!/gaf 5\d\d/.test(e.message)) throw e; zaSkipped.push(`${day} p${p}`); if (++zaFails > 25) throw e; continue; }
       const rels = d.releases || [];
       for (const rel of rels) {
         const t = rel.tender || {};
@@ -851,7 +855,7 @@ async function fetchZaTenders() {
   });
   const uniq = [...new Map(out.map(t => [t.pub, t])).values()];   // door de overlap van een dag kan een tender dubbel binnenkomen
   out.length = 0; out.push(...uniq);
-  say('eTenders (Zuid-Afrika)', `${out.length} over LEO in de nieuwe aankondigingen${behind}.`);
+  say('eTenders (Zuid-Afrika)', `${out.length} over LEO in de nieuwe aankondigingen${behind}.${zaSkipped.length ? ` ${zaSkipped.length} pagina('s) overgeslagen door een fout bij hun server.` : ''}`);
   return out;
 }
 
