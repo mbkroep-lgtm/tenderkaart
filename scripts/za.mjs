@@ -1,25 +1,16 @@
 import { writeFile } from 'node:fs/promises';
-const base = 'https://ocds-api.etenders.gov.za/api/OCDSReleases';
-const tries = [
-  '?PageNumber=1&PageSize=1000&dateFrom=2026-10-20&dateTo=2026-10-20',
-  '?PageNumber=1&PageSize=100&dateFrom=2026-10-20&dateTo=2026-10-20',
-  '?PageNumber=1&PageSize=50&dateFrom=2026-10-20&dateTo=2026-10-21',
-  '?PageNumber=1&PageSize=50&dateFrom=2026-10-01&dateTo=2026-10-22',
-  '?PageNumber=1&PageSize=50',
-  '?PageNumber=1&PageSize=50&dateFrom=2026-10-20T00:00:00&dateTo=2026-10-20T23:59:59',
-  '?PageNumber=1&PageSize=50&dateFrom=2026-09-01&dateTo=2026-09-01',
-];
 let log = '';
-for (const q of tries) {
-  try {
-    const t0 = Date.now();
-    const r = await fetch(base + q, { headers: { 'User-Agent': 'Mozilla/5.0 (tendermap)', Accept: 'application/json' }, signal: AbortSignal.timeout(90000) });
-    const b = await r.text();
-    let n = ''; try { const d = JSON.parse(b); n = `releases=${(d.releases || []).length} next=${!!d.links?.next}`; } catch {}
-    log += `${q} -> ${r.status} ${Date.now() - t0}ms ${n} ${n ? '' : b.slice(0, 300).replace(/\s+/g, ' ')}\n`;
-  } catch (e) { log += `${q} -> ERR ${e.message}\n`; }
+const body = `type=search_anuncios&version=133.0&query=${encodeURIComponent('texto=starlink')}&sort=-drPublicationDate&page=0&size=100`;
+for (const [u, opt] of [
+  ['https://www.base.gov.pt/Base4/pt/resultados/', { method: 'POST', headers: { 'User-Agent': 'Mozilla/5.0 (tendermap)', 'Content-Type': 'application/x-www-form-urlencoded' }, body }],
+  ['https://www.base.gov.pt/Base4/pt/resultados/', { method: 'POST', headers: { 'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0 Safari/537.36', 'Content-Type': 'application/x-www-form-urlencoded', Origin: 'https://www.base.gov.pt', Referer: 'https://www.base.gov.pt/Base4/pt/pesquisa/' }, body }],
+  ['https://www.base.gov.pt/', {}],
+  ['https://base.gov.pt/', {}],
+  ['http://www.base.gov.pt/', {}],
+]) {
+  try { const t0 = Date.now(); const r = await fetch(u, { ...opt, signal: AbortSignal.timeout(60000) }); const b = await r.text(); log += `${opt.method || 'GET'} ${u} -> ${r.status} ${Date.now() - t0}ms ${b.slice(0, 200).replace(/\s+/g, ' ')}\n`; }
+  catch (e) { log += `${opt.method || 'GET'} ${u} -> ERR ${e.name} ${e.message} cause=${e.cause?.code || ''} ${e.cause?.message || ''}\n`; }
 }
-for (const u of ['https://ocds-api.etenders.gov.za/swagger/v1/swagger.json', 'https://ocds-api.etenders.gov.za/', 'https://data.etenders.gov.za/']) {
-  try { const r = await fetch(u, { signal: AbortSignal.timeout(30000) }); log += `${u} -> ${r.status} ${(await r.text()).slice(0, 1500).replace(/\s+/g, ' ')}\n`; } catch (e) { log += `${u} -> ERR ${e.message}\n`; }
-}
-await writeFile('preview/za.txt', log);
+const dns = await import('node:dns/promises');
+try { log += 'dns ' + JSON.stringify(await dns.lookup('www.base.gov.pt', { all: true })) + '\n'; } catch (e) { log += 'dns ERR ' + e.message + '\n'; }
+await writeFile('preview/pt.txt', log);
