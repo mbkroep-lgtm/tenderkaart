@@ -339,7 +339,11 @@ const UA = { 'User-Agent': 'Mozilla/5.0 (tendermap; +https://tenderkaart.vercel.
 const CORE_TERMS = [...SEARCH_TERMS, 'Project Kuiper', 'Amazon Leo'];
 const postJson = (url, body) => getJson(url, { method: 'POST', headers: { 'Content-Type': 'application/json', ...UA }, body: JSON.stringify(body) }, 2);
 const getText = async (url, ms = 120000) => {
-  const r = await fetch(url, { headers: UA, signal: AbortSignal.timeout(ms) });
+  let r;
+  for (let i = 0; ; i++) {   // "fetch failed" (verbinding even weg) een paar keer opnieuw proberen; een time-out niet
+    try { r = await fetch(url, { headers: UA, signal: AbortSignal.timeout(ms) }); break; }
+    catch (e) { if (i >= 3 || e.name === 'TimeoutError' || e.name === 'AbortError') throw e; await sleep(5000 * (i + 1)); }
+  }
   if (!r.ok) throw new Error(`${new URL(url).host} gaf ${r.status}`);
   return r.text();
 };
@@ -902,7 +906,9 @@ async function fetchDgcp() {
 async function fetchGoszakup() {
   const byId = new Map();
   for (const term of ['starlink', 'старлинк', 'oneweb', 'SD-WAN', 'спутниковый интернет']) {
-    const html = await getText(`https://goszakup.gov.kz/ru/search/lots?filter%5Bname%5D=${encodeURIComponent(term)}&count_record=200&page=1`);
+    let html;
+    try { html = await getText(`https://goszakup.gov.kz/ru/search/lots?filter%5Bname%5D=${encodeURIComponent(term)}&count_record=200&page=1`); }
+    catch (e) { if (term === 'starlink') throw e; say('Goszakup (Kazachstan)', `zoekterm "${term}" lukte niet (${e.message}), de rest wel.`); continue; }
     const body = html.split('id="search-result"')[1] || '';
     for (const row of body.split('<tr>').slice(2)) {
       const cells = row.split(/<td[^>]*>/).slice(1);
