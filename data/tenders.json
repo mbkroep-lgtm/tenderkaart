@@ -1,144 +1,144 @@
 {
- "updated": "2026-10-23T14:26:57.439Z",
+ "updated": "2026-10-23T17:53:57.818Z",
  "queryVersion": "ec27e2fd8f",
  "sources": {
   "TED": {
    "ok": true,
-   "at": "2026-10-23T14:26:57.439Z",
+   "at": "2026-10-23T17:53:57.818Z",
    "count": 383,
    "note": ""
   },
   "Wereldbank": {
    "ok": true,
-   "at": "2026-10-23T14:26:57.439Z",
+   "at": "2026-10-23T17:53:57.818Z",
    "count": 78,
    "note": "94 gevonden, 78 echt over LEO."
   },
   "Find a Tender": {
    "ok": true,
-   "at": "2026-10-23T14:26:57.439Z",
-   "count": 1,
-   "note": "4 pagina's, 378 berichten bekeken, 1 over LEO.",
-   "since": "2026-10-23T12:26:57.439Z"
+   "at": "2026-10-23T17:53:57.818Z",
+   "count": 0,
+   "note": "4 pagina's, 325 berichten bekeken, 0 over LEO.",
+   "since": "2026-10-23T15:53:57.818Z"
   },
   "Contracts Finder": {
    "ok": true,
-   "at": "2026-10-23T14:26:57.439Z",
+   "at": "2026-10-23T17:53:57.818Z",
    "count": 25,
    "note": "1792 gevonden, 275 over LEO."
   },
   "TenderNed": {
    "ok": true,
-   "at": "2026-10-23T14:26:57.439Z",
+   "at": "2026-10-23T17:53:57.818Z",
    "count": 20,
    "note": "584 gevonden, 77 over LEO."
   },
   "Prozorro": {
    "ok": true,
-   "at": "2026-10-23T14:26:57.439Z",
+   "at": "2026-10-23T17:53:57.818Z",
    "count": 74,
    "note": "74 lopende procedures."
   },
   "BOAMP": {
    "ok": true,
-   "at": "2026-10-23T14:26:57.439Z",
+   "at": "2026-10-23T17:53:57.818Z",
    "count": 9,
    "note": "93 gevonden, 9 over LEO."
   },
   "SIMAP (Zwitserland)": {
    "ok": true,
-   "at": "2026-10-23T14:26:57.439Z",
+   "at": "2026-10-23T17:53:57.818Z",
    "count": 0,
    "note": "24 gevonden, 0 over LEO."
   },
   "SECOP (Colombia)": {
    "ok": true,
-   "at": "2026-10-23T14:26:57.439Z",
+   "at": "2026-10-23T17:53:57.818Z",
    "count": 199,
    "note": "251 gevonden, 199 over LEO."
   },
   "CanadaBuys": {
    "ok": true,
-   "at": "2026-10-23T14:26:57.439Z",
+   "at": "2026-10-23T17:53:57.818Z",
    "count": 5,
    "note": "899 open tenders bekeken, 5 over LEO."
   },
   "AusTender": {
    "ok": true,
-   "at": "2026-10-23T14:26:57.439Z",
+   "at": "2026-10-23T17:53:57.818Z",
    "count": 0,
    "note": "0 contracten bekeken, 0 over LEO.",
-   "since": "2026-10-23T12:26:57.439Z"
+   "since": "2026-10-23T15:53:57.818Z"
   },
   "UNDP": {
    "ok": true,
-   "at": "2026-10-23T14:26:57.439Z",
+   "at": "2026-10-23T17:53:57.818Z",
    "count": 2,
    "note": "971 berichten bekeken, 2 over LEO."
   },
   "PCC (Taiwan)": {
    "ok": true,
-   "at": "2026-10-23T14:26:57.439Z",
+   "at": "2026-10-23T17:53:57.818Z",
    "count": 16,
    "note": "38 aanbestedingen over LEO."
   },
   "Doffin (Noorwegen)": {
    "ok": true,
-   "at": "2026-10-23T14:26:57.439Z",
+   "at": "2026-10-23T17:53:57.818Z",
    "count": 2,
    "note": "43 gevonden, 27 over LEO."
   },
   "BASE (Portugal)": {
    "ok": true,
-   "at": "2026-10-23T14:26:57.439Z",
+   "at": "2026-10-23T17:53:57.818Z",
    "count": 3,
    "note": "10 gevonden, 9 over LEO."
   },
   "BZP (Polen)": {
    "ok": true,
-   "at": "2026-10-23T14:26:57.439Z",
+   "at": "2026-10-23T17:53:57.818Z",
    "count": 0,
    "note": "0 over LEO in de nieuwe publicaties.",
    "doneUntil": "2026-10-22"
   },
   "SEAP (Roemenië)": {
    "ok": true,
-   "at": "2026-10-23T14:26:57.439Z",
+   "at": "2026-10-23T17:53:57.818Z",
    "count": 0,
-   "note": "90 nieuwe aankondigingen bekeken, 0 over LEO.",
-   "since": "2026-10-23T12:26:57.439Z"
+   "note": "93 nieuwe aankondigingen bekeken, 0 over LEO.",
+   "since": "2026-10-23T15:53:57.818Z"
   },
   "oeffentlichevergabe.de": {
    "ok": true,
-   "at": "2026-10-23T14:26:57.439Z",
+   "at": "2026-10-23T17:53:57.818Z",
    "count": 0,
    "note": "0 over LEO in de nieuwe Duitse aankondigingen.",
    "doneUntil": "2026-10-22"
   },
   "PLACSP (Spanje)": {
    "ok": true,
-   "at": "2026-10-23T14:26:57.439Z",
+   "at": "2026-10-23T17:53:57.818Z",
    "count": 0,
    "note": "442 wijzigingen bekeken (1 pagina's), 0 over LEO.",
-   "since": "2026-10-23T12:26:57.439Z"
+   "since": "2026-10-23T15:53:57.818Z"
   },
   "eTenders (Zuid-Afrika)": {
    "ok": true,
-   "at": "2026-10-23T14:26:57.439Z",
+   "at": "2026-10-23T17:53:57.818Z",
    "count": 0,
    "note": "0 over LEO in de nieuwe aankondigingen.",
    "doneUntil": "2026-10-22"
   },
   "DGCP (Dominicaanse Rep.)": {
    "ok": true,
-   "at": "2026-10-23T14:26:57.439Z",
+   "at": "2026-10-23T17:53:57.818Z",
    "count": 0,
    "note": "100 processen bekeken, 0 over LEO.",
-   "since": "2026-10-23T12:26:57.439Z"
+   "since": "2026-10-23T15:53:57.818Z"
   },
   "Goszakup (Kazachstan)": {
    "ok": false,
-   "at": "2026-10-23T14:26:57.439Z",
+   "at": "2026-10-23T17:53:57.818Z",
    "count": 3,
    "note": "7 loten gevonden, 3 over LEO. Zonder datums: status bepaalt open of gesloten.",
    "error": "fetch failed"
@@ -173,9 +173,9 @@
   },
   "Vertalen": {
    "ok": true,
-   "at": "2026-10-23T14:26:57.439Z",
-   "count": 6,
-   "note": "DeepL: 6 nieuw vertaald.",
+   "at": "2026-10-23T17:53:57.818Z",
+   "count": 0,
+   "note": "DeepL: 0 nieuw vertaald.",
    "engine": "DeepL"
   }
  },
@@ -232,8 +232,8 @@
    "topic": "conn"
   },
   {
-   "pub": "UK-ocds-h6vhtk-078edc",
    "source": "Find a Tender",
+   "pub": "UK-ocds-h6vhtk-078edc",
    "title": "Air Traffic Control (ATC) and Operational Control Satcom Data Link Service - UK5",
    "buyer": "Ministry of Defence",
    "country": "GB",
@@ -2402,30 +2402,6 @@
    "topic": "leo"
   },
   {
-   "pub": "UA-UA-2026-10-17-000120-a",
-   "source": "Prozorro",
-   "title": "Супутниковий модем Starlink Internet Satellite Mini, 32530000-7 «Телекомунікаційне супутникове обладнання» за ДК 021:2015 Єдиного закупівельного словника.",
-   "buyer": "ВІЙСЬКОВА ЧАСТИНА 9951",
-   "country": "UA",
-   "published": "2026-10-17",
-   "deadline": "2026-11-02",
-   "deadlineAt": "2026-11-02T10:00:00.000Z",
-   "type": "Aankondiging opdracht",
-   "kind": "notice",
-   "cpv": [],
-   "link": "https://prozorro.gov.ua/tender/UA-2026-10-17-000120-a",
-   "value": 490833.33,
-   "currency": "UAH",
-   "defense": true,
-   "firstSeen": "2000-01-01T00:00:00.000Z",
-   "titleNl": "Starlink Internet Satellite Mini-satellietmodem, 32530000-7 „Telecommunicatieapparatuur voor satellietgebruik“ volgens DK 021:2015 van het Uniforme Aankoopwoordenboek.",
-   "trEngine": "DeepL",
-   "cats": [
-    "leo"
-   ],
-   "topic": "leo"
-  },
-  {
    "pub": "UA-UA-2026-10-17-000104-a",
    "source": "Prozorro",
    "title": "Супутниковий модем Starlink Internet Satellite Mini, 32530000-7 «Телекомунікаційне супутникове обладнання» за ДК 021:2015 Єдиного закупівельного словника.",
@@ -2442,6 +2418,30 @@
    "currency": "UAH",
    "defense": true,
    "firstSeen": "2026-10-17T07:02:21.206Z",
+   "titleNl": "Starlink Internet Satellite Mini-satellietmodem, 32530000-7 „Telecommunicatieapparatuur voor satellietgebruik“ volgens DK 021:2015 van het Uniforme Aankoopwoordenboek.",
+   "trEngine": "DeepL",
+   "cats": [
+    "leo"
+   ],
+   "topic": "leo"
+  },
+  {
+   "pub": "UA-UA-2026-10-17-000120-a",
+   "source": "Prozorro",
+   "title": "Супутниковий модем Starlink Internet Satellite Mini, 32530000-7 «Телекомунікаційне супутникове обладнання» за ДК 021:2015 Єдиного закупівельного словника.",
+   "buyer": "ВІЙСЬКОВА ЧАСТИНА 9951",
+   "country": "UA",
+   "published": "2026-10-17",
+   "deadline": "2026-11-02",
+   "deadlineAt": "2026-11-02T10:00:00.000Z",
+   "type": "Aankondiging opdracht",
+   "kind": "notice",
+   "cpv": [],
+   "link": "https://prozorro.gov.ua/tender/UA-2026-10-17-000120-a",
+   "value": 490833.33,
+   "currency": "UAH",
+   "defense": true,
+   "firstSeen": "2000-01-01T00:00:00.000Z",
    "titleNl": "Starlink Internet Satellite Mini-satellietmodem, 32530000-7 „Telecommunicatieapparatuur voor satellietgebruik“ volgens DK 021:2015 van het Uniforme Aankoopwoordenboek.",
    "trEngine": "DeepL",
    "cats": [
@@ -10632,32 +10632,6 @@
    "qty": 3
   },
   {
-   "pub": "WB-OP00449674",
-   "source": "Wereldbank",
-   "title": "Acquisition, installation et maintenance de 191 kits Starlink et composants d’extension réseau pour les 3 nouvelles DREN, les 9 Ecoles Normales et 179 inspections prioritaires dotées de tablettes",
-   "buyer": "Niger Learning Improvement for Results in Education Project",
-   "country": "NE",
-   "countryName": "Niger",
-   "published": "2026-06-08",
-   "deadline": "",
-   "type": "Contract Award",
-   "kind": "award",
-   "cpv": [],
-   "wbGroup": "GO",
-   "wbMethod": "RFQ",
-   "link": "https://projects.worldbank.org/en/projects-operations/procurement-detail/OP00449674",
-   "value": null,
-   "currency": "USD",
-   "firstSeen": "2000-01-01T00:00:00.000Z",
-   "titleNl": "Aankoop, installatie en onderhoud van 191 Starlink-sets en onderdelen voor netwerkuitbreiding voor de 3 nieuwe DREN’s, de 9 lerarenopleidingen en 179 prioritaire inspectiediensten die zijn uitgerust met tablets",
-   "trEngine": "DeepL",
-   "cats": [
-    "leo"
-   ],
-   "topic": "leo",
-   "qty": 191
-  },
-  {
    "pub": "WB-OP00449676",
    "source": "Wereldbank",
    "title": "Acquisition, installation et maintenance de 191 kits Starlink et composants d’extension réseau pour les 3 nouvelles DREN, les 9 Ecoles Normales et 179 inspections prioritaires dotées de tablettes",
@@ -10672,6 +10646,32 @@
    "wbGroup": "GO",
    "wbMethod": "RFQ",
    "link": "https://projects.worldbank.org/en/projects-operations/procurement-detail/OP00449676",
+   "value": null,
+   "currency": "USD",
+   "firstSeen": "2000-01-01T00:00:00.000Z",
+   "titleNl": "Aankoop, installatie en onderhoud van 191 Starlink-sets en onderdelen voor netwerkuitbreiding voor de 3 nieuwe DREN’s, de 9 lerarenopleidingen en 179 prioritaire inspectiediensten die zijn uitgerust met tablets",
+   "trEngine": "DeepL",
+   "cats": [
+    "leo"
+   ],
+   "topic": "leo",
+   "qty": 191
+  },
+  {
+   "pub": "WB-OP00449674",
+   "source": "Wereldbank",
+   "title": "Acquisition, installation et maintenance de 191 kits Starlink et composants d’extension réseau pour les 3 nouvelles DREN, les 9 Ecoles Normales et 179 inspections prioritaires dotées de tablettes",
+   "buyer": "Niger Learning Improvement for Results in Education Project",
+   "country": "NE",
+   "countryName": "Niger",
+   "published": "2026-06-08",
+   "deadline": "",
+   "type": "Contract Award",
+   "kind": "award",
+   "cpv": [],
+   "wbGroup": "GO",
+   "wbMethod": "RFQ",
+   "link": "https://projects.worldbank.org/en/projects-operations/procurement-detail/OP00449674",
    "value": null,
    "currency": "USD",
    "firstSeen": "2000-01-01T00:00:00.000Z",
