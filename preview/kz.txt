@@ -1,0 +1,9 @@
+https://goszakup.gov.kz/ru/search/lots?filter%5Bname%5D=starlink&count_record=200&page=1 -> 200 3259ms len=89691
+https://goszakup.gov.kz/ru/search/lots?filter%5Bname%5D=starlink&count_record=200&page=1 -> 200 785ms len=89691
+https://goszakup.gov.kz/ -> 200 1388ms len=7443
+https://goszakup.gov.kz/ -> 200 419ms len=7443
+http://goszakup.gov.kz/ -> 200 1068ms len=7443
+http://goszakup.gov.kz/ -> 200 408ms len=7443
+https://ows.goszakup.gov.kz/ -> 200 3393ms len=378032
+https://ows.goszakup.gov.kz/ -> 200 1703ms len=378032
+dns [{"address":"149.170.62.14","family":4}]
