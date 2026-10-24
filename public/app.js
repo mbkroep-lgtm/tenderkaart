@@ -622,6 +622,43 @@ function leftText(t){ const st = statusOf(t);
   const dl = daysLeft(t.deadline);
   if(dl === 0 && t.deadlineAt) return "sluit vandaag om " + new Date(t.deadlineAt).toLocaleTimeString("nl-NL", {hour:"2-digit", minute:"2-digit"});
   return dl === null ? "geen sluitingsdatum" : dl < 0 ? "gesloten" : dl === 0 ? "sluit vandaag" : `nog ${dl} dag${dl === 1 ? "" : "en"}`; }
+// ---------- Wereldklok: tijdzone per land (bij landen met meerdere zones: die van de hoofdstad) ----------
+const TZ = {NL:"Europe/Amsterdam",BE:"Europe/Brussels",LU:"Europe/Luxembourg",DE:"Europe/Berlin",FR:"Europe/Paris",GB:"Europe/London",IE:"Europe/Dublin",
+  ES:"Europe/Madrid",PT:"Europe/Lisbon",IT:"Europe/Rome",MT:"Europe/Malta",AT:"Europe/Vienna",CH:"Europe/Zurich",LI:"Europe/Vaduz",DK:"Europe/Copenhagen",
+  SE:"Europe/Stockholm",NO:"Europe/Oslo",FI:"Europe/Helsinki",IS:"Atlantic/Reykjavik",EE:"Europe/Tallinn",LV:"Europe/Riga",LT:"Europe/Vilnius",
+  PL:"Europe/Warsaw",CZ:"Europe/Prague",SK:"Europe/Bratislava",HU:"Europe/Budapest",SI:"Europe/Ljubljana",HR:"Europe/Zagreb",BA:"Europe/Sarajevo",
+  RS:"Europe/Belgrade",ME:"Europe/Podgorica",MK:"Europe/Skopje",AL:"Europe/Tirane",XK:"Europe/Belgrade",GR:"Europe/Athens",CY:"Asia/Nicosia",
+  BG:"Europe/Sofia",RO:"Europe/Bucharest",MD:"Europe/Chisinau",UA:"Europe/Kyiv",TR:"Europe/Istanbul",GE:"Asia/Tbilisi",AM:"Asia/Yerevan",AZ:"Asia/Baku",
+  KZ:"Asia/Almaty",UZ:"Asia/Tashkent",KG:"Asia/Bishkek",TJ:"Asia/Dushanbe",MN:"Asia/Ulaanbaatar",
+  US:"America/New_York",CA:"America/Toronto",MX:"America/Mexico_City",GT:"America/Guatemala",HN:"America/Tegucigalpa",SV:"America/El_Salvador",
+  NI:"America/Managua",CR:"America/Costa_Rica",PA:"America/Panama",DO:"America/Santo_Domingo",HT:"America/Port-au-Prince",JM:"America/Jamaica",
+  CO:"America/Bogota",EC:"America/Guayaquil",PE:"America/Lima",BO:"America/La_Paz",CL:"America/Santiago",AR:"America/Argentina/Buenos_Aires",
+  UY:"America/Montevideo",PY:"America/Asuncion",BR:"America/Sao_Paulo",VE:"America/Caracas",GY:"America/Guyana",SR:"America/Paramaribo",
+  MA:"Africa/Casablanca",DZ:"Africa/Algiers",TN:"Africa/Tunis",LY:"Africa/Tripoli",EG:"Africa/Cairo",SD:"Africa/Khartoum",SS:"Africa/Juba",
+  ET:"Africa/Addis_Ababa",SO:"Africa/Mogadishu",DJ:"Africa/Djibouti",ER:"Africa/Asmara",KE:"Africa/Nairobi",UG:"Africa/Kampala",TZ:"Africa/Dar_es_Salaam",
+  RW:"Africa/Kigali",BI:"Africa/Bujumbura",CD:"Africa/Kinshasa",CG:"Africa/Brazzaville",CF:"Africa/Bangui",CM:"Africa/Douala",GA:"Africa/Libreville",
+  TD:"Africa/Ndjamena",NE:"Africa/Niamey",NG:"Africa/Lagos",BJ:"Africa/Porto-Novo",TG:"Africa/Lome",GH:"Africa/Accra",CI:"Africa/Abidjan",
+  BF:"Africa/Ouagadougou",ML:"Africa/Bamako",SN:"Africa/Dakar",GM:"Africa/Banjul",GN:"Africa/Conakry",SL:"Africa/Freetown",LR:"Africa/Monrovia",
+  MR:"Africa/Nouakchott",AO:"Africa/Luanda",ZM:"Africa/Lusaka",ZW:"Africa/Harare",MW:"Africa/Blantyre",MZ:"Africa/Maputo",NA:"Africa/Windhoek",
+  BW:"Africa/Gaborone",ZA:"Africa/Johannesburg",LS:"Africa/Maseru",SZ:"Africa/Mbabane",MG:"Indian/Antananarivo",MU:"Indian/Mauritius",
+  SA:"Asia/Riyadh",AE:"Asia/Dubai",QA:"Asia/Qatar",KW:"Asia/Kuwait",BH:"Asia/Bahrain",OM:"Asia/Muscat",YE:"Asia/Aden",JO:"Asia/Amman",
+  IL:"Asia/Jerusalem",LB:"Asia/Beirut",IQ:"Asia/Baghdad",IR:"Asia/Tehran",AF:"Asia/Kabul",PK:"Asia/Karachi",IN:"Asia/Kolkata",BD:"Asia/Dhaka",
+  NP:"Asia/Kathmandu",LK:"Asia/Colombo",MM:"Asia/Yangon",TH:"Asia/Bangkok",VN:"Asia/Ho_Chi_Minh",KH:"Asia/Phnom_Penh",LA:"Asia/Vientiane",
+  MY:"Asia/Kuala_Lumpur",SG:"Asia/Singapore",ID:"Asia/Jakarta",PH:"Asia/Manila",TW:"Asia/Taipei",CN:"Asia/Shanghai",HK:"Asia/Hong_Kong",
+  KR:"Asia/Seoul",JP:"Asia/Tokyo",TL:"Asia/Dili",PG:"Pacific/Port_Moresby",AU:"Australia/Sydney",NZ:"Pacific/Auckland",FJ:"Pacific/Fiji",
+  WS:"Pacific/Apia",TO:"Pacific/Tongatapu",VU:"Pacific/Efate",SB:"Pacific/Guadalcanal",TV:"Pacific/Funafuti",KI:"Pacific/Tarawa",
+  FM:"Pacific/Pohnpei",MH:"Pacific/Majuro",NR:"Pacific/Nauru",PW:"Pacific/Palau"};
+// lokale tijd en of ze daar nu op kantoor zitten (ma–vr 8–17 uur)
+function localTime(c){
+  const zone = TZ[c]; if(!zone) return null;
+  try {
+    const parts = Object.fromEntries(new Intl.DateTimeFormat("en-GB", {timeZone:zone, hour:"2-digit", minute:"2-digit", weekday:"short", hourCycle:"h23"}).formatToParts(new Date()).map(p => [p.type, p.value]));
+    const h = +parts.hour, weekend = parts.weekday === "Sat" || parts.weekday === "Sun";
+    const mode = weekend ? "weekend" : h >= 8 && h < 17 ? "office" : h >= 7 && h < 20 ? "edge" : "night";
+    const label = {office:"op kantoor", edge:"buiten kantoortijd", night:"nacht", weekend:"weekend"}[mode];
+    return {time:`${parts.hour}:${parts.minute}`, mode, label, multi: ["US","CA","MX","BR","RU","AU","ID","KZ","CD","MN"].includes(c)};
+  } catch(e) { return null; }
+}
 let showOriginal = false;
 try { showOriginal = localStorage.getItem("tk-orig") === "1"; } catch(e) {}
 const shownTitle = t => (!showOriginal && t.titleNl) ? t.titleNl : t.title;
@@ -1016,6 +1053,8 @@ function renderPanel(list){
   const n = list.length;
   $("cpTitle").textContent = cname(state.country);
   $("cpSub").textContent = `${n} tender${n === 1 ? "" : "s"} · ${({open:"nog open", soon:"sluit binnen 14 dagen", new:"alleen nieuw", prior:"vooraankondigingen", awarded:"gegunde opdrachten", all:"alles"})[state.status]}`;
+  const lt = localTime(state.country);
+  if(lt) $("cpSub").textContent += ` · 🕒 ${lt.time} daar (${lt.label}${lt.multi ? ", hoofdstad" : ""})`;
   $("cpList").innerHTML = (n ? list.map(panelCard).join("") : `<div class="empty">Geen tenders met deze filters. Kies bij Status "Alles" om ook gesloten tenders te zien.</div>`)
 ;
   p.hidden = false;
@@ -1216,16 +1255,53 @@ function startTv(){
   if(showFps){ let n = 0, t0 = performance.now(); const el = document.createElement("span"); el.style.cssText = "color:#ffb547"; $("tvClock").after(el);
     const f = () => { n++; const now = performance.now(); if(now - t0 > 2000){ el.textContent = `${Math.round(n * 1000 / (now - t0))} b/s · ${avgCost.toFixed(0)} ms`; n = 0; t0 = now; } requestAnimationFrame(f); };
     requestAnimationFrame(f); }
-  clock(); setInterval(clock, 15000);
+  clock(); setInterval(() => { clock(); tvClockPanel(); }, 15000);
   $("tvFull").addEventListener("click", () => { document.documentElement.requestFullscreen && document.documentElement.requestFullscreen().catch(() => {}); });
 }
 function tvUpdate(){
   const dayAgo = new Date(Date.now() - 864e5).toISOString();
   const open = tenders.filter(isOpen).sort((a,b) => (a.deadlineAt || a.deadline || "9999").localeCompare(b.deadlineAt || b.deadline || "9999"));
-  freshCountries = new Set(open.filter(t => t.firstSeen && t.firstSeen > dayAgo && t.firstSeen > "2001").map(t => t.country));
-  const items = open.slice(0, 30).map(t => `<span class="tk-item"><b>${esc(t.country ? cname(t.country) : (t.countryName || ""))}</b> ${esc(shownTitle(t).slice(0, 90))} <i>${esc(leftText(t))}</i></span>`).join("");
+  const isNew = t => t.firstSeen && t.firstSeen > dayAgo && t.firstSeen > "2001";
+  freshCountries = new Set(open.filter(isNew).map(t => t.country));
+  // nieuwsticker: eerst gewonnen, dan nieuw, dan wat vandaag/morgen sluit, dan de rest op sluitingsdatum
+  const land = t => esc(t.country ? cname(t.country) : (t.countryName || ""));
+  const own = t => OWNERS[t.pub] ? ` <em>👤 ${esc(nameOf(OWNERS[t.pub].owner))}</em>` : "";
+  const item = (tag, cls, t, extra) => `<span class="tk-item"><span class="tk-tag ${cls}">${tag}</span><b>${land(t)}</b> ${esc(shownTitle(t).slice(0, 90))}${extra ? ` <i>${esc(extra)}</i>` : ""}${own(t)}</span>`;
+  const won = tenders.filter(t => BIDS[t.pub] === "gewonnen" && BIDBY[t.pub] && Date.now() - Date.parse(BIDBY[t.pub].at) < 14 * 864e5);
+  const fresh = open.filter(isNew).sort((a,b) => (scoreOf(b) || 0) - (scoreOf(a) || 0));
+  const today = open.filter(t => !isNew(t) && daysLeft(t.deadline) === 0), tomorrow = open.filter(t => !isNew(t) && daysLeft(t.deadline) === 1);
+  const shown = new Set([...fresh, ...today, ...tomorrow].map(t => t.pub));
+  const rest = open.filter(t => !shown.has(t.pub)).slice(0, Math.max(10, 30 - shown.size));
+  const lands = new Set(open.map(t => t.country).filter(Boolean)).size;
+  const parts = [
+    ...won.map(t => item("🏆 GEWONNEN", "won", t, BIDBY[t.pub].by ? "door " + nameOf(BIDBY[t.pub].by) : "")),
+    `<span class="tk-item tk-stat">📡 <b>${open.length}</b> open tenders in <b>${lands}</b> landen${fresh.length ? ` · <b>${fresh.length}</b> nieuw sinds gisteren` : ""}</span>`,
+    ...fresh.slice(0, 15).map(t => item("NIEUW", "new", t, leftText(t))),
+    ...today.map(t => item("SLUIT VANDAAG", "today", t, leftText(t))),
+    ...tomorrow.map(t => item("SLUIT MORGEN", "tomorrow", t, "")),
+    ...rest.map(t => item("OPEN", "open", t, leftText(t)))
+  ];
   const tk = $("tvTicker");
-  if(tk) tk.innerHTML = items ? `<div class="tk-track">${items}${items}</div>` : `<span class="tk-item">Op dit moment geen open LEO-tenders</span>`;
+  if(tk){
+    const items = parts.join("");
+    tk.innerHTML = `<span class="tk-live"><i></i>LIVE</span><div class="tk-view"><div class="tk-track">${items}${items}</div></div>`;
+    // altijd even snel lopen, hoe lang de ticker ook is (~90 pixels per seconde)
+    requestAnimationFrame(() => { const tr = tk.querySelector(".tk-track"); if(tr) tr.style.animationDuration = Math.max(40, tr.scrollWidth / 2 / 90) + "s"; });
+  }
+  tvClockPanel(open);
   drawLabels();
+}
+// wereldklok op de tv: de landen met de meeste open tenders, met de tijd daar
+let tvOpenCache = [];
+function tvClockPanel(open){
+  if(open) tvOpenCache = open;
+  const el = $("tvWorld"); if(!el) return;
+  const count = {};
+  for(const t of tvOpenCache) if(t.country && TZ[t.country]) count[t.country] = (count[t.country] || 0) + 1;
+  const rows = Object.entries(count).sort((a,b) => b[1] - a[1]).slice(0, 10).map(([c, n]) => [c, n, localTime(c)]).filter(r => r[2])
+    .sort((a,b) => (a[2].time + a[0]).localeCompare(b[2].time + b[0]));
+  el.innerHTML = rows.length ? `<div class="tw-h">Wereldklok · open tenders</div>` + rows.map(([c, n, lt]) =>
+    `<div class="tw-row ${lt.mode}" title="${esc(lt.label)}"><span class="tw-dot"></span><span class="tw-c">${esc(cname(c))}</span><span class="tw-n">${n}</span><span class="tw-t">${lt.time}</span></div>`).join("")
+    + `<div class="tw-legend"><span class="office"><i></i>kantoor</span><span class="edge"><i></i>buiten</span><span class="night"><i></i>nacht/weekend</span></div>` : "";
 }
 })();
