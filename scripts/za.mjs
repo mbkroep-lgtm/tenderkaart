@@ -1,19 +1,11 @@
 import { writeFile } from 'node:fs/promises';
-const base = 'https://ocds-api.etenders.gov.za/api/OCDSReleases';
-const days = ['2026-10-02','2026-10-09','2026-10-15','2026-10-19','2026-10-20','2026-10-21','2026-10-22','2026-10-23'];
-const next = d => new Date(Date.parse(d + 'T00:00:00Z') + 864e5).toISOString().slice(0, 10);
-const tries = [];
-for (const d of days) tries.push(`?PageNumber=1&PageSize=50&dateFrom=${d}&dateTo=${next(d)}`);
-tries.push('?PageNumber=2&PageSize=50&dateFrom=2026-10-20&dateTo=2026-10-21', '?PageNumber=5&PageSize=50&dateFrom=2026-10-20&dateTo=2026-10-21',
-  '?PageNumber=1&PageSize=200&dateFrom=2026-10-20&dateTo=2026-10-21', '?PageNumber=1&PageSize=50&dateFrom=2026-10-20&dateTo=2026-10-22');
+import dns from 'node:dns/promises';
 let log = '';
-for (const q of tries) {
+for (const u of ['https://goszakup.gov.kz/ru/search/lots?filter%5Bname%5D=starlink&count_record=200&page=1', 'https://goszakup.gov.kz/', 'http://goszakup.gov.kz/', 'https://ows.goszakup.gov.kz/']) {
   for (let k = 0; k < 2; k++) {
-    try {
-      const r = await fetch(base + q, { headers: { 'User-Agent': 'Mozilla/5.0 (tendermap)', Accept: 'application/json' }, signal: AbortSignal.timeout(90000) });
-      const b = await r.text(); let n = ''; try { const d = JSON.parse(b); n = `rel=${(d.releases || []).length} next=${(d.links?.next||'').slice(-80)}`; } catch {}
-      log += `${q} #${k} -> ${r.status} ${n || b.slice(0, 150).replace(/\s+/g, ' ')}\n`;
-    } catch (e) { log += `${q} -> ERR ${e.message}\n`; }
+    try { const t0 = Date.now(); const r = await fetch(u, { headers: { 'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) Chrome/130.0' }, signal: AbortSignal.timeout(60000) }); const b = await r.text(); log += `${u} -> ${r.status} ${Date.now() - t0}ms len=${b.length}\n`; }
+    catch (e) { log += `${u} -> ERR ${e.name} ${e.message} cause=${e.cause?.code || ''} ${e.cause?.message || ''}\n`; }
   }
 }
-await writeFile('preview/za2.txt', log);
+try { log += 'dns ' + JSON.stringify(await dns.lookup('goszakup.gov.kz', { all: true })) + '\n'; } catch (e) { log += 'dns ERR ' + e.message + '\n'; }
+await writeFile('preview/kz.txt', log);
