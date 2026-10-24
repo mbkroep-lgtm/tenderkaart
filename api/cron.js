@@ -30,7 +30,9 @@ export async function GET(request) {
   let updated = null;
   try { updated = JSON.parse(await readFile(path.join(process.cwd(), 'data', 'tenders.json'), 'utf8')).updated; } catch {}
   const ageH = updated ? (Date.now() - Date.parse(updated)) / 3600e3 : Infinity;
-  if (ageH < maxAge) out.tenders = `${ageH.toFixed(1)} uur oud, overgeslagen`;
+  // nog niet vandaag bijgewerkt (ook in het weekend): dan altijd een ronde starten
+  const today = new Date().toISOString().slice(0, 10);
+  if (ageH < maxAge && String(updated).slice(0, 10) === today) out.tenders = `${ageH.toFixed(1)} uur oud, overgeslagen`;
   else out.tenders = await dispatch('update.yml');
 
   // satellieten (elke dag)
